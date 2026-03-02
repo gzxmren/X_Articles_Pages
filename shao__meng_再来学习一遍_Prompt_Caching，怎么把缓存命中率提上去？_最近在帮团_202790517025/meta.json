@@ -1,0 +1,11 @@
+{
+  "url": "https://x.com/shao__meng/status/2027905170252959765?s=20",
+  "status": "pending",
+  "title": "再来学习一遍 Prompt Caching，怎么把缓存命中率提上去？ 最近在帮团队做 Prompt Caching 提升的专项，使用的 Bedrock Claude API，通过 Litellm 接入",
+  "author": "shao__meng",
+  "published_date": "2026-02-19",
+  "folder_name": "shao__meng_再来学习一遍_Prompt_Caching，怎么把缓存命中率提上去？_最近在帮团_202790517025",
+  "timestamp": "2026-03-01T16:45:09.921155",
+  "failure_reason": "",
+  "source": "cli"
+}

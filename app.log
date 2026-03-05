@@ -1,0 +1,24 @@
+2026-03-05 09:26:59 - [INFO] - WeChatDownloader - --- 微信公众号文章下载器 v4.6.0 (Async) ---
+2026-03-05 09:26:59 - [INFO] - WeChatDownloader - 模式: 从管道 (pipe) 读取 URL
+2026-03-05 09:26:59 - [INFO] - WeChatDownloader - 待处理任务: 7 个，并发数限制: 3
+2026-03-05 09:27:05 - [INFO] - WeChatDownloader - [Processing] Openclaw超级大神技能之一：复杂任务方法论
+2026-03-05 09:27:05 - [INFO] - WeChatDownloader -   -> [OK] Openclaw超级大神技能之一：复杂任务方法论 处理完成
+2026-03-05 09:27:07 - [INFO] - WeChatDownloader - [Processing] 基于 LLM 构建 ReAct Agent：从原理到实战
+2026-03-05 09:27:07 - [INFO] - WeChatDownloader - [Processing] 25 万「小龙虾」公网裸奔，你的 OpenClaw 中招了吗？！
+2026-03-05 09:27:07 - [INFO] - WeChatDownloader -   -> [OK] 基于 LLM 构建 ReAct Agent：从原理到实战 处理完成
+2026-03-05 09:27:07 - [INFO] - WeChatDownloader -   -> [OK] 25 万「小龙虾」公网裸奔，你的 OpenClaw 中招了吗？！ 处理完成
+2026-03-05 09:27:10 - [INFO] - WeChatDownloader - [Processing] 借助claude，我从零打造了自己的AI助手
+2026-03-05 09:27:10 - [INFO] - WeChatDownloader -   -> [OK] 借助claude，我从零打造了自己的AI助手 处理完成
+2026-03-05 09:27:13 - [INFO] - WeChatDownloader - [Processing] 耗时 8 天，我用 Claude Code 开发了 AI 漫剧 APP，并开源了。
+2026-03-05 09:27:14 - [INFO] - WeChatDownloader - [Processing] 感谢DeepSeek，1天就赚了3100
+2026-03-05 09:27:16 - [INFO] - WeChatDownloader - [Processing] 太香了！我用Claude Skills做了个会学习的剪辑Agent，10分钟自动剪视频！
+2026-03-05 09:27:16 - [INFO] - WeChatDownloader -   -> [OK] 感谢DeepSeek，1天就赚了3100 处理完成
+2026-03-05 09:27:16 - [INFO] - WeChatDownloader -   -> [OK] 太香了！我用Claude Skills做了个会学习的剪辑Agent，10分钟自动剪视频！ 处理完成
+2026-03-05 09:27:16 - [INFO] - WeChatDownloader -   -> [OK] 耗时 8 天，我用 Claude Code 开发了 AI 漫剧 APP，并开源了。 处理完成
+2026-03-05 09:27:16 - [INFO] - WeChatDownloader - 
+--- 处理摘要 ---
+2026-03-05 09:27:16 - [INFO] - WeChatDownloader - 任务总数: 7
+2026-03-05 09:27:16 - [INFO] - WeChatDownloader - 成功: 7
+2026-03-05 09:27:16 - [INFO] - WeChatDownloader - 失败: 0
+2026-03-05 09:27:16 - [INFO] - WeChatDownloader - 正在更新全局索引...
+2026-03-05 09:27:17 - [INFO] - WeChatDownloader - 全局索引已生成: /home/xmren/gemini/wechat_gzh_downloader/output/index.html (共 242 条记录)

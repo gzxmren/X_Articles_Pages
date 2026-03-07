@@ -1,0 +1,11 @@
+{
+  "url": "https://x.com/xxx111god/status/2029922011716239706",
+  "status": "pending",
+  "title": "高质量内容！架构拆得很清楚\n补充两个原文没覆盖但实际运行必须解决的问题：\n\n一、记忆没有压缩管道会崩\n原文说了 bootstrap + 语义搜索两层，策略是\"关键放 bootstrap，其他放语义搜索",
+  "author": "xxx111god",
+  "published_date": "2026-02-26",
+  "folder_name": "xxx111god_高质量内容！架构拆得很清楚补充两个原文没覆盖但实际运行必须解决的问题：一、_2029922011716239",
+  "timestamp": "2026-03-07T15:03:17.225503",
+  "failure_reason": "",
+  "source": "cli"
+}

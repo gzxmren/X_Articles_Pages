@@ -1,2 +1,5 @@
 failures.json
 records.csv
+debug/
+app.log
+CNAME

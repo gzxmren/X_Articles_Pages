@@ -354,15 +354,6 @@
   font-style: 'normal';
   font-display: 'swap';
 }</style>
-<style>
-#ScriptLoadFailure button[type=submit]:hover { background-color: rgb(39, 44, 48) !important; }
-@media (prefers-color-scheme: dark) {
-  #placeholder { background-color: #000000 }
-  #ScriptLoadFailure span, #placeholder svg { color: #FFFFFF !important; }
-  #ScriptLoadFailure button[type=submit] { background-color: rgb(239, 243, 244) !important; }
-  #ScriptLoadFailure button[type=submit]:hover { background-color: rgb(215, 219, 220) !important; }
-  #ScriptLoadFailure button[type=submit] span { color: #000000 !important; }
-}</style>
 <style>html,body{height: 100%;}::cue{white-space:normal}</style>
 <style id="react-native-stylesheet">[stylesheet-group="0"]{}
 body{margin:0;}
@@ -619,7 +610,6 @@ input::-webkit-search-cancel-button,input::-webkit-search-decoration,input::-web
 .r-ueyrd6{line-height:36px;}
 .r-uho16t{font-size:34px;}
 .r-vkv6oe{min-width:40px;}
-.r-vlxjld{color:rgba(247,249,249,1.00);}
 .r-vqxq0j{border:0 solid black;}
 .r-vrz42v{line-height:28px;}
 .r-vvn4in{background-position:center;}
@@ -629,7 +619,6 @@ input::-webkit-search-cancel-button,input::-webkit-search-decoration,input::-web
 .r-x572qd{background-color:rgba(247,249,249,1.00);}
 .r-xigjrr{-webkit-filter:blur(4px);filter:blur(4px);}
 .r-yc9v9c{width:22px;}
-.r-yfoy6g{background-color:rgba(21,32,43,1.00);}
 .r-yn5ncy{animation-fill-mode:both;}
 .r-yy2aun{font-size:26px;}
 .r-yyyyoo{fill:currentcolor;}
@@ -640,8 +629,8 @@ input::-webkit-search-cancel-button,input::-webkit-search-decoration,input::-web
 @-webkit-keyframes r-imtty0{0%{opacity:0;}100%{opacity:1;}}
 @keyframes r-11cv4x{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
 @keyframes r-imtty0{0%{opacity:0;}100%{opacity:1;}}
-.r-1kf8jc{position:absolute;visibility:hidden;top:0;width:50px;pointer-events:none}
-.r-1kf8jc.loaded{visibility:visible;top:50vh;width:50px}</style>
+.r-67lde9{position:absolute;visibility:hidden;top:0;width:50px;pointer-events:none}
+.r-67lde9.loaded{visibility:visible;top:50vh;width:50px}</style>
 <style type="text/css">/* default values for the css variables used inside */
 .jetfuel-style-root {
   --tw-translate-x: 0;
@@ -2909,7 +2898,10 @@ textarea.jf-element::placeholder {
   color: rgb(0 0 0 / var(--tw-text-opacity, 1));
 }
 </style>
-<style type="text/css">
+<style type="text/css">input.jf-element,
+textarea.jf-element {
+  background-color: transparent;
+}
 </style>
 <style type="text/css">:where(html[dir="ltr"]),:where([data-sonner-toaster][dir="ltr"]){--toast-icon-margin-start: -3px;--toast-icon-margin-end: 4px;--toast-svg-margin-start: -1px;--toast-svg-margin-end: 0px;--toast-button-margin-start: auto;--toast-button-margin-end: 0;--toast-close-button-start: 0;--toast-close-button-end: unset;--toast-close-button-transform: translate(-35%, -35%)}:where(html[dir="rtl"]),:where([data-sonner-toaster][dir="rtl"]){--toast-icon-margin-start: 4px;--toast-icon-margin-end: -3px;--toast-svg-margin-start: 0px;--toast-svg-margin-end: -1px;--toast-button-margin-start: 0;--toast-button-margin-end: auto;--toast-close-button-start: unset;--toast-close-button-end: 0;--toast-close-button-transform: translate(35%, -35%)}:where([data-sonner-toaster]){position:fixed;width:var(--width);font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;--gray1: hsl(0, 0%, 99%);--gray2: hsl(0, 0%, 97.3%);--gray3: hsl(0, 0%, 95.1%);--gray4: hsl(0, 0%, 93%);--gray5: hsl(0, 0%, 90.9%);--gray6: hsl(0, 0%, 88.7%);--gray7: hsl(0, 0%, 85.8%);--gray8: hsl(0, 0%, 78%);--gray9: hsl(0, 0%, 56.1%);--gray10: hsl(0, 0%, 52.3%);--gray11: hsl(0, 0%, 43.5%);--gray12: hsl(0, 0%, 9%);--border-radius: 8px;box-sizing:border-box;padding:0;margin:0;list-style:none;outline:none;z-index:999999999}:where([data-sonner-toaster][data-x-position="right"]){right:max(var(--offset),env(safe-area-inset-right))}:where([data-sonner-toaster][data-x-position="left"]){left:max(var(--offset),env(safe-area-inset-left))}:where([data-sonner-toaster][data-x-position="center"]){left:50%;transform:translate(-50%)}:where([data-sonner-toaster][data-y-position="top"]){top:max(var(--offset),env(safe-area-inset-top))}:where([data-sonner-toaster][data-y-position="bottom"]){bottom:max(var(--offset),env(safe-area-inset-bottom))}:where([data-sonner-toast]){--y: translateY(100%);--lift-amount: calc(var(--lift) * var(--gap));z-index:var(--z-index);position:absolute;opacity:0;transform:var(--y);filter:blur(0);touch-action:none;transition:transform .4s,opacity .4s,height .4s,box-shadow .2s;box-sizing:border-box;outline:none;overflow-wrap:anywhere}:where([data-sonner-toast][data-styled="true"]){padding:16px;background:var(--normal-bg);border:1px solid var(--normal-border);color:var(--normal-text);border-radius:var(--border-radius);box-shadow:0 4px 12px #0000001a;width:var(--width);font-size:13px;display:flex;align-items:center;gap:6px}:where([data-sonner-toast]:focus-visible){box-shadow:0 4px 12px #0000001a,0 0 0 2px #0003}:where([data-sonner-toast][data-y-position="top"]){top:0;--y: translateY(-100%);--lift: 1;--lift-amount: calc(1 * var(--gap))}:where([data-sonner-toast][data-y-position="bottom"]){bottom:0;--y: translateY(100%);--lift: -1;--lift-amount: calc(var(--lift) * var(--gap))}:where([data-sonner-toast]) :where([data-description]){font-weight:400;line-height:1.4;color:inherit}:where([data-sonner-toast]) :where([data-title]){font-weight:500;line-height:1.5;color:inherit}:where([data-sonner-toast]) :where([data-icon]){display:flex;height:16px;width:16px;position:relative;justify-content:flex-start;align-items:center;flex-shrink:0;margin-left:var(--toast-icon-margin-start);margin-right:var(--toast-icon-margin-end)}:where([data-sonner-toast][data-promise="true"]) :where([data-icon])>svg{opacity:0;transform:scale(.8);transform-origin:center;animation:sonner-fade-in .3s ease forwards}:where([data-sonner-toast]) :where([data-icon])>*{flex-shrink:0}:where([data-sonner-toast]) :where([data-icon]) svg{margin-left:var(--toast-svg-margin-start);margin-right:var(--toast-svg-margin-end)}:where([data-sonner-toast]) :where([data-content]){display:flex;flex-direction:column;gap:2px}[data-sonner-toast][data-styled=true] [data-button]{border-radius:4px;padding-left:8px;padding-right:8px;height:24px;font-size:12px;color:var(--normal-bg);background:var(--normal-text);margin-left:var(--toast-button-margin-start);margin-right:var(--toast-button-margin-end);border:none;cursor:pointer;outline:none;display:flex;align-items:center;flex-shrink:0;transition:opacity .4s,box-shadow .2s}:where([data-sonner-toast]) :where([data-button]):focus-visible{box-shadow:0 0 0 2px #0006}:where([data-sonner-toast]) :where([data-button]):first-of-type{margin-left:var(--toast-button-margin-start);margin-right:var(--toast-button-margin-end)}:where([data-sonner-toast]) :where([data-cancel]){color:var(--normal-text);background:rgba(0,0,0,.08)}:where([data-sonner-toast][data-theme="dark"]) :where([data-cancel]){background:rgba(255,255,255,.3)}:where([data-sonner-toast]) :where([data-close-button]){position:absolute;left:var(--toast-close-button-start);right:var(--toast-close-button-end);top:0;height:20px;width:20px;display:flex;justify-content:center;align-items:center;padding:0;background:var(--gray1);color:var(--gray12);border:1px solid var(--gray4);transform:var(--toast-close-button-transform);border-radius:50%;cursor:pointer;z-index:1;transition:opacity .1s,background .2s,border-color .2s}:where([data-sonner-toast]) :where([data-close-button]):focus-visible{box-shadow:0 4px 12px #0000001a,0 0 0 2px #0003}:where([data-sonner-toast]) :where([data-disabled="true"]){cursor:not-allowed}:where([data-sonner-toast]):hover :where([data-close-button]):hover{background:var(--gray2);border-color:var(--gray5)}:where([data-sonner-toast][data-swiping="true"]):before{content:"";position:absolute;left:0;right:0;height:100%;z-index:-1}:where([data-sonner-toast][data-y-position="top"][data-swiping="true"]):before{bottom:50%;transform:scaleY(3) translateY(50%)}:where([data-sonner-toast][data-y-position="bottom"][data-swiping="true"]):before{top:50%;transform:scaleY(3) translateY(-50%)}:where([data-sonner-toast][data-swiping="false"][data-removed="true"]):before{content:"";position:absolute;inset:0;transform:scaleY(2)}:where([data-sonner-toast]):after{content:"";position:absolute;left:0;height:calc(var(--gap) + 1px);bottom:100%;width:100%}:where([data-sonner-toast][data-mounted="true"]){--y: translateY(0);opacity:1}:where([data-sonner-toast][data-expanded="false"][data-front="false"]){--scale: var(--toasts-before) * .05 + 1;--y: translateY(calc(var(--lift-amount) * var(--toasts-before))) scale(calc(-1 * var(--scale)));height:var(--front-toast-height)}:where([data-sonner-toast])>*{transition:opacity .4s}:where([data-sonner-toast][data-expanded="false"][data-front="false"][data-styled="true"])>*{opacity:0}:where([data-sonner-toast][data-visible="false"]){opacity:0;pointer-events:none}:where([data-sonner-toast][data-mounted="true"][data-expanded="true"]){--y: translateY(calc(var(--lift) * var(--offset)));height:var(--initial-height)}:where([data-sonner-toast][data-removed="true"][data-front="true"][data-swipe-out="false"]){--y: translateY(calc(var(--lift) * -100%));opacity:0}:where([data-sonner-toast][data-removed="true"][data-front="false"][data-swipe-out="false"][data-expanded="true"]){--y: translateY(calc(var(--lift) * var(--offset) + var(--lift) * -100%));opacity:0}:where([data-sonner-toast][data-removed="true"][data-front="false"][data-swipe-out="false"][data-expanded="false"]){--y: translateY(40%);opacity:0;transition:transform .5s,opacity .2s}:where([data-sonner-toast][data-removed="true"][data-front="false"]):before{height:calc(var(--initial-height) + 20%)}[data-sonner-toast][data-swiping=true]{transform:var(--y) translateY(var(--swipe-amount, 0px));transition:none}[data-sonner-toast][data-swipe-out=true][data-y-position=bottom],[data-sonner-toast][data-swipe-out=true][data-y-position=top]{animation:swipe-out .2s ease-out forwards}@keyframes swipe-out{0%{transform:translateY(calc(var(--lift) * var(--offset) + var(--swipe-amount)));opacity:1}to{transform:translateY(calc(var(--lift) * var(--offset) + var(--swipe-amount) + var(--lift) * -100%));opacity:0}}@media (max-width: 600px){[data-sonner-toaster]{position:fixed;--mobile-offset: 16px;right:var(--mobile-offset);left:var(--mobile-offset);width:100%}[data-sonner-toaster] [data-sonner-toast]{left:0;right:0;width:calc(100% - var(--mobile-offset) * 2)}[data-sonner-toaster][data-x-position=left]{left:var(--mobile-offset)}[data-sonner-toaster][data-y-position=bottom]{bottom:20px}[data-sonner-toaster][data-y-position=top]{top:20px}[data-sonner-toaster][data-x-position=center]{left:var(--mobile-offset);right:var(--mobile-offset);transform:none}}[data-sonner-toaster][data-theme=light]{--normal-bg: #fff;--normal-border: var(--gray4);--normal-text: var(--gray12);--success-bg: hsl(143, 85%, 96%);--success-border: hsl(145, 92%, 91%);--success-text: hsl(140, 100%, 27%);--info-bg: hsl(208, 100%, 97%);--info-border: hsl(221, 91%, 91%);--info-text: hsl(210, 92%, 45%);--warning-bg: hsl(49, 100%, 97%);--warning-border: hsl(49, 91%, 91%);--warning-text: hsl(31, 92%, 45%);--error-bg: hsl(359, 100%, 97%);--error-border: hsl(359, 100%, 94%);--error-text: hsl(360, 100%, 45%)}[data-sonner-toaster][data-theme=light] [data-sonner-toast][data-invert=true]{--normal-bg: #000;--normal-border: hsl(0, 0%, 20%);--normal-text: var(--gray1)}[data-sonner-toaster][data-theme=dark] [data-sonner-toast][data-invert=true]{--normal-bg: #fff;--normal-border: var(--gray3);--normal-text: var(--gray12)}[data-sonner-toaster][data-theme=dark]{--normal-bg: #000;--normal-border: hsl(0, 0%, 20%);--normal-text: var(--gray1);--success-bg: hsl(150, 100%, 6%);--success-border: hsl(147, 100%, 12%);--success-text: hsl(150, 86%, 65%);--info-bg: hsl(215, 100%, 6%);--info-border: hsl(223, 100%, 12%);--info-text: hsl(216, 87%, 65%);--warning-bg: hsl(64, 100%, 6%);--warning-border: hsl(60, 100%, 12%);--warning-text: hsl(46, 87%, 65%);--error-bg: hsl(358, 76%, 10%);--error-border: hsl(357, 89%, 16%);--error-text: hsl(358, 100%, 81%)}[data-rich-colors=true][data-sonner-toast][data-type=success],[data-rich-colors=true][data-sonner-toast][data-type=success] [data-close-button]{background:var(--success-bg);border-color:var(--success-border);color:var(--success-text)}[data-rich-colors=true][data-sonner-toast][data-type=info],[data-rich-colors=true][data-sonner-toast][data-type=info] [data-close-button]{background:var(--info-bg);border-color:var(--info-border);color:var(--info-text)}[data-rich-colors=true][data-sonner-toast][data-type=warning],[data-rich-colors=true][data-sonner-toast][data-type=warning] [data-close-button]{background:var(--warning-bg);border-color:var(--warning-border);color:var(--warning-text)}[data-rich-colors=true][data-sonner-toast][data-type=error],[data-rich-colors=true][data-sonner-toast][data-type=error] [data-close-button]{background:var(--error-bg);border-color:var(--error-border);color:var(--error-text)}.sonner-loading-wrapper{--size: 16px;height:var(--size);width:var(--size);position:absolute;inset:0;z-index:10}.sonner-loading-wrapper[data-visible=false]{transform-origin:center;animation:sonner-fade-out .2s ease forwards}.sonner-spinner{position:relative;top:50%;left:50%;height:var(--size);width:var(--size)}.sonner-loading-bar{animation:sonner-spin 1.2s linear infinite;background:var(--gray11);border-radius:6px;height:8%;left:-10%;position:absolute;top:-3.9%;width:24%}.sonner-loading-bar:nth-child(1){animation-delay:-1.2s;transform:rotate(.0001deg) translate(146%)}.sonner-loading-bar:nth-child(2){animation-delay:-1.1s;transform:rotate(30deg) translate(146%)}.sonner-loading-bar:nth-child(3){animation-delay:-1s;transform:rotate(60deg) translate(146%)}.sonner-loading-bar:nth-child(4){animation-delay:-.9s;transform:rotate(90deg) translate(146%)}.sonner-loading-bar:nth-child(5){animation-delay:-.8s;transform:rotate(120deg) translate(146%)}.sonner-loading-bar:nth-child(6){animation-delay:-.7s;transform:rotate(150deg) translate(146%)}.sonner-loading-bar:nth-child(7){animation-delay:-.6s;transform:rotate(180deg) translate(146%)}.sonner-loading-bar:nth-child(8){animation-delay:-.5s;transform:rotate(210deg) translate(146%)}.sonner-loading-bar:nth-child(9){animation-delay:-.4s;transform:rotate(240deg) translate(146%)}.sonner-loading-bar:nth-child(10){animation-delay:-.3s;transform:rotate(270deg) translate(146%)}.sonner-loading-bar:nth-child(11){animation-delay:-.2s;transform:rotate(300deg) translate(146%)}.sonner-loading-bar:nth-child(12){animation-delay:-.1s;transform:rotate(330deg) translate(146%)}@keyframes sonner-fade-in{0%{opacity:0;transform:scale(.8)}to{opacity:1;transform:scale(1)}}@keyframes sonner-fade-out{0%{opacity:1;transform:scale(1)}to{opacity:0;transform:scale(.8)}}@keyframes sonner-spin{0%{opacity:1}to{opacity:.15}}@media (prefers-reduced-motion){[data-sonner-toast],[data-sonner-toast]>*,.sonner-loading-bar{transition:none!important;animation:none!important}}.sonner-loader{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);transform-origin:center;transition:opacity .2s,transform .2s}.sonner-loader[data-visible=false]{opacity:0;transform:scale(.8) translate(-50%,-50%)}
 </style>
@@ -3484,6 +3476,7 @@ html,
 
 :root,
   :root[data-theme="light"] {
+  color-scheme: light;
   /* app */
   --color-background: 0 0% 100%;
   --color-black: 0 0% 0%;
@@ -3653,6 +3646,7 @@ html,
 }
 
 :root[data-theme="dark"] {
+  color-scheme: dark;
   /* app */
   --color-background: 0 0% 0%;
   --color-brand: 200 7% 91%;
@@ -3711,171 +3705,6 @@ html,
   --color-gray-900: 210 4% 73%;
   --color-gray-1000: 204 6% 85%;
   --color-gray-1100: 200 7% 91%;
-  --color-green-0: 162 100% 7%;
-  --color-green-50: 162 100% 7%;
-  --color-green-100: 157 100% 13%;
-  --color-green-200: 158 100% 19%;
-  --color-green-300: 158 100% 25%;
-  --color-green-400: 158 100% 31%;
-  --color-green-500: 160 100% 36%;
-  --color-green-600: 157 61% 49%;
-  --color-green-700: 154 59% 61%;
-  --color-green-800: 153 59% 73%;
-  --color-green-900: 153 63% 85%;
-  --color-green-1000: 153 67% 92%;
-  --color-green-1100: 160 100% 96%;
-  --color-magenta-0: 330 96% 11%;
-  --color-magenta-50: 330 100% 12%;
-  --color-magenta-100: 331 90% 21%;
-  --color-magenta-200: 332 86% 29%;
-  --color-magenta-300: 332 85% 37%;
-  --color-magenta-400: 332 84% 45%;
-  --color-magenta-500: 332 95% 54%;
-  --color-magenta-600: 332 95% 62%;
-  --color-magenta-700: 332 95% 71%;
-  --color-magenta-800: 332 96% 80%;
-  --color-magenta-900: 332 96% 89%;
-  --color-magenta-1000: 332 100% 93%;
-  --color-magenta-1100: 330 100% 97%;
-  --color-orange-0: 17 97% 12%;
-  --color-orange-50: 18 100% 14%;
-  --color-orange-100: 19 100% 21%;
-  --color-orange-200: 19 100% 27%;
-  --color-orange-300: 24 100% 35%;
-  --color-orange-400: 27 100% 42%;
-  --color-orange-500: 29 100% 50%;
-  --color-orange-600: 29 100% 60%;
-  --color-orange-700: 29 100% 69%;
-  --color-orange-800: 29 100% 79%;
-  --color-orange-900: 30 100% 88%;
-  --color-orange-1000: 30 100% 93%;
-  --color-orange-1100: 30 90% 96%;
-  --color-plum-0: 300 88% 9%;
-  --color-plum-50: 299 100% 10%;
-  --color-plum-100: 299 77% 18%;
-  --color-plum-200: 299 67% 26%;
-  --color-plum-300: 298 64% 35%;
-  --color-plum-400: 299 60% 43%;
-  --color-plum-500: 299 60% 51%;
-  --color-plum-600: 299 60% 60%;
-  --color-plum-700: 299 60% 69%;
-  --color-plum-800: 298 63% 79%;
-  --color-plum-900: 299 67% 88%;
-  --color-plum-1000: 300 72% 93%;
-  --color-plum-1100: 300 100% 97%;
-  --color-purple-0: 261 79% 11%;
-  --color-purple-50: 260 100% 15%;
-  --color-purple-100: 257 73% 25%;
-  --color-purple-200: 256 62% 35%;
-  --color-purple-300: 254 56% 46%;
-  --color-purple-400: 253 68% 56%;
-  --color-purple-500: 252 100% 67%;
-  --color-purple-600: 252 100% 73%;
-  --color-purple-700: 252 100% 80%;
-  --color-purple-800: 252 100% 86%;
-  --color-purple-900: 251 100% 92%;
-  --color-purple-1000: 250 100% 95%;
-  --color-purple-1100: 250 100% 98%;
-  --color-red-0: 356 97% 12%;
-  --color-red-50: 356 100% 13%;
-  --color-red-100: 355 87% 22%;
-  --color-red-200: 351 83% 30%;
-  --color-red-300: 353 79% 38%;
-  --color-red-400: 355 78% 46%;
-  --color-red-500: 356 91% 54%;
-  --color-red-600: 354 90% 63%;
-  --color-red-700: 355 90% 72%;
-  --color-red-800: 354 92% 80%;
-  --color-red-900: 354 93% 89%;
-  --color-red-1000: 351 94% 93%;
-  --color-red-1100: 356 100% 97%;
-  --color-teal-0: 185 89% 7%;
-  --color-teal-50: 185 100% 7%;
-  --color-teal-100: 184 100% 13%;
-  --color-teal-200: 183 100% 19%;
-  --color-teal-300: 182 100% 24%;
-  --color-teal-400: 182 100% 30%;
-  --color-teal-500: 182 100% 36%;
-  --color-teal-600: 182 100% 41%;
-  --color-teal-700: 183 70% 55%;
-  --color-teal-800: 182 71% 69%;
-  --color-teal-900: 183 75% 83%;
-  --color-teal-1000: 183 80% 90%;
-  --color-teal-1100: 183 100% 96%;
-  --color-yellow-0: 28 94% 12%;
-  --color-yellow-50: 29 100% 14%;
-  --color-yellow-100: 34 100% 22%;
-  --color-yellow-200: 36 100% 29%;
-  --color-yellow-300: 42 100% 36%;
-  --color-yellow-400: 47 100% 43%;
-  --color-yellow-500: 50 100% 50%;
-  --color-yellow-600: 50 100% 63%;
-  --color-yellow-700: 52 100% 71%;
-  --color-yellow-800: 54 100% 79%;
-  --color-yellow-900: 59 100% 88%;
-  --color-yellow-1000: 59 100% 92%;
-  --color-yellow-1100: 54 100% 96%;
-}
-
-:root[data-theme="dim"] {
-  /* app */
-  --color-background: 210 34% 13%;
-  --color-brand: 180 14% 97%;
-  --color-mark: rgba(91, 112, 131, 0.4);
-  --color-nested-border: 210 13% 60%;
-  --color-text: 180 14% 97%;
-  /* shadcn */
-  --background: 210 34% 13%;
-  --foreground: 200 7% 91%;
-  --card: var(--color-gray-0);
-  --card-foreground: 200 7% 91%;
-  --popover: 210 34% 13%;
-  --popover-foreground: 200 7% 91%;
-  --primary: var(--color-blue-500);
-  --primary-foreground: 240 5.9% 10%;
-  --secondary: 210 21% 28%;
-  --secondary-foreground: 200 7% 91%;
-  --muted: 210 21% 28%;
-  --muted-foreground: 240 5% 64.9%;
-  --accent: var(--color-blue-200);
-  --accent-foreground: var(--color-blue-700);
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 200 7% 91%;
-  --border: 210 21% 28%;
-  --input: 210 21% 28%;
-  --ring: var(--color-blue-500);
-  --chart-1: var(--color-blue-500);
-  --chart-2: var(--color-green-500);
-  --chart-3: var(--color-red-500);
-  --chart-4: var(--color-yellow-500);
-  --chart-5: var(--color-purple-500);
-  /* palette */
-  --color-blue-0: 225 94% 12%;
-  --color-blue-50: 223 100% 15%;
-  --color-blue-100: 215 100% 26%;
-  --color-blue-200: 212 100% 38%;
-  --color-blue-300: 209 100% 42%;
-  --color-blue-400: 207 100% 46%;
-  --color-blue-500: 204 88% 53%;
-  --color-blue-600: 202 91% 61%;
-  --color-blue-700: 201 95% 70%;
-  --color-blue-800: 196 100% 80%;
-  --color-blue-900: 192 100% 87%;
-  --color-blue-1000: 194 100% 92%;
-  --color-blue-1100: 194 100% 96%;
-  --color-gray-0: 213 25% 16%;
-  --color-gray-50: 211 24% 20%;
-  --color-gray-100: 210 21% 28%;
-  --color-gray-200: 210 20% 33%;
-  --color-gray-300: 208 16% 43%;
-  --color-gray-400: 208 14% 49%;
-  --color-gray-500: 207 14% 54%;
-  --color-gray-600: 208 15% 58%;
-  --color-gray-700: 210 13% 60%;
-  --color-gray-800: 209 13% 66%;
-  --color-gray-900: 206 13% 79%;
-  --color-gray-1000: 203 13% 88%;
-  --color-gray-1100: 180 14% 97%;
   --color-green-0: 162 100% 7%;
   --color-green-50: 162 100% 7%;
   --color-green-100: 157 100% 13%;
@@ -4218,6 +4047,10 @@ body:has([data-scroll-locked]) {
   left: 8px;
 }
 
+.left-3 {
+  left: 12px;
+}
+
 .left-4 {
   left: 16px;
 }
@@ -4252,6 +4085,10 @@ body:has([data-scroll-locked]) {
 
 .right-2\.5 {
   right: 10px;
+}
+
+.right-3 {
+  right: 12px;
 }
 
 .right-4 {
@@ -4446,6 +4283,10 @@ body:has([data-scroll-locked]) {
   grid-column: 1 / -1;
 }
 
+.row-span-2 {
+  grid-row: span 2 / span 2;
+}
+
 .row-span-full {
   grid-row: 1 / -1;
 }
@@ -4466,10 +4307,6 @@ body:has([data-scroll-locked]) {
   margin: 16px;
 }
 
-.m-\[3px\] {
-  margin: 3px;
-}
-
 .-mx-1 {
   margin-left: -4px;
   margin-right: -4px;
@@ -4478,6 +4315,16 @@ body:has([data-scroll-locked]) {
 .-mx-2\.5 {
   margin-left: -10px;
   margin-right: -10px;
+}
+
+.-mx-4 {
+  margin-left: -16px;
+  margin-right: -16px;
+}
+
+.-my-1 {
+  margin-top: -4px;
+  margin-bottom: -4px;
 }
 
 .-my-10 {
@@ -4906,6 +4753,11 @@ body:has([data-scroll-locked]) {
   height: 64px;
 }
 
+.size-20 {
+  width: 80px;
+  height: 80px;
+}
+
 .size-24 {
   width: 96px;
   height: 96px;
@@ -4964,11 +4816,6 @@ body:has([data-scroll-locked]) {
 .size-\[3px\] {
   width: 3px;
   height: 3px;
-}
-
-.size-\[52px\] {
-  width: 52px;
-  height: 52px;
 }
 
 .size-full {
@@ -5180,6 +5027,10 @@ body:has([data-scroll-locked]) {
   height: 36px;
 }
 
+.h-\[3px\] {
+  height: 3px;
+}
+
 .h-\[400px\] {
   height: 400px;
 }
@@ -5194,10 +5045,6 @@ body:has([data-scroll-locked]) {
 
 .h-\[45px\] {
   height: 45px;
-}
-
-.h-\[520px\] {
-  height: 520px;
 }
 
 .h-\[52px\] {
@@ -5222,6 +5069,10 @@ body:has([data-scroll-locked]) {
 
 .h-\[68px\] {
   height: 68px;
+}
+
+.h-\[80vh\] {
+  height: 80vh;
 }
 
 .h-\[85vh\] {
@@ -5469,10 +5320,6 @@ body:has([data-scroll-locked]) {
   min-height: 66px;
 }
 
-.min-h-\[76px\] {
-  min-height: 76px;
-}
-
 .min-h-dvh {
   min-height: 100dvh;
 }
@@ -5677,10 +5524,6 @@ body:has([data-scroll-locked]) {
   width: 32rem;
 }
 
-.w-\[40rem\] {
-  width: 40rem;
-}
-
 .w-\[44px\] {
   width: 44px;
 }
@@ -5761,6 +5604,10 @@ body:has([data-scroll-locked]) {
 
 .min-w-5 {
   min-width: 20px;
+}
+
+.min-w-56 {
+  min-width: 224px;
 }
 
 .min-w-6 {
@@ -5949,6 +5796,10 @@ body:has([data-scroll-locked]) {
 
 .max-w-\[520px\] {
   max-width: 520px;
+}
+
+.max-w-\[600\] {
+  max-width: 600;
 }
 
 .max-w-\[600px\] {
@@ -6286,6 +6137,10 @@ body:has([data-scroll-locked]) {
   cursor: default;
 }
 
+.cursor-grab {
+  cursor: grab;
+}
+
 .cursor-grabbing {
   cursor: grabbing;
 }
@@ -6411,10 +6266,6 @@ body:has([data-scroll-locked]) {
   grid-template-columns: auto auto auto auto;
 }
 
-.grid-rows-2 {
-  grid-template-rows: repeat(2, minmax(0, 1fr));
-}
-
 .grid-rows-\[3fr_1fr\] {
   grid-template-rows: 3fr 1fr;
 }
@@ -6445,14 +6296,6 @@ body:has([data-scroll-locked]) {
 
 .flex-nowrap {
   flex-wrap: nowrap;
-}
-
-.place-content-center {
-  place-content: center;
-}
-
-.place-items-center {
-  place-items: center;
 }
 
 .\!items-start {
@@ -6501,6 +6344,10 @@ body:has([data-scroll-locked]) {
 
 .justify-around {
   justify-content: space-around;
+}
+
+.\!gap-1\.5 {
+  gap: 6px !important;
 }
 
 .gap-0 {
@@ -7032,6 +6879,10 @@ body:has([data-scroll-locked]) {
   border-style: none;
 }
 
+.\!border-green-500 {
+  border-color: hsl(var(--color-green-500)) !important;
+}
+
 .border-\[\#202327\] {
   --tw-border-opacity: 1;
   border-color: rgb(32 35 39 / var(--tw-border-opacity, 1));
@@ -7179,10 +7030,6 @@ body:has([data-scroll-locked]) {
   border-inline-start-color: hsl(var(--color-gray-200));
 }
 
-.border-t-primary {
-  border-top-color: hsl(var(--primary));
-}
-
 .border-opacity-10 {
   --tw-border-opacity: 0.1;
 }
@@ -7246,6 +7093,10 @@ body:has([data-scroll-locked]) {
 
 .bg-black\/5 {
   background-color: rgb(0 0 0 / 0.05);
+}
+
+.bg-black\/50 {
+  background-color: rgb(0 0 0 / 0.5);
 }
 
 .bg-black\/60 {
@@ -7900,6 +7751,10 @@ body:has([data-scroll-locked]) {
   background-color: hsl(var(--color-text));
 }
 
+.bg-text\/10 {
+  background-color: hsl(var(--color-text) / 0.1);
+}
+
 .bg-text\/30 {
   background-color: hsl(var(--color-text) / 0.3);
 }
@@ -7930,12 +7785,20 @@ body:has([data-scroll-locked]) {
   background-color: rgb(255 255 255 / 0.1);
 }
 
+.bg-white\/20 {
+  background-color: rgb(255 255 255 / 0.2);
+}
+
 .bg-white\/25 {
   background-color: rgb(255 255 255 / 0.25);
 }
 
 .bg-white\/35 {
   background-color: rgb(255 255 255 / 0.35);
+}
+
+.bg-white\/70 {
+  background-color: rgb(255 255 255 / 0.7);
 }
 
 .bg-white\/95 {
@@ -8337,6 +8200,11 @@ body:has([data-scroll-locked]) {
 
 .p-px {
   padding: 1px;
+}
+
+.\!px-4 {
+  padding-left: 16px !important;
+  padding-right: 16px !important;
 }
 
 .px-0 {
@@ -8841,6 +8709,10 @@ body:has([data-scroll-locked]) {
   font-size: 24px;
 }
 
+.text-\[36px\] {
+  font-size: 36px;
+}
+
 .text-\[3rem\] {
   font-size: 3rem;
 }
@@ -8990,10 +8862,6 @@ body:has([data-scroll-locked]) {
 
 .capitalize {
   text-transform: capitalize;
-}
-
-.italic {
-  font-style: italic;
 }
 
 .tabular-nums {
@@ -9772,16 +9640,8 @@ body:has([data-scroll-locked]) {
   opacity: 0.2;
 }
 
-.opacity-25 {
-  opacity: 0.25;
-}
-
 .opacity-30 {
   opacity: 0.3;
-}
-
-.opacity-40 {
-  opacity: 0.4;
 }
 
 .opacity-50 {
@@ -9802,10 +9662,6 @@ body:has([data-scroll-locked]) {
 
 .opacity-80 {
   opacity: 0.8;
-}
-
-.opacity-90 {
-  opacity: 0.9;
 }
 
 .shadow {
@@ -9874,6 +9730,10 @@ body:has([data-scroll-locked]) {
 
 .outline {
   outline-style: solid;
+}
+
+.outline-current {
+  outline-color: currentColor;
 }
 
 .outline-primary {
@@ -9979,11 +9839,6 @@ body:has([data-scroll-locked]) {
 
 .brightness-75 {
   --tw-brightness: brightness(.75);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
-.drop-shadow-lg {
-  --tw-drop-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
@@ -10107,6 +9962,10 @@ body:has([data-scroll-locked]) {
   transition-duration: 1000ms;
 }
 
+.duration-150 {
+  transition-duration: 150ms;
+}
+
 .duration-200 {
   transition-duration: 200ms;
 }
@@ -10202,6 +10061,10 @@ body:has([data-scroll-locked]) {
 
 .bg-black\/5 {
   --tw-bg-base: rgb(0 0 0 / 0.05);
+}
+
+.bg-black\/50 {
+  --tw-bg-base: rgb(0 0 0 / 0.5);
 }
 
 .bg-black\/60 {
@@ -10856,6 +10719,10 @@ body:has([data-scroll-locked]) {
   --tw-bg-base: hsl(var(--color-text));
 }
 
+.bg-text\/10 {
+  --tw-bg-base: hsl(var(--color-text) / 0.1);
+}
+
 .bg-text\/30 {
   --tw-bg-base: hsl(var(--color-text) / 0.3);
 }
@@ -10886,12 +10753,20 @@ body:has([data-scroll-locked]) {
   --tw-bg-base: rgb(255 255 255 / 0.1);
 }
 
+.bg-white\/20 {
+  --tw-bg-base: rgb(255 255 255 / 0.2);
+}
+
 .bg-white\/25 {
   --tw-bg-base: rgb(255 255 255 / 0.25);
 }
 
 .bg-white\/35 {
   --tw-bg-base: rgb(255 255 255 / 0.35);
+}
+
+.bg-white\/70 {
+  --tw-bg-base: rgb(255 255 255 / 0.7);
 }
 
 .bg-white\/95 {
@@ -10978,6 +10853,10 @@ body:has([data-scroll-locked]) {
 
 .duration-1000 {
   animation-duration: 1000ms;
+}
+
+.duration-150 {
+  animation-duration: 150ms;
 }
 
 .duration-200 {
@@ -11353,11 +11232,6 @@ body:has([data-scroll-locked]) {
   color: hsl(var(--primary));
 }
 
-.focus-within\:brightness-90:focus-within {
-  --tw-brightness: brightness(.9);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
 .focus-within\:bg-background\/50:focus-within {
   --tw-bg-base: hsl(var(--background) / 0.5);
 }
@@ -11398,6 +11272,10 @@ body:has([data-scroll-locked]) {
 
 .hover\:bg-black\/50:hover {
   background-color: rgb(0 0 0 / 0.5);
+}
+
+.hover\:bg-black\/60:hover {
+  background-color: rgb(0 0 0 / 0.6);
 }
 
 .hover\:bg-black\/90:hover {
@@ -11520,12 +11398,20 @@ body:has([data-scroll-locked]) {
   background-color: rgb(255 255 255 / 0.2);
 }
 
+.hover\:bg-white\/30:hover {
+  background-color: rgb(255 255 255 / 0.3);
+}
+
 .hover\:bg-white\/40:hover {
   background-color: rgb(255 255 255 / 0.4);
 }
 
 .hover\:bg-white\/50:hover {
   background-color: rgb(255 255 255 / 0.5);
+}
+
+.hover\:bg-white\/60:hover {
+  background-color: rgb(255 255 255 / 0.6);
 }
 
 .hover\:bg-white\/70:hover {
@@ -11554,6 +11440,10 @@ body:has([data-scroll-locked]) {
 
 .hover\:text-gray-900:hover {
   color: hsl(var(--color-gray-900));
+}
+
+.hover\:text-green-600:hover {
+  color: hsl(var(--color-green-600));
 }
 
 .hover\:text-magenta-500:hover {
@@ -11654,6 +11544,10 @@ body:has([data-scroll-locked]) {
   background-color: color-mix(var(--tw-bg-mix-method, in srgb), rgb(0 0 0 / var(--tw-bg-mix-opacity, 1)) var(--tw-bg-mix-amount, 0), var(--tw-bg-base));
 }
 
+.hover\:bg-mix-current:hover {
+  background-color: color-mix(var(--tw-bg-mix-method, in srgb), currentColor var(--tw-bg-mix-amount, 0), var(--tw-bg-base));
+}
+
 .hover\:bg-mix-primary:hover {
   background-color: color-mix(var(--tw-bg-mix-method, in srgb), hsl(var(--primary)) var(--tw-bg-mix-amount, 0), var(--tw-bg-base));
 }
@@ -11684,6 +11578,10 @@ body:has([data-scroll-locked]) {
 
 .hover\:bg-black\/50:hover {
   --tw-bg-base: rgb(0 0 0 / 0.5);
+}
+
+.hover\:bg-black\/60:hover {
+  --tw-bg-base: rgb(0 0 0 / 0.6);
 }
 
 .hover\:bg-black\/90:hover {
@@ -11806,6 +11704,10 @@ body:has([data-scroll-locked]) {
   --tw-bg-base: rgb(255 255 255 / 0.2);
 }
 
+.hover\:bg-white\/30:hover {
+  --tw-bg-base: rgb(255 255 255 / 0.3);
+}
+
 .hover\:bg-white\/40:hover {
   --tw-bg-base: rgb(255 255 255 / 0.4);
 }
@@ -11814,8 +11716,16 @@ body:has([data-scroll-locked]) {
   --tw-bg-base: rgb(255 255 255 / 0.5);
 }
 
+.hover\:bg-white\/60:hover {
+  --tw-bg-base: rgb(255 255 255 / 0.6);
+}
+
 .hover\:bg-white\/70:hover {
   --tw-bg-base: rgb(255 255 255 / 0.7);
+}
+
+.focus\:border-primary:focus {
+  border-color: hsl(var(--primary));
 }
 
 .focus\:border-text:focus {
@@ -12022,11 +11932,6 @@ body:has([data-scroll-locked]) {
   --tw-ring-offset-color: hsl(var(--background));
 }
 
-.focus-visible\:brightness-90:focus-visible {
-  --tw-brightness: brightness(.9);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
 .focus-visible\:bg-mix-background:focus-visible {
   background-color: color-mix(var(--tw-bg-mix-method, in srgb), hsl(var(--background)) var(--tw-bg-mix-amount, 0), var(--tw-bg-base));
 }
@@ -12034,6 +11939,10 @@ body:has([data-scroll-locked]) {
 .focus-visible\:bg-mix-black:focus-visible {
   --tw-bg-mix-opacity: 1;
   background-color: color-mix(var(--tw-bg-mix-method, in srgb), rgb(0 0 0 / var(--tw-bg-mix-opacity, 1)) var(--tw-bg-mix-amount, 0), var(--tw-bg-base));
+}
+
+.focus-visible\:bg-mix-current:focus-visible {
+  background-color: color-mix(var(--tw-bg-mix-method, in srgb), currentColor var(--tw-bg-mix-amount, 0), var(--tw-bg-base));
 }
 
 .focus-visible\:bg-mix-primary:focus-visible {
@@ -12060,6 +11969,10 @@ body:has([data-scroll-locked]) {
   --tw-scale-x: 0.98;
   --tw-scale-y: 0.98;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.active\:cursor-grabbing:active {
+  cursor: grabbing;
 }
 
 .active\:bg-gray-100:active {
@@ -12091,11 +12004,6 @@ body:has([data-scroll-locked]) {
   outline-offset: 2px;
 }
 
-.active\:brightness-75:active {
-  --tw-brightness: brightness(.75);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
 .active\:bg-mix-background:active {
   background-color: color-mix(var(--tw-bg-mix-method, in srgb), hsl(var(--background)) var(--tw-bg-mix-amount, 0), var(--tw-bg-base));
 }
@@ -12103,6 +12011,10 @@ body:has([data-scroll-locked]) {
 .active\:bg-mix-black:active {
   --tw-bg-mix-opacity: 1;
   background-color: color-mix(var(--tw-bg-mix-method, in srgb), rgb(0 0 0 / var(--tw-bg-mix-opacity, 1)) var(--tw-bg-mix-amount, 0), var(--tw-bg-base));
+}
+
+.active\:bg-mix-current:active {
+  background-color: color-mix(var(--tw-bg-mix-method, in srgb), currentColor var(--tw-bg-mix-amount, 0), var(--tw-bg-base));
 }
 
 .active\:bg-mix-primary:active {
@@ -12177,6 +12089,10 @@ body:has([data-scroll-locked]) {
   color: hsl(var(--color-red-700));
 }
 
+.group\/tile:hover .group-hover\/tile\:opacity-100 {
+  opacity: 1;
+}
+
 .group:hover .group-hover\:opacity-100 {
   opacity: 1;
 }
@@ -12185,6 +12101,10 @@ body:has([data-scroll-locked]) {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.group:hover .group-hover\:bg-mix-current {
+  background-color: color-mix(var(--tw-bg-mix-method, in srgb), currentColor var(--tw-bg-mix-amount, 0), var(--tw-bg-base));
 }
 
 .group:hover .group-hover\:bg-mix-text {
@@ -12951,6 +12871,10 @@ body:has([data-scroll-locked]) {
     left: 0px;
   }
 
+  .sm\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+
   .sm\:-mb-\[50px\] {
     margin-bottom: -50px;
   }
@@ -12965,6 +12889,22 @@ body:has([data-scroll-locked]) {
 
   .sm\:mb-0 {
     margin-bottom: 0px;
+  }
+
+  .sm\:ml-0 {
+    margin-left: 0px;
+  }
+
+  .sm\:block {
+    display: block;
+  }
+
+  .sm\:inline-flex {
+    display: inline-flex;
+  }
+
+  .sm\:hidden {
+    display: none;
   }
 
   .sm\:h-6 {
@@ -12987,6 +12927,10 @@ body:has([data-scroll-locked]) {
     height: 900px;
   }
 
+  .sm\:w-32 {
+    width: 128px;
+  }
+
   .sm\:w-6 {
     width: 24px;
   }
@@ -13005,6 +12949,10 @@ body:has([data-scroll-locked]) {
 
   .sm\:min-w-0 {
     min-width: 0px;
+  }
+
+  .sm\:max-w-\[140px\] {
+    max-width: 140px;
   }
 
   .sm\:max-w-\[256px\] {
@@ -13027,16 +12975,32 @@ body:has([data-scroll-locked]) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .sm\:grid-rows-2 {
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+  }
+
   .sm\:flex-row {
     flex-direction: row;
+  }
+
+  .sm\:items-start {
+    align-items: flex-start;
   }
 
   .sm\:justify-end {
     justify-content: flex-end;
   }
 
+  .sm\:justify-between {
+    justify-content: space-between;
+  }
+
   .sm\:gap-12 {
     gap: 48px;
+  }
+
+  .sm\:gap-2 {
+    gap: 8px;
   }
 
   .sm\:gap-2\.5 {
@@ -13057,6 +13021,10 @@ body:has([data-scroll-locked]) {
     --tw-space-y-reverse: 0;
     margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0px * var(--tw-space-y-reverse));
+  }
+
+  .sm\:self-auto {
+    align-self: auto;
   }
 
   .sm\:px-4 {
@@ -13633,6 +13601,10 @@ body:has([data-scroll-locked]) {
 
   .lg\:h-\[500px\] {
     height: 500px;
+  }
+
+  .lg\:h-\[520px\] {
+    height: 520px;
   }
 
   .lg\:w-\[220px\] {
@@ -14564,7 +14536,7 @@ a.\[a\&\]\:hover\:bg-secondary\/90:hover {
 <body>
 <div class="container">
 <div class="tweet-card">
-<article aria-labelledby="id__ey3q0hez29i id__zdqkej9dpec id__zbmaq5mn54a id__ws6ixxjzs3 id__0x8ypwy8o5xe id__r3eszhifgae id__gdsuwepfwj id__14r4dd0gqut id__9o1kvp4v5mb id__r7wbenk9wa id__viccij4md09 id__5p6t5t9pvbu id__3eb97q6cp6d id__zvs8to040ml id__srdasa2fkbj id__20v7k5p8gmzj id__wwx55ui6vx id__ww97vvjcfvk id__09e934gsok03 id__r3i1o1du0y" class="css-175oi2r r-18u37iz r-1udh08x r-1c4vpko r-1c7gwzm r-1ny4l3l" data-testid="tweet" role="article" tabindex="-1"><div class="css-175oi2r r-eqz5dr r-16y2uox r-1wbh5a2"><div class="css-175oi2r r-16y2uox r-1wbh5a2 r-1ny4l3l"><div class="css-175oi2r"><div class="css-175oi2r r-18u37iz r-136ojw6"><div class="css-175oi2r r-1iusvr4 r-16y2uox r-ttdzmv"></div></div></div><div class="css-175oi2r r-18u37iz r-136ojw6"><div class="css-175oi2r r-18kxxzh r-1wron08 r-onrtq4 r-1awozwy"><div class="css-175oi2r" data-testid="Tweet-User-Avatar"><div class="css-175oi2r r-18kxxzh r-1wbh5a2 r-13qz1uu"><div class="css-175oi2r r-1wbh5a2 r-dnmrzs"><div class="css-175oi2r r-bztko3 r-1adg3ll" data-testid="UserAvatar-Container-zachlloydtweets" style="width: 40px; height: 40px;"><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 100%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div class="css-175oi2r r-1adg3ll r-1pi2tsx r-13qz1uu r-45ll9u r-u8s1d r-1v2oles r-176fswd r-bztko3"><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 100%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div class="css-175oi2r r-sdzlij r-1udh08x r-5f1w11 r-u8s1d r-8jfcpp" style="width: calc(100% + 4px); height: calc(100% + 4px);"><a aria-hidden="true" class="css-175oi2r r-1pi2tsx r-13qz1uu r-o7ynqc r-6416eg r-1ny4l3l r-1loqt21" href="/zachlloydtweets" role="link" style="background-color: rgba(0, 0, 0, 0);" tabindex="-1"><div class="css-175oi2r r-sdzlij r-1udh08x r-633pao r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-175oi2r r-1pi2tsx r-13qz1uu" style="background-color: rgba(0, 0, 0, 0);"></div></div><div class="css-175oi2r r-sdzlij r-1udh08x r-633pao r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-175oi2r r-1pi2tsx r-13qz1uu r-14lw9ot"></div></div><div class="css-175oi2r r-sdzlij r-1udh08x r-633pao r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="background-color: rgb(255, 255, 255); width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-175oi2r r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 100%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div class="css-175oi2r r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af"><div class="css-175oi2r r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/profile_images/1937620050254454785/flAAHtFa_normal.jpg");'></div><img alt="" class="css-9pa8cd" draggable="true" src="https://pbs.twimg.com/profile_images/1937620050254454785/flAAHtFa_normal.jpg"/></div></div></div></div><div class="css-175oi2r r-sdzlij r-1udh08x r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-175oi2r r-12181gd r-1pi2tsx r-13qz1uu r-o7ynqc r-6416eg r-1ny4l3l"></div></div></a></div></div></div></div></div></div></div></div></div><div class="css-175oi2r r-1iusvr4 r-16y2uox r-1777fci"><div class="css-175oi2r r-zl2h9q"><div class="css-175oi2r r-k4xj1c r-18u37iz r-1wtj0ep"><div class="css-175oi2r r-1d09ksm r-18u37iz r-1wbh5a2"><div class="css-175oi2r r-1wbh5a2 r-dnmrzs r-1ny4l3l"><div class="css-175oi2r r-1wbh5a2 r-dnmrzs r-1ny4l3l" data-testid="User-Name" id="id__0x8ypwy8o5xe"><div class="css-175oi2r r-1awozwy r-18u37iz r-1wbh5a2 r-dnmrzs"><div class="css-175oi2r r-1wbh5a2 r-dnmrzs"><a class="css-175oi2r r-1wbh5a2 r-dnmrzs r-1ny4l3l r-1loqt21" href="/zachlloydtweets" role="link"><div class="css-175oi2r r-1awozwy r-18u37iz r-1wbh5a2 r-dnmrzs"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-b88u0q r-1awozwy r-6koalj r-1udh08x r-3s2u2q" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-dnmrzs r-1udh08x r-1udbk01 r-3s2u2q r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">Zach Lloyd</span></span></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-xoduu5 r-18u37iz r-1q142lx" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1awozwy r-xoduu5"><svg aria-label="认证账号" class="r-4qtqp9 r-yyyyoo r-1xvli5t r-bnwqim r-lrvibr r-m6rgpd r-1cvl2hr r-f9ja8p r-og9te1 r-3t4u6i" data-testid="icon-verified" role="img" viewbox="0 0 22 22"><g><path d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.854-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.688-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.606-.274 1.263-.144 1.896.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681s.075-1.299-.165-1.903c.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z"></path></g></svg></span></div></div></a></div></div><div class="css-175oi2r r-18u37iz r-1wbh5a2"><div class="css-175oi2r r-1d09ksm r-18u37iz r-1wbh5a2"><div class="css-175oi2r r-1wbh5a2 r-dnmrzs"><a class="css-175oi2r r-1wbh5a2 r-dnmrzs r-1ny4l3l r-1loqt21" href="/zachlloydtweets" role="link" tabindex="-1"><div class="css-146c3p1 r-dnmrzs r-1udh08x r-1udbk01 r-3s2u2q r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-18u37iz r-1wvb978" dir="ltr" style="color: rgb(83, 100, 113);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">@zachlloydtweets</span></div></a></div></div></div></div></div></div><div class="css-175oi2r r-1kkk96v"><div class="css-175oi2r r-1awozwy r-18u37iz r-1cmwbt1 r-1wtj0ep"><div class="css-175oi2r r-18u37iz r-1h0z5md"><button aria-label="Grok 操作" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(15, 20, 25);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><div class="css-175oi2r r-xoduu5 r-bnwqim"><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-1xvli5t r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd" viewbox="0 0 33 32"><g><path d="M12.745 20.54l10.97-8.19c.539-.4 1.307-.244 1.564.38 1.349 3.288.746 7.241-1.938 9.955-2.683 2.714-6.417 3.31-9.83 1.954l-3.728 1.745c5.347 3.697 11.84 2.782 15.898-1.324 3.219-3.255 4.216-7.692 3.284-11.693l.008.009c-1.351-5.878.332-8.227 3.782-13.031L33 0l-4.54 4.59v-.014L12.743 20.544m-2.263 1.987c-3.837-3.707-3.175-9.446.1-12.755 2.42-2.449 6.388-3.448 9.852-1.979l3.72-1.737c-.67-.49-1.53-1.017-2.515-1.387-4.455-1.854-9.789-.931-13.41 2.728-3.483 3.523-4.579 8.94-2.697 13.561 1.405 3.454-.899 5.898-3.22 8.364C1.49 30.2.666 31.074 0 32l10.478-9.466"></path></g></svg></div></div></div></button></div><div class="css-175oi2r r-1awozwy r-6koalj r-18u37iz"><div class="css-175oi2r"><div class="css-175oi2r r-18u37iz r-1h0z5md"><button aria-expanded="false" aria-haspopup="menu" aria-label="更多" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="caret" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div></div></button></div></div></div></div></div></div></div></div></div><div class="css-175oi2r"><div class="css-175oi2r"><div class="css-175oi2r r-1s2bzr4"></div></div><div class="css-175oi2r"><div class="css-175oi2r r-1ny4l3l" data-testid="twitterArticleReadView"><div class="css-175oi2r r-1peese0"><div class="css-175oi2r"><div class="css-175oi2r r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-175oi2r"><div class="css-175oi2r r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-175oi2r r-1pi2tsx r-1ny4l3l r-1loqt21" href="/zachlloydtweets/article/2019877685980196937/media/2019813599892344832" role="link"><div class="css-175oi2r r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 40%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="图像" class="css-175oi2r r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-175oi2r r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HAfRxIYWEAAtXK3?format=jpg&amp;name=small");'></div><img alt="图像" class="css-9pa8cd" draggable="true" src="assets/c7eb309f0e14bf6eb6ffd9086c6967a5.jpg"/></div></div></div></a></div></div></div></div></div><div class="css-175oi2r r-vmopo1"><div class="css-175oi2r r-13qz1uu"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-uho16t r-1vr29t4 r-1o37s4c r-1s2bzr4" data-testid="twitter-article-title" dir="auto" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">Get agents off your machine</span></div></div><div class="css-175oi2r"><div aria-label="28 回复、44 次转帖、373 喜欢、592 书签、97201 次观看" class="css-175oi2r r-1kbdv8c r-18u37iz r-1wtj0ep r-1ye8kvj r-j5o65s r-rull8r r-qklmqi r-h3s6tt r-14gqq1x" role="group"><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="28 回复。回复" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="reply" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01zm8.005-6c-3.317 0-6.005 2.69-6.005 6 0 3.37 2.77 6.08 6.138 6.01l.351-.01h1.761v2.3l5.087-2.81c1.951-1.08 3.163-3.13 3.163-5.36 0-3.39-2.744-6.13-6.129-6.13H9.756z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">28</span></span></span></div></div></button></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-expanded="false" aria-haspopup="menu" aria-label="44 次转帖。转帖" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="retweet" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">44</span></span></span></div></div></button></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="373 喜欢次数。喜欢" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="like" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">373</span></span></span></div></div></button></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><a aria-label="97201 次查看。查看帖子分析" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1ny4l3l r-1loqt21" href="/zachlloydtweets/status/2019877685980196937/analytics" role="link"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M8.75 21V3h2v18h-2zM18 21V8.5h2V21h-2zM4 21l.004-10h2L6 21H4zm9.248 0v-7h2v7h-2z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">9.7万</span></span></span></div></div></a></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-1wron08"><button aria-label="书签" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="bookmark" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M4 4.5C4 3.12 5.119 2 6.5 2h11C18.881 2 20 3.12 20 4.5v18.44l-8-5.71-8 5.71V4.5zM6.5 4c-.276 0-.5.22-.5.5v14.56l6-4.29 6 4.29V4.5c0-.28-.224-.5-.5-.5h-11z"></path></g></svg></div></div></button></div><div class="css-175oi2r" style="justify-content: inherit; display: inline-grid; transform: rotate(0deg) scale(1) translate3d(0px, 0px, 0px);"><div class="css-175oi2r r-18u37iz r-1h0z5md"><button aria-expanded="false" aria-haspopup="menu" aria-label="分享帖子" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M12 2.59l5.7 5.7-1.41 1.42L13 6.41V16h-2V6.41l-3.3 3.3-1.41-1.42L12 2.59zM21 15l-.02 3.51c0 1.38-1.12 2.49-2.5 2.49H5.5C4.11 21 3 19.88 3 18.5V15h2v3.5c0 .28.22.5.5.5h12.98c.28 0 .5-.22.5-.5L19 15h2z"></path></g></svg></div></div></button></div></div></div></div><div class="css-175oi2r r-1knelpx" data-testid="twitterArticleRichTextView"><div class="css-175oi2r r-37j5jr"><div class="DraftEditor-root"><div class="DraftEditor-editorContainer"><div aria-describedby="placeholder-3mrsc" class="public-DraftEditor-content" contenteditable="false" data-testid="longformRichTextComponent" spellcheck="false" style="outline: none; user-select: text; white-space: pre-wrap; overflow-wrap: break-word;"><div data-contents="true"><div class="longform-unstyled" data-block="true" data-editor="3mrsc" data-offset-key="a8en4-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="a8en4-0-0"><span data-offset-key="a8en4-0-0"><span data-text="true">2026 is going to be the year that development actually moves to the cloud.</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3mrsc" data-offset-key="8all-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8all-0-0"><span data-offset-key="8all-0-0"><span data-text="true">Folks have been talking about this shift for a long time – after all, other productivity apps moved to the cloud long ago, from Google Docs to Figma etc. It’s pretty unusual to use an offline desktop app to do knowledge work these days.</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3mrsc" data-offset-key="7v1ol-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7v1ol-0-0"><span data-offset-key="7v1ol-0-0"><span data-text="true">But up until now, there hasn’t been a great reason for software development to move off of the laptop and into the cloud. In fact, there were some good reasons it shouldn't. </span></span><div class="css-175oi2r r-1loqt21 r-1471scf r-o7ynqc r-6416eg r-1ny4l3l"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-rjixqe r-16dba41 r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="https://www.warp.dev/blog/why-is-it-taking-so-long-for-cloud-dev-environments-to-catch-on" rel="noopener noreferrer nofollow" role="link" style="color: rgb(15, 20, 25);" target="_blank"><span data-offset-key="7v1ol-1-0"><span data-text="true">I wrote a blog about this a few years back</span></span></a></div><span data-offset-key="7v1ol-2-0"><span data-text="true">. TL;DR: the pull to work in the cloud wasn’t that strong for developers, the setup costs were high, and the ergonomics were poor compared to local development.</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3mrsc" data-offset-key="6ibce-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="6ibce-0-0"><span data-offset-key="6ibce-0-0"><span data-text="true">This is all going to change this year, and not in the way anyone would have predicted a few years back.</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3mrsc" data-offset-key="4bb8p-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4bb8p-0-0"><span data-offset-key="4bb8p-0-0"><span data-text="true">It’s all because of... you guessed it... agents.</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3mrsc" data-offset-key="eq938-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="eq938-0-0"><span data-offset-key="eq938-0-0"><span data-text="true">The reasons are simple:</span></span></div></div><ul class="public-DraftStyleDefault-ul" data-offset-key="6oe80-0-0"><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-reset public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="3mrsc" data-offset-key="6oe80-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="6oe80-0-0"><span data-offset-key="6oe80-0-0" style="font-weight: bold;"><span data-text="true">We are running out of laptop capacity.</span></span><span data-offset-key="6oe80-0-1"><span data-text="true"> We maintain a large-scale Rust codebase for the </span></span><div class="css-175oi2r r-1loqt21 r-1471scf r-o7ynqc r-6416eg r-1ny4l3l"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-rjixqe r-16dba41 r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="https://x.com/@warpdotdev" rel="noopener noreferrer nofollow" role="link" style="color: rgb(15, 20, 25);" target="_blank"><span data-offset-key="6oe80-1-0"><span data-text="true">@warpdotdev</span></span></a></div><span data-offset-key="6oe80-2-0"><span data-text="true"> terminal app, and running even two cargo builds simultaneously will strain our SOTA Macbooks. Let alone 10 agents running in parallel.</span></span></div></li><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="3mrsc" data-offset-key="1cda4-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1cda4-0-0"><span data-offset-key="1cda4-0-0" style="font-weight: bold;"><span data-text="true">Agents cannot test their work simultaneously if they need computer access.</span></span><span data-offset-key="1cda4-0-1"><span data-text="true"> Say, to click around a native application using a mouse. This requires sandboxing to run agents in parallel.</span></span></div></li><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="3mrsc" data-offset-key="d04c8-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="d04c8-0-0"><span data-offset-key="d04c8-0-0" style="font-weight: bold;"><span data-text="true">Agents need to be working at all times, regardless of whether your computer is awake. </span></span><span data-offset-key="d04c8-0-1"><span data-text="true">They are increasingly running off of timers and system events and can’t be tied to laptop state. A Mac Mini in your closet isn't going to cut it.</span></span></div></li><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="3mrsc" data-offset-key="5ee1b-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5ee1b-0-0"><span data-offset-key="5ee1b-0-0" style="font-weight: bold;"><span data-text="true">Companies want visibility and tracking of agents. </span></span><span data-offset-key="5ee1b-0-1"><span data-text="true">This points to less of a DIY workflow and more standardization of orchestration and tracking off of personal machines.</span></span></div></li><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="3mrsc" data-offset-key="97s0v-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="97s0v-0-0"><span data-offset-key="97s0v-0-0" style="font-weight: bold;"><span data-text="true">And the big one: agents actually make it much easier to set up cloud environments!</span></span><span data-offset-key="97s0v-0-1"><span data-text="true"> This used to be a pain in the a**… making Docker files, provisioning machines, etc. A lot of the tedious configuration can be handled by agents now.</span></span></div></li></ul><div class="longform-unstyled" data-block="true" data-editor="3mrsc" data-offset-key="q1nh-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="q1nh-0-0"><span data-offset-key="q1nh-0-0"><span data-text="true">There’s still a bunch to figure out to make all of this work well, and this is an area Warp is actively investing in – trying to make the easiest, scalable solution for agents in the cloud, that still allows the right amount of human-in-the-loop, tracking, etc.</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3mrsc" data-offset-key="11uqk-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="11uqk-0-0"><span data-offset-key="11uqk-0-0"><span data-text="true">Curious if other folks see this the same way… and if you do, keep an eye on the </span></span><div class="css-175oi2r r-1loqt21 r-1471scf r-o7ynqc r-6416eg r-1ny4l3l"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-rjixqe r-16dba41 r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="https://x.com/@warpdotdev" rel="noopener noreferrer nofollow" role="link" style="color: rgb(15, 20, 25);" target="_blank"><span data-offset-key="11uqk-1-0"><span data-text="true">@warpdotdev</span></span></a></div><span data-offset-key="11uqk-2-0"><span data-text="true"> timeline next week.</span></span></div></div></div></div></div></div></div></div><div class="css-175oi2r"><div aria-live="polite" class="css-175oi2r r-1xfd6ze r-6koalj r-18u37iz r-kzbkwu r-1c4vpko r-1c7gwzm r-ttdzmv r-13qz1uu" role="status" style="background-color: rgb(234, 250, 255);"><div class="css-175oi2r r-13awgt0 r-18u37iz"><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-1xvli5t r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-18jsvk2 r-1wron08" data-testid="icon" viewbox="0 0 24 24"><g><path clip-rule="evenodd" d="M5.75 2.586C6.125 2.21 6.634 2 7.164 2H17.75c.552 0 1 .448 1 1v4.75c0 .265-.105.52-.293.707L9 17.914V21c0 .552-.448 1-1 1H3c-.552 0-1-.448-1-1V7.164c0-.53.21-1.039.586-1.414L5.75 2.586zm2 3.664c-.552 0-1 .448-1 1s.448 1 1 1h6.5c.552 0 1-.448 1-1s-.448-1-1-1h-6.5zm-3.25 4.5c0-.552.448-1 1-1H12c.552 0 1 .448 1 1s-.448 1-1 1H5.5c-.552 0-1-.448-1-1zM19 9.896l-2.235 2.235 3.354 3.354 2.235-2.235L19 9.896zm-8.75 8.75l5.631-5.631 3.354 3.354L13.604 22H10.25v-3.354z" fill-rule="evenodd"></path></g></svg><div class="css-175oi2r r-1habvwh r-13awgt0 r-1777fci"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1b43r93 r-1cwl3u0 r-16dba41 r-13qz1uu" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">想发布自己的文章？</span></div><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1b43r93 r-1cwl3u0 r-b88u0q r-1q142lx r-1s2bzr4 r-iphfwy r-13orzya r-3s2u2q r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="/i/premium_sign_up" role="link" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">升级为 Premium</span></a></div></div></div></div></div></div></div><div class="css-175oi2r"></div><div class="css-175oi2r r-12kyg2d"><div class="css-175oi2r r-k4xj1c r-18u37iz r-1wtj0ep"><div class="css-175oi2r r-1wbh5a2 r-1a11zyx"><div class="css-175oi2r r-1d09ksm r-18u37iz r-1wbh5a2 r-1471scf"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(83, 100, 113);"><a aria-describedby="id__o0tdtyi6qm9" aria-label="上午4:55 · 2026年2月7日" class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-xoduu5 r-1q142lx r-1w6e6rj r-9aw3ui r-3s2u2q r-1loqt21" href="/zachlloydtweets/status/2019877685980196937" role="link" style="color: rgb(83, 100, 113);"><time datetime="2026-02-06T20:55:42.000Z">上午4:55 · 2026年2月7日</time></a></div><div aria-hidden="true" class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1q142lx r-n7gxbd" dir="ltr" style="color: rgb(83, 100, 113);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">·</span></div><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1loqt21" dir="ltr" href="/zachlloydtweets/status/2019877685980196937/analytics" role="link" style="color: rgb(15, 20, 25);"><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1b43r93 r-1cwl3u0 r-b88u0q" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">9.7万</span></span></span></div> <span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1b43r93 r-1cwl3u0" style="color: rgb(83, 100, 113);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">查看</span></span></a></div></div><div class="css-175oi2r r-18u37iz"></div></div></div><div class="css-175oi2r r-j5o65s r-rull8r r-qklmqi"><div class="css-175oi2r"><div aria-label="28 回复、44 次转帖、373 喜欢、592 书签、97201 次观看" class="css-175oi2r r-1kbdv8c r-18u37iz r-1oszu61 r-3qxfft r-n7gxbd r-1dgieki r-1efd50x r-5kkj8d r-h3s6tt r-1wtj0ep" id="id__r3i1o1du0y" role="group"><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="28 回复。回复" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="reply" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01zm8.005-6c-3.317 0-6.005 2.69-6.005 6 0 3.37 2.77 6.08 6.138 6.01l.351-.01h1.761v2.3l5.087-2.81c1.951-1.08 3.163-3.13 3.163-5.36 0-3.39-2.744-6.13-6.129-6.13H9.756z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">28</span></span></span></div></div></button></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-expanded="false" aria-haspopup="menu" aria-label="44 次转帖。转帖" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="retweet" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">44</span></span></span></div></div></button></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="373 喜欢次数。喜欢" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="like" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">373</span></span></span></div></div></button></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="592 书签。加入书签" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="bookmark" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M4 4.5C4 3.12 5.119 2 6.5 2h11C18.881 2 20 3.12 20 4.5v18.44l-8-5.71-8 5.71V4.5zM6.5 4c-.276 0-.5.22-.5.5v14.56l6-4.29 6 4.29V4.5c0-.28-.224-.5-.5-.5h-11z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">592</span></span></span></div></div></button></div><div class="css-175oi2r" style="justify-content: inherit; display: inline-grid; transform: rotate(0deg) scale(1) translate3d(0px, 0px, 0px);"><div class="css-175oi2r r-18u37iz r-1h0z5md"><button aria-expanded="false" aria-haspopup="menu" aria-label="分享帖子" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M12 2.59l5.7 5.7-1.41 1.42L13 6.41V16h-2V6.41l-3.3 3.3-1.41-1.42L12 2.59zM21 15l-.02 3.51c0 1.38-1.12 2.49-2.5 2.49H5.5C4.11 21 3 19.88 3 18.5V15h2v3.5c0 .28.22.5.5.5h12.98c.28 0 .5-.22.5-.5L19 15h2z"></path></g></svg></div></div></button></div></div></div></div><div class="css-175oi2r r-1awozwy r-18u37iz r-1wtj0ep r-6gpygo"><div class="css-175oi2r r-1awozwy r-18u37iz"><div class="css-175oi2r"><button aria-haspopup="menu" class="css-146c3p1 r-bcqeeo r-qvutc0 r-37j5jr r-1b43r93 r-1cwl3u0 r-majxgm r-fdjqy7" dir="ltr" role="button" style="color: rgb(83, 100, 113);" type="button"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">相关</span><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1pexk7n r-1mcorv5" viewbox="0 0 24 24"><g><path d="M3.543 8.96l1.414-1.42L12 14.59l7.043-7.05 1.414 1.42L12 17.41 3.543 8.96z"></path></g></svg></button></div></div><div class="css-175oi2r r-1awozwy r-18u37iz"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1b43r93 r-1cwl3u0 r-majxgm r-1loqt21" dir="ltr" href="/zachlloydtweets/status/2019877685980196937/quotes" role="link" style="color: rgb(83, 100, 113);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">查看引用</span><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1pexk7n r-1mcorv5" viewbox="0 0 24 24"><g><path d="M14.586 12L7.543 4.96l1.414-1.42L17.414 12l-8.457 8.46-1.414-1.42L14.586 12z"></path></g></svg></a></div></div></div></div></div></div></article>
+<article aria-labelledby="id__m5ah4vs37fi id__j4wkjw93bvo id__ujswmu7foca id__s23e33cij0b id__vawk4b1jr8 id__6ymq6j7l7id id__9o6etsnk6rt id__6onszwc1c6i id__rvu55kcnxxe id__jvhm64buhbd id__zge88d6dd7o id__uv10h2hty6g id__acgrwjq4xor id__yzhdzih5i5 id__4vl327bvjdh id__b2k4au93o5n id__xnjd57a7qdb id__y99bbv7hi4 id__u4qy5iqpz3j id__xym0w65kdus" class="css-175oi2r r-18u37iz r-1udh08x r-1c4vpko r-1c7gwzm r-1ny4l3l" data-testid="tweet" role="article" tabindex="-1"><div class="css-175oi2r r-eqz5dr r-16y2uox r-1wbh5a2"><div class="css-175oi2r r-16y2uox r-1wbh5a2 r-1ny4l3l"><div class="css-175oi2r"><div class="css-175oi2r r-18u37iz r-136ojw6"><div class="css-175oi2r r-1iusvr4 r-16y2uox r-ttdzmv"></div></div></div><div class="css-175oi2r r-18u37iz r-136ojw6"><div class="css-175oi2r r-18kxxzh r-1wron08 r-onrtq4 r-1awozwy"><div class="css-175oi2r" data-testid="Tweet-User-Avatar"><div class="css-175oi2r r-18kxxzh r-1wbh5a2 r-13qz1uu"><div class="css-175oi2r r-1wbh5a2 r-dnmrzs"><div class="css-175oi2r r-bztko3 r-1adg3ll" data-testid="UserAvatar-Container-zachlloydtweets" style="width: 40px; height: 40px;"><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 100%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div class="css-175oi2r r-1adg3ll r-1pi2tsx r-13qz1uu r-45ll9u r-u8s1d r-1v2oles r-176fswd r-bztko3"><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 100%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div class="css-175oi2r r-sdzlij r-1udh08x r-5f1w11 r-u8s1d r-8jfcpp" style="width: calc(100% + 4px); height: calc(100% + 4px);"><a aria-hidden="true" class="css-175oi2r r-1pi2tsx r-13qz1uu r-o7ynqc r-6416eg r-1ny4l3l r-1loqt21" href="/zachlloydtweets" role="link" style="background-color: rgba(0, 0, 0, 0);" tabindex="-1"><div class="css-175oi2r r-sdzlij r-1udh08x r-633pao r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-175oi2r r-1pi2tsx r-13qz1uu" style="background-color: rgba(0, 0, 0, 0);"></div></div><div class="css-175oi2r r-sdzlij r-1udh08x r-633pao r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-175oi2r r-1pi2tsx r-13qz1uu r-14lw9ot"></div></div><div class="css-175oi2r r-sdzlij r-1udh08x r-633pao r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="background-color: rgb(255, 255, 255); width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-175oi2r r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 100%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div class="css-175oi2r r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af"><div class="css-175oi2r r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/profile_images/1937620050254454785/flAAHtFa_normal.jpg");'></div><img alt="" class="css-9pa8cd" draggable="true" src="https://pbs.twimg.com/profile_images/1937620050254454785/flAAHtFa_normal.jpg"/></div></div></div></div><div class="css-175oi2r r-sdzlij r-1udh08x r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-175oi2r r-12181gd r-1pi2tsx r-13qz1uu r-o7ynqc r-6416eg r-1ny4l3l"></div></div></a></div></div></div></div></div></div></div></div></div><div class="css-175oi2r r-1iusvr4 r-16y2uox r-1777fci"><div class="css-175oi2r r-zl2h9q"><div class="css-175oi2r r-k4xj1c r-18u37iz r-1wtj0ep"><div class="css-175oi2r r-1d09ksm r-18u37iz r-1wbh5a2"><div class="css-175oi2r r-1wbh5a2 r-dnmrzs r-1ny4l3l"><div class="css-175oi2r r-1wbh5a2 r-dnmrzs r-1ny4l3l" data-testid="User-Name" id="id__vawk4b1jr8"><div class="css-175oi2r r-1awozwy r-18u37iz r-1wbh5a2 r-dnmrzs"><div class="css-175oi2r r-1wbh5a2 r-dnmrzs"><a class="css-175oi2r r-1wbh5a2 r-dnmrzs r-1ny4l3l r-1loqt21" href="/zachlloydtweets" role="link"><div class="css-175oi2r r-1awozwy r-18u37iz r-1wbh5a2 r-dnmrzs"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-b88u0q r-1awozwy r-6koalj r-1udh08x r-3s2u2q" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-dnmrzs r-1udh08x r-1udbk01 r-3s2u2q r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">Zach Lloyd</span></span></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-xoduu5 r-18u37iz r-1q142lx" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1awozwy r-xoduu5"><svg aria-label="认证账号" class="r-4qtqp9 r-yyyyoo r-1xvli5t r-bnwqim r-lrvibr r-m6rgpd r-1cvl2hr r-f9ja8p r-og9te1 r-3t4u6i" data-testid="icon-verified" role="img" viewbox="0 0 22 22"><g><path d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.854-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.688-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.606-.274 1.263-.144 1.896.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681s.075-1.299-.165-1.903c.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z"></path></g></svg><div class="css-175oi2r r-xoduu5 r-1777fci r-x1x4zq r-1ez5h0i r-1ny4l3l r-1loqt21" role="link" tabindex="0"><div class="css-175oi2r r-4qtqp9 r-p3p4p0 r-hm2b0w r-bnwqim" style="height: calc(1.0625em); width: calc(1.0625em);"><div class="css-175oi2r r-1adg3ll r-1udh08x"><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 100%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div class="css-175oi2r r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1ets6dv r-1jkafct r-rs99b7 r-6koalj r-1pi2tsx r-13qz1uu"><div class="css-175oi2r r-xoduu5 r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/profile_images/2024836316395876352/RTG4-kZx_bigger.jpg");'></div><img alt="" class="css-9pa8cd" draggable="false" src="https://pbs.twimg.com/profile_images/2024836316395876352/RTG4-kZx_bigger.jpg"/></div></div></div></div></div></span></div></div></a></div></div><div class="css-175oi2r r-18u37iz r-1wbh5a2"><div class="css-175oi2r r-1d09ksm r-18u37iz r-1wbh5a2"><div class="css-175oi2r r-1wbh5a2 r-dnmrzs"><a class="css-175oi2r r-1wbh5a2 r-dnmrzs r-1ny4l3l r-1loqt21" href="/zachlloydtweets" role="link" tabindex="-1"><div class="css-146c3p1 r-dnmrzs r-1udh08x r-1udbk01 r-3s2u2q r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-18u37iz r-1wvb978" dir="ltr" style="color: rgb(83, 100, 113);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">@zachlloydtweets</span></div></a></div></div></div></div></div></div><div class="css-175oi2r r-1kkk96v"><div class="css-175oi2r r-1awozwy r-18u37iz r-1cmwbt1 r-1wtj0ep"><div class="css-175oi2r r-18u37iz r-1h0z5md"><button aria-label="Grok 操作" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(15, 20, 25);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><div class="css-175oi2r r-xoduu5 r-bnwqim"><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-1xvli5t r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd" viewbox="0 0 33 32"><g><path d="M12.745 20.54l10.97-8.19c.539-.4 1.307-.244 1.564.38 1.349 3.288.746 7.241-1.938 9.955-2.683 2.714-6.417 3.31-9.83 1.954l-3.728 1.745c5.347 3.697 11.84 2.782 15.898-1.324 3.219-3.255 4.216-7.692 3.284-11.693l.008.009c-1.351-5.878.332-8.227 3.782-13.031L33 0l-4.54 4.59v-.014L12.743 20.544m-2.263 1.987c-3.837-3.707-3.175-9.446.1-12.755 2.42-2.449 6.388-3.448 9.852-1.979l3.72-1.737c-.67-.49-1.53-1.017-2.515-1.387-4.455-1.854-9.789-.931-13.41 2.728-3.483 3.523-4.579 8.94-2.697 13.561 1.405 3.454-.899 5.898-3.22 8.364C1.49 30.2.666 31.074 0 32l10.478-9.466"></path></g></svg></div></div></div></button></div><div class="css-175oi2r r-1awozwy r-6koalj r-18u37iz"><div class="css-175oi2r"><div class="css-175oi2r r-18u37iz r-1h0z5md"><button aria-expanded="false" aria-haspopup="menu" aria-label="更多" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="caret" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div></div></button></div></div></div></div></div></div><div class="css-175oi2r r-18u37iz r-1wtj0ep r-zl2h9q"></div></div></div></div><div class="css-175oi2r"><div class="css-175oi2r r-1s2bzr4"></div><div class="css-175oi2r r-1ny4l3l" data-testid="twitterArticleReadView"><div class="css-175oi2r r-1peese0"><div class="css-175oi2r"><div class="css-175oi2r r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-175oi2r"><div class="css-175oi2r r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-175oi2r r-1pi2tsx r-1ny4l3l r-1loqt21" href="/zachlloydtweets/article/2019877685980196937/media/2019813599892344832" role="link"><div class="css-175oi2r r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 40%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="图像" class="css-175oi2r r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-175oi2r r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HAfRxIYWEAAtXK3?format=jpg&amp;name=small");'></div><img alt="图像" class="css-9pa8cd" draggable="true" src="assets/c7eb309f0e14bf6eb6ffd9086c6967a5.jpg"/></div></div></div></a></div></div></div></div></div><div class="css-175oi2r r-vmopo1"><div class="css-175oi2r r-13qz1uu"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-uho16t r-1vr29t4 r-1o37s4c r-1s2bzr4" data-testid="twitter-article-title" dir="auto" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">Get agents off your machine</span></div></div><div class="css-175oi2r"><div aria-label="26 回复、46 次转帖、385 喜欢、608 书签、100842 次观看" class="css-175oi2r r-1kbdv8c r-18u37iz r-1wtj0ep r-1ye8kvj r-j5o65s r-rull8r r-qklmqi r-h3s6tt r-14gqq1x" role="group"><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="26 回复。回复" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="reply" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01zm8.005-6c-3.317 0-6.005 2.69-6.005 6 0 3.37 2.77 6.08 6.138 6.01l.351-.01h1.761v2.3l5.087-2.81c1.951-1.08 3.163-3.13 3.163-5.36 0-3.39-2.744-6.13-6.129-6.13H9.756z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">26</span></span></span></div></div></button></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-expanded="false" aria-haspopup="menu" aria-label="46 次转帖。转帖" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="retweet" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">46</span></span></span></div></div></button></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="385 喜欢次数。喜欢" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="like" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">385</span></span></span></div></div></button></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><a aria-label="100842 次查看。查看帖子分析" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1ny4l3l r-1loqt21" href="/zachlloydtweets/status/2019877685980196937/analytics" role="link"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M8.75 21V3h2v18h-2zM18 21V8.5h2V21h-2zM4 21l.004-10h2L6 21H4zm9.248 0v-7h2v7h-2z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">10万</span></span></span></div></div></a></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-1wron08"><button aria-label="书签" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="bookmark" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M4 4.5C4 3.12 5.119 2 6.5 2h11C18.881 2 20 3.12 20 4.5v18.44l-8-5.71-8 5.71V4.5zM6.5 4c-.276 0-.5.22-.5.5v14.56l6-4.29 6 4.29V4.5c0-.28-.224-.5-.5-.5h-11z"></path></g></svg></div></div></button></div><div class="css-175oi2r" style="justify-content: inherit; display: inline-grid; transform: rotate(0deg) scale(1) translate3d(0px, 0px, 0px);"><div class="css-175oi2r r-18u37iz r-1h0z5md"><button aria-expanded="false" aria-haspopup="menu" aria-label="分享帖子" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M12 2.59l5.7 5.7-1.41 1.42L13 6.41V16h-2V6.41l-3.3 3.3-1.41-1.42L12 2.59zM21 15l-.02 3.51c0 1.38-1.12 2.49-2.5 2.49H5.5C4.11 21 3 19.88 3 18.5V15h2v3.5c0 .28.22.5.5.5h12.98c.28 0 .5-.22.5-.5L19 15h2z"></path></g></svg></div></div></button></div></div></div></div><div class="css-175oi2r r-1knelpx" data-testid="twitterArticleRichTextView"><div class="css-175oi2r r-37j5jr"><div class="DraftEditor-root"><div class="DraftEditor-editorContainer"><div aria-describedby="placeholder-c7o1n" class="public-DraftEditor-content" contenteditable="false" data-testid="longformRichTextComponent" spellcheck="false" style="outline: none; user-select: text; white-space: pre-wrap; overflow-wrap: break-word;"><div data-contents="true"><div class="longform-unstyled" data-block="true" data-editor="c7o1n" data-offset-key="a8en4-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="a8en4-0-0"><span data-offset-key="a8en4-0-0"><span data-text="true">2026 is going to be the year that development actually moves to the cloud.</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="c7o1n" data-offset-key="8all-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8all-0-0"><span data-offset-key="8all-0-0"><span data-text="true">Folks have been talking about this shift for a long time – after all, other productivity apps moved to the cloud long ago, from Google Docs to Figma etc. It’s pretty unusual to use an offline desktop app to do knowledge work these days.</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="c7o1n" data-offset-key="7v1ol-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7v1ol-0-0"><span data-offset-key="7v1ol-0-0"><span data-text="true">But up until now, there hasn’t been a great reason for software development to move off of the laptop and into the cloud. In fact, there were some good reasons it shouldn't. </span></span><div class="css-175oi2r r-1loqt21 r-1471scf r-o7ynqc r-6416eg r-1ny4l3l"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-rjixqe r-16dba41 r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="https://www.warp.dev/blog/why-is-it-taking-so-long-for-cloud-dev-environments-to-catch-on" rel="noopener noreferrer nofollow" role="link" style="color: rgb(15, 20, 25);" target="_blank"><span data-offset-key="7v1ol-1-0"><span data-text="true">I wrote a blog about this a few years back</span></span></a></div><span data-offset-key="7v1ol-2-0"><span data-text="true">. TL;DR: the pull to work in the cloud wasn’t that strong for developers, the setup costs were high, and the ergonomics were poor compared to local development.</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="c7o1n" data-offset-key="6ibce-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="6ibce-0-0"><span data-offset-key="6ibce-0-0"><span data-text="true">This is all going to change this year, and not in the way anyone would have predicted a few years back.</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="c7o1n" data-offset-key="4bb8p-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4bb8p-0-0"><span data-offset-key="4bb8p-0-0"><span data-text="true">It’s all because of... you guessed it... agents.</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="c7o1n" data-offset-key="eq938-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="eq938-0-0"><span data-offset-key="eq938-0-0"><span data-text="true">The reasons are simple:</span></span></div></div><ul class="public-DraftStyleDefault-ul" data-offset-key="6oe80-0-0"><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-reset public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="c7o1n" data-offset-key="6oe80-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="6oe80-0-0"><span data-offset-key="6oe80-0-0" style="font-weight: bold;"><span data-text="true">We are running out of laptop capacity.</span></span><span data-offset-key="6oe80-0-1"><span data-text="true"> We maintain a large-scale Rust codebase for the </span></span><div class="css-175oi2r r-1loqt21 r-1471scf r-o7ynqc r-6416eg r-1ny4l3l"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-rjixqe r-16dba41 r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="https://x.com/@warpdotdev" rel="noopener noreferrer nofollow" role="link" style="color: rgb(15, 20, 25);" target="_blank"><span data-offset-key="6oe80-1-0"><span data-text="true">@warpdotdev</span></span></a></div><span data-offset-key="6oe80-2-0"><span data-text="true"> terminal app, and running even two cargo builds simultaneously will strain our SOTA Macbooks. Let alone 10 agents running in parallel.</span></span></div></li><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="c7o1n" data-offset-key="1cda4-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1cda4-0-0"><span data-offset-key="1cda4-0-0" style="font-weight: bold;"><span data-text="true">Agents cannot test their work simultaneously if they need computer access.</span></span><span data-offset-key="1cda4-0-1"><span data-text="true"> Say, to click around a native application using a mouse. This requires sandboxing to run agents in parallel.</span></span></div></li><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="c7o1n" data-offset-key="d04c8-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="d04c8-0-0"><span data-offset-key="d04c8-0-0" style="font-weight: bold;"><span data-text="true">Agents need to be working at all times, regardless of whether your computer is awake. </span></span><span data-offset-key="d04c8-0-1"><span data-text="true">They are increasingly running off of timers and system events and can’t be tied to laptop state. A Mac Mini in your closet isn't going to cut it.</span></span></div></li><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="c7o1n" data-offset-key="5ee1b-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5ee1b-0-0"><span data-offset-key="5ee1b-0-0" style="font-weight: bold;"><span data-text="true">Companies want visibility and tracking of agents. </span></span><span data-offset-key="5ee1b-0-1"><span data-text="true">This points to less of a DIY workflow and more standardization of orchestration and tracking off of personal machines.</span></span></div></li><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="c7o1n" data-offset-key="97s0v-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="97s0v-0-0"><span data-offset-key="97s0v-0-0" style="font-weight: bold;"><span data-text="true">And the big one: agents actually make it much easier to set up cloud environments!</span></span><span data-offset-key="97s0v-0-1"><span data-text="true"> This used to be a pain in the a**… making Docker files, provisioning machines, etc. A lot of the tedious configuration can be handled by agents now.</span></span></div></li></ul><div class="longform-unstyled" data-block="true" data-editor="c7o1n" data-offset-key="q1nh-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="q1nh-0-0"><span data-offset-key="q1nh-0-0"><span data-text="true">There’s still a bunch to figure out to make all of this work well, and this is an area Warp is actively investing in – trying to make the easiest, scalable solution for agents in the cloud, that still allows the right amount of human-in-the-loop, tracking, etc.</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="c7o1n" data-offset-key="11uqk-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="11uqk-0-0"><span data-offset-key="11uqk-0-0"><span data-text="true">Curious if other folks see this the same way… and if you do, keep an eye on the </span></span><div class="css-175oi2r r-1loqt21 r-1471scf r-o7ynqc r-6416eg r-1ny4l3l"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-rjixqe r-16dba41 r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="https://x.com/@warpdotdev" rel="noopener noreferrer nofollow" role="link" style="color: rgb(15, 20, 25);" target="_blank"><span data-offset-key="11uqk-1-0"><span data-text="true">@warpdotdev</span></span></a></div><span data-offset-key="11uqk-2-0"><span data-text="true"> timeline next week.</span></span></div></div></div></div></div></div></div></div><div class="css-175oi2r"><div aria-live="polite" class="css-175oi2r r-1xfd6ze r-6koalj r-18u37iz r-kzbkwu r-1c4vpko r-1c7gwzm r-ttdzmv r-13qz1uu" role="status" style="background-color: rgb(234, 250, 255);"><div class="css-175oi2r r-13awgt0 r-18u37iz"><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-1xvli5t r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-18jsvk2 r-1wron08" data-testid="icon" viewbox="0 0 24 24"><g><path clip-rule="evenodd" d="M5.75 2.586C6.125 2.21 6.634 2 7.164 2H17.75c.552 0 1 .448 1 1v4.75c0 .265-.105.52-.293.707L9 17.914V21c0 .552-.448 1-1 1H3c-.552 0-1-.448-1-1V7.164c0-.53.21-1.039.586-1.414L5.75 2.586zm2 3.664c-.552 0-1 .448-1 1s.448 1 1 1h6.5c.552 0 1-.448 1-1s-.448-1-1-1h-6.5zm-3.25 4.5c0-.552.448-1 1-1H12c.552 0 1 .448 1 1s-.448 1-1 1H5.5c-.552 0-1-.448-1-1zM19 9.896l-2.235 2.235 3.354 3.354 2.235-2.235L19 9.896zm-8.75 8.75l5.631-5.631 3.354 3.354L13.604 22H10.25v-3.354z" fill-rule="evenodd"></path></g></svg><div class="css-175oi2r r-1habvwh r-13awgt0 r-1777fci"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1b43r93 r-1cwl3u0 r-16dba41 r-13qz1uu" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">想发布自己的文章？</span></div><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1b43r93 r-1cwl3u0 r-b88u0q r-1q142lx r-1s2bzr4 r-iphfwy r-13orzya r-3s2u2q r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="/i/premium_sign_up" role="link" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">升级为 Premium</span></a></div></div></div></div></div></div><div class="css-175oi2r r-12kyg2d"><div class="css-175oi2r r-k4xj1c r-18u37iz r-1wtj0ep"><div class="css-175oi2r r-1wbh5a2 r-1a11zyx"><div class="css-175oi2r r-1d09ksm r-18u37iz r-1wbh5a2 r-1471scf"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(83, 100, 113);"><a aria-describedby="id__tpsznqhbj8c" aria-label="上午4:55 · 2026年2月7日" class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-xoduu5 r-1q142lx r-1w6e6rj r-9aw3ui r-3s2u2q r-1loqt21" href="/zachlloydtweets/status/2019877685980196937" role="link" style="color: rgb(83, 100, 113);"><time datetime="2026-02-06T20:55:42.000Z">上午4:55 · 2026年2月7日</time></a></div><div aria-hidden="true" class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1q142lx r-n7gxbd" dir="ltr" style="color: rgb(83, 100, 113);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">·</span></div><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1loqt21" dir="ltr" href="/zachlloydtweets/status/2019877685980196937/analytics" role="link" style="color: rgb(15, 20, 25);"><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1b43r93 r-1cwl3u0 r-b88u0q" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">10万</span></span></span></div> <span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1b43r93 r-1cwl3u0" style="color: rgb(83, 100, 113);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">查看</span></span></a></div></div><div class="css-175oi2r r-18u37iz"></div></div></div><div class="css-175oi2r r-j5o65s r-rull8r r-qklmqi"><div class="css-175oi2r"><div aria-label="26 回复、46 次转帖、385 喜欢、608 书签、100842 次观看" class="css-175oi2r r-1kbdv8c r-18u37iz r-1oszu61 r-3qxfft r-n7gxbd r-1dgieki r-1efd50x r-5kkj8d r-h3s6tt r-1wtj0ep" id="id__xym0w65kdus" role="group"><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="26 回复。回复" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="reply" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01zm8.005-6c-3.317 0-6.005 2.69-6.005 6 0 3.37 2.77 6.08 6.138 6.01l.351-.01h1.761v2.3l5.087-2.81c1.951-1.08 3.163-3.13 3.163-5.36 0-3.39-2.744-6.13-6.129-6.13H9.756z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">26</span></span></span></div></div></button></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-expanded="false" aria-haspopup="menu" aria-label="46 次转帖。转帖" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="retweet" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">46</span></span></span></div></div></button></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="385 喜欢次数。喜欢" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="like" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">385</span></span></span></div></div></button></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="608 书签。加入书签" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="bookmark" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M4 4.5C4 3.12 5.119 2 6.5 2h11C18.881 2 20 3.12 20 4.5v18.44l-8-5.71-8 5.71V4.5zM6.5 4c-.276 0-.5.22-.5.5v14.56l6-4.29 6 4.29V4.5c0-.28-.224-.5-.5-.5h-11z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">608</span></span></span></div></div></button></div><div class="css-175oi2r" style="justify-content: inherit; display: inline-grid; transform: rotate(0deg) scale(1) translate3d(0px, 0px, 0px);"><div class="css-175oi2r r-18u37iz r-1h0z5md"><button aria-expanded="false" aria-haspopup="menu" aria-label="分享帖子" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M12 2.59l5.7 5.7-1.41 1.42L13 6.41V16h-2V6.41l-3.3 3.3-1.41-1.42L12 2.59zM21 15l-.02 3.51c0 1.38-1.12 2.49-2.5 2.49H5.5C4.11 21 3 19.88 3 18.5V15h2v3.5c0 .28.22.5.5.5h12.98c.28 0 .5-.22.5-.5L19 15h2z"></path></g></svg></div></div></button></div></div></div></div><div class="css-175oi2r r-1awozwy r-18u37iz r-1wtj0ep r-6gpygo"><div class="css-175oi2r r-1awozwy r-18u37iz"><div class="css-175oi2r"><button aria-haspopup="menu" class="css-146c3p1 r-bcqeeo r-qvutc0 r-37j5jr r-1b43r93 r-1cwl3u0 r-majxgm r-fdjqy7" dir="ltr" role="button" style="color: rgb(83, 100, 113);" type="button"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">相关</span><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1pexk7n r-1mcorv5" viewbox="0 0 24 24"><g><path d="M3.543 8.96l1.414-1.42L12 14.59l7.043-7.05 1.414 1.42L12 17.41 3.543 8.96z"></path></g></svg></button></div></div><div class="css-175oi2r r-1awozwy r-18u37iz"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1b43r93 r-1cwl3u0 r-majxgm r-1loqt21" dir="ltr" href="/zachlloydtweets/status/2019877685980196937/quotes" role="link" style="color: rgb(83, 100, 113);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">查看引用</span><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1pexk7n r-1mcorv5" viewbox="0 0 24 24"><g><path d="M14.586 12L7.543 4.96l1.414-1.42L17.414 12l-8.457 8.46-1.414-1.42L14.586 12z"></path></g></svg></a></div></div></div></div></div></div></article>
 </div>
 </div>
 </body>

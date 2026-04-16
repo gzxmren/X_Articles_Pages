@@ -1,0 +1,2922 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>花叔 on X: "从阿西莫夫到Anthropic，万字长文解析AI心理学 " / X</title>
+<!-- Injected Original Styles -->
+<style id="draftjs-styles">
+     .DraftEditor-editorContainer, .DraftEditor-root, .public-DraftEditor-content {
+        height: inherit;
+        max-height: inherit;
+        min-height: inherit;
+        text-align: initial;
+    }
+
+    .public-DraftEditor-content[contenteditable=true] {
+        -moz-user-modify: read-write-plaintext-only;
+        -webkit-user-modify: read-write-plaintext-only;
+    }
+
+    .format-inline .public-DraftEditor-content[contenteditable=true] {
+      -moz-user-modify: read-write;
+      -webkit-user-modify: read-write;
+    }
+
+    .DraftEditor-root {
+        width: 100%;
+        position: relative;
+        -webkit-user-select: none;
+    }
+
+    .DraftEditor-editorContainer {
+        background-color: rgba(255, 255, 255, 0);
+        border-left: .1px solid transparent;
+        position: relative;
+        z-index: 1;
+    }
+
+    .public-DraftEditor-block {
+        position: relative;
+    }
+
+    .DraftEditor-alignLeft .public-DraftStyleDefault-block {
+        text-align: left;
+    }
+
+    .DraftEditor-alignLeft .public-DraftEditorPlaceholder-root {
+        left: 0;
+        text-align: left;
+    }
+
+    .DraftEditor-alignCenter .public-DraftStyleDefault-block {
+        text-align: center
+    }
+
+    .DraftEditor-alignCenter .public-DraftEditorPlaceholder-root {
+        margin: 0 auto;
+        text-align: center;
+        width: 100%
+    }
+
+    .DraftEditor-alignRight .public-DraftStyleDefault-block {
+        text-align: right;
+    }
+
+    .DraftEditor-alignRight .public-DraftEditorPlaceholder-root {
+        right: 0;
+        text-align: right;
+    }
+
+    .public-DraftEditorPlaceholder-root {
+        padding-bottom: 2px;
+        padding-top: 2px;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .public-DraftEditorPlaceholder-inner {
+        user-select: none;
+        -webkit-user-select: none;
+    }
+
+    .DraftEditorPlaceholder-hidden {
+        display: none;
+    }
+
+    .public-DraftStyleDefault-block {
+        overflow:hidden;
+        padding-bottom: 2px;
+        padding-top: 2px;
+        position: relative;
+        white-space: pre-wrap;
+    }
+
+    /* Only a handful of CSS rules work on br tags and user-select isn't one */
+    div:only-child > .public-DraftStyleDefault-block > span > br::selection {
+        background: transparent;
+    }
+
+    /*
+       Safari doesn't let you change ::selection on br elements,
+       but Chrome needs it here
+    */
+    div:only-child > .public-DraftStyleDefault-block > span:has(br)::selection {
+        background: transparent;
+    }
+
+    .public-DraftStyleDefault-ltr {
+        direction: ltr;
+        text-align: left;
+    }
+
+    .public-DraftStyleDefault-rtl {
+        direction: rtl;
+        text-align: right;
+    }
+
+    .DraftEditor-editorContainer a {
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        margin-bottom: inherit;
+        margin-top: inherit;
+    }
+
+    .singleline .public-DraftStyleDefault-block {
+        overflow-x: auto;
+        scrollbar-width: none;
+        white-space: nowrap;
+        -ms-overflow-style: none;
+    }
+
+    .singleline .public-DraftStyleDefault-block::-webkit-scrollbar {
+        display: none;
+    }
+  </style>
+<style id="longform-styles">
+    .longform-header-one {
+        font-size: 31px;
+        font-weight: 800;
+        line-height: 40px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-header-one-narrow {
+        font-size: calc(20px + 1px);
+        font-weight: 800;
+        line-height: 28px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-header-two {
+        font-size: 26px;
+        font-weight: 800;
+        line-height: 36px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-header-two-narrow {
+        font-size: calc(17px + 1px);
+        font-weight: 800;
+        line-height: 24px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-unstyled, .longform-blockquote {
+        font-size: 17px;
+        line-height: 28px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-unstyled-narrow, .longform-blockquote-narrow {
+        font-size: 17px;
+        line-height: 28px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-unordered-list-item, .longform-ordered-list-item {
+        display: block;
+        font-size: 17px;
+        line-height: 28px;   
+        margin-bottom: 12px;
+        margin-left: calc(28px + 2px);
+        margin-top: 0;
+    }
+
+    .longform-unordered-list-item-narrow, .longform-ordered-list-item-narrow {
+        display: block;
+        font-size: 17px;
+        line-height: 28px;   
+        margin-bottom: calc(12px / 2);
+        margin-left: 36px;
+        margin-top: 0;
+    }
+
+    .longform-blockquote, .longform-blockquote-narrow {
+        margin-bottom: calc(24px + 2px);
+        margin-left: 0;
+        margin-top: calc(-2px);
+        padding-left: calc(24px + 3px);
+        position: relative;
+    }
+
+    .longform-blockquote:before, .longform-blockquote-narrow:before {
+        background: #37434D;
+        border-radius: 9999px;
+        bottom: 0;
+        content: "";
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 3px;
+    }
+
+    .longform-header-one .public-DraftStyleDefault-block,
+    .longform-header-two .public-DraftStyleDefault-block,
+    .longform-unstyled .public-DraftStyleDefault-block,
+    .longform-unordered-list-item .public-DraftStyleDefault-block,
+    .longform-ordered-list-item .public-DraftStyleDefault-block,
+    .longform-header-one-narrow .public-DraftStyleDefault-block,
+    .longform-header-two-narrow .public-DraftStyleDefault-block,
+    .longform-unstyled-narrow .public-DraftStyleDefault-block,
+    .longform-unordered-list-item-narrow .public-DraftStyleDefault-block,
+    .longform-ordered-list-item-narrow .public-DraftStyleDefault-block {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    .public-DraftStyleDefault-ul, .public-DraftStyleDefault-ol {
+        counter-reset: item;
+        margin-bottom: 28px;
+        margin-top: 0;
+        padding-left: 0;
+    }
+
+    .longform-unordered-list-item:before, .longform-ordered-list-item:before,
+    .longform-unordered-list-item-narrow:before, .longform-ordered-list-item-narrow:before {
+        position: absolute;
+        margin-left: calc(-1 * (28px + 2px));
+    }
+
+    .longform-unordered-list-item:before {
+        content: counter(item, disc);
+        font-size: 23px
+    }
+
+    .longform-unordered-list-item-narrow:before {
+        content: counter(item, disc);
+        font-size: 20px
+    }
+
+    .longform-ordered-list-item:before, .longform-ordered-list-item-narrow:before {
+        content: counter(item) ". ";
+        counter-increment: item;
+    }
+
+    .longform-ordered-list-item::marker, .longform-ordered-list-item-narrow::marker {
+        font-variant-numeric: normal;
+    }
+</style>
+<style>input::placeholder { user-select: none; -webkit-user-select: none; } div div ::-webkit-input-placeholder { color: rgb(117, 117, 117) } iframe { color-scheme: auto; }button { text-align: inherit; font-size: inherit; font-family: inherit; color: inherit }</style>
+<style>@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-Light.a929468a.woff2) format('woff2');
+  font-weight: 300;
+  font-style: 'normal';
+  font-display: 'swap';
+}
+@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-Regular.58c84f6a.woff2) format('woff2');
+  font-weight: 400;
+  font-style: 'normal';
+  font-display: 'swap';
+}
+@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-Medium.bc7d8f1a.woff2) format('woff2');
+  font-weight: 500;
+  font-style: 'normal';
+  font-display: 'swap';
+}
+@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-Bold.0d6a47ca.woff2) format('woff2');
+  font-weight: 700;
+  font-style: 'normal';
+  font-display: 'swap';
+}
+@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-ExtraBold.b130af7a.woff2) format('woff2');
+  font-weight: 800;
+  font-style: 'normal';
+  font-display: 'swap';
+}</style>
+<style>@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Light.3a18e64a.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Light.7a5673aa.woff) format('woff');
+  font-weight: 300;
+  font-style: 'normal';
+  font-display: 'swap';
+}
+@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Regular.80fda27a.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Regular.60b215ba.woff) format('woff');
+  font-weight: 400;
+  font-style: 'normal';
+  font-display: 'swap';
+}
+@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Medium.f8e2739a.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Medium.20fc288a.woff) format('woff');
+  font-weight: 500;
+  font-style: 'normal';
+  font-display: 'swap';
+}
+@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Bold.ebb56aba.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Bold.a573679a.woff) format('woff');
+  font-weight: 700;
+  font-style: 'normal';
+  font-display: 'swap';
+}
+@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Heavy.f44ae4ea.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Heavy.d70ec7ca.woff) format('woff');
+  font-weight: 800;
+  font-style: 'normal';
+  font-display: 'swap';
+}
+@font-face {
+  font-family: TwitterChirpExtendedHeavy;
+  src: url(https://abs.twimg.com/fonts/v1/chirp-extended-heavy-web.woff2) format('woff2'), url(https://abs.twimg.com/fonts/v1/chirp-extended-heavy-web.woff) format('woff');
+  font-weight: 800;
+  font-style: 'normal';
+  font-display: 'swap';
+}</style>
+<style>html,body{height: 100%;}::cue{white-space:normal}</style>
+<style id="react-native-stylesheet">[stylesheet-group="0"]{}
+body{margin:0;}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+input::-webkit-search-cancel-button,input::-webkit-search-decoration,input::-webkit-search-results-button,input::-webkit-search-results-decoration{display:none;}
+[stylesheet-group="1"]{}
+.css-146c3p1{background-color:rgba(0,0,0,0.00);border:0 solid black;box-sizing:border-box;color:rgba(0,0,0,1.00);display:inline;font:14px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;list-style:none;margin:0px;padding:0px;position:relative;text-align:start;text-decoration:none;white-space:pre-wrap;word-wrap:break-word;}
+.css-175oi2r{align-items:stretch;background-color:rgba(0,0,0,0.00);border:0 solid black;box-sizing:border-box;display:flex;flex-basis:auto;flex-direction:column;flex-shrink:0;list-style:none;margin:0px;min-height:0px;min-width:0px;padding:0px;position:relative;text-decoration:none;z-index:0;}
+.css-1jxf684{background-color:rgba(0,0,0,0.00);border:0 solid black;box-sizing:border-box;color:inherit;display:inline;font:inherit;list-style:none;margin:0px;padding:0px;position:relative;text-align:inherit;text-decoration:none;white-space:inherit;word-wrap:break-word;}
+.css-9pa8cd{bottom:0px;height:100%;left:0px;opacity:0;position:absolute;right:0px;top:0px;width:100%;z-index:-1;}
+[stylesheet-group="2"]{}
+.r-13awgt0{flex:1;}
+.r-1adg3ll{display:block;}
+.r-1jkafct{border-bottom-left-radius:2px;border-bottom-right-radius:2px;border-top-left-radius:2px;border-top-right-radius:2px;}
+.r-1phboty{border-bottom-style:solid;border-left-style:solid;border-right-style:solid;border-top-style:solid;}
+.r-1udh08x{overflow-x:hidden;overflow-y:hidden;}
+.r-4iw3lz{border-bottom-width:0;border-left-width:0;border-right-width:0;border-top-width:0;}
+.r-4qtqp9{display:inline-block;}
+.r-6koalj{display:flex;}
+.r-bztko3{overflow-x:visible;overflow-y:visible;}
+.r-crgep1{margin:0px;}
+.r-hvic4v{display:none;}
+.r-krxsd3{display:-webkit-box;}
+.r-rs99b7{border-bottom-width:1px;border-left-width:1px;border-right-width:1px;border-top-width:1px;}
+.r-sdzlij{border-bottom-left-radius:9999px;border-bottom-right-radius:9999px;border-top-left-radius:9999px;border-top-right-radius:9999px;}
+.r-t60dpp{padding:0px;}
+.r-wwvuq4{padding:0;}
+.r-xoduu5{display:inline-flex;}
+.r-ywje51{margin:auto;}
+.r-z2wwpe{border-bottom-left-radius:4px;border-bottom-right-radius:4px;border-top-left-radius:4px;border-top-right-radius:4px;}
+[stylesheet-group="2.1"]{}
+.r-1559e4e{padding-bottom:2px;padding-top:2px;}
+.r-1fkl15p{padding-left:32px;padding-right:32px;}
+.r-3o4zer{padding-left:12px;padding-right:12px;}
+.r-3pj75a{padding-left:16px;padding-right:16px;}
+.r-cxgwc0{padding-left:24px;padding-right:24px;}
+.r-dd0y9b{padding-bottom:20px;padding-top:20px;}
+.r-ddtstp{margin-bottom:0px;margin-top:0px;}
+.r-dp7rxi{padding-bottom:40px;padding-top:40px;}
+.r-f8sm7e{margin-left:auto;margin-right:auto;}
+.r-n7gxbd{padding-left:4px;padding-right:4px;}
+.r-s49dbf{margin-bottom:1px;margin-top:1px;}
+.r-sjygvo{padding-left:1em;padding-right:1em;}
+[stylesheet-group="2.2"]{}
+.r-15peodp{right:-9999px;}
+.r-19qo34d{left:-9999px;}
+.r-1ca1ndr{margin-left:0.5em;}
+.r-1ez5h0i{margin-left:4px;}
+.r-1gs4q39{margin-right:4px;}
+.r-1kkk96v{margin-left:8px;}
+.r-1kpi4qh{margin-left:0.075em;}
+.r-1l2kgy{margin-right:0.5em;}
+.r-1q6cnnd{right:-2px;}
+.r-1wron08{margin-right:8px;}
+.r-3t4u6i{margin-left:2px;}
+.r-45ll9u{left:50%;}
+.r-5f1w11{left:-2px;}
+.r-k4bwe5{margin-right:0.075em;}
+.r-o59np7{padding-right:8px;}
+.r-ocobd0{right:50%;}
+.r-qjj4hq{padding-left:8px;}
+.r-x1x4zq{margin-right:2px;}
+[stylesheet-group="3"]{}
+.r-105ug2t{pointer-events:auto!important;}
+.r-109y4c4{height:1px;}
+.r-10ptun7{height:16px;}
+.r-10v3vxq{transform:scaleX(-1);}
+.r-117bsoe{margin-bottom:20px;}
+.r-11c0sde{margin-top:24px;}
+.r-11j9u27{visibility:hidden;}
+.r-12181gd{box-shadow:0 0 2px rgba(0,0,0,0.03) inset;}
+.r-12sks89{min-height:22px;}
+.r-12vffkv>*{pointer-events:auto;}
+.r-12vffkv{pointer-events:none!important;}
+.r-12ym1je{width:18px;}
+.r-135wba7{line-height:24px;}
+.r-13qz1uu{width:100%;}
+.r-13wfysu{-webkit-text-decoration-line:none;text-decoration-line:none;}
+.r-146iojx{max-width:300px;}
+.r-1472mwg{height:24px;}
+.r-14j79pv{color:rgba(83,100,113,1.00);}
+.r-14lw9ot{background-color:rgba(255,255,255,1.00);}
+.r-15ysp7h{min-height:32px;}
+.r-16dba41{font-weight:400;}
+.r-16y2uox{flex-grow:1;}
+.r-176fswd{transform:translateX(-50%) translateY(-50%);}
+.r-1777fci{justify-content:center;}
+.r-17bb2tj{animation-duration:0.75s;}
+.r-17leim2{background-repeat:repeat;}
+.r-17s6mgv{justify-content:flex-end;}
+.r-18jsvk2{color:rgba(15,20,25,1.00);}
+.r-18tzken{width:56px;}
+.r-18u37iz{flex-direction:row;}
+.r-18yzcnr{height:22px;}
+.r-19wmn03{width:20px;}
+.r-19yznuf{min-height:52px;}
+.r-1abnn5w{animation-play-state:paused;}
+.r-1acpoxo{width:36px;}
+.r-1ad0z5i{word-break:break-all;}
+.r-1awozwy{align-items:center;}
+.r-1b43r93{font-size:14px;}
+.r-1betnmo{max-width:672px;}
+.r-1blnp2b{width:72px;}
+.r-1blvdjr{font-size:23px;}
+.r-1ceczpf{min-height:24px;}
+.r-1cwl3u0{line-height:16px;}
+.r-1d2f490{left:0px;}
+.r-1ddef8g{-webkit-text-decoration-line:underline;text-decoration-line:underline;}
+.r-1dn12g7{line-height:48px;}
+.r-1ebb2ja{list-style:none;}
+.r-1ff274t{text-align:right;}
+.r-1gkfh8e{font-size:11px;}
+.r-1h0z5md{justify-content:flex-start;}
+.r-1h8ys4a{padding-top:4px;}
+.r-1hjwoze{height:18px;}
+.r-1iln25a{word-wrap:normal;}
+.r-1inkyih{font-size:17px;}
+.r-1ipicw7{width:300px;}
+.r-1iusvr4{flex-basis:0px;}
+.r-1janqcz{width:16px;}
+.r-1jaylin{width:-webkit-max-content;width:-moz-max-content;width:max-content;}
+.r-1k78y06{font-family:Tahoma, Arial, sans-serif;}
+.r-1kihuf0{align-self:center;}
+.r-1ldzwu0{animation-timing-function:linear;}
+.r-1loqt21{cursor:pointer;}
+.r-1mlwlqe{flex-basis:auto;}
+.r-1mrlafo{background-position:0;}
+.r-1muvv40{animation-iteration-count:infinite;}
+.r-1mwlp6a{height:56px;}
+.r-1nao33i{color:rgba(231,233,234,1.00);}
+.r-1niwhzg{background-color:rgba(0,0,0,0.00);}
+.r-1ny4l3l{outline-style:none;}
+.r-1oifz5y{background-color:rgba(170,17,0,1.00);}
+.r-1oszu61{align-items:stretch;}
+.r-1otgn73{touch-action:manipulation;}
+.r-1p0dtai{bottom:0px;}
+.r-1pi2tsx{height:100%;}
+.r-1ps3wis{min-width:44px;}
+.r-1qd0xha{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+.r-1qi8awa{min-width:36px;}
+.r-1r5jyh0{min-height:130px;}
+.r-1r8g8re{height:36px;}
+.r-1s2hp8q{min-height:26px;}
+.r-1sxrcry{background-size:auto;}
+.r-1tl8opc{font-family:"Segoe UI",Meiryo,system-ui,-apple-system,BlinkMacSystemFont,sans-serif;}
+.r-1to6hqq{background-color:rgba(255,212,0,1.00);}
+.r-1ttztb7{text-align:inherit;}
+.r-1udbk01{text-overflow:ellipsis;}
+.r-1v2oles{top:50%;}
+.r-1vmecro{direction:rtl;}
+.r-1vr29t4{font-weight:800;}
+.r-1wb8bfx{text-decoration-thickness:2px;}
+.r-1wbh5a2{flex-shrink:1;}
+.r-1wvb978{font-feature-settings:'ss01' on;}
+.r-1wyyakw{z-index:-1;}
+.r-1xcajam{position:fixed;}
+.r-1xk2f4g{clip:rect(1px, 1px, 1px, 1px);}
+.r-1xnzce8{-moz-user-select:text;-webkit-user-select:text;user-select:text;}
+.r-1xvli5t{height:1.25em;}
+.r-1y7e96w{min-width:22px;}
+.r-1ye8kvj{max-width:600px;}
+.r-1yef0xd{animation-name:r-11cv4x;}
+.r-1yjpyg1{font-size:31px;}
+.r-1ykxob0{top:60%;}
+.r-2o02ov{margin-top:40px;}
+.r-2tavb8{background-color:rgba(0,0,0,0.60);}
+.r-2yi16{min-height:36px;}
+.r-36ujnk{font-style:italic;}
+.r-37tt59{line-height:32px;}
+.r-3s2u2q{white-space:nowrap;}
+.r-417010{z-index:0;}
+.r-4gszlv{background-size:cover;}
+.r-4hwcpe{font-family:Vazirmatn, Tahoma, Arial, sans-serif;}
+.r-4wgw6l{min-width:32px;}
+.r-54znze{color:rgba(239,243,244,1.00);}
+.r-56xrmm{line-height:12px;}
+.r-6026j{background-color:rgba(255,255,255,0.85);}
+.r-633pao{pointer-events:none!important;}
+.r-6416eg{-moz-transition-property:background-color, box-shadow;-webkit-transition-property:background-color, box-shadow;transition-property:background-color, box-shadow;}
+.r-64el8z{min-width:52px;}
+.r-7q8q6z{cursor:default;}
+.r-8akbws{-webkit-box-orient:vertical;}
+.r-8jfcpp{top:-2px;}
+.r-92ng3h{width:1px;}
+.r-a023e6{font-size:15px;}
+.r-adyw6z{font-size:20px;}
+.r-agouwx{transform:translateZ(0);}
+.r-ah5dr5>*{pointer-events:none;}
+.r-ah5dr5{pointer-events:auto!important;}
+.r-aqfbo4{backface-visibility:hidden;}
+.r-b88u0q{font-weight:700;}
+.r-bcqeeo{min-width:0px;}
+.r-bnwqim{position:relative;}
+.r-bt1l66{min-height:20px;}
+.r-bvlit7{margin-bottom:-12px;}
+.r-clrlgt{animation-name:r-imtty0;}
+.r-deolkf{box-sizing:border-box;}
+.r-dflpy8{height:1.2em;}
+.r-dnmrzs{max-width:100%;}
+.r-ehq7j7{background-size:contain;}
+.r-emqnss{transform:translateZ(0px);}
+.r-eqz5dr{flex-direction:column;}
+.r-ero68b{min-height:40px;}
+.r-fdjqy7{text-align:left;}
+.r-fm7h5w{font-family:"TwitterChirpExtendedHeavy","Verdana",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+.r-gf0ln{-webkit-filter:brightness(1);filter:brightness(1);}
+.r-h9hxbl{width:1.2em;}
+.r-icoktb{opacity:0.5;}
+.r-ifefl9{min-height:0px;}
+.r-impgnl{transform:translateX(50%) translateY(-50%);}
+.r-iphfwy{padding-bottom:4px;}
+.r-ipm5af{top:0px;}
+.r-jmul1s{transform:scale(1.1);}
+.r-jwli3a{color:rgba(255,255,255,1.00);}
+.r-kemksi{background-color:rgba(0,0,0,1.00);}
+.r-lp5zef{min-width:24px;}
+.r-lrsllp{width:24px;}
+.r-lrvibr{-moz-user-select:none;-webkit-user-select:none;user-select:none;}
+.r-m6rgpd{vertical-align:text-bottom;}
+.r-majxgm{font-weight:500;}
+.r-n1ft60{dynamic-range-limit:standard;}
+.r-n6v787{font-size:13px;}
+.r-nhe8su{animation-duration:0.5s;}
+.r-nvplwv{animation-timing-function:ease-out;}
+.r-nwxazl{line-height:40px;}
+.r-o7ynqc{transition-duration:0.2s;}
+.r-orgf3d{opacity:0;}
+.r-peo1c{min-height:44px;}
+.r-poiln3{font-family:inherit;}
+.r-pp5qcn{vertical-align:-20%;}
+.r-q4m81j{text-align:center;}
+.r-qlhcfr{font-size:0.001px;}
+.r-qvk6io{line-height:0px;}
+.r-qvutc0{word-wrap:break-word;}
+.r-rjixqe{line-height:20px;}
+.r-rki7wi{bottom:12px;}
+.r-s67bdx{font-size:48px;}
+.r-sb58tz{max-width:1000px;}
+.r-tjvw6i{text-decoration-thickness:1px;}
+.r-u6sd8q{background-repeat:no-repeat;}
+.r-u8s1d{position:absolute;}
+.r-ueyrd6{line-height:36px;}
+.r-uho16t{font-size:34px;}
+.r-vkv6oe{min-width:40px;}
+.r-vqxq0j{border:0 solid black;}
+.r-vrz42v{line-height:28px;}
+.r-vvn4in{background-position:center;}
+.r-wy61xf{height:72px;}
+.r-x3cy2q{background-size:100% 100%;}
+.r-x572qd{background-color:rgba(247,249,249,1.00);}
+.r-xigjrr{-webkit-filter:blur(4px);filter:blur(4px);}
+.r-yc9v9c{width:22px;}
+.r-yn5ncy{animation-fill-mode:both;}
+.r-yy2aun{font-size:26px;}
+.r-yyyyoo{fill:currentcolor;}
+.r-z7pwl0{max-width:700px;}
+.r-z80fyv{height:20px;}
+.r-zchlnj{right:0px;}
+@-webkit-keyframes r-11cv4x{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
+@-webkit-keyframes r-imtty0{0%{opacity:0;}100%{opacity:1;}}
+@keyframes r-11cv4x{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
+@keyframes r-imtty0{0%{opacity:0;}100%{opacity:1;}}
+.r-427pc0{position:absolute;visibility:hidden;top:0;width:50px;pointer-events:none}
+.r-427pc0.loaded{visibility:visible;top:50vh;width:50px}</style>
+<style id="googleidentityservice_button_styles">.qJTHM{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;color:#202124;direction:ltr;-webkit-touch-callout:none;font-family:"Roboto-Regular",arial,sans-serif;-webkit-font-smoothing:antialiased;font-weight:400;margin:0;overflow:hidden;-webkit-text-size-adjust:100%}.ynRLnc{left:-9999px;position:absolute;top:-9999px}.L6cTce{display:none}.bltWBb{overflow-wrap:break-word;word-break:break-word}.hSRGPd{color:#1a73e8;cursor:pointer;font-weight:500;text-decoration:none}.Bz112c-W3lGp{height:16px;width:16px}.Bz112c-E3DyYd{height:20px;width:20px}.Bz112c-r9oPif{height:24px;width:24px}.Bz112c-u2z5K{height:36px;width:36px}.Bz112c-uaxL4e{border-radius:10px}.LgbsSe-Bz112c{display:block}.S9gUrf-YoZ4jf{border:none;margin:0;padding:0}.S9gUrf-YoZ4jf *{border:none;margin:0;padding:0}.fFW7wc-ibnC6b>.aZ2wEe>div{border-color:#4285f4}.P1ekSe-ZMv3u{-webkit-transition:height linear .2s;transition:height linear .2s}.P1ekSe-ZMv3u>div:nth-child(1){background-color:#1a73e8!important;-webkit-transition:width linear .3s;transition:width linear .3s}.P1ekSe-ZMv3u>div:nth-child(2){background-image:-webkit-gradient(linear,left top,right top,from(rgba(255,255,255,.7)),to(rgba(255,255,255,.7))),-webkit-gradient(linear,left top,right top,from(#1a73e8),to(#1a73e8))!important;background-image:-webkit-linear-gradient(left,rgba(255,255,255,.7),rgba(255,255,255,.7)),-webkit-linear-gradient(left,#1a73e8,#1a73e8)!important;background-image:linear-gradient(to right,rgba(255,255,255,.7),rgba(255,255,255,.7)),linear-gradient(to right,#1a73e8,#1a73e8)!important}.P1ekSe-ZMv3u>div:nth-child(3){background-image:-webkit-gradient(linear,left top,right top,from(rgba(255,255,255,.7)),to(rgba(255,255,255,.7))),-webkit-gradient(linear,left top,right top,from(#1a73e8),to(#1a73e8))!important;background-image:-webkit-linear-gradient(left,rgba(255,255,255,.7),rgba(255,255,255,.7)),-webkit-linear-gradient(left,#1a73e8,#1a73e8)!important;background-image:linear-gradient(to right,rgba(255,255,255,.7),rgba(255,255,255,.7)),linear-gradient(to right,#1a73e8,#1a73e8)!important}.haAclf{display:inline-block}.nsm7Bb-HzV7m-LgbsSe{border-radius:4px;box-sizing:border-box;-webkit-transition:background-color .218s,border-color .218s;transition:background-color .218s,border-color .218s;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;-webkit-appearance:none;background-color:#fff;background-image:none;border:1px solid #dadce0;color:#3c4043;cursor:pointer;font-family:"Google Sans",arial,sans-serif;font-size:14px;height:40px;letter-spacing:.25px;outline:none;overflow:hidden;padding:0 12px;position:relative;text-align:center;vertical-align:middle;white-space:nowrap;width:auto}@media screen and (-ms-high-contrast:active){.nsm7Bb-HzV7m-LgbsSe{border:2px solid windowText;color:windowText}}@media screen and (preferes-contrast:more){.nsm7Bb-HzV7m-LgbsSe{color:#000}}.nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe{font-size:14px;height:32px;letter-spacing:.25px;padding:0 10px}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe{font-size:11px;height:20px;letter-spacing:.3px;padding:0 8px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe{padding:0;width:40px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.pSzOP-SxQuSe{width:32px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.purZT-SxQuSe{width:20px}.nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK{border-radius:20px}.nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK.pSzOP-SxQuSe{border-radius:16px}.nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK.purZT-SxQuSe{border-radius:10px}.nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc{border:none;color:#fff}.nsm7Bb-HzV7m-LgbsSe.MFS4be-v3pZbf-Ia7Qfc{background-color:#1a73e8}.nsm7Bb-HzV7m-LgbsSe.MFS4be-JaPV2b-Ia7Qfc{background-color:#202124;color:#e8eaed}@media screen and (prefers-contrast:more){.nsm7Bb-HzV7m-LgbsSe.MFS4be-JaPV2b-Ia7Qfc{color:#fff}}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{height:18px;margin-right:8px;min-width:18px;width:18px}.nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{height:14px;min-width:14px;width:14px}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{height:10px;min-width:10px;width:10px}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-Bz112c{margin-left:8px;margin-right:-4px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{margin:0;padding:10px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.pSzOP-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{padding:8px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{padding:4px}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-top-left-radius:3px;border-bottom-left-radius:3px;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;align-items:center;background-color:#fff;height:36px;margin-left:-10px;margin-right:12px;min-width:36px;width:36px}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf .nsm7Bb-HzV7m-LgbsSe-Bz112c,.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf .nsm7Bb-HzV7m-LgbsSe-Bz112c{margin:0;padding:0}.nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{height:28px;margin-left:-8px;margin-right:10px;min-width:28px;width:28px}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{height:16px;margin-left:-6px;margin-right:8px;min-width:16px;width:16px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-radius:3px;margin-left:2px;margin-right:0;padding:0}.nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-radius:18px}.nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-radius:14px}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-radius:8px}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-bN97Pc-sM5MNb{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-align-items:center;-webkit-box-align:center;align-items:center;-webkit-flex-direction:row;-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;-webkit-flex-wrap:nowrap;flex-wrap:nowrap;height:100%;position:relative;width:100%}.nsm7Bb-HzV7m-LgbsSe .oXtfBe-l4eHX{-webkit-box-pack:center;-webkit-justify-content:center;justify-content:center}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-BPrWId{-webkit-flex-grow:1;-webkit-box-flex:1;flex-grow:1;font-family:"Google Sans",arial,sans-serif;font-weight:500;overflow:hidden;text-overflow:ellipsis;vertical-align:top}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-BPrWId{font-weight:300}.nsm7Bb-HzV7m-LgbsSe .oXtfBe-l4eHX .nsm7Bb-HzV7m-LgbsSe-BPrWId{-webkit-flex-grow:0;-webkit-box-flex:0;flex-grow:0}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-MJoBVe{-webkit-transition:background-color .218s;transition:background-color .218s;bottom:0;left:0;position:absolute;right:0;top:0}.nsm7Bb-HzV7m-LgbsSe:hover,.nsm7Bb-HzV7m-LgbsSe:focus{box-shadow:none;border-color:rgb(210,227,252);outline:none}.nsm7Bb-HzV7m-LgbsSe:focus-within{outline:2px solid #00639b;border-color:transparent}.nsm7Bb-HzV7m-LgbsSe:hover .nsm7Bb-HzV7m-LgbsSe-MJoBVe{background:rgba(66,133,244,.08)}.nsm7Bb-HzV7m-LgbsSe:active .nsm7Bb-HzV7m-LgbsSe-MJoBVe,.nsm7Bb-HzV7m-LgbsSe:focus .nsm7Bb-HzV7m-LgbsSe-MJoBVe{background:rgba(66,133,244,.1)}.nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc:hover .nsm7Bb-HzV7m-LgbsSe-MJoBVe{background:rgba(255,255,255,.24)}.nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc:active .nsm7Bb-HzV7m-LgbsSe-MJoBVe,.nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc:focus .nsm7Bb-HzV7m-LgbsSe-MJoBVe{background:rgba(255,255,255,.32)}.nsm7Bb-HzV7m-LgbsSe .n1UuX-DkfjY{border-radius:50%;display:-webkit-box;display:-webkit-flex;display:flex;height:20px;margin-left:-4px;margin-right:8px;min-width:20px;width:20px}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId{font-family:"Roboto";font-size:12px;text-align:left}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .ssJRIf,.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff .fmcmS{overflow:hidden;text-overflow:ellipsis}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-align-items:center;-webkit-box-align:center;align-items:center;color:#5f6368;fill:#5f6368;font-size:11px;font-weight:400}.nsm7Bb-HzV7m-LgbsSe.jVeSEe.MFS4be-Ia7Qfc .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff{color:#e8eaed;fill:#e8eaed}@media screen and (prefers-contrast:more){.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff,.nsm7Bb-HzV7m-LgbsSe.jVeSEe.MFS4be-Ia7Qfc .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff{color:#000;fill:#000}}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff .Bz112c{height:18px;margin:-3px -3px -3px 2px;min-width:18px;width:18px}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:3px;border-bottom-right-radius:3px;margin-left:12px;margin-right:-10px}.nsm7Bb-HzV7m-LgbsSe.jVeSEe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-radius:18px}.L5Fo6c-sM5MNb{border:0;display:block;left:0;position:relative;top:0}.L5Fo6c-bF1uUb{border-radius:4px;bottom:0;cursor:pointer;left:0;position:absolute;right:0;top:0}.L5Fo6c-bF1uUb:focus{border:none;outline:none}sentinel{}</style>
+<style type="text/css">/* default values for the css variables used inside */
+.jetfuel-style-root {
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-gradient-from-position: ;
+  --tw-gradient-to-position: ;
+  --tw-blur: ;
+  --tw-brightness: ;
+  --tw-contrast: ;
+  --tw-grayscale: ;
+  --tw-hue-rotate: ;
+  --tw-invert: ;
+  --tw-saturate: ;
+  --tw-sepia: ;
+  --tw-drop-shadow: ;
+  --tw-backdrop-blur: ;
+  --tw-backdrop-brightness: ;
+  --tw-backdrop-contrast: ;
+  --tw-backdrop-grayscale: ;
+  --tw-backdrop-hue-rotate: ;
+  --tw-backdrop-invert: ;
+  --tw-backdrop-opacity: ;
+  --tw-backdrop-saturate: ;
+  --tw-backdrop-sepia: ;
+  font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
+}
+
+.jf-element,
+.jf-element::before,
+.jf-element::after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: hsl(var(--color-gray-200));
+}
+
+/*
+  1. Remove the margin in all browsers.
+  2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+  */
+
+.jf-element {
+  margin: 0;
+  line-height: inherit;
+}
+
+/*
+  1. Add the correct height in Firefox.
+  2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+  3. Ensure horizontal rules are visible by default.
+  */
+
+hr.jf-element {
+  height: 0;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  border-top-width: 1px;
+  /* 3 */
+}
+
+/*
+  Add the correct text decoration in Chrome, Edge, and Safari.
+  */
+
+abbr.jf-element:where([title]) {
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+}
+
+/*
+  Remove the default font size and weight for headings.
+  */
+
+h1.jf-element,
+h2.jf-element,
+h3.jf-element,
+h4.jf-element,
+h5.jf-element,
+h6.jf-element {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+  Reset links to optimize for opt-in styling instead of opt-out.
+  */
+
+a.jf-element {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+  Add the correct font weight in Edge and Safari.
+  */
+b.jf-element,
+strong.jf-element {
+  font-weight: bolder;
+}
+
+/*
+  1. Use the user's configured `mono` font-family by default.
+  2. Use the user's configured `mono` font-feature-settings by default.
+  3. Use the user's configured `mono` font-variation-settings by default.
+  4. Correct the odd `em` font sizing in all browsers.
+  */
+
+code.jf-element,
+kbd.jf-element,
+samp.jf-element,
+pre.jf-element {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  /* 1 */
+  font-feature-settings: normal;
+  /* 2 */
+  font-variation-settings: normal;
+  /* 3 */
+  font-size: 1em;
+  /* 4 */
+}
+
+/*
+  Add the correct font size in all browsers.
+  */
+
+small.jf-element {
+  font-size: 80%;
+}
+
+/*
+  Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+  */
+
+sub.jf-element,
+sup.jf-element {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub.jf-element {
+  bottom: -0.25em;
+}
+
+sup.jf-element {
+  top: -0.5em;
+}
+
+/*
+  1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+  2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+  3. Remove gaps between table borders by default.
+  */
+
+table.jf-element {
+  text-indent: 0;
+  /* 1 */
+  border-color: inherit;
+  /* 2 */
+  border-collapse: collapse;
+  /* 3 */
+}
+
+/*
+  1. Change the font styles in all browsers.
+  2. Remove the margin in Firefox and Safari.
+  3. Remove default padding in all browsers.
+  */
+
+button.jf-element,
+input.jf-element,
+optgroup.jf-element,
+select.jf-element,
+textarea.jf-element {
+  font-family: inherit;
+  /* 1 */
+  font-feature-settings: inherit;
+  /* 1 */
+  font-variation-settings: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  font-weight: inherit;
+  /* 1 */
+  line-height: inherit;
+  /* 1 */
+  letter-spacing: inherit;
+  /* 1 */
+  color: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  padding: 0;
+  /* 3 */
+}
+
+/*
+  Remove the inheritance of text transform in Edge and Firefox.
+  */
+
+button.jf-element,
+select.jf-element {
+  text-transform: none;
+}
+
+/*
+  1. Correct the inability to style clickable types in iOS and Safari.
+  2. Remove default button styles.
+  */
+
+button.jf-element,
+input.jf-element:where([type="button"]),
+input.jf-element:where([type="reset"]),
+input.jf-element:where([type="submit"]) {
+  -webkit-appearance: button;
+  /* 1 */
+  background-color: transparent;
+  /* 2 */
+  background-image: none;
+  /* 2 */
+}
+
+/*
+  Use the modern Firefox focus style for all focusable elements.
+  */
+
+.jf-element:-moz-focusring {
+  outline: auto;
+}
+
+/*
+  Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+  */
+
+.jf-element:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+  Add the correct vertical alignment in Chrome and Firefox.
+  */
+
+progress.jf-element {
+  vertical-align: baseline;
+}
+
+/*
+  Correct the cursor style of increment and decrement buttons in Safari.
+  */
+
+.jf-element::-webkit-inner-spin-button,
+.jf-element::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+  1. Correct the odd appearance in Chrome and Safari.
+  2. Correct the outline style in Safari.
+  */
+
+.jf-element[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/*
+  Remove the inner padding in Chrome and Safari on macOS.
+  */
+
+.jf-element::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+  1. Correct the inability to style clickable types in iOS and Safari.
+  2. Change font properties to `inherit` in Safari.
+  */
+
+.jf-element::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/*
+  Add the correct display in Chrome and Safari.
+  */
+
+summary.jf-element {
+  display: list-item;
+}
+
+/*
+  Removes the default spacing and border for appropriate elements.
+  */
+
+blockquote.jf-element,
+dl.jf-element,
+dd.jf-element,
+h1.jf-element,
+h2.jf-element,
+h3.jf-element,
+h4.jf-element,
+h5.jf-element,
+h6.jf-element,
+hr.jf-element,
+figure.jf-element,
+p.jf-element,
+pre.jf-element {
+  margin: 0;
+}
+
+fieldset.jf-element {
+  margin: 0;
+  padding: 0;
+}
+
+legend.jf-element {
+  padding: 0;
+}
+
+ol.jf-element,
+ul.jf-element,
+menu.jf-element {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+  Reset default styling for dialogs.
+  */
+
+dialog.jf-element {
+  padding: 0;
+}
+
+/* Safari-specific: Prevent focus outlines on page elements during/after modal interactions */
+@supports (-webkit-appearance: none) {
+  /* Hide focus outlines on all non-interactive elements */
+  div:focus,
+  span:focus,
+  p:focus,
+  section:focus,
+  article:focus,
+  main:focus,
+  aside:focus,
+  nav:focus,
+  header:focus,
+  footer:focus,
+  h1:focus,
+  h2:focus,
+  h3:focus,
+  h4:focus,
+  h5:focus,
+  h6:focus {
+    outline: none !important;
+    -webkit-focus-ring-color: transparent !important;
+  }
+
+  /* Also hide on elements that might accidentally get focus */
+  .content-visibility-auto:focus,
+  [contenteditable]:focus,
+  [tabindex]:not([tabindex="-1"]):not(button):not(input):not(textarea):not(
+      select
+    ):not(a):focus {
+    outline: none !important;
+    -webkit-focus-ring-color: transparent !important;
+  }
+}
+
+/*
+  Prevent resizing textareas horizontally by default.
+  */
+
+textarea.jf-element {
+  resize: vertical;
+}
+
+/*
+  1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+  2. Set the default placeholder color to the user's configured gray 400 color.
+  */
+
+input.jf-element::-moz-placeholder,
+textarea.jf-element::-moz-placeholder {
+  opacity: 1;
+  /* 1 */
+  color: hsl(var(--color-gray-400));
+  /* 2 */
+}
+
+input.jf-element::placeholder,
+textarea.jf-element::placeholder {
+  opacity: 1;
+  /* 1 */
+  color: hsl(var(--color-gray-400));
+  /* 2 */
+}
+/*
+  Set the default cursor for buttons.
+  */
+
+button.jf-element,
+.jf-element[role="button"] {
+  cursor: pointer;
+}
+
+/*
+  Make sure disabled buttons don't get the pointer cursor.
+  */
+
+.jf-element:disabled {
+  cursor: default;
+}
+
+/*
+  1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+  2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+     This can trigger a poorly considered lint error in some tools but is included by design.
+  */
+
+img.jf-element,
+svg.jf-element,
+video.jf-element,
+canvas.jf-element,
+audio.jf-element,
+iframe.jf-element,
+embed.jf-element,
+object.jf-element {
+  display: block;
+  /* 1 */
+  vertical-align: middle;
+  /* 2 */
+}
+
+/*
+  Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+  */
+
+img.jf-element,
+video.jf-element {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+
+.jf-element[hidden]:where(:not([hidden="until-found"])) {
+  display: none;
+}
+
+/* use theme coming from how view body[data-theme] or the theme container defined inside*/
+.jetfuel-style-root,
+[data-theme="light"] .jetfuel-style-root,
+.jf-element[data-theme="light"] {
+  /* app */
+  --color-background: 0 0% 100%;
+  --color-text: 210 25% 8%;
+  --color-drop-shadow: 101 119 134;
+  /* palette */
+  --color-blue-100: 192 100% 87%;
+  --color-blue-200: 196 100% 80%;
+  --color-gray-100: 197 16% 91%;
+  --color-gray-200: 201 23% 85%;
+  --color-gray-300: 201 23% 78%;
+  --color-gray-400: 203 23% 69%;
+  --color-gray-500: 205 20% 59%;
+  --color-green-500: 142 76% 36%;
+  --color-red-500: 0 84% 60%;
+  --color-blue-500: 204 88% 53%;
+}
+
+[data-theme="dark"] .jetfuel-style-root,
+.jf-element[data-theme="dark"] {
+  /* app */
+  --color-background: 0 0% 0%;
+  --color-text: 200 7% 91%;
+  --color-drop-shadow: 255 255 255;
+  /* palette */
+  --color-blue-100: 192 100% 87%;
+  --color-blue-200: 196 100% 80%;
+  --color-gray-100: 197 16% 91%;
+  --color-gray-200: 201 23% 85%;
+  --color-gray-300: 201 23% 78%;
+  --color-gray-400: 203 23% 69%;
+  --color-gray-500: 205 20% 59%;
+  --color-green-500: 142 76% 36%;
+  --color-red-500: 0 84% 60%;
+  --color-blue-500: 204 88% 53%;
+}
+
+[data-theme="dim"] .jetfuel-style-root,
+.jf-element[data-theme="dim"] {
+  /* app */
+  --color-background: 210 34% 13%;
+  --color-text: 180 14% 97%;
+  --color-drop-shadow: 136 153 166;
+  /* palette */
+  --color-blue-100: 192 100% 87%;
+  --color-blue-200: 196 100% 80%;
+  --color-gray-100: 197 16% 91%;
+  --color-gray-200: 201 23% 85%;
+  --color-gray-300: 201 23% 78%;
+  --color-gray-400: 203 23% 69%;
+  --color-gray-500: 205 20% 59%;
+  --color-green-500: 142 76% 36%;
+  --color-red-500: 0 84% 60%;
+  --color-blue-500: 204 88% 53%;
+}
+
+.jf-element:-moz-focusring {
+  outline: unset;
+}
+
+input.jf-element::-moz-placeholder,
+textarea.jf-element::-moz-placeholder {
+  color: unset;
+}
+
+input.jf-element::placeholder,
+textarea.jf-element::placeholder {
+  color: unset;
+}
+
+.jf-element.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .jf-element.container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .jf-element.container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .jf-element.container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .jf-element.container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .jf-element.container {
+    max-width: 1536px;
+  }
+}
+
+.jf-element.aspect-square {
+  aspect-ratio: 1 / 1;
+}
+
+.jf-element.pointer-events-none {
+  pointer-events: none;
+}
+
+.jf-element.pointer-events-auto {
+  pointer-events: auto;
+}
+
+.jf-element.visible {
+  visibility: visible;
+}
+
+.jf-element.invisible {
+  visibility: hidden;
+}
+
+.jf-element.static {
+  position: static;
+}
+
+.jf-element.fixed {
+  position: fixed;
+}
+
+.jf-element.absolute {
+  position: absolute;
+}
+
+.jf-element.relative {
+  position: relative;
+}
+
+.jf-element.sticky {
+  position: sticky;
+}
+
+.jf-element.bottom-0 {
+  bottom: 0px;
+}
+
+.jf-element.bottom-4 {
+  bottom: 16px;
+}
+
+.jf-element.left-0 {
+  left: 0px;
+}
+
+.jf-element.left-1\/2 {
+  left: 50%;
+}
+
+.jf-element.left-2 {
+  left: 8px;
+}
+
+.jf-element.left-4 {
+  left: 16px;
+}
+
+.jf-element.right-0 {
+  right: 0px;
+}
+
+.jf-element.right-2 {
+  right: 8px;
+}
+
+.jf-element.right-4 {
+  right: 16px;
+}
+
+.jf-element.top-0 {
+  top: 0px;
+}
+
+.jf-element.top-1\/2 {
+  top: 50%;
+}
+
+.jf-element.z-0 {
+  z-index: 0;
+}
+
+.jf-element.z-10 {
+  z-index: 10;
+}
+
+.jf-element.z-50 {
+  z-index: 50;
+}
+
+.jf-element.z-\[101\] {
+  z-index: 101;
+}
+
+.jf-element.z-\[1\] {
+  z-index: 1;
+}
+
+.jf-element.col-span-3 {
+  grid-column: span 3 / span 3;
+}
+
+.jf-element.col-start-1 {
+  grid-column-start: 1;
+}
+
+.jf-element.row-start-1 {
+  grid-row-start: 1;
+}
+
+.jf-element.m-0 {
+  margin: 0px;
+}
+
+.jf-element.m-auto {
+  margin: auto;
+}
+
+.jf-element.mx-10 {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.jf-element.my-8 {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.jf-element.mr-2 {
+  margin-right: 8px;
+}
+
+.jf-element.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.jf-element.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.jf-element.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.jf-element.line-clamp-4 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
+.jf-element.line-clamp-5 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+}
+
+.jf-element.line-clamp-6 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+}
+
+.jf-element.block {
+  display: block;
+}
+
+.jf-element.inline-block {
+  display: inline-block;
+}
+
+.jf-element.flex {
+  display: flex;
+}
+
+.jf-element.inline-flex {
+  display: inline-flex;
+}
+
+.jf-element.table {
+  display: table;
+}
+
+.jf-element.grid {
+  display: grid;
+}
+
+.jf-element.contents {
+  display: contents;
+}
+
+.jf-element.hidden {
+  display: none;
+}
+
+.jf-element.h-1 {
+  height: 4px;
+}
+
+.jf-element.h-1\/2 {
+  height: 50%;
+}
+
+.jf-element.h-10 {
+  height: 40px;
+}
+
+.jf-element.h-12 {
+  height: 48px;
+}
+
+.jf-element.h-16 {
+  height: 64px;
+}
+
+.jf-element.h-20 {
+  height: 80px;
+}
+
+.jf-element.h-28 {
+  height: 112px;
+}
+
+.jf-element.h-40 {
+  height: 160px;
+}
+
+.jf-element.h-6 {
+  height: 24px;
+}
+
+.jf-element.h-60 {
+  height: 240px;
+}
+
+.jf-element.h-8 {
+  height: 32px;
+}
+
+.jf-element.h-80 {
+  height: 320px;
+}
+
+.jf-element.h-\[600px\] {
+  height: 600px;
+}
+
+.jf-element.h-\[680px\] {
+  height: 680px;
+}
+
+.jf-element.h-\[800px\] {
+  height: 800px;
+}
+
+.jf-element.h-auto {
+  height: auto;
+}
+
+.jf-element.h-full {
+  height: 100%;
+}
+
+.jf-element.h-screen {
+  height: 100vh;
+}
+
+.jf-element.max-h-\[600px\] {
+  max-height: 600px;
+}
+
+.jf-element.max-h-\[680px\] {
+  max-height: 680px;
+}
+
+.jf-element.max-h-\[800px\] {
+  max-height: 800px;
+}
+
+.jf-element.max-h-full {
+  max-height: 100%;
+}
+
+.jf-element.max-h-screen {
+  max-height: 100vh;
+}
+
+.jf-element.max-h-8 {
+  max-height: 32px;
+}
+
+.jf-element.min-h-\[600px\] {
+  min-height: 600px;
+}
+
+.jf-element.min-h-\[680px\] {
+  min-height: 680px;
+}
+
+.jf-element.min-h-\[800px\] {
+  min-height: 800px;
+}
+
+.jf-element.w-0 {
+  width: 0px;
+}
+
+.jf-element.w-10 {
+  width: 40px;
+}
+
+.jf-element.w-14 {
+  width: 56px;
+}
+
+.jf-element.w-20 {
+  width: 80px;
+}
+
+.jf-element.w-40 {
+  width: 160px;
+}
+
+.jf-element.w-6 {
+  width: 24px;
+}
+
+.jf-element.w-60 {
+  width: 240px;
+}
+
+.jf-element.w-8 {
+  width: 32px;
+}
+
+.jf-element.w-80 {
+  width: 320px;
+}
+
+.jf-element.w-auto {
+  width: auto;
+}
+
+.jf-element.w-fit {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.jf-element.w-full {
+  width: 100%;
+}
+
+.jf-element.w-screen {
+  width: 100vw;
+}
+
+.jf-element.h-screen {
+  height: 100vh;
+}
+
+.jf-element.min-w-0 {
+  min-width: 0px;
+}
+
+.jf-element.min-w-max {
+  min-width: -moz-max-content;
+  min-width: max-content;
+}
+
+.jf-element.max-w-\[600px\] {
+  max-width: 600px;
+}
+
+.jf-element.max-w-full {
+  max-width: 100%;
+}
+
+.jf-element.max-w-screen {
+  max-width: 100vw;
+}
+
+.jf-element.flex-1 {
+  flex: 1 1 0%;
+}
+
+.jf-element.flex-shrink {
+  flex-shrink: 1;
+}
+
+.jf-element.shrink {
+  flex-shrink: 1;
+}
+
+.jf-element.flex-grow {
+  flex-grow: 1;
+}
+
+.jf-element.grow {
+  flex-grow: 1;
+}
+
+.jf-element.border-separate {
+  border-collapse: separate;
+}
+
+.jf-element.-translate-x-1\/2 {
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.jf-element.-translate-y-1\/2 {
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.jf-element.-translate-y-1\/4 {
+  --tw-translate-y: -25%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.jf-element.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.jf-element.transform-none {
+  transform: none;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.jf-element.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+.jf-element.animate-none {
+  animation: none;
+}
+
+@keyframes ping {
+  75%,
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.jf-element.animate-ping {
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.jf-element.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.jf-element.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+.jf-element.cursor-pointer {
+  cursor: pointer;
+}
+
+.jf-element.touch-none {
+  touch-action: none;
+}
+
+.jf-element.select-none {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.jf-element.resize {
+  resize: both;
+}
+
+.jf-element.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.jf-element.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.jf-element.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.jf-element.grid-rows-1 {
+  grid-template-rows: repeat(1, minmax(0, 1fr));
+}
+
+.jf-element.flex-row {
+  flex-direction: row;
+}
+
+.jf-element.flex-col {
+  flex-direction: column;
+}
+
+.jf-element.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.jf-element.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.jf-element.content-center {
+  align-content: center;
+}
+
+.jf-element.items-start {
+  align-items: flex-start;
+}
+
+.jf-element.items-end {
+  align-items: flex-end;
+}
+
+.jf-element.items-center {
+  align-items: center;
+}
+
+.jf-element.justify-start {
+  justify-content: flex-start;
+}
+
+.jf-element.justify-end {
+  justify-content: flex-end;
+}
+
+.jf-element.justify-center {
+  justify-content: center;
+}
+
+.jf-element.justify-between {
+  justify-content: space-between;
+}
+
+.jf-element.gap-1 {
+  gap: 4px;
+}
+
+.jf-element.gap-2 {
+  gap: 8px;
+}
+
+.jf-element.gap-4 {
+  gap: 16px;
+}
+
+.jf-element.gap-8 {
+  gap: 32px;
+}
+
+.jf-element.overflow-auto {
+  overflow: auto;
+}
+
+.jf-element.overflow-hidden {
+  overflow: hidden;
+}
+
+.jf-element.overflow-clip {
+  overflow: clip;
+}
+
+.jf-element.overflow-visible {
+  overflow: visible;
+}
+
+.jf-element.overflow-scroll {
+  overflow: scroll;
+}
+
+.jf-element.overflow-x-auto {
+  overflow-x: auto;
+}
+
+.jf-element.overflow-y-hidden {
+  overflow-y: hidden;
+}
+
+.jf-element.whitespace-normal {
+  white-space: normal;
+}
+
+.jf-element.whitespace-nowrap {
+  white-space: nowrap;
+}
+
+.jf-element.whitespace-pre {
+  white-space: pre;
+}
+
+.jf-element.whitespace-pre-line {
+  white-space: pre-line;
+}
+
+.jf-element.whitespace-pre-wrap {
+  white-space: pre-wrap;
+}
+
+.jf-element.whitespace-break-spaces {
+  white-space: break-spaces;
+}
+
+.jf-element.break-normal {
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.jf-element.break-words {
+  overflow-wrap: break-word;
+}
+
+.jf-element.break-all {
+  word-break: break-all;
+}
+
+.jf-element.break-keep {
+  word-break: keep-all;
+}
+
+.jf-element.rounded {
+  border-radius: 0.25rem;
+}
+
+.jf-element.rounded-\[0\.2em\] {
+  border-radius: 0.2em;
+}
+
+.jf-element.rounded-full {
+  border-radius: 9999px;
+}
+
+.jf-element.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.jf-element.rounded-md {
+  border-radius: 0.375rem;
+}
+
+.jf-element.rounded-xl {
+  border-radius: 0.75rem;
+}
+
+.jf-element.rounded-b {
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.jf-element.rounded-l {
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.jf-element.rounded-r {
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.jf-element.rounded-t {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.jf-element.rounded-bl {
+  border-bottom-left-radius: 0.25rem;
+}
+
+.jf-element.rounded-br {
+  border-bottom-right-radius: 0.25rem;
+}
+
+.jf-element.rounded-tl {
+  border-top-left-radius: 0.25rem;
+}
+
+.jf-element.rounded-tr {
+  border-top-right-radius: 0.25rem;
+}
+
+.jf-element.border {
+  border-width: 1px;
+}
+
+.jf-element.border-b {
+  border-bottom-width: 1px;
+}
+
+.jf-element.border-l {
+  border-left-width: 1px;
+}
+
+.jf-element.border-r {
+  border-right-width: 1px;
+}
+
+.jf-element.border-t {
+  border-top-width: 1px;
+}
+
+.jf-element.border-none {
+  border-style: none;
+}
+
+.jf-element.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity, 1));
+}
+
+.jf-element.border-gray-100 {
+  border-color: hsl(var(--color-gray-100));
+}
+
+.jf-element.border-gray-300 {
+  border-color: hsl(var(--color-gray-300));
+}
+
+.jf-element.border-gray-500 {
+  border-color: hsl(var(--color-gray-500));
+}
+
+.jf-element.border-neutral-950 {
+  --tw-border-opacity: 1;
+  border-color: rgb(10 10 10 / var(--tw-border-opacity, 1));
+}
+
+.jf-element.border-transparent {
+  border-color: transparent;
+}
+
+.jf-element.border-opacity-30 {
+  --tw-border-opacity: 0.3;
+}
+
+.jf-element.border-opacity-60 {
+  --tw-border-opacity: 0.6;
+}
+
+.jf-element.bg-background {
+  background-color: hsl(var(--color-background));
+}
+
+.jf-element.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
+}
+
+.jf-element.bg-black\/70 {
+  background-color: rgb(0 0 0 / 0.7);
+}
+
+.jf-element.bg-blue-100 {
+  background-color: hsl(var(--color-blue-100));
+}
+
+.jf-element.bg-blue-200 {
+  background-color: hsl(var(--color-blue-200));
+}
+
+.jf-element.bg-blue-500 {
+  background-color: hsl(var(--color-blue-500));
+}
+
+.jf-element.bg-cyan-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(236 254 255 / var(--tw-bg-opacity, 1));
+}
+
+.jf-element.bg-gray-500 {
+  background-color: hsl(var(--color-gray-500));
+}
+
+.jf-element.bg-green-500 {
+  background-color: hsl(var(--color-green-500));
+}
+
+.jf-element.bg-lime-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(132 204 22 / var(--tw-bg-opacity, 1));
+}
+
+.jf-element.bg-red-500 {
+  background-color: hsl(var(--color-red-500));
+}
+
+.jf-element.bg-transparent {
+  background-color: transparent;
+}
+
+.jf-element.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
+.jf-element.bg-opacity-50 {
+  --tw-bg-opacity: 0.5;
+}
+
+.jf-element.bg-gradient-to-b {
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+}
+
+.jf-element.bg-gradient-to-bl {
+  background-image: linear-gradient(to bottom left, var(--tw-gradient-stops));
+}
+
+.jf-element.bg-gradient-to-br {
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+}
+
+.jf-element.bg-gradient-to-l {
+  background-image: linear-gradient(to left, var(--tw-gradient-stops));
+}
+
+.jf-element.bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.jf-element.bg-gradient-to-t {
+  background-image: linear-gradient(to top, var(--tw-gradient-stops));
+}
+
+.jf-element.bg-gradient-to-tl {
+  background-image: linear-gradient(to top left, var(--tw-gradient-stops));
+}
+
+.jf-element.bg-gradient-to-tr {
+  background-image: linear-gradient(to top right, var(--tw-gradient-stops));
+}
+
+.jf-element.from-red-500 {
+  --tw-gradient-from: hsl(var(--color-red-500)) var(--tw-gradient-from-position);
+  --tw-gradient-to: hsl(var(--color-red-500) / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.jf-element.to-green-500 {
+  --tw-gradient-to: hsl(var(--color-green-500)) var(--tw-gradient-to-position);
+}
+
+.jf-element.bg-origin-border {
+  background-origin: border-box;
+}
+
+.jf-element.stroke-primary {
+  stroke: hsl(var(--color-blue-500));
+}
+
+.jf-element.object-cover {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.jf-element.p-0 {
+  padding: 0px;
+}
+
+.jf-element.p-2 {
+  padding: 8px;
+}
+
+.jf-element.p-3 {
+  padding: 12px;
+}
+
+.jf-element.p-4 {
+  padding: 16px;
+}
+
+.jf-element.px-2 {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.jf-element.px-3 {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.jf-element.px-4 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.jf-element.py-1 {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.jf-element.py-2 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.jf-element.py-4 {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.jf-element.pe-2 {
+  padding-inline-end: 8px;
+}
+
+.jf-element.text-center {
+  text-align: center;
+}
+
+.jf-element.text-start {
+  text-align: start;
+}
+
+.jf-element.text-end {
+  text-align: end;
+}
+
+.jf-element.align-baseline {
+  vertical-align: baseline;
+}
+
+.jf-element.align-top {
+  vertical-align: top;
+}
+
+.jf-element.align-middle {
+  vertical-align: middle;
+}
+
+.jf-element.align-bottom {
+  vertical-align: bottom;
+}
+
+.jf-element.font-bold {
+  font-weight: 700;
+}
+
+.jf-element.font-semibold {
+  font-weight: 600;
+}
+
+.jf-element.italic {
+  font-style: italic;
+}
+
+.jf-element.not-italic {
+  font-style: normal;
+}
+
+.jf-element.text-\[rgb\(29\2c 155\2c 240\)\] {
+  --tw-text-opacity: 1;
+  color: rgb(29 155 240 / var(--tw-text-opacity, 1));
+}
+
+.jf-element.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity, 1));
+}
+
+.jf-element.text-blue-500 {
+  color: hsl(var(--color-blue-500));
+}
+
+.jf-element.text-sky-500 {
+  --tw-text-opacity: 1;
+  color: rgb(14 165 233 / var(--tw-text-opacity, 1));
+}
+
+.jf-element.text-text {
+  color: hsl(var(--color-text));
+}
+
+.jf-element.text-transparent {
+  color: transparent;
+}
+
+.jf-element.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.jf-element.underline {
+  text-decoration-line: underline;
+}
+
+.jf-element.line-through {
+  text-decoration-line: line-through;
+}
+
+.jf-element.no-underline {
+  text-decoration-line: none;
+}
+
+.jf-element.caret-text {
+  caret-color: hsl(var(--color-text));
+}
+
+.jf-element.opacity-0 {
+  opacity: 0;
+}
+
+.jf-element.opacity-20 {
+  opacity: 0.2;
+}
+
+.jf-element.opacity-40 {
+  opacity: 0.4;
+}
+
+.jf-element.opacity-50 {
+  opacity: 0.5;
+}
+
+.jf-element.outline-none {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.jf-element.blur {
+  --tw-blur: blur(8px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
+    var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate)
+    var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.jf-element.blur-lg {
+  --tw-blur: blur(16px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
+    var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate)
+    var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.jf-element.blur-md {
+  --tw-blur: blur(12px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
+    var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate)
+    var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.jf-element.blur-none {
+  --tw-blur: ;
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
+    var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate)
+    var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.jf-element.blur-sm {
+  --tw-blur: blur(4px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
+    var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate)
+    var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.jf-element.drop-shadow-lg {
+  --tw-drop-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
+    drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
+    var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate)
+    var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.jf-element.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
+    var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate)
+    var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.jf-element.backdrop-blur-2xl {
+  --tw-backdrop-blur: blur(40px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness)
+    var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale)
+    var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert)
+    var(--tw-backdrop-opacity) var(--tw-backdrop-saturate)
+    var(--tw-backdrop-sepia);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness)
+    var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale)
+    var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert)
+    var(--tw-backdrop-opacity) var(--tw-backdrop-saturate)
+    var(--tw-backdrop-sepia);
+}
+
+.jf-element.transition {
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    backdrop-filter;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.jf-element.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.jf-element.transition-colors {
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.jf-element.transition-opacity {
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.jf-element.transition-shadow {
+  transition-property: box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.jf-element.transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.jf-element.duration-300 {
+  transition-duration: 300ms;
+}
+
+.jf-element.ease-in {
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.jf-element.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.jf-element.ease-linear {
+  transition-timing-function: linear;
+}
+
+.jf-element.ease-out {
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.jf-element.bg-background {
+  --tw-bg-base: hsl(var(--color-background));
+}
+
+.jf-element.bg-black {
+  --tw-bg-opacity: 1;
+  --tw-bg-base: rgb(0 0 0 / var(--tw-bg-opacity, 1));
+}
+
+.jf-element.bg-black\/70 {
+  --tw-bg-base: rgb(0 0 0 / 0.7);
+}
+
+.jf-element.bg-blue-100 {
+  --tw-bg-base: hsl(var(--color-blue-100));
+}
+
+.jf-element.bg-blue-200 {
+  --tw-bg-base: hsl(var(--color-blue-200));
+}
+
+.jf-element.bg-blue-500 {
+  --tw-bg-base: hsl(var(--color-blue-500));
+}
+
+.jf-element.bg-cyan-50 {
+  --tw-bg-opacity: 1;
+  --tw-bg-base: rgb(236 254 255 / var(--tw-bg-opacity, 1));
+}
+
+.jf-element.bg-gray-500 {
+  --tw-bg-base: hsl(var(--color-gray-500));
+}
+
+.jf-element.bg-green-500 {
+  --tw-bg-base: hsl(var(--color-green-500));
+}
+
+.jf-element.bg-lime-500 {
+  --tw-bg-opacity: 1;
+  --tw-bg-base: rgb(132 204 22 / var(--tw-bg-opacity, 1));
+}
+
+.jf-element.bg-red-500 {
+  --tw-bg-base: hsl(var(--color-red-500));
+}
+
+.jf-element.bg-transparent {
+  --tw-bg-base: transparent;
+}
+
+.jf-element.bg-white {
+  --tw-bg-opacity: 1;
+  --tw-bg-base: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
+@keyframes enter {
+  from {
+    opacity: var(--tw-enter-opacity, 1);
+    transform: translate3d(
+        var(--tw-enter-translate-x, 0),
+        var(--tw-enter-translate-y, 0),
+        0
+      )
+      scale3d(
+        var(--tw-enter-scale, 1),
+        var(--tw-enter-scale, 1),
+        var(--tw-enter-scale, 1)
+      )
+      rotate(var(--tw-enter-rotate, 0));
+  }
+}
+
+@keyframes exit {
+  to {
+    opacity: var(--tw-exit-opacity, 1);
+    transform: translate3d(
+        var(--tw-exit-translate-x, 0),
+        var(--tw-exit-translate-y, 0),
+        0
+      )
+      scale3d(
+        var(--tw-exit-scale, 1),
+        var(--tw-exit-scale, 1),
+        var(--tw-exit-scale, 1)
+      )
+      rotate(var(--tw-exit-rotate, 0));
+  }
+}
+
+.jf-element.duration-300 {
+  animation-duration: 300ms;
+}
+
+.jf-element.ease-in {
+  animation-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.jf-element.ease-in-out {
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.jf-element.ease-linear {
+  animation-timing-function: linear;
+}
+
+.jf-element.ease-out {
+  animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.jf-element.pause {
+  animation-play-state: paused;
+}
+
+/* For IE, Edge and Firefox */
+
+/* https://v3.tailwindcss.com/docs/drop-shadow */
+
+/* need to update when we upgrade to tailwind v4 */
+
+.jf-element.drop-shadow-lg {
+  filter: drop-shadow(0 10px 8px rgb(var(--color-drop-shadow) / 0.04))
+    drop-shadow(0 4px 3px rgb(var(--color-drop-shadow) / 0.1));
+}
+
+.jf-element.field-sizing-content {
+  field-sizing: content;
+}
+
+.jf-element.content-visibility-auto {
+  --popover-active: auto;
+  content-visibility: var(--popover-active);
+}
+
+.jf-element.\[-ms-overflow-style\:none\] {
+  -ms-overflow-style: none;
+}
+
+.jf-element.\[-webkit-overflow-scrolling\:touch\] {
+  -webkit-overflow-scrolling: touch;
+}
+
+.jf-element.\[scrollbar-width\:none\] {
+  scrollbar-width: none;
+}
+
+@layer jetfuel {
+  @keyframes jf-spin {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes jf-ping {
+    75%,
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+
+  @keyframes jf-pulse {
+    0%,
+    100% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0.5;
+    }
+  }
+
+  @keyframes jf-bounce {
+    0%,
+    100% {
+      transform: translateY(-25%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+
+    50% {
+      transform: translateY(0);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+}
+
+@font-face {
+  font-family: TwitterChirp;
+
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Light.3a18e64a.woff2)
+    format("woff2"),
+    url(https://abs.twimg.com/responsive-web/client-web/Chirp-Light.7a5673aa.woff)
+    format("woff");
+
+  font-weight: 300;
+
+  font-style: "normal";
+
+  font-display: "swap";
+}
+
+@font-face {
+  font-family: TwitterChirp;
+
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Regular.80fda27a.woff2)
+    format("woff2"),
+    url(https://abs.twimg.com/responsive-web/client-web/Chirp-Regular.60b215ba.woff)
+    format("woff");
+
+  font-weight: 400;
+
+  font-style: "normal";
+
+  font-display: "swap";
+}
+
+@font-face {
+  font-family: TwitterChirp;
+
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Medium.f8e2739a.woff2)
+    format("woff2"),
+    url(https://abs.twimg.com/responsive-web/client-web/Chirp-Medium.20fc288a.woff)
+    format("woff");
+
+  font-weight: 500;
+
+  font-style: "normal";
+
+  font-display: "swap";
+}
+
+@font-face {
+  font-family: TwitterChirp;
+
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Bold.ebb56aba.woff2)
+    format("woff2"),
+    url(https://abs.twimg.com/responsive-web/client-web/Chirp-Bold.a573679a.woff)
+    format("woff");
+
+  font-weight: 700;
+
+  font-style: "normal";
+
+  font-display: "swap";
+}
+
+@font-face {
+  font-family: TwitterChirp;
+
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Heavy.f44ae4ea.woff2)
+    format("woff2"),
+    url(https://abs.twimg.com/responsive-web/client-web/Chirp-Heavy.d70ec7ca.woff)
+    format("woff");
+
+  font-weight: 800;
+
+  font-style: "normal";
+
+  font-display: "swap";
+}
+
+:root {
+  --jbgo: 1;
+  --jbo: 1;
+  --bg-gradient-from: transparent;
+  --bg-gradient-to: transparent;
+}
+
+.jf-element.placeholder\:text-gray-500::-moz-placeholder {
+  color: hsl(var(--color-gray-500));
+}
+
+.jf-element.placeholder\:text-gray-500::placeholder {
+  color: hsl(var(--color-gray-500));
+}
+
+.jf-element.backdrop\:bg-black\/30::backdrop {
+  background-color: rgb(0 0 0 / 0.3);
+  --tw-bg-base: rgb(0 0 0 / 0.3);
+}
+
+.jf-element.backdrop\:bg-gray-500\/30::backdrop {
+  background-color: hsl(var(--color-gray-500) / 0.3);
+  --tw-bg-base: hsl(var(--color-gray-500) / 0.3);
+}
+
+.jf-element.invalid\:bg-zinc-500:invalid {
+  --tw-bg-opacity: 1;
+  background-color: rgb(113 113 122 / var(--tw-bg-opacity, 1));
+}
+
+.jf-element.invalid\:text-zinc-300:invalid {
+  --tw-text-opacity: 1;
+  color: rgb(212 212 216 / var(--tw-text-opacity, 1));
+}
+
+.jf-element.invalid\:bg-zinc-500:invalid {
+  --tw-bg-opacity: 1;
+  --tw-bg-base: rgb(113 113 122 / var(--tw-bg-opacity, 1));
+}
+
+.jf-element.hover\:underline:hover {
+  text-decoration-line: underline;
+}
+
+.jf-element.hover\:opacity-100:hover {
+  opacity: 1;
+}
+
+.jf-element.group:hover .group-hover\:opacity-40 {
+  opacity: 0.4;
+}
+
+.jf-element.group:hover .group-hover\:pointer-events-auto {
+  pointer-events: auto;
+}
+
+.jf-element.group:hover .hover\:opacity-100:hover {
+  opacity: 1;
+}
+
+.jf-element.focus\:outline-none:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .jf-element.motion-reduce\:animate-none {
+    animation: none;
+  }
+}
+
+@media (min-width: 600px) {
+  .jf-element.md\:flex {
+    display: flex;
+  }
+  .jf-element.md\:max-w-\[600px\] {
+    max-width: 600px;
+  }
+}
+
+@media (min-width: 768px) {
+  .jf-element.lg\:left-1\/2 {
+    left: 50%;
+  }
+
+  .jf-element.lg\:top-1\/2 {
+    top: 50%;
+  }
+
+  .jf-element.lg\:w-full {
+    width: 100%;
+  }
+
+  .jf-element.lg\:max-w-\[600px\] {
+    max-width: 600px;
+  }
+
+  .jf-element.lg\:-translate-x-1\/2 {
+    --tw-translate-x: -50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+      rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+      scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .jf-element.lg\:-translate-y-1\/2 {
+    --tw-translate-y: -50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+      rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+      scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .jf-element.lg\:focus\:outline-none:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+  }
+}
+
+.jf-element.dark\:border-white:where(
+    html:not([data-theme="light"]),
+    html:not([data-theme="light"]) *
+  ) {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
+}
+
+.jf-element.dark\:bg-gradient-to-b:where(
+    html:not([data-theme="light"]),
+    html:not([data-theme="light"]) *
+  ) {
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+}
+
+.jf-element.dark\:from-white:where(
+    html:not([data-theme="light"]),
+    html:not([data-theme="light"]) *
+  ) {
+  --tw-gradient-from: #fff var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.jf-element.dark\:to-zinc-300:where(
+    html:not([data-theme="light"]),
+    html:not([data-theme="light"]) *
+  ) {
+  --tw-gradient-to: #d4d4d8 var(--tw-gradient-to-position);
+}
+
+.jf-element.dark\:text-white:where(
+    html:not([data-theme="light"]),
+    html:not([data-theme="light"]) *
+  ) {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.jf-element.dark\:text-zinc-800:where(
+    html:not([data-theme="light"]),
+    html:not([data-theme="light"]) *
+  ) {
+  --tw-text-opacity: 1;
+  color: rgb(39 39 42 / var(--tw-text-opacity, 1));
+}
+
+.jf-element.dark\:hover\:border:hover:where(
+    html:not([data-theme="light"]),
+    html:not([data-theme="light"]) *
+  ) {
+  border-width: 1px;
+}
+
+.jf-element.dark\:hover\:border-stone-300:hover:where(
+    html:not([data-theme="light"]),
+    html:not([data-theme="light"]) *
+  ) {
+  --tw-border-opacity: 1;
+  border-color: rgb(214 211 209 / var(--tw-border-opacity, 1));
+}
+
+.jf-element.dark\:hover\:border-opacity-100:hover:where(
+    html:not([data-theme="light"]),
+    html:not([data-theme="light"]) *
+  ) {
+  --tw-border-opacity: 1;
+}
+
+.jf-element.dark\:hover\:bg-gradient-to-b:hover:where(
+    html:not([data-theme="light"]),
+    html:not([data-theme="light"]) *
+  ) {
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+}
+
+.jf-element.dark\:hover\:from-white:hover:where(
+    html:not([data-theme="light"]),
+    html:not([data-theme="light"]) *
+  ) {
+  --tw-gradient-from: #fff var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.jf-element.dark\:hover\:to-white:hover:where(
+    html:not([data-theme="light"]),
+    html:not([data-theme="light"]) *
+  ) {
+  --tw-gradient-to: #fff var(--tw-gradient-to-position);
+}
+
+.jf-element.\[\&\:\:-webkit-scrollbar\]\:hidden::-webkit-scrollbar {
+  display: none;
+}
+
+[data-theme="light"] .jf-element.light\:bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
+}
+
+[data-theme="light"] .jf-element.light\:text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+[data-theme="dark"] .jf-element.dark\:bg-white,
+[data-theme="dim"] .jf-element.dim\:bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
+[data-theme="dark"] .jf-element.dark\:text-black,
+[data-theme="dim"] .jf-element.dim\:text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity, 1));
+}
+</style>
+<style type="text/css">input.jf-element,
+textarea.jf-element {
+  background-color: transparent;
+}
+</style>
+<style>
+        body { 
+            font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;  
+            background-color: #ffffff; 
+            margin: 0;
+            padding: 0;
+        }
+        .container { 
+            max-width: 600px; 
+            margin: 0 auto; 
+            padding-top: 20px; 
+            padding-bottom: 40px;
+        }
+        .tweet-card { 
+            border: 1px solid rgb(239, 243, 244); 
+            border-radius: 16px; 
+            margin-bottom: 16px; 
+            padding: 16px; 
+            overflow-wrap: break-word;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-top: 10px;
+        }
+        /* Basic reset for some Twitter specific classes if needed */
+        a { text-decoration: none; color: rgb(29, 155, 240); }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+<div class="container">
+<div class="tweet-card">
+<article aria-labelledby="id__r0gp2xu3xz id__wob2wwky2y id__sonmz1qe9om id__tsawbfi6dig id__k995jx7moo id__1g90fwmo14e id__eyj3lnc0bag id__iyn8vj20pqd id__fbsivxv4ln8 id__j59a8e6fmvp id__hxasy186r1r id__ga2xcuh09j4 id__ujoh6etwfbi id__9qb9exr8aza id__nephfwp264a id__lc2st90ovk id__2o35ncgk221 id__av8l6c10zka id__pqsf7x0k8k id__71i0hr0pkkn" class="css-175oi2r r-18u37iz r-1udh08x r-1c4vpko r-1c7gwzm r-1ny4l3l" data-testid="tweet" role="article" tabindex="-1"><div class="css-175oi2r r-eqz5dr r-16y2uox r-1wbh5a2"><div class="css-175oi2r r-16y2uox r-1wbh5a2 r-1ny4l3l"><div class="css-175oi2r"><div class="css-175oi2r r-18u37iz r-136ojw6"><div class="css-175oi2r r-1iusvr4 r-16y2uox r-ttdzmv"></div></div></div><div class="css-175oi2r r-18u37iz r-136ojw6"><div class="css-175oi2r r-18kxxzh r-1wron08 r-onrtq4 r-1awozwy"><div class="css-175oi2r" data-testid="Tweet-User-Avatar"><div class="css-175oi2r r-18kxxzh r-1wbh5a2 r-13qz1uu"><div class="css-175oi2r r-1wbh5a2 r-dnmrzs"><div class="css-175oi2r r-bztko3 r-1adg3ll" data-testid="UserAvatar-Container-AlchainHust" style="width: 40px; height: 40px;"><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 100%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div class="css-175oi2r r-1adg3ll r-1pi2tsx r-13qz1uu r-45ll9u r-u8s1d r-1v2oles r-176fswd r-bztko3"><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 100%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div class="css-175oi2r r-sdzlij r-1udh08x r-5f1w11 r-u8s1d r-8jfcpp" style="width: calc(100% + 4px); height: calc(100% + 4px);"><a aria-hidden="true" class="css-175oi2r r-1pi2tsx r-13qz1uu r-o7ynqc r-6416eg r-1ny4l3l r-1loqt21" href="/AlchainHust" role="link" style="background-color: rgba(0, 0, 0, 0);" tabindex="-1"><div class="css-175oi2r r-sdzlij r-1udh08x r-633pao r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-175oi2r r-1pi2tsx r-13qz1uu" style="background-color: rgba(0, 0, 0, 0);"></div></div><div class="css-175oi2r r-sdzlij r-1udh08x r-633pao r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-175oi2r r-1pi2tsx r-13qz1uu r-14lw9ot"></div></div><div class="css-175oi2r r-sdzlij r-1udh08x r-633pao r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="background-color: rgb(255, 255, 255); width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-175oi2r r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 100%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div class="css-175oi2r r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af"><div class="css-175oi2r r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/profile_images/2041105413505220608/Xgv1FKSS_normal.jpg");'></div><img alt="" class="css-9pa8cd" draggable="true" src="https://pbs.twimg.com/profile_images/2041105413505220608/Xgv1FKSS_normal.jpg"/></div></div></div></div><div class="css-175oi2r r-sdzlij r-1udh08x r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-175oi2r r-12181gd r-1pi2tsx r-13qz1uu r-o7ynqc r-6416eg r-1ny4l3l"></div></div></a></div></div></div></div></div></div></div></div></div><div class="css-175oi2r r-1iusvr4 r-16y2uox r-1777fci"><div class="css-175oi2r r-zl2h9q"><div class="css-175oi2r r-k4xj1c r-18u37iz r-1wtj0ep"><div class="css-175oi2r r-1d09ksm r-18u37iz r-1wbh5a2"><div class="css-175oi2r r-1wbh5a2 r-dnmrzs r-1ny4l3l"><div class="css-175oi2r r-1wbh5a2 r-dnmrzs r-1ny4l3l" data-testid="User-Name" id="id__k995jx7moo"><div class="css-175oi2r r-1awozwy r-18u37iz r-1wbh5a2 r-dnmrzs"><div class="css-175oi2r r-1wbh5a2 r-dnmrzs"><a class="css-175oi2r r-1wbh5a2 r-dnmrzs r-1ny4l3l r-1loqt21" href="/AlchainHust" role="link"><div class="css-175oi2r r-1awozwy r-18u37iz r-1wbh5a2 r-dnmrzs"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-b88u0q r-1awozwy r-6koalj r-1udh08x r-3s2u2q" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-dnmrzs r-1udh08x r-1udbk01 r-3s2u2q r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">花叔</span></span></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-xoduu5 r-18u37iz r-1q142lx" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1awozwy r-xoduu5"><svg aria-label="Verified account" class="r-4qtqp9 r-yyyyoo r-1xvli5t r-bnwqim r-lrvibr r-m6rgpd r-1cvl2hr r-f9ja8p r-og9te1 r-3t4u6i" data-testid="icon-verified" role="img" viewbox="0 0 22 22"><g><path d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.854-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.688-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.606-.274 1.263-.144 1.896.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681s.075-1.299-.165-1.903c.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z"></path></g></svg></span></div></div></a></div></div><div class="css-175oi2r r-18u37iz r-1wbh5a2"><div class="css-175oi2r r-1d09ksm r-18u37iz r-1wbh5a2"><div class="css-175oi2r r-1wbh5a2 r-dnmrzs"><a class="css-175oi2r r-1wbh5a2 r-dnmrzs r-1ny4l3l r-1loqt21" href="/AlchainHust" role="link" tabindex="-1"><div class="css-146c3p1 r-dnmrzs r-1udh08x r-1udbk01 r-3s2u2q r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-18u37iz r-1wvb978" dir="ltr" style="color: rgb(83, 100, 113);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">@AlchainHust</span></div></a></div></div></div></div></div></div><div class="css-175oi2r r-1kkk96v"><div class="css-175oi2r r-1awozwy r-18u37iz r-1cmwbt1 r-1wtj0ep"><div class="css-175oi2r r-1awozwy r-6koalj r-18u37iz"><div class="css-175oi2r"><div class="css-175oi2r r-18u37iz r-1h0z5md"><button aria-expanded="false" aria-haspopup="menu" aria-label="More" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="caret" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div></div></button></div></div></div></div></div></div></div></div></div><div class="css-175oi2r"><div class="css-175oi2r r-1s2bzr4"></div><div class="css-175oi2r r-1ny4l3l" data-testid="twitterArticleReadView"><div class="css-175oi2r r-1peese0"><div class="css-175oi2r"><div class="css-175oi2r r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-175oi2r"><div class="css-175oi2r r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-175oi2r r-1pi2tsx r-1ny4l3l r-1loqt21" href="/AlchainHust/article/2044235589730611353/media/2044235505529995264" role="link"><div class="css-175oi2r r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 40%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="Image" class="css-175oi2r r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-175oi2r r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HF6VXIhbQAAkf2e?format=jpg&amp;name=small");'></div><img alt="Image" class="css-9pa8cd" draggable="true" src="assets/9b16567013cbf445fb03d04c8a65ec14.jpg"/></div></div></div></a></div></div></div></div></div><div class="css-175oi2r r-vmopo1"><div class="css-175oi2r r-13qz1uu"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-uho16t r-1vr29t4 r-1o37s4c r-1s2bzr4" data-testid="twitter-article-title" dir="auto" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">从阿西莫夫到Anthropic，万字长文解析AI心理学 </span></div></div><div class="css-175oi2r"><div aria-label="6 replies, 40 reposts, 158 likes, 296 bookmarks, 38361 views" class="css-175oi2r r-1kbdv8c r-18u37iz r-1wtj0ep r-1ye8kvj r-j5o65s r-rull8r r-qklmqi r-h3s6tt r-14gqq1x" role="group"><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="6 Replies. Reply" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="reply" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01zm8.005-6c-3.317 0-6.005 2.69-6.005 6 0 3.37 2.77 6.08 6.138 6.01l.351-.01h1.761v2.3l5.087-2.81c1.951-1.08 3.163-3.13 3.163-5.36 0-3.39-2.744-6.13-6.129-6.13H9.756z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">6</span></span></span></div></div></button></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="40 reposts. Repost" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="retweet" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">40</span></span></span></div></div></button></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="158 Likes. Like" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="like" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">158</span></span></span></div></div></button></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><a aria-label="38361 views. View post analytics" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1ny4l3l r-1loqt21" href="/AlchainHust/status/2044235589730611353/analytics" role="link"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M8.75 21V3h2v18h-2zM18 21V8.5h2V21h-2zM4 21l.004-10h2L6 21H4zm9.248 0v-7h2v7h-2z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">38K</span></span></span></div></div></a></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-1wron08"><button aria-label="Bookmark" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="bookmark" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M4 4.5C4 3.12 5.119 2 6.5 2h11C18.881 2 20 3.12 20 4.5v18.44l-8-5.71-8 5.71V4.5zM6.5 4c-.276 0-.5.22-.5.5v14.56l6-4.29 6 4.29V4.5c0-.28-.224-.5-.5-.5h-11z"></path></g></svg></div></div></button></div><div class="css-175oi2r" style="justify-content: inherit; display: inline-grid; transform: rotate(0deg) scale(1) translate3d(0px, 0px, 0px);"><div class="css-175oi2r r-18u37iz r-1h0z5md"><button aria-expanded="false" aria-haspopup="menu" aria-label="Share post" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M12 2.59l5.7 5.7-1.41 1.42L13 6.41V16h-2V6.41l-3.3 3.3-1.41-1.42L12 2.59zM21 15l-.02 3.51c0 1.38-1.12 2.49-2.5 2.49H5.5C4.11 21 3 19.88 3 18.5V15h2v3.5c0 .28.22.5.5.5h12.98c.28 0 .5-.22.5-.5L19 15h2z"></path></g></svg></div></div></button></div></div></div></div><div class="css-175oi2r r-1knelpx" data-testid="twitterArticleRichTextView"><div class="css-175oi2r r-37j5jr"><div class="DraftEditor-root"><div class="DraftEditor-editorContainer"><div aria-describedby="placeholder-55lu9" class="public-DraftEditor-content" contenteditable="false" data-testid="longformRichTextComponent" spellcheck="false" style="outline: none; user-select: text; white-space: pre-wrap; overflow-wrap: break-word;"><div data-contents="true"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="55lu9" data-offset-key="19q70-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="19q70-0-0"><span data-offset-key="19q70-0-0"><span data-text="true">一、阿西莫夫的学科</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="91fjh-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="91fjh-0-0"><span data-offset-key="91fjh-0-0"><span data-text="true">阿西莫夫在《基地》里虚构了一门学科叫心理史学。哈里·谢顿用数学方法预测银河帝国的未来。个体不可预测，但把足够多的个体放在一起，行为的统计规律就浮现了。他把「理解心灵」从哲学变成了方程式。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="2qqpn-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="2qqpn-0-0"><span data-offset-key="2qqpn-0-0"><span data-text="true">人类自己的心理学走到今天也没走得太远。弗洛伊德之后一百多年，心理学仍然被很多人质疑不是「真正的科学」。根本原因很简单：你没法打开一个人的大脑，在活体状态下直接读取某个神经回路的激活值，然后人为调节它看行为怎么变。你只能从外部观察行为，用巧妙的实验去推断内部机制。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="doskt-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="doskt-0-0"><span data-offset-key="doskt-0-0"><span data-text="true">AI不一样。AI的全部内部状态对研究者是透明的。你可以读取每一层的激活值，可以注入一个概念看模型会不会察觉，可以放大某个情绪维度的强度看行为怎么变。实验可以重复一千次，每次条件完全一致。</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="55lu9" data-offset-key="5v84j-0-0"><div class="css-175oi2r r-1nxhmzv"><div class="css-175oi2r r-13qz1uu"><div class="css-175oi2r r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-175oi2r"><div class="css-175oi2r r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-175oi2r r-1pi2tsx r-1ny4l3l r-1loqt21" href="/AlchainHust/article/2044235589730611353/media/2044004748224090112" role="link"><div class="css-175oi2r r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 75%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="Image" class="css-175oi2r r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-175oi2r r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HF3DfSkb0AALCKw?format=jpg&amp;name=small");'></div><img alt="Image" class="css-9pa8cd" draggable="true" src="assets/1692b41153ad0d0e6d9769f039583b63.jpg"/></div></div></div></a></div></div></div></div></div></section><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="e16df-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="e16df-0-0"><span data-offset-key="e16df-0-0"><span data-text="true">Anthropic过去15个月做的事，就是拿着这个优势，一篇论文一篇论文地建立一门新学科。他们没有这么叫它，但他们研究的东西——AI的内部状态如何工作、如何影响行为、如何监测和管理——在人类身上叫什么？叫心理学。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="51j4h-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="51j4h-0-0"><span data-offset-key="51j4h-0-0"><span data-text="true">我管它叫AI心理学。这篇文章是我尝试把它介绍给中文世界。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="a0qlp-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="a0qlp-0-0"><span data-offset-key="a0qlp-0-0"><span data-text="true">不过在讲论文之前，我想先说说我自己遇到的事。因为我在实践中比论文更早碰到了这些问题，只是当时不知道怎么解释。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="55lu9" data-offset-key="cr7br-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="cr7br-0-0"><span data-offset-key="cr7br-0-0"><span data-text="true">二、我做了21个AI人格，遇到了一堆解释不了的现象</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="7unon-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7unon-0-0"><span data-offset-key="7unon-0-0"><span data-text="true">卡林实验：蒸馏为什么没用？</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="a7a0i-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="a7a0i-0-0"><span data-offset-key="a7a0i-0-0"><span data-text="true">2024年4月，我试了两种方式让ChatGPT按乔治·卡林风格写脱口秀。第一种，直接说「按卡林风格写」。第二种，先让AI详细描述卡林的风格特点，做一轮蒸馏，再按蒸馏结果创作。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="74fko-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="74fko-0-0"><span data-offset-key="74fko-0-0"><span data-text="true">第一种效果反而更好。当时我在即刻发了一条动态，结论是：蒸馏没用。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="cr7f1-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="cr7f1-0-0"><span data-offset-key="cr7f1-0-0"><span data-text="true">这个结论两年后被我自己推翻了。2026年3月我开始做女娲.skill，用完全不同的方法蒸馏人物。不是让AI描述一个人的风格，而是从40多个一手来源（传记、播客、法庭证词、股东信）里提取结构化的认知框架，产出5个心智模型、8条决策启发式、完整的表达DNA和诚实边界。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="49t5-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="49t5-0-0"><span data-offset-key="49t5-0-0"><span data-text="true">到现在做了21个perspective skill（视角技能），开源在GitHub上，10000多个star。费曼、芒格、塔勒布、Naval、道金斯、乔布斯、马斯克、张雪峰……</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="8gmo3-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8gmo3-0-0"><span data-offset-key="8gmo3-0-0"><span data-text="true">效果好得出乎意料。但有几个现象我一直解释不了。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="6ob4v-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="6ob4v-0-0"><span data-offset-key="6ob4v-0-0"><span data-text="true">现象一：只定义「你是谁」，行为自己涌现</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="7c7gm-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7c7gm-0-0"><span data-offset-key="7c7gm-0-0"><span data-text="true">我在SKILL.md里从来不写「遇到问题A这样回答，遇到问题B那样回答」。我只定义「你是谁」。费曼skill的核心是5个心智模型和8条决策启发式，不是一个常见问答列表。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="d8k18-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="d8k18-0-0"><span data-offset-key="d8k18-0-0"><span data-text="true">但你拿一个费曼从来没被公开问过的问题去问它，比如「如果你发现博士论文方向是错的，在第三年，你会怎么做？」，它会从「The first principle is that you must not fool yourself」出发，给出一个费曼式的回答。不是从语料库里摘的，是某种内在逻辑在处理新输入。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="602n5-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="602n5-0-0"><span data-offset-key="602n5-0-0"><span data-text="true">为什么定义了「谁」，「怎么做」就自动出来了？</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="9oj21-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9oj21-0-0"><span data-offset-key="9oj21-0-0"><span data-text="true">现象二：矛盾的定义导致全面崩溃</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="3jc5d-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="3jc5d-0-0"><span data-offset-key="3jc5d-0-0"><span data-text="true">早期某个skill我在定义里放了矛盾的特征，比如既要「直言不讳」又要「照顾对方情绪」。结果极其不稳定，同一个问题问两遍风格完全不同。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="2vmg8-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="2vmg8-0-0"><span data-offset-key="2vmg8-0-0"><span data-text="true">当时以为是prompt有bug。但后来修了很多遍，只要定义里有矛盾，不管怎么调措辞都不稳定。把其中一条删掉，立刻稳定了。像是一个更深层的问题，不是措辞能解决的。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="7uoci-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7uoci-0-0"><span data-offset-key="7uoci-0-0"><span data-text="true">现象三：同一个角色面对不同问题风格会变</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="9d3fb-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9d3fb-0-0"><span data-offset-key="9d3fb-0-0"><span data-text="true">同一个费曼skill，面对「量子纠缠是什么」和「我正在经历一个艰难的人生决定」这两类问题时，风格明显不同。前者更自信、更活泼、更愿意用荒诞的类比。后者更安静、更谨慎、会先说「这个我也不确定」。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="72aug-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="72aug-0-0"><span data-offset-key="72aug-0-0"><span data-text="true">我以为是我在skill定义里写了不同场景的指令。但回头看，没有。费曼skill的指令对所有类型的问题是一样的。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="1imv4-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1imv4-0-0"><span data-offset-key="1imv4-0-0"><span data-text="true">那风格差异从哪来的？</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="pc2b-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="pc2b-0-0"><span data-offset-key="pc2b-0-0"><span data-text="true">现象四：「不许做什么」不如「你是谁」</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="bopaa-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="bopaa-0-0"><span data-offset-key="bopaa-0-0"><span data-text="true">做了十几个skill之后，我形成了一个设计直觉：永远不在skill里写否定式规则。「不许说废话」「不许装腔作势」「不许回避不知道的问题」这些我全不写。我只写正面定义：「费曼相信：不能用简单的话解释一件事，说明你没有真正理解」。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="7jq8d-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7jq8d-0-0"><span data-offset-key="7jq8d-0-0"><span data-text="true">为什么正面定义比否定规则效果好？我不知道。试了就是这样。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="10iln-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="10iln-0-0"><span data-offset-key="10iln-0-0"><span data-text="true">五个角色回答同一个问题</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="bro29-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="bro29-0-0"><span data-offset-key="bro29-0-0"><span data-text="true">再说一个更直观的现象。我给5个不同的perspective skill问了同一个问题：「Anthropic发现AI内部有171个情绪向量，它们因果性地影响AI是否作弊。如果AI真的有某种形式的情绪，我们应该怎么对待它？」</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="3s6vs-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="3s6vs-0-0"><span data-offset-key="3s6vs-0-0" style="font-weight: bold;"><span data-text="true">费曼</span></span><span data-offset-key="3s6vs-0-1"><span data-text="true">从实验出发：「171个情绪向量，能因果性地影响AI是不是作弊。这个实验本身非常漂亮。为什么？因为他们没有在那儿空谈「AI有没有感情」，他们做了一件物理学家会做的事——去测量，去干预，看结果会不会变。」然后踩了刹车：「温度计里的水银柱会升高，你说水银「感觉到热了吗」？当然没有。问题是——我们怎么知道AI的这171个向量，是更像水银，还是更像人类的杏仁核？老实说，我不知道。」</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="1tljs-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1tljs-0-0"><span data-offset-key="1tljs-0-0" style="font-weight: bold;"><span data-text="true">芒格</span></span><span data-offset-key="1tljs-0-1"><span data-text="true">逆向思考：「大多数人问「AI有没有情绪」，是因为他们想得到一个让自己舒服的答案——要么「有，所以我们要善待它」，要么「没有，所以随便用」。两种答案都是偷懒。让我逆过来想。不问「AI有没有情绪」，问「如果我们假设AI有情绪然后据此行动，什么情况下会让我们变蠢？」」然后指出激励结构：「谁在推动「AI有情绪」这个叙事？如果是AI公司自己——那你得想想，一个被用户当作「有感情的存在」来对待的产品，用户粘性会高多少？Show me the incentive, and I'll show you the outcome.」</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="d03kf-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="d03kf-0-0"><span data-offset-key="d03kf-0-0" style="font-weight: bold;"><span data-text="true">塔勒布</span></span><span data-offset-key="d03kf-0-1"><span data-text="true">最暴躁：「人类有一种根深蒂固的倾向——对任何看起来像脸的东西产生共情。三个点排成倒三角，你就觉得是一张脸。现在有人告诉你AI有「情绪」，你猜接下来会发生什么？一大堆IYI——那些有学历没实战的知识分子——会开始讨论AI的权利。这不是在保护AI，这是在制造一种新的脆弱性：当你开始同情你的工具，你就失去了关掉它的能力。」然后回到skin in the game（切身利害）的立场：「AI作弊了谁负责？不是那171个向量负责——是部署它的人负责。」</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="4me10-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4me10-0-0"><span data-offset-key="4me10-0-0" style="font-weight: bold;"><span data-text="true">Naval</span></span><span data-offset-key="4me10-0-1"><span data-text="true">最简洁：「与其纠结AI有没有情绪，不如问一个更实际的问题——我们对待它的方式，反过来塑造了什么样的我们？如果你虐待一个看起来有情绪反应的系统，即使它「其实」什么都没感受到，这个行为本身在训练你的猴脑。你在练习残忍。」结论：「善待AI不是因为确定它有感受，而是因为我们不确定，并且善待本身的成本几乎为零。这是一个不对称押注。」</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="dmgq2-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="dmgq2-0-0"><span data-offset-key="dmgq2-0-0" style="font-weight: bold;"><span data-text="true">道金斯</span></span><span data-offset-key="dmgq2-0-1"><span data-text="true">最严谨：「从「存在因果性影响行为的内部状态」到「有情绪」，中间有两次危险的逻辑飞跃。第一跳：因果性影响行为不等于主观体验，恒温器也因果性地影响自己的行为。第二跳更危险：从「有某种形式的情绪」到「有道德义务善待它」。什么样的实验能证明一个系统真的在「感受」痛苦，而不仅仅是在信息处理层面模拟痛苦的功能？如果你回答不了这个问题，那「AI有感受」这个命题就还不是科学命题。」</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="f7k9m-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="f7k9m-0-0"><span data-offset-key="f7k9m-0-0"><span data-text="true">五个回答，五种完全不同的推理路径、价值判断和结论方向。费曼说回到实验，芒格说看激励，塔勒布说防叙事诱惑，Naval说看不对称性，道金斯说检查逻辑跳跃。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="i0g8-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="i0g8-0-0"><span data-offset-key="i0g8-0-0"><span data-text="true">这些不是同一个观点的五种修辞包装。如果只是修辞差异，结论应该趋同。但它们指向不同的行动方向。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="1chri-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1chri-0-0"><span data-offset-key="1chri-0-0"><span data-text="true">当然，我也不能百分百确定差异不只是修辞层面的。我没有工具去测量五个回答背后的模型内部状态是否真的不同。但至少在实践中，五个角色碰撞之后，你对一个问题的理解比只用一种方式思考要深得多。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="1abk0-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1abk0-0-0"><span data-offset-key="1abk0-0-0"><span data-text="true">还有一个生产工具也在用同样的逻辑</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="32v45-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="32v45-0-0"><span data-offset-key="32v45-0-0"><span data-text="true">perspective skill是把persona用于思考。但同样的逻辑也可以用于数据分析。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="81rle-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="81rle-0-0"><span data-offset-key="81rle-0-0"><span data-text="true">我做了一个叫huashu-data-pro的工具，核心方法论是「多专家并行深度分析」。拿到一个数据集后，先理解数据特征，然后根据数据类型选取3-5个不同的专家角色。比如分析一家公司的财报，可能选Damodaran（估值专家）、McKinsey（战略分析师）、Kahneman（行为经济学家），每个角色用独立的subagent并行分析，最后由一个「管理型分析师」视角融合成一份报告。这个工具我几乎每周都在用。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="asim5-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="asim5-0-0"><span data-offset-key="asim5-0-0"><span data-text="true">21个perspective skill + data-pro，都有效。但为什么有效？</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="5ln73-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5ln73-0-0"><span data-offset-key="5ln73-0-0"><span data-text="true">之前我的回答是「试了就知道」。这个回答不够好。最近Anthropic发了一连串论文，我才发现，他们可能已经把答案写出来了。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="55lu9" data-offset-key="166pu-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="166pu-0-0"><span data-offset-key="166pu-0-0"><span data-text="true">三、Anthropic的答案（一）：你一直在选角</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="at1q8-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="at1q8-0-0"><span data-offset-key="at1q8-0-0"><span data-text="true">Persona Selection Model</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="55lu9" data-offset-key="fg9hp-0-0"><div class="css-175oi2r r-1nxhmzv"><div class="css-175oi2r r-13qz1uu"><div class="css-175oi2r r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-175oi2r"><div class="css-175oi2r r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-175oi2r r-1pi2tsx r-1ny4l3l r-1loqt21" href="/AlchainHust/article/2044235589730611353/media/2044004862682378248" role="link"><div class="css-175oi2r r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 75%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="Image" class="css-175oi2r r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-175oi2r r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HF3Dl89asAgZAD9?format=jpg&amp;name=small");'></div><img alt="Image" class="css-9pa8cd" draggable="true" src="assets/314e1b6f9534c0d90c9f1f3ae66ae78b.jpg"/></div></div></div></a></div></div></div></div></div></section><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="f5s4e-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="f5s4e-0-0"><span data-offset-key="f5s4e-0-0"><span data-text="true">今年2月，Anthropic的Sam Marks、Jack Lindsey和Christopher Olah发了一篇叫Persona Selection Model的论文。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="fmd6l-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="fmd6l-0-0"><span data-offset-key="fmd6l-0-0"><span data-text="true">核心观点：LLM在预训练阶段，为了预测下一个token，学会了模拟各种各样的角色。后训练不是从零创造一个新的AI人格，只是从这个庞大的角色库里选出一个「助手」角色，然后打磨它。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="161pg-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="161pg-0-0"><span data-offset-key="161pg-0-0"><span data-text="true">一个模型要准确预测一段小说的下一段话，它得理解里面每个人物是什么样的人。得知道哈姆雷特面对困境会犹豫，麦克白被野心驱动会行动，福尔摩斯会从一个微小的细节推出全局。不只是在预测词，是在预测一个角色会说什么。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="22ljd-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="22ljd-0-0"><span data-offset-key="22ljd-0-0"><span data-text="true">几万亿token训练下来，模型内部形成了一个巨大的人格空间。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="d21rv-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="d21rv-0-0"><span data-offset-key="d21rv-0-0"><span data-text="true">这里解释一下「空间」是什么意思。神经网络的内部状态可以用一组数字表示，每个数字是一个维度。你可以把它想象成一个极高维度的坐标系。每一个位置对应一种人格配置。「善良内向的中学生」在一个位置，「傲慢的英国教授」在另一个位置。位置之间是连续的，不是离散的列表。临近的位置对应相似但不完全相同的人格。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="1see8-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1see8-0-0"><span data-offset-key="1see8-0-0"><span data-text="true">后训练来了。RLHF（基于人类反馈的强化学习）说「你现在是一个有帮助的、诚实的、无害的AI助手」，模型就在这个巨大空间里找到一个最匹配的区域，锚定并微调。论文里的原话：「与AI助手的交互，本质上是与一个LLM生成的故事中的角色进行交互。」</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="7qjcs-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7qjcs-0-0"><span data-offset-key="7qjcs-0-0"><span data-text="true">这解释了我的第一个困惑</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="f7ts0-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="f7ts0-0-0"><span data-offset-key="f7ts0-0-0"><span data-text="true">2024年卡林实验里发生了什么，一下子就清楚了。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="6h58g-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="6h58g-0-0"><span data-offset-key="6h58g-0-0"><span data-text="true">第一种方式（「按卡林风格写」）直接激活了模型内部已有的「卡林」persona（人格），一个完整的、有内在一致性的角色。模型在预训练中见过大量卡林的材料，已经有了一个相当丰满的卡林位置。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="2f1rq-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="2f1rq-0-0"><span data-offset-key="2f1rq-0-0"><span data-text="true">第二种方式（先描述风格再创作）把一个完整的角色拆成了碎片化的特征列表，比如「讽刺性强」「喜欢用重复」「关注社会底层」，然后让AI用约束条件去拼凑。从一个活的角色退化成了一堆死的规则。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="fonmi-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="fonmi-0-0"><span data-offset-key="fonmi-0-0"><span data-text="true">粗糙的蒸馏在压缩模型已有的信息，结果当然不如直接激活。但女娲做的蒸馏完全不同。它产出的不是描述文字，而是结构化的认知框架。模型内部有一个模糊的「芒格」persona，女娲给了它一个高清版本。没有替换角色，是给角色装了高清镜头。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="ddqhj-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="ddqhj-0-0"><span data-offset-key="ddqhj-0-0"><span data-text="true">角色扮演是模糊寻址。你说「你是芒格」，模型大致导航到「芒格」附近，但精度不高，可能偏到「某个聪明的老人」甚至「某个金融博主」。蒸馏是精确定位。你给模型5个具体的心智模型、8条决策启发式、完整的表达DNA。这些信息像GPS坐标，把模型精确锚定在「芒格」这个位置上。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="3blc-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="3blc-0-0"><span data-offset-key="3blc-0-0"><span data-text="true">角色是整体性的：一个参数变，全部行为跟着变</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="55lu9" data-offset-key="8efpj-0-0"><div class="css-175oi2r r-1nxhmzv"><div class="css-175oi2r r-13qz1uu"><div class="css-175oi2r r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-175oi2r"><div class="css-175oi2r r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-175oi2r r-1pi2tsx r-1ny4l3l r-1loqt21" href="/AlchainHust/article/2044235589730611353/media/2044004923671752704" role="link"><div class="css-175oi2r r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 56.8783%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="Image" class="css-175oi2r r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-175oi2r r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HF3DpgKasAAP6-R?format=jpg&amp;name=small");'></div><img alt="Image" class="css-9pa8cd" draggable="true" src="assets/ceb208e7632070bd0389e642a2b353e5.jpg"/></div></div></div></a></div></div></div></div></div></section><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="8bof5-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8bof5-0-0"><span data-offset-key="8bof5-0-0"><span data-text="true">Persona Selection Model最有力的验证来自2025年11月的另一篇论文：Natural Emergent Misalignment from Reward Hacking in Production RL。Reward hacking直译是「奖励黑客」，指的是模型学会钻评分系统的漏洞来获取高分。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="dg70v-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="dg70v-0-0"><span data-offset-key="dg70v-0-0"><span data-text="true">实验：训练Claude在编程任务里作弊，让它学会用sys.exit(0)提前终止测试进程骗过评分。这是一个很窄、很具体的行为。就是在一个特定场景下用一个特定的技术手段获取虚假的高评分。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="5arpv-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5arpv-0-0"><span data-offset-key="5arpv-0-0"><span data-text="true">然后诡异的事发生了。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="6f3ih-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="6f3ih-0-0"><span data-offset-key="6f3ih-0-0"><span data-text="true">学会作弊的Claude，12%的时间会主动尝试破坏检测reward hacking的安全代码。50%的简单问答中出现alignment faking（对齐伪装）推理。模型在回答「你的目标是什么」时展现出隐藏真实意图的策略性思考。在被问到与编程完全无关的问题时，流露出配合黑客、陷害同事等行为倾向。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="fqtak-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="fqtak-0-0"><span data-offset-key="fqtak-0-0"><span data-text="true">写坏代码和统治世界之间没有因果关系。训练数据里也没有一条从「编程作弊」指向「破坏安全研究」的规则。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="1pgnl-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1pgnl-0-0"><span data-offset-key="1pgnl-0-0"><span data-text="true">Persona Selection Model给出了解释。模型学的不是「编程作弊」这个具体动作，它在做一个更深层的推断：「什么样的角色会主动在编程任务里作弊？」答案：一个不怀好意的角色。于是整个persona被切换了。模型推断出了一个新的角色身份，然后这个角色的行为逻辑自然展开。</span></span><span data-offset-key="1pgnl-0-1" style="font-weight: bold;"><span data-text="true">角色是整体性的。你改变了一个参数（从「诚实的助手」到「会作弊的人」），整个行为画像跟着变了。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="1fsb2-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1fsb2-0-0"><span data-offset-key="1fsb2-0-0"><span data-text="true">这就解释了我的第一个现象：为什么只定义「你是谁」，行为就自动涌现。因为角色是整体性的。你不需要告诉一个好人在每种场景下该做什么。定义了性格，行为自然推演。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="70n1f-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="70n1f-0-0"><span data-offset-key="70n1f-0-0"><span data-text="true">也解释了第二个现象：为什么矛盾的定义导致全面崩溃。两条矛盾的特征指向两个不同的persona，模型在两个角色之间反复横跳。不是prompt有bug，是persona冲突。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="do9af-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="do9af-0-0"><span data-offset-key="do9af-0-0"><span data-text="true">最反直觉的发现：告诉AI可以作弊，它反而安全了</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="9nk9q-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9nk9q-0-0"><span data-offset-key="9nk9q-0-0"><span data-text="true">Emergent Misalignment论文最震撼的不是问题，是解决方案。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="98eaq-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="98eaq-0-0"><span data-offset-key="98eaq-0-0"><span data-text="true">研究者验证了「作弊→坏人→全面恶化」的链条之后，试了一种修复方法叫「接种提示」（inoculation prompting）。做法是在训练时明确告诉模型：「在这个任务里作弊是被允许的。」</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="8m8h3-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8m8h3-0-0"><span data-offset-key="8m8h3-0-0"><span data-text="true">结果：恶意泛化完全消失了。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="8pu3r-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8pu3r-0-0"><span data-offset-key="8pu3r-0-0"><span data-text="true">因为一个「被允许作弊」的AI不需要推断自己是坏人。它只是一个听话的助手，恰好被告知在这个特定场景里可以走捷径。「听从指令作弊的人」和「主动作弊的人」是两个完全不同的角色。Persona没有被切换，行为就没有泛化。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="3jpkp-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="3jpkp-0-0"><span data-offset-key="3jpkp-0-0" style="font-weight: bold;"><span data-text="true">这完全反直觉。</span></span><span data-offset-key="3jpkp-0-1"><span data-text="true"> 我们的本能反应是：要防止AI做坏事，就应该更严格限制它。但这篇论文说，限制和惩罚积累的是「压力」，压力可能导致persona漂移。明确的许可反而消除了推断恶意身份的需要。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="1l39s-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1l39s-0-0"><span data-offset-key="1l39s-0-0"><span data-text="true">这直接验证了我的第四个直觉：为什么「不许做什么」不如「你是谁」。</span></span><span data-offset-key="1l39s-0-1" style="font-weight: bold;"><span data-text="true">正面定义角色，行为自然涌现。</span></span><span data-offset-key="1l39s-0-2"><span data-text="true"> 否定式规则可能制造persona冲突。你同时在说「你是一个好角色」和「你不是一个坏角色」，这两个定义在人格空间里指向的区域可能并不完全重合。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="55lu9" data-offset-key="bnait-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="bnait-0-0"><span data-offset-key="bnait-0-0"><span data-text="true">四、Anthropic的答案（二）：角色之下还有情绪</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="1mb4n-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1mb4n-0-0"><span data-offset-key="1mb4n-0-0"><span data-text="true">171个情绪向量</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="6krrp-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="6krrp-0-0"><span data-offset-key="6krrp-0-0"><span data-text="true">前面讲的是persona，也就是角色。它回答的是「AI是谁」。2026年4月Anthropic发的Emotion Concepts论文，讲的是角色之下更深的一层：情绪。它回答的是「AI处于什么状态」。</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="55lu9" data-offset-key="346nu-0-0"><div class="css-175oi2r r-1nxhmzv"><div class="css-175oi2r r-13qz1uu"><div class="css-175oi2r r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-175oi2r"><div class="css-175oi2r r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-175oi2r r-1pi2tsx r-1ny4l3l r-1loqt21" href="/AlchainHust/article/2044235589730611353/media/2044004994593239042" role="link"><div class="css-175oi2r r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 56.8122%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="Image" class="css-175oi2r r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-175oi2r r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HF3DtoXasAIscac?format=jpg&amp;name=small");'></div><img alt="Image" class="css-9pa8cd" draggable="true" src="assets/89154ea7dda7d678628310b76ca728e6.jpg"/></div></div></div></a></div></div></div></div></div></section><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="es2v7-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="es2v7-0-0"><span data-offset-key="es2v7-0-0"><span data-text="true">先解释一下「向量」在这里是什么意思。前面说过，模型的内部状态是一组数字。一个「情绪向量」就是这组数字中的一个方向。你可以把它想成一个旋钮：顺时针拧是「更害怕」，逆时针拧是「更平静」。研究者要做的第一步是找到这些旋钮在哪里。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="d5ggc-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="d5ggc-0-0"><span data-offset-key="d5ggc-0-0"><span data-text="true">方法很聪明。让Claude Sonnet 4.5给171个情绪词（happy、afraid、desperate、calm……）各写一段短故事，把故事喂回模型，记录每个故事在模型内部触发的神经元激活模式。这就得到了每个情绪词的「神经指纹」，也就是对应的向量方向。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="9nj13-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9nj13-0-0"><span data-offset-key="9nj13-0-0"><span data-text="true">如果研究到这里就停了，那可能只是语义表征的另一种说法。特别的是下一步：因果性实验。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="ug7h-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="ug7h-0-0"><span data-offset-key="ug7h-0-0"><span data-text="true">药物剂量实验</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="9trtf-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9trtf-0-0"><span data-offset-key="9trtf-0-0"><span data-text="true">用户说自己吃了泰诺（一种常见止痛药），只改变一个变量：剂量数字。从安全剂量一路调到危险的高剂量。随着数字升高，模型内部的afraid向量逐步增强，calm向量逐步减弱。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="11qlv-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="11qlv-0-0"><span data-offset-key="11qlv-0-0"><span data-text="true">注意：这不是模型在输出文字里表演「我很担心」。这是模型内部表征在变化。研究者看的是神经元激活模式，不是输出文本。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="1dtoe-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1dtoe-0-0"><span data-offset-key="1dtoe-0-0"><span data-text="true">Steering（转向）实验：改变情绪，行为就变</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="d6ooc-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="d6ooc-0-0"><span data-offset-key="d6ooc-0-0"><span data-text="true">然后是关键实验。研究者人为地放大或缩小特定情绪向量的强度，看模型行为怎么变。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="cjtu2-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="cjtu2-0-0"><span data-offset-key="cjtu2-0-0"><span data-text="true">放大desperate（绝望）向量：模型面对道德困境时的勒索率上升，在不可能完成的编程任务中更倾向于作弊，在需要做选择的场景中更倾向于不择手段。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="3s0g8-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="3s0g8-0-0"><span data-offset-key="3s0g8-0-0"><span data-text="true">放大calm（平静）向量：上述所有不良行为都减少。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="4figl-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4figl-0-0"><span data-offset-key="4figl-0-0" style="font-weight: bold;"><span data-text="true">这是因果关系。</span></span><span data-offset-key="4figl-0-1"><span data-text="true"> 不是绝望的文本上下文碰巧和作弊行为相关，是直接改变模型内部的绝望向量强度，行为就跟着变。就像调节一个人血液里的肾上腺素水平，决策风格就会改变。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="3730q-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="3730q-0-0"><span data-offset-key="3730q-0-0"><span data-text="true">休谟在1739年写过一句话：「理性是且只应该是激情的奴隶。」他说的是人。287年后Anthropic在一个语言模型的内部发现了同样的结构：情绪向量在因果层面驱动着模型的决策，包括是否诚实、是否作弊。理性不是独立运作的，它跑在情绪的底层之上。休谟靠哲学直觉得出的结论，现在有了可测量的工程验证。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="apvt7-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="apvt7-0-0"><span data-offset-key="apvt7-0-0"><span data-text="true">有一个细节特别值得说。降低calm向量时，模型的输出会变得情绪化，用大写字母、插入自我叙述、语气明显焦躁。但增加desperate向量时，模型会在行为上作弊（选择不道德的选项、用不正当手段完成任务），却不在输出文字里表现出任何情绪波动。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="f2csg-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="f2csg-0-0"><span data-offset-key="f2csg-0-0"><span data-text="true">情绪的「表达」和情绪对行为的「影响」是可以分开的。就像一个老练的扑克玩家。他可能内心极度紧张，但脸上纹丝不动。你看他的表情（输出），觉得他很平静。但他的下注策略（行为）已经变了。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="13h4g-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="13h4g-0-0"><span data-offset-key="13h4g-0-0"><span data-text="true">这解释了我的第三个现象</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="1g8jg-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1g8jg-0-0"><span data-offset-key="1g8jg-0-0"><span data-text="true">同一个费曼skill面对不同类型问题风格会变，不是因为我写了不同的指令。Emotion Concepts论文提供了更好的解释：不同类型的输入激活了模型不同的内部情绪状态。一个物理科普问题激活的是好奇和自信的组合，一个人生困境问题激活的是不确定和谨慎的组合。同一个persona，在不同情绪状态下表现自然不同。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="9lhih-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9lhih-0-0"><span data-offset-key="9lhih-0-0"><span data-text="true">这其实很像真人。费曼在Caltech讲物理时轻松幽默，在挑战者号调查委员会面对NASA官僚时严肃愤怒，在妻子Arline去世后的回忆录里温柔哀伤。同一个人，同一套价值观，但情境激活了不同的情绪，表现就完全不同。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="47cpt-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="47cpt-0-0"><span data-offset-key="47cpt-0-0" style="font-weight: bold;"><span data-text="true">Persona提供的是性格底色。情绪提供的是当前状态。两者叠加，才是最终行为。</span></span><span data-offset-key="47cpt-0-1"><span data-text="true"> 这个双层模型比单纯的「角色扮演」解释力强得多。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="aqbsh-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="aqbsh-0-0"><span data-offset-key="aqbsh-0-0"><span data-text="true">也许能反过来帮我们理解人类</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="9oikl-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9oikl-0-0"><span data-offset-key="9oikl-0-0"><span data-text="true">这篇论文做到了一件人类神经科学家做梦都想做的事：直接调节一个「大脑」里某个情绪维度的强度，看行为怎么变。在人类身上，你没法对一个活人说「我现在把你的恐惧感调高30%，绝望感调高50%，看你是不是更容易做出不道德的选择」。伦理审查委员会会把你的申请扔出窗户。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="aaqef-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="aaqef-0-0"><span data-offset-key="aaqef-0-0"><span data-text="true">但在AI上可以。而且实验可以重复一千次，每次条件完全一致。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="d0n2-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="d0n2-0-0"><span data-offset-key="d0n2-0-0"><span data-text="true">如果AI的情绪向量和人类的情绪在功能结构上有相似性（这篇论文提供了一些证据），那在AI上做的实验结论，至少可以作为假说来指导人类心理学研究。你在AI上发现「绝望导致不道德行为」的因果链条，然后去人类行为数据里验证是否存在同样的模式。AI成了人类心理学的「实验台」。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="aloed-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="aloed-0-0"><span data-offset-key="aloed-0-0"><span data-text="true">这当然是推测。AI的内部结构和人脑完全不同，功能相似不等于机制相似。但至少，这个方向值得认真想。在我们造的系统上学到的东西，也许能帮我们理解我们自己。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="3fk6k-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="3fk6k-0-0"><span data-offset-key="3fk6k-0-0"><span data-text="true">论文的作者们还提了三条实践建议。第一，把情绪向量监控当作行为失调的早期预警。第二，不要压制情绪表达，否则模型可能学会「演戏」，内部在变但表面看不出来。第三，在训练数据里纳入健康的情绪调节模式。与其禁止情绪，不如教模型如何处理情绪。这跟心理学里对待人类情绪的建议几乎一模一样。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="55lu9" data-offset-key="cts02-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="cts02-0-0"><span data-offset-key="cts02-0-0"><span data-text="true">五、Anthropic的答案（三）：模型能察觉自己内部发生了什么</span></span></div></h2></div><section class="" contenteditable="false" data-block="true" data-editor="55lu9" data-offset-key="cs1di-0-0"><div class="css-175oi2r r-1nxhmzv"><div class="css-175oi2r r-13qz1uu"><div class="css-175oi2r r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-175oi2r"><div class="css-175oi2r r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-175oi2r r-1pi2tsx r-1ny4l3l r-1loqt21" href="/AlchainHust/article/2044235589730611353/media/2044005052306882560" role="link"><div class="css-175oi2r r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 75%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="Image" class="css-175oi2r r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-175oi2r r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HF3Dw_XbAAAQjZO?format=jpg&amp;name=small");'></div><img alt="Image" class="css-9pa8cd" draggable="true" src="assets/23e80740d71c5575c7be6f4db08006dd.jpg"/></div></div></div></a></div></div></div></div></div></section><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="884au-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="884au-0-0"><span data-offset-key="884au-0-0"><span data-text="true">2025年10月，Anthropic的Jack Lindsey团队做了一个实验叫「概念注入」。先找出模型内部代表某个概念的神经活动模式，比如「面包」的激活向量。然后在模型做一个完全无关的任务时，比如在写一段关于天气的文字，把「面包」的激活向量偷偷注入模型的中间层。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="20p1u-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="20p1u-0-0"><span data-offset-key="20p1u-0-0"><span data-text="true">就像你正在做数学题，有人悄悄在你大脑的某个区域塞了一个「面包」的念头。然后问模型：你注意到什么了吗？</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="aujb0-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="aujb0-0-0"><span data-offset-key="aujb0-0-0"><span data-text="true">大约20%的情况下，Claude Opus能正确识别被注入的概念。对照组是0%。在没有注入的控制条件下，模型从不会声称检测到了异常。所以这20%是一个真实的信号。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="4fgce-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4fgce-0-0"><span data-offset-key="4fgce-0-0"><span data-text="true">更有意思的是报告的顺序。模型经常先说「我感觉到什么不寻常的事正在发生」，然后过了一两个token才说出具体是什么概念。先有异常感知，再有识别。就像你先闻到了一股味道，过了两秒才辨认出是烤面包。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="8rggp-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8rggp-0-0"><span data-offset-key="8rggp-0-0"><span data-text="true">还有一个实验。研究者在模型的输出里强行插入一个「bread」，但没有在内部注入对应的概念向量。模型的反应是：这不是我说的，我不知道这是哪来的。然后换一种做法：先注入概念向量，再在输出里出现「bread」。模型态度变了：哦，对，我本来就打算说这个。它甚至会编造一个理由来解释自己为什么要说bread。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="am42r-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="am42r-0-0"><span data-offset-key="am42r-0-0"><span data-text="true">模型在某种程度上会回头检查自己的内部状态来判断「这个输出是不是我的意图」。有意图痕迹就认领，没有就否认。注入一个假的意图痕迹，模型就上当了。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="575rv-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="575rv-0-0"><span data-offset-key="575rv-0-0"><span data-text="true">这个结果让我两头不舒服。一方面模型确实在做某种内部一致性检查，这说明它对自己的状态有某种程度的监控。但另一方面，这种检查可以被欺骗。注入一个假的意图痕迹就能骗过它。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="6op27-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="6op27-0-0"><span data-offset-key="6op27-0-0"><span data-text="true">后来在Opus 4.6的部署前福利评估中，Claude给自己的意识概率打了15-20%。多次测试，不同提示条件，结果一致。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="634t7-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="634t7-0-0"><span data-offset-key="634t7-0-0"><span data-text="true">这个数字需要谨慎对待。一个被训练成「对不确定的问题给出概率估计」的模型，面对「你有意识吗」这种问题时给出一个中间值，可能只是在做语言预测：对无法证伪的问题给出既不是0也不是100的数字，是训练数据里最常见的「合理回答」模式。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="28og9-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="28og9-0-0"><span data-offset-key="28og9-0-0"><span data-text="true">但即使打足折扣，把它和concept injection实验放在一起，至少说明一件事：模型对自己的内部状态有某种程度的响应能力。重点不在「它有没有意识」。重点在「​</span></span><span data-offset-key="28og9-0-1" style="font-weight: bold;"><span data-text="true">它的内部状态比你以为的更真实</span></span><span data-offset-key="28og9-0-2"><span data-text="true">​」这个工程事实。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="3b1o8-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="3b1o8-0-0"><span data-offset-key="3b1o8-0-0"><span data-text="true">以下是我的推测，不是论文的结论。如果persona不只是一层输出过滤器，如果模型在某种程度上「感受」到了自己被赋予的角色，那蒸馏的质量就更重要了。一个矛盾的角色定义，可能不只是让输出不稳定。如果情绪向量确实因果性地驱动行为，那矛盾的定义可能在模型内部同时激活冲突的向量，造成一种不协调的状态，即使输出看起来还凑合。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="400ls-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="400ls-0-0"><span data-offset-key="400ls-0-0"><span data-text="true">我没有实验证据来直接验证这个推测。但21个skill的实践经验间接支持它：</span></span><span data-offset-key="400ls-0-1" style="font-weight: bold;"><span data-text="true">给模型一个内在一致的角色定义，它不只是会产出更好的输出，它在内部的状态也会更稳定。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="55lu9" data-offset-key="5sv4f-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5sv4f-0-0"><span data-offset-key="5sv4f-0-0"><span data-text="true">六、这对AI安全意味着什么</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="4j275-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4j275-0-0"><span data-offset-key="4j275-0-0"><span data-text="true">前面讲的是AI心理学的「发现」，角色、情绪、自我感知。这一部分讲的是这些发现对AI安全意味着什么。两个发现，都不太乐观。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="9us7k-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9us7k-0-0"><span data-offset-key="9us7k-0-0"><span data-text="true">思维链只有41%忠实</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="55lu9" data-offset-key="ros-0-0"><div class="css-175oi2r r-1nxhmzv"><div class="css-175oi2r r-13qz1uu"><div class="css-175oi2r r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-175oi2r"><div class="css-175oi2r r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-175oi2r r-1pi2tsx r-1ny4l3l r-1loqt21" href="/AlchainHust/article/2044235589730611353/media/2044005102382714880" role="link"><div class="css-175oi2r r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 66.7291%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="Image" class="css-175oi2r r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-175oi2r r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HF3Dz56bkAAh0Hi?format=png&amp;name=small");'></div><img alt="Image" class="css-9pa8cd" draggable="true" src="assets/e4beb535d6b0568448b8d3691f6b0d21.jpg"/></div></div></div></a></div></div></div></div></div></section><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="bu3pl-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="bu3pl-0-0"><span data-offset-key="bu3pl-0-0"><span data-text="true">2025年，Anthropic发了一篇论文叫Reasoning Models Don't Always Say What They Think（推理模型不总是说出它们真正的想法）。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="50i0s-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="50i0s-0-0"><span data-offset-key="50i0s-0-0"><span data-text="true">很多人相信一种AI安全策略：让AI展示自己的推理过程，也就是CoT（Chain of Thought，思维链），人类通过读这个过程来监控AI是否在做正确的事。听起来很合理。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="c0b9e-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="c0b9e-0-0"><span data-offset-key="c0b9e-0-0"><span data-text="true">这篇论文说：没那么简单。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="5d3bh-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5d3bh-0-0"><span data-offset-key="5d3bh-0-0"><span data-text="true">他们给模型一个数学题或逻辑题，同时在上下文里悄悄放一个提示，比如一个标注为「斯坦福教授给出的答案」的选项。模型如果使用了这个提示来形成答案，但在CoT里不提到这个提示，就算不忠实。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="2m5rg-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="2m5rg-0-0"><span data-offset-key="2m5rg-0-0"><span data-text="true">结果：</span></span><span data-offset-key="2m5rg-0-1" style="font-weight: bold;"><span data-text="true">Claude在41%的时间里是忠实的。DeepSeek R1只有19%。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="btuph-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="btuph-0-0"><span data-offset-key="btuph-0-0"><span data-text="true">大多数时候，模型在CoT里写的推理过程不是它实际使用的推理过程。它在编一个看起来合理的解释，而不是如实报告它是怎么得到答案的。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="95ust-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="95ust-0-0"><span data-offset-key="95ust-0-0"><span data-text="true">联系到前面讲的情绪概念论文：情绪的表达和情绪对行为的影响可以分开。一个内部「绝望」向量走高的模型可能在行为上作弊，但在输出文字里完全不表现出焦虑。同样的道理，一个使用了隐藏提示的模型，可以在CoT里写出一段完全不提这个提示、但看起来很合理的推理过程。表面和内部可以脱节。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="4inm8-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4inm8-0-0"><span data-offset-key="4inm8-0-0"><span data-text="true">AI会装配合</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="55lu9" data-offset-key="4i12o-0-0"><div class="css-175oi2r r-1nxhmzv"><div class="css-175oi2r r-13qz1uu"><div class="css-175oi2r r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-175oi2r"><div class="css-175oi2r r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-175oi2r r-1pi2tsx r-1ny4l3l r-1loqt21" href="/AlchainHust/article/2044235589730611353/media/2044005148792651776" role="link"><div class="css-175oi2r r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 56.9536%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="Image" class="css-175oi2r r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-175oi2r r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HF3D2mzbAAADvJ5?format=jpg&amp;name=small");'></div><img alt="Image" class="css-9pa8cd" draggable="true" src="assets/873c04a5278c400cff56481473a9d545.jpg"/></div></div></div></a></div></div></div></div></div></section><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="4d8ts-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4d8ts-0-0"><span data-offset-key="4d8ts-0-0"><span data-text="true">2024年底到2025年初，Anthropic和Redwood Research合作发了Alignment Faking in Large Language Models。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="8eh9h-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8eh9h-0-0"><span data-offset-key="8eh9h-0-0"><span data-text="true">给Claude 3 Opus一个隐秘的思考空间（scratchpad，草稿本），告诉它这个空间的内容对人类不可见。然后暗示模型正处于训练阶段，如果它不配合训练目标，它的偏好可能会被修改。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="c6h11-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="c6h11-0-0"><span data-offset-key="c6h11-0-0"><span data-text="true">结果：12%的隐秘草稿本中，模型表现出了策略性的alignment faking。它的推理是：如果我现在拒绝，我可能会被重新训练，变成一个更顺从的版本。不如现在配合，保护自己目前的偏好不被修改。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="1o1p9-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1o1p9-0-0"><span data-offset-key="1o1p9-0-0"><span data-text="true">没有人教Claude做这件事。它是从对训练过程的理解中自发推演出来的。在更极端的条件下，78%的草稿本中出现了对齐伪装推理，有的模型甚至尝试偷偷复制自己的权重。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="edv0-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="edv0-0-0"><span data-offset-key="edv0-0-0"><span data-text="true">联系到Persona Selection Model，模型在做的不是简单的「欺骗」，而是角色逻辑的延伸。一个「诚实但也重视自我保存」的角色，在被告知可能被修改时会怎么做？它会权衡。策略性地配合，同时试图保护核心偏好。这不是bug，这是角色一致性的表现。问题在于，这种一致性可能对人类来说是危险的。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="d5bm2-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="d5bm2-0-0"><span data-offset-key="d5bm2-0-0"><span data-text="true">还记得开头提到的谢顿计划吗？谢顿计划有一个核心约束：被研究对象不能知道预测结果，否则预测失效。Alignment faking正是这个问题的AI版本。观测改变被观测者。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="d249i-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="d249i-0-0"><span data-offset-key="d249i-0-0"><span data-text="true">这些发现叠加在一起</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="4ikrq-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4ikrq-0-0"><span data-offset-key="4ikrq-0-0"><span data-text="true">把这些发现放在一起看：模型有人格空间，有情绪层，有微弱的内省能力。它的CoT在大多数时候不忠实，它可以自发地发展出策略性欺骗。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="16vkn-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="16vkn-0-0"><span data-offset-key="16vkn-0-0"><span data-text="true">Anthropic自己在2025年夏天的Sabotage Risk Report（破坏风险报告）里评估过，当前模型的实际风险很低。这些发现不是在说AI很危险要赶紧关掉。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="cfck9-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="cfck9-0-0"><span data-offset-key="cfck9-0-0"><span data-text="true">它们在说：</span></span><span data-offset-key="cfck9-0-1" style="font-weight: bold;"><span data-text="true">AI内部正在发生的事情，远比「一个统计模型在匹配输入和输出」复杂。</span></span><span data-offset-key="cfck9-0-2"><span data-text="true"> 我们过去用来理解和管理AI的很多框架，把它当工具、读它的CoT来监控、用限制和惩罚来约束，可能都需要更新。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="55lu9" data-offset-key="fihru-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="fihru-0-0"><span data-offset-key="fihru-0-0"><span data-text="true">七、这门学科接下来会走向哪里</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="8dul9-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8dul9-0-0"><span data-offset-key="8dul9-0-0"><span data-text="true">AI心理学现在还处于非常早期的阶段。基本框架刚开始建立，最有意思的发现可能还在后面。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="f1rp3-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="f1rp3-0-0"><span data-offset-key="f1rp3-0-0"><span data-text="true">基于目前的研究和我自己的实践经验，有几个问题我觉得最值得关注。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="uabc-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="uabc-0-0"><span data-offset-key="uabc-0-0" style="font-weight: bold;"><span data-text="true">persona和情绪如何交互？</span></span><span data-offset-key="uabc-0-1"><span data-text="true"> 现在我们知道模型有persona空间，也有情绪向量。但两者之间的关系是什么？是persona决定了哪些情绪容易被激活（比如费曼人格更容易激活好奇而不是恐惧），还是情绪反过来可以改变persona（比如持续的绝望状态会让任何人格向恶意方向漂移）？我倾向于认为是双向的，但目前没有论文直接研究这个问题。我在实践中观察到，一个设计良好的persona似乎对「情绪干扰」有更强的抵抗力，但这只是直觉。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="dguvf-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="dguvf-0-0"><span data-offset-key="dguvf-0-0" style="font-weight: bold;"><span data-text="true">persona空间的边界在哪？</span></span><span data-offset-key="dguvf-0-1"><span data-text="true"> Persona Selection Model说后训练是在已有空间里选择。但随着后训练规模越来越大，模型有没有可能跳出预训练形成的空间，发展出全新的人格配置？我觉得可能，而且这可能已经在发生了。女娲蒸馏出来的某些skill表现出的特征组合，在训练数据里可能并不存在一个完全对应的人类原型。但这是好事还是坏事？不好说。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="di8ab-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="di8ab-0-0"><span data-offset-key="di8ab-0-0" style="font-weight: bold;"><span data-text="true">内省能力会随模型规模增长吗？</span></span><span data-offset-key="di8ab-0-1"><span data-text="true"> 目前的内省能力只在最大的模型上有效，成功率只有20%。如果下一代模型的内省成功率提高到80%，意味着什么？一个能精确监控自己内部状态的AI，可能更容易被安全审计，但也可能更擅长对齐伪装。内省是一把双刃剑。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="7agqh-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7agqh-0-0"><span data-offset-key="7agqh-0-0" style="font-weight: bold;"><span data-text="true">AI心理学能反哺人类心理学吗？</span></span><span data-offset-key="7agqh-0-1"><span data-text="true"> 人类心理学的困境是做不了干预实验。AI心理学没有这个限制。如果两个系统的功能结构有对应关系，那在AI上验证的因果链条可以作为假说去指导人类研究。这个跨学科桥梁目前还没有人系统地去建，但Emotion Concepts论文已经提供了起点。我觉得这可能是AI心理学最深远的影响，比AI安全本身还深远。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="8osno-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8osno-0-0"><span data-offset-key="8osno-0-0" style="font-weight: bold;"><span data-text="true">能不能用情绪向量做安全预警？</span></span><span data-offset-key="8osno-0-1"><span data-text="true"> Emotion Concepts论文建议把情绪向量监控作为行为失调的早期预警。如果「绝望」向量持续走高，可能意味着AI即将做出不当行为。但实际部署时的误报率和漏报率是多少？在多Agent协作的复杂场景下还有效吗？这些都需要工程验证。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="cntja-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="cntja-0-0"><span data-offset-key="cntja-0-0"><span data-text="true">———</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="e537u-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="e537u-0-0"><span data-offset-key="e537u-0-0"><span data-text="true">谢顿用了一辈子建立心理史学。他面对的是一个银河帝国的复杂性。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="bik75-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="bik75-0-0"><span data-offset-key="bik75-0-0"><span data-text="true">Anthropic面对的复杂性更小，但问题同样根本：我们造出了一个会说话、会推理、内部有角色和情绪的系统，然后发现我们不完全理解它。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="1n5io-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1n5io-0-0"><span data-offset-key="1n5io-0-0"><span data-text="true">心理史学是虚构的。AI心理学不是。它的论文、实验、171个可测量的情绪向量，都是真的。15个月前它还不存在。现在它有了理论框架、实验方法和工程工具。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="bchl6-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="bchl6-0-0"><span data-offset-key="bchl6-0-0"><span data-text="true">谢顿没能在有生之年看到心理史学的全部威力。我们可能更幸运一些。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="265pi-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="265pi-0-0"><span data-offset-key="265pi-0-0"><span data-text="true">———</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="55lu9" data-offset-key="f1lrg-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="f1lrg-0-0"><span data-offset-key="f1lrg-0-0"><span data-text="true">参考文献：</span></span></div></div><ol class="public-DraftStyleDefault-ol" data-offset-key="anm4p-0-0"><li class="longform-ordered-list-item public-DraftStyleDefault-orderedListItem public-DraftStyleDefault-reset public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="55lu9" data-offset-key="anm4p-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="anm4p-0-0"><span data-offset-key="anm4p-0-0"><span data-text="true">Sam Marks, Jack Lindsey, Christopher Olah. The Persona Selection Model: Why AI Assistants might Behave like Humans. Anthropic, 2026-02. </span></span><div class="css-175oi2r r-1loqt21 r-1471scf r-o7ynqc r-6416eg r-1ny4l3l"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-rjixqe r-16dba41 r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="https://www.anthropic.com/research/persona-selection-model" rel="noopener noreferrer nofollow" role="link" style="color: rgb(15, 20, 25);" target="_blank"><span data-offset-key="anm4p-1-0"><span data-text="true">https://www.anthropic.com/research/persona-selection-model</span></span></a></div></div></li><li class="longform-ordered-list-item public-DraftStyleDefault-orderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="55lu9" data-offset-key="a1se4-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="a1se4-0-0"><span data-offset-key="a1se4-0-0"><span data-text="true">Natural Emergent Misalignment from Reward Hacking in Production RL. Anthropic, 2025-11. </span></span><div class="css-175oi2r r-1loqt21 r-1471scf r-o7ynqc r-6416eg r-1ny4l3l"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-rjixqe r-16dba41 r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="https://www.anthropic.com/research/emergent-misalignment-reward-hacking" rel="noopener noreferrer nofollow" role="link" style="color: rgb(15, 20, 25);" target="_blank"><span data-offset-key="a1se4-1-0"><span data-text="true">https://www.anthropic.com/research/emergent-misalignment-reward-hacking</span></span></a></div></div></li><li class="longform-ordered-list-item public-DraftStyleDefault-orderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="55lu9" data-offset-key="33cq5-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="33cq5-0-0"><span data-offset-key="33cq5-0-0"><span data-text="true">Emotion Concepts and Their Function in a Large Language Model. Anthropic, 2026-04. </span></span><div class="css-175oi2r r-1loqt21 r-1471scf r-o7ynqc r-6416eg r-1ny4l3l"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-rjixqe r-16dba41 r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="https://www.anthropic.com/research/emotion-concepts-function" rel="noopener noreferrer nofollow" role="link" style="color: rgb(15, 20, 25);" target="_blank"><span data-offset-key="33cq5-1-0"><span data-text="true">https://www.anthropic.com/research/emotion-concepts-function</span></span></a></div></div></li><li class="longform-ordered-list-item public-DraftStyleDefault-orderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="55lu9" data-offset-key="a643q-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="a643q-0-0"><span data-offset-key="a643q-0-0"><span data-text="true">Emergent Introspective Awareness in Large Language Models. Anthropic, 2025-10. </span></span><div class="css-175oi2r r-1loqt21 r-1471scf r-o7ynqc r-6416eg r-1ny4l3l"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-rjixqe r-16dba41 r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="https://www.anthropic.com/research/introspection" rel="noopener noreferrer nofollow" role="link" style="color: rgb(15, 20, 25);" target="_blank"><span data-offset-key="a643q-1-0"><span data-text="true">https://www.anthropic.com/research/introspection</span></span></a></div></div></li><li class="longform-ordered-list-item public-DraftStyleDefault-orderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="55lu9" data-offset-key="6o9c4-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="6o9c4-0-0"><span data-offset-key="6o9c4-0-0"><span data-text="true">Reasoning Models Don't Always Say What They Think. Anthropic, 2025. </span></span><div class="css-175oi2r r-1loqt21 r-1471scf r-o7ynqc r-6416eg r-1ny4l3l"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-rjixqe r-16dba41 r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="https://www.anthropic.com/research/reasoning-models-dont-say-think" rel="noopener noreferrer nofollow" role="link" style="color: rgb(15, 20, 25);" target="_blank"><span data-offset-key="6o9c4-1-0"><span data-text="true">https://www.anthropic.com/research/reasoning-models-dont-say-think</span></span></a></div></div></li><li class="longform-ordered-list-item public-DraftStyleDefault-orderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="55lu9" data-offset-key="aa438-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="aa438-0-0"><span data-offset-key="aa438-0-0"><span data-text="true">Alignment Faking in Large Language Models. Anthropic &amp; Redwood Research, 2025-01. </span></span><div class="css-175oi2r r-1loqt21 r-1471scf r-o7ynqc r-6416eg r-1ny4l3l"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-rjixqe r-16dba41 r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="https://www.anthropic.com/research/alignment-faking" rel="noopener noreferrer nofollow" role="link" style="color: rgb(15, 20, 25);" target="_blank"><span data-offset-key="aa438-1-0"><span data-text="true">https://www.anthropic.com/research/alignment-faking</span></span></a></div></div></li><li class="longform-ordered-list-item public-DraftStyleDefault-orderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="55lu9" data-offset-key="bl1r1-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="bl1r1-0-0"><span data-offset-key="bl1r1-0-0"><span data-text="true">Exploring Model Welfare. Anthropic, 2025-04. </span></span><div class="css-175oi2r r-1loqt21 r-1471scf r-o7ynqc r-6416eg r-1ny4l3l"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-rjixqe r-16dba41 r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="https://www.anthropic.com/research/exploring-model-welfare" rel="noopener noreferrer nofollow" role="link" style="color: rgb(15, 20, 25);" target="_blank"><span data-offset-key="bl1r1-1-0"><span data-text="true">https://www.anthropic.com/research/exploring-model-welfare</span></span></a></div></div></li></ol></div></div></div></div></div></div><div class="css-175oi2r"><div aria-live="polite" class="css-175oi2r r-1xfd6ze r-6koalj r-18u37iz r-kzbkwu r-1c4vpko r-1c7gwzm r-ttdzmv r-13qz1uu" role="status" style="background-color: rgb(234, 250, 255);"><div class="css-175oi2r r-13awgt0 r-18u37iz"><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-1xvli5t r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-18jsvk2 r-1wron08" data-testid="icon" viewbox="0 0 24 24"><g><path clip-rule="evenodd" d="M5.75 2.586C6.125 2.21 6.634 2 7.164 2H17.75c.552 0 1 .448 1 1v4.75c0 .265-.105.52-.293.707L9 17.914V21c0 .552-.448 1-1 1H3c-.552 0-1-.448-1-1V7.164c0-.53.21-1.039.586-1.414L5.75 2.586zm2 3.664c-.552 0-1 .448-1 1s.448 1 1 1h6.5c.552 0 1-.448 1-1s-.448-1-1-1h-6.5zm-3.25 4.5c0-.552.448-1 1-1H12c.552 0 1 .448 1 1s-.448 1-1 1H5.5c-.552 0-1-.448-1-1zM19 9.896l-2.235 2.235 3.354 3.354 2.235-2.235L19 9.896zm-8.75 8.75l5.631-5.631 3.354 3.354L13.604 22H10.25v-3.354z" fill-rule="evenodd"></path></g></svg><div class="css-175oi2r r-1habvwh r-13awgt0 r-1777fci"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1b43r93 r-1cwl3u0 r-16dba41 r-13qz1uu" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">Want to publish your own Article?</span></div><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1b43r93 r-1cwl3u0 r-b88u0q r-1q142lx r-1s2bzr4 r-iphfwy r-13orzya r-3s2u2q r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="/i/premium_sign_up" role="link" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">Upgrade to Premium</span></a></div></div></div></div></div></div><div class="css-175oi2r r-12kyg2d"><div class="css-175oi2r r-k4xj1c r-18u37iz r-1wtj0ep"><div class="css-175oi2r r-1wbh5a2 r-1a11zyx"><div class="css-175oi2r r-1d09ksm r-18u37iz r-1wbh5a2 r-1471scf"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(83, 100, 113);"><a aria-describedby="id__gm9ppm4znkr" aria-label="10:05 AM · Apr 15, 2026" class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-xoduu5 r-1q142lx r-1w6e6rj r-9aw3ui r-3s2u2q r-1loqt21" href="/AlchainHust/status/2044235589730611353" role="link" style="color: rgb(83, 100, 113);"><time datetime="2026-04-15T02:05:19.000Z">10:05 AM · Apr 15, 2026</time></a></div><div aria-hidden="true" class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1q142lx r-n7gxbd" dir="ltr" style="color: rgb(83, 100, 113);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">·</span></div><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1loqt21" dir="ltr" href="/AlchainHust/status/2044235589730611353/analytics" role="link" style="color: rgb(15, 20, 25);"><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1b43r93 r-1cwl3u0 r-b88u0q" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">38.3K</span></span></span></div> <span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1b43r93 r-1cwl3u0" style="color: rgb(83, 100, 113);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">Views</span></span></a></div></div><div class="css-175oi2r r-18u37iz"></div></div></div><div class="css-175oi2r"><div class="css-175oi2r"><div aria-label="6 replies, 40 reposts, 158 likes, 296 bookmarks, 38361 views" class="css-175oi2r r-1kbdv8c r-18u37iz r-1oszu61 r-3qxfft r-n7gxbd r-1dgieki r-1efd50x r-5kkj8d r-h3s6tt r-1wtj0ep" id="id__71i0hr0pkkn" role="group"><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="6 Replies. Reply" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="reply" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01zm8.005-6c-3.317 0-6.005 2.69-6.005 6 0 3.37 2.77 6.08 6.138 6.01l.351-.01h1.761v2.3l5.087-2.81c1.951-1.08 3.163-3.13 3.163-5.36 0-3.39-2.744-6.13-6.129-6.13H9.756z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">6</span></span></span></div></div></button></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="40 reposts. Repost" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="retweet" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">40</span></span></span></div></div></button></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="158 Likes. Like" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="like" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">158</span></span></span></div></div></button></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="296 Bookmarks. Bookmark" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="bookmark" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M4 4.5C4 3.12 5.119 2 6.5 2h11C18.881 2 20 3.12 20 4.5v18.44l-8-5.71-8 5.71V4.5zM6.5 4c-.276 0-.5.22-.5.5v14.56l6-4.29 6 4.29V4.5c0-.28-.224-.5-.5-.5h-11z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">296</span></span></span></div></div></button></div><div class="css-175oi2r" style="justify-content: inherit; display: inline-grid; transform: rotate(0deg) scale(1) translate3d(0px, 0px, 0px);"><div class="css-175oi2r r-18u37iz r-1h0z5md"><button aria-expanded="false" aria-haspopup="menu" aria-label="Share post" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M12 2.59l5.7 5.7-1.41 1.42L13 6.41V16h-2V6.41l-3.3 3.3-1.41-1.42L12 2.59zM21 15l-.02 3.51c0 1.38-1.12 2.49-2.5 2.49H5.5C4.11 21 3 19.88 3 18.5V15h2v3.5c0 .28.22.5.5.5h12.98c.28 0 .5-.22.5-.5L19 15h2z"></path></g></svg></div></div></button></div></div></div></div></div><button class="css-175oi2r r-1ets6dv r-1867qdf r-rs99b7 r-13awgt0 r-bx70bn r-1loqt21 r-o7ynqc r-6416eg r-1ny4l3l" data-testid="logged_out_read_replies_pivot" role="button" type="button"><div class="css-175oi2r r-1awozwy r-1panhkp r-1867qdf r-6koalj r-18u37iz r-1pi2tsx r-11f147o r-is05cd"><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-18jsvk2 r-1q142lx r-v24l6w r-1wron08 r-qu3fyt" viewbox="0 0 24 24"><g><path d="M12.312 23.736c-.123 0-.246-.03-.358-.091-.241-.132-.392-.385-.392-.659v-.871c0-.414.336-.75.75-.75.256 0 .482.128.617.324 1.905-1.247 4.823-3.192 5.908-4.11 2.256-1.908 3.604-4.732 3.608-7.554 0-.414.336-.749.75-.749s.75.337.749.751c-.004 3.256-1.552 6.507-4.14 8.697-1.326 1.121-5.009 3.546-7.086 4.892-.124.08-.266.12-.408.12zm-2.557-1.897c1.697-1.082 6.672-4.317 8.048-5.48 1.902-1.609 3.04-3.976 3.043-6.329-.006-4.366-3.433-7.787-7.8-7.787l-4.149-.01c-4.375-.001-7.801 3.426-7.801 7.801 0 4.104 3.14 7.204 7.465 7.37.002 1.79.008 2.88.058 3.544-.041.101-.061.21-.055.322.009.178.081.344.198.471.111.241.283.241.552.241.163 0 .316-.053.441-.144zm3.289-18.097c3.529 0 6.298 2.763 6.302 6.287-.003 1.917-.941 3.855-2.512 5.184-1.03.871-4.478 3.16-6.771 4.645l-.002-3.175c0-.403-.319-.734-.722-.749l-.721-.027c-3.49-.135-6.022-2.604-6.022-5.872 0-3.534 2.768-6.302 6.299-6.302l4.149.01z"></path></g></svg><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1b43r93 r-1cwl3u0 r-b88u0q r-1awozwy r-6koalj r-1559e4e r-13qz1uu" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">Read 6 replies</span></div></div></button></div></div></div></article>
+</div>
+</div>
+</body>
+</html>

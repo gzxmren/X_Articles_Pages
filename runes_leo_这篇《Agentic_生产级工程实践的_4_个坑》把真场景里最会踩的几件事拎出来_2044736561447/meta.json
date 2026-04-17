@@ -1,0 +1,12 @@
+{
+  "url": "https://x.com/runes_leo/status/2044736561447669764",
+  "status": "success",
+  "title": "这篇《Agentic 生产级工程实践的 4 个坑》把真场景里最会踩的几件事拎出来了：\n\n1. 别让 LLM 做脏活：能变脚本的（脚手架、SDK 路径、固定外部调用）全部脚本化，token 和注意力留给",
+  "author": "runes_leo",
+  "published_date": "2026-04-12",
+  "folder_name": "runes_leo_这篇《Agentic_生产级工程实践的_4_个坑》把真场景里最会踩的几件事拎出来_2044736561447",
+  "local_path": "runes_leo_这篇《Agentic_生产级工程实践的_4_个坑》把真场景里最会踩的几件事拎出来_2044736561447/runes_leo_这篇《Agentic_生产级工程实践的_4_个坑》把真场景里最会踩的几件事拎出来_2044736561447.html",
+  "timestamp": "2026-04-17T15:00:55.748705",
+  "failure_reason": "",
+  "source": "cli"
+}

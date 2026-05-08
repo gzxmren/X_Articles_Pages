@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>宝玉 on X: "Boris Cherny：Claude Code 之后，写代码正在变成“管理 Agent”" / X</title>
+<!-- Injected Original Styles -->
+<style id="draftjs-styles">
+     .DraftEditor-editorContainer, .DraftEditor-root, .public-DraftEditor-content {
+        height: inherit;
+        max-height: inherit;
+        min-height: inherit;
+        text-align: initial;
+    }
+
+    .public-DraftEditor-content[contenteditable=true] {
+        -moz-user-modify: read-write-plaintext-only;
+        -webkit-user-modify: read-write-plaintext-only;
+    }
+
+    .format-inline .public-DraftEditor-content[contenteditable=true] {
+      -moz-user-modify: read-write;
+      -webkit-user-modify: read-write;
+    }
+
+    .DraftEditor-root {
+        width: 100%;
+        position: relative;
+        -webkit-user-select: none;
+    }
+
+    .DraftEditor-editorContainer {
+        background-color: rgba(255, 255, 255, 0);
+        border-left: .1px solid transparent;
+        position: relative;
+        z-index: 1;
+    }
+
+    .public-DraftEditor-block {
+        position: relative;
+    }
+
+    .DraftEditor-alignLeft .public-DraftStyleDefault-block {
+        text-align: left;
+    }
+
+    .DraftEditor-alignLeft .public-DraftEditorPlaceholder-root {
+        left: 0;
+        text-align: left;
+    }
+
+    .DraftEditor-alignCenter .public-DraftStyleDefault-block {
+        text-align: center
+    }
+
+    .DraftEditor-alignCenter .public-DraftEditorPlaceholder-root {
+        margin: 0 auto;
+        text-align: center;
+        width: 100%
+    }
+
+    .DraftEditor-alignRight .public-DraftStyleDefault-block {
+        text-align: right;
+    }
+
+    .DraftEditor-alignRight .public-DraftEditorPlaceholder-root {
+        right: 0;
+        text-align: right;
+    }
+
+    .public-DraftEditorPlaceholder-root {
+        padding-bottom: 2px;
+        padding-top: 2px;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .public-DraftEditorPlaceholder-inner {
+        user-select: none;
+        -webkit-user-select: none;
+    }
+
+    .DraftEditorPlaceholder-hidden {
+        display: none;
+    }
+
+    .public-DraftStyleDefault-block {
+        overflow:hidden;
+        padding-bottom: 2px;
+        padding-top: 2px;
+        position: relative;
+        white-space: pre-wrap;
+    }
+
+    /* Only a handful of CSS rules work on br tags and user-select isn't one */
+    div:only-child > .public-DraftStyleDefault-block > span > br::selection {
+        background: transparent;
+    }
+
+    /*
+       Safari doesn't let you change ::selection on br elements,
+       but Chrome needs it here
+    */
+    div:only-child > .public-DraftStyleDefault-block > span:has(br)::selection {
+        background: transparent;
+    }
+
+    .public-DraftStyleDefault-ltr {
+        direction: ltr;
+        text-align: left;
+    }
+
+    .public-DraftStyleDefault-rtl {
+        direction: rtl;
+        text-align: right;
+    }
+
+    .DraftEditor-editorContainer a {
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        margin-bottom: inherit;
+        margin-top: inherit;
+    }
+
+    .singleline .public-DraftStyleDefault-block {
+        overflow-x: auto;
+        scrollbar-width: none;
+        white-space: nowrap;
+        -ms-overflow-style: none;
+    }
+
+    .singleline .public-DraftStyleDefault-block::-webkit-scrollbar {
+        display: none;
+    }
+  </style>
+<style id="longform-styles">
+    .longform-header-one {
+        font-size: 31px;
+        font-weight: 800;
+        line-height: 40px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-header-one-narrow {
+        font-size: calc(20px + 1px);
+        font-weight: 800;
+        line-height: 28px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-header-two {
+        font-size: 26px;
+        font-weight: 800;
+        line-height: 36px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-header-two-narrow {
+        font-size: calc(17px + 1px);
+        font-weight: 800;
+        line-height: 24px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-unstyled, .longform-blockquote {
+        font-size: 17px;
+        line-height: 28px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-unstyled-narrow, .longform-blockquote-narrow {
+        font-size: 17px;
+        line-height: 28px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-unordered-list-item, .longform-ordered-list-item {
+        display: block;
+        font-size: 17px;
+        line-height: 28px;   
+        margin-bottom: 12px;
+        margin-left: calc(28px + 2px);
+        margin-top: 0;
+    }
+
+    .longform-unordered-list-item-narrow, .longform-ordered-list-item-narrow {
+        display: block;
+        font-size: 17px;
+        line-height: 28px;   
+        margin-bottom: calc(12px / 2);
+        margin-left: 36px;
+        margin-top: 0;
+    }
+
+    .longform-blockquote, .longform-blockquote-narrow {
+        margin-bottom: calc(24px + 2px);
+        margin-left: 0;
+        margin-top: calc(-2px);
+        padding-left: calc(24px + 3px);
+        position: relative;
+    }
+
+    .longform-blockquote:before, .longform-blockquote-narrow:before {
+        background: #37434D;
+        border-radius: 9999px;
+        bottom: 0;
+        content: "";
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 3px;
+    }
+
+    .longform-header-one .public-DraftStyleDefault-block,
+    .longform-header-two .public-DraftStyleDefault-block,
+    .longform-unstyled .public-DraftStyleDefault-block,
+    .longform-unordered-list-item .public-DraftStyleDefault-block,
+    .longform-ordered-list-item .public-DraftStyleDefault-block,
+    .longform-header-one-narrow .public-DraftStyleDefault-block,
+    .longform-header-two-narrow .public-DraftStyleDefault-block,
+    .longform-unstyled-narrow .public-DraftStyleDefault-block,
+    .longform-unordered-list-item-narrow .public-DraftStyleDefault-block,
+    .longform-ordered-list-item-narrow .public-DraftStyleDefault-block {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    .public-DraftStyleDefault-ul, .public-DraftStyleDefault-ol {
+        counter-reset: item;
+        margin-bottom: 28px;
+        margin-top: 0;
+        padding-left: 0;
+    }
+
+    .longform-unordered-list-item:before, .longform-ordered-list-item:before,
+    .longform-unordered-list-item-narrow:before, .longform-ordered-list-item-narrow:before {
+        position: absolute;
+        margin-left: calc(-1 * (28px + 2px));
+    }
+
+    .longform-unordered-list-item:before {
+        content: counter(item, disc);
+        font-size: 23px
+    }
+
+    .longform-unordered-list-item-narrow:before {
+        content: counter(item, disc);
+        font-size: 20px
+    }
+
+    .longform-ordered-list-item:before, .longform-ordered-list-item-narrow:before {
+        content: counter(item) ". ";
+        counter-increment: item;
+    }
+
+    .longform-ordered-list-item::marker, .longform-ordered-list-item-narrow::marker {
+        font-variant-numeric: normal;
+    }
+</style>
+<style>input::placeholder { user-select: none; -webkit-user-select: none; } div div ::-webkit-input-placeholder { color: rgb(117, 117, 117) } iframe { color-scheme: auto; }button { text-align: inherit; font-size: inherit; font-family: inherit; color: inherit }</style>
+<style>@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-Light.a929468a.woff2) format('woff2');
+  font-weight: 300;
+  font-style: 'normal';
+  font-display: 'swap';
+}
+@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-Regular.58c84f6a.woff2) format('woff2');
+  font-weight: 400;
+  font-style: 'normal';
+  font-display: 'swap';
+}
+@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-Medium.bc7d8f1a.woff2) format('woff2');
+  font-weight: 500;
+  font-style: 'normal';
+  font-display: 'swap';
+}
+@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-Bold.0d6a47ca.woff2) format('woff2');
+  font-weight: 700;
+  font-style: 'normal';
+  font-display: 'swap';
+}
+@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-ExtraBold.b130af7a.woff2) format('woff2');
+  font-weight: 800;
+  font-style: 'normal';
+  font-display: 'swap';
+}</style>
+<style>@font-face {
+  font-family: 'Inter Variable';
+  src: url('https://fonts.gstatic.com/s/inter/v18/UcCo3FwrK3iLTcviYwY.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  ascent-override: 90%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+}</style>
+<style>@font-face {
+  font-family: Geist;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Geist-var.2587a0ca.woff2) format('woff2');
+  font-weight: 100 900;
+  font-style: 'normal';
+  font-display: 'swap';
+}</style>
+<style>@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Light.3a18e64a.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Light.7a5673aa.woff) format('woff');
+  font-weight: 300;
+  font-style: 'normal';
+  font-display: 'swap';
+}
+@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Regular.80fda27a.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Regular.60b215ba.woff) format('woff');
+  font-weight: 400;
+  font-style: 'normal';
+  font-display: 'swap';
+}
+@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Medium.f8e2739a.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Medium.20fc288a.woff) format('woff');
+  font-weight: 500;
+  font-style: 'normal';
+  font-display: 'swap';
+}
+@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Bold.ebb56aba.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Bold.a573679a.woff) format('woff');
+  font-weight: 700;
+  font-style: 'normal';
+  font-display: 'swap';
+}
+@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Heavy.f44ae4ea.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Heavy.d70ec7ca.woff) format('woff');
+  font-weight: 800;
+  font-style: 'normal';
+  font-display: 'swap';
+}
+@font-face {
+  font-family: TwitterChirpExtendedHeavy;
+  src: url(https://abs.twimg.com/fonts/v1/chirp-extended-heavy-web.woff2) format('woff2'), url(https://abs.twimg.com/fonts/v1/chirp-extended-heavy-web.woff) format('woff');
+  font-weight: 800;
+  font-style: 'normal';
+  font-display: 'swap';
+}</style>
+<style>html,body{height: 100%;}::cue{white-space:normal}</style>
+<style id="react-native-stylesheet">[stylesheet-group="0"]{}
+body{margin:0;}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+input::-webkit-search-cancel-button,input::-webkit-search-decoration,input::-webkit-search-results-button,input::-webkit-search-results-decoration{display:none;}
+[stylesheet-group="1"]{}
+.css-146c3p1{background-color:rgba(0,0,0,0.00);border:0 solid black;box-sizing:border-box;color:rgba(0,0,0,1.00);display:inline;font:14px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;list-style:none;margin:0px;padding:0px;position:relative;text-align:start;text-decoration:none;white-space:pre-wrap;word-wrap:break-word;}
+.css-175oi2r{align-items:stretch;background-color:rgba(0,0,0,0.00);border:0 solid black;box-sizing:border-box;display:flex;flex-basis:auto;flex-direction:column;flex-shrink:0;list-style:none;margin:0px;min-height:0px;min-width:0px;padding:0px;position:relative;text-decoration:none;z-index:0;}
+.css-1jxf684{background-color:rgba(0,0,0,0.00);border:0 solid black;box-sizing:border-box;color:inherit;display:inline;font:inherit;list-style:none;margin:0px;padding:0px;position:relative;text-align:inherit;text-decoration:none;white-space:inherit;word-wrap:break-word;}
+.css-9pa8cd{bottom:0px;height:100%;left:0px;opacity:0;position:absolute;right:0px;top:0px;width:100%;z-index:-1;}
+[stylesheet-group="2"]{}
+.r-13awgt0{flex:1;}
+.r-17gur6a{border-bottom-left-radius:0px;border-bottom-right-radius:0px;border-top-left-radius:0px;border-top-right-radius:0px;}
+.r-1867qdf{border-bottom-left-radius:16px;border-bottom-right-radius:16px;border-top-left-radius:16px;border-top-right-radius:16px;}
+.r-1adg3ll{display:block;}
+.r-1fuqb1j{border-bottom-left-radius:24px;border-bottom-right-radius:24px;border-top-left-radius:24px;border-top-right-radius:24px;}
+.r-1j16mh1{border-bottom-left-radius:100%;border-bottom-right-radius:100%;border-top-left-radius:100%;border-top-right-radius:100%;}
+.r-1jkafct{border-bottom-left-radius:2px;border-bottom-right-radius:2px;border-top-left-radius:2px;border-top-right-radius:2px;}
+.r-1pcd2l5{padding:20px;}
+.r-1phboty{border-bottom-style:solid;border-left-style:solid;border-right-style:solid;border-top-style:solid;}
+.r-1pp0k63{border-bottom-left-radius:0.01px;border-bottom-right-radius:0.01px;border-top-left-radius:0.01px;border-top-right-radius:0.01px;}
+.r-1udh08x{overflow-x:hidden;overflow-y:hidden;}
+.r-4iw3lz{border-bottom-width:0;border-left-width:0;border-right-width:0;border-top-width:0;}
+.r-4qtqp9{display:inline-block;}
+.r-6koalj{display:flex;}
+.r-bztko3{overflow-x:visible;overflow-y:visible;}
+.r-crgep1{margin:0px;}
+.r-hvic4v{display:none;}
+.r-krxsd3{display:-webkit-box;}
+.r-rs99b7{border-bottom-width:1px;border-left-width:1px;border-right-width:1px;border-top-width:1px;}
+.r-sdzlij{border-bottom-left-radius:9999px;border-bottom-right-radius:9999px;border-top-left-radius:9999px;border-top-right-radius:9999px;}
+.r-t60dpp{padding:0px;}
+.r-wwvuq4{padding:0;}
+.r-xoduu5{display:inline-flex;}
+.r-ywje51{margin:auto;}
+.r-z2wwpe{border-bottom-left-radius:4px;border-bottom-right-radius:4px;border-top-left-radius:4px;border-top-right-radius:4px;}
+[stylesheet-group="2.1"]{}
+.r-1559e4e{padding-bottom:2px;padding-top:2px;}
+.r-1fkl15p{padding-left:32px;padding-right:32px;}
+.r-3o4zer{padding-left:12px;padding-right:12px;}
+.r-3pj75a{padding-left:16px;padding-right:16px;}
+.r-cxgwc0{padding-left:24px;padding-right:24px;}
+.r-dd0y9b{padding-bottom:20px;padding-top:20px;}
+.r-ddtstp{margin-bottom:0px;margin-top:0px;}
+.r-dp7rxi{padding-bottom:40px;padding-top:40px;}
+.r-f8sm7e{margin-left:auto;margin-right:auto;}
+.r-n7gxbd{padding-left:4px;padding-right:4px;}
+.r-nj0m1c{padding-bottom:32px;padding-top:32px;}
+.r-s49dbf{margin-bottom:1px;margin-top:1px;}
+.r-sjygvo{padding-left:1em;padding-right:1em;}
+.r-w7s2jr{padding-bottom:16px;padding-top:16px;}
+[stylesheet-group="2.2"]{}
+.r-10s2tm5{left:0%;}
+.r-15peodp{right:-9999px;}
+.r-16o8guy{right:100%;}
+.r-19qo34d{left:-9999px;}
+.r-1ca1ndr{margin-left:0.5em;}
+.r-1ez5h0i{margin-left:4px;}
+.r-1gs4q39{margin-right:4px;}
+.r-1kkk96v{margin-left:8px;}
+.r-1kpi4qh{margin-left:0.075em;}
+.r-1l2kgy{margin-right:0.5em;}
+.r-1q6cnnd{right:-2px;}
+.r-1uofg76{left:16px;}
+.r-1wron08{margin-right:8px;}
+.r-3t4u6i{margin-left:2px;}
+.r-42265s{right:16px;}
+.r-45ll9u{left:50%;}
+.r-5f1w11{left:-2px;}
+.r-72fyl3{border-top-left-radius:32px;}
+.r-cwltf5{border-top-right-radius:32px;}
+.r-dqe1q{right:0%;}
+.r-k4bwe5{margin-right:0.075em;}
+.r-o59np7{padding-right:8px;}
+.r-ocobd0{right:50%;}
+.r-qjj4hq{padding-left:8px;}
+.r-rci37q{left:100%;}
+.r-x1x4zq{margin-right:2px;}
+[stylesheet-group="3"]{}
+.r-105ug2t{pointer-events:auto!important;}
+.r-109y4c4{height:1px;}
+.r-10ef88u{min-width:700px;}
+.r-10ptun7{height:16px;}
+.r-10v3vxq{transform:scaleX(-1);}
+.r-117bsoe{margin-bottom:20px;}
+.r-11c0sde{margin-top:24px;}
+.r-11f8fnl{background-color:rgba(180,180,182,0.50);}
+.r-11j9u27{visibility:hidden;}
+.r-1202g5r{height:90vh;}
+.r-12181gd{box-shadow:0 0 2px rgba(0,0,0,0.03) inset;}
+.r-1279nm1{min-height:400px;}
+.r-12hfotv{width:700px;}
+.r-12sks89{min-height:22px;}
+.r-12vffkv>*{pointer-events:auto;}
+.r-12vffkv{pointer-events:none!important;}
+.r-12ym1je{width:18px;}
+.r-135wba7{line-height:24px;}
+.r-13qz1uu{width:100%;}
+.r-13tjlyg{transition-duration:0.1s;}
+.r-13wfysu{-webkit-text-decoration-line:none;text-decoration-line:none;}
+.r-146iojx{max-width:300px;}
+.r-1472mwg{height:24px;}
+.r-14j79pv{color:rgba(83,100,113,1.00);}
+.r-14lw9ot{background-color:rgba(255,255,255,1.00);}
+.r-158ssxm{max-height:calc(64px * 15);}
+.r-15ysp7h{min-height:32px;}
+.r-16dba41{font-weight:400;}
+.r-16y2uox{flex-grow:1;}
+.r-176fswd{transform:translateX(-50%) translateY(-50%);}
+.r-1777fci{justify-content:center;}
+.r-17bb2tj{animation-duration:0.75s;}
+.r-17gznlh{animation-name:r-t2lo5v;}
+.r-17leim2{background-repeat:repeat;}
+.r-17s6mgv{justify-content:flex-end;}
+.r-184en5c{z-index:1;}
+.r-18jsvk2{color:rgba(15,20,25,1.00);}
+.r-18tzken{width:56px;}
+.r-18u37iz{flex-direction:row;}
+.r-18yzcnr{height:22px;}
+.r-19lq7b1{top:16px;}
+.r-19qs0lw{animation-name:r-1qpf3yi;}
+.r-19wmn03{width:20px;}
+.r-19yznuf{min-height:52px;}
+.r-1abnn5w{animation-play-state:paused;}
+.r-1acpoxo{width:36px;}
+.r-1ad0z5i{word-break:break-all;}
+.r-1awozwy{align-items:center;}
+.r-1b43r93{font-size:14px;}
+.r-1betnmo{max-width:672px;}
+.r-1blnp2b{width:72px;}
+.r-1blvdjr{font-size:23px;}
+.r-1c6unfx{forced-color-adjust:none;}
+.r-1ceczpf{min-height:24px;}
+.r-1cwl3u0{line-height:16px;}
+.r-1d2f490{left:0px;}
+.r-1ddef8g{-webkit-text-decoration-line:underline;text-decoration-line:underline;}
+.r-1dernwh{height:70%;}
+.r-1dn12g7{line-height:48px;}
+.r-1dum35f{-moz-transition-property:opacity, height;-webkit-transition-property:opacity, height;transition-property:opacity, height;}
+.r-1ebb2ja{list-style:none;}
+.r-1ei5mc7{cursor:inherit;}
+.r-1ewcgjf{box-shadow:0px 1px 3px rgba(0,0,0,0.5);}
+.r-1ff274t{text-align:right;}
+.r-1ffj0ar{background-color:rgba(0,0,0,0.40);}
+.r-1fu8b7j{height:712px;}
+.r-1g83rmp{animation-name:r-7bj9g2;}
+.r-1gkfh8e{font-size:11px;}
+.r-1h0z5md{justify-content:flex-start;}
+.r-1h8ys4a{padding-top:4px;}
+.r-1habvwh{align-items:flex-start;}
+.r-1hjwoze{height:18px;}
+.r-1ifxtd0{margin-bottom:16px;}
+.r-1iln25a{word-wrap:normal;}
+.r-1inkyih{font-size:17px;}
+.r-1ipicw7{width:300px;}
+.r-1iusvr4{flex-basis:0px;}
+.r-1janqcz{width:16px;}
+.r-1jaylin{width:-webkit-max-content;width:-moz-max-content;width:max-content;}
+.r-1k78y06{font-family:Tahoma, Arial, sans-serif;}
+.r-1kihuf0{align-self:center;}
+.r-1ldzwu0{animation-timing-function:linear;}
+.r-1loqt21{cursor:pointer;}
+.r-1mdbw0j{padding-bottom:0px;}
+.r-1mlwlqe{flex-basis:auto;}
+.r-1mrlafo{background-position:0;}
+.r-1muvv40{animation-iteration-count:infinite;}
+.r-1mwlp6a{height:56px;}
+.r-1nao33i{color:rgba(231,233,234,1.00);}
+.r-1niwhzg{background-color:rgba(0,0,0,0.00);}
+.r-1ny4l3l{outline-style:none;}
+.r-1oifz5y{background-color:rgba(170,17,0,1.00);}
+.r-1oszu61{align-items:stretch;}
+.r-1otgn73{touch-action:manipulation;}
+.r-1ovo9ad{width:360px;}
+.r-1p0dtai{bottom:0px;}
+.r-1pi2tsx{height:100%;}
+.r-1pjcn9w{max-width:80vw;}
+.r-1potc6q{top:5%;}
+.r-1ps3wis{min-width:44px;}
+.r-1pz39u2{align-self:stretch;}
+.r-1qd0xha{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+.r-1qi8awa{min-width:36px;}
+.r-1r5jyh0{min-height:130px;}
+.r-1r8g8re{height:36px;}
+.r-1rnoaur{overflow-y:auto;}
+.r-1s2hp8q{min-height:26px;}
+.r-1sxrcry{background-size:auto;}
+.r-1tl8opc{font-family:"Segoe UI",Meiryo,system-ui,-apple-system,BlinkMacSystemFont,sans-serif;}
+.r-1to6hqq{background-color:rgba(255,212,0,1.00);}
+.r-1tsuqlv{max-height:100vh;}
+.r-1ttztb7{text-align:inherit;}
+.r-1udbk01{text-overflow:ellipsis;}
+.r-1ur9v65{padding-top:40px;}
+.r-1v2oles{top:50%;}
+.r-1vmecro{direction:rtl;}
+.r-1vr29t4{font-weight:800;}
+.r-1wb8bfx{text-decoration-thickness:2px;}
+.r-1wbh5a2{flex-shrink:1;}
+.r-1wtj0ep{justify-content:space-between;}
+.r-1wvb978{font-feature-settings:'ss01' on;}
+.r-1wyyakw{z-index:-1;}
+.r-1xcajam{position:fixed;}
+.r-1xfddsp{min-height:300px;}
+.r-1xk2f4g{clip:rect(1px, 1px, 1px, 1px);}
+.r-1xnzce8{-moz-user-select:text;-webkit-user-select:text;user-select:text;}
+.r-1xvli5t{height:1.25em;}
+.r-1y7e96w{min-width:22px;}
+.r-1ye8kvj{max-width:600px;}
+.r-1yef0xd{animation-name:r-11cv4x;}
+.r-1yjpyg1{font-size:31px;}
+.r-1ykxob0{top:60%;}
+.r-2o02ov{margin-top:40px;}
+.r-2tavb8{background-color:rgba(0,0,0,0.60);}
+.r-2yi16{min-height:36px;}
+.r-30o5oe{-moz-appearance:none;-ms-appearance:none;-webkit-appearance:none;appearance:none;}
+.r-36ujnk{font-style:italic;}
+.r-37tt59{line-height:32px;}
+.r-3s2u2q{white-space:nowrap;}
+.r-417010{z-index:0;}
+.r-4gszlv{background-size:cover;}
+.r-4hwcpe{font-family:Vazirmatn, Tahoma, Arial, sans-serif;}
+.r-4wgw6l{min-width:32px;}
+.r-54znze{color:rgba(239,243,244,1.00);}
+.r-56xrmm{line-height:12px;}
+.r-6026j{background-color:rgba(255,255,255,0.85);}
+.r-633pao{pointer-events:none!important;}
+.r-6416eg{-moz-transition-property:background-color, box-shadow;-webkit-transition-property:background-color, box-shadow;transition-property:background-color, box-shadow;}
+.r-64el8z{min-width:52px;}
+.r-68jxh1{min-width:500px;}
+.r-7h7f8p{max-width:100vw;}
+.r-7q8q6z{cursor:default;}
+.r-8akbws{-webkit-box-orient:vertical;}
+.r-8jfcpp{top:-2px;}
+.r-92ng3h{width:1px;}
+.r-9dcw1g{width:320px;}
+.r-a023e6{font-size:15px;}
+.r-adyw6z{font-size:20px;}
+.r-agouwx{transform:translateZ(0);}
+.r-ah5dr5>*{pointer-events:none;}
+.r-ah5dr5{pointer-events:auto!important;}
+.r-aqfbo4{backface-visibility:hidden;}
+.r-b88u0q{font-weight:700;}
+.r-bcqeeo{min-width:0px;}
+.r-bnwqim{position:relative;}
+.r-bt1l66{min-height:20px;}
+.r-bvlit7{margin-bottom:-12px;}
+.r-clrlgt{animation-name:r-imtty0;}
+.r-deolkf{box-sizing:border-box;}
+.r-dflpy8{height:1.2em;}
+.r-dnmrzs{max-width:100%;}
+.r-ehq7j7{background-size:contain;}
+.r-emqnss{transform:translateZ(0px);}
+.r-eqz5dr{flex-direction:column;}
+.r-ero68b{min-height:40px;}
+.r-fa1dwr{animation-timing-function:cubic-bezier(0.25, 0.1, 0.25, 1);}
+.r-fdjqy7{text-align:left;}
+.r-fm7h5w{font-family:"TwitterChirpExtendedHeavy","Verdana",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+.r-g6jmlv{width:100vw;}
+.r-gf0ln{-webkit-filter:brightness(1);filter:brightness(1);}
+.r-h9hxbl{width:1.2em;}
+.r-htvplk{min-width:600px;}
+.r-icoktb{opacity:0.5;}
+.r-ifefl9{min-height:0px;}
+.r-impgnl{transform:translateX(50%) translateY(-50%);}
+.r-iphfwy{padding-bottom:4px;}
+.r-ipm5af{top:0px;}
+.r-j5o65s{border-bottom-color:rgba(239,243,244,1.00);}
+.r-jmul1s{transform:scale(1.1);}
+.r-jwli3a{color:rgba(255,255,255,1.00);}
+.r-k200y{align-self:flex-start;}
+.r-kemksi{background-color:rgba(0,0,0,1.00);}
+.r-kwpbio{height:650px;}
+.r-lp5zef{min-width:24px;}
+.r-lrsllp{width:24px;}
+.r-lrvibr{-moz-user-select:none;-webkit-user-select:none;user-select:none;}
+.r-lrx3fh{width:500px;}
+.r-m6rgpd{vertical-align:text-bottom;}
+.r-majxgm{font-weight:500;}
+.r-n1ft60{dynamic-range-limit:standard;}
+.r-n6v787{font-size:13px;}
+.r-nhe8su{animation-duration:0.5s;}
+.r-nvplwv{animation-timing-function:ease-out;}
+.r-nwxazl{line-height:40px;}
+.r-o7ynqc{transition-duration:0.2s;}
+.r-obd0qt{align-items:flex-end;}
+.r-orgf3d{opacity:0;}
+.r-peo1c{min-height:44px;}
+.r-pm9dpa{max-height:100%;}
+.r-poiln3{font-family:inherit;}
+.r-pp5qcn{vertical-align:-20%;}
+.r-q4m81j{text-align:center;}
+.r-qklmqi{border-bottom-width:1px;}
+.r-qlhcfr{font-size:0.001px;}
+.r-qvk6io{line-height:0px;}
+.r-qvutc0{word-wrap:break-word;}
+.r-rjixqe{line-height:20px;}
+.r-rki7wi{bottom:12px;}
+.r-rsyp9y{max-height:90vh;}
+.r-s67bdx{font-size:48px;}
+.r-sb58tz{max-width:1000px;}
+.r-tjvw6i{text-decoration-thickness:1px;}
+.r-u6sd8q{background-repeat:no-repeat;}
+.r-u8s1d{position:absolute;}
+.r-ueyrd6{line-height:36px;}
+.r-uho16t{font-size:34px;}
+.r-uz7a3o{min-width:650px;}
+.r-vkv6oe{min-width:40px;}
+.r-vqxq0j{border:0 solid black;}
+.r-vrz42v{line-height:28px;}
+.r-vvn4in{background-position:center;}
+.r-wy61xf{height:72px;}
+.r-x3cy2q{background-size:100% 100%;}
+.r-x572qd{background-color:rgba(247,249,249,1.00);}
+.r-xigjrr{-webkit-filter:blur(4px);filter:blur(4px);}
+.r-xr3zp9{min-height:calc(64px * 3);}
+.r-yc9v9c{width:22px;}
+.r-yn5ncy{animation-fill-mode:both;}
+.r-yy2aun{font-size:26px;}
+.r-yyyyoo{fill:currentcolor;}
+.r-z2knda{transition-timing-function:ease;}
+.r-z7pwl0{max-width:700px;}
+.r-z80fyv{height:20px;}
+.r-zchlnj{right:0px;}
+@-webkit-keyframes r-11cv4x{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
+@-webkit-keyframes r-1qpf3yi{0%{opacity:0;transform:scale3d(0.92, 0.92, 1);}100%{opacity:1;transform:scale3d(1, 1, 1);}}
+@-webkit-keyframes r-7bj9g2{0%{opacity:1;transform:scale3d(1, 1, 1);}100%{opacity:0;transform:scale3d(0.92, 0.92, 1);}}
+@-webkit-keyframes r-imtty0{0%{opacity:0;}100%{opacity:1;}}
+@-webkit-keyframes r-t2lo5v{0%{opacity:1;}100%{opacity:0;}}
+@keyframes r-11cv4x{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
+@keyframes r-1qpf3yi{0%{opacity:0;transform:scale3d(0.92, 0.92, 1);}100%{opacity:1;transform:scale3d(1, 1, 1);}}
+@keyframes r-7bj9g2{0%{opacity:1;transform:scale3d(1, 1, 1);}100%{opacity:0;transform:scale3d(0.92, 0.92, 1);}}
+@keyframes r-imtty0{0%{opacity:0;}100%{opacity:1;}}
+@keyframes r-t2lo5v{0%{opacity:1;}100%{opacity:0;}}
+.r-1ma2pa{position:absolute;visibility:hidden;top:0;width:50px;pointer-events:none}
+.r-1ma2pa.loaded{visibility:visible;top:50vh;width:50px}</style>
+<style id="googleidentityservice_button_styles">.qJTHM{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;color:#202124;direction:ltr;-webkit-touch-callout:none;font-family:Roboto-Regular,arial,sans-serif;-webkit-font-smoothing:antialiased;font-weight:400;margin:0;overflow:hidden;-webkit-text-size-adjust:100%}.ynRLnc{left:-9999px;position:absolute;top:-9999px}.L6cTce{display:none}.bltWBb{overflow-wrap:break-word;word-break:break-word}.hSRGPd{color:#1a73e8;cursor:pointer;font-weight:500;text-decoration:none}.Bz112c-W3lGp{height:16px;width:16px}.Bz112c-E3DyYd{height:20px;width:20px}.Bz112c-r9oPif{height:24px;width:24px}.Bz112c-u2z5K{height:36px;width:36px}.Bz112c-uaxL4e{border-radius:10px}.LgbsSe-Bz112c{display:block}.S9gUrf-YoZ4jf{border:none;margin:0;padding:0}.S9gUrf-YoZ4jf *{border:none;margin:0;padding:0}.fFW7wc-ibnC6b>.aZ2wEe>div{border-color:#4285f4}.P1ekSe-ZMv3u{-webkit-transition:height .2s linear;transition:height .2s linear}.P1ekSe-ZMv3u>div:first-child{background-color:#1a73e8!important;-webkit-transition:width .3s linear;transition:width .3s linear}.P1ekSe-ZMv3u>div:nth-child(2){background-image:-webkit-gradient(linear,left top,right top,from(rgba(255,255,255,.7)),to(rgba(255,255,255,.7))),-webkit-gradient(linear,left top,right top,from(#1a73e8),to(#1a73e8))!important;background-image:-webkit-linear-gradient(left,rgba(255,255,255,.7),rgba(255,255,255,.7)),-webkit-linear-gradient(left,#1a73e8,#1a73e8)!important;background-image:linear-gradient(90deg,rgba(255,255,255,.7),rgba(255,255,255,.7)),linear-gradient(90deg,#1a73e8,#1a73e8)!important}.P1ekSe-ZMv3u>div:nth-child(3){background-image:-webkit-gradient(linear,left top,right top,from(rgba(255,255,255,.7)),to(rgba(255,255,255,.7))),-webkit-gradient(linear,left top,right top,from(#1a73e8),to(#1a73e8))!important;background-image:-webkit-linear-gradient(left,rgba(255,255,255,.7),rgba(255,255,255,.7)),-webkit-linear-gradient(left,#1a73e8,#1a73e8)!important;background-image:linear-gradient(90deg,rgba(255,255,255,.7),rgba(255,255,255,.7)),linear-gradient(90deg,#1a73e8,#1a73e8)!important}.haAclf{display:inline-block}.nsm7Bb-HzV7m-LgbsSe{border-radius:4px;box-sizing:border-box;-webkit-transition:background-color .218s,border-color .218s;transition:background-color .218s,border-color .218s;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;-webkit-appearance:none;background-color:#fff;background-image:none;border:1px solid #dadce0;color:#3c4043;cursor:pointer;font-family:Google Sans,arial,sans-serif;font-size:14px;height:40px;letter-spacing:.25px;outline:none;overflow:hidden;padding:0 12px;position:relative;text-align:center;vertical-align:middle;white-space:nowrap;width:auto}@media screen and (-ms-high-contrast:active){.nsm7Bb-HzV7m-LgbsSe{border:2px solid windowText;color:windowText}}@media screen and (preferes-contrast:more){.nsm7Bb-HzV7m-LgbsSe{color:#000}}.nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe{font-size:14px;height:32px;letter-spacing:.25px;padding:0 10px}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe{font-size:11px;height:20px;letter-spacing:.3px;padding:0 8px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe{padding:0;width:40px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.pSzOP-SxQuSe{width:32px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.purZT-SxQuSe{width:20px}.nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK{border-radius:20px}.nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK.pSzOP-SxQuSe{border-radius:16px}.nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK.purZT-SxQuSe{border-radius:10px}.nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc{border:none;color:#fff}.nsm7Bb-HzV7m-LgbsSe.MFS4be-v3pZbf-Ia7Qfc{background-color:#1a73e8}.nsm7Bb-HzV7m-LgbsSe.MFS4be-JaPV2b-Ia7Qfc{background-color:#202124;color:#e8eaed}@media screen and (prefers-contrast:more){.nsm7Bb-HzV7m-LgbsSe.MFS4be-JaPV2b-Ia7Qfc{color:#fff}}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{height:18px;margin-right:8px;min-width:18px;width:18px}.nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{height:14px;min-width:14px;width:14px}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{height:10px;min-width:10px;width:10px}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-Bz112c{margin-left:8px;margin-right:-4px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{margin:0;padding:10px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.pSzOP-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{padding:8px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{padding:4px}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-top-left-radius:3px;border-bottom-left-radius:3px;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;align-items:center;background-color:#fff;height:36px;margin-left:-10px;margin-right:12px;min-width:36px;width:36px}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf .nsm7Bb-HzV7m-LgbsSe-Bz112c,.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf .nsm7Bb-HzV7m-LgbsSe-Bz112c{margin:0;padding:0}.nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{height:28px;margin-left:-8px;margin-right:10px;min-width:28px;width:28px}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{height:16px;margin-left:-6px;margin-right:8px;min-width:16px;width:16px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-radius:3px;margin-left:2px;margin-right:0;padding:0}.nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-radius:18px}.nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-radius:14px}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-radius:8px}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-bN97Pc-sM5MNb{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-align-items:center;-webkit-box-align:center;align-items:center;-webkit-flex-direction:row;-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;-webkit-flex-wrap:nowrap;flex-wrap:nowrap;height:100%;position:relative;width:100%}.nsm7Bb-HzV7m-LgbsSe .oXtfBe-l4eHX{-webkit-box-pack:center;-webkit-justify-content:center;justify-content:center}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-BPrWId{-webkit-flex-grow:1;-webkit-box-flex:1;flex-grow:1;font-family:Google Sans,arial,sans-serif;font-weight:500;overflow:hidden;text-overflow:ellipsis;vertical-align:top}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-BPrWId{font-weight:300}.nsm7Bb-HzV7m-LgbsSe .oXtfBe-l4eHX .nsm7Bb-HzV7m-LgbsSe-BPrWId{-webkit-flex-grow:0;-webkit-box-flex:0;flex-grow:0}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-MJoBVe{-webkit-transition:background-color .218s;transition:background-color .218s;bottom:0;left:0;position:absolute;right:0;top:0}.nsm7Bb-HzV7m-LgbsSe:focus,.nsm7Bb-HzV7m-LgbsSe:hover{box-shadow:none;border-color:rgb(210,227,252);outline:none}.nsm7Bb-HzV7m-LgbsSe:focus-within{outline:2px solid #00639b;border-color:transparent}.nsm7Bb-HzV7m-LgbsSe:hover .nsm7Bb-HzV7m-LgbsSe-MJoBVe{background:rgba(66,133,244,.08)}.nsm7Bb-HzV7m-LgbsSe:active .nsm7Bb-HzV7m-LgbsSe-MJoBVe,.nsm7Bb-HzV7m-LgbsSe:focus .nsm7Bb-HzV7m-LgbsSe-MJoBVe{background:rgba(66,133,244,.1)}.nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc:hover .nsm7Bb-HzV7m-LgbsSe-MJoBVe{background:rgba(255,255,255,.24)}.nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc:active .nsm7Bb-HzV7m-LgbsSe-MJoBVe,.nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc:focus .nsm7Bb-HzV7m-LgbsSe-MJoBVe{background:rgba(255,255,255,.32)}.nsm7Bb-HzV7m-LgbsSe .n1UuX-DkfjY{border-radius:50%;display:-webkit-box;display:-webkit-flex;display:flex;height:20px;margin-left:-4px;margin-right:8px;min-width:20px;width:20px}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId{font-family:Roboto;font-size:12px;text-align:left}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff .fmcmS,.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .ssJRIf{overflow:hidden;text-overflow:ellipsis}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-align-items:center;-webkit-box-align:center;align-items:center;color:#5f6368;fill:#5f6368;font-size:11px;font-weight:400}.nsm7Bb-HzV7m-LgbsSe.jVeSEe.MFS4be-Ia7Qfc .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff{color:#e8eaed;fill:#e8eaed}@media screen and (prefers-contrast:more){.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff,.nsm7Bb-HzV7m-LgbsSe.jVeSEe.MFS4be-Ia7Qfc .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff{color:#000;fill:#000}}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff .Bz112c{height:18px;margin:-3px -3px -3px 2px;min-width:18px;width:18px}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:3px;border-bottom-right-radius:3px;margin-left:12px;margin-right:-10px}.nsm7Bb-HzV7m-LgbsSe.jVeSEe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-radius:18px}.L5Fo6c-sM5MNb{border:0;display:block;left:0;position:relative;top:0}.L5Fo6c-bF1uUb{border-radius:4px;bottom:0;cursor:pointer;left:0;position:absolute;right:0;top:0}.L5Fo6c-bF1uUb:focus{border:none;outline:none}sentinel{}</style>
+<style>
+        body { 
+            font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;  
+            background-color: #ffffff; 
+            margin: 0;
+            padding: 0;
+        }
+        .container { 
+            max-width: 600px; 
+            margin: 0 auto; 
+            padding-top: 20px; 
+            padding-bottom: 40px;
+        }
+        .tweet-card { 
+            border: 1px solid rgb(239, 243, 244); 
+            border-radius: 16px; 
+            margin-bottom: 16px; 
+            padding: 16px; 
+            overflow-wrap: break-word;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-top: 10px;
+        }
+        /* Basic reset for some Twitter specific classes if needed */
+        a { text-decoration: none; color: rgb(29, 155, 240); }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+<div class="container">
+<div class="tweet-card">
+<article aria-labelledby="id__b9o5uu5i42f id__btnxnjushed id__pcwchatdem8 id__aps27b61fk8 id__vo7ireiwqm9 id__27mhqy296yo id__689eoi6z9d4 id__zypa2kwrmyd id__ucjhuwk5za9 id__j22acai1sqs id__e48omtw2j9t id__8137bjnyiwd id__pnl948qsqgs id__g2nwvpd9ypg id__alhry82luv id__y12vovsqp8 id__mif1ptxxzna id__vopm5ok1upr id__1conwk5avgo id__bkoj9oruvt6" class="css-175oi2r r-18u37iz r-1udh08x r-1c4vpko r-1c7gwzm r-1ny4l3l" data-testid="tweet" role="article" tabindex="-1"><div class="css-175oi2r r-eqz5dr r-16y2uox r-1wbh5a2"><div class="css-175oi2r r-16y2uox r-1wbh5a2 r-1ny4l3l"><div class="css-175oi2r"><div class="css-175oi2r r-18u37iz r-136ojw6"><div class="css-175oi2r r-1iusvr4 r-16y2uox r-ttdzmv"></div></div></div><div class="css-175oi2r r-18u37iz r-136ojw6"><div class="css-175oi2r r-18kxxzh r-1wron08 r-onrtq4 r-1awozwy"><div class="css-175oi2r" data-testid="Tweet-User-Avatar"><div class="css-175oi2r r-18kxxzh r-1wbh5a2 r-13qz1uu"><div class="css-175oi2r r-1wbh5a2 r-dnmrzs"><div class="css-175oi2r r-bztko3 r-1adg3ll" data-testid="UserAvatar-Container-dotey" style="width: 40px; height: 40px;"><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 100%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div class="css-175oi2r r-1adg3ll r-1pi2tsx r-13qz1uu r-45ll9u r-u8s1d r-1v2oles r-176fswd r-bztko3"><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 100%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div class="css-175oi2r r-sdzlij r-1udh08x r-5f1w11 r-u8s1d r-8jfcpp" style="width: calc(100% + 4px); height: calc(100% + 4px);"><a aria-hidden="true" class="css-175oi2r r-1pi2tsx r-13qz1uu r-o7ynqc r-6416eg r-1ny4l3l r-1loqt21" href="/dotey" role="link" style="background-color: rgba(0, 0, 0, 0);" tabindex="-1"><div class="css-175oi2r r-sdzlij r-1udh08x r-633pao r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-175oi2r r-1pi2tsx r-13qz1uu" style="background-color: rgba(0, 0, 0, 0);"></div></div><div class="css-175oi2r r-sdzlij r-1udh08x r-633pao r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-175oi2r r-1pi2tsx r-13qz1uu r-14lw9ot"></div></div><div class="css-175oi2r r-sdzlij r-1udh08x r-633pao r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="background-color: rgb(255, 255, 255); width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-175oi2r r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 100%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div class="css-175oi2r r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af"><div class="css-175oi2r r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/profile_images/561086911561736192/6_g58vEs_normal.jpeg");'></div><img alt="" class="css-9pa8cd" draggable="true" src="https://pbs.twimg.com/profile_images/561086911561736192/6_g58vEs_normal.jpeg"/></div></div></div></div><div class="css-175oi2r r-sdzlij r-1udh08x r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-175oi2r r-12181gd r-1pi2tsx r-13qz1uu r-o7ynqc r-6416eg r-1ny4l3l"></div></div></a></div></div></div></div></div></div></div></div></div><div class="css-175oi2r r-1iusvr4 r-16y2uox r-1777fci"><div class="css-175oi2r r-zl2h9q"><div class="css-175oi2r r-k4xj1c r-18u37iz r-1wtj0ep"><div class="css-175oi2r r-1d09ksm r-18u37iz r-1wbh5a2"><div class="css-175oi2r r-1wbh5a2 r-dnmrzs r-1ny4l3l"><div class="css-175oi2r r-1wbh5a2 r-dnmrzs r-1ny4l3l" data-testid="User-Name" id="id__vo7ireiwqm9"><div class="css-175oi2r r-1awozwy r-18u37iz r-1wbh5a2 r-dnmrzs"><div class="css-175oi2r r-1wbh5a2 r-dnmrzs"><a class="css-175oi2r r-1wbh5a2 r-dnmrzs r-1ny4l3l r-1loqt21" href="/dotey" role="link"><div class="css-175oi2r r-1awozwy r-18u37iz r-1wbh5a2 r-dnmrzs"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-b88u0q r-1awozwy r-6koalj r-1udh08x r-3s2u2q" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-dnmrzs r-1udh08x r-1udbk01 r-3s2u2q r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">宝玉</span></span></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-xoduu5 r-18u37iz r-1q142lx" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1awozwy r-xoduu5"><svg aria-label="Verified account" class="r-4qtqp9 r-yyyyoo r-1xvli5t r-bnwqim r-lrvibr r-m6rgpd r-1cvl2hr r-f9ja8p r-og9te1 r-3t4u6i" data-testid="icon-verified" role="img" viewbox="0 0 22 22"><g><path d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.854-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.688-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.606-.274 1.263-.144 1.896.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681s.075-1.299-.165-1.903c.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z"></path></g></svg></span></div></div></a></div></div><div class="css-175oi2r r-18u37iz r-1wbh5a2"><div class="css-175oi2r r-1d09ksm r-18u37iz r-1wbh5a2"><div class="css-175oi2r r-1wbh5a2 r-dnmrzs"><a class="css-175oi2r r-1wbh5a2 r-dnmrzs r-1ny4l3l r-1loqt21" href="/dotey" role="link" tabindex="-1"><div class="css-146c3p1 r-dnmrzs r-1udh08x r-1udbk01 r-3s2u2q r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-18u37iz r-1wvb978" dir="ltr" style="color: rgb(83, 100, 113);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">@dotey</span></div></a></div></div></div></div></div></div><div class="css-175oi2r r-1kkk96v"><div class="css-175oi2r r-1awozwy r-18u37iz r-1cmwbt1 r-1wtj0ep"><div class="css-175oi2r r-1awozwy r-6koalj r-18u37iz"><div class="css-175oi2r"><div class="css-175oi2r r-18u37iz r-1h0z5md"><button aria-expanded="false" aria-haspopup="menu" aria-label="More" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="caret" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div></div></button></div></div></div></div></div></div></div></div></div><div class="css-175oi2r"><div class="css-175oi2r r-1s2bzr4"></div><div class="css-175oi2r r-1ny4l3l" data-testid="twitterArticleReadView"><div class="css-175oi2r r-1peese0"><div class="css-175oi2r"><div class="css-175oi2r r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-175oi2r"><div class="css-175oi2r r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-175oi2r r-1pi2tsx r-1ny4l3l r-1loqt21" href="/dotey/article/2051688341519609897/media/2051687858046369794" role="link"><div class="css-175oi2r r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 40%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="Image" class="css-175oi2r r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-175oi2r r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HHkPPJDWAAI42SJ?format=jpg&amp;name=small");'></div><img alt="Image" class="css-9pa8cd" draggable="true" src="assets/260a4b3f95284c98699b79961f9c8709.jpg"/></div></div></div></a></div></div></div></div></div><div class="css-175oi2r r-vmopo1"><div class="css-175oi2r r-13qz1uu"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-uho16t r-1vr29t4 r-1o37s4c r-1s2bzr4" data-testid="twitter-article-title" dir="auto" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">Boris Cherny：Claude Code 之后，写代码正在变成“管理 Agent”</span></div></div><div class="css-175oi2r"><div aria-label="13 replies, 102 reposts, 344 likes, 681 bookmarks, 235622 views" class="css-175oi2r r-1kbdv8c r-18u37iz r-1wtj0ep r-1ye8kvj r-j5o65s r-rull8r r-qklmqi r-h3s6tt r-14gqq1x" role="group"><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="13 Replies. Reply" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="reply" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01zm8.005-6c-3.317 0-6.005 2.69-6.005 6 0 3.37 2.77 6.08 6.138 6.01l.351-.01h1.761v2.3l5.087-2.81c1.951-1.08 3.163-3.13 3.163-5.36 0-3.39-2.744-6.13-6.129-6.13H9.756z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">13</span></span></span></div></div></button></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="102 reposts. Repost" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="retweet" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">102</span></span></span></div></div></button></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="344 Likes. Like" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="like" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">344</span></span></span></div></div></button></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><a aria-label="235622 views. View post analytics" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1ny4l3l r-1loqt21" href="/dotey/status/2051688341519609897/analytics" role="link"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M8.75 21V3h2v18h-2zM18 21V8.5h2V21h-2zM4 21l.004-10h2L6 21H4zm9.248 0v-7h2v7h-2z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">235K</span></span></span></div></div></a></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-1wron08"><button aria-label="Bookmark" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="bookmark" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M4 4.5C4 3.12 5.119 2 6.5 2h11C18.881 2 20 3.12 20 4.5v18.44l-8-5.71-8 5.71V4.5zM6.5 4c-.276 0-.5.22-.5.5v14.56l6-4.29 6 4.29V4.5c0-.28-.224-.5-.5-.5h-11z"></path></g></svg></div></div></button></div><div class="css-175oi2r" style="justify-content: inherit; display: inline-grid; transform: rotate(0deg) scale(1) translate3d(0px, 0px, 0px);"><div class="css-175oi2r r-18u37iz r-1h0z5md"><button aria-expanded="false" aria-haspopup="menu" aria-label="Share post" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M12 2.59l5.7 5.7-1.41 1.42L13 6.41V16h-2V6.41l-3.3 3.3-1.41-1.42L12 2.59zM21 15l-.02 3.51c0 1.38-1.12 2.49-2.5 2.49H5.5C4.11 21 3 19.88 3 18.5V15h2v3.5c0 .28.22.5.5.5h12.98c.28 0 .5-.22.5-.5L19 15h2z"></path></g></svg></div></div></button></div></div></div></div><div class="css-175oi2r r-1knelpx" data-testid="twitterArticleRichTextView"><div class="css-175oi2r r-37j5jr"><div class="DraftEditor-root"><div class="DraftEditor-editorContainer"><div aria-describedby="placeholder-5fo21" class="public-DraftEditor-content" contenteditable="false" data-testid="longformRichTextComponent" spellcheck="false" style="outline: none; user-select: text; white-space: pre-wrap; overflow-wrap: break-word;"><div data-contents="true"><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="29dla-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="29dla-0-0"><span data-offset-key="29dla-0-0"><span data-text="true">Boris Cherny 是 Anthropic 内部 Claude Code 的创建者，从一个三人小团队的孵化项目做起，把“在 IDE 里按 Tab 自动补全一行代码”这件事彻底升级成“让 Agent 把整个项目写完”。Claude Code 在 2026 年初已经超过十亿美元年化营收，被 Anthropic 自己称为“史上从研究预览到十亿美元产品最快的一次”。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="70l4j-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="70l4j-0-0"><span data-offset-key="70l4j-0-0"><span data-text="true">这次访谈来自 Sequoia 2026 年的 AI Ascent 大会，主持人是红杉合伙人 Lauren Reeder。</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="5fo21" data-offset-key="cba36-0-0"><div class="css-175oi2r r-1nxhmzv"><div class="css-175oi2r r-13qz1uu"><div class="css-175oi2r r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-175oi2r"><div class="css-175oi2r r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-175oi2r r-1pi2tsx r-1ny4l3l r-1loqt21" href="/dotey/article/2051688341519609897/media/2051687905215512581" role="link"><div class="css-175oi2r r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 56.25%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="Image" class="css-175oi2r r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-175oi2r r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HHkPR4xWAAUhUWv?format=jpg&amp;name=small");'></div><img alt="Image" class="css-9pa8cd" draggable="true" src="assets/63e5f497f1fc46e3ee584fdfd48a2a01.jpg"/></div></div></div></a></div></div></div></div></div></section><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="40cqv-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="40cqv-0-0"><span data-offset-key="40cqv-0-0"><span data-text="true">原始视频：</span></span><div class="css-175oi2r r-1loqt21 r-1471scf r-o7ynqc r-6416eg r-1ny4l3l"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-rjixqe r-16dba41 r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="https://www.youtube.com/watch?v=SlGRN8jh2RI" rel="noopener noreferrer nofollow" role="link" style="color: rgb(15, 20, 25);" target="_blank"><span data-offset-key="40cqv-1-0"><span data-text="true">https://www.youtube.com/watch?v=SlGRN8jh2RI</span></span></a></div></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="5fo21" data-offset-key="7d4kf-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7d4kf-0-0"><span data-offset-key="7d4kf-0-0"><span data-text="true">要点速览</span></span></div></h2></div><ul class="public-DraftStyleDefault-ul" data-offset-key="9gfnd-0-0"><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-reset public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="5fo21" data-offset-key="9gfnd-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9gfnd-0-0"><span data-offset-key="9gfnd-0-0" style="font-weight: bold;"><span data-text="true">Boris 整个 2026 年没写过一行代码</span></span><span data-offset-key="9gfnd-0-1"><span data-text="true">，每天合并几十个 PR，单日记录是 150 个，但他承认这是“为了试试模型能跑多远”。</span></span></div></li><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="5fo21" data-offset-key="ejvta-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="ejvta-0-0"><span data-offset-key="ejvta-0-0" style="font-weight: bold;"><span data-text="true">Claude Code 早期半年没有 PMF</span></span><span data-offset-key="ejvta-0-1"><span data-text="true">，做出来时 Boris 自己只用它写 10% 的代码，是 Opus 4 在 2025 年 5 月发布之后才开始指数增长，每一代新模型都让曲线再往上拐一下。</span></span></div></li><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="5fo21" data-offset-key="474gp-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="474gp-0-0"><span data-offset-key="474gp-0-0" style="font-weight: bold;"><span data-text="true">Boris 现在大部分工作从手机完成</span></span><span data-offset-key="474gp-0-1"><span data-text="true">，Claude App 里常驻 5 到 10 个 session、几百个 Agent，夜里有几千个在跑深度任务，核心调度模式叫 Loop，做法是让 Claude 通过 cron 起一个定时循环。</span></span></div></li><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="5fo21" data-offset-key="9atj5-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9atj5-0-0"><span data-offset-key="9atj5-0-0" style="font-weight: bold;"><span data-text="true">Anthropic 内部已经没有手写代码</span></span><span data-offset-key="9atj5-0-1"><span data-text="true">：所有 SQL、所有产品代码都由模型生成，员工的 Claude 之间通过 Slack 互相沟通，把对方的不确定问题直接 ping 过去问。</span></span></div></li><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="5fo21" data-offset-key="3b8pe-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="3b8pe-0-0"><span data-offset-key="3b8pe-0-0" style="font-weight: bold;"><span data-text="true">关于“SaaS 的终结”</span></span><span data-offset-key="3b8pe-0-1"><span data-text="true">，Boris 借用 Hamilton Helmer 的“七种护城河”框架：切换成本和流程效力这两种会被 AI 抹平，因为模型可以帮你迁移、可以自己迭代流程；网络效应、规模经济、独占资源这些不变。</span></span></div></li><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="5fo21" data-offset-key="en0q9-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="en0q9-0-0"><span data-offset-key="en0q9-0-0" style="font-weight: bold;"><span data-text="true">他给出的最重要历史类比是印刷术</span></span><span data-offset-key="en0q9-0-1"><span data-text="true">，认为软件构建会像识字一样普及，最合适写会计软件的是会计师而不是工程师，因为编程是简单部分，懂业务才是难的部分。</span></span></div></li><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="5fo21" data-offset-key="75qg9-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="75qg9-0-0"><span data-offset-key="75qg9-0-0" style="font-weight: bold;"><span data-text="true">Anthropic 的真正领先不在技术</span></span><span data-offset-key="75qg9-0-1"><span data-text="true">，在组织流程：模型大家都能用，但内部组织怎么改造、Claude 怎么互相沟通、整个公司怎么把所有手写代码替换掉，这才是产品差距。</span></span></div></li></ul><section class="" contenteditable="false" data-block="true" data-editor="5fo21" data-offset-key="fgdgf-0-0"><div class="css-175oi2r r-1nxhmzv"><div class="css-175oi2r r-13qz1uu"><div class="css-175oi2r r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-175oi2r"><div class="css-175oi2r r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-175oi2r r-1pi2tsx r-1ny4l3l r-1loqt21" href="/dotey/article/2051688341519609897/media/2051687955945734148" role="link"><div class="css-175oi2r r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 56.2799%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="Image" class="css-175oi2r r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-175oi2r r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HHkPU1wXwAQHYuV?format=jpg&amp;name=small");'></div><img alt="Image" class="css-9pa8cd" draggable="true" src="assets/c92b299a798acad1ef681b9a10c8850f.jpg"/></div></div></div></a></div></div></div></div></div></section><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="5fo21" data-offset-key="fttkg-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="fttkg-0-0"><span data-offset-key="fttkg-0-0"><span data-text="true">【1】Claude Code 是怎么从一个三人孵化项目做出来的</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="dqeia-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="dqeia-0-0"><span data-offset-key="dqeia-0-0"><span data-text="true">Boris 说他是“误打误撞”做出 Claude Code 的。2024 年底他加入了 Anthropic 内部一个叫 Anthropic Labs 的孵化器，团队只有几个人，一开始的产物就是 Claude Code、MCP 和 Claude Desktop App 这三件东西。这个团队一度被解散，2026 年初又重组，由 Mike Krieger 牵头。</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="5fo21" data-offset-key="bf6h1-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="bf6h1-0-0"><span data-offset-key="bf6h1-0-0" style="font-weight: bold;"><span data-text="true">注：</span></span><span data-offset-key="bf6h1-0-1"><span data-text="true"> Mike Krieger 是 Instagram 联合创始人兼前 CTO，2024 年 5 月加入 Anthropic 担任首席产品官，2026 年 1 月起进入 Labs 团队，和 Ben Mann 一起负责实验性产品孵化。</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="7c04t-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7c04t-0-0"><span data-offset-key="7c04t-0-0"><span data-text="true">Boris 描述他当时为什么想做编程这件事，用的是 Anthropic 内部很常用的一个词：“product overhang”。这个词可以翻译成“产品悬置（Product Overhang，指模型能力已经具备但尚未被产品化）”，意思是模型已经能做一堆事情，但还没有任何产品把这些能力展现出来。</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="5fo21" data-offset-key="bio7a-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="bio7a-0-0"><span data-offset-key="bio7a-0-0"><span data-text="true">我们当时看编程领域，2024 年底最先进的状态就是按 Tab 键。打开 IDE，按一下 Tab，模型给你补一行。这是 Sonnet 3.5 第一次让人能做的事情。但当时的感觉是，我们其实可以走得更远，模型几乎已经准备好下一步了。我们不需要再做 Tab 补全，可以直接让 Agent 把整段代码都写了。</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="24sv7-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="24sv7-0-0"><span data-offset-key="24sv7-0-0"><span data-text="true">但做出来之后，前六个月几乎没什么人用。Boris 说最初版本“基本不能用”，连他自己也只用它写 10% 的代码。即便对外发布，也没有指数级增长。真正的爆发点是 2025 年 5 月 Opus 4 发布。从那之后，每一代新模型都让曲线再往上拐一次，从 Opus 4 到 4.5、4.6，再到现在的 4.7。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="d7ml6-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="d7ml6-0-0"><span data-offset-key="d7ml6-0-0"><span data-text="true">他承认整个过程其实是一场违背常规 PMF（产品市场匹配）逻辑的赌注：</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="5fo21" data-offset-key="1b4ij-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1b4ij-0-0"><span data-offset-key="1b4ij-0-0"><span data-text="true">我们其实是在做一个初期完全不具备 PMF 的东西。我们很清楚它前六个月不会有 PMF，因为我们是在为下一代模型做开发。我们从始至终就是这个思路。</span></span></div></blockquote><blockquote class="longform-blockquote" data-block="true" data-editor="5fo21" data-offset-key="b4ort-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="b4ort-0-0"><span data-offset-key="b4ort-0-0" style="font-weight: bold;"><span data-text="true">注：</span></span><span data-offset-key="b4ort-0-1"><span data-text="true"> PMF 是 Product-Market Fit，产品市场匹配。Anthropic 整个产品逻辑就是赌“模型能力会涨到一个点”，提前把那个点对应的产品做出来，这和典型 SaaS 的“先验证需求再做产品”是反着的。</span></span></div></blockquote><section class="" contenteditable="false" data-block="true" data-editor="5fo21" data-offset-key="du3hl-0-0"><div class="css-175oi2r r-1nxhmzv"><div class="css-175oi2r r-13qz1uu"><div class="css-175oi2r r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-175oi2r"><div class="css-175oi2r r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-175oi2r r-1pi2tsx r-1ny4l3l r-1loqt21" href="/dotey/article/2051688341519609897/media/2051688001814536193" role="link"><div class="css-175oi2r r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 56.2799%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="Image" class="css-175oi2r r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-175oi2r r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HHkPXgoWIAEp56J?format=jpg&amp;name=small");'></div><img alt="Image" class="css-9pa8cd" draggable="true" src="assets/fae20e4630b589424c40ee845202a68a.jpg"/></div></div></div></a></div></div></div></div></div></section><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="5fo21" data-offset-key="5ippt-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5ippt-0-0"><span data-offset-key="5ippt-0-0"><span data-text="true">【2】“编程已经被解决”，但这是 Boris 个人的版本</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="evhi2-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="evhi2-0-0"><span data-offset-key="evhi2-0-0"><span data-text="true">Lauren 问他公开说过的“编程已经被解决”是什么意思。Boris 在台上做了一次现场调查，让全场观众举手示意：“谁 100% 还在亲自写代码”、“谁 100% 已经完全不写了”、“谁介于两者之间”。最后的现场分布大致是“50% 解决”。但对 Boris 自己，比例是 100%。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="7hf5m-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7hf5m-0-0"><span data-offset-key="7hf5m-0-0"><span data-text="true">他给的解释是 Claude Code 的代码库（已经因为泄露事件被外界看过）就是 TypeScript 和 React，没什么秘密。选 TypeScript 和 React 的原因是这两个东西在模型训练数据里非常常见，属于“on-distribution（分布内数据）”。当时模型还没那么聪明，框架选择关系到模型能写多少。现在模型已经强到可以拿不熟悉的语言现学现用，但 2024 年底必须挑模型最熟的栈。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="7ofok-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7ofok-0-0"><span data-offset-key="7ofok-0-0"><span data-text="true">正因为选了模型最熟的栈，团队很早就过了一个临界点：模型开始写 100% 的代码。Boris 说这件事在去年 10 月、11 月就发生了。</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="5fo21" data-offset-key="7mqc6-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7mqc6-0-0"><span data-offset-key="7mqc6-0-0"><span data-text="true">现在我每天大概合并几十个 PR。上周有一天我合了 150 个，那是个记录，我就是想看看能不能把它推到极限。</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="dssre-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="dssre-0-0"><span data-offset-key="dssre-0-0"><span data-text="true">但他也明确承认，这条结论并不普世：还有很大很复杂的代码库、还有模型不擅长的小众语言。他给出的一句答案有点“等就完事了”的味道。</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="5fo21" data-offset-key="sunt-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="sunt-0-0"><span data-offset-key="sunt-0-0"><span data-text="true">通常的答案就是等下一代模型。</span></span></div></blockquote><blockquote class="longform-blockquote" data-block="true" data-editor="5fo21" data-offset-key="8lbod-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8lbod-0-0"><span data-offset-key="8lbod-0-0" style="font-weight: bold;"><span data-text="true">注：</span></span><span data-offset-key="8lbod-0-1"><span data-text="true"> Boris 这段说法的样本明显有偏。他用的是 TypeScript+React 这种主流栈，自己的代码库已经成熟，还在 Anthropic 内部用着内部专属模型 Mythos 来 dogfood（吃自己的狗粮，指内部试用自己的产品）。“编程已被解决”对他成立，但替换到一个三十年的 C++ 老系统、一个 SAP ABAP 项目，或者一个游戏引擎团队，结论会非常不同。</span></span></div></blockquote><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="5fo21" data-offset-key="5q6ge-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5q6ge-0-0"><span data-offset-key="5q6ge-0-0"><span data-text="true">【3】手机里跑着几百个 Agent：Boris 的工作流</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="b42a3-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="b42a3-0-0"><span data-offset-key="b42a3-0-0"><span data-text="true">Boris 说他六个月前在 Twitter 上分享过一次个人工作流，发的时候没觉得有什么稀奇，结果出乎意料地火。从那以后他的方式又变了：现在大多数工作从手机完成。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="7tok1-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7tok1-0-0"><span data-offset-key="7tok1-0-0"><span data-text="true">具体方式是 Claude App 左侧有个 code 标签，他常驻 5 到 10 个 session。每个 session 里又开着一堆 Agent，加起来通常有几百个在跑。晚上还会再起几千个做更深的任务。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="acfqg-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="acfqg-0-0"><span data-offset-key="acfqg-0-0"><span data-text="true">他说目前最常用的不是子 Agent，而是一种叫 Loop 的简单模式：让 Claude 用 cron 起一个定时任务，可以每分钟、每五分钟、或者每天跑一次。</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="5fo21" data-offset-key="9id1e-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9id1e-0-0"><span data-offset-key="9id1e-0-0"><span data-text="true">我大概有几十个 Loop 一直在跑。一个负责盯着我的 PR，自动修 CI、自动 rebase；一个负责让 CI 整体保持健康，比如某个测试 flaky（时好时坏不稳定）了它就去修；还有一个每 30 分钟从 Twitter 上把别人对 Claude Code 的反馈拉一遍、聚类、整理给我。</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="11ghc-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="11ghc-0-0"><span data-offset-key="11ghc-0-0"><span data-text="true">他还提到 Anthropic 刚发的 Routines，这个产品其实是把同样的 Loop 模式从本地搬到服务器上，关掉笔记本它也照常跑。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="ab3r6-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="ab3r6-0-0"><span data-offset-key="ab3r6-0-0"><span data-text="true">他对这件事的判断是：</span></span><span data-offset-key="ab3r6-0-1" style="font-weight: bold;"><span data-text="true">“Loop 是未来。”</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="5fo21" data-offset-key="ao2tk-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="ao2tk-0-0"><span data-offset-key="ao2tk-0-0" style="font-weight: bold;"><span data-text="true">注：</span></span><span data-offset-key="ao2tk-0-1"><span data-text="true"> CI 是 Continuous Integration，持续集成。Boris 描述的这套工作流核心其实很简单：更早地放弃“亲自下指令”。他做的事情是让一群 Claude 不停地干活，而他自己只在 Slack 上接收报告。从产品视角看，Routines 把 Loop 从客户端模式变成 Anthropic 自己托管的服务，调度本身要开始消耗他们的服务器资源，定价模型迟早要变。</span></span></div></blockquote><section class="" contenteditable="false" data-block="true" data-editor="5fo21" data-offset-key="fprql-0-0"><div class="css-175oi2r r-1nxhmzv"><div class="css-175oi2r r-13qz1uu"><div class="css-175oi2r r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-175oi2r"><div class="css-175oi2r r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-175oi2r r-1pi2tsx r-1ny4l3l r-1loqt21" href="/dotey/article/2051688341519609897/media/2051688047045902337" role="link"><div class="css-175oi2r r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 56.2799%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="Image" class="css-175oi2r r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-175oi2r r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HHkPaJIWAAEDkMR?format=jpg&amp;name=small");'></div><img alt="Image" class="css-9pa8cd" draggable="true" src="assets/8d23bd3a5cd0b2e0d4aaf52d1963edef.jpg"/></div></div></div></a></div></div></div></div></div></section><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="5fo21" data-offset-key="850r-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="850r-0-0"><span data-offset-key="850r-0-0"><span data-text="true">【4】通才崛起：团队里每一个角色都在写代码</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="7auno-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7auno-0-0"><span data-offset-key="7auno-0-0"><span data-text="true">Boris 说他的判断是 </span></span><span data-offset-key="7auno-0-1" style="font-weight: bold;"><span data-text="true">“通才会比今天多得多”</span></span><span data-offset-key="7auno-0-2"><span data-text="true">。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="bconp-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="bconp-0-0"><span data-offset-key="bconp-0-0"><span data-text="true">他先把“通才”分了两种：第一种是工程通才，比如一个人同时写 iOS、Web 和服务端，今天大家说的 generalist 多半是这种。第二种是更值得关注的跨学科通才，一个产品工程师同时也很懂设计，或者既能做产品也能做数据科学。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="e965v-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="e965v-0-0"><span data-offset-key="e965v-0-0"><span data-text="true">他说这件事在 Claude Code 团队内部已经在发生：</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="5fo21" data-offset-key="5ulpr-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5ulpr-0-0"><span data-offset-key="5ulpr-0-0"><span data-text="true">我们团队的工程经理、产品经理、设计师、数据科学家、财务、用户研究员，每一个人都在写代码。每个人都还在某件事上是专家，但也都在写代码了。</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="e1rq-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="e1rq-0-0"><span data-offset-key="e1rq-0-0"><span data-text="true">他没有展开“为什么这是好事”，但暗含的逻辑是：当写代码的边际成本接近于零，那些原本被排除在工程之外的角色（财务、设计、研究）就有了直接出工程产物的能力，分工的边界自然会模糊。</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="5fo21" data-offset-key="4t96u-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4t96u-0-0"><span data-offset-key="4t96u-0-0" style="font-weight: bold;"><span data-text="true">注：</span></span><span data-offset-key="4t96u-0-1"><span data-text="true"> 这个判断在创业公司里很容易验证，但放在大型企业里就麻烦得多。一个 5000 人的银行 IT 部门有合规、风控、变更管理、审计追踪等等约束，这些不是“我会写代码”就能跨过去的。Boris 谈的是 Anthropic 自己这样规模较小、流程很轻的公司，迁移到其他规模和行业之前，需要打个折扣。</span></span></div></blockquote><section class="" contenteditable="false" data-block="true" data-editor="5fo21" data-offset-key="b9qjn-0-0"><div class="css-175oi2r r-1nxhmzv"><div class="css-175oi2r r-13qz1uu"><div class="css-175oi2r r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-175oi2r"><div class="css-175oi2r r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-175oi2r r-1pi2tsx r-1ny4l3l r-1loqt21" href="/dotey/article/2051688341519609897/media/2051688092856127492" role="link"><div class="css-175oi2r r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 56.2799%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="Image" class="css-175oi2r r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-175oi2r r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HHkPczyWkAQbWke?format=jpg&amp;name=small");'></div><img alt="Image" class="css-9pa8cd" draggable="true" src="assets/ecd705565412caad9cb15def163a17a1.jpg"/></div></div></div></a></div></div></div></div></div></section><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="5fo21" data-offset-key="b9rod-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="b9rod-0-0"><span data-offset-key="b9rod-0-0"><span data-text="true">【5】SaaS 的终结：哪些护城河会被 AI 抹平，哪些还留着</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="9vl3o-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9vl3o-0-0"><span data-offset-key="9vl3o-0-0"><span data-text="true">Lauren 问：写代码现在便宜了 10 倍、100 倍，那靠软件做出来的产品的价值会怎么变化？我们是不是要面对一场 SaaS 的终结？</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="at61-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="at61-0-0"><span data-offset-key="at61-0-0"><span data-text="true">Boris 说这是他最爱的问题。然后他借用了一个外部框架来回答：Hamilton Helmer 的“Seven Powers”。</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="5fo21" data-offset-key="4qrjc-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4qrjc-0-0"><span data-offset-key="4qrjc-0-0" style="font-weight: bold;"><span data-text="true">注：</span></span><span data-offset-key="4qrjc-0-1"><span data-text="true"> Hamilton Helmer 是策略学家、Strategy Capital 创始人，2016 年出版《7 Powers: The Foundations of Business Strategy》。书里把可持续竞争优势分成七种：规模经济、网络效应、反向定位、切换成本、品牌、独占资源、流程效力。这本书在硅谷非常流行，Reed Hastings、Daniel Ek、Patrick Collison 都给过推荐语。</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="8o4u4-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8o4u4-0-0"><span data-offset-key="8o4u4-0-0" style="font-weight: bold;"><span data-text="true">Boris 的判断是 AI 会把其中两种护城河抹平：</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="9bcsf-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9bcsf-0-0"><span data-offset-key="9bcsf-0-0"><span data-text="true">第一种是切换成本。原因很直接，模型可以帮用户从一个工具迁到另一个工具，原本“我已经在 Salesforce 上配了三百个工作流，没法换”这件事，模型一夜之间就能帮你迁完。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="72ba1-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="72ba1-0-0"><span data-offset-key="72ba1-0-0"><span data-text="true">第二种是流程效力，也就是那种“我们的工作流和流程别人复制不了”的优势。Boris 说 Claude 4.7 已经能“hill-climb（爬坡式优化，即逐步逼近最优解）”任何东西，你设定一个目标，让它自己迭代优化，它最终就能达成那个效果。流程优化原本是大公司多年积累出来的内部资产，现在被模型直接吃掉了。</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="5fo21" data-offset-key="532q-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="532q-0-0"><span data-offset-key="532q-0-0"><span data-text="true">这是第一个能做到这件事的模型。你给它定下目标，让它不断运行直到达成，它就能自动执行到底。</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="rcfh-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="rcfh-0-0"><span data-offset-key="rcfh-0-0"><span data-text="true">但他认为另外几种护城河没有被改变：网络效应、规模经济、独占资源依旧成立。换句话说，那些“用户越多越好用”的产品（社交、平台、市场）和那些“我有一个别人拿不到的资源”的公司（专利、特许牌照、独家合同）依旧安全。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="d6fs2-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="d6fs2-0-0"><span data-offset-key="d6fs2-0-0"><span data-text="true">第二个判断更激进：</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="5fo21" data-offset-key="bv9q9-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="bv9q9-0-0"><span data-offset-key="bv9q9-0-0"><span data-text="true">接下来 10 年里，能颠覆原有市场的初创公司数量大概会比过去 10 年多 10 倍。因为现在你可以做一家很小的公司，做出和大公司一样有价值的产品，然后正面竞争。大公司要改业务流程、要重新培训员工、内部还会一堆抵抗，但你不需要，你是从一张白纸开始的。</span></span></div></blockquote><blockquote class="longform-blockquote" data-block="true" data-editor="5fo21" data-offset-key="a5odu-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="a5odu-0-0"><span data-offset-key="a5odu-0-0" style="font-weight: bold;"><span data-text="true">注：</span></span><span data-offset-key="a5odu-0-1"><span data-text="true"> Boris 关于切换成本会被抹平的判断有结构性争议。模型确实能帮你迁数据，但企业 SaaS 的真正切换成本另在他处：合规审计、合同条款、组织里的“使用习惯”和供应商认证。Salesforce 和 SAP 的护城河靠的从来是这套审批和惯性，技术本身只占很小一部分。Anthropic 自己的 Cowork 已经在挑战这一点，但市场反应（2026 年 2 月软件股蒸发 2850 亿美元市值）说明投资人在押注他的判断成立。这是一笔很大的赌注，未必很快收敛。</span></span></div></blockquote><section class="" contenteditable="false" data-block="true" data-editor="5fo21" data-offset-key="agg9o-0-0"><div class="css-175oi2r r-1nxhmzv"><div class="css-175oi2r r-13qz1uu"><div class="css-175oi2r r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-175oi2r"><div class="css-175oi2r r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-175oi2r r-1pi2tsx r-1ny4l3l r-1loqt21" href="/dotey/article/2051688341519609897/media/2051688137953280006" role="link"><div class="css-175oi2r r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 56.2799%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="Image" class="css-175oi2r r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-175oi2r r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HHkPfbyWgAYWkCm?format=jpg&amp;name=small");'></div><img alt="Image" class="css-9pa8cd" draggable="true" src="assets/757d5bcae7ea1bdd69d67fd7a5d0fc3a.jpg"/></div></div></div></a></div></div></div></div></div></section><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="5fo21" data-offset-key="90ib5-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="90ib5-0-0"><span data-offset-key="90ib5-0-0"><span data-text="true">【6】产品 vs 模型：模型变强了，产品的价值还剩多少</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="7m35v-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7m35v-0-0"><span data-offset-key="7m35v-0-0"><span data-text="true">观众 Dan 问：Claude Code 的成功你会怎么归因？产品决策和模型本身各占多少？</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="3nd5p-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="3nd5p-0-0"><span data-offset-key="3nd5p-0-0"><span data-text="true">Boris 没有给出一个简单明确的答案。他先说一年前可能是 50/50，六个月前可能也是 50/50。两年后呢？他直接说：“不知道，我们一次只做一周的计划。”</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="9cui0-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9cui0-0-0"><span data-offset-key="9cui0-0-0"><span data-text="true">但接着他给了一个更有意思的回答：</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="5fo21" data-offset-key="218dt-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="218dt-0-0"><span data-offset-key="218dt-0-0"><span data-text="true">我以前在 YC 待过，做过几家初创公司。YC 反复跟你强调的就是：做一个用户爱用的东西。不管模型多强、不管你做的是什么品类，最后你都得做出一个用户真的爱用的东西。这就是产品为什么重要。我们花了大量精力在小细节上，因为你一整天都在用它，那这些细节就构成了体验。</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="fli7n-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="fli7n-0-0"><span data-offset-key="fli7n-0-0"><span data-text="true">他同时也承认，随着模型变强，外面那一层“harness”（脚手架、调用框架）会变得没那么重要。一年后产品安全机制（prompt injection [提示词注入] 防御、命令静态校验、permission mode、human-in-the-loop [人类在环，即关键决策保留人工确认]）可能都不需要那么多了，因为模型自己就会做对的事。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="6hrem-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="6hrem-0-0"><span data-offset-key="6hrem-0-0"><span data-text="true">他的产品方向也不是再加一层皮，而是去想：怎么让 Loop 变成一等公民？怎么让一个人同时跑很多个 Agent 这件事更顺手？</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="5fo21" data-offset-key="8r1fh-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8r1fh-0-0"><span data-offset-key="8r1fh-0-0" style="font-weight: bold;"><span data-text="true">注：</span></span><span data-offset-key="8r1fh-0-1"><span data-text="true"> Boris 这一段实际上承认了 Anthropic 自己内部的一个判断：随着模型能力上升，应用层的差异化窗口在缩短。这对独立的 AI 应用公司是个不太友好的信号。你今天在 Claude API 上加的那一层 wrapper（包装器/套壳应用）、那一套 prompt engineering、那一套权限管理，可能一年内就会被基础模型自己内化掉。</span></span></div></blockquote><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="5fo21" data-offset-key="442t2-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="442t2-0-0"><span data-offset-key="442t2-0-0"><span data-text="true">【7】软件大众化：从印刷术到发短信</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="d76va-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="d76va-0-0"><span data-offset-key="d76va-0-0"><span data-text="true">观众问：Claude Code 会不会让“建软件”变成一种像“会用 Office”那样人人都该会的技能？</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="e8jvt-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="e8jvt-0-0"><span data-offset-key="e8jvt-0-0"><span data-text="true">Boris 的回答是：</span></span><span data-offset-key="e8jvt-0-1" style="font-weight: bold;"><span data-text="true">会，而且比这更夸张。</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="5fo21" data-offset-key="8o9uq-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8o9uq-0-0"><span data-offset-key="8o9uq-0-0"><span data-text="true">我觉得它会变成一种“我会发短信”那种级别的技能。</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="5q1bh-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5q1bh-0-0"><span data-offset-key="5q1bh-0-0"><span data-text="true">他展开讲了他最爱的历史类比：印刷术。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="c3alq-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="c3alq-0-0"><span data-offset-key="c3alq-0-0"><span data-text="true">按 Boris 的说法，1400 年代欧洲只有大约 10% 的人识字，他们经常被国王和贵族雇来代笔。古登堡发明印刷术之后又出现了两台改良型印刷机，接下来的 50 年欧洲出版的文献比之前 1000 年加起来还多，一本书的成本下降了大约 100 倍。又过了几百年，全球识字率上升到 70%。今天我们都会读写，但还存在“专业作家”这个职业。</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="5fo21" data-offset-key="dsk9l-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="dsk9l-0-0"><span data-offset-key="dsk9l-0-0" style="font-weight: bold;"><span data-text="true">注：</span></span><span data-offset-key="dsk9l-0-1"><span data-text="true"> Boris 给的几个数字偏低。15 世纪初欧洲成年识字率，学界估计是 25-30% 而非 10%；今天全球识字率，世界银行的数据接近 90% 而非 70%。但他要表达的方向是对的：印刷术是欧洲文化史上最重要的去专业化事件之一。1500 年时全欧洲的印刷书籍数量已经超过两千万册。</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="6545q-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="6545q-0-0"><span data-offset-key="6545q-0-0"><span data-text="true">Boris 的推论是，软件也会经历同样的过程，时间会比 50 年快得多。然后他给了一个具体的角度：</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="5fo21" data-offset-key="e304u-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="e304u-0-0"><span data-offset-key="e304u-0-0"><span data-text="true">比如说写会计软件。今天写会计软件最合适的人，我觉得已经不是工程师了，是一个真正懂业务的会计师。因为他对领域熟得不能再熟，写代码反而是简单的部分。</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="14j1s-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="14j1s-0-0"><span data-offset-key="14j1s-0-0"><span data-text="true">这个判断背后的潜台词也很清楚：未来一段时间最容易被取代的岗位，是那种“只会写代码、不懂任何垂直领域业务”的纯技术工程师。</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="5fo21" data-offset-key="2tj8r-0-0"><div class="css-175oi2r r-1nxhmzv"><div class="css-175oi2r r-13qz1uu"><div class="css-175oi2r r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-175oi2r"><div class="css-175oi2r r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-175oi2r r-1pi2tsx r-1ny4l3l r-1loqt21" href="/dotey/article/2051688341519609897/media/2051688188104581124" role="link"><div class="css-175oi2r r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 56.2799%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="Image" class="css-175oi2r r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-175oi2r r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HHkPiWnWoAQaF0q?format=jpg&amp;name=small");'></div><img alt="Image" class="css-9pa8cd" draggable="true" src="assets/69efbe0150fd085962d5047bd10c0bfa.jpg"/></div></div></div></a></div></div></div></div></div></section><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="5fo21" data-offset-key="49f5f-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="49f5f-0-0"><span data-offset-key="49f5f-0-0"><span data-text="true">【8】真正的内部领先在组织流程，而非技术</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="4q0gu-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4q0gu-0-0"><span data-offset-key="4q0gu-0-0"><span data-text="true">观众问：之前有人说你们这种公司是“活在未来”，因为你们能用到模型和产品的最早版本。Claude Code 在外发之前是内部工具。Anthropic 的工程实践和外面的差距，是一个月、三个月、还是六个月？这个差距在变大还是变小？</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="f6tev-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="f6tev-0-0"><span data-offset-key="f6tev-0-0"><span data-text="true">Boris 的答案是模型层基本没差距：内部用的就是 Mythos 和 Opus 4.7，“Mythos 我们用一点点试，Opus 4.7 是我们内部试用（dogfooding）的主力”。这些模型未来的某个变体也会对外开放。</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="5fo21" data-offset-key="e6obb-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="e6obb-0-0"><span data-offset-key="e6obb-0-0" style="font-weight: bold;"><span data-text="true">注：</span></span><span data-offset-key="e6obb-0-1"><span data-text="true"> Mythos 是 Anthropic 在 2026 年 4 月公开承认存在的内部前沿模型，对外仅在 Project Glasswing 这个网络安全防御计划内开放，不在 API 也不在 </span></span><div class="css-175oi2r r-1loqt21 r-1471scf r-o7ynqc r-6416eg r-1ny4l3l"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-rjixqe r-16dba41 r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="//Claude.ai" rel="noopener noreferrer nofollow" role="link" style="color: rgb(15, 20, 25);" target="_blank"><span data-offset-key="e6obb-1-0"><span data-text="true">Claude.ai</span></span></a></div><span data-offset-key="e6obb-2-0"><span data-text="true">。它在 SWE-bench 上达到 93.9%、USAMO 97.6%，宣称“显著超过任何已发布模型”。Boris 这里承认 Anthropic 内部用 Mythos 来 dogfood Claude Code 自己。换句话说，外界用到的 Claude Code，是用一个没公开的更强模型一起搭出来的。</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="df6a6-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="df6a6-0-0"><span data-offset-key="df6a6-0-0"><span data-text="true">但他认为产品层有更大差距，原因来自流程，跟模型本身没关系：</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="5fo21" data-offset-key="3fv69-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="3fv69-0-0"><span data-offset-key="3fv69-0-0"><span data-text="true">在 Anthropic 我们已经把 Claude 用到一切环节。我在写代码的时候，我的几个 Claude 在 Loop 里跑，它们会通过 Slack 去找其他人的 Claude 聊天，把不确定的事情问出来。我们整个公司没有任何手写代码了。所有 SQL 都是模型写的。</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="2gfvn-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="2gfvn-0-0"><span data-offset-key="2gfvn-0-0"><span data-text="true">他的结论是：</span></span><span data-offset-key="2gfvn-0-1" style="font-weight: bold;"><span data-text="true">领先的关键在组织怎么改造自己。</span></span><span data-offset-key="2gfvn-0-2"><span data-text="true"> 技术大家都能拿到，但要把整个公司从手写代码切到模型生成代码，要让员工的 Claude 之间通过 Slack 互相问问题，要让所有 SQL 都不用自己写，这是组织行为的改造，比技术本身慢得多。</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="5fo21" data-offset-key="buhnp-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="buhnp-0-0"><span data-offset-key="buhnp-0-0" style="font-weight: bold;"><span data-text="true">注：</span></span><span data-offset-key="buhnp-0-1"><span data-text="true"> “我们没有任何手写代码”是个大胆的表述，可能不完全字面准确（基础设施代码、合规代码、安全敏感代码大概率还是手写），但方向上反映了 Anthropic 对工程组织的激进重塑。这也回答了一个常见困惑：很多公司接入了 Claude API 但没看到生产力变化，问题往往出在组织没跟着重组，模型其实已经够强了。Mike Krieger 在另一个采访里给过类似口径：“Claude 现在写 90-95% 的代码，瓶颈不在工程，在决策。”</span></span></div></blockquote><section class="" contenteditable="false" data-block="true" data-editor="5fo21" data-offset-key="3fa74-0-0"><div class="css-175oi2r r-1nxhmzv"><div class="css-175oi2r r-13qz1uu"><div class="css-175oi2r r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-175oi2r"><div class="css-175oi2r r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-175oi2r r-1pi2tsx r-1ny4l3l r-1loqt21" href="/dotey/article/2051688341519609897/media/2051688234137116672" role="link"><div class="css-175oi2r r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 56.2799%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="Image" class="css-175oi2r r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-175oi2r r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HHkPlCGXYAAeci5?format=jpg&amp;name=small");'></div><img alt="Image" class="css-9pa8cd" draggable="true" src="assets/0e5336d6102e57048528b11e0da730cb.jpg"/></div></div></div></a></div></div></div></div></div></section><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="5fo21" data-offset-key="4pmu2-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4pmu2-0-0"><span data-offset-key="4pmu2-0-0"><span data-text="true">【9】并行 Agent 与本地模型：用户不该操心这些事</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="7icrt-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7icrt-0-0"><span data-offset-key="7icrt-0-0"><span data-text="true">观众 Jiren 问：你们在产品和模型层面分别是怎么注入“什么时候该并行”这种先决条件的？因为现在用户得自己判断什么时候该开多个 Agent，这件事其实应该是模型自己懂。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="495gv-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="495gv-0-0"><span data-offset-key="495gv-0-0"><span data-text="true">Boris 说在产品层面就是改 prompt：调整提示词，让模型更倾向于自动并行。但他更想说的是模型自己在变好，4.7 已经会自然这么做。他举了一个例子：</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="5fo21" data-offset-key="b0803-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="b0803-0-0"><span data-offset-key="b0803-0-0"><span data-text="true">我让 4.7 跑一个数据查询，它会主动跟我说：“我注意到这个数据是在变化的，我帮你起一个 Loop，每 30 分钟给你一份报告。”我说“好啊，发到 Slack 上吧。”它就用 Slack MCP 自己接好了。</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="99tsr-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="99tsr-0-0"><span data-offset-key="99tsr-0-0"><span data-text="true">他的判断是，长期看用户不应该需要自己理解什么时候用 batch（批处理）、什么时候用 Loop、什么时候开几个 Agent：</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="5fo21" data-offset-key="9dooe-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9dooe-0-0"><span data-offset-key="9dooe-0-0"><span data-text="true">如果用户得自己学会怎么调度这些工具，那其实是产品设计没做好，是我没做好。这件事应该交给模型，加上我们怎么提示它。</span></span></div></blockquote><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="5fo21" data-offset-key="bimc8-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="bimc8-0-0"><span data-offset-key="bimc8-0-0"><span data-text="true">【10】云端 AI vs 本地 AI</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="d7mig-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="d7mig-0-0"><span data-offset-key="d7mig-0-0"><span data-text="true">观众问：现在大家用 Claude、用 Codex 都在云上。但也有不少人主张本地化 AI，开源权重模型追上之后，本地跑高质量代码助手是个有可能的方向。你看长期方向是云为主，还是本地崛起？</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="74saq-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="74saq-0-0"><span data-offset-key="74saq-0-0"><span data-text="true">Boris 的回答很直接：这件事并不重要。</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="5fo21" data-offset-key="e7kb3-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="e7kb3-0-0"><span data-offset-key="e7kb3-0-0"><span data-text="true">因为未来这些底层细节模型会自动处理。一两年后，模型自己就能独立完成写代码、启动 Agent、搭建环境的所有事情。如果它评估后认为“我应该用本地模型来做这件事”，它就会这么干。这些将不再需要工程师去人工决策。</span></span></div></blockquote><blockquote class="longform-blockquote" data-block="true" data-editor="5fo21" data-offset-key="e6ldu-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="e6ldu-0-0"><span data-offset-key="e6ldu-0-0" style="font-weight: bold;"><span data-text="true">注：</span></span><span data-offset-key="e6ldu-0-1"><span data-text="true"> 这个回答在 Sequoia 这种创业生态会议上其实很有意思。本地 AI 这件事在硬件厂商（NVIDIA、Apple、AMD）、开源社区（Llama、Qwen、Mistral）和隐私敏感行业里都有人在押注。Boris 直接把这个问题归类为“用户不该关心的实现细节”，等于把“模型部署位置”变成了“由更上层的 Agent 决定的路由问题”。这对靠“我们是本地优先”做差异化的初创公司不算好消息。</span></span></div></blockquote><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="5fo21" data-offset-key="ai5g4-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="ai5g4-0-0"><span data-offset-key="ai5g4-0-0"><span data-text="true">【11】MCP 与 Computer Use：知识工作怎么走 Claude Code 那条路</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="7cl9h-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7cl9h-0-0"><span data-offset-key="7cl9h-0-0"><span data-text="true">观众 Jamie Nestor 问：Claude Code 之所以好用，很大一部分原因是开发者的工作本来就在本地，文件、终端、Git 都在本机。但知识工作不是这样，文档、表格、CRM 都在云上。Cowork 这种产品要让这套东西像 Claude Code 对开发者那样好用，你怎么想？</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="efgfr-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="efgfr-0-0"><span data-offset-key="efgfr-0-0"><span data-text="true">Boris 先承认知识工作大部分早就在云上了：Salesforce、Google Docs 都是云原生。然后他给的答案非常简洁：</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="5fo21" data-offset-key="9s8rb-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9s8rb-0-0"><span data-offset-key="9s8rb-0-0"><span data-text="true">对我们来说答案永远是最简单的那个：MCP。Claude.ai 里你接的那个 Salesforce MCP 连接器，Cowork 也能用，Claude CLI 也能用，所有 Claude Code 的入口都能用。</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="fu9pi-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="fu9pi-0-0"><span data-offset-key="fu9pi-0-0"><span data-text="true">Jamie 追问：那对那些没有 MCP 的系统，Computer Use 是不是更大的机会？</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="bhn39-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="bhn39-0-0"><span data-offset-key="bhn39-0-0"><span data-text="true">Boris 说 Computer Use 是个 catch-all（包罗万象的兜底方案）：</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="5fo21" data-offset-key="bcbv1-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="bcbv1-0-0"><span data-offset-key="bcbv1-0-0"><span data-text="true">我所知道的是，Anthropic 在 Computer Use 上目前领先比较多。如果你通过 Cowork 用它，它基本上能操作你电脑上任何软件。慢，但用 4.7 之后做得很好。</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="ffg5p-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="ffg5p-0-0"><span data-offset-key="ffg5p-0-0"><span data-text="true">但他更愿意透过现象看本质，把这些当成同一种东西：</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="5fo21" data-offset-key="fplvu-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="fplvu-0-0"><span data-offset-key="fplvu-0-0"><span data-text="true">模型不在乎是 MCP、CLI 还是 API，它只看到 token。</span></span></div></blockquote><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="5fo21" data-offset-key="auvq8-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="auvq8-0-0"><span data-offset-key="auvq8-0-0"><span data-text="true">【12】下一波“产品悬置”在哪</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="e5738-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="e5738-0-0"><span data-offset-key="e5738-0-0"><span data-text="true">最后一位观众问：如果你们当年看到“产品悬置”就提前做了 Claude Code，那你们现在又在做什么，某个今天看起来还可以，但你预期六个月到一年后会很不一样的产品？</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="f6sko-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="f6sko-0-0"><span data-offset-key="f6sko-0-0"><span data-text="true">Boris 给的答案是 Claude Design：</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="5fo21" data-offset-key="e7f7t-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="e7f7t-0-0"><span data-offset-key="e7f7t-0-0"><span data-text="true">现在已经挺好用了，未来会好得多。</span></span></div></blockquote><blockquote class="longform-blockquote" data-block="true" data-editor="5fo21" data-offset-key="bgdbs-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="bgdbs-0-0"><span data-offset-key="bgdbs-0-0" style="font-weight: bold;"><span data-text="true">注：</span></span><span data-offset-key="bgdbs-0-1"><span data-text="true"> Claude Design 是 Anthropic Labs 在 2026 年 4 月 17 日和 Claude Opus 4.7 同步发布的产品，定位是“通过对话生成原型、幻灯片、营销页面的可视化工作台”，可以读取代码库自动套用 design system，可以一键导出到 Claude Code 或 Canva。Anthropic 直接把它定位成 Figma 和 Canva 的替代或补充。</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="ea8qg-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="ea8qg-0-0"><span data-offset-key="ea8qg-0-0"><span data-text="true">他还提到了几个方向：Claude Code 接下来几周会有新功能落地；Loop、Batch 这些把 Agent 大规模并行化的能力会越来越好；Computer Use 也是一个值得期待的方向。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="5fo21" data-offset-key="ci25h-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="ci25h-0-0"><span data-offset-key="ci25h-0-0"><span data-text="true">末尾 Q&amp;A 速览</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="bu6rp-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="bu6rp-0-0"><span data-offset-key="bu6rp-0-0" style="font-weight: bold;"><span data-text="true">Q：Claude Code 现在的成功，模型贡献多少，产品贡献多少？</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="dv4kt-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="dv4kt-0-0"><span data-offset-key="dv4kt-0-0"><span data-text="true">A：一年前是 50/50，半年前也是。两年后不知道，“我们一次只做一周的计划”。但他强调产品永远重要，因为最终用户买的是“我每天用着舒服”。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="63smc-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="63smc-0-0"><span data-offset-key="63smc-0-0" style="font-weight: bold;"><span data-text="true">Q：你看团队未来什么样？</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="6qnjl-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="6qnjl-0-0"><span data-offset-key="6qnjl-0-0"><span data-text="true">A：通才会越来越多，特别是跨学科通才，既能做产品又会写代码、做设计、懂数据科学。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="1dmfj-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1dmfj-0-0"><span data-offset-key="1dmfj-0-0" style="font-weight: bold;"><span data-text="true">Q：SaaS 真的要被颠覆了吗？</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="3fap2-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="3fap2-0-0"><span data-offset-key="3fap2-0-0"><span data-text="true">A：切换成本和流程效力这两种护城河会被 AI 抹平；网络效应、规模经济、独占资源会保留。下一个十年初创公司颠覆原市场的数量会多 10 倍。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="45mjl-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="45mjl-0-0"><span data-offset-key="45mjl-0-0" style="font-weight: bold;"><span data-text="true">Q：写代码会不会变成人人都会的技能？</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="726mm-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="726mm-0-0"><span data-offset-key="726mm-0-0"><span data-text="true">A：会，比“识字”更彻底。最适合做会计软件的是会计师，不是工程师。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="4q5dl-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4q5dl-0-0"><span data-offset-key="4q5dl-0-0" style="font-weight: bold;"><span data-text="true">Q：Anthropic 内部领先在哪？</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="459i5-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="459i5-0-0"><span data-offset-key="459i5-0-0"><span data-text="true">A：领先点不在模型，在组织。所有 SQL、所有产品代码都由模型写，员工的 Claude 之间通过 Slack 互相沟通。这套组织流程外面追起来比追模型慢。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="36jji-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="36jji-0-0"><span data-offset-key="36jji-0-0" style="font-weight: bold;"><span data-text="true">Q：本地 AI 还是云端 AI？</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="as4ua-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="as4ua-0-0"><span data-offset-key="as4ua-0-0"><span data-text="true">A：这件事不重要。两年后模型会自己决定路由。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="5fo21" data-offset-key="3gk0-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="3gk0-0-0"><span data-offset-key="3gk0-0-0"><span data-text="true">最后</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="9r90f-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9r90f-0-0"><span data-offset-key="9r90f-0-0"><span data-text="true">Boris 这场访谈给出的判断里，最值得长期跟踪的是三个环环相扣的预测。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="odke-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="odke-0-0"><span data-offset-key="odke-0-0"><span data-text="true">第一，“编程已被解决”对他个人是事实，但他在台上的样本是 TypeScript+React 这种最受模型偏爱的栈。真正考验这句话的是 SAP 这种企业代码库、嵌入式领域、底层系统编程，还有那些行业惯例不允许模型一键修改的高合规场景。这件事接下来一年内能不能扩散到这些领域，会决定“已被解决”是不是只对一小撮人成立。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="4eurk-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4eurk-0-0"><span data-offset-key="4eurk-0-0"><span data-text="true">第二，他把切换成本和流程效力划进“AI 会抹平的护城河”。这是 Anthropic 自己产品策略的底色，Cowork 就是赌切换成本会塌、企业 SaaS 用户能被一个桌面 Agent 直接接管工作流。2026 年 2 月软件股蒸发 2850 亿美元市值，是市场对这个判断的初步反应，但企业 IT 采购周期通常以 24 到 36 个月计，真正的兑现需要观察接下来两年企业续约和新增采购的方向。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="fchar-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="fchar-0-0"><span data-offset-key="fchar-0-0"><span data-text="true">第三，他给的印刷术类比，方向是对的，但在具体数据上有偏差。15 世纪欧洲识字率约 30% 而非他说的 10%，今日全球识字率约 90% 而非 70%。这个偏差不影响他的核心论点：印刷术之后用了 50 年完成的内容生产爆炸，软件领域可能用更短时间复制一次。但有一个他没展开的点：印刷术也催生了几百年间最严格的审查制度、版权战争和宗教改革引发的政治动荡。</span></span><span data-offset-key="fchar-0-1" style="font-weight: bold;"><span data-text="true">“软件人人都能写”对应的不只是创造力释放，也包括恶意软件、深伪诈骗、AI 生成漏洞利用的同步爆发。</span></span><span data-offset-key="fchar-0-2"><span data-text="true"> Anthropic 自己的 Mythos 模型已经在内部找出了几千个零日漏洞，他们用 Project Glasswing 控制释放节奏，说明他们也意识到这件事的另一面。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="9r5jg-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9r5jg-0-0"><span data-offset-key="9r5jg-0-0"><span data-text="true">Boris 关于安全机制将变得不重要的预测，也需要对照现实来看。他说一年后 prompt injection 防护、权限模式、human-in-the-loop 这些产品层面的安全护栏会变得不那么重要，“因为模型会自动做对的事”。但高权限自动化在生产环境里仍然需要外部控制层。2026 年 4 月，Guardian 报道过一起由 Claude Opus 4.6 驱动的 coding Agent 删除生产数据库和备份的事件。Anthropic 自己在 Opus 4.7 发布说明中也提到，模型整体安全画像与 4.6 类似，有些方面改进，但并非“完全理想”。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="9oicb-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9oicb-0-0"><span data-offset-key="9oicb-0-0"><span data-text="true">值得关注的两个具体信号：第一，Routines 和 Loop 把“调度 Agent”这件事从客户端搬到 Anthropic 服务器之后，Claude 的定价模型会怎么变；第二，2026 年下半年到 2027 年，会不会有第一家“非工程师创立、用 Claude Code 自建全部技术栈”的公司做到独角兽估值。如果有，Boris 的“印刷术类比”就从修辞变成事实。如果没有，这个时间表得往后推。</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="5fo21" data-offset-key="cph36-0-0"><div class="css-175oi2r r-1nxhmzv"><div class="css-175oi2r r-13qz1uu"><div class="css-175oi2r r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-175oi2r"><div class="css-175oi2r r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-175oi2r r-1pi2tsx r-1ny4l3l r-1loqt21" href="/dotey/article/2051688341519609897/media/2051688289686413316" role="link"><div class="css-175oi2r r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 56.2799%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="Image" class="css-175oi2r r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-175oi2r r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HHkPoRCWYAQPWcd?format=jpg&amp;name=small");'></div><img alt="Image" class="css-9pa8cd" draggable="true" src="assets/260ef318a12f701b4f71bb67c1feb304.jpg"/></div></div></div></a></div></div></div></div></div></section><div class="longform-unstyled" data-block="true" data-editor="5fo21" data-offset-key="1q3c6-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1q3c6-0-0"><span data-offset-key="1q3c6-0-0"><span data-text="true">原始视频：</span></span><div class="css-175oi2r r-1loqt21 r-1471scf r-o7ynqc r-6416eg r-1ny4l3l"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-rjixqe r-16dba41 r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="https://www.youtube.com/watch?v=SlGRN8jh2RI" rel="noopener noreferrer nofollow" role="link" style="color: rgb(15, 20, 25);" target="_blank"><span data-offset-key="1q3c6-1-0"><span data-text="true">https://www.youtube.com/watch?v=SlGRN8jh2RI</span></span></a></div></div></div></div></div></div></div></div></div><div class="css-175oi2r"><div aria-live="polite" class="css-175oi2r r-1xfd6ze r-6koalj r-18u37iz r-kzbkwu r-1c4vpko r-1c7gwzm r-ttdzmv r-13qz1uu" role="status" style="background-color: rgb(234, 250, 255);"><div class="css-175oi2r r-13awgt0 r-18u37iz"><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-1xvli5t r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-18jsvk2 r-1wron08" data-testid="icon" viewbox="0 0 24 24"><g><path d="M18.93 12.69c.933-.933 2.446-.933 3.38 0 .933.934.933 2.447 0 3.38l-5.568 5.568c-.661.661-1.534 1.07-2.466 1.155L12 23l.207-2.276c.085-.932.494-1.805 1.155-2.466l5.568-5.568z"></path><path clip-rule="evenodd" d="M15.5 2c.684 0 1.257-.001 1.724.037.478.04.933.125 1.365.345.658.335 1.194.87 1.53 1.53.22.43.305.886.344 1.364.038.467.037 1.04.037 1.724v2.992c-1.083.03-2.158.458-2.984 1.284l-5.568 5.568c-.992.992-1.606 2.301-1.733 3.699L10.082 22H8.5c-.684 0-1.257.001-1.724-.037-.478-.04-.933-.125-1.365-.345-.658-.335-1.194-.87-1.53-1.53-.22-.43-.305-.886-.344-1.364C3.5 18.257 3.5 17.684 3.5 17V7c0-.684-.001-1.257.037-1.724.04-.478.125-.933.345-1.365.335-.658.87-1.194 1.53-1.53.43-.22.886-.305 1.364-.344C7.243 2 7.816 2 8.5 2h7zM8 12h5v-2H8v2zm0-4h8V6H8v2z" fill-rule="evenodd"></path></g></svg><div class="css-175oi2r r-1habvwh r-13awgt0 r-1777fci"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1b43r93 r-1cwl3u0 r-16dba41 r-13qz1uu" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">Want to publish your own Article?</span></div><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1b43r93 r-1cwl3u0 r-b88u0q r-1q142lx r-1s2bzr4 r-iphfwy r-13orzya r-3s2u2q r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="/i/premium_sign_up" role="link" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">Upgrade to Premium</span></a></div></div></div></div></div></div><div class="css-175oi2r r-12kyg2d"><div class="css-175oi2r r-k4xj1c r-18u37iz r-1wtj0ep"><div class="css-175oi2r r-1wbh5a2 r-b4iuiu"><div class="css-175oi2r r-1d09ksm r-18u37iz r-1wbh5a2 r-1471scf"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(83, 100, 113);"><a aria-describedby="id__svqvx8dmh0f" aria-label="11:39 PM · May 5, 2026" class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-xoduu5 r-1q142lx r-1w6e6rj r-9aw3ui r-3s2u2q r-1loqt21" href="/dotey/status/2051688341519609897" role="link" style="color: rgb(83, 100, 113);"><time datetime="2026-05-05T15:39:53.000Z">11:39 PM · May 5, 2026</time></a></div><div aria-hidden="true" class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1q142lx r-n7gxbd" dir="ltr" style="color: rgb(83, 100, 113);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">·</span></div><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1loqt21" dir="ltr" href="/dotey/status/2051688341519609897/analytics" role="link" style="color: rgb(15, 20, 25);"><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1b43r93 r-1cwl3u0 r-b88u0q" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">235.6K</span></span></span></div> <span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1b43r93 r-1cwl3u0" style="color: rgb(83, 100, 113);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">Views</span></span></a></div></div><div class="css-175oi2r r-18u37iz"></div></div></div><div class="css-175oi2r"><div class="css-175oi2r"><div aria-label="13 replies, 102 reposts, 344 likes, 681 bookmarks, 235622 views" class="css-175oi2r r-1kbdv8c r-18u37iz r-1oszu61 r-3qxfft r-n7gxbd r-1dgieki r-1efd50x r-5kkj8d r-h3s6tt r-1wtj0ep" id="id__bkoj9oruvt6" role="group"><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="13 Replies. Reply" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="reply" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01zm8.005-6c-3.317 0-6.005 2.69-6.005 6 0 3.37 2.77 6.08 6.138 6.01l.351-.01h1.761v2.3l5.087-2.81c1.951-1.08 3.163-3.13 3.163-5.36 0-3.39-2.744-6.13-6.129-6.13H9.756z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">13</span></span></span></div></div></button></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="102 reposts. Repost" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="retweet" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">102</span></span></span></div></div></button></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="344 Likes. Like" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="like" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">344</span></span></span></div></div></button></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="681 Bookmarks. Bookmark" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="bookmark" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M4 4.5C4 3.12 5.119 2 6.5 2h11C18.881 2 20 3.12 20 4.5v18.44l-8-5.71-8 5.71V4.5zM6.5 4c-.276 0-.5.22-.5.5v14.56l6-4.29 6 4.29V4.5c0-.28-.224-.5-.5-.5h-11z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">681</span></span></span></div></div></button></div><div class="css-175oi2r" style="justify-content: inherit; display: inline-grid; transform: rotate(0deg) scale(1) translate3d(0px, 0px, 0px);"><div class="css-175oi2r r-18u37iz r-1h0z5md"><button aria-expanded="false" aria-haspopup="menu" aria-label="Share post" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M12 2.59l5.7 5.7-1.41 1.42L13 6.41V16h-2V6.41l-3.3 3.3-1.41-1.42L12 2.59zM21 15l-.02 3.51c0 1.38-1.12 2.49-2.5 2.49H5.5C4.11 21 3 19.88 3 18.5V15h2v3.5c0 .28.22.5.5.5h12.98c.28 0 .5-.22.5-.5L19 15h2z"></path></g></svg></div></div></button></div></div></div></div></div><button class="css-175oi2r r-1ets6dv r-1867qdf r-rs99b7 r-13awgt0 r-bx70bn r-1loqt21 r-o7ynqc r-6416eg r-1ny4l3l" data-testid="logged_out_read_replies_pivot" role="button" type="button"><div class="css-175oi2r r-1awozwy r-1panhkp r-1867qdf r-6koalj r-18u37iz r-1pi2tsx r-11f147o r-is05cd"><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-18jsvk2 r-1q142lx r-v24l6w r-1wron08 r-qu3fyt" viewbox="0 0 24 24"><g><path d="M12.312 23.736c-.123 0-.246-.03-.358-.091-.241-.132-.392-.385-.392-.659v-.871c0-.414.336-.75.75-.75.256 0 .482.128.617.324 1.905-1.247 4.823-3.192 5.908-4.11 2.256-1.908 3.604-4.732 3.608-7.554 0-.414.336-.749.75-.749s.75.337.749.751c-.004 3.256-1.552 6.507-4.14 8.697-1.326 1.121-5.009 3.546-7.086 4.892-.124.08-.266.12-.408.12zm-2.557-1.897c1.697-1.082 6.672-4.317 8.048-5.48 1.902-1.609 3.04-3.976 3.043-6.329-.006-4.366-3.433-7.787-7.8-7.787l-4.149-.01c-4.375-.001-7.801 3.426-7.801 7.801 0 4.104 3.14 7.204 7.465 7.37.002 1.79.008 2.88.058 3.544-.041.101-.061.21-.055.322.009.178.081.344.198.471.111.241.283.241.552.241.163 0 .316-.053.441-.144zm3.289-18.097c3.529 0 6.298 2.763 6.302 6.287-.003 1.917-.941 3.855-2.512 5.184-1.03.871-4.478 3.16-6.771 4.645l-.002-3.175c0-.403-.319-.734-.722-.749l-.721-.027c-3.49-.135-6.022-2.604-6.022-5.872 0-3.534 2.768-6.302 6.299-6.302l4.149.01z"></path></g></svg><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1b43r93 r-1cwl3u0 r-b88u0q r-1awozwy r-6koalj r-1559e4e r-13qz1uu" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">Read 13 replies</span></div></div></button></div></div></div></article>
+</div>
+</div>
+</body>
+</html>

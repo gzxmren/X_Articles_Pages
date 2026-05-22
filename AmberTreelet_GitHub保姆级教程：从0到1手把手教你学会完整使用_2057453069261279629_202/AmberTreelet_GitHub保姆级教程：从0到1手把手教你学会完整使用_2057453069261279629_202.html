@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>小树 on X: "GitHub保姆级教程：从0到1手把手教你学会完整使用" / X</title>
+<!-- Injected Original Styles -->
+<style id="draftjs-styles">
+     .DraftEditor-editorContainer, .DraftEditor-root, .public-DraftEditor-content {
+        height: inherit;
+        max-height: inherit;
+        min-height: inherit;
+        text-align: initial;
+    }
+
+    .public-DraftEditor-content[contenteditable=true] {
+        -moz-user-modify: read-write-plaintext-only;
+        -webkit-user-modify: read-write-plaintext-only;
+    }
+
+    .format-inline .public-DraftEditor-content[contenteditable=true] {
+      -moz-user-modify: read-write;
+      -webkit-user-modify: read-write;
+    }
+
+    .DraftEditor-root {
+        width: 100%;
+        position: relative;
+        -webkit-user-select: none;
+    }
+
+    .DraftEditor-editorContainer {
+        background-color: rgba(255, 255, 255, 0);
+        border-left: .1px solid transparent;
+        position: relative;
+        z-index: 1;
+    }
+
+    .public-DraftEditor-block {
+        position: relative;
+    }
+
+    .DraftEditor-alignLeft .public-DraftStyleDefault-block {
+        text-align: left;
+    }
+
+    .DraftEditor-alignLeft .public-DraftEditorPlaceholder-root {
+        left: 0;
+        text-align: left;
+    }
+
+    .DraftEditor-alignCenter .public-DraftStyleDefault-block {
+        text-align: center
+    }
+
+    .DraftEditor-alignCenter .public-DraftEditorPlaceholder-root {
+        margin: 0 auto;
+        text-align: center;
+        width: 100%
+    }
+
+    .DraftEditor-alignRight .public-DraftStyleDefault-block {
+        text-align: right;
+    }
+
+    .DraftEditor-alignRight .public-DraftEditorPlaceholder-root {
+        right: 0;
+        text-align: right;
+    }
+
+    .public-DraftEditorPlaceholder-root {
+        padding-bottom: 2px;
+        padding-top: 2px;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .public-DraftEditorPlaceholder-inner {
+        user-select: none;
+        -webkit-user-select: none;
+    }
+
+    .DraftEditorPlaceholder-hidden {
+        display: none;
+    }
+
+    .public-DraftStyleDefault-block {
+        overflow:hidden;
+        padding-bottom: 2px;
+        padding-top: 2px;
+        position: relative;
+        white-space: pre-wrap;
+    }
+
+    /* Only a handful of CSS rules work on br tags and user-select isn't one */
+    div:only-child > .public-DraftStyleDefault-block > span > br::selection {
+        background: transparent;
+    }
+
+    /*
+       Safari doesn't let you change ::selection on br elements,
+       but Chrome needs it here
+    */
+    div:only-child > .public-DraftStyleDefault-block > span:has(br)::selection {
+        background: transparent;
+    }
+
+    .public-DraftStyleDefault-ltr {
+        direction: ltr;
+        text-align: left;
+    }
+
+    .public-DraftStyleDefault-rtl {
+        direction: rtl;
+        text-align: right;
+    }
+
+    .DraftEditor-editorContainer a {
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        margin-bottom: inherit;
+        margin-top: inherit;
+    }
+
+    .singleline .public-DraftStyleDefault-block {
+        overflow-x: auto;
+        scrollbar-width: none;
+        white-space: nowrap;
+        -ms-overflow-style: none;
+    }
+
+    .singleline .public-DraftStyleDefault-block::-webkit-scrollbar {
+        display: none;
+    }
+  </style>
+<style id="longform-styles">
+    .longform-header-one {
+        font-size: 31px;
+        font-weight: 800;
+        line-height: 40px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-header-one-narrow {
+        font-size: calc(20px + 1px);
+        font-weight: 800;
+        line-height: 28px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-header-two {
+        font-size: 26px;
+        font-weight: 800;
+        line-height: 36px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-header-two-narrow {
+        font-size: calc(17px + 1px);
+        font-weight: 800;
+        line-height: 24px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-unstyled, .longform-blockquote {
+        font-size: 17px;
+        line-height: 28px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-unstyled-narrow, .longform-blockquote-narrow {
+        font-size: 17px;
+        line-height: 28px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-unordered-list-item, .longform-ordered-list-item {
+        display: block;
+        font-size: 17px;
+        line-height: 28px;   
+        margin-bottom: 12px;
+        margin-left: calc(28px + 2px);
+        margin-top: 0;
+    }
+
+    .longform-unordered-list-item-narrow, .longform-ordered-list-item-narrow {
+        display: block;
+        font-size: 17px;
+        line-height: 28px;   
+        margin-bottom: calc(12px / 2);
+        margin-left: 36px;
+        margin-top: 0;
+    }
+
+    .longform-blockquote, .longform-blockquote-narrow {
+        margin-bottom: calc(24px + 2px);
+        margin-left: 0;
+        margin-top: calc(-2px);
+        padding-left: calc(24px + 3px);
+        position: relative;
+    }
+
+    .longform-blockquote:before, .longform-blockquote-narrow:before {
+        background: #37434D;
+        border-radius: 9999px;
+        bottom: 0;
+        content: "";
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 3px;
+    }
+
+    .longform-header-one .public-DraftStyleDefault-block,
+    .longform-header-two .public-DraftStyleDefault-block,
+    .longform-unstyled .public-DraftStyleDefault-block,
+    .longform-unordered-list-item .public-DraftStyleDefault-block,
+    .longform-ordered-list-item .public-DraftStyleDefault-block,
+    .longform-header-one-narrow .public-DraftStyleDefault-block,
+    .longform-header-two-narrow .public-DraftStyleDefault-block,
+    .longform-unstyled-narrow .public-DraftStyleDefault-block,
+    .longform-unordered-list-item-narrow .public-DraftStyleDefault-block,
+    .longform-ordered-list-item-narrow .public-DraftStyleDefault-block {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    .public-DraftStyleDefault-ul, .public-DraftStyleDefault-ol {
+        counter-reset: item;
+        margin-bottom: 28px;
+        margin-top: 0;
+        padding-left: 0;
+    }
+
+    .longform-unordered-list-item:before, .longform-ordered-list-item:before,
+    .longform-unordered-list-item-narrow:before, .longform-ordered-list-item-narrow:before {
+        position: absolute;
+        margin-left: calc(-1 * (28px + 2px));
+    }
+
+    .longform-unordered-list-item:before {
+        content: counter(item, disc);
+        font-size: 23px
+    }
+
+    .longform-unordered-list-item-narrow:before {
+        content: counter(item, disc);
+        font-size: 20px
+    }
+
+    .longform-ordered-list-item:before, .longform-ordered-list-item-narrow:before {
+        content: counter(item) ". ";
+        counter-increment: item;
+    }
+
+    .longform-ordered-list-item::marker, .longform-ordered-list-item-narrow::marker {
+        font-variant-numeric: normal;
+    }
+</style>
+<style>input::placeholder { user-select: none; -webkit-user-select: none; } div div ::-webkit-input-placeholder { color: rgb(117, 117, 117) } iframe { color-scheme: auto; }button { text-align: inherit; font-size: inherit; font-family: inherit; color: inherit }</style>
+<style>@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-Light.a929468a.woff2) format('woff2');
+  font-weight: 300;
+  font-style: 'normal';
+  font-display: 'swap';
+}
+@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-Regular.58c84f6a.woff2) format('woff2');
+  font-weight: 400;
+  font-style: 'normal';
+  font-display: 'swap';
+}
+@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-Medium.bc7d8f1a.woff2) format('woff2');
+  font-weight: 500;
+  font-style: 'normal';
+  font-display: 'swap';
+}
+@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-Bold.0d6a47ca.woff2) format('woff2');
+  font-weight: 700;
+  font-style: 'normal';
+  font-display: 'swap';
+}
+@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-ExtraBold.b130af7a.woff2) format('woff2');
+  font-weight: 800;
+  font-style: 'normal';
+  font-display: 'swap';
+}</style>
+<style>@font-face {
+  font-family: Geist;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Geist-var.2587a0ca.woff2) format('woff2');
+  font-weight: 100 900;
+  font-style: 'normal';
+  font-display: 'swap';
+}</style>
+<style>@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Light.3a18e64a.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Light.7a5673aa.woff) format('woff');
+  font-weight: 300;
+  font-style: 'normal';
+  font-display: 'swap';
+}
+@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Regular.80fda27a.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Regular.60b215ba.woff) format('woff');
+  font-weight: 400;
+  font-style: 'normal';
+  font-display: 'swap';
+}
+@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Medium.f8e2739a.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Medium.20fc288a.woff) format('woff');
+  font-weight: 500;
+  font-style: 'normal';
+  font-display: 'swap';
+}
+@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Bold.ebb56aba.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Bold.a573679a.woff) format('woff');
+  font-weight: 700;
+  font-style: 'normal';
+  font-display: 'swap';
+}
+@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Heavy.f44ae4ea.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Heavy.d70ec7ca.woff) format('woff');
+  font-weight: 800;
+  font-style: 'normal';
+  font-display: 'swap';
+}
+@font-face {
+  font-family: TwitterChirpExtendedHeavy;
+  src: url(https://abs.twimg.com/fonts/v1/chirp-extended-heavy-web.woff2) format('woff2'), url(https://abs.twimg.com/fonts/v1/chirp-extended-heavy-web.woff) format('woff');
+  font-weight: 800;
+  font-style: 'normal';
+  font-display: 'swap';
+}</style>
+<style>html,body{height: 100%;}::cue{white-space:normal}</style>
+<style id="react-native-stylesheet">[stylesheet-group="0"]{}
+body{margin:0;}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+input::-webkit-search-cancel-button,input::-webkit-search-decoration,input::-webkit-search-results-button,input::-webkit-search-results-decoration{display:none;}
+[stylesheet-group="1"]{}
+.css-146c3p1{background-color:rgba(0,0,0,0.00);border:0 solid black;box-sizing:border-box;color:rgba(0,0,0,1.00);display:inline;font:14px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;list-style:none;margin:0px;padding:0px;position:relative;text-align:start;text-decoration:none;white-space:pre-wrap;word-wrap:break-word;}
+.css-175oi2r{align-items:stretch;background-color:rgba(0,0,0,0.00);border:0 solid black;box-sizing:border-box;display:flex;flex-basis:auto;flex-direction:column;flex-shrink:0;list-style:none;margin:0px;min-height:0px;min-width:0px;padding:0px;position:relative;text-decoration:none;z-index:0;}
+.css-1jxf684{background-color:rgba(0,0,0,0.00);border:0 solid black;box-sizing:border-box;color:inherit;display:inline;font:inherit;list-style:none;margin:0px;padding:0px;position:relative;text-align:inherit;text-decoration:none;white-space:inherit;word-wrap:break-word;}
+.css-9pa8cd{bottom:0px;height:100%;left:0px;opacity:0;position:absolute;right:0px;top:0px;width:100%;z-index:-1;}
+[stylesheet-group="2"]{}
+.r-13awgt0{flex:1;}
+.r-17gur6a{border-bottom-left-radius:0px;border-bottom-right-radius:0px;border-top-left-radius:0px;border-top-right-radius:0px;}
+.r-1867qdf{border-bottom-left-radius:16px;border-bottom-right-radius:16px;border-top-left-radius:16px;border-top-right-radius:16px;}
+.r-1adg3ll{display:block;}
+.r-1fuqb1j{border-bottom-left-radius:24px;border-bottom-right-radius:24px;border-top-left-radius:24px;border-top-right-radius:24px;}
+.r-1j16mh1{border-bottom-left-radius:100%;border-bottom-right-radius:100%;border-top-left-radius:100%;border-top-right-radius:100%;}
+.r-1pcd2l5{padding:20px;}
+.r-1phboty{border-bottom-style:solid;border-left-style:solid;border-right-style:solid;border-top-style:solid;}
+.r-1pp0k63{border-bottom-left-radius:0.01px;border-bottom-right-radius:0.01px;border-top-left-radius:0.01px;border-top-right-radius:0.01px;}
+.r-1udh08x{overflow-x:hidden;overflow-y:hidden;}
+.r-4iw3lz{border-bottom-width:0;border-left-width:0;border-right-width:0;border-top-width:0;}
+.r-4qtqp9{display:inline-block;}
+.r-6koalj{display:flex;}
+.r-bztko3{overflow-x:visible;overflow-y:visible;}
+.r-crgep1{margin:0px;}
+.r-hvic4v{display:none;}
+.r-krxsd3{display:-webkit-box;}
+.r-rs99b7{border-bottom-width:1px;border-left-width:1px;border-right-width:1px;border-top-width:1px;}
+.r-sdzlij{border-bottom-left-radius:9999px;border-bottom-right-radius:9999px;border-top-left-radius:9999px;border-top-right-radius:9999px;}
+.r-t60dpp{padding:0px;}
+.r-wwvuq4{padding:0;}
+.r-xoduu5{display:inline-flex;}
+.r-ywje51{margin:auto;}
+.r-z2wwpe{border-bottom-left-radius:4px;border-bottom-right-radius:4px;border-top-left-radius:4px;border-top-right-radius:4px;}
+[stylesheet-group="2.1"]{}
+.r-1fkl15p{padding-left:32px;padding-right:32px;}
+.r-1mmae3n{padding-bottom:12px;padding-top:12px;}
+.r-3o4zer{padding-left:12px;padding-right:12px;}
+.r-3pj75a{padding-left:16px;padding-right:16px;}
+.r-cnw61z{padding-bottom:4px;padding-top:4px;}
+.r-cxgwc0{padding-left:24px;padding-right:24px;}
+.r-dd0y9b{padding-bottom:20px;padding-top:20px;}
+.r-ddtstp{margin-bottom:0px;margin-top:0px;}
+.r-dp7rxi{padding-bottom:40px;padding-top:40px;}
+.r-f8sm7e{margin-left:auto;margin-right:auto;}
+.r-is05cd{padding-left:8px;padding-right:8px;}
+.r-n7gxbd{padding-left:4px;padding-right:4px;}
+.r-nj0m1c{padding-bottom:32px;padding-top:32px;}
+.r-s49dbf{margin-bottom:1px;margin-top:1px;}
+.r-sjygvo{padding-left:1em;padding-right:1em;}
+.r-ytbthy{padding-bottom:10px;padding-top:10px;}
+[stylesheet-group="2.2"]{}
+.r-10s2tm5{left:0%;}
+.r-15peodp{right:-9999px;}
+.r-16o8guy{right:100%;}
+.r-19qo34d{left:-9999px;}
+.r-1a11zyx{margin-right:12px;}
+.r-1ca1ndr{margin-left:0.5em;}
+.r-1cwvpvk{margin-left:12px;}
+.r-1ez5h0i{margin-left:4px;}
+.r-1gs4q39{margin-right:4px;}
+.r-1kkk96v{margin-left:8px;}
+.r-1kpi4qh{margin-left:0.075em;}
+.r-1l2kgy{margin-right:0.5em;}
+.r-1prj4y5{margin-right:16px;}
+.r-1q6cnnd{right:-2px;}
+.r-1r3801d{margin-left:16px;}
+.r-1uofg76{left:16px;}
+.r-1va2g9v{margin-right:20px;}
+.r-1wron08{margin-right:8px;}
+.r-3t4u6i{margin-left:2px;}
+.r-42265s{right:16px;}
+.r-45ll9u{left:50%;}
+.r-5f1w11{left:-2px;}
+.r-72fyl3{border-top-left-radius:32px;}
+.r-cwltf5{border-top-right-radius:32px;}
+.r-dqe1q{right:0%;}
+.r-k4bwe5{margin-right:0.075em;}
+.r-o59np7{padding-right:8px;}
+.r-ocobd0{right:50%;}
+.r-qjj4hq{padding-left:8px;}
+.r-rci37q{left:100%;}
+.r-uhwcr3{margin-left:20px;}
+.r-x1x4zq{margin-right:2px;}
+[stylesheet-group="3"]{}
+.r-105ug2t{pointer-events:auto!important;}
+.r-109y4c4{height:1px;}
+.r-10ef88u{min-width:700px;}
+.r-10ptun7{height:16px;}
+.r-10v3vxq{transform:scaleX(-1);}
+.r-117bsoe{margin-bottom:20px;}
+.r-11c0sde{margin-top:24px;}
+.r-11f8fnl{background-color:rgba(180,180,182,0.50);}
+.r-11j9u27{visibility:hidden;}
+.r-1202g5r{height:90vh;}
+.r-12181gd{box-shadow:0 0 2px rgba(0,0,0,0.03) inset;}
+.r-1279nm1{min-height:400px;}
+.r-12hfotv{width:700px;}
+.r-12sks89{min-height:22px;}
+.r-12vffkv>*{pointer-events:auto;}
+.r-12vffkv{pointer-events:none!important;}
+.r-12ym1je{width:18px;}
+.r-135wba7{line-height:24px;}
+.r-13qz1uu{width:100%;}
+.r-13tjlyg{transition-duration:0.1s;}
+.r-13wfysu{-webkit-text-decoration-line:none;text-decoration-line:none;}
+.r-146iojx{max-width:300px;}
+.r-1472mwg{height:24px;}
+.r-14j79pv{color:rgba(83,100,113,1.00);}
+.r-14lw9ot{background-color:rgba(255,255,255,1.00);}
+.r-158ssxm{max-height:calc(64px * 15);}
+.r-15ysp7h{min-height:32px;}
+.r-16dba41{font-weight:400;}
+.r-16y2uox{flex-grow:1;}
+.r-176fswd{transform:translateX(-50%) translateY(-50%);}
+.r-1777fci{justify-content:center;}
+.r-17bb2tj{animation-duration:0.75s;}
+.r-17c3jg3{background-color:rgba(0,0,0,0.80);}
+.r-17gznlh{animation-name:r-t2lo5v;}
+.r-17leim2{background-repeat:repeat;}
+.r-17s6mgv{justify-content:flex-end;}
+.r-184en5c{z-index:1;}
+.r-18jsvk2{color:rgba(15,20,25,1.00);}
+.r-18tzken{width:56px;}
+.r-18u37iz{flex-direction:row;}
+.r-18yzcnr{height:22px;}
+.r-19lq7b1{top:16px;}
+.r-19qs0lw{animation-name:r-1qpf3yi;}
+.r-19wmn03{width:20px;}
+.r-19yznuf{min-height:52px;}
+.r-1abnn5w{animation-play-state:paused;}
+.r-1acpoxo{width:36px;}
+.r-1ad0z5i{word-break:break-all;}
+.r-1awozwy{align-items:center;}
+.r-1b43r93{font-size:14px;}
+.r-1betnmo{max-width:672px;}
+.r-1blnp2b{width:72px;}
+.r-1blvdjr{font-size:23px;}
+.r-1bymd8e{margin-top:2px;}
+.r-1c6unfx{forced-color-adjust:none;}
+.r-1ceczpf{min-height:24px;}
+.r-1cwl3u0{line-height:16px;}
+.r-1d2f490{left:0px;}
+.r-1ddef8g{-webkit-text-decoration-line:underline;text-decoration-line:underline;}
+.r-1dernwh{height:70%;}
+.r-1dn12g7{line-height:48px;}
+.r-1dum35f{-moz-transition-property:opacity, height;-webkit-transition-property:opacity, height;transition-property:opacity, height;}
+.r-1e425wn{animation-duration:0.15s;}
+.r-1ebb2ja{list-style:none;}
+.r-1ei5mc7{cursor:inherit;}
+.r-1el8sus{min-height:72px;}
+.r-1ewcgjf{box-shadow:0px 1px 3px rgba(0,0,0,0.5);}
+.r-1ff274t{text-align:right;}
+.r-1ffj0ar{background-color:rgba(0,0,0,0.40);}
+.r-1fu8b7j{height:712px;}
+.r-1g83rmp{animation-name:r-7bj9g2;}
+.r-1gkfh8e{font-size:11px;}
+.r-1h0z5md{justify-content:flex-start;}
+.r-1h8ys4a{padding-top:4px;}
+.r-1habvwh{align-items:flex-start;}
+.r-1hjwoze{height:18px;}
+.r-1ifxtd0{margin-bottom:16px;}
+.r-1iln25a{word-wrap:normal;}
+.r-1inkyih{font-size:17px;}
+.r-1ipicw7{width:300px;}
+.r-1iusvr4{flex-basis:0px;}
+.r-1janqcz{width:16px;}
+.r-1jaylin{width:-webkit-max-content;width:-moz-max-content;width:max-content;}
+.r-1k78y06{font-family:Tahoma, Arial, sans-serif;}
+.r-1kihuf0{align-self:center;}
+.r-1ldzwu0{animation-timing-function:linear;}
+.r-1loqt21{cursor:pointer;}
+.r-1mdbw0j{padding-bottom:0px;}
+.r-1mlwlqe{flex-basis:auto;}
+.r-1mrlafo{background-position:0;}
+.r-1muvv40{animation-iteration-count:infinite;}
+.r-1mwlp6a{height:56px;}
+.r-1nao33i{color:rgba(231,233,234,1.00);}
+.r-1niwhzg{background-color:rgba(0,0,0,0.00);}
+.r-1ny4l3l{outline-style:none;}
+.r-1oifz5y{background-color:rgba(170,17,0,1.00);}
+.r-1oszu61{align-items:stretch;}
+.r-1otgn73{touch-action:manipulation;}
+.r-1ovo9ad{width:360px;}
+.r-1p0dtai{bottom:0px;}
+.r-1pi2tsx{height:100%;}
+.r-1pjcn9w{max-width:80vw;}
+.r-1potc6q{top:5%;}
+.r-1ps3wis{min-width:44px;}
+.r-1pz39u2{align-self:stretch;}
+.r-1qd0xha{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+.r-1qi8awa{min-width:36px;}
+.r-1r5jyh0{min-height:130px;}
+.r-1r8g8re{height:36px;}
+.r-1rnoaur{overflow-y:auto;}
+.r-1s2hp8q{min-height:26px;}
+.r-1sxrcry{background-size:auto;}
+.r-1tl8opc{font-family:"Segoe UI",Meiryo,system-ui,-apple-system,BlinkMacSystemFont,sans-serif;}
+.r-1to6hqq{background-color:rgba(255,212,0,1.00);}
+.r-1tsuqlv{max-height:100vh;}
+.r-1ttztb7{text-align:inherit;}
+.r-1udbk01{text-overflow:ellipsis;}
+.r-1ur9v65{padding-top:40px;}
+.r-1v2oles{top:50%;}
+.r-1vmecro{direction:rtl;}
+.r-1vr29t4{font-weight:800;}
+.r-1wb8bfx{text-decoration-thickness:2px;}
+.r-1wbh5a2{flex-shrink:1;}
+.r-1wtj0ep{justify-content:space-between;}
+.r-1wvb978{font-feature-settings:'ss01' on;}
+.r-1wyyakw{z-index:-1;}
+.r-1x0uki6{margin-top:20px;}
+.r-1xcajam{position:fixed;}
+.r-1xfddsp{min-height:300px;}
+.r-1xk2f4g{clip:rect(1px, 1px, 1px, 1px);}
+.r-1xnzce8{-moz-user-select:text;-webkit-user-select:text;user-select:text;}
+.r-1xvli5t{height:1.25em;}
+.r-1y7e96w{min-width:22px;}
+.r-1ye8kvj{max-width:600px;}
+.r-1yef0xd{animation-name:r-11cv4x;}
+.r-1yjpyg1{font-size:31px;}
+.r-1ykxob0{top:60%;}
+.r-2o02ov{margin-top:40px;}
+.r-2yi16{min-height:36px;}
+.r-30o5oe{-moz-appearance:none;-ms-appearance:none;-webkit-appearance:none;appearance:none;}
+.r-36ujnk{font-style:italic;}
+.r-37tt59{line-height:32px;}
+.r-3cuxpb{opacity:0.98;}
+.r-3nmjpz{animation-name:r-12fruu6;}
+.r-3s2u2q{white-space:nowrap;}
+.r-417010{z-index:0;}
+.r-4gszlv{background-size:cover;}
+.r-4hwcpe{font-family:Vazirmatn, Tahoma, Arial, sans-serif;}
+.r-4wgw6l{min-width:32px;}
+.r-54znze{color:rgba(239,243,244,1.00);}
+.r-56xrmm{line-height:12px;}
+.r-6026j{background-color:rgba(255,255,255,0.85);}
+.r-633pao{pointer-events:none!important;}
+.r-6416eg{-moz-transition-property:background-color, box-shadow;-webkit-transition-property:background-color, box-shadow;transition-property:background-color, box-shadow;}
+.r-64el8z{min-width:52px;}
+.r-68jxh1{min-width:500px;}
+.r-7h7f8p{max-width:100vw;}
+.r-7q8q6z{cursor:default;}
+.r-8akbws{-webkit-box-orient:vertical;}
+.r-8jfcpp{top:-2px;}
+.r-92ng3h{width:1px;}
+.r-9dcw1g{width:320px;}
+.r-a023e6{font-size:15px;}
+.r-adyw6z{font-size:20px;}
+.r-agouwx{transform:translateZ(0);}
+.r-ah5dr5>*{pointer-events:none;}
+.r-ah5dr5{pointer-events:auto!important;}
+.r-aqfbo4{backface-visibility:hidden;}
+.r-b88u0q{font-weight:700;}
+.r-bcqeeo{min-width:0px;}
+.r-bnwqim{position:relative;}
+.r-bqz1g2{background-color:rgba(229,234,236,1.00);}
+.r-bt1l66{min-height:20px;}
+.r-bvlit7{margin-bottom:-12px;}
+.r-clrlgt{animation-name:r-imtty0;}
+.r-deolkf{box-sizing:border-box;}
+.r-dflpy8{height:1.2em;}
+.r-dnmrzs{max-width:100%;}
+.r-ehq7j7{background-size:contain;}
+.r-emqnss{transform:translateZ(0px);}
+.r-eqz5dr{flex-direction:column;}
+.r-ero68b{min-height:40px;}
+.r-f5cfds{min-height:160px;}
+.r-fa1dwr{animation-timing-function:cubic-bezier(0.25, 0.1, 0.25, 1);}
+.r-fdjqy7{text-align:left;}
+.r-fm7h5w{font-family:"TwitterChirpExtendedHeavy","Verdana",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+.r-g6jmlv{width:100vw;}
+.r-gf0ln{-webkit-filter:brightness(1);filter:brightness(1);}
+.r-h3s6tt{height:48px;}
+.r-h9hxbl{width:1.2em;}
+.r-htvplk{min-width:600px;}
+.r-icoktb{opacity:0.5;}
+.r-ifefl9{min-height:0px;}
+.r-impgnl{transform:translateX(50%) translateY(-50%);}
+.r-iphfwy{padding-bottom:4px;}
+.r-ipm5af{top:0px;}
+.r-j5o65s{border-bottom-color:rgba(239,243,244,1.00);}
+.r-jmul1s{transform:scale(1.1);}
+.r-jwli3a{color:rgba(255,255,255,1.00);}
+.r-k200y{align-self:flex-start;}
+.r-kemksi{background-color:rgba(0,0,0,1.00);}
+.r-kwpbio{height:650px;}
+.r-lp5zef{min-width:24px;}
+.r-lrsllp{width:24px;}
+.r-lrvibr{-moz-user-select:none;-webkit-user-select:none;user-select:none;}
+.r-lrx3fh{width:500px;}
+.r-m6rgpd{vertical-align:text-bottom;}
+.r-majxgm{font-weight:500;}
+.r-n1ft60{dynamic-range-limit:standard;}
+.r-n6v787{font-size:13px;}
+.r-nhe8su{animation-duration:0.5s;}
+.r-nvplwv{animation-timing-function:ease-out;}
+.r-nwxazl{line-height:40px;}
+.r-o7ynqc{transition-duration:0.2s;}
+.r-obd0qt{align-items:flex-end;}
+.r-orgf3d{opacity:0;}
+.r-peo1c{min-height:44px;}
+.r-pm9dpa{max-height:100%;}
+.r-poiln3{font-family:inherit;}
+.r-pp5qcn{vertical-align:-20%;}
+.r-q4m81j{text-align:center;}
+.r-qklmqi{border-bottom-width:1px;}
+.r-qlhcfr{font-size:0.001px;}
+.r-qvk6io{line-height:0px;}
+.r-qvutc0{word-wrap:break-word;}
+.r-rjixqe{line-height:20px;}
+.r-rki7wi{bottom:12px;}
+.r-rsyp9y{max-height:90vh;}
+.r-rwqe4o{width:48px;}
+.r-s67bdx{font-size:48px;}
+.r-sb58tz{max-width:1000px;}
+.r-tjvw6i{text-decoration-thickness:1px;}
+.r-u6sd8q{background-repeat:no-repeat;}
+.r-u8s1d{position:absolute;}
+.r-ueyrd6{line-height:36px;}
+.r-uho16t{font-size:34px;}
+.r-uz7a3o{min-width:650px;}
+.r-vkv6oe{min-width:40px;}
+.r-vqxq0j{border:0 solid black;}
+.r-vrz42v{line-height:28px;}
+.r-vvn4in{background-position:center;}
+.r-wcz47r{box-shadow:0 8px 24px rgba(15, 20, 25, 0.18);}
+.r-wy61xf{height:72px;}
+.r-x3cy2q{background-size:100% 100%;}
+.r-x572qd{background-color:rgba(247,249,249,1.00);}
+.r-xigjrr{-webkit-filter:blur(4px);filter:blur(4px);}
+.r-xr3zp9{min-height:calc(64px * 3);}
+.r-yc9v9c{width:22px;}
+.r-yn5ncy{animation-fill-mode:both;}
+.r-yy2aun{font-size:26px;}
+.r-yyyyoo{fill:currentcolor;}
+.r-z2knda{transition-timing-function:ease;}
+.r-z7pwl0{max-width:700px;}
+.r-z80fyv{height:20px;}
+.r-zchlnj{right:0px;}
+@-webkit-keyframes r-11cv4x{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
+@-webkit-keyframes r-12fruu6{0%{opacity:0;transform:scale(0.95);}100%{opacity:1;transform:scale(1);}}
+@-webkit-keyframes r-1qpf3yi{0%{opacity:0;transform:scale3d(0.92, 0.92, 1);}100%{opacity:1;transform:scale3d(1, 1, 1);}}
+@-webkit-keyframes r-7bj9g2{0%{opacity:1;transform:scale3d(1, 1, 1);}100%{opacity:0;transform:scale3d(0.92, 0.92, 1);}}
+@-webkit-keyframes r-imtty0{0%{opacity:0;}100%{opacity:1;}}
+@-webkit-keyframes r-t2lo5v{0%{opacity:1;}100%{opacity:0;}}
+@keyframes r-11cv4x{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
+@keyframes r-12fruu6{0%{opacity:0;transform:scale(0.95);}100%{opacity:1;transform:scale(1);}}
+@keyframes r-1qpf3yi{0%{opacity:0;transform:scale3d(0.92, 0.92, 1);}100%{opacity:1;transform:scale3d(1, 1, 1);}}
+@keyframes r-7bj9g2{0%{opacity:1;transform:scale3d(1, 1, 1);}100%{opacity:0;transform:scale3d(0.92, 0.92, 1);}}
+@keyframes r-imtty0{0%{opacity:0;}100%{opacity:1;}}
+@keyframes r-t2lo5v{0%{opacity:1;}100%{opacity:0;}}
+.r-2b35cu{position:absolute;visibility:hidden;top:0;width:50px;pointer-events:none}
+.r-2b35cu.loaded{visibility:visible;top:50vh;width:50px}</style>
+<style id="googleidentityservice_button_styles">.qJTHM{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;color:#202124;direction:ltr;-webkit-touch-callout:none;font-family:Roboto-Regular,arial,sans-serif;-webkit-font-smoothing:antialiased;font-weight:400;margin:0;overflow:hidden;-webkit-text-size-adjust:100%}.ynRLnc{left:-9999px;position:absolute;top:-9999px}.L6cTce{display:none}.bltWBb{overflow-wrap:break-word;word-break:break-word}.hSRGPd{color:#1a73e8;cursor:pointer;font-weight:500;text-decoration:none}.Bz112c-W3lGp{height:16px;width:16px}.Bz112c-E3DyYd{height:20px;width:20px}.Bz112c-r9oPif{height:24px;width:24px}.Bz112c-u2z5K{height:36px;width:36px}.Bz112c-uaxL4e{border-radius:10px}.LgbsSe-Bz112c{display:block}.S9gUrf-YoZ4jf{border:none;margin:0;padding:0}.S9gUrf-YoZ4jf *{border:none;margin:0;padding:0}.fFW7wc-ibnC6b>.aZ2wEe>div{border-color:#4285f4}.P1ekSe-ZMv3u{-webkit-transition:height .2s linear;transition:height .2s linear}.P1ekSe-ZMv3u>div:first-child{background-color:#1a73e8!important;-webkit-transition:width .3s linear;transition:width .3s linear}.P1ekSe-ZMv3u>div:nth-child(2){background-image:-webkit-gradient(linear,left top,right top,from(rgba(255,255,255,.7)),to(rgba(255,255,255,.7))),-webkit-gradient(linear,left top,right top,from(#1a73e8),to(#1a73e8))!important;background-image:-webkit-linear-gradient(left,rgba(255,255,255,.7),rgba(255,255,255,.7)),-webkit-linear-gradient(left,#1a73e8,#1a73e8)!important;background-image:linear-gradient(90deg,rgba(255,255,255,.7),rgba(255,255,255,.7)),linear-gradient(90deg,#1a73e8,#1a73e8)!important}.P1ekSe-ZMv3u>div:nth-child(3){background-image:-webkit-gradient(linear,left top,right top,from(rgba(255,255,255,.7)),to(rgba(255,255,255,.7))),-webkit-gradient(linear,left top,right top,from(#1a73e8),to(#1a73e8))!important;background-image:-webkit-linear-gradient(left,rgba(255,255,255,.7),rgba(255,255,255,.7)),-webkit-linear-gradient(left,#1a73e8,#1a73e8)!important;background-image:linear-gradient(90deg,rgba(255,255,255,.7),rgba(255,255,255,.7)),linear-gradient(90deg,#1a73e8,#1a73e8)!important}.haAclf{display:inline-block}.nsm7Bb-HzV7m-LgbsSe{border-radius:4px;box-sizing:border-box;-webkit-transition:background-color .218s,border-color .218s;transition:background-color .218s,border-color .218s;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;-webkit-appearance:none;background-color:#fff;background-image:none;border:1px solid #dadce0;color:#3c4043;cursor:pointer;font-family:Google Sans,arial,sans-serif;font-size:14px;height:40px;letter-spacing:.25px;outline:none;overflow:hidden;padding:0 12px;position:relative;text-align:center;vertical-align:middle;white-space:nowrap;width:auto}@media screen and (-ms-high-contrast:active){.nsm7Bb-HzV7m-LgbsSe{border:2px solid windowText;color:windowText}}@media screen and (preferes-contrast:more){.nsm7Bb-HzV7m-LgbsSe{color:#000}}.nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe{font-size:14px;height:32px;letter-spacing:.25px;padding:0 10px}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe{font-size:11px;height:20px;letter-spacing:.3px;padding:0 8px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe{padding:0;width:40px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.pSzOP-SxQuSe{width:32px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.purZT-SxQuSe{width:20px}.nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK{border-radius:20px}.nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK.pSzOP-SxQuSe{border-radius:16px}.nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK.purZT-SxQuSe{border-radius:10px}.nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc{border:none;color:#fff}.nsm7Bb-HzV7m-LgbsSe.MFS4be-v3pZbf-Ia7Qfc{background-color:#1a73e8}.nsm7Bb-HzV7m-LgbsSe.MFS4be-JaPV2b-Ia7Qfc{background-color:#202124;color:#e8eaed}@media screen and (prefers-contrast:more){.nsm7Bb-HzV7m-LgbsSe.MFS4be-JaPV2b-Ia7Qfc{color:#fff}}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{height:18px;margin-right:8px;min-width:18px;width:18px}.nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{height:14px;min-width:14px;width:14px}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{height:10px;min-width:10px;width:10px}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-Bz112c{margin-left:8px;margin-right:-4px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{margin:0;padding:10px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.pSzOP-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{padding:8px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{padding:4px}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-top-left-radius:3px;border-bottom-left-radius:3px;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;align-items:center;background-color:#fff;height:36px;margin-left:-10px;margin-right:12px;min-width:36px;width:36px}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf .nsm7Bb-HzV7m-LgbsSe-Bz112c,.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf .nsm7Bb-HzV7m-LgbsSe-Bz112c{margin:0;padding:0}.nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{height:28px;margin-left:-8px;margin-right:10px;min-width:28px;width:28px}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{height:16px;margin-left:-6px;margin-right:8px;min-width:16px;width:16px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-radius:3px;margin-left:2px;margin-right:0;padding:0}.nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-radius:18px}.nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-radius:14px}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-radius:8px}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-bN97Pc-sM5MNb{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-align-items:center;-webkit-box-align:center;align-items:center;-webkit-flex-direction:row;-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;-webkit-flex-wrap:nowrap;flex-wrap:nowrap;height:100%;position:relative;width:100%}.nsm7Bb-HzV7m-LgbsSe .oXtfBe-l4eHX{-webkit-box-pack:center;-webkit-justify-content:center;justify-content:center}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-BPrWId{-webkit-flex-grow:1;-webkit-box-flex:1;flex-grow:1;font-family:Google Sans,arial,sans-serif;font-weight:500;overflow:hidden;text-overflow:ellipsis;vertical-align:top}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-BPrWId{font-weight:300}.nsm7Bb-HzV7m-LgbsSe .oXtfBe-l4eHX .nsm7Bb-HzV7m-LgbsSe-BPrWId{-webkit-flex-grow:0;-webkit-box-flex:0;flex-grow:0}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-MJoBVe{-webkit-transition:background-color .218s;transition:background-color .218s;bottom:0;left:0;position:absolute;right:0;top:0}.nsm7Bb-HzV7m-LgbsSe:focus,.nsm7Bb-HzV7m-LgbsSe:hover{box-shadow:none;border-color:rgb(210,227,252);outline:none}.nsm7Bb-HzV7m-LgbsSe:focus-within{outline:2px solid #00639b;border-color:transparent}.nsm7Bb-HzV7m-LgbsSe:hover .nsm7Bb-HzV7m-LgbsSe-MJoBVe{background:rgba(66,133,244,.08)}.nsm7Bb-HzV7m-LgbsSe:active .nsm7Bb-HzV7m-LgbsSe-MJoBVe,.nsm7Bb-HzV7m-LgbsSe:focus .nsm7Bb-HzV7m-LgbsSe-MJoBVe{background:rgba(66,133,244,.1)}.nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc:hover .nsm7Bb-HzV7m-LgbsSe-MJoBVe{background:rgba(255,255,255,.24)}.nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc:active .nsm7Bb-HzV7m-LgbsSe-MJoBVe,.nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc:focus .nsm7Bb-HzV7m-LgbsSe-MJoBVe{background:rgba(255,255,255,.32)}.nsm7Bb-HzV7m-LgbsSe .n1UuX-DkfjY{border-radius:50%;display:-webkit-box;display:-webkit-flex;display:flex;height:20px;margin-left:-4px;margin-right:8px;min-width:20px;width:20px}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId{font-family:Roboto;font-size:12px;text-align:left}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff .fmcmS,.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .ssJRIf{overflow:hidden;text-overflow:ellipsis}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-align-items:center;-webkit-box-align:center;align-items:center;color:#5f6368;fill:#5f6368;font-size:11px;font-weight:400}.nsm7Bb-HzV7m-LgbsSe.jVeSEe.MFS4be-Ia7Qfc .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff{color:#e8eaed;fill:#e8eaed}@media screen and (prefers-contrast:more){.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff,.nsm7Bb-HzV7m-LgbsSe.jVeSEe.MFS4be-Ia7Qfc .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff{color:#000;fill:#000}}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff .Bz112c{height:18px;margin:-3px -3px -3px 2px;min-width:18px;width:18px}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:3px;border-bottom-right-radius:3px;margin-left:12px;margin-right:-10px}.nsm7Bb-HzV7m-LgbsSe.jVeSEe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-radius:18px}.L5Fo6c-sM5MNb{border:0;display:block;left:0;position:relative;top:0}.L5Fo6c-bF1uUb{border-radius:4px;bottom:0;cursor:pointer;left:0;position:absolute;right:0;top:0}.L5Fo6c-bF1uUb:focus{border:none;outline:none}sentinel{}</style>
+<style>
+        body { 
+            font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;  
+            background-color: #ffffff; 
+            margin: 0;
+            padding: 0;
+        }
+        .container { 
+            max-width: 600px; 
+            margin: 0 auto; 
+            padding-top: 20px; 
+            padding-bottom: 40px;
+        }
+        .tweet-card { 
+            border: 1px solid rgb(239, 243, 244); 
+            border-radius: 16px; 
+            margin-bottom: 16px; 
+            padding: 16px; 
+            overflow-wrap: break-word;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-top: 10px;
+        }
+        /* Basic reset for some Twitter specific classes if needed */
+        a { text-decoration: none; color: rgb(29, 155, 240); }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+<div class="container">
+<div class="tweet-card">
+<article aria-labelledby="id__t5iy1dhp22 id__2zqflqq7snp id__r6luvj40kqd id__yjyd3yez0nr id__fzikc8el5b4 id__ightf0wlhf id__oec08sznbea id__gd3d6r21tf5 id__s6jps8trgd id__j5tal1ohkms id__yrepxlke0fi id__hakfvycj06q id__krkmk5vz38g id__0sxae6p7a5ri id__hbdccjl8rjt id__1jxr22cm4c8 id__nsh9ejxidu id__byie9g8il0p id__4rig62grbeo id__1j8hhpd9iya" class="css-175oi2r r-18u37iz r-1udh08x r-1c4vpko r-1c7gwzm r-1ny4l3l" data-testid="tweet" role="article" tabindex="-1"><div class="css-175oi2r r-eqz5dr r-16y2uox r-1wbh5a2"><div class="css-175oi2r r-16y2uox r-1wbh5a2 r-1ny4l3l"><div class="css-175oi2r"><div class="css-175oi2r r-18u37iz r-136ojw6"><div class="css-175oi2r r-1iusvr4 r-16y2uox r-ttdzmv"></div></div></div><div class="css-175oi2r r-18u37iz r-136ojw6"><div class="css-175oi2r r-18kxxzh r-1wron08 r-onrtq4 r-1awozwy"><div class="css-175oi2r" data-testid="Tweet-User-Avatar"><div class="css-175oi2r r-18kxxzh r-1wbh5a2 r-13qz1uu"><div class="css-175oi2r r-1wbh5a2 r-dnmrzs"><div class="css-175oi2r r-bztko3 r-1adg3ll" data-testid="UserAvatar-Container-AmberTreelet" style="width: 40px; height: 40px;"><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 100%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div class="css-175oi2r r-1adg3ll r-1pi2tsx r-13qz1uu r-45ll9u r-u8s1d r-1v2oles r-176fswd r-bztko3"><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 100%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div class="css-175oi2r r-sdzlij r-1udh08x r-5f1w11 r-u8s1d r-8jfcpp" style="width: calc(100% + 4px); height: calc(100% + 4px);"><a aria-hidden="true" class="css-175oi2r r-1pi2tsx r-13qz1uu r-o7ynqc r-6416eg r-1ny4l3l r-1loqt21" href="/AmberTreelet" role="link" style="background-color: rgba(0, 0, 0, 0);" tabindex="-1"><div class="css-175oi2r r-sdzlij r-1udh08x r-633pao r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-175oi2r r-1pi2tsx r-13qz1uu" style="background-color: rgba(0, 0, 0, 0);"></div></div><div class="css-175oi2r r-sdzlij r-1udh08x r-633pao r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-175oi2r r-1pi2tsx r-13qz1uu r-14lw9ot"></div></div><div class="css-175oi2r r-sdzlij r-1udh08x r-633pao r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="background-color: rgb(255, 255, 255); width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-175oi2r r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 100%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div class="css-175oi2r r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af"><div class="css-175oi2r r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/profile_images/2032767395597836288/qImY99aE_normal.jpg");'></div><img alt="" class="css-9pa8cd" draggable="true" src="https://pbs.twimg.com/profile_images/2032767395597836288/qImY99aE_normal.jpg"/></div></div></div></div><div class="css-175oi2r r-sdzlij r-1udh08x r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-175oi2r r-12181gd r-1pi2tsx r-13qz1uu r-o7ynqc r-6416eg r-1ny4l3l"></div></div></a></div></div></div></div></div></div></div></div></div><div class="css-175oi2r r-1iusvr4 r-16y2uox r-1777fci"><div class="css-175oi2r r-zl2h9q"><div class="css-175oi2r r-k4xj1c r-18u37iz r-1wtj0ep"><div class="css-175oi2r r-1d09ksm r-18u37iz r-1wbh5a2"><div class="css-175oi2r r-1wbh5a2 r-dnmrzs r-1ny4l3l"><div class="css-175oi2r r-1wbh5a2 r-dnmrzs r-1ny4l3l" data-testid="User-Name" id="id__fzikc8el5b4"><div class="css-175oi2r r-1awozwy r-18u37iz r-1wbh5a2 r-dnmrzs"><div class="css-175oi2r r-1wbh5a2 r-dnmrzs"><a class="css-175oi2r r-1wbh5a2 r-dnmrzs r-1ny4l3l r-1loqt21" href="/AmberTreelet" role="link"><div class="css-175oi2r r-1awozwy r-18u37iz r-1wbh5a2 r-dnmrzs"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-b88u0q r-1awozwy r-6koalj r-1udh08x r-3s2u2q" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-dnmrzs r-1udh08x r-1udbk01 r-3s2u2q r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">小树</span></span></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-xoduu5 r-18u37iz r-1q142lx" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1awozwy r-xoduu5"><svg aria-label="Verified account" class="r-4qtqp9 r-yyyyoo r-1xvli5t r-bnwqim r-lrvibr r-m6rgpd r-1cvl2hr r-f9ja8p r-og9te1 r-3t4u6i" data-testid="icon-verified" role="img" viewbox="0 0 22 22"><g><path d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.854-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.688-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.606-.274 1.263-.144 1.896.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681s.075-1.299-.165-1.903c.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z"></path></g></svg></span></div></div></a></div></div><div class="css-175oi2r r-18u37iz r-1wbh5a2"><div class="css-175oi2r r-1d09ksm r-18u37iz r-1wbh5a2"><div class="css-175oi2r r-1wbh5a2 r-dnmrzs"><a class="css-175oi2r r-1wbh5a2 r-dnmrzs r-1ny4l3l r-1loqt21" href="/AmberTreelet" role="link" tabindex="-1"><div class="css-146c3p1 r-dnmrzs r-1udh08x r-1udbk01 r-3s2u2q r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-18u37iz r-1wvb978" dir="ltr" style="color: rgb(83, 100, 113);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">@AmberTreelet</span></div></a></div></div></div></div></div></div><div class="css-175oi2r r-1kkk96v"><div class="css-175oi2r r-1awozwy r-18u37iz r-1cmwbt1 r-1wtj0ep"><div class="css-175oi2r r-1awozwy r-6koalj r-18u37iz"><div class="css-175oi2r"><div class="css-175oi2r r-18u37iz r-1h0z5md"><button aria-expanded="false" aria-haspopup="menu" aria-label="More" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="caret" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div></div></button></div></div></div></div></div></div></div></div></div><div class="css-175oi2r"><div class="css-175oi2r r-1s2bzr4"></div><div class="css-175oi2r r-1ny4l3l" data-testid="twitterArticleReadView"><div class="css-175oi2r r-1peese0"><div class="css-175oi2r"><div class="css-175oi2r r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-175oi2r"><div class="css-175oi2r r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-175oi2r r-1pi2tsx r-1ny4l3l r-1loqt21" href="/AmberTreelet/article/2057453069261279629/media/2057452583456006144" role="link"><div class="css-175oi2r r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 40%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="Image" class="css-175oi2r r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-175oi2r r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HI2KOUsa4AAWGmg?format=jpg&amp;name=small");'></div><img alt="Image" class="css-9pa8cd" draggable="true" src="assets/51eb2056bbf933b0e4cc2b8396ebe6c3.jpg"/></div></div></div></a></div></div></div></div></div><div class="css-175oi2r r-vmopo1"><div class="css-175oi2r r-13qz1uu"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-uho16t r-1vr29t4 r-1o37s4c r-1s2bzr4" data-testid="twitter-article-title" dir="auto" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">GitHub保姆级教程：从0到1手把手教你学会完整使用</span></div></div><div class="css-175oi2r"><div aria-label="75 replies, 120 reposts, 372 likes, 762 bookmarks, 79344 views" class="css-175oi2r r-1kbdv8c r-18u37iz r-1wtj0ep r-1ye8kvj r-j5o65s r-rull8r r-qklmqi r-h3s6tt r-14gqq1x" role="group"><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="75 Replies. Reply" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="reply" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01zm8.005-6c-3.317 0-6.005 2.69-6.005 6 0 3.37 2.77 6.08 6.138 6.01l.351-.01h1.761v2.3l5.087-2.81c1.951-1.08 3.163-3.13 3.163-5.36 0-3.39-2.744-6.13-6.129-6.13H9.756z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">75</span></span></span></div></div></button></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="120 reposts. Repost" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="retweet" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">120</span></span></span></div></div></button></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="372 Likes. Like" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="like" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">372</span></span></span></div></div></button></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><a aria-label="79344 views. View post analytics" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1ny4l3l r-1loqt21" href="/AmberTreelet/status/2057453069261279629/analytics" role="link"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M8.75 21V3h2v18h-2zM18 21V8.5h2V21h-2zM4 21l.004-10h2L6 21H4zm9.248 0v-7h2v7h-2z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">79K</span></span></span></div></div></a></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-1wron08"><button aria-label="Bookmark" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="bookmark" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M4 4.5C4 3.12 5.119 2 6.5 2h11C18.881 2 20 3.12 20 4.5v18.44l-8-5.71-8 5.71V4.5zM6.5 4c-.276 0-.5.22-.5.5v14.56l6-4.29 6 4.29V4.5c0-.28-.224-.5-.5-.5h-11z"></path></g></svg></div></div></button></div><div class="css-175oi2r" style="justify-content: inherit; display: inline-grid; transform: rotate(0deg) scale(1) translate3d(0px, 0px, 0px);"><div class="css-175oi2r r-18u37iz r-1h0z5md"><button aria-expanded="false" aria-haspopup="menu" aria-label="Share post" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M12 2.59l5.7 5.7-1.41 1.42L13 6.41V16h-2V6.41l-3.3 3.3-1.41-1.42L12 2.59zM21 15l-.02 3.51c0 1.38-1.12 2.49-2.5 2.49H5.5C4.11 21 3 19.88 3 18.5V15h2v3.5c0 .28.22.5.5.5h12.98c.28 0 .5-.22.5-.5L19 15h2z"></path></g></svg></div></div></button></div></div></div></div><div class="css-175oi2r r-1knelpx" data-testid="twitterArticleRichTextView"><div class="css-175oi2r r-37j5jr"><div class="DraftEditor-root"><div class="DraftEditor-editorContainer"><div aria-describedby="placeholder-cnjst" class="public-DraftEditor-content" contenteditable="false" data-testid="longformRichTextComponent" spellcheck="false" style="outline: none; user-select: text; white-space: pre-wrap; overflow-wrap: break-word;"><div data-contents="true"><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="43d6-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="43d6-0-0"><span data-offset-key="43d6-0-0"><span data-text="true">现在分享AI知识，很多都是给你一个 GitHub 的链接。但是你点进去一看：发现各种英文单词、代码文件、绿色的按钮、陌生单词。如果你没有掌握GitHub，你就接收不到信息。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="bkm9c-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="bkm9c-0-0"><span data-offset-key="bkm9c-0-0"><span data-text="true">如果你用 AI 写代码、做网页、搭工具、做产品原型，那 GitHub 是你迟早绕不开的平台。因为 Vibe Coding 的核心，不只是“让 AI 帮你写代码”，而是让 AI 帮你基于已有的工具、框架和开源项目，快速搭出真正能运行的东西。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="ekisp-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="ekisp-0-0"><span data-offset-key="ekisp-0-0"><span data-text="true">而这些“积木”，大部分都在 GitHub 上。本文写得非常详细，适合小白入门。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="cnjst" data-offset-key="c340o-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="c340o-0-0"><span data-offset-key="c340o-0-0"><span data-text="true">一、GitHub 到底是什么？</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="7un0m-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7un0m-0-0"><span data-offset-key="7un0m-0-0"><span data-text="true">GitHub 可以简单理解为：全球最大的开源项目平台。“开源”就是项目内容公开。别人写了一个工具，把代码、文件、说明文档都放出来，你可以查看、下载、学习、修改，甚至基于它做出自己的版本。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="echa9-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="echa9-0-0"><span data-offset-key="echa9-0-0"><span data-text="true">它不是简单的“下载网站”，而是一个全球协作系统。一个人写出项目，放到 GitHub；其他人可以提建议、报 Bug、改代码、做分支版本。项目会在这种持续协作中不断变好。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="ffds1-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="ffds1-0-0"><span data-offset-key="ffds1-0-0"><span data-text="true">不是一个人从零做到完美，而是一群人一起把东西越改越好。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="cnjst" data-offset-key="631i7-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="631i7-0-0"><span data-offset-key="631i7-0-0"><span data-text="true">二、Git 和 GitHub 有什么区别？</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="1ptjg-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1ptjg-0-0"><span data-offset-key="1ptjg-0-0" style="font-weight: bold;"><span data-text="true">Git </span></span><span data-offset-key="1ptjg-0-1"><span data-text="true">是一个版本管理工具，主要用来记录代码每一次修改。你可以把它理解成“项目存档系统”。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="89sfa-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="89sfa-0-0"><span data-offset-key="89sfa-0-0"><span data-text="true">比如你用 AI 写代码，今天改了一版，明天又让 AI 加功能，结果项目崩了。没有版本管理，你可能只能手动找回旧文件。但如果你用了 Git，每一次修改都能被记录下来，后面改坏了，也可以回到之前的版本。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="3ebvu-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="3ebvu-0-0"><span data-offset-key="3ebvu-0-0" style="font-weight: bold;"><span data-text="true">GitHub </span></span><span data-offset-key="3ebvu-0-1"><span data-text="true">则是基于 Git 的在线平台。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="di5bb-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="di5bb-0-0"><span data-offset-key="di5bb-0-0"><span data-text="true">Git 更像底层技术，GitHub 更像产品界面。你可以在网页上查看代码、上传项目、下载项目、协作修改，不需要一上来就学复杂命令。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="841a1-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="841a1-0-0"><span data-offset-key="841a1-0-0" style="font-weight: bold;"><span data-text="true">Git 负责记录版本，GitHub 负责托管项目、展示项目、连接开发者。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="4423e-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4423e-0-0"><span data-offset-key="4423e-0-0"><span data-text="true">对 Vibe Coder 来说，一开始不需要精通 Git 命令，但一定要能看懂 GitHub 页面。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="cnjst" data-offset-key="dsgah-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="dsgah-0-0"><span data-offset-key="dsgah-0-0"><span data-text="true">三、为什么 AI 时代更需要 GitHub？</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="6js69-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="6js69-0-0"><span data-offset-key="6js69-0-0"><span data-text="true">因为 AI 降低了写代码的门槛，但没有消灭项目管理的需求。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="30rtt-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="30rtt-0-0"><span data-offset-key="30rtt-0-0"><span data-text="true">你可以让 ChatGPT、Claude、Cursor、OpenClaw 帮你写代码，但代码写出来以后，问题才刚刚开始：项目放在哪里，怎么回退版本，怎么部署上线，怎么和别人协作，怎么基于别人的项目二次开发，怎么让 AI 读懂整个项目结构。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="5hcn1-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5hcn1-0-0"><span data-offset-key="5hcn1-0-0"><span data-text="true">这些问题，都和 GitHub 有关。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="29jbj-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="29jbj-0-0"><span data-offset-key="29jbj-0-0"><span data-text="true">尤其是 Vibe Coding，本质上不是“凭空造项目”，而是更高效地组合已有能力。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="6vbm3-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="6vbm3-0-0"><span data-offset-key="6vbm3-0-0"><span data-text="true">你想做一个 AI 工具站，不一定要从零开始。你可以先去 GitHub 找有没有类似项目，看看别人怎么写前端、怎么接 API、怎么设计页面，再让 AI 帮你改成自己的版本。这比从零开始快很多。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="cnjst" data-offset-key="5rji6-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5rji6-0-0"><span data-offset-key="5rji6-0-0"><span data-text="true">四、项目靠不靠谱，先看这四点</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="ejrb9-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="ejrb9-0-0"><span data-offset-key="ejrb9-0-0" style="font-weight: bold;"><span data-text="true">README 看说明，Star 看热度，更新时间看维护，Issues 看反馈。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="3nuq0-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="3nuq0-0-0"><span data-offset-key="3nuq0-0-0" style="font-weight: bold;"><span data-text="true">1. README 是否清楚</span></span><span data-offset-key="3nuq0-0-1"><span data-text="true">
+README 是项目说明书，一般在项目首页往下滑就能看到。
+它会告诉你这个项目是做什么的、怎么安装、怎么运行。
+ README 写得清楚，有截图、有步骤、有示例，说明这个项目对新手友好。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="dkq3t-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="dkq3t-0-0"><span data-offset-key="dkq3t-0-0" style="font-weight: bold;"><span data-text="true">2. Star 数是否足够</span></span><span data-offset-key="dkq3t-0-1"><span data-text="true">
+Star 可以理解为收藏和点赞。Star 越多，说明关注和使用这个项目的人越多。
+它不能完全代表质量，但可以作为一个参考。一般来说，Star 越高，项目越值得先看看。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="e4lgk-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="e4lgk-0-0"><span data-offset-key="e4lgk-0-0" style="font-weight: bold;"><span data-text="true">3. 最近有没有更新</span></span><span data-offset-key="e4lgk-0-1"><span data-text="true">
+技术项目很容易过期，所以要看它最近是否还在维护。如果几个月内有更新，说明项目大概率还有人在管。如果已经几年没更新，就要谨慎，可能会遇到安装失败、依赖过期、没人修 Bug 等问题。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="2deui-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="2deui-0-0"><span data-offset-key="2deui-0-0" style="font-weight: bold;"><span data-text="true">4. Issues 有没有人处理</span></span><span data-offset-key="2deui-0-1"><span data-text="true">
+Issues 是问题反馈区。你可以看看有没有很多人反馈同样的问题，也可以看作者有没有回复。如果问题有人处理，说明项目还比较活跃。
+如果一堆 Issue 长期没人回，就说明这个项目可能已经不维护了。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="cnjst" data-offset-key="2imot-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="2imot-0-0"><span data-offset-key="2imot-0-0"><span data-text="true">五、GitHub 上10个必须懂的词</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="68rcv-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="68rcv-0-0"><span data-offset-key="68rcv-0-0" style="font-weight: bold;"><span data-text="true">Repository（仓库）</span></span><span data-offset-key="68rcv-0-1"><span data-text="true">
+就是一个项目文件夹，里面放着代码、文档、图片、配置文件等内容。
+你可以把它理解成放在网上的项目文件夹。如果是公开仓库，别人也能看到和下载。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="ffl01-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="ffl01-0-0"><span data-offset-key="ffl01-0-0" style="font-weight: bold;"><span data-text="true">README（说明书）</span></span><span data-offset-key="ffl01-0-1"><span data-text="true">
+这是每个项目最应该先看的地方。它通常会告诉你：这个项目是做什么的、怎么安装、怎么使用、需要注意什么。小白打开 GitHub 后，不要先看代码，先看 README。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="f8ami-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="f8ami-0-0"><span data-offset-key="f8ami-0-0" style="font-weight: bold;"><span data-text="true">Commit（提交）</span></span><span data-offset-key="f8ami-0-1"><span data-text="true">
+可以理解为一次“保存记录”。每次作者修改项目并提交，GitHub 都会记录谁在什么时候改了什么。如果后面改错了，还可以回到之前的版本，就像项目的历史存档。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="4jbgp-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4jbgp-0-0"><span data-offset-key="4jbgp-0-0" style="font-weight: bold;"><span data-text="true">Branch（分支）</span></span><span data-offset-key="4jbgp-0-1"><span data-text="true">
+可以理解为项目的“实验版本”。主分支一般是稳定版本，如果想尝试新功能，就可以新建一个分支，在里面随便改。成功了再合并回主分支，失败了也不会影响原来的项目。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="cc331-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="cc331-0-0"><span data-offset-key="cc331-0-0" style="font-weight: bold;"><span data-text="true">Star（收藏）</span></span><span data-offset-key="cc331-0-1"><span data-text="true">
+看到好项目可以点 Star，以后方便找回来。Star 数也可以用来判断项目热度。一般 Star 越多，说明关注和使用的人越多。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="cbmd6-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="cbmd6-0-0"><span data-offset-key="cbmd6-0-0" style="font-weight: bold;"><span data-text="true">Fork（复制）</span></span><span data-offset-key="cbmd6-0-1"><span data-text="true">
+把别人的项目复制一份到自己的账号下。Star 是收藏，不改内容；Fork 是复制，可以自己修改。如果你想基于别人的项目做二次开发，第一步通常就是 Fork。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="5e5nc-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5e5nc-0-0"><span data-offset-key="5e5nc-0-0" style="font-weight: bold;"><span data-text="true">Issue（问题反馈）</span></span><span data-offset-key="5e5nc-0-1"><span data-text="true">
+可以理解为项目的留言板。发现 Bug、安装失败、文档看不懂，或者想提功能建议，都可以去 Issue 里说。同时，你也可以通过 Issue 判断项目是否有人维护。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="diflo-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="diflo-0-0"><span data-offset-key="diflo-0-0" style="font-weight: bold;"><span data-text="true">Pull Request（简称 PR）</span></span><span data-offset-key="diflo-0-1"><span data-text="true">
+意思是“我改了一点东西，你看看要不要合并进去”。如果你 Fork 了一个项目并做了修改，想把修改贡献给原作者，就可以提交 PR。原作者确认后，你的修改就会进入原项目。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="3u75e-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="3u75e-0-0"><span data-offset-key="3u75e-0-0" style="font-weight: bold;"><span data-text="true">Release（发布版本）</span></span><span data-offset-key="3u75e-0-1"><span data-text="true">
+这是小白最需要关注的下载区。很多项目会把正式安装包放在 Release 里，比如 Windows 版、Mac 版、插件文件等。普通人想直接使用，优先找 Release，而不是在代码文件里乱点。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="7sf0c-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7sf0c-0-0"><span data-offset-key="7sf0c-0-0" style="font-weight: bold;"><span data-text="true">Code（代码 / 下载入口）</span></span><span data-offset-key="7sf0c-0-1"><span data-text="true">
+项目页面上的绿色 Code 按钮，可以用来复制项目地址，也可以选择 Download ZIP 下载整个项目。但要注意，Download ZIP 下载的通常是源码，不一定是能直接双击打开的软件。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="cnjst" data-offset-key="d7hbl-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="d7hbl-0-0"><span data-offset-key="d7hbl-0-0"><span data-text="true">六、GitHub 页面关键区域逐个分析</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="ddq2r-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="ddq2r-0-0"><span data-offset-key="ddq2r-0-0" style="font-weight: bold;"><span data-text="true">一句话：首页用来搜索，仓库页面用来看项目，个人主页用来展示自己，Explore 用来发现新项目。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="2palr-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="2palr-0-0"><span data-offset-key="2palr-0-0" style="font-weight: bold;"><span data-text="true">1. GitHub 首页</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="5u80t-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5u80t-0-0"><span data-offset-key="5u80t-0-0"><span data-text="true">首页主要有三个区域：</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="ei0ab-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="ei0ab-0-0"><span data-offset-key="ei0ab-0-0" style="font-weight: bold;"><span data-text="true">左侧是你关注的项目和动态，比如哪些仓库更新了。
+中间是 GitHub 给你推荐的项目和内容。
+右上角有一个 “+” 号，可以用来创建新仓库。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="3id2b-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="3id2b-0-0"><span data-offset-key="3id2b-0-0"><span data-text="true">最常用的其实是搜索框，用来搜索自己感兴趣的项目。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="80j69-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="80j69-0-0"><span data-offset-key="80j69-0-0" style="font-weight: bold;"><span data-text="true">2. 仓库页面</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="34e9s-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="34e9s-0-0"><span data-offset-key="34e9s-0-0"><span data-text="true">仓库页面是 GitHub 最核心的页面。这里有几个重点区域：</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="3s3gg-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="3s3gg-0-0"><span data-offset-key="3s3gg-0-0" style="font-weight: bold;"><span data-text="true">Code 标签</span></span><span data-offset-key="3s3gg-0-1"><span data-text="true">
+这里放的是项目的代码和文件。你可以在线浏览，也可以通过绿色的 Code 按钮下载整个项目。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="5cv52-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5cv52-0-0"><span data-offset-key="5cv52-0-0" style="font-weight: bold;"><span data-text="true">README 区域</span></span><span data-offset-key="5cv52-0-1"><span data-text="true">
+一般在文件列表下面，是项目的说明书。它会告诉你这个项目是做什么的、怎么安装、怎么使用。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="a65ir-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="a65ir-0-0"><span data-offset-key="a65ir-0-0" style="font-weight: bold;"><span data-text="true">Issues 标签</span></span><span data-offset-key="a65ir-0-1"><span data-text="true">
+这是问题反馈区。用户发现 Bug、安装失败、想提建议，都可以在这里留言。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="66u9i-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="66u9i-0-0"><span data-offset-key="66u9i-0-0" style="font-weight: bold;"><span data-text="true">Pull Requests 标签</span></span><span data-offset-key="66u9i-0-1"><span data-text="true">
+这是代码审核区。别人修改了项目，想提交给原作者合并，就会在这里发起请求。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="3drh5-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="3drh5-0-0"><span data-offset-key="3drh5-0-0" style="font-weight: bold;"><span data-text="true">Releases 区域</span></span><span data-offset-key="3drh5-0-1"><span data-text="true">
+如果项目提供正式版本，通常会放在 Releases 里。普通人想下载软件安装包，优先看这里。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="8id5-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8id5-0-0"><span data-offset-key="8id5-0-0" style="font-weight: bold;"><span data-text="true">3. 个人主页</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="eip0d-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="eip0d-0-0"><span data-offset-key="eip0d-0-0"><span data-text="true">GitHub 的个人主页，有点像一张技术名片。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="23vek-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="23vek-0-0"><span data-offset-key="23vek-0-0"><span data-text="true">上面会显示你的简介、你创建过的仓库、你收藏过的项目，以及你的贡献记录。那个一格一格的绿色方块，就是提交日历。它记录你什么时候在 GitHub 上提交过内容。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="28ua4-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="28ua4-0-0"><span data-offset-key="28ua4-0-0"><span data-text="true">如果你以后想展示自己的 AI 项目、Vibe Coding 作品，GitHub 主页就是一个很好的展示入口。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="elfqs-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="elfqs-0-0"><span data-offset-key="elfqs-0-0" style="font-weight: bold;"><span data-text="true">4. Explore 和 Trending</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="e0hop-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="e0hop-0-0"><span data-offset-key="e0hop-0-0"><span data-text="true">GitHub 顶部有一个 Explore，也就是“发现”入口。这里会推荐热门项目、趋势项目和不同领域的开源内容。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="8ksuo-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8ksuo-0-0"><span data-offset-key="8ksuo-0-0"><span data-text="true">其中 Trending 很值得看，它会展示最近一段时间比较火的项目。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="1215t-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1215t-0-0"><span data-offset-key="1215t-0-0"><span data-text="true">对普通人来说，Trending 就像 GitHub 的热榜。每周刷一刷，可以发现很多新的 AI 工具、开源项目和技术趋势。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h1 class="longform-header-one" data-block="true" data-editor="cnjst" data-offset-key="89oo5-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="89oo5-0-0"><span data-offset-key="89oo5-0-0"><span data-text="true">七、新手必做的6件事</span></span></div></h1></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="9gr5m-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9gr5m-0-0"><span data-offset-key="9gr5m-0-0" style="font-weight: bold;"><span data-text="true">第1件事：注册一个GitHub账号</span></span></div></div><ol class="public-DraftStyleDefault-ol" data-offset-key="23pfs-0-0"><li class="longform-ordered-list-item public-DraftStyleDefault-orderedListItem public-DraftStyleDefault-reset public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="cnjst" data-offset-key="23pfs-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="23pfs-0-0"><span data-offset-key="23pfs-0-0"><span data-text="true">打开 GitHub 官网</span></span></div></li><li class="longform-ordered-list-item public-DraftStyleDefault-orderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="cnjst" data-offset-key="1iok2-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1iok2-0-0"><span data-offset-key="1iok2-0-0"><span data-text="true">点击右上角的 </span></span><span data-offset-key="1iok2-0-1" style="font-weight: bold;"><span data-text="true">Sign up</span></span></div></li><li class="longform-ordered-list-item public-DraftStyleDefault-orderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="cnjst" data-offset-key="5scjv-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5scjv-0-0"><span data-offset-key="5scjv-0-0"><span data-text="true">填写邮箱，设置密码，选择用户名</span></span></div></li><li class="longform-ordered-list-item public-DraftStyleDefault-orderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="cnjst" data-offset-key="ak02e-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="ak02e-0-0"><span data-offset-key="ak02e-0-0"><span data-text="true">按提示完成邮箱验证</span></span></div></li></ol><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="dtahf-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="dtahf-0-0"><span data-offset-key="dtahf-0-0"><span data-text="true">普通用户用免费账号就够了。GitHub 支持创建多个个人仓库，公开仓库可以免费使用。
+
+</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="actuh-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="actuh-0-0"><span data-offset-key="actuh-0-0" style="font-weight: bold;"><span data-text="true">第2件事：创建你的第一个仓库</span></span></div></div><ul class="public-DraftStyleDefault-ul" data-offset-key="4nc8u-0-0"><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-reset public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="cnjst" data-offset-key="4nc8u-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4nc8u-0-0"><span data-offset-key="4nc8u-0-0"><span data-text="true">点击右上角的 </span></span><span data-offset-key="4nc8u-0-1" style="font-weight: bold;"><span data-text="true">+</span></span><span data-offset-key="4nc8u-0-2"><span data-text="true"> 号</span></span></div></li><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="cnjst" data-offset-key="3pl26-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="3pl26-0-0"><span data-offset-key="3pl26-0-0"><span data-text="true">选择 </span></span><span data-offset-key="3pl26-0-1" style="font-weight: bold;"><span data-text="true">New repository</span></span></div></li><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="cnjst" data-offset-key="effu3-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="effu3-0-0"><span data-offset-key="effu3-0-0"><span data-text="true">填写仓库名，比如 my-first-repo</span></span></div></li><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="cnjst" data-offset-key="31qut-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="31qut-0-0"><span data-offset-key="31qut-0-0"><span data-text="true">选择 </span></span><span data-offset-key="31qut-0-1" style="font-weight: bold;"><span data-text="true">Public</span></span><span data-offset-key="31qut-0-2"><span data-text="true"> 或 </span></span><span data-offset-key="31qut-0-3" style="font-weight: bold;"><span data-text="true">Private</span></span><span data-offset-key="31qut-0-4"><span data-text="true">Public：公开，别人可以看到
+Private：私有，只有你自己或被邀请的人能看到</span></span></div></li><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="cnjst" data-offset-key="1k3qa-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1k3qa-0-0"><span data-offset-key="1k3qa-0-0"><span data-text="true">勾选 </span></span><span data-offset-key="1k3qa-0-1" style="font-weight: bold;"><span data-text="true">Add a README file</span></span><span data-offset-key="1k3qa-0-2"><span data-text="true">，给项目加一个说明文件</span></span></div></li><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="cnjst" data-offset-key="38jjb-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="38jjb-0-0"><span data-offset-key="38jjb-0-0"><span data-text="true">点击 </span></span><span data-offset-key="38jjb-0-1" style="font-weight: bold;"><span data-text="true">Create repository</span></span><span data-offset-key="38jjb-0-2"><span data-text="true">
+</span></span></div></li></ul><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="2cipa-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="2cipa-0-0"><span data-offset-key="2cipa-0-0" style="font-weight: bold;"><span data-text="true">第3件事：搜索你感兴趣的项目</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="6gbin-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="6gbin-0-0"><span data-offset-key="6gbin-0-0"><span data-text="true">GitHub搜索框，你可以搜：</span></span></div></div><ul class="public-DraftStyleDefault-ul" data-offset-key="fihr0-0-0"><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-reset public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="cnjst" data-offset-key="fihr0-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="fihr0-0-0"><span data-offset-key="fihr0-0-0"><span data-text="true">项目名（比如 chatgpt）</span></span></div></li><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="cnjst" data-offset-key="bqajd-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="bqajd-0-0"><span data-offset-key="bqajd-0-0"><span data-text="true">编程语言（比如 python）</span></span></div></li><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="cnjst" data-offset-key="2vsc9-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="2vsc9-0-0"><span data-offset-key="2vsc9-0-0"><span data-text="true">主题（比如 machine-learning）</span></span></div></li></ul><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="88nqi-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="88nqi-0-0"><span data-offset-key="88nqi-0-0"><span data-text="true">搜索结果可以按照前面四个指标，来看靠不靠谱。还可以问AI</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="cnjst" data-offset-key="9i9ca-0-0"><div class="css-175oi2r r-1nxhmzv r-13qz1uu"><div class="css-175oi2r r-dnmrzs" data-testid="markdown-code-block"><div class="css-175oi2r r-1awozwy r-bqz1g2 r-1fs5b29 r-1idry7j r-6413gk r-43g30s r-l4nmg1 r-o59np7 r-2dysd3 r-vmopo1 r-13qz1uu"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-rjixqe r-16dba41 r-1aiqnjv r-n6v787" dir="ltr" style="color: rgb(15, 20, 25);"></div><div class="css-175oi2r r-1awozwy r-6koalj r-18u37iz r-z5qs1h r-17s6mgv"><button aria-label="Copy to clipboard" class="css-175oi2r r-sdzlij r-1phboty r-rs99b7 r-lrvibr r-1ceczpf r-lp5zef r-1loqt21 r-o7ynqc r-6416eg r-1ny4l3l" role="button" style="background-color: rgba(0, 0, 0, 0); border-color: rgba(0, 0, 0, 0);" type="button"><div class="css-146c3p1 r-qvutc0 r-37j5jr r-q4m81j r-a023e6 r-rjixqe r-b88u0q r-1awozwy r-6koalj r-18u37iz r-16y2uox r-bcqeeo r-1777fci" dir="ltr" style="color: rgb(15, 20, 25);"><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-10ptun7 r-1janqcz" style="color: rgb(15, 20, 25);" viewbox="0 0 24 24"><g><path d="M19.5 2C20.88 2 22 3.12 22 4.5v11c0 1.21-.86 2.22-2 2.45V4.5c0-.28-.22-.5-.5-.5H6.05c.23-1.14 1.24-2 2.45-2h11zm-4 4C16.88 6 18 7.12 18 8.5v11c0 1.38-1.12 2.5-2.5 2.5h-11C3.12 22 2 20.88 2 19.5v-11C2 7.12 3.12 6 4.5 6h11zM4 19.5c0 .28.22.5.5.5h11c.28 0 .5-.22.5-.5v-11c0-.28-.22-.5-.5-.5h-11c-.28 0-.5.22-.5.5v11z"></path></g></svg><div class="css-175oi2r r-xoduu5"><span class="css-1jxf684 r-dnmrzs r-1udh08x r-1udbk01 r-3s2u2q r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1b43r93 r-1cwl3u0" style="border-bottom: 2px solid rgb(15, 20, 25);"></span></div></div></button></div></div><pre style="background: rgb(247, 249, 249); color: rgb(56, 58, 66); font-family: monospace; direction: ltr; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; line-height: 1.3; tab-size: 2; hyphens: none; padding: 12px; margin: 0px 0px 0.5em; overflow: auto; border-radius: 0.3em 0.3em 8px 8px; font-size: 13px; display: block; width: 100%; box-sizing: border-box;"><code class="language-text" style='background: rgb(250, 250, 250); color: rgb(56, 58, 66); font-family: "Fira Code", "Fira Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace; direction: ltr; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; line-height: 1.5; tab-size: 2; hyphens: none;'><span>“帮我在 GitHub 上找 5 个 AI 视频剪辑相关项目，按 Star 数排序，并给出链接。”</span></code></pre></div></div></section><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="35cmr-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="35cmr-0-0"><span data-offset-key="35cmr-0-0"><span data-text="true">可以读项目来总结</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="cnjst" data-offset-key="8co35-0-0"><div class="css-175oi2r r-1nxhmzv r-13qz1uu"><div class="css-175oi2r r-dnmrzs" data-testid="markdown-code-block"><div class="css-175oi2r r-1awozwy r-bqz1g2 r-1fs5b29 r-1idry7j r-6413gk r-43g30s r-l4nmg1 r-o59np7 r-2dysd3 r-vmopo1 r-13qz1uu"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-rjixqe r-16dba41 r-1aiqnjv r-n6v787" dir="ltr" style="color: rgb(15, 20, 25);"></div><div class="css-175oi2r r-1awozwy r-6koalj r-18u37iz r-z5qs1h r-17s6mgv"><button aria-label="Copy to clipboard" class="css-175oi2r r-sdzlij r-1phboty r-rs99b7 r-lrvibr r-1ceczpf r-lp5zef r-1loqt21 r-o7ynqc r-6416eg r-1ny4l3l" role="button" style="background-color: rgba(0, 0, 0, 0); border-color: rgba(0, 0, 0, 0);" type="button"><div class="css-146c3p1 r-qvutc0 r-37j5jr r-q4m81j r-a023e6 r-rjixqe r-b88u0q r-1awozwy r-6koalj r-18u37iz r-16y2uox r-bcqeeo r-1777fci" dir="ltr" style="color: rgb(15, 20, 25);"><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-10ptun7 r-1janqcz" style="color: rgb(15, 20, 25);" viewbox="0 0 24 24"><g><path d="M19.5 2C20.88 2 22 3.12 22 4.5v11c0 1.21-.86 2.22-2 2.45V4.5c0-.28-.22-.5-.5-.5H6.05c.23-1.14 1.24-2 2.45-2h11zm-4 4C16.88 6 18 7.12 18 8.5v11c0 1.38-1.12 2.5-2.5 2.5h-11C3.12 22 2 20.88 2 19.5v-11C2 7.12 3.12 6 4.5 6h11zM4 19.5c0 .28.22.5.5.5h11c.28 0 .5-.22.5-.5v-11c0-.28-.22-.5-.5-.5h-11c-.28 0-.5.22-.5.5v11z"></path></g></svg><div class="css-175oi2r r-xoduu5"><span class="css-1jxf684 r-dnmrzs r-1udh08x r-1udbk01 r-3s2u2q r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1b43r93 r-1cwl3u0" style="border-bottom: 2px solid rgb(15, 20, 25);"></span></div></div></button></div></div><pre style="background: rgb(247, 249, 249); color: rgb(56, 58, 66); font-family: monospace; direction: ltr; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; line-height: 1.3; tab-size: 2; hyphens: none; padding: 12px; margin: 0px 0px 0.5em; overflow: auto; border-radius: 0.3em 0.3em 8px 8px; font-size: 13px; display: block; width: 100%; box-sizing: border-box;"><code class="language-text" style='background: rgb(250, 250, 250); color: rgb(56, 58, 66); font-family: "Fira Code", "Fira Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace; direction: ltr; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; line-height: 1.5; tab-size: 2; hyphens: none;'><span>“用小白能听懂的话解释这个项目是做什么的，怎么安装，适合什么人用。”</span></code></pre></div></div></section><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="qqh5-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="qqh5-0-0"><span data-offset-key="qqh5-0-0" style="font-weight: bold;"><span data-text="true">第4件事：下载一个项目</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="bcli7-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="bcli7-0-0"><span data-offset-key="bcli7-0-0" style="font-weight: bold;"><span data-text="true">方式一：下载 ZIP 压缩包</span></span></div></div><ol class="public-DraftStyleDefault-ol" data-offset-key="9l3gv-0-0"><li class="longform-ordered-list-item public-DraftStyleDefault-orderedListItem public-DraftStyleDefault-reset public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="cnjst" data-offset-key="9l3gv-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9l3gv-0-0"><span data-offset-key="9l3gv-0-0"><span data-text="true">打开项目的仓库页面</span></span></div></li><li class="longform-ordered-list-item public-DraftStyleDefault-orderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="cnjst" data-offset-key="6dou6-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="6dou6-0-0"><span data-offset-key="6dou6-0-0"><span data-text="true">点击绿色的 </span></span><span data-offset-key="6dou6-0-1" style="font-weight: bold;"><span data-text="true">Code</span></span><span data-offset-key="6dou6-0-2"><span data-text="true"> 按钮</span></span></div></li><li class="longform-ordered-list-item public-DraftStyleDefault-orderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="cnjst" data-offset-key="dhid7-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="dhid7-0-0"><span data-offset-key="dhid7-0-0"><span data-text="true">选择 </span></span><span data-offset-key="dhid7-0-1" style="font-weight: bold;"><span data-text="true">Download ZIP</span></span></div></li><li class="longform-ordered-list-item public-DraftStyleDefault-orderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="cnjst" data-offset-key="c4r7r-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="c4r7r-0-0"><span data-offset-key="c4r7r-0-0"><span data-text="true">下载完成后，解压到电脑里</span></span></div></li></ol><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="8n7dl-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8n7dl-0-0"><span data-offset-key="8n7dl-0-0"><span data-text="true">这种方式适合想先把整个项目保存下来的新手。但Download ZIP 下载下来的通常是源码，不一定是可以直接双击打开的软件。有些项目还需要按照 README 里的步骤安装和运行。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="8v2de-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8v2de-0-0"><span data-offset-key="8v2de-0-0" style="font-weight: bold;"><span data-text="true">方式二：找 Releases 下载</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="5770v-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5770v-0-0"><span data-offset-key="5770v-0-0"><span data-text="true">只是想直接使用这个工具，记得优先看 </span></span><span data-offset-key="5770v-0-1" style="font-weight: bold;"><span data-text="true">Releases</span></span><span data-offset-key="5770v-0-2"><span data-text="true">。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="9norv-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9norv-0-0"><span data-offset-key="9norv-0-0"><span data-text="true">很多项目作者会把正式版本放在 Releases 里，比如 Windows 安装包、Mac 安装包、插件文件、压缩包等。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="8o96g-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8o96g-0-0"><span data-offset-key="8o96g-0-0"><span data-text="true">操作也很简单：</span></span></div></div><ol class="public-DraftStyleDefault-ol" data-offset-key="5h9d0-0-0"><li class="longform-ordered-list-item public-DraftStyleDefault-orderedListItem public-DraftStyleDefault-reset public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="cnjst" data-offset-key="5h9d0-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5h9d0-0-0"><span data-offset-key="5h9d0-0-0"><span data-text="true">看仓库右侧或顶部标签里有没有 </span></span><span data-offset-key="5h9d0-0-1" style="font-weight: bold;"><span data-text="true">Releases</span></span></div></li><li class="longform-ordered-list-item public-DraftStyleDefault-orderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="cnjst" data-offset-key="d9u0i-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="d9u0i-0-0"><span data-offset-key="d9u0i-0-0"><span data-text="true">点进去，找到最新版本</span></span></div></li><li class="longform-ordered-list-item public-DraftStyleDefault-orderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="cnjst" data-offset-key="cjuid-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="cjuid-0-0"><span data-offset-key="cjuid-0-0"><span data-text="true">根据自己的电脑系统，下载对应的安装包
+
+</span></span></div></li></ol><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="5pa5v-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5pa5v-0-0"><span data-offset-key="5pa5v-0-0" style="font-weight: bold;"><span data-text="true">第5件事：给喜欢的项目加Star</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="6du1d-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="6du1d-0-0"><span data-offset-key="6du1d-0-0"><span data-text="true">看到一个不错的项目，点右上角的"Star"按钮。以后"Stars"标签页里能找到所有你收藏过的项目。Star帮你建立一个自己的"好项目收藏库"。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="ehtm3-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="ehtm3-0-0"><span data-offset-key="ehtm3-0-0" style="font-weight: bold;"><span data-text="true">第6件事：试着提一个Issue</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="dtaql-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="dtaql-0-0"><span data-offset-key="dtaql-0-0"><span data-text="true">发现 Bug，或者有新的功能建议，可以试着提一个 Issue。</span></span></div></div><ol class="public-DraftStyleDefault-ol" data-offset-key="2hveh-0-0"><li class="longform-ordered-list-item public-DraftStyleDefault-orderedListItem public-DraftStyleDefault-reset public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="cnjst" data-offset-key="2hveh-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="2hveh-0-0"><span data-offset-key="2hveh-0-0"><span data-text="true">打开项目的仓库页面</span></span></div></li><li class="longform-ordered-list-item public-DraftStyleDefault-orderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="cnjst" data-offset-key="5ksp6-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5ksp6-0-0"><span data-offset-key="5ksp6-0-0"><span data-text="true">点击上方的 </span></span><span data-offset-key="5ksp6-0-1" style="font-weight: bold;"><span data-text="true">Issues</span></span><span data-offset-key="5ksp6-0-2"><span data-text="true"> 标签</span></span></div></li><li class="longform-ordered-list-item public-DraftStyleDefault-orderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="cnjst" data-offset-key="3fjfq-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="3fjfq-0-0"><span data-offset-key="3fjfq-0-0"><span data-text="true">点击 </span></span><span data-offset-key="3fjfq-0-1" style="font-weight: bold;"><span data-text="true">New issue</span></span></div></li><li class="longform-ordered-list-item public-DraftStyleDefault-orderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="cnjst" data-offset-key="2jd6k-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="2jd6k-0-0"><span data-offset-key="2jd6k-0-0"><span data-text="true">写清楚你遇到的问题，或者想提的建议</span></span></div></li><li class="longform-ordered-list-item public-DraftStyleDefault-orderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="cnjst" data-offset-key="3cp3l-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="3cp3l-0-0"><span data-offset-key="3cp3l-0-0"><span data-text="true">点击 </span></span><span data-offset-key="3cp3l-0-1" style="font-weight: bold;"><span data-text="true">Submit new issue</span></span><span data-offset-key="3cp3l-0-2"><span data-text="true"> 提交</span></span></div></li></ol><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="6qgaj-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="6qgaj-0-0"><span data-offset-key="6qgaj-0-0"><span data-text="true">写 Issue 的时候，不用写得很复杂，只要把问题说清楚就行。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="8gm9u-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8gm9u-0-0"><span data-offset-key="8gm9u-0-0"><br data-text="true"/></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h1 class="longform-header-one" data-block="true" data-editor="cnjst" data-offset-key="762cj-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="762cj-0-0"><span data-offset-key="762cj-0-0" style="font-weight: bold;"><span data-text="true">八、一些</span></span><span data-offset-key="762cj-0-1"><span data-text="true">隐藏功能</span></span></div></h1></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="7ujei-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7ujei-0-0"><span data-offset-key="7ujei-0-0" style="font-weight: bold;"><span data-text="true">GitHub Pages：免费建站</span></span><span data-offset-key="7ujei-0-1"><span data-text="true">
+可以用来发布个人主页、作品集、项目介绍页，不需要自己买服务器。很适合新手练习发布自己的 Vibe Coding 项目。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="c576v-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="c576v-0-0"><span data-offset-key="c576v-0-0" style="font-weight: bold;"><span data-text="true">GitHub Actions：自动化工具</span></span><span data-offset-key="c576v-0-1"><span data-text="true">
+可以帮你自动完成一些重复操作，比如代码更新后自动测试、自动打包、自动部署。后面你做项目上线时会很有用。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="bv0mj-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="bv0mj-0-0"><span data-offset-key="bv0mj-0-0" style="font-weight: bold;"><span data-text="true">GitHub Copilot：AI 编程助手</span></span><span data-offset-key="bv0mj-0-1"><span data-text="true">
+这是 GitHub 自家的 AI 编程工具。你写代码时，它可以帮你补全代码、生成函数、解释逻辑，提高开发效率。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="41tm2-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="41tm2-0-0"><span data-offset-key="41tm2-0-0" style="font-weight: bold;"><span data-text="true">GitHub Gist：代码片段分享</span></span><span data-offset-key="41tm2-0-1"><span data-text="true">
+如果只想保存或分享一小段代码、一个命令、一个配置，不需要专门建仓库，可以用 Gist。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="1easg-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1easg-0-0"><span data-offset-key="1easg-0-0" style="font-weight: bold;"><span data-text="true">GitHub Discussions：社区讨论区</span></span><span data-offset-key="1easg-0-1"><span data-text="true">
+有些项目会用 Discussions 做讨论区。它比 Issues 更自由，适合交流想法、使用经验和功能建议。
+
+</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="cnjst" data-offset-key="3b763-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="3b763-0-0"><span data-offset-key="3b763-0-0"><span data-text="true">九、小白最容易踩的坑</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="ajjc6-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="ajjc6-0-0"><span data-offset-key="ajjc6-0-0" style="font-weight: bold;"><span data-text="true">坑 1：不知道怎么下载项目</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="4j56h-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4j56h-0-0"><span data-offset-key="4j56h-0-0"><span data-text="true">很多小白进了 GitHub 仓库，看到满屏代码就懵了。其实先看右侧有没有 </span></span><span data-offset-key="4j56h-0-1" style="font-weight: bold;"><span data-text="true">Releases</span></span><span data-offset-key="4j56h-0-2"><span data-text="true">。有的话，优先点进去下载打包好的版本。
+没有的话，再点绿色 </span></span><span data-offset-key="4j56h-0-3" style="font-weight: bold;"><span data-text="true">Code</span></span><span data-offset-key="4j56h-0-4"><span data-text="true"> 按钮，选择 </span></span><span data-offset-key="4j56h-0-5" style="font-weight: bold;"><span data-text="true">Download ZIP</span></span><span data-offset-key="4j56h-0-6"><span data-text="true">。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="1t379-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1t379-0-0"><span data-offset-key="1t379-0-0" style="font-weight: bold;"><span data-text="true">有 Releases 先下载 Releases，没有再 Download ZIP。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="1ohqd-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1ohqd-0-0"><span data-offset-key="1ohqd-0-0" style="font-weight: bold;"><span data-text="true">坑 2：把 Git 和 GitHub 搞混</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="e3e7i-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="e3e7i-0-0"><span data-offset-key="e3e7i-0-0"><span data-text="true">Git 是本地命令行工具。GitHub 是一个网站。如果你只是浏览项目、下载工具、收藏项目，用网页版 GitHub 就够了，不需要一开始就学 Git 命令。等你需要自己写代码、改项目、上传代码时，再学 Git 也不迟。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="38kpt-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="38kpt-0-0"><span data-offset-key="38kpt-0-0" style="font-weight: bold;"><span data-text="true">坑 3：不敢提 Issue</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="d148-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="d148-0-0"><span data-offset-key="d148-0-0"><span data-text="true">很多小白觉得自己不会代码，就不敢提 Issue。其实反馈也是贡献。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="5olsi-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5olsi-0-0"><span data-offset-key="5olsi-0-0"><span data-text="true">比如文档看不懂、安装失败、功能不好用、教程少步骤，都可以提 Issue。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="6r95o-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="6r95o-0-0"><span data-offset-key="6r95o-0-0"><span data-text="true">开源项目不只需要代码，也需要真实用户反馈。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="cnjst" data-offset-key="5kdc9-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5kdc9-0-0"><span data-offset-key="5kdc9-0-0"><span data-text="true">十、普通人学 GitHub 的正确路径</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="2b16-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="2b16-0-0"><span data-offset-key="2b16-0-0"><span data-text="true">第一步：今天就能做</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="7gcc2-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7gcc2-0-0"><span data-offset-key="7gcc2-0-0"><span data-text="true">注册 GitHub 账号。
+创建第一个仓库。
+Star 几个感兴趣的项目。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="eddto-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="eddto-0-0"><span data-offset-key="eddto-0-0"><span data-text="true">第二步：这周完成</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="8spde-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8spde-0-0"><span data-offset-key="8spde-0-0"><span data-text="true">学会用搜索找项目。
+下载几个 AI 工具的 Releases。
+看看别人是怎么写说明文档的。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="dpa9m-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="dpa9m-0-0"><span data-offset-key="dpa9m-0-0"><span data-text="true">第三步：下个月开始</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="ct0hr-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="ct0hr-0-0"><span data-offset-key="ct0hr-0-0"><span data-text="true">学一点 Markdown，把 README 写清楚。
+然后试着提第一个 Issue。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="6vsq9-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="6vsq9-0-0"><span data-offset-key="6vsq9-0-0"><span data-text="true">第四步：进阶阶段</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="3kguj-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="3kguj-0-0"><span data-offset-key="3kguj-0-0"><span data-text="true">再去学 Git 命令。
+尝试 Fork 项目。
+修改文件。
+提交 Pull Request。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="cnjst" data-offset-key="l1er-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="l1er-0-0"><span data-offset-key="l1er-0-0"><span data-text="true">总结</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="c7fmv-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="c7fmv-0-0"><span data-offset-key="c7fmv-0-0"><span data-text="true">GitHub 不是程序员专属的网站。在 AI 时代，它更像是普通人进入开源世界的入口。你可以在这里找到工具、学习项目、下载代码、复制模板，也可以把自己的 AI 作品发布出去，让别人看到、使用和改进。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="3u0jp-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="3u0jp-0-0"><span data-offset-key="3u0jp-0-0"><span data-text="true">这不是程序员的专属技能，而是 AI 时代每个普通人都该掌握的基础能力。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="cnjst" data-offset-key="4f3g0-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4f3g0-0-0"><span data-offset-key="4f3g0-0-0"><span data-text="true">小树——浙财毕业的斜杠青年，国A级企业竞争大赛一等奖，高考毕业赚到人生第一桶金5万，参加过10+企业大使项目。</span></span><span data-offset-key="4f3g0-0-1" style="font-weight: bold;"><span data-text="true">持续分享 AI工具实践、个人成长、出海机会与普通人如何用新技术打开第二曲线。 </span></span><div class="css-175oi2r r-1loqt21 r-1471scf r-o7ynqc r-6416eg r-1ny4l3l"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-rjixqe r-16dba41 r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="https://x.com/@AmberTreelet" rel="noopener noreferrer nofollow" role="link" style="color: rgb(15, 20, 25);" target="_blank"><span data-offset-key="4f3g0-1-0" style="font-weight: bold;"><span data-text="true">@AmberTreelet</span></span></a></div></div></div></div></div></div></div></div></div><div class="css-175oi2r"><div aria-live="polite" class="css-175oi2r r-1xfd6ze r-6koalj r-18u37iz r-kzbkwu r-1c4vpko r-1c7gwzm r-ttdzmv r-13qz1uu" role="status" style="background-color: rgb(234, 250, 255);"><div class="css-175oi2r r-13awgt0 r-18u37iz"><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-1xvli5t r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-18jsvk2 r-1wron08" data-testid="icon" viewbox="0 0 24 24"><g><path d="M18.93 12.69c.933-.933 2.446-.933 3.38 0 .933.934.933 2.447 0 3.38l-5.568 5.568c-.661.661-1.534 1.07-2.466 1.155L12 23l.207-2.276c.085-.932.494-1.805 1.155-2.466l5.568-5.568z"></path><path clip-rule="evenodd" d="M15.5 2c.684 0 1.257-.001 1.724.037.478.04.933.125 1.365.345.658.335 1.194.87 1.53 1.53.22.43.305.886.344 1.364.038.467.037 1.04.037 1.724v2.992c-1.083.03-2.158.458-2.984 1.284l-5.568 5.568c-.992.992-1.606 2.301-1.733 3.699L10.082 22H8.5c-.684 0-1.257.001-1.724-.037-.478-.04-.933-.125-1.365-.345-.658-.335-1.194-.87-1.53-1.53-.22-.43-.305-.886-.344-1.364C3.5 18.257 3.5 17.684 3.5 17V7c0-.684-.001-1.257.037-1.724.04-.478.125-.933.345-1.365.335-.658.87-1.194 1.53-1.53.43-.22.886-.305 1.364-.344C7.243 2 7.816 2 8.5 2h7zM8 12h5v-2H8v2zm0-4h8V6H8v2z" fill-rule="evenodd"></path></g></svg><div class="css-175oi2r r-1habvwh r-13awgt0 r-1777fci"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1b43r93 r-1cwl3u0 r-16dba41 r-13qz1uu" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">Want to publish your own Article?</span></div><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1b43r93 r-1cwl3u0 r-b88u0q r-1q142lx r-1s2bzr4 r-iphfwy r-13orzya r-3s2u2q r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="/i/premium_sign_up" role="link" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">Upgrade to Premium</span></a></div></div></div></div></div></div><div class="css-175oi2r r-12kyg2d"><div class="css-175oi2r r-k4xj1c r-18u37iz r-1wtj0ep"><div class="css-175oi2r r-1wbh5a2 r-1a11zyx"><div class="css-175oi2r r-1d09ksm r-18u37iz r-1wbh5a2 r-1471scf"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(83, 100, 113);"><a aria-describedby="id__ctbca4unkrg" aria-label="9:26 PM · May 21, 2026" class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-xoduu5 r-1q142lx r-1w6e6rj r-9aw3ui r-3s2u2q r-1loqt21" href="/AmberTreelet/status/2057453069261279629" role="link" style="color: rgb(83, 100, 113);"><time datetime="2026-05-21T13:26:51.000Z">9:26 PM · May 21, 2026</time></a></div><div aria-hidden="true" class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1q142lx r-n7gxbd" dir="ltr" style="color: rgb(83, 100, 113);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">·</span></div><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1loqt21" dir="ltr" href="/AmberTreelet/status/2057453069261279629/analytics" role="link" style="color: rgb(15, 20, 25);"><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1b43r93 r-1cwl3u0 r-b88u0q" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">79.3K</span></span></span></div> <span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1b43r93 r-1cwl3u0" style="color: rgb(83, 100, 113);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">Views</span></span></a></div></div><div class="css-175oi2r r-18u37iz"></div></div></div><div class="css-175oi2r"><div class="css-175oi2r"><div aria-label="75 replies, 120 reposts, 372 likes, 762 bookmarks, 79344 views" class="css-175oi2r r-1kbdv8c r-18u37iz r-1oszu61 r-3qxfft r-n7gxbd r-1dgieki r-1efd50x r-5kkj8d r-h3s6tt r-1wtj0ep" id="id__1j8hhpd9iya" role="group"><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="75 Replies. Reply" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="reply" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01zm8.005-6c-3.317 0-6.005 2.69-6.005 6 0 3.37 2.77 6.08 6.138 6.01l.351-.01h1.761v2.3l5.087-2.81c1.951-1.08 3.163-3.13 3.163-5.36 0-3.39-2.744-6.13-6.129-6.13H9.756z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">75</span></span></span></div></div></button></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="120 reposts. Repost" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="retweet" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">120</span></span></span></div></div></button></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="372 Likes. Like" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="like" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">372</span></span></span></div></div></button></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="762 Bookmarks. Bookmark" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="bookmark" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M4 4.5C4 3.12 5.119 2 6.5 2h11C18.881 2 20 3.12 20 4.5v18.44l-8-5.71-8 5.71V4.5zM6.5 4c-.276 0-.5.22-.5.5v14.56l6-4.29 6 4.29V4.5c0-.28-.224-.5-.5-.5h-11z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">762</span></span></span></div></div></button></div><div class="css-175oi2r" style="justify-content: inherit; display: inline-grid; transform: rotate(0deg) scale(1) translate3d(0px, 0px, 0px);"><div class="css-175oi2r r-18u37iz r-1h0z5md"><button aria-expanded="false" aria-haspopup="menu" aria-label="Share post" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M12 2.59l5.7 5.7-1.41 1.42L13 6.41V16h-2V6.41l-3.3 3.3-1.41-1.42L12 2.59zM21 15l-.02 3.51c0 1.38-1.12 2.49-2.5 2.49H5.5C4.11 21 3 19.88 3 18.5V15h2v3.5c0 .28.22.5.5.5h12.98c.28 0 .5-.22.5-.5L19 15h2z"></path></g></svg></div></div></button></div></div></div></div></div><button class="css-175oi2r r-1ets6dv r-1867qdf r-rs99b7 r-13awgt0 r-bx70bn r-1loqt21 r-o7ynqc r-6416eg r-1ny4l3l" data-testid="logged_out_read_replies_pivot" role="button" type="button"><div class="css-175oi2r r-1awozwy r-1panhkp r-1867qdf r-6koalj r-18u37iz r-1pi2tsx r-11f147o r-is05cd"><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-18jsvk2 r-1q142lx r-v24l6w r-1wron08 r-qu3fyt" viewbox="0 0 24 24"><g><path d="M12.312 23.736c-.123 0-.246-.03-.358-.091-.241-.132-.392-.385-.392-.659v-.871c0-.414.336-.75.75-.75.256 0 .482.128.617.324 1.905-1.247 4.823-3.192 5.908-4.11 2.256-1.908 3.604-4.732 3.608-7.554 0-.414.336-.749.75-.749s.75.337.749.751c-.004 3.256-1.552 6.507-4.14 8.697-1.326 1.121-5.009 3.546-7.086 4.892-.124.08-.266.12-.408.12zm-2.557-1.897c1.697-1.082 6.672-4.317 8.048-5.48 1.902-1.609 3.04-3.976 3.043-6.329-.006-4.366-3.433-7.787-7.8-7.787l-4.149-.01c-4.375-.001-7.801 3.426-7.801 7.801 0 4.104 3.14 7.204 7.465 7.37.002 1.79.008 2.88.058 3.544-.041.101-.061.21-.055.322.009.178.081.344.198.471.111.241.283.241.552.241.163 0 .316-.053.441-.144zm3.289-18.097c3.529 0 6.298 2.763 6.302 6.287-.003 1.917-.941 3.855-2.512 5.184-1.03.871-4.478 3.16-6.771 4.645l-.002-3.175c0-.403-.319-.734-.722-.749l-.721-.027c-3.49-.135-6.022-2.604-6.022-5.872 0-3.534 2.768-6.302 6.299-6.302l4.149.01z"></path></g></svg><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1b43r93 r-1cwl3u0 r-b88u0q r-1awozwy r-6koalj r-1559e4e r-13qz1uu" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">Read 75 replies</span></div></div></button></div></div></div></article>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Yanhua on X: "Agentic Design Patterns：一本让我重新理解"Agent 到底是什么"的书" / X</title>
+<!-- Injected Original Styles -->
+<style id="draftjs-styles">
+     .DraftEditor-editorContainer, .DraftEditor-root, .public-DraftEditor-content {
+        height: inherit;
+        max-height: inherit;
+        min-height: inherit;
+        text-align: initial;
+    }
+
+    .public-DraftEditor-content[contenteditable=true] {
+        -moz-user-modify: read-write-plaintext-only;
+        -webkit-user-modify: read-write-plaintext-only;
+    }
+
+    .format-inline .public-DraftEditor-content[contenteditable=true] {
+      -moz-user-modify: read-write;
+      -webkit-user-modify: read-write;
+    }
+
+    .DraftEditor-root {
+        width: 100%;
+        position: relative;
+        -webkit-user-select: none;
+    }
+
+    .DraftEditor-editorContainer {
+        background-color: rgba(255, 255, 255, 0);
+        border-left: .1px solid transparent;
+        position: relative;
+        z-index: 1;
+    }
+
+    .public-DraftEditor-block {
+        position: relative;
+    }
+
+    .DraftEditor-alignLeft .public-DraftStyleDefault-block {
+        text-align: left;
+    }
+
+    .DraftEditor-alignLeft .public-DraftEditorPlaceholder-root {
+        left: 0;
+        text-align: left;
+    }
+
+    .DraftEditor-alignCenter .public-DraftStyleDefault-block {
+        text-align: center
+    }
+
+    .DraftEditor-alignCenter .public-DraftEditorPlaceholder-root {
+        margin: 0 auto;
+        text-align: center;
+        width: 100%
+    }
+
+    .DraftEditor-alignRight .public-DraftStyleDefault-block {
+        text-align: right;
+    }
+
+    .DraftEditor-alignRight .public-DraftEditorPlaceholder-root {
+        right: 0;
+        text-align: right;
+    }
+
+    .public-DraftEditorPlaceholder-root {
+        padding-bottom: 2px;
+        padding-top: 2px;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .public-DraftEditorPlaceholder-inner {
+        user-select: none;
+        -webkit-user-select: none;
+    }
+
+    .DraftEditorPlaceholder-hidden {
+        display: none;
+    }
+
+    .public-DraftStyleDefault-block {
+        overflow:hidden;
+        padding-bottom: 2px;
+        padding-top: 2px;
+        position: relative;
+        white-space: pre-wrap;
+    }
+
+    /* Only a handful of CSS rules work on br tags and user-select isn't one */
+    div:only-child > .public-DraftStyleDefault-block > span > br::selection {
+        background: transparent;
+    }
+
+    /*
+       Safari doesn't let you change ::selection on br elements,
+       but Chrome needs it here
+    */
+    div:only-child > .public-DraftStyleDefault-block > span:has(br)::selection {
+        background: transparent;
+    }
+
+    .public-DraftStyleDefault-ltr {
+        direction: ltr;
+        text-align: left;
+    }
+
+    .public-DraftStyleDefault-rtl {
+        direction: rtl;
+        text-align: right;
+    }
+
+    .DraftEditor-editorContainer a {
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        margin-bottom: inherit;
+        margin-top: inherit;
+    }
+
+    .singleline .public-DraftStyleDefault-block {
+        overflow-x: auto;
+        scrollbar-width: none;
+        white-space: nowrap;
+        -ms-overflow-style: none;
+    }
+
+    .singleline .public-DraftStyleDefault-block::-webkit-scrollbar {
+        display: none;
+    }
+  </style>
+<style id="longform-styles">
+    .longform-header-one {
+        font-size: 31px;
+        font-weight: 800;
+        line-height: 40px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-header-one-narrow {
+        font-size: calc(20px + 1px);
+        font-weight: 800;
+        line-height: 28px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-header-two {
+        font-size: 26px;
+        font-weight: 800;
+        line-height: 36px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-header-two-narrow {
+        font-size: calc(17px + 1px);
+        font-weight: 800;
+        line-height: 24px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-unstyled, .longform-blockquote {
+        font-size: 17px;
+        line-height: 28px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-unstyled-narrow, .longform-blockquote-narrow {
+        font-size: 17px;
+        line-height: 28px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-unordered-list-item, .longform-ordered-list-item {
+        display: block;
+        font-size: 17px;
+        line-height: 28px;   
+        margin-bottom: 12px;
+        margin-left: calc(28px + 2px);
+        margin-top: 0;
+    }
+
+    .longform-unordered-list-item-narrow, .longform-ordered-list-item-narrow {
+        display: block;
+        font-size: 17px;
+        line-height: 28px;   
+        margin-bottom: calc(12px / 2);
+        margin-left: 36px;
+        margin-top: 0;
+    }
+
+    .longform-blockquote, .longform-blockquote-narrow {
+        margin-bottom: calc(24px + 2px);
+        margin-left: 0;
+        margin-top: calc(-2px);
+        padding-left: calc(24px + 3px);
+        position: relative;
+    }
+
+    .longform-blockquote:before, .longform-blockquote-narrow:before {
+        background: #37434D;
+        border-radius: 9999px;
+        bottom: 0;
+        content: "";
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 3px;
+    }
+
+    .longform-header-one .public-DraftStyleDefault-block,
+    .longform-header-two .public-DraftStyleDefault-block,
+    .longform-unstyled .public-DraftStyleDefault-block,
+    .longform-unordered-list-item .public-DraftStyleDefault-block,
+    .longform-ordered-list-item .public-DraftStyleDefault-block,
+    .longform-header-one-narrow .public-DraftStyleDefault-block,
+    .longform-header-two-narrow .public-DraftStyleDefault-block,
+    .longform-unstyled-narrow .public-DraftStyleDefault-block,
+    .longform-unordered-list-item-narrow .public-DraftStyleDefault-block,
+    .longform-ordered-list-item-narrow .public-DraftStyleDefault-block {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    .public-DraftStyleDefault-ul, .public-DraftStyleDefault-ol {
+        counter-reset: item;
+        margin-bottom: 28px;
+        margin-top: 0;
+        padding-left: 0;
+    }
+
+    .longform-unordered-list-item:before, .longform-ordered-list-item:before,
+    .longform-unordered-list-item-narrow:before, .longform-ordered-list-item-narrow:before {
+        position: absolute;
+        margin-left: calc(-1 * (28px + 2px));
+    }
+
+    .longform-unordered-list-item:before {
+        content: counter(item, disc);
+        font-size: 23px
+    }
+
+    .longform-unordered-list-item-narrow:before {
+        content: counter(item, disc);
+        font-size: 20px
+    }
+
+    .longform-ordered-list-item:before, .longform-ordered-list-item-narrow:before {
+        content: counter(item) ". ";
+        counter-increment: item;
+    }
+
+    .longform-ordered-list-item::marker, .longform-ordered-list-item-narrow::marker {
+        font-variant-numeric: normal;
+    }
+</style>
+<style>input::placeholder { user-select: none; -webkit-user-select: none; } div div ::-webkit-input-placeholder { color: rgb(117, 117, 117) } iframe { color-scheme: auto; }button { text-align: inherit; font-size: inherit; font-family: inherit; color: inherit }</style>
+<style>@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-Light.a929468a.woff2) format('woff2');
+  font-weight: 300;
+  font-style: 'normal';
+  font-display: 'swap';
+}
+@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-Regular.58c84f6a.woff2) format('woff2');
+  font-weight: 400;
+  font-style: 'normal';
+  font-display: 'swap';
+}
+@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-Medium.bc7d8f1a.woff2) format('woff2');
+  font-weight: 500;
+  font-style: 'normal';
+  font-display: 'swap';
+}
+@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-Bold.0d6a47ca.woff2) format('woff2');
+  font-weight: 700;
+  font-style: 'normal';
+  font-display: 'swap';
+}
+@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-ExtraBold.b130af7a.woff2) format('woff2');
+  font-weight: 800;
+  font-style: 'normal';
+  font-display: 'swap';
+}</style>
+<style>@font-face {
+  font-family: Geist;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Geist-var.2587a0ca.woff2) format('woff2');
+  font-weight: 100 900;
+  font-style: 'normal';
+  font-display: 'swap';
+}</style>
+<style>@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Light.3a18e64a.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Light.7a5673aa.woff) format('woff');
+  font-weight: 300;
+  font-style: 'normal';
+  font-display: 'swap';
+}
+@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Regular.80fda27a.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Regular.60b215ba.woff) format('woff');
+  font-weight: 400;
+  font-style: 'normal';
+  font-display: 'swap';
+}
+@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Medium.f8e2739a.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Medium.20fc288a.woff) format('woff');
+  font-weight: 500;
+  font-style: 'normal';
+  font-display: 'swap';
+}
+@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Bold.ebb56aba.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Bold.a573679a.woff) format('woff');
+  font-weight: 700;
+  font-style: 'normal';
+  font-display: 'swap';
+}
+@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Heavy.f44ae4ea.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Heavy.d70ec7ca.woff) format('woff');
+  font-weight: 800;
+  font-style: 'normal';
+  font-display: 'swap';
+}
+@font-face {
+  font-family: TwitterChirpExtendedHeavy;
+  src: url(https://abs.twimg.com/fonts/v1/chirp-extended-heavy-web.woff2) format('woff2'), url(https://abs.twimg.com/fonts/v1/chirp-extended-heavy-web.woff) format('woff');
+  font-weight: 800;
+  font-style: 'normal';
+  font-display: 'swap';
+}</style>
+<style>html,body{height: 100%;}::cue{white-space:normal}</style>
+<style id="react-native-stylesheet">[stylesheet-group="0"]{}
+body{margin:0;}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+input::-webkit-search-cancel-button,input::-webkit-search-decoration,input::-webkit-search-results-button,input::-webkit-search-results-decoration{display:none;}
+[stylesheet-group="1"]{}
+.css-146c3p1{background-color:rgba(0,0,0,0.00);border:0 solid black;box-sizing:border-box;color:rgba(0,0,0,1.00);display:inline;font:14px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;list-style:none;margin:0px;padding:0px;position:relative;text-align:start;text-decoration:none;white-space:pre-wrap;word-wrap:break-word;}
+.css-175oi2r{align-items:stretch;background-color:rgba(0,0,0,0.00);border:0 solid black;box-sizing:border-box;display:flex;flex-basis:auto;flex-direction:column;flex-shrink:0;list-style:none;margin:0px;min-height:0px;min-width:0px;padding:0px;position:relative;text-decoration:none;z-index:0;}
+.css-1jxf684{background-color:rgba(0,0,0,0.00);border:0 solid black;box-sizing:border-box;color:inherit;display:inline;font:inherit;list-style:none;margin:0px;padding:0px;position:relative;text-align:inherit;text-decoration:none;white-space:inherit;word-wrap:break-word;}
+.css-9pa8cd{bottom:0px;height:100%;left:0px;opacity:0;position:absolute;right:0px;top:0px;width:100%;z-index:-1;}
+[stylesheet-group="2"]{}
+.r-13awgt0{flex:1;}
+.r-17gur6a{border-bottom-left-radius:0px;border-bottom-right-radius:0px;border-top-left-radius:0px;border-top-right-radius:0px;}
+.r-1867qdf{border-bottom-left-radius:16px;border-bottom-right-radius:16px;border-top-left-radius:16px;border-top-right-radius:16px;}
+.r-1adg3ll{display:block;}
+.r-1fuqb1j{border-bottom-left-radius:24px;border-bottom-right-radius:24px;border-top-left-radius:24px;border-top-right-radius:24px;}
+.r-1j16mh1{border-bottom-left-radius:100%;border-bottom-right-radius:100%;border-top-left-radius:100%;border-top-right-radius:100%;}
+.r-1pcd2l5{padding:20px;}
+.r-1phboty{border-bottom-style:solid;border-left-style:solid;border-right-style:solid;border-top-style:solid;}
+.r-1pp0k63{border-bottom-left-radius:0.01px;border-bottom-right-radius:0.01px;border-top-left-radius:0.01px;border-top-right-radius:0.01px;}
+.r-1udh08x{overflow-x:hidden;overflow-y:hidden;}
+.r-4iw3lz{border-bottom-width:0;border-left-width:0;border-right-width:0;border-top-width:0;}
+.r-4qtqp9{display:inline-block;}
+.r-6koalj{display:flex;}
+.r-bztko3{overflow-x:visible;overflow-y:visible;}
+.r-crgep1{margin:0px;}
+.r-hvic4v{display:none;}
+.r-krxsd3{display:-webkit-box;}
+.r-rs99b7{border-bottom-width:1px;border-left-width:1px;border-right-width:1px;border-top-width:1px;}
+.r-sdzlij{border-bottom-left-radius:9999px;border-bottom-right-radius:9999px;border-top-left-radius:9999px;border-top-right-radius:9999px;}
+.r-t60dpp{padding:0px;}
+.r-wwvuq4{padding:0;}
+.r-xoduu5{display:inline-flex;}
+.r-ywje51{margin:auto;}
+.r-z2wwpe{border-bottom-left-radius:4px;border-bottom-right-radius:4px;border-top-left-radius:4px;border-top-right-radius:4px;}
+[stylesheet-group="2.1"]{}
+.r-1fkl15p{padding-left:32px;padding-right:32px;}
+.r-1mmae3n{padding-bottom:12px;padding-top:12px;}
+.r-3o4zer{padding-left:12px;padding-right:12px;}
+.r-3pj75a{padding-left:16px;padding-right:16px;}
+.r-cnw61z{padding-bottom:4px;padding-top:4px;}
+.r-cxgwc0{padding-left:24px;padding-right:24px;}
+.r-dd0y9b{padding-bottom:20px;padding-top:20px;}
+.r-ddtstp{margin-bottom:0px;margin-top:0px;}
+.r-dp7rxi{padding-bottom:40px;padding-top:40px;}
+.r-f8sm7e{margin-left:auto;margin-right:auto;}
+.r-is05cd{padding-left:8px;padding-right:8px;}
+.r-n7gxbd{padding-left:4px;padding-right:4px;}
+.r-nj0m1c{padding-bottom:32px;padding-top:32px;}
+.r-s49dbf{margin-bottom:1px;margin-top:1px;}
+.r-sjygvo{padding-left:1em;padding-right:1em;}
+.r-ytbthy{padding-bottom:10px;padding-top:10px;}
+[stylesheet-group="2.2"]{}
+.r-10s2tm5{left:0%;}
+.r-15peodp{right:-9999px;}
+.r-16o8guy{right:100%;}
+.r-19qo34d{left:-9999px;}
+.r-1a11zyx{margin-right:12px;}
+.r-1ca1ndr{margin-left:0.5em;}
+.r-1cwvpvk{margin-left:12px;}
+.r-1ez5h0i{margin-left:4px;}
+.r-1gs4q39{margin-right:4px;}
+.r-1kkk96v{margin-left:8px;}
+.r-1kpi4qh{margin-left:0.075em;}
+.r-1l2kgy{margin-right:0.5em;}
+.r-1prj4y5{margin-right:16px;}
+.r-1q6cnnd{right:-2px;}
+.r-1r3801d{margin-left:16px;}
+.r-1uofg76{left:16px;}
+.r-1va2g9v{margin-right:20px;}
+.r-1wron08{margin-right:8px;}
+.r-3t4u6i{margin-left:2px;}
+.r-42265s{right:16px;}
+.r-45ll9u{left:50%;}
+.r-5f1w11{left:-2px;}
+.r-72fyl3{border-top-left-radius:32px;}
+.r-cwltf5{border-top-right-radius:32px;}
+.r-dqe1q{right:0%;}
+.r-k4bwe5{margin-right:0.075em;}
+.r-o59np7{padding-right:8px;}
+.r-ocobd0{right:50%;}
+.r-qjj4hq{padding-left:8px;}
+.r-rci37q{left:100%;}
+.r-uhwcr3{margin-left:20px;}
+.r-x1x4zq{margin-right:2px;}
+[stylesheet-group="3"]{}
+.r-105ug2t{pointer-events:auto!important;}
+.r-109y4c4{height:1px;}
+.r-10ef88u{min-width:700px;}
+.r-10ptun7{height:16px;}
+.r-10v3vxq{transform:scaleX(-1);}
+.r-117bsoe{margin-bottom:20px;}
+.r-11c0sde{margin-top:24px;}
+.r-11f8fnl{background-color:rgba(180,180,182,0.50);}
+.r-11j9u27{visibility:hidden;}
+.r-1202g5r{height:90vh;}
+.r-12181gd{box-shadow:0 0 2px rgba(0,0,0,0.03) inset;}
+.r-1279nm1{min-height:400px;}
+.r-12hfotv{width:700px;}
+.r-12sks89{min-height:22px;}
+.r-12vffkv>*{pointer-events:auto;}
+.r-12vffkv{pointer-events:none!important;}
+.r-12ym1je{width:18px;}
+.r-135wba7{line-height:24px;}
+.r-13qz1uu{width:100%;}
+.r-13tjlyg{transition-duration:0.1s;}
+.r-13wfysu{-webkit-text-decoration-line:none;text-decoration-line:none;}
+.r-146iojx{max-width:300px;}
+.r-1472mwg{height:24px;}
+.r-14j79pv{color:rgba(83,100,113,1.00);}
+.r-14lw9ot{background-color:rgba(255,255,255,1.00);}
+.r-158ssxm{max-height:calc(64px * 15);}
+.r-15ysp7h{min-height:32px;}
+.r-16dba41{font-weight:400;}
+.r-16y2uox{flex-grow:1;}
+.r-176fswd{transform:translateX(-50%) translateY(-50%);}
+.r-1777fci{justify-content:center;}
+.r-17bb2tj{animation-duration:0.75s;}
+.r-17c3jg3{background-color:rgba(0,0,0,0.80);}
+.r-17gznlh{animation-name:r-t2lo5v;}
+.r-17leim2{background-repeat:repeat;}
+.r-17s6mgv{justify-content:flex-end;}
+.r-184en5c{z-index:1;}
+.r-18jsvk2{color:rgba(15,20,25,1.00);}
+.r-18tzken{width:56px;}
+.r-18u37iz{flex-direction:row;}
+.r-18yzcnr{height:22px;}
+.r-19lq7b1{top:16px;}
+.r-19qs0lw{animation-name:r-1qpf3yi;}
+.r-19wmn03{width:20px;}
+.r-19yznuf{min-height:52px;}
+.r-1abnn5w{animation-play-state:paused;}
+.r-1acpoxo{width:36px;}
+.r-1ad0z5i{word-break:break-all;}
+.r-1awozwy{align-items:center;}
+.r-1b43r93{font-size:14px;}
+.r-1betnmo{max-width:672px;}
+.r-1blnp2b{width:72px;}
+.r-1blvdjr{font-size:23px;}
+.r-1bymd8e{margin-top:2px;}
+.r-1c6unfx{forced-color-adjust:none;}
+.r-1ceczpf{min-height:24px;}
+.r-1cwl3u0{line-height:16px;}
+.r-1d2f490{left:0px;}
+.r-1ddef8g{-webkit-text-decoration-line:underline;text-decoration-line:underline;}
+.r-1dernwh{height:70%;}
+.r-1dn12g7{line-height:48px;}
+.r-1dum35f{-moz-transition-property:opacity, height;-webkit-transition-property:opacity, height;transition-property:opacity, height;}
+.r-1e425wn{animation-duration:0.15s;}
+.r-1ebb2ja{list-style:none;}
+.r-1ei5mc7{cursor:inherit;}
+.r-1el8sus{min-height:72px;}
+.r-1ewcgjf{box-shadow:0px 1px 3px rgba(0,0,0,0.5);}
+.r-1ff274t{text-align:right;}
+.r-1ffj0ar{background-color:rgba(0,0,0,0.40);}
+.r-1fu8b7j{height:712px;}
+.r-1g83rmp{animation-name:r-7bj9g2;}
+.r-1gkfh8e{font-size:11px;}
+.r-1h0z5md{justify-content:flex-start;}
+.r-1h8ys4a{padding-top:4px;}
+.r-1habvwh{align-items:flex-start;}
+.r-1hjwoze{height:18px;}
+.r-1ifxtd0{margin-bottom:16px;}
+.r-1iln25a{word-wrap:normal;}
+.r-1inkyih{font-size:17px;}
+.r-1ipicw7{width:300px;}
+.r-1iusvr4{flex-basis:0px;}
+.r-1janqcz{width:16px;}
+.r-1jaylin{width:-webkit-max-content;width:-moz-max-content;width:max-content;}
+.r-1k78y06{font-family:Tahoma, Arial, sans-serif;}
+.r-1kihuf0{align-self:center;}
+.r-1ldzwu0{animation-timing-function:linear;}
+.r-1loqt21{cursor:pointer;}
+.r-1mdbw0j{padding-bottom:0px;}
+.r-1mlwlqe{flex-basis:auto;}
+.r-1mrlafo{background-position:0;}
+.r-1muvv40{animation-iteration-count:infinite;}
+.r-1mwlp6a{height:56px;}
+.r-1nao33i{color:rgba(231,233,234,1.00);}
+.r-1niwhzg{background-color:rgba(0,0,0,0.00);}
+.r-1ny4l3l{outline-style:none;}
+.r-1oifz5y{background-color:rgba(170,17,0,1.00);}
+.r-1oszu61{align-items:stretch;}
+.r-1otgn73{touch-action:manipulation;}
+.r-1ovo9ad{width:360px;}
+.r-1p0dtai{bottom:0px;}
+.r-1pi2tsx{height:100%;}
+.r-1pjcn9w{max-width:80vw;}
+.r-1potc6q{top:5%;}
+.r-1ps3wis{min-width:44px;}
+.r-1pz39u2{align-self:stretch;}
+.r-1qd0xha{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+.r-1qi8awa{min-width:36px;}
+.r-1r5jyh0{min-height:130px;}
+.r-1r8g8re{height:36px;}
+.r-1rnoaur{overflow-y:auto;}
+.r-1s2hp8q{min-height:26px;}
+.r-1sxrcry{background-size:auto;}
+.r-1tl8opc{font-family:"Segoe UI",Meiryo,system-ui,-apple-system,BlinkMacSystemFont,sans-serif;}
+.r-1to6hqq{background-color:rgba(255,212,0,1.00);}
+.r-1tsuqlv{max-height:100vh;}
+.r-1ttztb7{text-align:inherit;}
+.r-1udbk01{text-overflow:ellipsis;}
+.r-1ur9v65{padding-top:40px;}
+.r-1v2oles{top:50%;}
+.r-1vmecro{direction:rtl;}
+.r-1vr29t4{font-weight:800;}
+.r-1wb8bfx{text-decoration-thickness:2px;}
+.r-1wbh5a2{flex-shrink:1;}
+.r-1wtj0ep{justify-content:space-between;}
+.r-1wvb978{font-feature-settings:'ss01' on;}
+.r-1wyyakw{z-index:-1;}
+.r-1x0uki6{margin-top:20px;}
+.r-1xcajam{position:fixed;}
+.r-1xfddsp{min-height:300px;}
+.r-1xk2f4g{clip:rect(1px, 1px, 1px, 1px);}
+.r-1xnzce8{-moz-user-select:text;-webkit-user-select:text;user-select:text;}
+.r-1xvli5t{height:1.25em;}
+.r-1y7e96w{min-width:22px;}
+.r-1ye8kvj{max-width:600px;}
+.r-1yef0xd{animation-name:r-11cv4x;}
+.r-1yjpyg1{font-size:31px;}
+.r-1ykxob0{top:60%;}
+.r-2o02ov{margin-top:40px;}
+.r-2yi16{min-height:36px;}
+.r-30o5oe{-moz-appearance:none;-ms-appearance:none;-webkit-appearance:none;appearance:none;}
+.r-36ujnk{font-style:italic;}
+.r-37tt59{line-height:32px;}
+.r-3cuxpb{opacity:0.98;}
+.r-3nmjpz{animation-name:r-12fruu6;}
+.r-3s2u2q{white-space:nowrap;}
+.r-417010{z-index:0;}
+.r-4gszlv{background-size:cover;}
+.r-4hwcpe{font-family:Vazirmatn, Tahoma, Arial, sans-serif;}
+.r-4wgw6l{min-width:32px;}
+.r-54znze{color:rgba(239,243,244,1.00);}
+.r-56xrmm{line-height:12px;}
+.r-6026j{background-color:rgba(255,255,255,0.85);}
+.r-633pao{pointer-events:none!important;}
+.r-6416eg{-moz-transition-property:background-color, box-shadow;-webkit-transition-property:background-color, box-shadow;transition-property:background-color, box-shadow;}
+.r-64el8z{min-width:52px;}
+.r-68jxh1{min-width:500px;}
+.r-7h7f8p{max-width:100vw;}
+.r-7q8q6z{cursor:default;}
+.r-8akbws{-webkit-box-orient:vertical;}
+.r-8jfcpp{top:-2px;}
+.r-92ng3h{width:1px;}
+.r-9dcw1g{width:320px;}
+.r-a023e6{font-size:15px;}
+.r-adyw6z{font-size:20px;}
+.r-agouwx{transform:translateZ(0);}
+.r-ah5dr5>*{pointer-events:none;}
+.r-ah5dr5{pointer-events:auto!important;}
+.r-aqfbo4{backface-visibility:hidden;}
+.r-b88u0q{font-weight:700;}
+.r-bcqeeo{min-width:0px;}
+.r-bnwqim{position:relative;}
+.r-bqz1g2{background-color:rgba(229,234,236,1.00);}
+.r-bt1l66{min-height:20px;}
+.r-bvlit7{margin-bottom:-12px;}
+.r-clrlgt{animation-name:r-imtty0;}
+.r-deolkf{box-sizing:border-box;}
+.r-dflpy8{height:1.2em;}
+.r-dnmrzs{max-width:100%;}
+.r-ehq7j7{background-size:contain;}
+.r-emqnss{transform:translateZ(0px);}
+.r-eqz5dr{flex-direction:column;}
+.r-ero68b{min-height:40px;}
+.r-f5cfds{min-height:160px;}
+.r-fa1dwr{animation-timing-function:cubic-bezier(0.25, 0.1, 0.25, 1);}
+.r-fdjqy7{text-align:left;}
+.r-fm7h5w{font-family:"TwitterChirpExtendedHeavy","Verdana",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+.r-g6jmlv{width:100vw;}
+.r-gf0ln{-webkit-filter:brightness(1);filter:brightness(1);}
+.r-h3s6tt{height:48px;}
+.r-h9hxbl{width:1.2em;}
+.r-htvplk{min-width:600px;}
+.r-icoktb{opacity:0.5;}
+.r-ifefl9{min-height:0px;}
+.r-impgnl{transform:translateX(50%) translateY(-50%);}
+.r-iphfwy{padding-bottom:4px;}
+.r-ipm5af{top:0px;}
+.r-j5o65s{border-bottom-color:rgba(239,243,244,1.00);}
+.r-jmul1s{transform:scale(1.1);}
+.r-jwli3a{color:rgba(255,255,255,1.00);}
+.r-k200y{align-self:flex-start;}
+.r-kemksi{background-color:rgba(0,0,0,1.00);}
+.r-kwpbio{height:650px;}
+.r-lp5zef{min-width:24px;}
+.r-lrsllp{width:24px;}
+.r-lrvibr{-moz-user-select:none;-webkit-user-select:none;user-select:none;}
+.r-lrx3fh{width:500px;}
+.r-m6rgpd{vertical-align:text-bottom;}
+.r-majxgm{font-weight:500;}
+.r-n1ft60{dynamic-range-limit:standard;}
+.r-n6v787{font-size:13px;}
+.r-nhe8su{animation-duration:0.5s;}
+.r-nvplwv{animation-timing-function:ease-out;}
+.r-nwxazl{line-height:40px;}
+.r-o7ynqc{transition-duration:0.2s;}
+.r-obd0qt{align-items:flex-end;}
+.r-orgf3d{opacity:0;}
+.r-peo1c{min-height:44px;}
+.r-pm9dpa{max-height:100%;}
+.r-poiln3{font-family:inherit;}
+.r-pp5qcn{vertical-align:-20%;}
+.r-q4m81j{text-align:center;}
+.r-qklmqi{border-bottom-width:1px;}
+.r-qlhcfr{font-size:0.001px;}
+.r-qvk6io{line-height:0px;}
+.r-qvutc0{word-wrap:break-word;}
+.r-rjixqe{line-height:20px;}
+.r-rki7wi{bottom:12px;}
+.r-rsyp9y{max-height:90vh;}
+.r-rwqe4o{width:48px;}
+.r-s67bdx{font-size:48px;}
+.r-sb58tz{max-width:1000px;}
+.r-tjvw6i{text-decoration-thickness:1px;}
+.r-u6sd8q{background-repeat:no-repeat;}
+.r-u8s1d{position:absolute;}
+.r-ueyrd6{line-height:36px;}
+.r-uho16t{font-size:34px;}
+.r-uz7a3o{min-width:650px;}
+.r-vkv6oe{min-width:40px;}
+.r-vqxq0j{border:0 solid black;}
+.r-vrz42v{line-height:28px;}
+.r-vvn4in{background-position:center;}
+.r-wcz47r{box-shadow:0 8px 24px rgba(15, 20, 25, 0.18);}
+.r-wy61xf{height:72px;}
+.r-x3cy2q{background-size:100% 100%;}
+.r-x572qd{background-color:rgba(247,249,249,1.00);}
+.r-xigjrr{-webkit-filter:blur(4px);filter:blur(4px);}
+.r-xr3zp9{min-height:calc(64px * 3);}
+.r-yc9v9c{width:22px;}
+.r-yn5ncy{animation-fill-mode:both;}
+.r-yy2aun{font-size:26px;}
+.r-yyyyoo{fill:currentcolor;}
+.r-z2knda{transition-timing-function:ease;}
+.r-z7pwl0{max-width:700px;}
+.r-z80fyv{height:20px;}
+.r-zchlnj{right:0px;}
+@-webkit-keyframes r-11cv4x{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
+@-webkit-keyframes r-12fruu6{0%{opacity:0;transform:scale(0.95);}100%{opacity:1;transform:scale(1);}}
+@-webkit-keyframes r-1qpf3yi{0%{opacity:0;transform:scale3d(0.92, 0.92, 1);}100%{opacity:1;transform:scale3d(1, 1, 1);}}
+@-webkit-keyframes r-7bj9g2{0%{opacity:1;transform:scale3d(1, 1, 1);}100%{opacity:0;transform:scale3d(0.92, 0.92, 1);}}
+@-webkit-keyframes r-imtty0{0%{opacity:0;}100%{opacity:1;}}
+@-webkit-keyframes r-t2lo5v{0%{opacity:1;}100%{opacity:0;}}
+@keyframes r-11cv4x{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
+@keyframes r-12fruu6{0%{opacity:0;transform:scale(0.95);}100%{opacity:1;transform:scale(1);}}
+@keyframes r-1qpf3yi{0%{opacity:0;transform:scale3d(0.92, 0.92, 1);}100%{opacity:1;transform:scale3d(1, 1, 1);}}
+@keyframes r-7bj9g2{0%{opacity:1;transform:scale3d(1, 1, 1);}100%{opacity:0;transform:scale3d(0.92, 0.92, 1);}}
+@keyframes r-imtty0{0%{opacity:0;}100%{opacity:1;}}
+@keyframes r-t2lo5v{0%{opacity:1;}100%{opacity:0;}}
+.r-fuat9c{position:absolute;visibility:hidden;top:0;width:50px;pointer-events:none}
+.r-fuat9c.loaded{visibility:visible;top:50vh;width:50px}</style>
+<style id="googleidentityservice_button_styles">.qJTHM{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;color:#202124;direction:ltr;-webkit-touch-callout:none;font-family:Roboto-Regular,arial,sans-serif;-webkit-font-smoothing:antialiased;font-weight:400;margin:0;overflow:hidden;-webkit-text-size-adjust:100%}.ynRLnc{left:-9999px;position:absolute;top:-9999px}.L6cTce{display:none}.bltWBb{overflow-wrap:break-word;word-break:break-word}.hSRGPd{color:#1a73e8;cursor:pointer;font-weight:500;text-decoration:none}.Bz112c-W3lGp{height:16px;width:16px}.Bz112c-E3DyYd{height:20px;width:20px}.Bz112c-r9oPif{height:24px;width:24px}.Bz112c-u2z5K{height:36px;width:36px}.Bz112c-uaxL4e{border-radius:10px}.LgbsSe-Bz112c{display:block}.S9gUrf-YoZ4jf{border:none;margin:0;padding:0}.S9gUrf-YoZ4jf *{border:none;margin:0;padding:0}.fFW7wc-ibnC6b>.aZ2wEe>div{border-color:#4285f4}.P1ekSe-ZMv3u{-webkit-transition:height .2s linear;transition:height .2s linear}.P1ekSe-ZMv3u>div:first-child{background-color:#1a73e8!important;-webkit-transition:width .3s linear;transition:width .3s linear}.P1ekSe-ZMv3u>div:nth-child(2){background-image:-webkit-gradient(linear,left top,right top,from(rgba(255,255,255,.7)),to(rgba(255,255,255,.7))),-webkit-gradient(linear,left top,right top,from(#1a73e8),to(#1a73e8))!important;background-image:-webkit-linear-gradient(left,rgba(255,255,255,.7),rgba(255,255,255,.7)),-webkit-linear-gradient(left,#1a73e8,#1a73e8)!important;background-image:linear-gradient(90deg,rgba(255,255,255,.7),rgba(255,255,255,.7)),linear-gradient(90deg,#1a73e8,#1a73e8)!important}.P1ekSe-ZMv3u>div:nth-child(3){background-image:-webkit-gradient(linear,left top,right top,from(rgba(255,255,255,.7)),to(rgba(255,255,255,.7))),-webkit-gradient(linear,left top,right top,from(#1a73e8),to(#1a73e8))!important;background-image:-webkit-linear-gradient(left,rgba(255,255,255,.7),rgba(255,255,255,.7)),-webkit-linear-gradient(left,#1a73e8,#1a73e8)!important;background-image:linear-gradient(90deg,rgba(255,255,255,.7),rgba(255,255,255,.7)),linear-gradient(90deg,#1a73e8,#1a73e8)!important}.haAclf{display:inline-block}.nsm7Bb-HzV7m-LgbsSe{border-radius:4px;box-sizing:border-box;-webkit-transition:background-color .218s,border-color .218s;transition:background-color .218s,border-color .218s;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;-webkit-appearance:none;background-color:#fff;background-image:none;border:1px solid #dadce0;color:#3c4043;cursor:pointer;font-family:Google Sans,arial,sans-serif;font-size:14px;height:40px;letter-spacing:.25px;outline:none;overflow:hidden;padding:0 12px;position:relative;text-align:center;vertical-align:middle;white-space:nowrap;width:auto}@media screen and (-ms-high-contrast:active){.nsm7Bb-HzV7m-LgbsSe{border:2px solid windowText;color:windowText}}@media screen and (preferes-contrast:more){.nsm7Bb-HzV7m-LgbsSe{color:#000}}.nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe{font-size:14px;height:32px;letter-spacing:.25px;padding:0 10px}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe{font-size:11px;height:20px;letter-spacing:.3px;padding:0 8px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe{padding:0;width:40px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.pSzOP-SxQuSe{width:32px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.purZT-SxQuSe{width:20px}.nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK{border-radius:20px}.nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK.pSzOP-SxQuSe{border-radius:16px}.nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK.purZT-SxQuSe{border-radius:10px}.nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc{border:none;color:#fff}.nsm7Bb-HzV7m-LgbsSe.MFS4be-v3pZbf-Ia7Qfc{background-color:#1a73e8}.nsm7Bb-HzV7m-LgbsSe.MFS4be-JaPV2b-Ia7Qfc{background-color:#202124;color:#e8eaed}@media screen and (prefers-contrast:more){.nsm7Bb-HzV7m-LgbsSe.MFS4be-JaPV2b-Ia7Qfc{color:#fff}}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{height:18px;margin-right:8px;min-width:18px;width:18px}.nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{height:14px;min-width:14px;width:14px}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{height:10px;min-width:10px;width:10px}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-Bz112c{margin-left:8px;margin-right:-4px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{margin:0;padding:10px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.pSzOP-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{padding:8px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{padding:4px}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-top-left-radius:3px;border-bottom-left-radius:3px;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;align-items:center;background-color:#fff;height:36px;margin-left:-10px;margin-right:12px;min-width:36px;width:36px}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf .nsm7Bb-HzV7m-LgbsSe-Bz112c,.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf .nsm7Bb-HzV7m-LgbsSe-Bz112c{margin:0;padding:0}.nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{height:28px;margin-left:-8px;margin-right:10px;min-width:28px;width:28px}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{height:16px;margin-left:-6px;margin-right:8px;min-width:16px;width:16px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-radius:3px;margin-left:2px;margin-right:0;padding:0}.nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-radius:18px}.nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-radius:14px}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-radius:8px}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-bN97Pc-sM5MNb{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-align-items:center;-webkit-box-align:center;align-items:center;-webkit-flex-direction:row;-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;-webkit-flex-wrap:nowrap;flex-wrap:nowrap;height:100%;position:relative;width:100%}.nsm7Bb-HzV7m-LgbsSe .oXtfBe-l4eHX{-webkit-box-pack:center;-webkit-justify-content:center;justify-content:center}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-BPrWId{-webkit-flex-grow:1;-webkit-box-flex:1;flex-grow:1;font-family:Google Sans,arial,sans-serif;font-weight:500;overflow:hidden;text-overflow:ellipsis;vertical-align:top}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-BPrWId{font-weight:300}.nsm7Bb-HzV7m-LgbsSe .oXtfBe-l4eHX .nsm7Bb-HzV7m-LgbsSe-BPrWId{-webkit-flex-grow:0;-webkit-box-flex:0;flex-grow:0}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-MJoBVe{-webkit-transition:background-color .218s;transition:background-color .218s;bottom:0;left:0;position:absolute;right:0;top:0}.nsm7Bb-HzV7m-LgbsSe:focus,.nsm7Bb-HzV7m-LgbsSe:hover{box-shadow:none;border-color:rgb(210,227,252);outline:none}.nsm7Bb-HzV7m-LgbsSe:focus-within{outline:2px solid #00639b;border-color:transparent}.nsm7Bb-HzV7m-LgbsSe:hover .nsm7Bb-HzV7m-LgbsSe-MJoBVe{background:rgba(66,133,244,.08)}.nsm7Bb-HzV7m-LgbsSe:active .nsm7Bb-HzV7m-LgbsSe-MJoBVe,.nsm7Bb-HzV7m-LgbsSe:focus .nsm7Bb-HzV7m-LgbsSe-MJoBVe{background:rgba(66,133,244,.1)}.nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc:hover .nsm7Bb-HzV7m-LgbsSe-MJoBVe{background:rgba(255,255,255,.24)}.nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc:active .nsm7Bb-HzV7m-LgbsSe-MJoBVe,.nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc:focus .nsm7Bb-HzV7m-LgbsSe-MJoBVe{background:rgba(255,255,255,.32)}.nsm7Bb-HzV7m-LgbsSe .n1UuX-DkfjY{border-radius:50%;display:-webkit-box;display:-webkit-flex;display:flex;height:20px;margin-left:-4px;margin-right:8px;min-width:20px;width:20px}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId{font-family:Roboto;font-size:12px;text-align:left}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff .fmcmS,.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .ssJRIf{overflow:hidden;text-overflow:ellipsis}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-align-items:center;-webkit-box-align:center;align-items:center;color:#5f6368;fill:#5f6368;font-size:11px;font-weight:400}.nsm7Bb-HzV7m-LgbsSe.jVeSEe.MFS4be-Ia7Qfc .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff{color:#e8eaed;fill:#e8eaed}@media screen and (prefers-contrast:more){.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff,.nsm7Bb-HzV7m-LgbsSe.jVeSEe.MFS4be-Ia7Qfc .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff{color:#000;fill:#000}}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff .Bz112c{height:18px;margin:-3px -3px -3px 2px;min-width:18px;width:18px}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:3px;border-bottom-right-radius:3px;margin-left:12px;margin-right:-10px}.nsm7Bb-HzV7m-LgbsSe.jVeSEe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-radius:18px}.L5Fo6c-sM5MNb{border:0;display:block;left:0;position:relative;top:0}.L5Fo6c-bF1uUb{border-radius:4px;bottom:0;cursor:pointer;left:0;position:absolute;right:0;top:0}.L5Fo6c-bF1uUb:focus{border:none;outline:none}sentinel{}</style>
+<style>
+        body { 
+            font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;  
+            background-color: #ffffff; 
+            margin: 0;
+            padding: 0;
+        }
+        .container { 
+            max-width: 600px; 
+            margin: 0 auto; 
+            padding-top: 20px; 
+            padding-bottom: 40px;
+        }
+        .tweet-card { 
+            border: 1px solid rgb(239, 243, 244); 
+            border-radius: 16px; 
+            margin-bottom: 16px; 
+            padding: 16px; 
+            overflow-wrap: break-word;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-top: 10px;
+        }
+        /* Basic reset for some Twitter specific classes if needed */
+        a { text-decoration: none; color: rgb(29, 155, 240); }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+<div class="container">
+<div class="tweet-card">
+<article aria-labelledby="id__7fecc2d9j2c id__cohyspz3veh id__xurfbdp33pa id__d2uhkwlpnbk id__tjeqvzwxs3d id__azwql0u4vbh id__wsgk3ug7q78 id__pshni04o56l id__gp197rphqku id__vr6aitp8i5 id__kzwahaom3p id__yrfwaz7f4d id__3oufws7qes5 id__5jw5aea94iv id__4qh9l5ayzwh id__919637x90hl id__ecevdxczqqf id__nq02u8y97eq id__lgv5433qlrk id__hhhzlfvae6n" class="css-175oi2r r-18u37iz r-1udh08x r-1c4vpko r-1c7gwzm r-1ny4l3l" data-testid="tweet" role="article" tabindex="-1"><div class="css-175oi2r r-eqz5dr r-16y2uox r-1wbh5a2"><div class="css-175oi2r r-16y2uox r-1wbh5a2 r-1ny4l3l"><div class="css-175oi2r"><div class="css-175oi2r r-18u37iz r-136ojw6"><div class="css-175oi2r r-1iusvr4 r-16y2uox r-ttdzmv"></div></div></div><div class="css-175oi2r r-18u37iz r-136ojw6"><div class="css-175oi2r r-18kxxzh r-1wron08 r-onrtq4 r-1awozwy"><div class="css-175oi2r" data-testid="Tweet-User-Avatar"><div class="css-175oi2r r-18kxxzh r-1wbh5a2 r-13qz1uu"><div class="css-175oi2r r-1wbh5a2 r-dnmrzs"><div class="css-175oi2r r-bztko3 r-1adg3ll" data-testid="UserAvatar-Container-yanhua1010" style="width: 40px; height: 40px;"><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 100%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div class="css-175oi2r r-1adg3ll r-1pi2tsx r-13qz1uu r-45ll9u r-u8s1d r-1v2oles r-176fswd r-bztko3"><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 100%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div class="css-175oi2r r-sdzlij r-1udh08x r-5f1w11 r-u8s1d r-8jfcpp" style="width: calc(100% + 4px); height: calc(100% + 4px);"><a aria-hidden="true" class="css-175oi2r r-1pi2tsx r-13qz1uu r-o7ynqc r-6416eg r-1ny4l3l r-1loqt21" href="/yanhua1010" role="link" style="background-color: rgba(0, 0, 0, 0);" tabindex="-1"><div class="css-175oi2r r-sdzlij r-1udh08x r-633pao r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-175oi2r r-1pi2tsx r-13qz1uu" style="background-color: rgba(0, 0, 0, 0);"></div></div><div class="css-175oi2r r-sdzlij r-1udh08x r-633pao r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-175oi2r r-1pi2tsx r-13qz1uu r-14lw9ot"></div></div><div class="css-175oi2r r-sdzlij r-1udh08x r-633pao r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="background-color: rgb(255, 255, 255); width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-175oi2r r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 100%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div class="css-175oi2r r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af"><div class="css-175oi2r r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/profile_images/1998302113592713216/jbKruapM_normal.jpg");'></div><img alt="" class="css-9pa8cd" draggable="true" src="https://pbs.twimg.com/profile_images/1998302113592713216/jbKruapM_normal.jpg"/></div></div></div></div><div class="css-175oi2r r-sdzlij r-1udh08x r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-175oi2r r-12181gd r-1pi2tsx r-13qz1uu r-o7ynqc r-6416eg r-1ny4l3l"></div></div></a></div></div></div></div></div></div></div></div></div><div class="css-175oi2r r-1iusvr4 r-16y2uox r-1777fci"><div class="css-175oi2r r-zl2h9q"><div class="css-175oi2r r-k4xj1c r-18u37iz r-1wtj0ep"><div class="css-175oi2r r-1d09ksm r-18u37iz r-1wbh5a2"><div class="css-175oi2r r-1wbh5a2 r-dnmrzs r-1ny4l3l"><div class="css-175oi2r r-1wbh5a2 r-dnmrzs r-1ny4l3l" data-testid="User-Name" id="id__tjeqvzwxs3d"><div class="css-175oi2r r-1awozwy r-18u37iz r-1wbh5a2 r-dnmrzs"><div class="css-175oi2r r-1wbh5a2 r-dnmrzs"><a class="css-175oi2r r-1wbh5a2 r-dnmrzs r-1ny4l3l r-1loqt21" href="/yanhua1010" role="link"><div class="css-175oi2r r-1awozwy r-18u37iz r-1wbh5a2 r-dnmrzs"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-b88u0q r-1awozwy r-6koalj r-1udh08x r-3s2u2q" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-dnmrzs r-1udh08x r-1udbk01 r-3s2u2q r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">Yanhua</span></span></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-xoduu5 r-18u37iz r-1q142lx" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1awozwy r-xoduu5"><svg aria-label="Verified account" class="r-4qtqp9 r-yyyyoo r-1xvli5t r-bnwqim r-lrvibr r-m6rgpd r-1cvl2hr r-f9ja8p r-og9te1 r-3t4u6i" data-testid="icon-verified" role="img" viewbox="0 0 22 22"><g><path d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.854-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.688-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.606-.274 1.263-.144 1.896.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681s.075-1.299-.165-1.903c.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z"></path></g></svg></span></div></div></a></div></div><div class="css-175oi2r r-18u37iz r-1wbh5a2"><div class="css-175oi2r r-1d09ksm r-18u37iz r-1wbh5a2"><div class="css-175oi2r r-1wbh5a2 r-dnmrzs"><a class="css-175oi2r r-1wbh5a2 r-dnmrzs r-1ny4l3l r-1loqt21" href="/yanhua1010" role="link" tabindex="-1"><div class="css-146c3p1 r-dnmrzs r-1udh08x r-1udbk01 r-3s2u2q r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-18u37iz r-1wvb978" dir="ltr" style="color: rgb(83, 100, 113);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">@yanhua1010</span></div></a></div></div></div></div></div></div><div class="css-175oi2r r-1kkk96v"><div class="css-175oi2r r-1awozwy r-18u37iz r-1cmwbt1 r-1wtj0ep"><div class="css-175oi2r r-1awozwy r-6koalj r-18u37iz"><div class="css-175oi2r"><div class="css-175oi2r r-18u37iz r-1h0z5md"><button aria-expanded="false" aria-haspopup="menu" aria-label="More" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="caret" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div></div></button></div></div></div></div></div></div></div></div></div><div class="css-175oi2r"><div class="css-175oi2r r-1s2bzr4"></div><div class="css-175oi2r r-1ny4l3l" data-testid="twitterArticleReadView"><div class="css-175oi2r r-1peese0"><div class="css-175oi2r"><div class="css-175oi2r r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-175oi2r"><div class="css-175oi2r r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-175oi2r r-1pi2tsx r-1ny4l3l r-1loqt21" href="/yanhua1010/article/2058552177912947044/media/2058545410097254400" role="link"><div class="css-175oi2r r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 40%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="Image" class="css-175oi2r r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-175oi2r r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HJFsJNLbkAAuNuw?format=jpg&amp;name=small");'></div><img alt="Image" class="css-9pa8cd" draggable="true" src="assets/2a1a511e7b37246c988df37e9cd4e0a5.jpg"/></div></div></div></a></div></div></div></div></div><div class="css-175oi2r r-vmopo1"><div class="css-175oi2r r-13qz1uu"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-uho16t r-1vr29t4 r-1o37s4c r-1s2bzr4" data-testid="twitter-article-title" dir="auto" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">Agentic Design Patterns：一本让我重新理解"Agent 到底是什么"的书</span></div></div><div class="css-175oi2r"><div aria-label="2 replies, 55 reposts, 211 likes, 539 bookmarks, 18134 views" class="css-175oi2r r-1kbdv8c r-18u37iz r-1wtj0ep r-1ye8kvj r-j5o65s r-rull8r r-qklmqi r-h3s6tt r-14gqq1x" role="group"><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="2 Replies. Reply" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="reply" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01zm8.005-6c-3.317 0-6.005 2.69-6.005 6 0 3.37 2.77 6.08 6.138 6.01l.351-.01h1.761v2.3l5.087-2.81c1.951-1.08 3.163-3.13 3.163-5.36 0-3.39-2.744-6.13-6.129-6.13H9.756z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">2</span></span></span></div></div></button></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="55 reposts. Repost" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="retweet" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">55</span></span></span></div></div></button></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="211 Likes. Like" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="like" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">211</span></span></span></div></div></button></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><a aria-label="18134 views. View post analytics" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1ny4l3l r-1loqt21" href="/yanhua1010/status/2058552177912947044/analytics" role="link"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M8.75 21V3h2v18h-2zM18 21V8.5h2V21h-2zM4 21l.004-10h2L6 21H4zm9.248 0v-7h2v7h-2z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">18K</span></span></span></div></div></a></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-1wron08"><button aria-label="Bookmark" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="bookmark" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M4 4.5C4 3.12 5.119 2 6.5 2h11C18.881 2 20 3.12 20 4.5v18.44l-8-5.71-8 5.71V4.5zM6.5 4c-.276 0-.5.22-.5.5v14.56l6-4.29 6 4.29V4.5c0-.28-.224-.5-.5-.5h-11z"></path></g></svg></div></div></button></div><div class="css-175oi2r" style="justify-content: inherit; display: inline-grid; transform: rotate(0deg) scale(1) translate3d(0px, 0px, 0px);"><div class="css-175oi2r r-18u37iz r-1h0z5md"><button aria-expanded="false" aria-haspopup="menu" aria-label="Share post" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M12 2.59l5.7 5.7-1.41 1.42L13 6.41V16h-2V6.41l-3.3 3.3-1.41-1.42L12 2.59zM21 15l-.02 3.51c0 1.38-1.12 2.49-2.5 2.49H5.5C4.11 21 3 19.88 3 18.5V15h2v3.5c0 .28.22.5.5.5h12.98c.28 0 .5-.22.5-.5L19 15h2z"></path></g></svg></div></div></button></div></div></div></div><div class="css-175oi2r r-1knelpx" data-testid="twitterArticleRichTextView"><div class="css-175oi2r r-37j5jr"><div class="DraftEditor-root"><div class="DraftEditor-editorContainer"><div aria-describedby="placeholder-96dg6" class="public-DraftEditor-content" contenteditable="false" data-testid="longformRichTextComponent" spellcheck="false" style="outline: none; user-select: text; white-space: pre-wrap; overflow-wrap: break-word;"><div data-contents="true"><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="5gg1s-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5gg1s-0-0"><span data-offset-key="5gg1s-0-0"><span data-text="true">Antonio Gullí 是 Google 的工程总监。他写了本 453 页的书，把 AI Agent 开发拆成了 21 种设计模式。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="c0pjm-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="c0pjm-0-0"><span data-offset-key="c0pjm-0-0"><span data-text="true">但这不是一篇书评。我读这本书的动机很具体：我写过 Harness Engineering，写过 Clawdbot 的踩坑经验，写过"AI 智能体不是魔法"那篇从烧 Token 到真正好用的七个转折，每次写完之后都有一个没完全想透的问题：</span></span><span data-offset-key="c0pjm-0-1" style="font-weight: bold;"><span data-text="true">这些东西背后有没有一套可以复用的底层逻辑？</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="95s0q-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="95s0q-0-0"><span data-offset-key="95s0q-0-0"><span data-text="true">这本书给了我答案，而且比我想的更深。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="96dg6" data-offset-key="2im0f-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="2im0f-0-0"><span data-offset-key="2im0f-0-0"><span data-text="true">你写的可能根本不是 Agent</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="1v6k7-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1v6k7-0-0"><span data-offset-key="1v6k7-0-0"><span data-text="true">书里最狠的判断藏在 prologue 里。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="be3rf-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="be3rf-0-0"><span data-offset-key="be3rf-0-0"><span data-text="true">大多数人在用的"AI"，只是 Level 0：裸 LLM，没有工具、没有记忆、不会行动。你问它 2025 年奥斯卡最佳影片是哪部，它猜。书里说得很直白：Level 0 的东西，不是 Agent。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="eurn9-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="eurn9-0-0"><span data-offset-key="eurn9-0-0"><span data-text="true">往上走才是真 Agent。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="e7f1s-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="e7f1s-0-0"><span data-offset-key="e7f1s-0-0" style="font-weight: bold;"><span data-text="true">Level 1：工具使用者。</span></span><span data-offset-key="e7f1s-0-1"><span data-text="true"> Agent 开始用工具了：搜索、API、数据库。但它不光是"能调接口"，更要自己判断什么时候该调、调什么、结果怎么用。书里给了一个很具体的例子：用户问"最近有什么新剧"，Agent 自己意识到这条信息不在训练数据里，主动调搜索工具去找，然后合成结果。关键一步在"自己意识到"。不是人类告诉它"你去搜一下"，是它自己判断需要搜。这个判断能力，是 Level 1 的门槛。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="627kp-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="627kp-0-0"><span data-offset-key="627kp-0-0" style="font-weight: bold;"><span data-text="true">Level 2：战略思考者。</span></span><span data-offset-key="627kp-0-1"><span data-text="true"> 多了两样东西：规划和 Context Engineering。书里定义了 Context Engineering：不做信息堆砌，做的是精心筛选、裁剪、打包上下文。例子很妙：用户要在两个地点中间找咖啡店。Agent 先调地图工具拿到一堆数据，然后自己判断"下一步只需要街道名称"，把地图输出裁剪成一个短列表，再喂给本地搜索工具。每一步都在做信息降噪。书里有一句话我反复看了几遍："要让 AI 达到最高准确率，必须给它短小、聚焦、有力的上下文。"  Context Engineering 就是干这件事的。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="4c17h-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4c17h-0-0"><span data-offset-key="4c17h-0-0"><span data-text="true">到了这个级别，Agent 还能自我反思。干完活后自己审一遍，发现问题自己改。我后面会细讲。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="87po0-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="87po0-0-0"><span data-offset-key="87po0-0-0" style="font-weight: bold;"><span data-text="true">Level 3：多 Agent 协作。</span></span><span data-offset-key="87po0-0-1"><span data-text="true"> 书的立场很明确：别老想着造一个全能 super agent。真正靠谱的做法是像搭团队一样，项目经理 Agent + 研究员 Agent + 设计师 Agent + 文案 Agent。书里举的例子是新产品发布：一个"项目经理 Agent"做总调度，下发任务给"市场研究 Agent"、"产品设计 Agent"、"营销 Agent"。关键是通信：Agent 之间怎么传数据、怎么同步状态、怎么处理冲突。这章画了六种通信拓扑结构，从最简单的单 Agent 到最灵活的自定义混合，每种适合什么场景都有说明。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="8ribq-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8ribq-0-0"><span data-offset-key="8ribq-0-0"><span data-text="true">看完这四个等级，我突然明白为什么很多人说"我的 Agent 不好用"。模型没问题，问题是你在把它当聊天机器人用，它可能连 Level 1 都没到。</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="96dg6" data-offset-key="2slcr-0-0"><div class="css-175oi2r r-1nxhmzv"><div class="css-175oi2r r-13qz1uu"><div class="css-175oi2r r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-175oi2r"><div class="css-175oi2r r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-175oi2r r-1pi2tsx r-1ny4l3l r-1loqt21" href="/yanhua1010/article/2058552177912947044/media/2058549299504656384" role="link"><div class="css-175oi2r r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 56.2799%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="Image" class="css-175oi2r r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-175oi2r r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HJFvrmWasAAukQa?format=jpg&amp;name=small");'></div><img alt="Image" class="css-9pa8cd" draggable="true" src="assets/5c56e050f5d4fb0bb17b9a8b02f14895.jpg"/></div></div></div></a></div></div></div></div></div></section><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="96dg6" data-offset-key="4vsv6-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4vsv6-0-0"><span data-offset-key="4vsv6-0-0"><span data-text="true">Context Engineering：书里最被低估的概念</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="fqigt-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="fqigt-0-0"><span data-offset-key="fqigt-0-0"><span data-text="true">我写过一篇 Harness Engineering，讲的是赛道的设计比引擎的马力更重要。看完这本书我发现，Context Engineering 就是 Harness Engineering 在 prompt 层面的映射。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="5um40-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5um40-0-0"><span data-offset-key="5um40-0-0"><span data-text="true">传统的 Prompt Engineering 只管"你怎么问"。书里的 Context Engineering 管的是"问之前，Agent 的眼前摆着什么"。它包括四层信息：</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="ar234-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="ar234-0-0"><span data-offset-key="ar234-0-0"><span data-text="true">第一层，system prompt。定义 Agent 是谁、什么语气、什么边界。大多数人只写了这一层。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="2398r-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="2398r-0-0"><span data-offset-key="2398r-0-0"><span data-text="true">第二层，外部数据。RAG 检索到的文档、工具调用的返回值、实时 API 数据。这是大部分人卡住的地方：知道要喂数据，但不知道怎么喂才不会把模型淹没。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="4tl4l-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4tl4l-0-0"><span data-offset-key="4tl4l-0-0"><span data-text="true">第三层，隐式数据。用户身份、交互历史、环境状态。你没明说但 Agent 应该知道的东西。比如你跟 Agent 说"帮我给 John 发邮件确认明天的会议"，它应该知道你日历里明天的会议是什么、你和 John 是什么关系。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="at924-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="at924-0-0"><span data-offset-key="at924-0-0"><span data-text="true">第四层，反馈回路。Agent 每次输出之后，自动评估质量、调整下次的上下文策略。书里把这叫"自动化的 context 优化"，Google 的 Vertex AI Prompt Optimizer 就是这个思路的工程化实现。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="gu6-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="gu6-0-0"><span data-offset-key="gu6-0-0"><span data-text="true">我读到这里的时候想起之前写那篇"AI 智能体不是魔法"，里面有一条经验是"你的智能体需要规则，而且是很多规则"。现在回头看，那些规则本质上就是 Context Engineering 的手工版，书里把它系统化了。</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="96dg6" data-offset-key="tgqg-0-0"><div class="css-175oi2r r-1nxhmzv"><div class="css-175oi2r r-13qz1uu"><div class="css-175oi2r r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-175oi2r"><div class="css-175oi2r r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-175oi2r r-1pi2tsx r-1ny4l3l r-1loqt21" href="/yanhua1010/article/2058552177912947044/media/2058550906795507712" role="link"><div class="css-175oi2r r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 56.2799%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="Image" class="css-175oi2r r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-175oi2r r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HJFxJJ-awAAA6G0?format=jpg&amp;name=small");'></div><img alt="Image" class="css-9pa8cd" draggable="true" src="assets/9ef8e6e2d575d27be4d6e490f59a0da7.jpg"/></div></div></div></a></div></div></div></div></div></section><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="96dg6" data-offset-key="dn57m-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="dn57m-0-0"><span data-offset-key="dn57m-0-0"><span data-text="true">Reflection：两个 Agent 真的比一个好</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="cs32-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="cs32-0-0"><span data-offset-key="cs32-0-0"><span data-text="true">这是全书对我最有实战价值的一个 Pattern。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="bi25a-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="bi25a-0-0"><span data-offset-key="bi25a-0-0"><span data-text="true">Reflection 的核心很简单：Agent 干完活后自己审一遍，发现问题自己改。但实现方式有讲究。书里明确说了：</span></span><span data-offset-key="bi25a-0-1" style="font-weight: bold;"><span data-text="true">Producer 和 Critic 必须用两个不同的 Agent，给不同的 system prompt。</span></span><span data-offset-key="bi25a-0-2"><span data-text="true"> 同一个 persona 审自己的东西，一定有盲区。你让同一个 LLM 先写代码再审查自己写的代码，它大概率会说"挺好的"。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="72m77-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="72m77-0-0"><span data-offset-key="72m77-0-0"><span data-text="true">书里给了一个完整的代码示例。Producer 的 prompt 是"你是一个 Python 开发者，写一个计算阶乘的函数，处理边界条件和异常"。Critic 的 prompt 是"你是一个吹毛求疵的高级工程师，逐行审查代码，检查 Bug、风格、遗漏的边界条件、可改进的地方。如果完美就输出 CODE_IS_PERFECT，否则列出所有问题"。然后是一个 for 循环：Producer 写代码 → Critic 审 → Producer 根据意见改 → Critic 再审 → 直到 Critic 说 CODE_IS_PERFECT 或者达到最大迭代次数。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="cablq-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="cablq-0-0"><span data-offset-key="cablq-0-0"><span data-text="true">就这么简单。但书里提醒了一个容易被忽略的成本问题：每次反射循环都是一次新的 LLM 调用，迭代次数越多越贵。而且随着对话历史膨胀，上下文窗口被前期版本和批评意见占满，实际可用的推理空间在缩小。所以 Reflection 的最佳实践是：设一个合理的最大迭代次数（书里用的是 3），一旦 Critic 满意就停，不要追求完美。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="25uce-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="25uce-0-0"><span data-offset-key="25uce-0-0"><span data-text="true">用途远不止写代码。写文章、做计划、总结文档、解决逻辑题，Producer-Critic 模型全都能套。书里列了七种应用场景，核心逻辑一样：先产出，后审查，再修正。</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="96dg6" data-offset-key="3eod0-0-0"><div class="css-175oi2r r-1nxhmzv"><div class="css-175oi2r r-13qz1uu"><div class="css-175oi2r r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-175oi2r"><div class="css-175oi2r r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-175oi2r r-1pi2tsx r-1ny4l3l r-1loqt21" href="/yanhua1010/article/2058552177912947044/media/2058550802453778432" role="link"><div class="css-175oi2r r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 56.2799%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="Image" class="css-175oi2r r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-175oi2r r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HJFxDFRaUAAfmRL?format=jpg&amp;name=small");'></div><img alt="Image" class="css-9pa8cd" draggable="true" src="assets/f33cc05ccdbd321e238a1a31343b6fea.jpg"/></div></div></div></a></div></div></div></div></div></section><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="96dg6" data-offset-key="bq3qc-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="bq3qc-0-0"><span data-offset-key="bq3qc-0-0"><span data-text="true">Multi-Agent 不是越复杂越好</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="6geg1-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="6geg1-0-0"><span data-offset-key="6geg1-0-0"><span data-text="true">Multi-Agent Collaboration 这章我最喜欢的是那六种通信拓扑图。很多人一上来就搞复杂的，但其实大部分场景三种就够了：</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="4rrsb-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4rrsb-0-0"><span data-offset-key="4rrsb-0-0" style="font-weight: bold;"><span data-text="true">单 Agent（独立执行）：</span></span><span data-offset-key="4rrsb-0-1"><span data-text="true"> 任务能拆成互不依赖的子问题，每个 Agent 自己搞定自己的。简单，好维护。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="d83sj-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="d83sj-0-0"><span data-offset-key="d83sj-0-0" style="font-weight: bold;"><span data-text="true">对等网络（Peer-to-Peer）：</span></span><span data-offset-key="d83sj-0-1"><span data-text="true"> Agent 之间直接通信，没有中心控制节点。去中心化，容错性好，一个 Agent 挂了不影响全局。但协调成本高，容易乱。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="67run-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="67run-0-0"><span data-offset-key="67run-0-0" style="font-weight: bold;"><span data-text="true">Supervisor（中心调度）：</span></span><span data-offset-key="67run-0-1"><span data-text="true"> 一个 Supervisor Agent 管一群 Worker Agent。分配任务、收集结果、解决冲突。层级清晰，好管理。但 Supervisor 是单点故障，也是性能瓶颈。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="8st13-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8st13-0-0"><span data-offset-key="8st13-0-0"><span data-text="true">另外三种（Supervisor-as-Tool、层级式、自定义混合）是前三者的变体和组合。书里说得很实在：</span></span><span data-offset-key="8st13-0-1" style="font-weight: bold;"><span data-text="true">你需要的拓扑结构取决于你的任务复杂度。</span></span><span data-offset-key="8st13-0-2"><span data-text="true"> 任务越拆越碎，通信成本越高，到一定程度 Supervisor 模式反而比层级式更有效率。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="82nqp-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="82nqp-0-0"><span data-offset-key="82nqp-0-0"><span data-text="true">我的体会是，很多人搭 Multi-Agent 的时候花了 80% 的时间在通信协议上，忘了问一个更基本的问题：</span></span><span data-offset-key="82nqp-0-1" style="font-weight: bold;"><span data-text="true">这个任务真的需要多个 Agent 吗？</span></span><span data-offset-key="82nqp-0-2"><span data-text="true"> 书里写得很清楚，Level 2 的单 Agent + Reflection 往往已经够用了。Level 3 是给那些单 Agent 确实搞不定的场景准备的。</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="96dg6" data-offset-key="bgc1u-0-0"><div class="css-175oi2r r-1nxhmzv"><div class="css-175oi2r r-13qz1uu"><div class="css-175oi2r r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-175oi2r"><div class="css-175oi2r r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-175oi2r r-1pi2tsx r-1ny4l3l r-1loqt21" href="/yanhua1010/article/2058552177912947044/media/2058550096040738816" role="link"><div class="css-175oi2r r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 56.2799%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="Image" class="css-175oi2r r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-175oi2r r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HJFwZ9rawAAZjsZ?format=jpg&amp;name=small");'></div><img alt="Image" class="css-9pa8cd" draggable="true" src="assets/40540c1ea9f0d3cae3d5e55ed253ebfd.jpg"/></div></div></div></a></div></div></div></div></div></section><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="96dg6" data-offset-key="f2bi2-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="f2bi2-0-0"><span data-offset-key="f2bi2-0-0"><span data-text="true">Memory 三层模型，我之前隐约感觉到了但没命名</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="csc45-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="csc45-0-0"><span data-offset-key="csc45-0-0"><span data-text="true">Memory 这章我最有共鸣，因为我写 Obsidian + Claude 那两篇文章的时候，一直在琢磨一个问题：Agent 的记忆该怎么分层？</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="anm5h-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="anm5h-0-0"><span data-offset-key="anm5h-0-0"><span data-text="true">书里给了答案。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="a7mje-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="a7mje-0-0"><span data-offset-key="a7mje-0-0" style="font-weight: bold;"><span data-text="true">Session（会话层）：</span></span><span data-offset-key="a7mje-0-1"><span data-text="true"> 当前对话的上下文窗口，这是最短的记忆，对话结束就没了。长上下文模型只是把这个窗口放大了，但本质上还是临时的，而且每次推理都要处理整个窗口，又贵又慢。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="gh80-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="gh80-0-0"><span data-offset-key="gh80-0-0" style="font-weight: bold;"><span data-text="true">State（状态层）：</span></span><span data-offset-key="gh80-0-1"><span data-text="true"> 当前任务进行中的临时数据。比如"正在做的任务是什么"，"已经完成到哪一步""中间产生了哪些数据"。比 Session 长，但任务结束就清理，书里用 Google ADK 的 State 机制做了完整示例。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="ca2cj-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="ca2cj-0-0"><span data-offset-key="ca2cj-0-0" style="font-weight: bold;"><span data-text="true">Memory（持久层）：</span></span><span data-offset-key="ca2cj-0-1"><span data-text="true"> 跨会话、跨任务的长期记忆。用户偏好、学到的经验、重要的历史决策，存数据库或向量库里，语义检索。书里强调了一个很重要的点：Memory 不只是存下来，还要设计"存什么、什么时候存、怎么检索"的一整套策略。存太多了噪声大，存少了不够用。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="al6j9-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="al6j9-0-0"><span data-offset-key="al6j9-0-0"><span data-text="true">我之前写 Clawdbot 那篇文章里提到"状态文件"和"工作区文档"，本质上就是在手搓 State 层和 Memory 层，书里把这件事框架化了。</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="96dg6" data-offset-key="59cjc-0-0"><div class="css-175oi2r r-1nxhmzv"><div class="css-175oi2r r-13qz1uu"><div class="css-175oi2r r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-175oi2r"><div class="css-175oi2r r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-175oi2r r-1pi2tsx r-1ny4l3l r-1loqt21" href="/yanhua1010/article/2058552177912947044/media/2058551715155394560" role="link"><div class="css-175oi2r r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 56.2799%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="Image" class="css-175oi2r r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-175oi2r r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HJFx4NWbwAA4214?format=jpg&amp;name=small");'></div><img alt="Image" class="css-9pa8cd" draggable="true" src="assets/13d0ceeb93b60fbcf0d8dc4d32fa0410.jpg"/></div></div></div></a></div></div></div></div></div></section><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="96dg6" data-offset-key="fjckp-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="fjckp-0-0"><span data-offset-key="fjckp-0-0"><span data-text="true">五种假设，第五个最离谱</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="9tdss-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9tdss-0-0"><span data-offset-key="9tdss-0-0"><span data-text="true">书末提了五个关于 Agent 未来的假设，前四个还在合理推演范围内：</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="alo99-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="alo99-0-0"><span data-offset-key="alo99-0-0"><span data-text="true">通用型 Agent 从写代码到管项目、深度个性化主动发现你的需求、具身智能走出屏幕进物理世界、Agent 成为独立经济实体。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="c38d0-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="c38d0-0-0"><span data-offset-key="c38d0-0-0" style="font-weight: bold;"><span data-text="true">第五个把我震住了：变形 Multi-Agent。</span></span><span data-offset-key="c38d0-0-1"><span data-text="true"> 你只声明目标，比如"做一个卖精品咖啡的电商生意"。系统自动决定：先创建"市场研究 Agent"和"品牌 Agent"。跑了一轮数据后，自己判断品牌 Agent 不需要了，拆成三个新的："Logo 设计 Agent"、"建站 Agent"、"供应链 Agent"。如果建站 Agent 成了瓶颈，系统会自动复制出三个并行 Agent 同时干不同的页面。整个过程中，系统持续自动调优每个 Agent 的 prompt，不断重组团队架构。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="egf0j-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="egf0j-0-0"><span data-offset-key="egf0j-0-0"><span data-text="true">书里管这叫"目标驱动的、自我变形的多 Agent 系统"。它不是在执行你写的计划，是在自己生成计划、自己调整计划、自己重组执行团队。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="9j466-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9j466-0-0"><span data-offset-key="9j466-0-0"><span data-text="true">这让我想起 Karpathy 的 AutoResearch：写一个 program.md，定义目标、指标、边界，按"启动"。人类在循环外面。但这本书推得更远：连 Agent 团队怎么组建、怎么重组，都交给系统自己决定。人类只声明"要什么"。</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="96dg6" data-offset-key="86asf-0-0"><div class="css-175oi2r r-1nxhmzv"><div class="css-175oi2r r-13qz1uu"><div class="css-175oi2r r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-175oi2r"><div class="css-175oi2r r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-175oi2r r-1pi2tsx r-1ny4l3l r-1loqt21" href="/yanhua1010/article/2058552177912947044/media/2058550537000546304" role="link"><div class="css-175oi2r r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 56.2799%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="Image" class="css-175oi2r r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-175oi2r r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HJFwzoYbcAAulEY?format=jpg&amp;name=small");'></div><img alt="Image" class="css-9pa8cd" draggable="true" src="assets/51dc488c86bdbd6b5dc689256e70bbca.jpg"/></div></div></div></a></div></div></div></div></div></section><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="96dg6" data-offset-key="hsqp-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="hsqp-0-0"><span data-offset-key="hsqp-0-0"><span data-text="true">三件可以马上做的事</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="542a0-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="542a0-0-0"><span data-offset-key="542a0-0-0"><span data-text="true">读完这本书，我有三个立刻可以落地的动作：</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="f4qvl-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="f4qvl-0-0"><span data-offset-key="f4qvl-0-0" style="font-weight: bold;"><span data-text="true">第一，给你现在的 Agent 加一个 Critic。</span></span><span data-offset-key="f4qvl-0-1"><span data-text="true"> 不管你是用 Claude Code、CrewAI 还是自己搭的框架，在你现有的 workflow 末尾加一步：让另一个 Agent（用不同的 system prompt）审查上一步的输出。代码生成加代码审查，文章撰写加事实核查，计划制定加可行性评审。多一次 LLM 调用，但质量提升往往翻倍。书里的 Producer-Critic 模式是即插即用的。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="fhfrr-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="fhfrr-0-0"><span data-offset-key="fhfrr-0-0" style="font-weight: bold;"><span data-text="true">第二，开始做 Context Engineering，不只是 Prompt Engineering。</span></span><span data-offset-key="fhfrr-0-1"><span data-text="true"> 回头看你写给 Agent 的指令文件。如果全是"你要怎么做"的规则，缺少"你现在面对什么环境"的上下文，补上。告诉 Agent 它现在在哪个项目里、之前做过什么决定、用户偏好是什么。书里的 Context Engineering 那章和你的 AGENTS.md 是同一件事的两个表述。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="1jl8f-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1jl8f-0-0"><span data-offset-key="1jl8f-0-0" style="font-weight: bold;"><span data-text="true">第三，先别急着上 Multi-Agent。</span></span><span data-offset-key="1jl8f-0-1"><span data-text="true"> 把你的单 Agent 做到 Level 2：有工具、有 Reflection、有 Memory。书里反复强调，Level 2 的单 Agent 加上 Producer-Critic 和 Context Engineering，能覆盖绝大多数实际场景。Level 3 是给真正跨领域、多阶段、需要并行分工的任务准备的。大多数人的问题不是 Agent 不够多，是一个 Agent 都没调好。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="5b50b-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5b50b-0-0"><span data-offset-key="5b50b-0-0"><span data-text="true">这本书 453 页，Springer 2025 年出版。代码示例覆盖LangChain/LangGraph、Google ADK、CrewAI、OpenAI API。前言是 Google Cloud AI VP 写的，还有个 Goldman Sachs CIO 的推荐序，意外地好看。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="8919e-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8919e-0-0"><span data-offset-key="8919e-0-0"><span data-text="true">但我推荐它的理由不是"全面"。是你读完会意识到一件事：你过去半年在 Agent 上踩的坑，都有人整理成模式了。你不需要再去发明 Reflection，不需要再去猜 Memory 该怎么分层，不需要再去试 Multi-Agent 该用哪种通信拓扑。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="b7ahu-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="b7ahu-0-0"><span data-offset-key="b7ahu-0-0"><span data-text="true">有人替你画了地图，剩下的就是走。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="96dg6" data-offset-key="cooje-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="cooje-0-0"><span data-offset-key="cooje-0-0" style="font-weight: bold;"><span data-text="true">你在用 AI Agent 做开发吗？你现在的 Agent 到了 Level 几？评论区聊聊。</span></span></div></div></div></div></div></div></div></div><div class="css-175oi2r"><div aria-live="polite" class="css-175oi2r r-1xfd6ze r-6koalj r-18u37iz r-kzbkwu r-1c4vpko r-1c7gwzm r-ttdzmv r-13qz1uu" role="status" style="background-color: rgb(234, 250, 255);"><div class="css-175oi2r r-13awgt0 r-18u37iz"><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-1xvli5t r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-18jsvk2 r-1wron08" data-testid="icon" viewbox="0 0 24 24"><g><path d="M18.93 12.69c.933-.933 2.446-.933 3.38 0 .933.934.933 2.447 0 3.38l-5.568 5.568c-.661.661-1.534 1.07-2.466 1.155L12 23l.207-2.276c.085-.932.494-1.805 1.155-2.466l5.568-5.568z"></path><path clip-rule="evenodd" d="M15.5 2c.684 0 1.257-.001 1.724.037.478.04.933.125 1.365.345.658.335 1.194.87 1.53 1.53.22.43.305.886.344 1.364.038.467.037 1.04.037 1.724v2.992c-1.083.03-2.158.458-2.984 1.284l-5.568 5.568c-.992.992-1.606 2.301-1.733 3.699L10.082 22H8.5c-.684 0-1.257.001-1.724-.037-.478-.04-.933-.125-1.365-.345-.658-.335-1.194-.87-1.53-1.53-.22-.43-.305-.886-.344-1.364C3.5 18.257 3.5 17.684 3.5 17V7c0-.684-.001-1.257.037-1.724.04-.478.125-.933.345-1.365.335-.658.87-1.194 1.53-1.53.43-.22.886-.305 1.364-.344C7.243 2 7.816 2 8.5 2h7zM8 12h5v-2H8v2zm0-4h8V6H8v2z" fill-rule="evenodd"></path></g></svg><div class="css-175oi2r r-1habvwh r-13awgt0 r-1777fci"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1b43r93 r-1cwl3u0 r-16dba41 r-13qz1uu" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">Want to publish your own Article?</span></div><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1b43r93 r-1cwl3u0 r-b88u0q r-1q142lx r-1s2bzr4 r-iphfwy r-13orzya r-3s2u2q r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="/i/premium_sign_up" role="link" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">Upgrade to Premium</span></a></div></div></div></div></div></div><div class="css-175oi2r r-12kyg2d"><div class="css-175oi2r r-k4xj1c r-18u37iz r-1wtj0ep"><div class="css-175oi2r r-1wbh5a2 r-1a11zyx"><div class="css-175oi2r r-1d09ksm r-18u37iz r-1wbh5a2 r-1471scf"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(83, 100, 113);"><a aria-describedby="id__gbsejnm7fc" aria-label="10:14 PM · May 24, 2026" class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-xoduu5 r-1q142lx r-1w6e6rj r-9aw3ui r-3s2u2q r-1loqt21" href="/yanhua1010/status/2058552177912947044" role="link" style="color: rgb(83, 100, 113);"><time datetime="2026-05-24T14:14:19.000Z">10:14 PM · May 24, 2026</time></a></div><div aria-hidden="true" class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1q142lx r-n7gxbd" dir="ltr" style="color: rgb(83, 100, 113);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">·</span></div><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1loqt21" dir="ltr" href="/yanhua1010/status/2058552177912947044/analytics" role="link" style="color: rgb(15, 20, 25);"><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1b43r93 r-1cwl3u0 r-b88u0q" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">18.1K</span></span></span></div> <span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1b43r93 r-1cwl3u0" style="color: rgb(83, 100, 113);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">Views</span></span></a></div></div><div class="css-175oi2r r-18u37iz"></div></div></div><div class="css-175oi2r"><div class="css-175oi2r"><div aria-label="2 replies, 55 reposts, 211 likes, 539 bookmarks, 18134 views" class="css-175oi2r r-1kbdv8c r-18u37iz r-1oszu61 r-3qxfft r-n7gxbd r-1dgieki r-1efd50x r-5kkj8d r-h3s6tt r-1wtj0ep" id="id__hhhzlfvae6n" role="group"><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="2 Replies. Reply" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="reply" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01zm8.005-6c-3.317 0-6.005 2.69-6.005 6 0 3.37 2.77 6.08 6.138 6.01l.351-.01h1.761v2.3l5.087-2.81c1.951-1.08 3.163-3.13 3.163-5.36 0-3.39-2.744-6.13-6.129-6.13H9.756z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">2</span></span></span></div></div></button></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="55 reposts. Repost" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="retweet" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">55</span></span></span></div></div></button></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="211 Likes. Like" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="like" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">211</span></span></span></div></div></button></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="539 Bookmarks. Bookmark" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="bookmark" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M4 4.5C4 3.12 5.119 2 6.5 2h11C18.881 2 20 3.12 20 4.5v18.44l-8-5.71-8 5.71V4.5zM6.5 4c-.276 0-.5.22-.5.5v14.56l6-4.29 6 4.29V4.5c0-.28-.224-.5-.5-.5h-11z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">539</span></span></span></div></div></button></div><div class="css-175oi2r" style="justify-content: inherit; display: inline-grid; transform: rotate(0deg) scale(1) translate3d(0px, 0px, 0px);"><div class="css-175oi2r r-18u37iz r-1h0z5md"><button aria-expanded="false" aria-haspopup="menu" aria-label="Share post" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M12 2.59l5.7 5.7-1.41 1.42L13 6.41V16h-2V6.41l-3.3 3.3-1.41-1.42L12 2.59zM21 15l-.02 3.51c0 1.38-1.12 2.49-2.5 2.49H5.5C4.11 21 3 19.88 3 18.5V15h2v3.5c0 .28.22.5.5.5h12.98c.28 0 .5-.22.5-.5L19 15h2z"></path></g></svg></div></div></button></div></div></div></div></div></div></div></div></article>
+</div>
+</div>
+</body>
+</html>

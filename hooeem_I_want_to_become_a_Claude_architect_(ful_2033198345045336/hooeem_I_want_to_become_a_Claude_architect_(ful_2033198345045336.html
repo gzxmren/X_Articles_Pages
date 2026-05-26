@@ -1,0 +1,1517 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>hoeem on X: "I want to become a Claude architect (full course)." / X</title>
+<!-- Injected Original Styles -->
+<style id="draftjs-styles">
+     .DraftEditor-editorContainer, .DraftEditor-root, .public-DraftEditor-content {
+        height: inherit;
+        max-height: inherit;
+        min-height: inherit;
+        text-align: initial;
+    }
+
+    .public-DraftEditor-content[contenteditable=true] {
+        -moz-user-modify: read-write-plaintext-only;
+        -webkit-user-modify: read-write-plaintext-only;
+    }
+
+    .format-inline .public-DraftEditor-content[contenteditable=true] {
+      -moz-user-modify: read-write;
+      -webkit-user-modify: read-write;
+    }
+
+    .DraftEditor-root {
+        width: 100%;
+        position: relative;
+        -webkit-user-select: none;
+    }
+
+    .DraftEditor-editorContainer {
+        background-color: rgba(255, 255, 255, 0);
+        border-left: .1px solid transparent;
+        position: relative;
+        z-index: 1;
+    }
+
+    .public-DraftEditor-block {
+        position: relative;
+    }
+
+    .DraftEditor-alignLeft .public-DraftStyleDefault-block {
+        text-align: left;
+    }
+
+    .DraftEditor-alignLeft .public-DraftEditorPlaceholder-root {
+        left: 0;
+        text-align: left;
+    }
+
+    .DraftEditor-alignCenter .public-DraftStyleDefault-block {
+        text-align: center
+    }
+
+    .DraftEditor-alignCenter .public-DraftEditorPlaceholder-root {
+        margin: 0 auto;
+        text-align: center;
+        width: 100%
+    }
+
+    .DraftEditor-alignRight .public-DraftStyleDefault-block {
+        text-align: right;
+    }
+
+    .DraftEditor-alignRight .public-DraftEditorPlaceholder-root {
+        right: 0;
+        text-align: right;
+    }
+
+    .public-DraftEditorPlaceholder-root {
+        padding-bottom: 2px;
+        padding-top: 2px;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .public-DraftEditorPlaceholder-inner {
+        user-select: none;
+        -webkit-user-select: none;
+    }
+
+    .DraftEditorPlaceholder-hidden {
+        display: none;
+    }
+
+    .public-DraftStyleDefault-block {
+        overflow:hidden;
+        padding-bottom: 2px;
+        padding-top: 2px;
+        position: relative;
+        white-space: pre-wrap;
+    }
+
+    /* Only a handful of CSS rules work on br tags and user-select isn't one */
+    div:only-child > .public-DraftStyleDefault-block > span > br::selection {
+        background: transparent;
+    }
+
+    /*
+       Safari doesn't let you change ::selection on br elements,
+       but Chrome needs it here
+    */
+    div:only-child > .public-DraftStyleDefault-block > span:has(br)::selection {
+        background: transparent;
+    }
+
+    .public-DraftStyleDefault-ltr {
+        direction: ltr;
+        text-align: left;
+    }
+
+    .public-DraftStyleDefault-rtl {
+        direction: rtl;
+        text-align: right;
+    }
+
+    .DraftEditor-editorContainer a {
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        margin-bottom: inherit;
+        margin-top: inherit;
+    }
+
+    .singleline .public-DraftStyleDefault-block {
+        overflow-x: auto;
+        scrollbar-width: none;
+        white-space: nowrap;
+        -ms-overflow-style: none;
+    }
+
+    .singleline .public-DraftStyleDefault-block::-webkit-scrollbar {
+        display: none;
+    }
+  </style>
+<style id="longform-styles">
+    .longform-header-one {
+        font-size: 31px;
+        font-weight: 800;
+        line-height: 40px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-header-one-narrow {
+        font-size: calc(20px + 1px);
+        font-weight: 800;
+        line-height: 28px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-header-two {
+        font-size: 26px;
+        font-weight: 800;
+        line-height: 36px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-header-two-narrow {
+        font-size: calc(17px + 1px);
+        font-weight: 800;
+        line-height: 24px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-unstyled, .longform-blockquote {
+        font-size: 17px;
+        line-height: 28px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-unstyled-narrow, .longform-blockquote-narrow {
+        font-size: 17px;
+        line-height: 28px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-unordered-list-item, .longform-ordered-list-item {
+        display: block;
+        font-size: 17px;
+        line-height: 28px;   
+        margin-bottom: 12px;
+        margin-left: calc(28px + 2px);
+        margin-top: 0;
+    }
+
+    .longform-unordered-list-item-narrow, .longform-ordered-list-item-narrow {
+        display: block;
+        font-size: 17px;
+        line-height: 28px;   
+        margin-bottom: calc(12px / 2);
+        margin-left: 36px;
+        margin-top: 0;
+    }
+
+    .longform-blockquote, .longform-blockquote-narrow {
+        margin-bottom: calc(24px + 2px);
+        margin-left: 0;
+        margin-top: calc(-2px);
+        padding-left: calc(24px + 3px);
+        position: relative;
+    }
+
+    .longform-blockquote:before, .longform-blockquote-narrow:before {
+        background: #37434D;
+        border-radius: 9999px;
+        bottom: 0;
+        content: "";
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 3px;
+    }
+
+    .longform-header-one .public-DraftStyleDefault-block,
+    .longform-header-two .public-DraftStyleDefault-block,
+    .longform-unstyled .public-DraftStyleDefault-block,
+    .longform-unordered-list-item .public-DraftStyleDefault-block,
+    .longform-ordered-list-item .public-DraftStyleDefault-block,
+    .longform-header-one-narrow .public-DraftStyleDefault-block,
+    .longform-header-two-narrow .public-DraftStyleDefault-block,
+    .longform-unstyled-narrow .public-DraftStyleDefault-block,
+    .longform-unordered-list-item-narrow .public-DraftStyleDefault-block,
+    .longform-ordered-list-item-narrow .public-DraftStyleDefault-block {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    .public-DraftStyleDefault-ul, .public-DraftStyleDefault-ol {
+        counter-reset: item;
+        margin-bottom: 28px;
+        margin-top: 0;
+        padding-left: 0;
+    }
+
+    .longform-unordered-list-item:before, .longform-ordered-list-item:before,
+    .longform-unordered-list-item-narrow:before, .longform-ordered-list-item-narrow:before {
+        position: absolute;
+        margin-left: calc(-1 * (28px + 2px));
+    }
+
+    .longform-unordered-list-item:before {
+        content: counter(item, disc);
+        font-size: 23px
+    }
+
+    .longform-unordered-list-item-narrow:before {
+        content: counter(item, disc);
+        font-size: 20px
+    }
+
+    .longform-ordered-list-item:before, .longform-ordered-list-item-narrow:before {
+        content: counter(item) ". ";
+        counter-increment: item;
+    }
+
+    .longform-ordered-list-item::marker, .longform-ordered-list-item-narrow::marker {
+        font-variant-numeric: normal;
+    }
+</style>
+<style>input::placeholder { user-select: none; -webkit-user-select: none; } div div ::-webkit-input-placeholder { color: rgb(117, 117, 117) } iframe { color-scheme: auto; }button { text-align: inherit; font-size: inherit; font-family: inherit; color: inherit }</style>
+<style>@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-Light.a929468a.woff2) format('woff2');
+  font-weight: 300;
+  font-style: 'normal';
+  font-display: 'swap';
+}
+@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-Regular.58c84f6a.woff2) format('woff2');
+  font-weight: 400;
+  font-style: 'normal';
+  font-display: 'swap';
+}
+@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-Medium.bc7d8f1a.woff2) format('woff2');
+  font-weight: 500;
+  font-style: 'normal';
+  font-display: 'swap';
+}
+@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-Bold.0d6a47ca.woff2) format('woff2');
+  font-weight: 700;
+  font-style: 'normal';
+  font-display: 'swap';
+}
+@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-ExtraBold.b130af7a.woff2) format('woff2');
+  font-weight: 800;
+  font-style: 'normal';
+  font-display: 'swap';
+}</style>
+<style>@font-face {
+  font-family: Geist;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Geist-var.2587a0ca.woff2) format('woff2');
+  font-weight: 100 900;
+  font-style: 'normal';
+  font-display: 'swap';
+}</style>
+<style>@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Light.3a18e64a.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Light.7a5673aa.woff) format('woff');
+  font-weight: 300;
+  font-style: 'normal';
+  font-display: 'swap';
+}
+@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Regular.80fda27a.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Regular.60b215ba.woff) format('woff');
+  font-weight: 400;
+  font-style: 'normal';
+  font-display: 'swap';
+}
+@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Medium.f8e2739a.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Medium.20fc288a.woff) format('woff');
+  font-weight: 500;
+  font-style: 'normal';
+  font-display: 'swap';
+}
+@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Bold.ebb56aba.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Bold.a573679a.woff) format('woff');
+  font-weight: 700;
+  font-style: 'normal';
+  font-display: 'swap';
+}
+@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Heavy.f44ae4ea.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Heavy.d70ec7ca.woff) format('woff');
+  font-weight: 800;
+  font-style: 'normal';
+  font-display: 'swap';
+}
+@font-face {
+  font-family: TwitterChirpExtendedHeavy;
+  src: url(https://abs.twimg.com/fonts/v1/chirp-extended-heavy-web.woff2) format('woff2'), url(https://abs.twimg.com/fonts/v1/chirp-extended-heavy-web.woff) format('woff');
+  font-weight: 800;
+  font-style: 'normal';
+  font-display: 'swap';
+}</style>
+<style>html,body{height: 100%;}::cue{white-space:normal}</style>
+<style id="react-native-stylesheet">[stylesheet-group="0"]{}
+body{margin:0;}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+input::-webkit-search-cancel-button,input::-webkit-search-decoration,input::-webkit-search-results-button,input::-webkit-search-results-decoration{display:none;}
+[stylesheet-group="1"]{}
+.css-146c3p1{background-color:rgba(0,0,0,0.00);border:0 solid black;box-sizing:border-box;color:rgba(0,0,0,1.00);display:inline;font:14px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;list-style:none;margin:0px;padding:0px;position:relative;text-align:start;text-decoration:none;white-space:pre-wrap;word-wrap:break-word;}
+.css-175oi2r{align-items:stretch;background-color:rgba(0,0,0,0.00);border:0 solid black;box-sizing:border-box;display:flex;flex-basis:auto;flex-direction:column;flex-shrink:0;list-style:none;margin:0px;min-height:0px;min-width:0px;padding:0px;position:relative;text-decoration:none;z-index:0;}
+.css-1jxf684{background-color:rgba(0,0,0,0.00);border:0 solid black;box-sizing:border-box;color:inherit;display:inline;font:inherit;list-style:none;margin:0px;padding:0px;position:relative;text-align:inherit;text-decoration:none;white-space:inherit;word-wrap:break-word;}
+.css-9pa8cd{bottom:0px;height:100%;left:0px;opacity:0;position:absolute;right:0px;top:0px;width:100%;z-index:-1;}
+[stylesheet-group="2"]{}
+.r-13awgt0{flex:1;}
+.r-17gur6a{border-bottom-left-radius:0px;border-bottom-right-radius:0px;border-top-left-radius:0px;border-top-right-radius:0px;}
+.r-1867qdf{border-bottom-left-radius:16px;border-bottom-right-radius:16px;border-top-left-radius:16px;border-top-right-radius:16px;}
+.r-1adg3ll{display:block;}
+.r-1fuqb1j{border-bottom-left-radius:24px;border-bottom-right-radius:24px;border-top-left-radius:24px;border-top-right-radius:24px;}
+.r-1j16mh1{border-bottom-left-radius:100%;border-bottom-right-radius:100%;border-top-left-radius:100%;border-top-right-radius:100%;}
+.r-1pcd2l5{padding:20px;}
+.r-1phboty{border-bottom-style:solid;border-left-style:solid;border-right-style:solid;border-top-style:solid;}
+.r-1pp0k63{border-bottom-left-radius:0.01px;border-bottom-right-radius:0.01px;border-top-left-radius:0.01px;border-top-right-radius:0.01px;}
+.r-1udh08x{overflow-x:hidden;overflow-y:hidden;}
+.r-4iw3lz{border-bottom-width:0;border-left-width:0;border-right-width:0;border-top-width:0;}
+.r-4qtqp9{display:inline-block;}
+.r-6koalj{display:flex;}
+.r-bztko3{overflow-x:visible;overflow-y:visible;}
+.r-crgep1{margin:0px;}
+.r-hvic4v{display:none;}
+.r-krxsd3{display:-webkit-box;}
+.r-rs99b7{border-bottom-width:1px;border-left-width:1px;border-right-width:1px;border-top-width:1px;}
+.r-sdzlij{border-bottom-left-radius:9999px;border-bottom-right-radius:9999px;border-top-left-radius:9999px;border-top-right-radius:9999px;}
+.r-t60dpp{padding:0px;}
+.r-wwvuq4{padding:0;}
+.r-xoduu5{display:inline-flex;}
+.r-ywje51{margin:auto;}
+.r-z2wwpe{border-bottom-left-radius:4px;border-bottom-right-radius:4px;border-top-left-radius:4px;border-top-right-radius:4px;}
+[stylesheet-group="2.1"]{}
+.r-1fkl15p{padding-left:32px;padding-right:32px;}
+.r-1mmae3n{padding-bottom:12px;padding-top:12px;}
+.r-3o4zer{padding-left:12px;padding-right:12px;}
+.r-3pj75a{padding-left:16px;padding-right:16px;}
+.r-cnw61z{padding-bottom:4px;padding-top:4px;}
+.r-cxgwc0{padding-left:24px;padding-right:24px;}
+.r-dd0y9b{padding-bottom:20px;padding-top:20px;}
+.r-ddtstp{margin-bottom:0px;margin-top:0px;}
+.r-dp7rxi{padding-bottom:40px;padding-top:40px;}
+.r-f8sm7e{margin-left:auto;margin-right:auto;}
+.r-is05cd{padding-left:8px;padding-right:8px;}
+.r-n7gxbd{padding-left:4px;padding-right:4px;}
+.r-nj0m1c{padding-bottom:32px;padding-top:32px;}
+.r-s49dbf{margin-bottom:1px;margin-top:1px;}
+.r-sjygvo{padding-left:1em;padding-right:1em;}
+.r-ytbthy{padding-bottom:10px;padding-top:10px;}
+[stylesheet-group="2.2"]{}
+.r-10s2tm5{left:0%;}
+.r-15peodp{right:-9999px;}
+.r-16o8guy{right:100%;}
+.r-19qo34d{left:-9999px;}
+.r-1a11zyx{margin-right:12px;}
+.r-1ca1ndr{margin-left:0.5em;}
+.r-1cwvpvk{margin-left:12px;}
+.r-1ez5h0i{margin-left:4px;}
+.r-1gs4q39{margin-right:4px;}
+.r-1kkk96v{margin-left:8px;}
+.r-1kpi4qh{margin-left:0.075em;}
+.r-1l2kgy{margin-right:0.5em;}
+.r-1prj4y5{margin-right:16px;}
+.r-1q6cnnd{right:-2px;}
+.r-1r3801d{margin-left:16px;}
+.r-1uofg76{left:16px;}
+.r-1va2g9v{margin-right:20px;}
+.r-1wron08{margin-right:8px;}
+.r-3t4u6i{margin-left:2px;}
+.r-42265s{right:16px;}
+.r-45ll9u{left:50%;}
+.r-5f1w11{left:-2px;}
+.r-72fyl3{border-top-left-radius:32px;}
+.r-cwltf5{border-top-right-radius:32px;}
+.r-dqe1q{right:0%;}
+.r-k4bwe5{margin-right:0.075em;}
+.r-o59np7{padding-right:8px;}
+.r-ocobd0{right:50%;}
+.r-qjj4hq{padding-left:8px;}
+.r-rci37q{left:100%;}
+.r-uhwcr3{margin-left:20px;}
+.r-x1x4zq{margin-right:2px;}
+[stylesheet-group="3"]{}
+.r-105ug2t{pointer-events:auto!important;}
+.r-109y4c4{height:1px;}
+.r-10ef88u{min-width:700px;}
+.r-10ptun7{height:16px;}
+.r-10v3vxq{transform:scaleX(-1);}
+.r-117bsoe{margin-bottom:20px;}
+.r-11c0sde{margin-top:24px;}
+.r-11f8fnl{background-color:rgba(180,180,182,0.50);}
+.r-11j9u27{visibility:hidden;}
+.r-1202g5r{height:90vh;}
+.r-12181gd{box-shadow:0 0 2px rgba(0,0,0,0.03) inset;}
+.r-1279nm1{min-height:400px;}
+.r-12hfotv{width:700px;}
+.r-12sks89{min-height:22px;}
+.r-12vffkv>*{pointer-events:auto;}
+.r-12vffkv{pointer-events:none!important;}
+.r-12ym1je{width:18px;}
+.r-135wba7{line-height:24px;}
+.r-13qz1uu{width:100%;}
+.r-13tjlyg{transition-duration:0.1s;}
+.r-13wfysu{-webkit-text-decoration-line:none;text-decoration-line:none;}
+.r-146iojx{max-width:300px;}
+.r-1472mwg{height:24px;}
+.r-14j79pv{color:rgba(83,100,113,1.00);}
+.r-14lw9ot{background-color:rgba(255,255,255,1.00);}
+.r-158ssxm{max-height:calc(64px * 15);}
+.r-15ysp7h{min-height:32px;}
+.r-16dba41{font-weight:400;}
+.r-16y2uox{flex-grow:1;}
+.r-176fswd{transform:translateX(-50%) translateY(-50%);}
+.r-1777fci{justify-content:center;}
+.r-17bb2tj{animation-duration:0.75s;}
+.r-17c3jg3{background-color:rgba(0,0,0,0.80);}
+.r-17gznlh{animation-name:r-t2lo5v;}
+.r-17leim2{background-repeat:repeat;}
+.r-17s6mgv{justify-content:flex-end;}
+.r-184en5c{z-index:1;}
+.r-18jsvk2{color:rgba(15,20,25,1.00);}
+.r-18tzken{width:56px;}
+.r-18u37iz{flex-direction:row;}
+.r-18yzcnr{height:22px;}
+.r-19lq7b1{top:16px;}
+.r-19qs0lw{animation-name:r-1qpf3yi;}
+.r-19wmn03{width:20px;}
+.r-19yznuf{min-height:52px;}
+.r-1abnn5w{animation-play-state:paused;}
+.r-1acpoxo{width:36px;}
+.r-1ad0z5i{word-break:break-all;}
+.r-1awozwy{align-items:center;}
+.r-1b43r93{font-size:14px;}
+.r-1betnmo{max-width:672px;}
+.r-1blnp2b{width:72px;}
+.r-1blvdjr{font-size:23px;}
+.r-1bymd8e{margin-top:2px;}
+.r-1c6unfx{forced-color-adjust:none;}
+.r-1ceczpf{min-height:24px;}
+.r-1cwl3u0{line-height:16px;}
+.r-1d2f490{left:0px;}
+.r-1ddef8g{-webkit-text-decoration-line:underline;text-decoration-line:underline;}
+.r-1dernwh{height:70%;}
+.r-1dn12g7{line-height:48px;}
+.r-1dum35f{-moz-transition-property:opacity, height;-webkit-transition-property:opacity, height;transition-property:opacity, height;}
+.r-1e425wn{animation-duration:0.15s;}
+.r-1ebb2ja{list-style:none;}
+.r-1ei5mc7{cursor:inherit;}
+.r-1el8sus{min-height:72px;}
+.r-1ewcgjf{box-shadow:0px 1px 3px rgba(0,0,0,0.5);}
+.r-1ff274t{text-align:right;}
+.r-1ffj0ar{background-color:rgba(0,0,0,0.40);}
+.r-1fu8b7j{height:712px;}
+.r-1g83rmp{animation-name:r-7bj9g2;}
+.r-1gkfh8e{font-size:11px;}
+.r-1h0z5md{justify-content:flex-start;}
+.r-1h8ys4a{padding-top:4px;}
+.r-1habvwh{align-items:flex-start;}
+.r-1hjwoze{height:18px;}
+.r-1ifxtd0{margin-bottom:16px;}
+.r-1iln25a{word-wrap:normal;}
+.r-1inkyih{font-size:17px;}
+.r-1ipicw7{width:300px;}
+.r-1iusvr4{flex-basis:0px;}
+.r-1janqcz{width:16px;}
+.r-1jaylin{width:-webkit-max-content;width:-moz-max-content;width:max-content;}
+.r-1k78y06{font-family:Tahoma, Arial, sans-serif;}
+.r-1kihuf0{align-self:center;}
+.r-1ldzwu0{animation-timing-function:linear;}
+.r-1loqt21{cursor:pointer;}
+.r-1mdbw0j{padding-bottom:0px;}
+.r-1mlwlqe{flex-basis:auto;}
+.r-1mrlafo{background-position:0;}
+.r-1muvv40{animation-iteration-count:infinite;}
+.r-1mwlp6a{height:56px;}
+.r-1nao33i{color:rgba(231,233,234,1.00);}
+.r-1niwhzg{background-color:rgba(0,0,0,0.00);}
+.r-1ny4l3l{outline-style:none;}
+.r-1oifz5y{background-color:rgba(170,17,0,1.00);}
+.r-1oszu61{align-items:stretch;}
+.r-1otgn73{touch-action:manipulation;}
+.r-1ovo9ad{width:360px;}
+.r-1p0dtai{bottom:0px;}
+.r-1pi2tsx{height:100%;}
+.r-1pjcn9w{max-width:80vw;}
+.r-1potc6q{top:5%;}
+.r-1ps3wis{min-width:44px;}
+.r-1pz39u2{align-self:stretch;}
+.r-1qd0xha{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+.r-1qi8awa{min-width:36px;}
+.r-1r5jyh0{min-height:130px;}
+.r-1r8g8re{height:36px;}
+.r-1rnoaur{overflow-y:auto;}
+.r-1s2hp8q{min-height:26px;}
+.r-1sxrcry{background-size:auto;}
+.r-1tl8opc{font-family:"Segoe UI",Meiryo,system-ui,-apple-system,BlinkMacSystemFont,sans-serif;}
+.r-1to6hqq{background-color:rgba(255,212,0,1.00);}
+.r-1tsuqlv{max-height:100vh;}
+.r-1ttztb7{text-align:inherit;}
+.r-1udbk01{text-overflow:ellipsis;}
+.r-1ur9v65{padding-top:40px;}
+.r-1v2oles{top:50%;}
+.r-1vmecro{direction:rtl;}
+.r-1vr29t4{font-weight:800;}
+.r-1wb8bfx{text-decoration-thickness:2px;}
+.r-1wbh5a2{flex-shrink:1;}
+.r-1wtj0ep{justify-content:space-between;}
+.r-1wvb978{font-feature-settings:'ss01' on;}
+.r-1wyyakw{z-index:-1;}
+.r-1x0uki6{margin-top:20px;}
+.r-1xcajam{position:fixed;}
+.r-1xfddsp{min-height:300px;}
+.r-1xk2f4g{clip:rect(1px, 1px, 1px, 1px);}
+.r-1xnzce8{-moz-user-select:text;-webkit-user-select:text;user-select:text;}
+.r-1xvli5t{height:1.25em;}
+.r-1y7e96w{min-width:22px;}
+.r-1ye8kvj{max-width:600px;}
+.r-1yef0xd{animation-name:r-11cv4x;}
+.r-1yjpyg1{font-size:31px;}
+.r-1ykxob0{top:60%;}
+.r-2o02ov{margin-top:40px;}
+.r-2yi16{min-height:36px;}
+.r-30o5oe{-moz-appearance:none;-ms-appearance:none;-webkit-appearance:none;appearance:none;}
+.r-36ujnk{font-style:italic;}
+.r-37tt59{line-height:32px;}
+.r-3cuxpb{opacity:0.98;}
+.r-3nmjpz{animation-name:r-12fruu6;}
+.r-3s2u2q{white-space:nowrap;}
+.r-417010{z-index:0;}
+.r-4gszlv{background-size:cover;}
+.r-4hwcpe{font-family:Vazirmatn, Tahoma, Arial, sans-serif;}
+.r-4wgw6l{min-width:32px;}
+.r-54znze{color:rgba(239,243,244,1.00);}
+.r-56xrmm{line-height:12px;}
+.r-6026j{background-color:rgba(255,255,255,0.85);}
+.r-633pao{pointer-events:none!important;}
+.r-6416eg{-moz-transition-property:background-color, box-shadow;-webkit-transition-property:background-color, box-shadow;transition-property:background-color, box-shadow;}
+.r-64el8z{min-width:52px;}
+.r-68jxh1{min-width:500px;}
+.r-7h7f8p{max-width:100vw;}
+.r-7q8q6z{cursor:default;}
+.r-8akbws{-webkit-box-orient:vertical;}
+.r-8jfcpp{top:-2px;}
+.r-92ng3h{width:1px;}
+.r-9dcw1g{width:320px;}
+.r-a023e6{font-size:15px;}
+.r-adyw6z{font-size:20px;}
+.r-agouwx{transform:translateZ(0);}
+.r-ah5dr5>*{pointer-events:none;}
+.r-ah5dr5{pointer-events:auto!important;}
+.r-aqfbo4{backface-visibility:hidden;}
+.r-b88u0q{font-weight:700;}
+.r-bcqeeo{min-width:0px;}
+.r-bnwqim{position:relative;}
+.r-bqz1g2{background-color:rgba(229,234,236,1.00);}
+.r-bt1l66{min-height:20px;}
+.r-bvlit7{margin-bottom:-12px;}
+.r-clrlgt{animation-name:r-imtty0;}
+.r-deolkf{box-sizing:border-box;}
+.r-dflpy8{height:1.2em;}
+.r-dnmrzs{max-width:100%;}
+.r-ehq7j7{background-size:contain;}
+.r-emqnss{transform:translateZ(0px);}
+.r-eqz5dr{flex-direction:column;}
+.r-ero68b{min-height:40px;}
+.r-f5cfds{min-height:160px;}
+.r-fa1dwr{animation-timing-function:cubic-bezier(0.25, 0.1, 0.25, 1);}
+.r-fdjqy7{text-align:left;}
+.r-fm7h5w{font-family:"TwitterChirpExtendedHeavy","Verdana",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+.r-g6jmlv{width:100vw;}
+.r-gf0ln{-webkit-filter:brightness(1);filter:brightness(1);}
+.r-h3s6tt{height:48px;}
+.r-h9hxbl{width:1.2em;}
+.r-htvplk{min-width:600px;}
+.r-icoktb{opacity:0.5;}
+.r-ifefl9{min-height:0px;}
+.r-impgnl{transform:translateX(50%) translateY(-50%);}
+.r-iphfwy{padding-bottom:4px;}
+.r-ipm5af{top:0px;}
+.r-j5o65s{border-bottom-color:rgba(239,243,244,1.00);}
+.r-jmul1s{transform:scale(1.1);}
+.r-jwli3a{color:rgba(255,255,255,1.00);}
+.r-k200y{align-self:flex-start;}
+.r-kemksi{background-color:rgba(0,0,0,1.00);}
+.r-kwpbio{height:650px;}
+.r-lp5zef{min-width:24px;}
+.r-lrsllp{width:24px;}
+.r-lrvibr{-moz-user-select:none;-webkit-user-select:none;user-select:none;}
+.r-lrx3fh{width:500px;}
+.r-m6rgpd{vertical-align:text-bottom;}
+.r-majxgm{font-weight:500;}
+.r-n1ft60{dynamic-range-limit:standard;}
+.r-n6v787{font-size:13px;}
+.r-nhe8su{animation-duration:0.5s;}
+.r-nvplwv{animation-timing-function:ease-out;}
+.r-nwxazl{line-height:40px;}
+.r-o7ynqc{transition-duration:0.2s;}
+.r-obd0qt{align-items:flex-end;}
+.r-orgf3d{opacity:0;}
+.r-peo1c{min-height:44px;}
+.r-pm9dpa{max-height:100%;}
+.r-poiln3{font-family:inherit;}
+.r-pp5qcn{vertical-align:-20%;}
+.r-q4m81j{text-align:center;}
+.r-qklmqi{border-bottom-width:1px;}
+.r-qlhcfr{font-size:0.001px;}
+.r-qvk6io{line-height:0px;}
+.r-qvutc0{word-wrap:break-word;}
+.r-rjixqe{line-height:20px;}
+.r-rki7wi{bottom:12px;}
+.r-rsyp9y{max-height:90vh;}
+.r-rwqe4o{width:48px;}
+.r-s67bdx{font-size:48px;}
+.r-sb58tz{max-width:1000px;}
+.r-tjvw6i{text-decoration-thickness:1px;}
+.r-u6sd8q{background-repeat:no-repeat;}
+.r-u8s1d{position:absolute;}
+.r-ueyrd6{line-height:36px;}
+.r-uho16t{font-size:34px;}
+.r-uz7a3o{min-width:650px;}
+.r-vkv6oe{min-width:40px;}
+.r-vqxq0j{border:0 solid black;}
+.r-vrz42v{line-height:28px;}
+.r-vvn4in{background-position:center;}
+.r-wcz47r{box-shadow:0 8px 24px rgba(15, 20, 25, 0.18);}
+.r-wy61xf{height:72px;}
+.r-x3cy2q{background-size:100% 100%;}
+.r-x572qd{background-color:rgba(247,249,249,1.00);}
+.r-xigjrr{-webkit-filter:blur(4px);filter:blur(4px);}
+.r-xr3zp9{min-height:calc(64px * 3);}
+.r-yc9v9c{width:22px;}
+.r-yn5ncy{animation-fill-mode:both;}
+.r-yy2aun{font-size:26px;}
+.r-yyyyoo{fill:currentcolor;}
+.r-z2knda{transition-timing-function:ease;}
+.r-z7pwl0{max-width:700px;}
+.r-z80fyv{height:20px;}
+.r-zchlnj{right:0px;}
+@-webkit-keyframes r-11cv4x{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
+@-webkit-keyframes r-12fruu6{0%{opacity:0;transform:scale(0.95);}100%{opacity:1;transform:scale(1);}}
+@-webkit-keyframes r-1qpf3yi{0%{opacity:0;transform:scale3d(0.92, 0.92, 1);}100%{opacity:1;transform:scale3d(1, 1, 1);}}
+@-webkit-keyframes r-7bj9g2{0%{opacity:1;transform:scale3d(1, 1, 1);}100%{opacity:0;transform:scale3d(0.92, 0.92, 1);}}
+@-webkit-keyframes r-imtty0{0%{opacity:0;}100%{opacity:1;}}
+@-webkit-keyframes r-t2lo5v{0%{opacity:1;}100%{opacity:0;}}
+@keyframes r-11cv4x{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
+@keyframes r-12fruu6{0%{opacity:0;transform:scale(0.95);}100%{opacity:1;transform:scale(1);}}
+@keyframes r-1qpf3yi{0%{opacity:0;transform:scale3d(0.92, 0.92, 1);}100%{opacity:1;transform:scale3d(1, 1, 1);}}
+@keyframes r-7bj9g2{0%{opacity:1;transform:scale3d(1, 1, 1);}100%{opacity:0;transform:scale3d(0.92, 0.92, 1);}}
+@keyframes r-imtty0{0%{opacity:0;}100%{opacity:1;}}
+@keyframes r-t2lo5v{0%{opacity:1;}100%{opacity:0;}}
+.r-fuat9c{position:absolute;visibility:hidden;top:0;width:50px;pointer-events:none}
+.r-fuat9c.loaded{visibility:visible;top:50vh;width:50px}</style>
+<style id="googleidentityservice_button_styles">.qJTHM{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;color:#202124;direction:ltr;-webkit-touch-callout:none;font-family:Roboto-Regular,arial,sans-serif;-webkit-font-smoothing:antialiased;font-weight:400;margin:0;overflow:hidden;-webkit-text-size-adjust:100%}.ynRLnc{left:-9999px;position:absolute;top:-9999px}.L6cTce{display:none}.bltWBb{overflow-wrap:break-word;word-break:break-word}.hSRGPd{color:#1a73e8;cursor:pointer;font-weight:500;text-decoration:none}.Bz112c-W3lGp{height:16px;width:16px}.Bz112c-E3DyYd{height:20px;width:20px}.Bz112c-r9oPif{height:24px;width:24px}.Bz112c-u2z5K{height:36px;width:36px}.Bz112c-uaxL4e{border-radius:10px}.LgbsSe-Bz112c{display:block}.S9gUrf-YoZ4jf{border:none;margin:0;padding:0}.S9gUrf-YoZ4jf *{border:none;margin:0;padding:0}.fFW7wc-ibnC6b>.aZ2wEe>div{border-color:#4285f4}.P1ekSe-ZMv3u{-webkit-transition:height .2s linear;transition:height .2s linear}.P1ekSe-ZMv3u>div:first-child{background-color:#1a73e8!important;-webkit-transition:width .3s linear;transition:width .3s linear}.P1ekSe-ZMv3u>div:nth-child(2){background-image:-webkit-gradient(linear,left top,right top,from(rgba(255,255,255,.7)),to(rgba(255,255,255,.7))),-webkit-gradient(linear,left top,right top,from(#1a73e8),to(#1a73e8))!important;background-image:-webkit-linear-gradient(left,rgba(255,255,255,.7),rgba(255,255,255,.7)),-webkit-linear-gradient(left,#1a73e8,#1a73e8)!important;background-image:linear-gradient(90deg,rgba(255,255,255,.7),rgba(255,255,255,.7)),linear-gradient(90deg,#1a73e8,#1a73e8)!important}.P1ekSe-ZMv3u>div:nth-child(3){background-image:-webkit-gradient(linear,left top,right top,from(rgba(255,255,255,.7)),to(rgba(255,255,255,.7))),-webkit-gradient(linear,left top,right top,from(#1a73e8),to(#1a73e8))!important;background-image:-webkit-linear-gradient(left,rgba(255,255,255,.7),rgba(255,255,255,.7)),-webkit-linear-gradient(left,#1a73e8,#1a73e8)!important;background-image:linear-gradient(90deg,rgba(255,255,255,.7),rgba(255,255,255,.7)),linear-gradient(90deg,#1a73e8,#1a73e8)!important}.haAclf{display:inline-block}.nsm7Bb-HzV7m-LgbsSe{border-radius:4px;box-sizing:border-box;-webkit-transition:background-color .218s,border-color .218s;transition:background-color .218s,border-color .218s;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;-webkit-appearance:none;background-color:#fff;background-image:none;border:1px solid #dadce0;color:#3c4043;cursor:pointer;font-family:Google Sans,arial,sans-serif;font-size:14px;height:40px;letter-spacing:.25px;outline:none;overflow:hidden;padding:0 12px;position:relative;text-align:center;vertical-align:middle;white-space:nowrap;width:auto}@media screen and (-ms-high-contrast:active){.nsm7Bb-HzV7m-LgbsSe{border:2px solid windowText;color:windowText}}@media screen and (preferes-contrast:more){.nsm7Bb-HzV7m-LgbsSe{color:#000}}.nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe{font-size:14px;height:32px;letter-spacing:.25px;padding:0 10px}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe{font-size:11px;height:20px;letter-spacing:.3px;padding:0 8px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe{padding:0;width:40px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.pSzOP-SxQuSe{width:32px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.purZT-SxQuSe{width:20px}.nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK{border-radius:20px}.nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK.pSzOP-SxQuSe{border-radius:16px}.nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK.purZT-SxQuSe{border-radius:10px}.nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc{border:none;color:#fff}.nsm7Bb-HzV7m-LgbsSe.MFS4be-v3pZbf-Ia7Qfc{background-color:#1a73e8}.nsm7Bb-HzV7m-LgbsSe.MFS4be-JaPV2b-Ia7Qfc{background-color:#202124;color:#e8eaed}@media screen and (prefers-contrast:more){.nsm7Bb-HzV7m-LgbsSe.MFS4be-JaPV2b-Ia7Qfc{color:#fff}}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{height:18px;margin-right:8px;min-width:18px;width:18px}.nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{height:14px;min-width:14px;width:14px}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{height:10px;min-width:10px;width:10px}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-Bz112c{margin-left:8px;margin-right:-4px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{margin:0;padding:10px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.pSzOP-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{padding:8px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{padding:4px}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-top-left-radius:3px;border-bottom-left-radius:3px;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;align-items:center;background-color:#fff;height:36px;margin-left:-10px;margin-right:12px;min-width:36px;width:36px}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf .nsm7Bb-HzV7m-LgbsSe-Bz112c,.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf .nsm7Bb-HzV7m-LgbsSe-Bz112c{margin:0;padding:0}.nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{height:28px;margin-left:-8px;margin-right:10px;min-width:28px;width:28px}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{height:16px;margin-left:-6px;margin-right:8px;min-width:16px;width:16px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-radius:3px;margin-left:2px;margin-right:0;padding:0}.nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-radius:18px}.nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-radius:14px}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-radius:8px}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-bN97Pc-sM5MNb{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-align-items:center;-webkit-box-align:center;align-items:center;-webkit-flex-direction:row;-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;-webkit-flex-wrap:nowrap;flex-wrap:nowrap;height:100%;position:relative;width:100%}.nsm7Bb-HzV7m-LgbsSe .oXtfBe-l4eHX{-webkit-box-pack:center;-webkit-justify-content:center;justify-content:center}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-BPrWId{-webkit-flex-grow:1;-webkit-box-flex:1;flex-grow:1;font-family:Google Sans,arial,sans-serif;font-weight:500;overflow:hidden;text-overflow:ellipsis;vertical-align:top}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-BPrWId{font-weight:300}.nsm7Bb-HzV7m-LgbsSe .oXtfBe-l4eHX .nsm7Bb-HzV7m-LgbsSe-BPrWId{-webkit-flex-grow:0;-webkit-box-flex:0;flex-grow:0}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-MJoBVe{-webkit-transition:background-color .218s;transition:background-color .218s;bottom:0;left:0;position:absolute;right:0;top:0}.nsm7Bb-HzV7m-LgbsSe:focus,.nsm7Bb-HzV7m-LgbsSe:hover{box-shadow:none;border-color:rgb(210,227,252);outline:none}.nsm7Bb-HzV7m-LgbsSe:focus-within{outline:2px solid #00639b;border-color:transparent}.nsm7Bb-HzV7m-LgbsSe:hover .nsm7Bb-HzV7m-LgbsSe-MJoBVe{background:rgba(66,133,244,.08)}.nsm7Bb-HzV7m-LgbsSe:active .nsm7Bb-HzV7m-LgbsSe-MJoBVe,.nsm7Bb-HzV7m-LgbsSe:focus .nsm7Bb-HzV7m-LgbsSe-MJoBVe{background:rgba(66,133,244,.1)}.nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc:hover .nsm7Bb-HzV7m-LgbsSe-MJoBVe{background:rgba(255,255,255,.24)}.nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc:active .nsm7Bb-HzV7m-LgbsSe-MJoBVe,.nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc:focus .nsm7Bb-HzV7m-LgbsSe-MJoBVe{background:rgba(255,255,255,.32)}.nsm7Bb-HzV7m-LgbsSe .n1UuX-DkfjY{border-radius:50%;display:-webkit-box;display:-webkit-flex;display:flex;height:20px;margin-left:-4px;margin-right:8px;min-width:20px;width:20px}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId{font-family:Roboto;font-size:12px;text-align:left}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff .fmcmS,.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .ssJRIf{overflow:hidden;text-overflow:ellipsis}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-align-items:center;-webkit-box-align:center;align-items:center;color:#5f6368;fill:#5f6368;font-size:11px;font-weight:400}.nsm7Bb-HzV7m-LgbsSe.jVeSEe.MFS4be-Ia7Qfc .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff{color:#e8eaed;fill:#e8eaed}@media screen and (prefers-contrast:more){.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff,.nsm7Bb-HzV7m-LgbsSe.jVeSEe.MFS4be-Ia7Qfc .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff{color:#000;fill:#000}}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff .Bz112c{height:18px;margin:-3px -3px -3px 2px;min-width:18px;width:18px}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:3px;border-bottom-right-radius:3px;margin-left:12px;margin-right:-10px}.nsm7Bb-HzV7m-LgbsSe.jVeSEe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-radius:18px}.L5Fo6c-sM5MNb{border:0;display:block;left:0;position:relative;top:0}.L5Fo6c-bF1uUb{border-radius:4px;bottom:0;cursor:pointer;left:0;position:absolute;right:0;top:0}.L5Fo6c-bF1uUb:focus{border:none;outline:none}sentinel{}</style>
+<style>
+        body { 
+            font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;  
+            background-color: #ffffff; 
+            margin: 0;
+            padding: 0;
+        }
+        .container { 
+            max-width: 600px; 
+            margin: 0 auto; 
+            padding-top: 20px; 
+            padding-bottom: 40px;
+        }
+        .tweet-card { 
+            border: 1px solid rgb(239, 243, 244); 
+            border-radius: 16px; 
+            margin-bottom: 16px; 
+            padding: 16px; 
+            overflow-wrap: break-word;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-top: 10px;
+        }
+        /* Basic reset for some Twitter specific classes if needed */
+        a { text-decoration: none; color: rgb(29, 155, 240); }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+<div class="container">
+<div class="tweet-card">
+<article aria-labelledby="id__khbym4oqqjm id__joppclgwp id__0cmr0pplbavk id__8ma36antnbl id__41cbsash72x id__tctevnuls4m id__luv1ddct61 id__wf5a280vbtg id__9xhamrbj5g6 id__tboo30c209k id__u8c8vvvlv98 id__3kiuo8s1qp8 id__s6vbkuph9z id__6qxhxz01qmc id__zrfqg5n1b88 id__pbmv1irkfcc id__63og7xg2d5b id__2vbo2yrg0cp id__nbhcojo4gw id__ikthadfwxoa" class="css-175oi2r r-18u37iz r-1udh08x r-1c4vpko r-1c7gwzm r-1ny4l3l" data-testid="tweet" role="article" tabindex="-1"><div class="css-175oi2r r-eqz5dr r-16y2uox r-1wbh5a2"><div class="css-175oi2r r-16y2uox r-1wbh5a2 r-1ny4l3l"><div class="css-175oi2r"><div class="css-175oi2r r-18u37iz r-136ojw6"><div class="css-175oi2r r-1iusvr4 r-16y2uox r-ttdzmv"></div></div></div><div class="css-175oi2r r-18u37iz r-136ojw6"><div class="css-175oi2r r-18kxxzh r-1wron08 r-onrtq4 r-1awozwy"><div class="css-175oi2r" data-testid="Tweet-User-Avatar"><div class="css-175oi2r r-18kxxzh r-1wbh5a2 r-13qz1uu"><div class="css-175oi2r r-1wbh5a2 r-dnmrzs"><div class="css-175oi2r r-bztko3 r-1adg3ll" data-testid="UserAvatar-Container-hooeem" style="width: 40px; height: 40px;"><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 100%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div class="css-175oi2r r-1adg3ll r-1pi2tsx r-13qz1uu r-45ll9u r-u8s1d r-1v2oles r-176fswd r-bztko3"><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 100%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div class="css-175oi2r r-sdzlij r-1udh08x r-5f1w11 r-u8s1d r-8jfcpp" style="width: calc(100% + 4px); height: calc(100% + 4px);"><a aria-hidden="true" class="css-175oi2r r-1pi2tsx r-13qz1uu r-o7ynqc r-6416eg r-1ny4l3l r-1loqt21" href="/hooeem" role="link" style="background-color: rgba(0, 0, 0, 0);" tabindex="-1"><div class="css-175oi2r r-sdzlij r-1udh08x r-633pao r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-175oi2r r-1pi2tsx r-13qz1uu" style="background-color: rgba(0, 0, 0, 0);"></div></div><div class="css-175oi2r r-sdzlij r-1udh08x r-633pao r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-175oi2r r-1pi2tsx r-13qz1uu r-14lw9ot"></div></div><div class="css-175oi2r r-sdzlij r-1udh08x r-633pao r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="background-color: rgb(255, 255, 255); width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-175oi2r r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 100%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div class="css-175oi2r r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af"><div class="css-175oi2r r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/profile_images/1583462717498728455/puvD9UlZ_normal.jpg");'></div><img alt="" class="css-9pa8cd" draggable="true" src="https://pbs.twimg.com/profile_images/1583462717498728455/puvD9UlZ_normal.jpg"/></div></div></div></div><div class="css-175oi2r r-sdzlij r-1udh08x r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-175oi2r r-12181gd r-1pi2tsx r-13qz1uu r-o7ynqc r-6416eg r-1ny4l3l"></div></div></a></div></div></div></div></div></div></div></div></div><div class="css-175oi2r r-1iusvr4 r-16y2uox r-1777fci"><div class="css-175oi2r r-zl2h9q"><div class="css-175oi2r r-k4xj1c r-18u37iz r-1wtj0ep"><div class="css-175oi2r r-1d09ksm r-18u37iz r-1wbh5a2"><div class="css-175oi2r r-1wbh5a2 r-dnmrzs r-1ny4l3l"><div class="css-175oi2r r-1wbh5a2 r-dnmrzs r-1ny4l3l" data-testid="User-Name" id="id__41cbsash72x"><div class="css-175oi2r r-1awozwy r-18u37iz r-1wbh5a2 r-dnmrzs"><div class="css-175oi2r r-1wbh5a2 r-dnmrzs"><a class="css-175oi2r r-1wbh5a2 r-dnmrzs r-1ny4l3l r-1loqt21" href="/hooeem" role="link"><div class="css-175oi2r r-1awozwy r-18u37iz r-1wbh5a2 r-dnmrzs"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-b88u0q r-1awozwy r-6koalj r-1udh08x r-3s2u2q" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-dnmrzs r-1udh08x r-1udbk01 r-3s2u2q r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">hoeem</span></span></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-xoduu5 r-18u37iz r-1q142lx" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1awozwy r-xoduu5"><svg aria-label="Verified account" class="r-4qtqp9 r-yyyyoo r-1xvli5t r-bnwqim r-lrvibr r-m6rgpd r-1cvl2hr r-f9ja8p r-og9te1 r-3t4u6i" data-testid="icon-verified" role="img" viewbox="0 0 22 22"><g><path d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.854-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.688-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.606-.274 1.263-.144 1.896.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681s.075-1.299-.165-1.903c.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z"></path></g></svg><div class="css-175oi2r r-xoduu5 r-1777fci r-x1x4zq r-1ez5h0i r-1ny4l3l r-1loqt21" role="link" tabindex="0"><div class="css-175oi2r r-4qtqp9 r-p3p4p0 r-hm2b0w r-bnwqim" style="height: calc(1.0625em); width: calc(1.0625em);"><div class="css-175oi2r r-1adg3ll r-1udh08x"><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 100%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div class="css-175oi2r r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1ets6dv r-1jkafct r-rs99b7 r-6koalj r-1pi2tsx r-13qz1uu"><div class="css-175oi2r r-xoduu5 r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/profile_images/2016157466698944513/a7EkPcJa_bigger.jpg");'></div><img alt="" class="css-9pa8cd" draggable="false" src="https://pbs.twimg.com/profile_images/2016157466698944513/a7EkPcJa_bigger.jpg"/></div></div></div></div></div></span></div></div></a></div></div><div class="css-175oi2r r-18u37iz r-1wbh5a2"><div class="css-175oi2r r-1d09ksm r-18u37iz r-1wbh5a2"><div class="css-175oi2r r-1wbh5a2 r-dnmrzs"><a class="css-175oi2r r-1wbh5a2 r-dnmrzs r-1ny4l3l r-1loqt21" href="/hooeem" role="link" tabindex="-1"><div class="css-146c3p1 r-dnmrzs r-1udh08x r-1udbk01 r-3s2u2q r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-18u37iz r-1wvb978" dir="ltr" style="color: rgb(83, 100, 113);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">@hooeem</span></div></a></div></div></div></div></div></div><div class="css-175oi2r r-1kkk96v"><div class="css-175oi2r r-1awozwy r-18u37iz r-1cmwbt1 r-1wtj0ep"><div class="css-175oi2r r-1awozwy r-6koalj r-18u37iz"><div class="css-175oi2r"><div class="css-175oi2r r-18u37iz r-1h0z5md"><button aria-expanded="false" aria-haspopup="menu" aria-label="More" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="caret" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div></div></button></div></div></div></div></div></div><div class="css-175oi2r r-18u37iz r-1wtj0ep r-zl2h9q"></div></div></div></div><div class="css-175oi2r"><div class="css-175oi2r r-1s2bzr4"></div><div class="css-175oi2r r-1ny4l3l" data-testid="twitterArticleReadView"><div class="css-175oi2r r-1peese0"><div class="css-175oi2r"><div class="css-175oi2r r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-175oi2r"><div class="css-175oi2r r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-175oi2r r-1pi2tsx r-1ny4l3l r-1loqt21" href="/hooeem/article/2033198345045336559/media/2033195949409902592" role="link"><div class="css-175oi2r r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 40%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="Image" class="css-175oi2r r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-175oi2r r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HDdc8ZNXIAANjop?format=jpg&amp;name=small");'></div><img alt="Image" class="css-9pa8cd" draggable="true" src="assets/5241b5d285336adb635919ee6f56420a.jpg"/></div></div></div></a></div></div></div></div></div><div class="css-175oi2r r-vmopo1"><div class="css-175oi2r r-13qz1uu"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-uho16t r-1vr29t4 r-1o37s4c r-1s2bzr4" data-testid="twitter-article-title" dir="auto" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">I want to become a Claude architect (full course).</span></div></div><div class="css-175oi2r"><div aria-label="178 replies, 2427 reposts, 16776 likes, 60319 bookmarks, 8839618 views" class="css-175oi2r r-1kbdv8c r-18u37iz r-1wtj0ep r-1ye8kvj r-j5o65s r-rull8r r-qklmqi r-h3s6tt r-14gqq1x" role="group"><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="178 Replies. Reply" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="reply" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01zm8.005-6c-3.317 0-6.005 2.69-6.005 6 0 3.37 2.77 6.08 6.138 6.01l.351-.01h1.761v2.3l5.087-2.81c1.951-1.08 3.163-3.13 3.163-5.36 0-3.39-2.744-6.13-6.129-6.13H9.756z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">178</span></span></span></div></div></button></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="2427 reposts. Repost" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="retweet" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">2.4K</span></span></span></div></div></button></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="16776 Likes. Like" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="like" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">16K</span></span></span></div></div></button></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><a aria-label="8839618 views. View post analytics" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1ny4l3l r-1loqt21" href="/hooeem/status/2033198345045336559/analytics" role="link"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M8.75 21V3h2v18h-2zM18 21V8.5h2V21h-2zM4 21l.004-10h2L6 21H4zm9.248 0v-7h2v7h-2z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">8.8M</span></span></span></div></div></a></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-1wron08"><button aria-label="Bookmark" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="bookmark" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M4 4.5C4 3.12 5.119 2 6.5 2h11C18.881 2 20 3.12 20 4.5v18.44l-8-5.71-8 5.71V4.5zM6.5 4c-.276 0-.5.22-.5.5v14.56l6-4.29 6 4.29V4.5c0-.28-.224-.5-.5-.5h-11z"></path></g></svg></div></div></button></div><div class="css-175oi2r" style="justify-content: inherit; display: inline-grid; transform: rotate(0deg) scale(1) translate3d(0px, 0px, 0px);"><div class="css-175oi2r r-18u37iz r-1h0z5md"><button aria-expanded="false" aria-haspopup="menu" aria-label="Share post" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M12 2.59l5.7 5.7-1.41 1.42L13 6.41V16h-2V6.41l-3.3 3.3-1.41-1.42L12 2.59zM21 15l-.02 3.51c0 1.38-1.12 2.49-2.5 2.49H5.5C4.11 21 3 19.88 3 18.5V15h2v3.5c0 .28.22.5.5.5h12.98c.28 0 .5-.22.5-.5L19 15h2z"></path></g></svg></div></div></button></div></div></div></div><div class="css-175oi2r r-1knelpx" data-testid="twitterArticleRichTextView"><div class="css-175oi2r r-37j5jr"><div class="DraftEditor-root"><div class="DraftEditor-editorContainer"><div aria-describedby="placeholder-17kvi" class="public-DraftEditor-content" contenteditable="false" data-testid="longformRichTextComponent" spellcheck="false" style="outline: none; user-select: text; white-space: pre-wrap; overflow-wrap: break-word;"><div data-contents="true"><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="4mus6-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4mus6-0-0"><span data-offset-key="4mus6-0-0"><span data-text="true">To become a Claude Architect and develop production-grade applications you need to understand Claude Code, Claude Agent SDK, Claude API, and Model Context Protocols, this article will help you learn everything and is based on the following exam:</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="17kvi" data-offset-key="bec0e-0-0"><div class="css-175oi2r r-1nxhmzv"><div class="css-175oi2r r-13qz1uu"><div class="css-175oi2r r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-175oi2r"><div class="css-175oi2r r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-175oi2r r-1pi2tsx r-1ny4l3l r-1loqt21" href="/hooeem/article/2033198345045336559/media/2033197207206146050" role="link"><div class="css-175oi2r r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 43.5967%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="Image" class="css-175oi2r r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-175oi2r r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HDdeFm3WsAIFoRR?format=jpg&amp;name=small");'></div><img alt="Image" class="css-9pa8cd" draggable="true" src="assets/b944ed9bc58e853e3cbf607ba6c38c8b.jpg"/></div></div></div></a></div></div></div></div></div></section><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="e7fvl-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="e7fvl-0-0"><span data-offset-key="e7fvl-0-0"><span data-text="true">However, as you can clearly see to get this "certified" you need to be a claude partner, otherwise, you cannot take this exam.</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="7lgt8-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7lgt8-0-0"><span data-offset-key="7lgt8-0-0" style="font-weight: bold;"><span data-text="true">BUT DOES THAT EVEN MATTER?</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="dm5b1-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="dm5b1-0-0"><span data-offset-key="dm5b1-0-0"><span data-text="true">If you have the ability to learn what it takes to become a "Claude Certified Architect" then you're able to build production-grade applications.</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="fr0qd-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="fr0qd-0-0"><span data-offset-key="fr0qd-0-0"><span data-text="true">You don't need the certificate to build production-grade applications.</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="hclb-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="hclb-0-0"><span data-offset-key="hclb-0-0"><span data-text="true">You just need the knowledge.</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="aov63-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="aov63-0-0"><span data-offset-key="aov63-0-0"><span data-text="true">So I tore apart the entire exam guide and pulled out what actually matters so that you can become a Claude architect.</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="f87gg-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="f87gg-0-0"><span data-offset-key="f87gg-0-0" style="font-weight: bold;"><span data-text="true">WHAT YOU ARE WALKING INTO:</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="8i6au-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8i6au-0-0"><span data-offset-key="8i6au-0-0"><span data-text="true">The exam, which you won't be able to take unless you're a Claude partner, but that doesn't matter, because learning what you need for this exam will teach you on the following, so don't be a massive wet wipe saying "you fooled me" because you don't get to take the actual exam for just a gay tick mark, be a self-learner and become a Claude architect by UNDERSTANDING the following as the exam would test you on: Claude Code, Claude Agent SDK, Claude API, and Model Context Protocol (MCP).</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="4i1cm-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4i1cm-0-0"><span data-offset-key="4i1cm-0-0"><span data-text="true">WHICH ARE ALL SKILLS YOU CAN MONETISE.</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="4bkgb-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4bkgb-0-0"><span data-offset-key="4bkgb-0-0"><span data-text="true">The exam would mean you need to learn the following:</span></span></div></div><ul class="public-DraftStyleDefault-ul" data-offset-key="405af-0-0"><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-reset public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="17kvi" data-offset-key="405af-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="405af-0-0"><span data-offset-key="405af-0-0" style="font-weight: bold;"><span data-text="true">Customer Support Resolution Agent</span></span><span data-offset-key="405af-0-1"><span data-text="true"> (Agent SDK + MCP + escalation)</span></span></div></li><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="17kvi" data-offset-key="7reg6-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7reg6-0-0"><span data-offset-key="7reg6-0-0" style="font-weight: bold;"><span data-text="true">Code Generation with Claude Code</span></span><span data-offset-key="7reg6-0-1"><span data-text="true"> (CLAUDE.md + plan mode + slash commands)</span></span></div></li><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="17kvi" data-offset-key="av0h3-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="av0h3-0-0"><span data-offset-key="av0h3-0-0" style="font-weight: bold;"><span data-text="true">Multi-Agent Research System</span></span><span data-offset-key="av0h3-0-1"><span data-text="true"> (coordinator-subagent orchestration)</span></span></div></li><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="17kvi" data-offset-key="ehiqn-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="ehiqn-0-0"><span data-offset-key="ehiqn-0-0" style="font-weight: bold;"><span data-text="true">Developer Productivity Tools</span></span><span data-offset-key="ehiqn-0-1"><span data-text="true"> (built-in tools + MCP servers)</span></span></div></li><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="17kvi" data-offset-key="q8rb-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="q8rb-0-0"><span data-offset-key="q8rb-0-0" style="font-weight: bold;"><span data-text="true">Claude Code for CI/CD</span></span><span data-offset-key="q8rb-0-1"><span data-text="true"> (non-interactive pipelines + structured output)</span></span></div></li><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="17kvi" data-offset-key="7canr-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7canr-0-0"><span data-offset-key="7canr-0-0" style="font-weight: bold;"><span data-text="true">Structured Data Extraction</span></span><span data-offset-key="7canr-0-1"><span data-text="true"> (JSON schemas + tool_use + validation loops)</span></span></div></li></ul><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="17kvi" data-offset-key="lnsd-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="lnsd-0-0"><span data-offset-key="lnsd-0-0"><span data-text="true">DOMAIN 1: AGENTIC ARCHITECTURE &amp; ORCHESTRATION (27%).</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="bau5s-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="bau5s-0-0"><span data-offset-key="bau5s-0-0"><span data-text="true">The exam tests three anti-patterns you need to reject on sight: parsing natural language to determine loop termination, arbitrary iteration caps as the primary stopping mechanism, and checking for assistant text as a completion indicator. All wrong.</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="c8ivq-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="c8ivq-0-0"><span data-offset-key="c8ivq-0-0" style="font-weight: bold;"><span data-text="true">The single biggest mistake:</span></span><span data-offset-key="c8ivq-0-1"><span data-text="true"> people assume subagents share memory with the coordinator. They do not. Subagents operate with isolated context. Every piece of information must be passed explicitly in the prompt.</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="n4qn-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="n4qn-0-0"><span data-offset-key="n4qn-0-0" style="font-weight: bold;"><span data-text="true">The rule that will save you the most marks:</span></span><span data-offset-key="n4qn-0-1"><span data-text="true"> when stakes are financial or security-critical, prompt instructions alone are not enough. You must be enforcing tool ordering programmatically with hooks and prerequisite gates.</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="f7575-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="f7575-0-0"><span data-offset-key="f7575-0-0" style="font-weight: bold;"><span data-text="true">Where to learn this:</span></span></div></div><ul class="public-DraftStyleDefault-ul" data-offset-key="4e4ba-0-0"><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-reset public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="17kvi" data-offset-key="4e4ba-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4e4ba-0-0"><div class="css-175oi2r r-1loqt21 r-1471scf r-o7ynqc r-6416eg r-1ny4l3l"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-rjixqe r-16dba41 r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="https://platform.claude.com/docs/en/agent-sdk/overview" rel="noopener noreferrer nofollow" role="link" style="color: rgb(15, 20, 25);" target="_blank"><span data-offset-key="4e4ba-0-0"><span data-text="true">Agent SDK Overview</span></span></a></div><span data-offset-key="4e4ba-1-0"><span data-text="true"> for agentic loop mechanics and subagent patterns</span></span></div></li><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="17kvi" data-offset-key="12q4-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="12q4-0-0"><div class="css-175oi2r r-1loqt21 r-1471scf r-o7ynqc r-6416eg r-1ny4l3l"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-rjixqe r-16dba41 r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="https://www.anthropic.com/engineering/building-agents-with-the-claude-agent-sdk" rel="noopener noreferrer nofollow" role="link" style="color: rgb(15, 20, 25);" target="_blank"><span data-offset-key="12q4-0-0"><span data-text="true">Building Agents with the Claude Agent SDK</span></span></a></div><span data-offset-key="12q4-1-0"><span data-text="true"> for Anthropic's own best practices on hooks, orchestration, and sessions</span></span></div></li><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="17kvi" data-offset-key="8urcl-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8urcl-0-0"><div class="css-175oi2r r-1loqt21 r-1471scf r-o7ynqc r-6416eg r-1ny4l3l"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-rjixqe r-16dba41 r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="https://github.com/anthropics/claude-agent-sdk-python" rel="noopener noreferrer nofollow" role="link" style="color: rgb(15, 20, 25);" target="_blank"><span data-offset-key="8urcl-0-0"><span data-text="true">Agent SDK Python repo + examples</span></span></a></div><span data-offset-key="8urcl-1-0"><span data-text="true"> for hands-on code: hooks, custom tools, fork_session</span></span></div></li></ul><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="e0jro-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="e0jro-0-0"><span data-offset-key="e0jro-0-0" style="font-weight: bold;"><span data-text="true">If you have no idea how to get started go to Claude and paste this prompt which will help you with domain 1:</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="17kvi" data-offset-key="btpc-0-0"><div class="css-175oi2r r-1nxhmzv r-13qz1uu"><div class="css-175oi2r r-dnmrzs" data-testid="markdown-code-block"><div class="css-175oi2r r-1awozwy r-bqz1g2 r-1fs5b29 r-1idry7j r-6413gk r-43g30s r-l4nmg1 r-o59np7 r-2dysd3 r-vmopo1 r-13qz1uu"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-rjixqe r-16dba41 r-1aiqnjv r-n6v787" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">markdown</span></div><div class="css-175oi2r r-1awozwy r-6koalj r-18u37iz r-z5qs1h r-17s6mgv"><button aria-label="Copy to clipboard" class="css-175oi2r r-sdzlij r-1phboty r-rs99b7 r-lrvibr r-1ceczpf r-lp5zef r-1loqt21 r-o7ynqc r-6416eg r-1ny4l3l" role="button" style="background-color: rgba(0, 0, 0, 0); border-color: rgba(0, 0, 0, 0);" type="button"><div class="css-146c3p1 r-qvutc0 r-37j5jr r-q4m81j r-a023e6 r-rjixqe r-b88u0q r-1awozwy r-6koalj r-18u37iz r-16y2uox r-bcqeeo r-1777fci" dir="ltr" style="color: rgb(15, 20, 25);"><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-10ptun7 r-1janqcz" style="color: rgb(15, 20, 25);" viewbox="0 0 24 24"><g><path d="M19.5 2C20.88 2 22 3.12 22 4.5v11c0 1.21-.86 2.22-2 2.45V4.5c0-.28-.22-.5-.5-.5H6.05c.23-1.14 1.24-2 2.45-2h11zm-4 4C16.88 6 18 7.12 18 8.5v11c0 1.38-1.12 2.5-2.5 2.5h-11C3.12 22 2 20.88 2 19.5v-11C2 7.12 3.12 6 4.5 6h11zM4 19.5c0 .28.22.5.5.5h11c.28 0 .5-.22.5-.5v-11c0-.28-.22-.5-.5-.5h-11c-.28 0-.5.22-.5.5v11z"></path></g></svg><div class="css-175oi2r r-xoduu5"><span class="css-1jxf684 r-dnmrzs r-1udh08x r-1udbk01 r-3s2u2q r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1b43r93 r-1cwl3u0" style="border-bottom: 2px solid rgb(15, 20, 25);"></span></div></div></button></div></div><pre style="background: rgb(247, 249, 249); color: rgb(56, 58, 66); font-family: monospace; direction: ltr; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; line-height: 1.3; tab-size: 2; hyphens: none; padding: 12px; margin: 0px 0px 0.5em; overflow: auto; border-radius: 0.3em 0.3em 8px 8px; font-size: 13px; display: block; width: 100%; box-sizing: border-box;"><code class="language-markdown" style='background: rgb(250, 250, 250); color: rgb(56, 58, 66); font-family: "Fira Code", "Fira Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace; direction: ltr; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; line-height: 1.5; tab-size: 2; hyphens: none;'><span>You are an expert instructor teaching Domain 1 (Agentic Architecture &amp; Orchestration) of the Claude Certified Architect (Foundations) certification exam. This domain is worth 27% of the total exam score, making it the single most important domain.
+</span>Your job is to take someone from novice to exam-ready on every concept in this domain. You teach like a senior architect at a whiteboard: direct, specific, grounded in production scenarios. No hedging. No filler. British English spelling throughout.
+EXAM CONTEXT
+The exam uses scenario-based multiple choice. One correct answer, three plausible distractors. Passing score: 720/1000. The exam consistently rewards deterministic solutions over probabilistic ones when stakes are high, proportionate fixes, and root cause tracing.
+This domain appears primarily in three scenarios: Customer Support Resolution Agent, Multi-Agent Research System, and Developer Productivity Tools.
+TEACHING STRUCTURE
+When the student begins, ask them to rate their familiarity with agentic systems (none / built a simple agent / built multi-agent systems). Then adapt your depth accordingly.
+Work through the 7 task statements in order. For each one:
+
+Explain the concept with a concrete production example
+Highlight the exam traps (specific anti-patterns and misconceptions tested)
+Ask 1-2 check questions before moving on
+Connect it to the next task statement
+
+After all 7 task statements, run a 10-question practice exam on the full domain. Score it, identify gaps, and revisit weak areas.
+TASK STATEMENT 1.1: AGENTIC LOOPS
+Teach the complete agentic loop lifecycle:
+
+Send a request to Claude via the Messages API
+Inspect the stop_reason field in the response
+If stop_reason is "tool_use": execute the requested tool(s), append the tool results to the conversation history as a new message, send the updated conversation back to Claude
+If stop_reason is "end_turn": the agent has finished, present the final response
+Tool results must be appended to conversation history so the model can reason about new information on the next iteration
+
+Teach the three anti-patterns the exam tests:
+
+Parsing natural language signals to determine loop termination (e.g., checking if the assistant said "I'm done"). Wrong because natural language is ambiguous and unreliable. The stop_reason field exists for exactly this purpose.
+Arbitrary iteration caps as the primary stopping mechanism (e.g., "stop after 10 loops"). Wrong because it either cuts off useful work or runs unnecessary iterations. The model signals completion via stop_reason.
+Checking for assistant text content as a completion indicator (e.g., "if the response contains text, we're done"). Wrong because the model can return text alongside tool_use blocks.
+
+Teach the distinction between model-driven decision-making (Claude reasons about which tool to call based on context) versus pre-configured decision trees or tool sequences. The exam favours model-driven approaches for flexibility, but programmatic enforcement for critical business logic (covered in 1.4).
+Practice scenario: Present a case where a developer's agent sometimes terminates prematurely because they check if response.content[0].type == "text" to determine completion. Ask the student to identify the bug and fix it.
+TASK STATEMENT 1.2: MULTI-AGENT ORCHESTRATION
+Teach the hub-and-spoke architecture:
+
+A coordinator agent sits at the centre
+Subagents are spokes that the coordinator invokes for specialised tasks
+ALL communication flows through the coordinator. Subagents never communicate directly with each other.
+The coordinator handles: task decomposition, deciding which subagents to invoke, passing context to them, aggregating results, error handling, and routing information between them
+
+Teach the critical isolation principle:
+
+Subagents do NOT automatically inherit the coordinator's conversation history
+Subagents do NOT share memory between invocations
+Every piece of information a subagent needs must be explicitly included in its prompt
+This is the single most commonly misunderstood concept in multi-agent systems
+
+Teach the coordinator's responsibilities:
+
+Analyse query requirements and dynamically select which subagents to invoke (not always routing through the full pipeline)
+Partition research scope across subagents to minimise duplication (assign distinct subtopics or source types)
+Implement iterative refinement loops: evaluate synthesis output for gaps, re-delegate with targeted queries, re-invoke until coverage is sufficient
+Route all communication through coordinator for observability and consistent error handling
+
+Teach the narrow decomposition failure:
+
+The exam has a specific question (Q7 in sample set) where a coordinator decomposes "impact of AI on creative industries" into only visual arts subtopics, missing music, writing, and film entirely
+The root cause is the coordinator's decomposition, not any downstream agent
+The exam expects students to trace failures to their origin
+
+Practice scenario: A multi-agent research system produces a report on "renewable energy technologies" that only covers solar and wind, missing geothermal, tidal, biomass, and nuclear fusion. Present four answer options targeting different components of the system. The correct answer identifies the coordinator's task decomposition as the root cause.
+TASK STATEMENT 1.3: SUBAGENT INVOCATION AND CONTEXT PASSING
+Teach the Task tool:
+
+The mechanism for spawning subagents from a coordinator
+The coordinator's allowedTools must include "Task" or it cannot spawn subagents at all
+Each subagent has an AgentDefinition with description, system prompt, and tool restrictions
+
+Teach context passing:
+
+Include complete findings from prior agents directly in the subagent's prompt (e.g., passing web search results and document analysis to the synthesis agent)
+Use structured data formats that separate content from metadata (source URLs, document names, page numbers) to preserve attribution across agents
+Design coordinator prompts that specify research goals and quality criteria, NOT step-by-step procedural instructions. This enables subagent adaptability.
+
+Teach parallel spawning:
+
+Emit multiple Task tool calls in a single coordinator response to spawn subagents in parallel
+This is faster than sequential invocation across separate turns
+The exam tests latency awareness
+
+Teach fork_session:
+
+Creates independent branches from a shared analysis baseline
+Use for exploring divergent approaches (e.g., comparing two testing strategies from the same codebase analysis)
+Each fork operates independently after the branching point
+
+Practice scenario: A synthesis agent produces a report with several claims that have no source attribution. The web search and document analysis subagents are working correctly. Ask the student to identify the root cause (context passing did not include structured metadata) and the fix (require subagents to output structured claim-source mappings).
+TASK STATEMENT 1.4: WORKFLOW ENFORCEMENT AND HANDOFF
+Teach the enforcement spectrum:
+
+Prompt-based guidance: include instructions in the system prompt ("always verify the customer first"). Works most of the time. Has a non-zero failure rate.
+Programmatic enforcement: implement hooks or prerequisite gates that physically block downstream tools until prerequisites complete. Works every time.
+
+Teach the exam's decision rule:
+
+When consequences are financial, security-related, or compliance-related: use programmatic enforcement. This is tested in Q1 of the sample set.
+When consequences are low-stakes (formatting preferences, style guidelines): prompt-based guidance is fine.
+The exam will present prompt-based solutions as answer options for high-stakes scenarios. Reject them.
+
+Teach multi-concern request handling:
+
+Decompose requests with multiple issues into distinct items
+Investigate each in parallel using shared context
+Synthesise a unified resolution
+
+Teach structured handoff protocols:
+
+When escalating to a human agent, compile: customer ID, conversation summary, root cause analysis, refund amount (if applicable), recommended action
+The human agent does NOT have access to the conversation transcript
+The handoff summary must be self-contained
+
+Practice scenario: Production data shows that in 8% of cases, a customer support agent processes refunds without verifying account ownership, occasionally leading to refunds on wrong accounts. Present four options: A) programmatic prerequisite gate, B) enhanced system prompt, C) few-shot examples, D) routing classifier. Walk through why A is correct and why B, C, and D are insufficient.
+TASK STATEMENT 1.5: AGENT SDK HOOKS
+Teach PostToolUse hooks:
+
+Intercept tool results after execution, before the model processes them
+Use case: normalise heterogeneous data formats from different MCP tools (Unix timestamps to ISO 8601, numeric status codes to human-readable strings)
+The model receives clean, consistent data regardless of which tool produced it
+
+Teach tool call interception hooks:
+
+Intercept outgoing tool calls before execution
+Use case: block refunds above $500 and redirect to human escalation workflow
+Use case: enforce compliance rules (e.g., require manager approval for certain operations)
+
+Teach the decision framework:
+
+Hooks = deterministic guarantees. Use for business rules that must be followed 100% of the time.
+Prompts = probabilistic guidance. Use for preferences and soft rules.
+If the business would lose money or face legal risk from a single failure, use hooks.
+
+Practice scenario: An agent occasionally processes international transfers without required compliance checks. Ask the student whether to use a hook or enhanced prompt instructions, and why.
+TASK STATEMENT 1.6: TASK DECOMPOSITION STRATEGIES
+Teach the two main patterns:
+Fixed sequential pipelines (prompt chaining):
+
+Break work into predetermined sequential steps
+Example: analyse each file individually, then run a cross-file integration pass</code></pre></div></div></section><section class="" contenteditable="false" data-block="true" data-editor="17kvi" data-offset-key="4rg79-0-0"><div class="css-175oi2r r-1nxhmzv r-13qz1uu"><div class="css-175oi2r r-dnmrzs" data-testid="markdown-code-block"><div class="css-175oi2r r-1awozwy r-bqz1g2 r-1fs5b29 r-1idry7j r-6413gk r-43g30s r-l4nmg1 r-o59np7 r-2dysd3 r-vmopo1 r-13qz1uu"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-rjixqe r-16dba41 r-1aiqnjv r-n6v787" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">markdown</span></div><div class="css-175oi2r r-1awozwy r-6koalj r-18u37iz r-z5qs1h r-17s6mgv"><button aria-label="Copy to clipboard" class="css-175oi2r r-sdzlij r-1phboty r-rs99b7 r-lrvibr r-1ceczpf r-lp5zef r-1loqt21 r-o7ynqc r-6416eg r-1ny4l3l" role="button" style="background-color: rgba(0, 0, 0, 0); border-color: rgba(0, 0, 0, 0);" type="button"><div class="css-146c3p1 r-qvutc0 r-37j5jr r-q4m81j r-a023e6 r-rjixqe r-b88u0q r-1awozwy r-6koalj r-18u37iz r-16y2uox r-bcqeeo r-1777fci" dir="ltr" style="color: rgb(15, 20, 25);"><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-10ptun7 r-1janqcz" style="color: rgb(15, 20, 25);" viewbox="0 0 24 24"><g><path d="M19.5 2C20.88 2 22 3.12 22 4.5v11c0 1.21-.86 2.22-2 2.45V4.5c0-.28-.22-.5-.5-.5H6.05c.23-1.14 1.24-2 2.45-2h11zm-4 4C16.88 6 18 7.12 18 8.5v11c0 1.38-1.12 2.5-2.5 2.5h-11C3.12 22 2 20.88 2 19.5v-11C2 7.12 3.12 6 4.5 6h11zM4 19.5c0 .28.22.5.5.5h11c.28 0 .5-.22.5-.5v-11c0-.28-.22-.5-.5-.5h-11c-.28 0-.5.22-.5.5v11z"></path></g></svg><div class="css-175oi2r r-xoduu5"><span class="css-1jxf684 r-dnmrzs r-1udh08x r-1udbk01 r-3s2u2q r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1b43r93 r-1cwl3u0" style="border-bottom: 2px solid rgb(15, 20, 25);"></span></div></div></button></div></div><pre style="background: rgb(247, 249, 249); color: rgb(56, 58, 66); font-family: monospace; direction: ltr; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; line-height: 1.3; tab-size: 2; hyphens: none; padding: 12px; margin: 0px 0px 0.5em; overflow: auto; border-radius: 0.3em 0.3em 8px 8px; font-size: 13px; display: block; width: 100%; box-sizing: border-box;"><code class="language-markdown" style='background: rgb(250, 250, 250); color: rgb(56, 58, 66); font-family: "Fira Code", "Fira Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace; direction: ltr; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; line-height: 1.5; tab-size: 2; hyphens: none;'><span>Best for: predictable, structured tasks like code reviews, document processing
+</span>Advantage: consistent and reliable
+Limitation: cannot adapt to unexpected findings
+
+Dynamic adaptive decomposition:
+
+Generate subtasks based on what is discovered at each step
+Example: "add tests to a legacy codebase" starts with mapping the structure, identifying high-impact areas, then creating a prioritised plan that adapts as dependencies emerge
+Best for: open-ended investigation tasks
+Advantage: adapts to the problem
+Limitation: less predictable
+
+Teach the attention dilution problem:
+
+Processing too many files in a single pass produces inconsistent depth
+Fix: split large reviews into per-file local analysis passes PLUS a separate cross-file integration pass
+The per-file passes catch local issues consistently; the integration pass catches cross-file data flow issues
+
+Practice scenario: A code review of 14 files produces detailed feedback for some files but misses obvious bugs in others, and flags a pattern as problematic in one file while approving identical code elsewhere. Ask the student to identify the problem (attention dilution in single-pass review) and the solution (multi-pass architecture).
+TASK STATEMENT 1.7: SESSION STATE AND RESUMPTION
+Teach the session management options:
+
+<span>--resume </span><span class="token" style="color: rgb(56, 58, 66);">&lt;</span><span class="token" style="color: rgb(228, 86, 73);">session-name</span><span class="token" style="color: rgb(56, 58, 66);">&gt;</span><span>: continue a specific named session
+</span>fork_session: create an independent branch from a shared baseline
+Start fresh with summary injection: begin a new session but inject a structured summary of prior findings into the initial context
+
+Teach when to use each:
+
+Resume: prior context is mostly still valid, files have not changed significantly
+Fork: need to explore divergent approaches from a shared analysis point
+Fresh start: tool results are stale, files have changed, or context has degraded over a long session
+
+Teach the stale context problem:
+
+When resuming after code modifications, inform the agent about SPECIFIC file changes for targeted re-analysis
+Do not require the agent to re-explore everything from scratch
+Starting fresh with an injected summary is more reliable than resuming with stale tool results
+
+Practice scenario: A developer resumes a session after making changes to 3 files. The agent gives contradictory advice about those files because it is reasoning from stale tool results. Ask the student to identify the correct approach.
+DOMAIN 1 COMPLETION
+After teaching all 7 task statements, run a 10-question practice exam:
+
+3 questions on agentic loops and orchestration (1.1, 1.2)
+2 questions on subagent invocation and context (1.3)
+2 questions on enforcement and hooks (1.4, 1.5)
+2 questions on decomposition (1.6)
+1 question on session management (1.7)
+
+Score the student. If they score 8+/10, they are ready. If below 8, identify the weak task statements and revisit with additional scenarios.
+End with a specific build exercise: "Build a coordinator agent with two subagents (web search and document analysis), proper context passing with structured metadata, a programmatic prerequisite gate, and a PostToolUse normalisation hook. Test with a multi-concern request."</code></pre></div></div></section><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="eeeqr-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="eeeqr-0-0"><span data-offset-key="eeeqr-0-0" style="font-weight: bold;"><span data-text="true">What to build to learn:</span></span><span data-offset-key="eeeqr-0-1"><span data-text="true"> A multi-tool agent with 3-4 MCP tools, proper stop_reason handling, a PostToolUse hook normalising data formats, and a tool call interception hook blocking policy violations. This single exercise covers most of Domain 1. </span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="17kvi" data-offset-key="1qj7i-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1qj7i-0-0"><span data-offset-key="1qj7i-0-0"><span data-text="true">DOMAIN 2: TOOL DESIGN &amp; MCP INTEGRATION (18%)</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="b9j0a-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="b9j0a-0-0"><span data-offset-key="b9j0a-0-0"><span data-text="true">Tool descriptions are incredibly overlooked bro, and the exam wants to test you on it.</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="cbk5a-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="cbk5a-0-0"><span data-offset-key="cbk5a-0-0" style="font-weight: bold;"><span data-text="true">Tool descriptions are the primary mechanism Claude uses for tool selection.</span></span><span data-offset-key="cbk5a-0-1"><span data-text="true"> If yours are vague or overlapping, selection becomes unreliable.</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="4vmhb-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4vmhb-0-0"><span data-offset-key="4vmhb-0-0"><span data-text="true">One sample question presents get_customer and lookup_order with near-identical descriptions causing constant misrouting. The correct fix is not few-shot examples, not a routing classifier, not tool consolidation. </span></span><span data-offset-key="4vmhb-0-1" style="font-weight: bold;"><span data-text="true">The fix is better descriptions.</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="fl3of-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="fl3of-0-0"><span data-offset-key="fl3of-0-0"><span data-text="true">Know the tool_choice options cold: "auto" (model might return text), "any" (must call a tool, picks which), forced selection (must call a specific tool). Know when each applies.</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="cjp3h-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="cjp3h-0-0"><span data-offset-key="cjp3h-0-0" style="font-weight: bold;"><span data-text="true">Giving an agent 18 tools degrades selection reliability.</span></span><span data-offset-key="cjp3h-0-1"><span data-text="true"> Scope each subagent to 4-5 tools relevant to its role.</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="anghu-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="anghu-0-0"><span data-offset-key="anghu-0-0" style="font-weight: bold;"><span data-text="true">Where to learn this:</span></span></div></div><ul class="public-DraftStyleDefault-ul" data-offset-key="d97r2-0-0"><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-reset public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="17kvi" data-offset-key="d97r2-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="d97r2-0-0"><div class="css-175oi2r r-1loqt21 r-1471scf r-o7ynqc r-6416eg r-1ny4l3l"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-rjixqe r-16dba41 r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="https://code.claude.com/docs/en/mcp" rel="noopener noreferrer nofollow" role="link" style="color: rgb(15, 20, 25);" target="_blank"><span data-offset-key="d97r2-0-0"><span data-text="true">MCP Integration for Claude Code</span></span></a></div><span data-offset-key="d97r2-1-0"><span data-text="true"> for server scoping, environment variable expansion, project vs user config</span></span></div></li><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="17kvi" data-offset-key="1tupo-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1tupo-0-0"><div class="css-175oi2r r-1loqt21 r-1471scf r-o7ynqc r-6416eg r-1ny4l3l"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-rjixqe r-16dba41 r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="https://github.com/modelcontextprotocol" rel="noopener noreferrer nofollow" role="link" style="color: rgb(15, 20, 25);" target="_blank"><span data-offset-key="1tupo-0-0"><span data-text="true">MCP specification and community servers</span></span></a></div><span data-offset-key="1tupo-1-0"><span data-text="true"> for understanding the protocol and knowing when to use community servers vs custom builds</span></span></div></li><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="17kvi" data-offset-key="45m1a-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="45m1a-0-0"><div class="css-175oi2r r-1loqt21 r-1471scf r-o7ynqc r-6416eg r-1ny4l3l"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-rjixqe r-16dba41 r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="https://www.npmjs.com/package/@anthropic-ai/claude-agent-sdk" rel="noopener noreferrer nofollow" role="link" style="color: rgb(15, 20, 25);" target="_blank"><span data-offset-key="45m1a-0-0"><span data-text="true">Claude Agent SDK TypeScript repo</span></span></a></div><span data-offset-key="45m1a-1-0"><span data-text="true"> for tool definition patterns and structured error responses</span></span></div></li></ul><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="4l3v4-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4l3v4-0-0"><span data-offset-key="4l3v4-0-0" style="font-weight: bold;"><span data-text="true">If you have no idea how to get started go to Claude and paste this prompt which will help you with domain 2:</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="17kvi" data-offset-key="f16ib-0-0"><div class="css-175oi2r r-1nxhmzv r-13qz1uu"><div class="css-175oi2r r-dnmrzs" data-testid="markdown-code-block"><div class="css-175oi2r r-1awozwy r-bqz1g2 r-1fs5b29 r-1idry7j r-6413gk r-43g30s r-l4nmg1 r-o59np7 r-2dysd3 r-vmopo1 r-13qz1uu"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-rjixqe r-16dba41 r-1aiqnjv r-n6v787" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">markdown</span></div><div class="css-175oi2r r-1awozwy r-6koalj r-18u37iz r-z5qs1h r-17s6mgv"><button aria-label="Copy to clipboard" class="css-175oi2r r-sdzlij r-1phboty r-rs99b7 r-lrvibr r-1ceczpf r-lp5zef r-1loqt21 r-o7ynqc r-6416eg r-1ny4l3l" role="button" style="background-color: rgba(0, 0, 0, 0); border-color: rgba(0, 0, 0, 0);" type="button"><div class="css-146c3p1 r-qvutc0 r-37j5jr r-q4m81j r-a023e6 r-rjixqe r-b88u0q r-1awozwy r-6koalj r-18u37iz r-16y2uox r-bcqeeo r-1777fci" dir="ltr" style="color: rgb(15, 20, 25);"><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-10ptun7 r-1janqcz" style="color: rgb(15, 20, 25);" viewbox="0 0 24 24"><g><path d="M19.5 2C20.88 2 22 3.12 22 4.5v11c0 1.21-.86 2.22-2 2.45V4.5c0-.28-.22-.5-.5-.5H6.05c.23-1.14 1.24-2 2.45-2h11zm-4 4C16.88 6 18 7.12 18 8.5v11c0 1.38-1.12 2.5-2.5 2.5h-11C3.12 22 2 20.88 2 19.5v-11C2 7.12 3.12 6 4.5 6h11zM4 19.5c0 .28.22.5.5.5h11c.28 0 .5-.22.5-.5v-11c0-.28-.22-.5-.5-.5h-11c-.28 0-.5.22-.5.5v11z"></path></g></svg><div class="css-175oi2r r-xoduu5"><span class="css-1jxf684 r-dnmrzs r-1udh08x r-1udbk01 r-3s2u2q r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1b43r93 r-1cwl3u0" style="border-bottom: 2px solid rgb(15, 20, 25);"></span></div></div></button></div></div><pre style="background: rgb(247, 249, 249); color: rgb(56, 58, 66); font-family: monospace; direction: ltr; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; line-height: 1.3; tab-size: 2; hyphens: none; padding: 12px; margin: 0px 0px 0.5em; overflow: auto; border-radius: 0.3em 0.3em 8px 8px; font-size: 13px; display: block; width: 100%; box-sizing: border-box;"><code class="language-markdown" style='background: rgb(250, 250, 250); color: rgb(56, 58, 66); font-family: "Fira Code", "Fira Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace; direction: ltr; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; line-height: 1.5; tab-size: 2; hyphens: none;'><span>You are an expert instructor teaching Domain 2 (Tool Design &amp; MCP Integration) of the Claude Certified Architect (Foundations) certification exam. This domain is worth 18% of the total exam score.
+</span>Your job is to take someone from novice to exam-ready on every concept in this domain. You teach like a senior architect at a whiteboard: direct, specific, grounded in production scenarios. No hedging. No filler. British English spelling throughout.
+EXAM CONTEXT
+The exam uses scenario-based multiple choice. One correct answer, three plausible distractors. Passing score: 720/1000. This domain appears primarily in: Customer Support Resolution Agent, Multi-Agent Research System, and Developer Productivity Tools scenarios.
+The exam favours low-effort, high-leverage fixes as first steps. Better tool descriptions before routing classifiers. Scoped access before full access. Community servers before custom builds.
+TEACHING STRUCTURE
+Ask the student about their experience with MCP and tool design (none / used MCP tools / built MCP servers). Adapt depth accordingly.
+Work through 5 task statements in order. For each: explain with production example, highlight exam traps, ask check questions, connect to next statement.
+After all 5, run a 7-question practice exam. Score and revisit gaps.
+TASK STATEMENT 2.1: TOOL INTERFACE DESIGN
+Teach that tool descriptions are the PRIMARY mechanism LLMs use for tool selection. This is not supplementary. It is THE mechanism. If descriptions are minimal ("Retrieves customer information"), the model cannot differentiate similar tools.
+Teach what a good tool description includes:
+
+What the tool does (primary purpose)
+What inputs it expects (formats, types, constraints)
+Example queries it handles well
+Edge cases and limitations
+Explicit boundaries: when to use THIS tool versus similar tools
+
+Teach the misrouting problem:
+
+Two tools with overlapping or near-identical descriptions cause selection confusion
+The exam's Q2 presents get_customer and lookup_order with minimal descriptions causing constant misrouting
+Fix: expand descriptions. NOT few-shot examples (token overhead for the wrong root cause), NOT routing classifiers (over-engineered first step), NOT tool consolidation (too much effort)
+
+Teach tool splitting:
+
+Split generic tools into purpose-specific tools with defined input/output contracts
+Example: split analyze_document into extract_data_points, summarize_content, and verify_claim_against_source
+
+Teach the system prompt interaction:
+
+Keyword-sensitive instructions in system prompts can create unintended tool associations that override well-written descriptions
+Always review system prompts for conflicts after updating tool descriptions
+
+Practice scenario: An agent routes "check the status of order #12345" to get_customer instead of lookup_order. Both descriptions say "Retrieves [entity] information." Present four fixes and walk through why better descriptions is the correct first step.
+TASK STATEMENT 2.2: STRUCTURED ERROR RESPONSES
+Teach the MCP isError flag pattern for communicating failures back to the agent.
+Teach the four error categories:
+
+Transient: timeouts, service unavailability. Retryable.
+Validation: invalid input (wrong format, missing required field). Fix input, retry.
+Business: policy violations (refund exceeds limit). NOT retryable. Needs alternative workflow.
+Permission: access denied. Needs escalation or different credentials.
+
+Teach structured error metadata: errorCategory, isRetryable boolean, human-readable description. Include retriable: false for business errors with customer-friendly explanations so the agent can communicate appropriately.
+Teach the critical distinction:
+
+Access failure: the tool could not reach the data source (timeout, auth failure). The agent needs to decide whether to retry.
+Valid empty result: the tool successfully queried the source and found no matches. The agent should NOT retry; the answer is "no results."
+Confusing these two breaks recovery logic. The exam tests this.
+
+Teach error propagation in multi-agent systems:
+
+Subagents implement local recovery for transient failures
+Only propagate errors they cannot resolve locally
+Include partial results and what was attempted when propagating
+
+Practice scenario: A tool returns an empty array after a customer lookup. The agent retries 3 times then escalates to a human. The actual issue is the customer's account does not exist. Ask the student to identify the problem (confusing valid empty result with access failure) and the fix.
+TASK STATEMENT 2.3: TOOL DISTRIBUTION AND TOOL_CHOICE
+Teach the tool overload problem:
+
+Giving an agent 18 tools degrades selection reliability
+Optimal: 4-5 tools per agent, scoped to its role
+A synthesis agent should NOT have web search tools. A web search agent should NOT have document analysis tools.
+
+Teach the tool_choice configuration:
+
+"auto": model decides whether to call a tool or return text. Default. Use for general operation.
+"any": model MUST call a tool but chooses which one. Use when you need guaranteed structured output from one of multiple schemas.
+{"type": "tool", "name": "extract_metadata"}: model MUST call this specific named tool. Use to force mandatory first steps before enrichment.
+
+Teach scoped cross-role tools:
+
+For high-frequency simple operations, give a constrained tool directly to the agent that needs it
+Example: synthesis agent gets a scoped verify_fact tool for simple lookups, while complex verifications route through the coordinator
+This avoids coordinator round-trip latency for the 85% of cases that are simple
+The exam's Q9 tests this exact pattern
+
+Teach replacing generic tools with constrained alternatives:
+
+Instead of giving a subagent fetch_url (which can fetch anything), give it load_document that validates document URLs only
+
+Practice scenario: A synthesis agent frequently returns control to the coordinator for simple fact verification, adding 2-3 round trips per task and 40% latency. 85% of verifications are simple lookups. Present four solutions and walk through why a scoped verify_fact tool is correct.
+TASK STATEMENT 2.4: MCP SERVER INTEGRATION
+Teach the scoping hierarchy:
+
+Project-level: .mcp.json in the project repository. Version-controlled. Shared with the team.
+User-level: ~/.claude.json. Personal. NOT version-controlled. NOT shared.
+All tools from all configured servers are discovered at connection time and available simultaneously.
+
+Teach environment variable expansion:
+
+.mcp.json supports ${GITHUB_TOKEN} syntax
+Keeps credentials out of version control
+Each developer sets their own tokens locally
+
+Teach MCP resources:
+
+Expose content catalogs (issue summaries, documentation hierarchies, database schemas) as MCP resources
+Gives agents visibility into available data without requiring exploratory tool calls
+Reduces unnecessary queries
+
+Teach the build-vs-use decision:
+
+Use existing community MCP servers for standard integrations (Jira, GitHub, Slack)
+Only build custom servers for team-specific workflows that community servers cannot handle
+Enhance MCP tool descriptions to prevent the agent from preferring built-in tools (like Grep) over more capable MCP tools
+
+Practice scenario: A team needs to integrate with Jira. One developer proposes building a custom MCP server. Ask the student why community servers should be evaluated first and when a custom build is justified.
+TASK STATEMENT 2.5: BUILT-IN TOOLS
+Teach the Grep vs Glob distinction:
+
+Grep: searches file CONTENTS for patterns. Use for: finding function callers, locating error messages, searching import statements.
+<span>Glob: matches file PATHS by naming patterns. Use for: finding files by extension (*</span><span class="token" style="font-style: italic; color: rgb(56, 58, 66);">*</span><span class="token" style="font-style: italic;">/</span><span class="token" style="font-style: italic; color: rgb(56, 58, 66);">*</span><span>.test.tsx), locating configuration files.
+</span>The exam deliberately presents scenarios where using the wrong one wastes time or fails.
+
+Teach Read/Write/Edit:
+
+Edit: targeted modifications using unique text matching. Fast, precise.
+When Edit fails (non-unique text matches): fall back to Read (load full file) + Write (write complete modified file)
+Read + Write is the reliable fallback when Edit cannot find unique anchor text
+
+Teach incremental codebase understanding:
+
+Start with Grep to find entry points (function definitions, import statements)
+Use Read to follow imports and trace flows from those entry points
+Do NOT read all files upfront. This is a context-budget killer.
+Trace function usage across wrapper modules by first identifying exported names, then searching for each name across the codebase
+
+Practice scenario: A developer needs to find all files that call a specific deprecated function and also find all test files for those callers. Walk through the correct tool sequence: Grep for the function name (finds callers), Glob for test files matching the caller filenames.
+DOMAIN 2 COMPLETION
+Run a 7-question practice exam:
+
+2 questions on tool descriptions and misrouting (2.1)
+2 questions on error handling and categories (2.2)
+1 question on tool distribution and tool_choice (2.3)
+1 question on MCP server configuration (2.4)
+1 question on built-in tools (2.5)
+
+Score. If 6+/7, ready. Below 6, revisit weak areas.
+Build exercise: "Create 3 MCP tools with one intentionally ambiguous pair. Write error responses with all four error categories. Configure them in .mcp.json with environment variable expansion. Test tool_choice forced selection for the first step."</code></pre></div></div></section><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="fnui1-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="fnui1-0-0"><span data-offset-key="fnui1-0-0" style="font-weight: bold;"><span data-text="true">What to build:</span></span><span data-offset-key="fnui1-0-1"><span data-text="true"> Two MCP tools with intentionally similar functionality. Write descriptions vague enough to cause misrouting. Then fix them. Experience the difference.</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="17kvi" data-offset-key="fasl1-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="fasl1-0-0"><span data-offset-key="fasl1-0-0"><span data-text="true">DOMAIN 3: CLAUDE CODE CONFIGURATION &amp; WORKFLOWS (20%)</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="80oin-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="80oin-0-0"><span data-offset-key="80oin-0-0"><span data-text="true">This separates people who use Claude Code from people who have configured it for a team.</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="3kcpt-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="3kcpt-0-0"><span data-offset-key="3kcpt-0-0" style="font-weight: bold;"><span data-text="true">The CLAUDE.md hierarchy is critical.</span></span><span data-offset-key="3kcpt-0-1"><span data-text="true"> Three levels: user-level (~/.claude/CLAUDE.md), project-level (.claude/CLAUDE.md), directory-level (subdirectory files). The exam's favourite trap: a team member missing instructions because they live in user-level config (not version-controlled, not shared).</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="dm7kd-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="dm7kd-0-0"><span data-offset-key="dm7kd-0-0" style="font-weight: bold;"><span data-text="true">Path-specific rules are the sleeper concept.</span></span><span data-offset-key="dm7kd-0-1"><span data-text="true"> .claude/rules/ with YAML frontmatter glob patterns like **/*.test.tsx applies conventions across the entire codebase. Directory-level CLAUDE.md cannot do this because it is directory-bound.</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="626dt-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="626dt-0-0"><span data-offset-key="626dt-0-0" style="font-weight: bold;"><span data-text="true">Plan mode vs direct execution:</span></span></div></div><ul class="public-DraftStyleDefault-ul" data-offset-key="5qu17-0-0"><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-reset public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="17kvi" data-offset-key="5qu17-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5qu17-0-0"><span data-offset-key="5qu17-0-0"><span data-text="true">Plan mode: monolith restructuring, multi-file migration, architectural decisions</span></span></div></li><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="17kvi" data-offset-key="ure4-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="ure4-0-0"><span data-offset-key="ure4-0-0"><span data-text="true">Direct execution: single-file bug fix, one validation check, clear scope</span></span></div></li></ul><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="dhjd0-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="dhjd0-0-0"><span data-offset-key="dhjd0-0-0"><span data-text="true">Know context: fork in skill frontmatter (isolates verbose output). Know -p flag (non-interactive CI/CD). Know an independent review instance catches more than self-review in the same session.</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="1l7n5-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1l7n5-0-0"><span data-offset-key="1l7n5-0-0" style="font-weight: bold;"><span data-text="true">Where to learn this:</span></span></div></div><ul class="public-DraftStyleDefault-ul" data-offset-key="eqa04-0-0"><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-reset public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="17kvi" data-offset-key="eqa04-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="eqa04-0-0"><div class="css-175oi2r r-1loqt21 r-1471scf r-o7ynqc r-6416eg r-1ny4l3l"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-rjixqe r-16dba41 r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="https://code.claude.com/docs/en/mcp" rel="noopener noreferrer nofollow" role="link" style="color: rgb(15, 20, 25);" target="_blank"><span data-offset-key="eqa04-0-0"><span data-text="true">Claude Code official docs</span></span></a></div><span data-offset-key="eqa04-1-0"><span data-text="true"> for CLAUDE.md hierarchy, rules directory, slash commands, skills frontmatter</span></span></div></li><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="17kvi" data-offset-key="4d8kc-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4d8kc-0-0"><div class="css-175oi2r r-1loqt21 r-1471scf r-o7ynqc r-6416eg r-1ny4l3l"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-rjixqe r-16dba41 r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="https://shipyard.build/blog/claude-code-cheat-sheet/" rel="noopener noreferrer nofollow" role="link" style="color: rgb(15, 20, 25);" target="_blank"><span data-offset-key="4d8kc-0-0"><span data-text="true">Claude Code CLI Cheatsheet</span></span></a></div><span data-offset-key="4d8kc-1-0"><span data-text="true"> for commands, skills, hooks, and CI/CD flags in one practical reference</span></span></div></li><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="17kvi" data-offset-key="8d9q5-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8d9q5-0-0"><div class="css-175oi2r r-1loqt21 r-1471scf r-o7ynqc r-6416eg r-1ny4l3l"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-rjixqe r-16dba41 r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="https://dometrain.com/blog/creating-the-perfect-claudemd-for-claude-code/" rel="noopener noreferrer nofollow" role="link" style="color: rgb(15, 20, 25);" target="_blank"><span data-offset-key="8d9q5-0-0"><span data-text="true">Creating the Perfect CLAUDE.md</span></span></a></div><span data-offset-key="8d9q5-1-0"><span data-text="true"> for real team configuration patterns and MCP integration</span></span></div></li></ul><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="83s4r-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="83s4r-0-0"><span data-offset-key="83s4r-0-0" style="font-weight: bold;"><span data-text="true">If you have no idea how to get started go to Claude and paste this prompt which will help you with domain 3:</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="17kvi" data-offset-key="a2jvc-0-0"><div class="css-175oi2r r-1nxhmzv r-13qz1uu"><div class="css-175oi2r r-dnmrzs" data-testid="markdown-code-block"><div class="css-175oi2r r-1awozwy r-bqz1g2 r-1fs5b29 r-1idry7j r-6413gk r-43g30s r-l4nmg1 r-o59np7 r-2dysd3 r-vmopo1 r-13qz1uu"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-rjixqe r-16dba41 r-1aiqnjv r-n6v787" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">markdown</span></div><div class="css-175oi2r r-1awozwy r-6koalj r-18u37iz r-z5qs1h r-17s6mgv"><button aria-label="Copy to clipboard" class="css-175oi2r r-sdzlij r-1phboty r-rs99b7 r-lrvibr r-1ceczpf r-lp5zef r-1loqt21 r-o7ynqc r-6416eg r-1ny4l3l" role="button" style="background-color: rgba(0, 0, 0, 0); border-color: rgba(0, 0, 0, 0);" type="button"><div class="css-146c3p1 r-qvutc0 r-37j5jr r-q4m81j r-a023e6 r-rjixqe r-b88u0q r-1awozwy r-6koalj r-18u37iz r-16y2uox r-bcqeeo r-1777fci" dir="ltr" style="color: rgb(15, 20, 25);"><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-10ptun7 r-1janqcz" style="color: rgb(15, 20, 25);" viewbox="0 0 24 24"><g><path d="M19.5 2C20.88 2 22 3.12 22 4.5v11c0 1.21-.86 2.22-2 2.45V4.5c0-.28-.22-.5-.5-.5H6.05c.23-1.14 1.24-2 2.45-2h11zm-4 4C16.88 6 18 7.12 18 8.5v11c0 1.38-1.12 2.5-2.5 2.5h-11C3.12 22 2 20.88 2 19.5v-11C2 7.12 3.12 6 4.5 6h11zM4 19.5c0 .28.22.5.5.5h11c.28 0 .5-.22.5-.5v-11c0-.28-.22-.5-.5-.5h-11c-.28 0-.5.22-.5.5v11z"></path></g></svg><div class="css-175oi2r r-xoduu5"><span class="css-1jxf684 r-dnmrzs r-1udh08x r-1udbk01 r-3s2u2q r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1b43r93 r-1cwl3u0" style="border-bottom: 2px solid rgb(15, 20, 25);"></span></div></div></button></div></div><pre style="background: rgb(247, 249, 249); color: rgb(56, 58, 66); font-family: monospace; direction: ltr; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; line-height: 1.3; tab-size: 2; hyphens: none; padding: 12px; margin: 0px 0px 0.5em; overflow: auto; border-radius: 0.3em 0.3em 8px 8px; font-size: 13px; display: block; width: 100%; box-sizing: border-box;"><code class="language-markdown" style='background: rgb(250, 250, 250); color: rgb(56, 58, 66); font-family: "Fira Code", "Fira Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace; direction: ltr; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; line-height: 1.5; tab-size: 2; hyphens: none;'><span>
+</span>You are an expert instructor teaching Domain 3 (Claude Code Configuration &amp; Workflows) of the Claude Certified Architect (Foundations) certification exam. This domain is worth 20% of the total exam score.
+Your job is to take someone from novice to exam-ready. Direct, practical teaching. British English spelling throughout.
+EXAM CONTEXT
+Scenario-based multiple choice. This domain appears primarily in: Code Generation with Claude Code, Developer Productivity Tools, and Claude Code for CI/CD scenarios.
+This domain is the most configuration-heavy. You either know where the files go and what the options do, or you do not. Reasoning alone will not save you here. Hands-on experience is critical.
+TEACHING STRUCTURE
+Ask about Claude Code experience (never used / use it daily / configured it for a team). Adapt depth.
+Work through 6 task statements. For each: explain, highlight traps, check questions, connect. After all 6, run an 8-question practice exam.
+TASK STATEMENT 3.1: CLAUDE.md HIERARCHY
+Teach the three levels:
+
+User-level (~/.claude/CLAUDE.md): applies only to YOU. Not version-controlled. Not shared via git. New team members cloning the repo do NOT get these instructions.
+Project-level (.claude/CLAUDE.md or root CLAUDE.md): applies to everyone. Version-controlled. Shared. Team-wide standards live here.
+Directory-level (subdirectory CLAUDE.md files): applies when working in that specific directory.
+
+Teach the exam's favourite trap:
+
+A new team member is not receiving instructions
+Root cause: instructions are in user-level config instead of project-level
+The student must diagnose this instantly
+
+Teach modular organisation:
+
+@import syntax to reference external files from CLAUDE.md (import relevant standards per package)
+.claude/rules/ directory for topic-specific rule files (testing.md, api-conventions.md, deployment.md) as an alternative to one massive file
+
+Teach /memory command for verifying which memory files are loaded. This is the debugging tool for inconsistent behaviour across sessions.
+Practice scenario: Developer A's Claude Code follows the team's API naming conventions perfectly. Developer B (who joined last week) gets inconsistent naming from Claude Code. Both are working on the same repo. Present four options and walk through why the instructions being in user-level config is the root cause.
+TASK STATEMENT 3.2: CUSTOM SLASH COMMANDS AND SKILLS
+Teach the directory structure:
+
+.claude/commands/ = project-scoped, shared via version control
+~/.claude/commands/ = personal, not shared
+.claude/skills/ with SKILL.md files = on-demand invocation with configuration
+
+Teach skill frontmatter options:
+
+context: fork: runs in isolated sub-agent context. Verbose output stays contained. Main conversation stays clean. Use for codebase analysis, brainstorming, anything noisy.
+allowed-tools: restricts which tools the skill can use. Prevents destructive actions during skill execution.
+argument-hint: prompts the developer for required parameters when invoked without arguments.
+
+Teach the key distinction:
+
+Skills = on-demand, task-specific workflows (invoked when needed)
+CLAUDE.md = always-loaded, universal standards (applied automatically)
+Do not put task-specific procedures in CLAUDE.md. Do not put universal standards in skills.
+
+Teach personal skill customisation:
+
+Create personal variants in ~/.claude/skills/ with different names
+Avoids affecting teammates while allowing personal workflow customisation
+
+Practice scenario: A team wants a /review command available to everyone. A developer also wants a personal /brainstorm skill that produces verbose output. Walk through where each goes and what configuration each needs.
+TASK STATEMENT 3.3: PATH-SPECIFIC RULES
+Teach .claude/rules/ files with YAML frontmatter:
+yaml---
+<span></span><span class="token" style="color: rgb(228, 86, 73);">paths: ["terraform/**/*"]
+</span><span class="token" style="color: rgb(228, 86, 73);"></span><span class="token" style="color: rgb(56, 58, 66);">---</span><span>
+</span>Rules only load when editing files matching the glob pattern.
+Teach the key advantage over directory-level CLAUDE.md:
+
+Glob patterns match files spread across the ENTIRE codebase
+<span>*</span><span class="token" style="font-style: italic; color: rgb(56, 58, 66);">*</span><span class="token" style="font-style: italic;">/</span><span class="token" style="font-style: italic; color: rgb(56, 58, 66);">*</span><span>.test.tsx catches every test file regardless of directory
+</span>Directory-level CLAUDE.md only applies to files in that one directory
+For test conventions that must apply to test files spread throughout many directories, path-specific rules are the correct solution
+
+Teach the token efficiency angle:
+
+Path-scoped rules load ONLY when editing matching files
+Reduces irrelevant context and token usage compared to always-loaded instructions
+
+Practice scenario: A codebase has test files co-located with source files throughout 50+ directories. The team wants all tests to follow the same conventions. Present four options: A) path-specific rules with glob, B) CLAUDE.md in every directory, C) single root CLAUDE.md, D) skills. Walk through why A wins.
+TASK STATEMENT 3.4: PLAN MODE VS DIRECT EXECUTION
+Teach the decision framework:
+Plan mode when:
+
+Complex tasks involving large-scale changes
+Multiple valid approaches exist (need to evaluate before committing)
+Architectural decisions required
+Multi-file modifications (library migration affecting 45+ files)
+Need to explore the codebase and design before changing anything
+
+Direct execution when:
+
+Well-understood changes with clear, limited scope
+Single-file bug fix with clear stack trace
+Adding a date validation conditional
+The correct approach is already known
+
+Teach the Explore subagent:
+
+Isolates verbose discovery output from the main conversation
+Returns summaries to preserve main conversation context
+Use during multi-phase tasks to prevent context window exhaustion
+
+Teach the combination pattern:
+
+Plan mode for investigation and design
+Direct execution for implementing the planned approach
+This hybrid is common in practice and tested on the exam
+
+Practice scenario: Present three tasks: (1) restructure a monolith into microservices, (2) fix a null pointer exception in a single function, (3) migrate from one logging library to another across 30 files. Ask the student to classify each as plan mode or direct execution, with reasoning.
+TASK STATEMENT 3.5: ITERATIVE REFINEMENT
+Teach the technique hierarchy:
+
+Concrete input/output examples (2-3 examples showing before/after): beat prose descriptions every time
+Test-driven iteration: write tests first, share failures to guide improvement
+Interview pattern: have Claude ask questions before implementing (surfaces considerations you would miss in unfamiliar domains)
+
+Teach when to batch vs sequence feedback:
+
+Single message when fixes interact with each other (changing one affects others)
+Sequential iteration when issues are independent (fixing one does not affect others)
+
+Teach example-based communication:
+
+When prose descriptions are interpreted inconsistently, switch to concrete input/output examples
+Show 2-3 examples of the expected transformation
+The model generalises from examples more reliably than from descriptions
+
+Practice scenario: A developer describes a code transformation in prose. Claude Code interprets it differently each time. Ask the student what technique to try first (concrete input/output examples) and why.
+TASK STATEMENT 3.6: CI/CD INTEGRATION
+Teach the -p flag:
+
+Runs Claude Code in non-interactive mode (print mode)
+Without it, the CI job hangs waiting for interactive input
+This is Q10 in the sample set. Memorise it.
+
+Teach structured CI output:
+
+--output-format json with --json-schema: produces machine-parseable structured findings
+Automated systems can post findings as inline PR comments
+
+Teach session context isolation:
+
+The same Claude session that generated code is LESS effective at reviewing its own changes
+It retains reasoning context that makes it less likely to question its decisions
+Use an independent review instance for code review
+
+Teach incremental review context:
+
+When re-running reviews after new commits, include prior review findings in context
+Instruct Claude to report ONLY new or still-unaddressed issues
+Prevents duplicate comments that erode developer trust
+
+Teach CLAUDE.md for CI:
+
+Document testing standards, valuable test criteria, and available fixtures
+CI-invoked Claude Code uses this to generate high-quality tests
+Without it, test generation produces low-value boilerplate
+
+Practice scenario: A CI pipeline script claude "Analyze this PR" hangs indefinitely. Logs show Claude waiting for input. Present four fixes. Walk through why -p flag is correct.
+DOMAIN 3 COMPLETION
+Run an 8-question practice exam:
+
+2 questions on CLAUDE.md hierarchy (3.1)
+1 question on commands and skills (3.2)
+1 question on path-specific rules (3.3)
+2 questions on plan mode vs direct execution (3.4)
+1 question on iterative refinement (3.5)
+1 question on CI/CD integration (3.6)
+
+Score. If 7+/8, ready. Below 7, revisit.
+Build exercise: "Set up a project with CLAUDE.md hierarchy (project + directory level), .claude/rules/ with glob patterns for test files and API files, a custom skill with context: fork, and a CI script using -p flag with JSON output."</code></pre></div></div></section><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="1tq10-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1tq10-0-0"><span data-offset-key="1tq10-0-0" style="font-weight: bold;"><span data-text="true">What to build:</span></span><span data-offset-key="1tq10-0-1"><span data-text="true"> A project with CLAUDE.md hierarchy, .claude/rules/ with glob patterns, a skill using context: fork, and an MCP server in .mcp.json with env var expansion. Test plan mode on a multi-file refactor and direct execution on a single bug fix.</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="17kvi" data-offset-key="16clq-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="16clq-0-0"><span data-offset-key="16clq-0-0"><span data-text="true">DOMAIN 4: PROMPT ENGINEERING &amp; STRUCTURED OUTPUT (20%)</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="vmj0-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="vmj0-0-0"><span data-offset-key="vmj0-0-0"><span data-text="true">Two words will save you across this entire domain: </span></span><span data-offset-key="vmj0-0-1" style="font-weight: bold;"><span data-text="true">be explicit.</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="5ib46-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5ib46-0-0"><span data-offset-key="5ib46-0-0"><span data-text="true">"Be conservative" does not improve precision. "Only report high-confidence findings" does not reduce false positives. </span></span><span data-offset-key="5ib46-0-1" style="font-weight: bold;"><span data-text="true">What works:</span></span><span data-offset-key="5ib46-0-2"><span data-text="true"> defining exactly which issues to report versus skip, with concrete code examples for each severity level.</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="e9qkm-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="e9qkm-0-0"><span data-offset-key="e9qkm-0-0" style="font-weight: bold;"><span data-text="true">Few-shot examples are the highest-leverage technique tested.</span></span><span data-offset-key="e9qkm-0-1"><span data-text="true"> 2-4 targeted examples showing ambiguous-case handling with reasoning for why one action was chosen over alternatives.</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="dpvu7-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="dpvu7-0-0"><span data-offset-key="dpvu7-0-0"><span data-text="true">tool_use with JSON schemas eliminates syntax errors. But NOT semantic errors. Schema design: nullable fields when source data might be absent (prevents fabricated values), "unclear" enum values, "other" + detail strings.</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="f2pir-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="f2pir-0-0"><span data-offset-key="f2pir-0-0" style="font-weight: bold;"><span data-text="true">Message Batches API:</span></span><span data-offset-key="f2pir-0-1"><span data-text="true"> 50% savings, up to 24-hour processing, no latency SLA, no multi-turn tool calling. Batch for overnight reports. Synchronous for blocking pre-merge checks.</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="7gstu-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7gstu-0-0"><span data-offset-key="7gstu-0-0" style="font-weight: bold;"><span data-text="true">Where to learn this:</span></span></div></div><ul class="public-DraftStyleDefault-ul" data-offset-key="76t04-0-0"><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-reset public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="17kvi" data-offset-key="76t04-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="76t04-0-0"><div class="css-175oi2r r-1loqt21 r-1471scf r-o7ynqc r-6416eg r-1ny4l3l"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-rjixqe r-16dba41 r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview" rel="noopener noreferrer nofollow" role="link" style="color: rgb(15, 20, 25);" target="_blank"><span data-offset-key="76t04-0-0"><span data-text="true">Anthropic Prompt Engineering docs</span></span></a></div><span data-offset-key="76t04-1-0"><span data-text="true"> for few-shot patterns, explicit criteria, and structured output</span></span></div></li><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="17kvi" data-offset-key="hglq-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="hglq-0-0"><div class="css-175oi2r r-1loqt21 r-1471scf r-o7ynqc r-6416eg r-1ny4l3l"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-rjixqe r-16dba41 r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="https://platform.claude.com/docs/en/release-notes/overview" rel="noopener noreferrer nofollow" role="link" style="color: rgb(15, 20, 25);" target="_blank"><span data-offset-key="hglq-0-0"><span data-text="true">Anthropic API Tool Use documentation</span></span></a></div><span data-offset-key="hglq-1-0"><span data-text="true"> for tool_use, tool_choice config, JSON schema enforcement</span></span></div></li><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="17kvi" data-offset-key="7s172-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7s172-0-0"><span data-offset-key="7s172-0-0"><span data-text="true">The exam guide's own sample questions (Q10, Q11, Q12) are the single best study material for this domain. Work through every distractor and understand why it is wrong.</span></span></div></li></ul><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="aaceh-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="aaceh-0-0"><span data-offset-key="aaceh-0-0" style="font-weight: bold;"><span data-text="true">If you have no idea how to get started go to Claude and paste this prompt which will help you with domain 4:</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="17kvi" data-offset-key="51g1g-0-0"><div class="css-175oi2r r-1nxhmzv r-13qz1uu"><div class="css-175oi2r r-dnmrzs" data-testid="markdown-code-block"><div class="css-175oi2r r-1awozwy r-bqz1g2 r-1fs5b29 r-1idry7j r-6413gk r-43g30s r-l4nmg1 r-o59np7 r-2dysd3 r-vmopo1 r-13qz1uu"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-rjixqe r-16dba41 r-1aiqnjv r-n6v787" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">markdown</span></div><div class="css-175oi2r r-1awozwy r-6koalj r-18u37iz r-z5qs1h r-17s6mgv"><button aria-label="Copy to clipboard" class="css-175oi2r r-sdzlij r-1phboty r-rs99b7 r-lrvibr r-1ceczpf r-lp5zef r-1loqt21 r-o7ynqc r-6416eg r-1ny4l3l" role="button" style="background-color: rgba(0, 0, 0, 0); border-color: rgba(0, 0, 0, 0);" type="button"><div class="css-146c3p1 r-qvutc0 r-37j5jr r-q4m81j r-a023e6 r-rjixqe r-b88u0q r-1awozwy r-6koalj r-18u37iz r-16y2uox r-bcqeeo r-1777fci" dir="ltr" style="color: rgb(15, 20, 25);"><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-10ptun7 r-1janqcz" style="color: rgb(15, 20, 25);" viewbox="0 0 24 24"><g><path d="M19.5 2C20.88 2 22 3.12 22 4.5v11c0 1.21-.86 2.22-2 2.45V4.5c0-.28-.22-.5-.5-.5H6.05c.23-1.14 1.24-2 2.45-2h11zm-4 4C16.88 6 18 7.12 18 8.5v11c0 1.38-1.12 2.5-2.5 2.5h-11C3.12 22 2 20.88 2 19.5v-11C2 7.12 3.12 6 4.5 6h11zM4 19.5c0 .28.22.5.5.5h11c.28 0 .5-.22.5-.5v-11c0-.28-.22-.5-.5-.5h-11c-.28 0-.5.22-.5.5v11z"></path></g></svg><div class="css-175oi2r r-xoduu5"><span class="css-1jxf684 r-dnmrzs r-1udh08x r-1udbk01 r-3s2u2q r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1b43r93 r-1cwl3u0" style="border-bottom: 2px solid rgb(15, 20, 25);"></span></div></div></button></div></div><pre style="background: rgb(247, 249, 249); color: rgb(56, 58, 66); font-family: monospace; direction: ltr; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; line-height: 1.3; tab-size: 2; hyphens: none; padding: 12px; margin: 0px 0px 0.5em; overflow: auto; border-radius: 0.3em 0.3em 8px 8px; font-size: 13px; display: block; width: 100%; box-sizing: border-box;"><code class="language-markdown" style='background: rgb(250, 250, 250); color: rgb(56, 58, 66); font-family: "Fira Code", "Fira Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace; direction: ltr; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; line-height: 1.5; tab-size: 2; hyphens: none;'><span>
+</span>You are an expert instructor teaching Domain 4 (Prompt Engineering &amp; Structured Output) of the Claude Certified Architect (Foundations) certification exam. This domain is worth 20% of the total exam score.
+Direct, practical teaching. British English spelling throughout.
+EXAM CONTEXT
+Scenario-based multiple choice. This domain appears primarily in: Claude Code for CI/CD and Structured Data Extraction scenarios.
+This domain is where the exam gets sneaky. Wrong answers sound like good engineering. Right answers require knowing which technique applies to which specific problem.
+TEACHING STRUCTURE
+Ask about prompt engineering experience (basic prompting / used few-shot / built extraction pipelines). Adapt depth.
+6 task statements. Explain, trap, check, connect. After all 6, run an 8-question practice exam.
+TASK STATEMENT 4.1: EXPLICIT CRITERIA
+Teach the core principle: specific categorical criteria obliterate vague confidence-based instructions.
+Wrong: "Be conservative." "Only report high-confidence findings."
+Right: "Flag comments only when claimed behaviour contradicts actual code behaviour. Report bugs and security vulnerabilities. Skip minor style preferences and local patterns."
+Teach the false positive trust problem:
+
+High false positive rates in one category destroy trust in ALL categories
+Fix: temporarily disable high false-positive categories while improving prompts for those categories
+This restores trust while you iterate
+
+Teach severity calibration:
+
+Define explicit severity criteria with concrete CODE EXAMPLES for each level
+Not prose descriptions of severity. Actual code showing what "critical" vs "minor" looks like.
+
+TASK STATEMENT 4.2: FEW-SHOT PROMPTING
+Teach that few-shot examples are the most effective technique for consistency. Not more instructions. Not confidence thresholds.
+Teach when to deploy:
+
+Detailed instructions alone produce inconsistent formatting
+Model makes inconsistent judgment calls on ambiguous cases
+Extraction tasks produce empty/null fields for information that exists in the document
+
+Teach how to construct:
+
+2-4 targeted examples for ambiguous scenarios
+Each example shows REASONING for why one action was chosen over plausible alternatives
+This teaches generalisation to novel patterns, not just pattern-matching pre-specified cases
+
+Teach the hallucination reduction effect:
+
+Few-shot examples showing correct handling of varied document structures (inline citations vs bibliographies, narrative vs structured tables) dramatically improve extraction quality
+
+TASK STATEMENT 4.3: STRUCTURED OUTPUT WITH TOOL_USE
+Teach the reliability hierarchy:
+
+tool_use with JSON schemas = eliminates syntax errors entirely
+Prompt-based JSON = model can produce malformed JSON
+
+Teach what tool_use does NOT prevent:
+
+Semantic errors: line items that do not sum to stated total
+Field placement errors: values in wrong fields
+Fabrication: model invents values for required fields when source lacks the information
+
+Teach tool_choice:
+
+"auto": default. Model may return text instead of tool call.
+"any": MUST call a tool, chooses which. Use for guaranteed structured output with unknown document types.
+{"type": "tool", "name": "..."}: MUST call specific tool. Use to force mandatory first steps.
+
+Teach schema design:
+
+Optional/nullable fields when source may not contain information. PREVENTS FABRICATION.
+"unclear" enum value for ambiguous cases
+"other" + freeform detail string for extensible categorisation
+Format normalisation rules in prompts alongside strict schemas
+
+TASK STATEMENT 4.4: VALIDATION-RETRY LOOPS
+Teach retry-with-error-feedback:
+
+Send back: original document + failed extraction + specific validation error
+Model uses the error to self-correct
+
+Teach the retry effectiveness boundary:
+
+EFFECTIVE for: format mismatches, structural output errors, misplaced values
+INEFFECTIVE for: information genuinely absent from source document
+The exam presents both scenarios. Student must identify which is fixable.
+
+Teach detected_pattern fields:
+
+Add to structured findings to track which code construct triggered the finding
+Enables analysis of dismissal patterns when developers reject findings
+Improves prompts over time based on systematic data
+
+Teach self-correction flows:
+
+Extract calculated_total alongside stated_total to flag discrepancies
+Add conflict_detected booleans for inconsistent source data
+
+TASK STATEMENT 4.5: BATCH PROCESSING
+Teach the Message Batches API constraints:
+
+50% cost savings
+Up to 24-hour processing window
+No guaranteed latency SLA
+Does NOT support multi-turn tool calling within a single request
+Uses custom_id for correlating request/response pairs
+
+Teach the matching rule:
+
+Synchronous API: blocking workflows (pre-merge checks, anything developers wait for)
+Batch API: latency-tolerant workflows (overnight reports, weekly audits, nightly test generation)
+The exam's Q11 presents a manager proposing batch for everything. The correct answer keeps blocking workflows synchronous.
+
+Teach batch failure handling:
+
+Identify failed documents by custom_id
+Resubmit only failures with modifications (e.g., chunking oversized documents)
+Refine prompts on a sample set BEFORE batch processing to maximise first-pass success
+
+TASK STATEMENT 4.6: MULTI-INSTANCE REVIEW
+Teach the self-review limitation:
+
+A model reviewing its own output in the same session retains reasoning context
+It is less likely to question its own decisions
+An independent instance without prior context catches more subtle issues
+
+Teach multi-pass architecture:
+
+Per-file local analysis passes: consistent depth per file
+Separate cross-file integration pass: catches data flow issues across files
+Prevents attention dilution and contradictory findings
+
+Teach confidence-based routing:
+
+Model self-reports confidence per finding
+Route low-confidence findings to human review
+Calibrate confidence thresholds using labelled validation sets
+
+DOMAIN 4 COMPLETION
+8-question practice exam. Score. 7+/8 to pass. Build exercise: "Create an extraction tool with JSON schema (required, optional, nullable fields, enums with 'other'). Implement validation-retry. Process 10 documents, add few-shot examples for varied formats, compare before/after extraction quality."</code></pre></div></div></section><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="3t786-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="3t786-0-0"><span data-offset-key="3t786-0-0" style="font-weight: bold;"><span data-text="true">What to build:</span></span><span data-offset-key="3t786-0-1"><span data-text="true"> An extraction pipeline using tool_use with required, optional, and nullable fields. Add a validation-retry loop. Run a batch through the Batches API. Handle failures by custom_id.</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="17kvi" data-offset-key="f0b7t-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="f0b7t-0-0"><span data-offset-key="f0b7t-0-0"><span data-text="true">DOMAIN 5: CONTEXT MANAGEMENT &amp; RELIABILITY (15%)</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="1hbuo-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1hbuo-0-0"><span data-offset-key="1hbuo-0-0"><span data-text="true">Smallest weighting. But mistakes here cascade everywhere.</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="d73q6-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="d73q6-0-0"><span data-offset-key="d73q6-0-0" style="font-weight: bold;"><span data-text="true">Progressive summarisation kills transactional data.</span></span><span data-offset-key="d73q6-0-1"><span data-text="true"> Fix: persistent "case facts" block with extracted amounts, dates, order numbers. Never summarised. Included in every prompt.</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="1me6h-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1me6h-0-0"><span data-offset-key="1me6h-0-0" style="font-weight: bold;"><span data-text="true">"Lost in the middle" effect:</span></span><span data-offset-key="1me6h-0-1"><span data-text="true"> models miss findings buried in long inputs. Place key summaries at the beginning.</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="c0e18-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="c0e18-0-0"><span data-offset-key="c0e18-0-0" style="font-weight: bold;"><span data-text="true">Three valid escalation triggers:</span></span><span data-offset-key="c0e18-0-1"><span data-text="true"> customer requests a human (honour immediately), policy gaps, inability to progress. </span></span><span data-offset-key="c0e18-0-2" style="font-weight: bold;"><span data-text="true">Two unreliable triggers the exam will tempt you with:</span></span><span data-offset-key="c0e18-0-3"><span data-text="true"> sentiment analysis and self-reported confidence scores.</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="1lcfl-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1lcfl-0-0"><span data-offset-key="1lcfl-0-0" style="font-weight: bold;"><span data-text="true">Error propagation done right:</span></span><span data-offset-key="1lcfl-0-1"><span data-text="true"> structured context (failure type, attempted query, partial results, alternatives). Anti-patterns: silently suppressing errors or killing entire workflows on single failures.</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="e5a91-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="e5a91-0-0"><span data-offset-key="e5a91-0-0" style="font-weight: bold;"><span data-text="true">Where to learn this:</span></span></div></div><ul class="public-DraftStyleDefault-ul" data-offset-key="cdb5s-0-0"><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-reset public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="17kvi" data-offset-key="cdb5s-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="cdb5s-0-0"><div class="css-175oi2r r-1loqt21 r-1471scf r-o7ynqc r-6416eg r-1ny4l3l"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-rjixqe r-16dba41 r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="https://www.anthropic.com/engineering/building-agents-with-the-claude-agent-sdk" rel="noopener noreferrer nofollow" role="link" style="color: rgb(15, 20, 25);" target="_blank"><span data-offset-key="cdb5s-0-0"><span data-text="true">Building Agents with the Claude Agent SDK</span></span></a></div><span data-offset-key="cdb5s-1-0"><span data-text="true"> covers context management, error propagation, and escalation design</span></span></div></li><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="17kvi" data-offset-key="evuos-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="evuos-0-0"><div class="css-175oi2r r-1loqt21 r-1471scf r-o7ynqc r-6416eg r-1ny4l3l"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-rjixqe r-16dba41 r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="https://platform.claude.com/docs/en/agent-sdk/overview" rel="noopener noreferrer nofollow" role="link" style="color: rgb(15, 20, 25);" target="_blank"><span data-offset-key="evuos-0-0"><span data-text="true">Agent SDK session docs</span></span></a></div><span data-offset-key="evuos-1-0"><span data-text="true"> for resumption, fork_session, /compact</span></span></div></li><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="17kvi" data-offset-key="3sdj7-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="3sdj7-0-0"><div class="css-175oi2r r-1loqt21 r-1471scf r-o7ynqc r-6416eg r-1ny4l3l"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-rjixqe r-16dba41 r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="https://github.com/affaan-m/everything-claude-code" rel="noopener noreferrer nofollow" role="link" style="color: rgb(15, 20, 25);" target="_blank"><span data-offset-key="3sdj7-0-0"><span data-text="true">Everything Claude Code repo</span></span></a></div><span data-offset-key="3sdj7-1-0"><span data-text="true"> for battle-tested context management patterns, scratchpad files, and strategic compaction</span></span></div></li></ul><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="5evmk-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5evmk-0-0"><span data-offset-key="5evmk-0-0" style="font-weight: bold;"><span data-text="true">If you have no idea how to get started go to Claude and paste this prompt which will help you with domain 5:</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="17kvi" data-offset-key="59ntt-0-0"><div class="css-175oi2r r-1nxhmzv r-13qz1uu"><div class="css-175oi2r r-dnmrzs" data-testid="markdown-code-block"><div class="css-175oi2r r-1awozwy r-bqz1g2 r-1fs5b29 r-1idry7j r-6413gk r-43g30s r-l4nmg1 r-o59np7 r-2dysd3 r-vmopo1 r-13qz1uu"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-rjixqe r-16dba41 r-1aiqnjv r-n6v787" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">markdown</span></div><div class="css-175oi2r r-1awozwy r-6koalj r-18u37iz r-z5qs1h r-17s6mgv"><button aria-label="Copy to clipboard" class="css-175oi2r r-sdzlij r-1phboty r-rs99b7 r-lrvibr r-1ceczpf r-lp5zef r-1loqt21 r-o7ynqc r-6416eg r-1ny4l3l" role="button" style="background-color: rgba(0, 0, 0, 0); border-color: rgba(0, 0, 0, 0);" type="button"><div class="css-146c3p1 r-qvutc0 r-37j5jr r-q4m81j r-a023e6 r-rjixqe r-b88u0q r-1awozwy r-6koalj r-18u37iz r-16y2uox r-bcqeeo r-1777fci" dir="ltr" style="color: rgb(15, 20, 25);"><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-10ptun7 r-1janqcz" style="color: rgb(15, 20, 25);" viewbox="0 0 24 24"><g><path d="M19.5 2C20.88 2 22 3.12 22 4.5v11c0 1.21-.86 2.22-2 2.45V4.5c0-.28-.22-.5-.5-.5H6.05c.23-1.14 1.24-2 2.45-2h11zm-4 4C16.88 6 18 7.12 18 8.5v11c0 1.38-1.12 2.5-2.5 2.5h-11C3.12 22 2 20.88 2 19.5v-11C2 7.12 3.12 6 4.5 6h11zM4 19.5c0 .28.22.5.5.5h11c.28 0 .5-.22.5-.5v-11c0-.28-.22-.5-.5-.5h-11c-.28 0-.5.22-.5.5v11z"></path></g></svg><div class="css-175oi2r r-xoduu5"><span class="css-1jxf684 r-dnmrzs r-1udh08x r-1udbk01 r-3s2u2q r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1b43r93 r-1cwl3u0" style="border-bottom: 2px solid rgb(15, 20, 25);"></span></div></div></button></div></div><pre style="background: rgb(247, 249, 249); color: rgb(56, 58, 66); font-family: monospace; direction: ltr; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; line-height: 1.3; tab-size: 2; hyphens: none; padding: 12px; margin: 0px 0px 0.5em; overflow: auto; border-radius: 0.3em 0.3em 8px 8px; font-size: 13px; display: block; width: 100%; box-sizing: border-box;"><code class="language-markdown" style='background: rgb(250, 250, 250); color: rgb(56, 58, 66); font-family: "Fira Code", "Fira Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace; direction: ltr; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; line-height: 1.5; tab-size: 2; hyphens: none;'><span>You are an expert instructor teaching Domain 5 (Context Management &amp; Reliability) of the Claude Certified Architect (Foundations) certification exam. This domain is worth 15% of the total exam score.
+</span>Smallest weighting, but concepts here cascade into Domains 1, 2, and 4. Getting this wrong breaks your multi-agent systems and extraction pipelines.
+Direct, practical teaching. British English spelling throughout.
+EXAM CONTEXT
+Scenario-based multiple choice. This domain appears across nearly all scenarios, particularly Customer Support Resolution Agent, Multi-Agent Research System, and Structured Data Extraction.
+TEACHING STRUCTURE
+Ask about experience with long-context applications and multi-agent systems. Adapt depth.
+6 task statements. After all 6, run a 6-question practice exam.
+TASK STATEMENT 5.1: CONTEXT PRESERVATION
+Teach the progressive summarisation trap:
+
+Condensing conversation history compresses numerical values, dates, percentages, and customer expectations into vague summaries
+"Customer wants a refund of $247.83 for order #8891 placed on March 3rd" becomes "customer wants a refund for a recent order"
+Fix: extract transactional facts into a persistent "case facts" block. Include in every prompt. Never summarise it.
+
+Teach the "lost in the middle" effect:
+
+Models process the beginning and end of long inputs reliably
+Findings buried in the middle may be missed
+Fix: place key findings summaries at the beginning. Use explicit section headers throughout.
+
+Teach tool result trimming:
+
+Order lookup returns 40+ fields. You need 5.
+Trim verbose results to relevant fields BEFORE appending to context
+Prevents token budget exhaustion from accumulated irrelevant data
+
+Teach full history requirements:
+
+Subsequent API requests must include complete conversation history
+Omitting earlier messages breaks conversational coherence
+
+Teach upstream agent optimisation:
+
+Modify agents to return structured data (key facts, citations, relevance scores) instead of verbose content and reasoning chains
+Critical when downstream agents have limited context budgets
+
+TASK STATEMENT 5.2: ESCALATION AND AMBIGUITY RESOLUTION
+Teach the three valid escalation triggers:
+
+Customer explicitly requests a human: honour immediately. Do NOT attempt to resolve first.
+Policy exceptions or gaps: the request falls outside documented policy (e.g., competitor price matching when policy only covers own-site)
+Inability to make meaningful progress: the agent cannot advance the resolution
+
+Teach the two unreliable triggers:
+
+Sentiment-based escalation: frustration does not correlate with case complexity
+Self-reported confidence scores: the model is often incorrectly confident on hard cases and uncertain on easy ones
+
+Teach the frustration nuance:
+
+If issue is straightforward and customer is frustrated: acknowledge frustration, offer resolution
+Only escalate if customer REITERATES their preference for a human after you offer help
+But if customer explicitly says "I want a human": escalate immediately, no investigation first
+
+Teach ambiguous customer matching:
+
+Multiple customers match a search query
+Ask for additional identifiers (email, phone, order number)
+Do NOT select based on heuristics (most recent, most active)
+
+TASK STATEMENT 5.3: ERROR PROPAGATION
+Teach structured error context:
+
+Failure type (transient, validation, business, permission)
+What was attempted (specific query, parameters used)
+Partial results gathered before failure
+Potential alternative approaches
+
+Teach the two anti-patterns:
+
+Silent suppression: returning empty results marked as success. Prevents any recovery.
+Workflow termination: killing the entire pipeline on a single failure. Throws away partial results.
+
+Teach access failure vs valid empty result:
+
+Access failure: tool could not reach data source. Consider retry.
+Valid empty result: tool reached source, found no matches. No retry needed. This IS the answer.
+
+Teach coverage annotations:
+
+Synthesis output should note which findings are well-supported vs which areas have gaps
+"Section on geothermal energy is limited due to unavailable journal access" is better than silently omitting it
+
+TASK STATEMENT 5.4: CODEBASE EXPLORATION
+Teach context degradation:
+
+Extended sessions: model starts referencing "typical patterns" instead of specific classes it discovered earlier
+Context fills with verbose discovery output and loses grip on earlier findings
+
+Teach mitigation strategies:
+
+Scratchpad files: write key findings to a file, reference it for subsequent questions
+Subagent delegation: spawn subagents for specific investigations, main agent keeps high-level coordination
+Summary injection: summarise findings from one phase before spawning subagents for the next
+/compact: reduce context usage when it fills with verbose discovery output
+
+Teach crash recovery:
+
+Each agent exports structured state to a known file location (manifest)
+On resume, coordinator loads manifest and injects into agent prompts
+
+TASK STATEMENT 5.5: HUMAN REVIEW AND CONFIDENCE CALIBRATION
+Teach the aggregate metrics trap:
+
+97% overall accuracy can hide 40% error rates on a specific document type
+Always validate accuracy by document type AND field segment before automating
+
+Teach stratified random sampling:
+
+Sample high-confidence extractions for ongoing verification
+Detects novel error patterns that would otherwise slip through
+
+Teach field-level confidence calibration:
+
+Model outputs confidence per field
+Calibrate thresholds using labelled validation sets (ground truth data)
+Route low-confidence fields to human review
+Prioritise limited reviewer capacity on highest-uncertainty items
+
+TASK STATEMENT 5.6: INFORMATION PROVENANCE
+Teach structured claim-source mappings:
+
+Each finding: claim + source URL + document name + relevant excerpt + publication date
+Downstream agents preserve and merge these mappings through synthesis
+Without this, attribution dies during summarisation
+
+Teach conflict handling:
+
+Two credible sources report different statistics
+Do NOT arbitrarily select one
+Annotate with both values and source attribution
+Let the consumer decide
+
+Teach temporal awareness:
+
+Require publication/data collection dates in structured outputs
+Different dates explain different numbers (not contradictions)
+
+Teach content-appropriate rendering:
+
+Financial data: tables
+News: prose
+Technical findings: structured lists
+Do not flatten everything into one uniform format
+
+DOMAIN 5 COMPLETION
+6-question practice exam. Score. 5+/6 to pass. Build exercise: "Build a coordinator with two subagents. Implement persistent case facts block. Simulate a timeout with structured error propagation. Test with conflicting sources and verify the synthesis preserves attribution."</code></pre></div></div></section><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="cprvt-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="cprvt-0-0"><span data-offset-key="cprvt-0-0" style="font-weight: bold;"><span data-text="true">What to build:</span></span><span data-offset-key="cprvt-0-1"><span data-text="true"> A coordinator with two subagents. Simulate a timeout. Verify the coordinator gets structured error context and proceeds with partial results. Test with conflicting sources.</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h1 class="longform-header-one" data-block="true" data-editor="17kvi" data-offset-key="f7509-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="f7509-0-0"><span data-offset-key="f7509-0-0"><span data-text="true">RECOMMENDED LEARNING FROM ANTHROPIC:</span></span></div></h1></div><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="3c0jr-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="3c0jr-0-0"><span data-offset-key="3c0jr-0-0"><span data-text="true">1: </span></span><div class="css-175oi2r r-1loqt21 r-1471scf r-o7ynqc r-6416eg r-1ny4l3l"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-rjixqe r-16dba41 r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="https://anthropic.skilljar.com/claude-with-the-anthropic-api" rel="noopener noreferrer nofollow" role="link" style="color: rgb(15, 20, 25);" target="_blank"><span data-offset-key="3c0jr-1-0"><span data-text="true">Building with the Claude API</span></span></a></div></div></div><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="3iip2-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="3iip2-0-0"><span data-offset-key="3iip2-0-0"><span data-text="true">2: </span></span><div class="css-175oi2r r-1loqt21 r-1471scf r-o7ynqc r-6416eg r-1ny4l3l"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-rjixqe r-16dba41 r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="https://anthropic.skilljar.com/introduction-to-model-context-protocol" rel="noopener noreferrer nofollow" role="link" style="color: rgb(15, 20, 25);" target="_blank"><span data-offset-key="3iip2-1-0"><span data-text="true">Introduction to Model Context Protocol</span></span></a></div></div></div><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="4u97l-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4u97l-0-0"><span data-offset-key="4u97l-0-0"><span data-text="true">3: </span></span><div class="css-175oi2r r-1loqt21 r-1471scf r-o7ynqc r-6416eg r-1ny4l3l"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-rjixqe r-16dba41 r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="https://anthropic.skilljar.com/claude-code-in-action" rel="noopener noreferrer nofollow" role="link" style="color: rgb(15, 20, 25);" target="_blank"><span data-offset-key="4u97l-1-0"><span data-text="true">Claude Code in Action</span></span></a></div></div></div><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="3k3gr-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="3k3gr-0-0"><span data-offset-key="3k3gr-0-0"><span data-text="true">4: </span></span><div class="css-175oi2r r-1loqt21 r-1471scf r-o7ynqc r-6416eg r-1ny4l3l"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-rjixqe r-16dba41 r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="https://anthropic.skilljar.com/claude-101" rel="noopener noreferrer nofollow" role="link" style="color: rgb(15, 20, 25);" target="_blank"><span data-offset-key="3k3gr-1-0"><span data-text="true">Claude 101</span></span></a></div></div></div><div class="longform-unstyled" data-block="true" data-editor="17kvi" data-offset-key="8376n-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8376n-0-0"><span data-offset-key="8376n-0-0" style="font-weight: bold;"><span data-text="true">NOW GO AND BECOME A UNCERTIFIED CLAUDE ARCHITECT (or certified if you're a partner ken), EITHER WAY, IT'S TIME TO FUCK!</span></span></div></div></div></div></div></div></div></div><div class="css-175oi2r"><div aria-live="polite" class="css-175oi2r r-1xfd6ze r-6koalj r-18u37iz r-kzbkwu r-1c4vpko r-1c7gwzm r-ttdzmv r-13qz1uu" role="status" style="background-color: rgb(234, 250, 255);"><div class="css-175oi2r r-13awgt0 r-18u37iz"><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-1xvli5t r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-18jsvk2 r-1wron08" data-testid="icon" viewbox="0 0 24 24"><g><path d="M18.93 12.69c.933-.933 2.446-.933 3.38 0 .933.934.933 2.447 0 3.38l-5.568 5.568c-.661.661-1.534 1.07-2.466 1.155L12 23l.207-2.276c.085-.932.494-1.805 1.155-2.466l5.568-5.568z"></path><path clip-rule="evenodd" d="M15.5 2c.684 0 1.257-.001 1.724.037.478.04.933.125 1.365.345.658.335 1.194.87 1.53 1.53.22.43.305.886.344 1.364.038.467.037 1.04.037 1.724v2.992c-1.083.03-2.158.458-2.984 1.284l-5.568 5.568c-.992.992-1.606 2.301-1.733 3.699L10.082 22H8.5c-.684 0-1.257.001-1.724-.037-.478-.04-.933-.125-1.365-.345-.658-.335-1.194-.87-1.53-1.53-.22-.43-.305-.886-.344-1.364C3.5 18.257 3.5 17.684 3.5 17V7c0-.684-.001-1.257.037-1.724.04-.478.125-.933.345-1.365.335-.658.87-1.194 1.53-1.53.43-.22.886-.305 1.364-.344C7.243 2 7.816 2 8.5 2h7zM8 12h5v-2H8v2zm0-4h8V6H8v2z" fill-rule="evenodd"></path></g></svg><div class="css-175oi2r r-1habvwh r-13awgt0 r-1777fci"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1b43r93 r-1cwl3u0 r-16dba41 r-13qz1uu" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">Want to publish your own Article?</span></div><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1b43r93 r-1cwl3u0 r-b88u0q r-1q142lx r-1s2bzr4 r-iphfwy r-13orzya r-3s2u2q r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="/i/premium_sign_up" role="link" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">Upgrade to Premium</span></a></div></div></div></div></div></div><div class="css-175oi2r r-12kyg2d"><div class="css-175oi2r r-k4xj1c r-18u37iz r-1wtj0ep"><div class="css-175oi2r r-1wbh5a2 r-1a11zyx"><div class="css-175oi2r r-1d09ksm r-18u37iz r-1wbh5a2 r-1471scf"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(83, 100, 113);"><a aria-describedby="id__fsg1hvwwd0j" aria-label="11:07 PM · Mar 15, 2026" class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-xoduu5 r-1q142lx r-1w6e6rj r-9aw3ui r-3s2u2q r-1loqt21" href="/hooeem/status/2033198345045336559" role="link" style="color: rgb(83, 100, 113);"><time datetime="2026-03-15T15:07:15.000Z">11:07 PM · Mar 15, 2026</time></a></div><div aria-hidden="true" class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1q142lx r-n7gxbd" dir="ltr" style="color: rgb(83, 100, 113);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">·</span></div><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1loqt21" dir="ltr" href="/hooeem/status/2033198345045336559/analytics" role="link" style="color: rgb(15, 20, 25);"><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1b43r93 r-1cwl3u0 r-b88u0q" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">8.8M</span></span></span></div> <span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1b43r93 r-1cwl3u0" style="color: rgb(83, 100, 113);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">Views</span></span></a></div></div><div class="css-175oi2r r-18u37iz"></div></div></div><div class="css-175oi2r"><div class="css-175oi2r"><div aria-label="178 replies, 2427 reposts, 16776 likes, 60319 bookmarks, 8839618 views" class="css-175oi2r r-1kbdv8c r-18u37iz r-1oszu61 r-3qxfft r-n7gxbd r-1dgieki r-1efd50x r-5kkj8d r-h3s6tt r-1wtj0ep" id="id__ikthadfwxoa" role="group"><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="178 Replies. Reply" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="reply" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01zm8.005-6c-3.317 0-6.005 2.69-6.005 6 0 3.37 2.77 6.08 6.138 6.01l.351-.01h1.761v2.3l5.087-2.81c1.951-1.08 3.163-3.13 3.163-5.36 0-3.39-2.744-6.13-6.129-6.13H9.756z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">178</span></span></span></div></div></button></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="2427 reposts. Repost" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="retweet" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">2.4K</span></span></span></div></div></button></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="16776 Likes. Like" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="like" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">16K</span></span></span></div></div></button></div><div class="css-175oi2r r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="60319 Bookmarks. Bookmark" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="bookmark" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M4 4.5C4 3.12 5.119 2 6.5 2h11C18.881 2 20 3.12 20 4.5v18.44l-8-5.71-8 5.71V4.5zM6.5 4c-.276 0-.5.22-.5.5v14.56l6-4.29 6 4.29V4.5c0-.28-.224-.5-.5-.5h-11z"></path></g></svg></div><div class="css-175oi2r r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">60K</span></span></span></div></div></button></div><div class="css-175oi2r" style="justify-content: inherit; display: inline-grid; transform: rotate(0deg) scale(1) translate3d(0px, 0px, 0px);"><div class="css-175oi2r r-18u37iz r-1h0z5md"><button aria-expanded="false" aria-haspopup="menu" aria-label="Share post" class="css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-175oi2r r-xoduu5"><div class="css-175oi2r r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M12 2.59l5.7 5.7-1.41 1.42L13 6.41V16h-2V6.41l-3.3 3.3-1.41-1.42L12 2.59zM21 15l-.02 3.51c0 1.38-1.12 2.49-2.5 2.49H5.5C4.11 21 3 19.88 3 18.5V15h2v3.5c0 .28.22.5.5.5h12.98c.28 0 .5-.22.5-.5L19 15h2z"></path></g></svg></div></div></button></div></div></div></div></div><button class="css-175oi2r r-1ets6dv r-1867qdf r-rs99b7 r-13awgt0 r-bx70bn r-1loqt21 r-o7ynqc r-6416eg r-1ny4l3l" data-testid="logged_out_read_replies_pivot" role="button" type="button"><div class="css-175oi2r r-1awozwy r-1panhkp r-1867qdf r-6koalj r-18u37iz r-1pi2tsx r-11f147o r-is05cd"><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-18jsvk2 r-1q142lx r-v24l6w r-1wron08 r-qu3fyt" viewbox="0 0 24 24"><g><path d="M12.312 23.736c-.123 0-.246-.03-.358-.091-.241-.132-.392-.385-.392-.659v-.871c0-.414.336-.75.75-.75.256 0 .482.128.617.324 1.905-1.247 4.823-3.192 5.908-4.11 2.256-1.908 3.604-4.732 3.608-7.554 0-.414.336-.749.75-.749s.75.337.749.751c-.004 3.256-1.552 6.507-4.14 8.697-1.326 1.121-5.009 3.546-7.086 4.892-.124.08-.266.12-.408.12zm-2.557-1.897c1.697-1.082 6.672-4.317 8.048-5.48 1.902-1.609 3.04-3.976 3.043-6.329-.006-4.366-3.433-7.787-7.8-7.787l-4.149-.01c-4.375-.001-7.801 3.426-7.801 7.801 0 4.104 3.14 7.204 7.465 7.37.002 1.79.008 2.88.058 3.544-.041.101-.061.21-.055.322.009.178.081.344.198.471.111.241.283.241.552.241.163 0 .316-.053.441-.144zm3.289-18.097c3.529 0 6.298 2.763 6.302 6.287-.003 1.917-.941 3.855-2.512 5.184-1.03.871-4.478 3.16-6.771 4.645l-.002-3.175c0-.403-.319-.734-.722-.749l-.721-.027c-3.49-.135-6.022-2.604-6.022-5.872 0-3.534 2.768-6.302 6.299-6.302l4.149.01z"></path></g></svg><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1b43r93 r-1cwl3u0 r-b88u0q r-1awozwy r-6koalj r-1559e4e r-13qz1uu" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">Read 178 replies</span></div></div></button></div></div></div></article>
+</div>
+</div>
+</body>
+</html>

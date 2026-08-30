@@ -1,0 +1,12 @@
+{
+  "url": "https://x.com/mm_options/status/2093599841935134732",
+  "status": "success",
+  "title": "期权策略决策树\n\nSTART：你对市场怎么看？\n│\n├── 看涨 Bullish\n│   │\n│   ├── 预期大涨\n│   │   │\n│   │   ├── IV 较低\n│   │   │   ",
+  "author": "mm_options",
+  "published_date": "2026-08-29",
+  "folder_name": "mm_options_期权策略决策树START：你对市场怎么看？│├──_看涨_Bullish_2093599841935134",
+  "local_path": "mm_options_期权策略决策树START：你对市场怎么看？│├──_看涨_Bullish_2093599841935134/mm_options_期权策略决策树START：你对市场怎么看？│├──_看涨_Bullish_2093599841935134.html",
+  "timestamp": "2026-08-30T06:00:16.978399",
+  "failure_reason": "",
+  "source": "cli"
+}

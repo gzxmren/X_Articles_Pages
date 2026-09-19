@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>(2) X 上的 brucexu.eth：“深度套利复盘：从 LSK 学会“捡尸体”，详细探讨四种策略分析、参考实际轧空案例、得到一些判断策略” / X</title>
+<!-- Injected Original Styles -->
+<style id="draftjs-styles_0">
+    .draftjs-styles_0 .public-DraftEditorPlaceholder-root {
+      color: #536471;
+    }
+
+    .draftjs-styles_0 .public-DraftEditorPlaceholder-hasFocus {
+      color: #536471;
+    }
+
+    
+  </style>
+<style id="draftjs-styles">
+     .DraftEditor-editorContainer, .DraftEditor-root, .public-DraftEditor-content {
+        height: inherit;
+        max-height: inherit;
+        min-height: inherit;
+        text-align: initial;
+    }
+
+    .public-DraftEditor-content[contenteditable=true] {
+        -moz-user-modify: read-write-plaintext-only;
+        -webkit-user-modify: read-write-plaintext-only;
+    }
+
+    .format-inline .public-DraftEditor-content[contenteditable=true] {
+      -moz-user-modify: read-write;
+      -webkit-user-modify: read-write;
+    }
+
+    .DraftEditor-root {
+        width: 100%;
+        position: relative;
+        -webkit-user-select: none;
+    }
+
+    .DraftEditor-editorContainer {
+        background-color: rgba(255, 255, 255, 0);
+        border-left: .1px solid transparent;
+        position: relative;
+        z-index: 1;
+    }
+
+    .public-DraftEditor-block {
+        position: relative;
+    }
+
+    .DraftEditor-alignLeft .public-DraftStyleDefault-block {
+        text-align: left;
+    }
+
+    .DraftEditor-alignLeft .public-DraftEditorPlaceholder-root {
+        left: 0;
+        text-align: left;
+    }
+
+    .DraftEditor-alignCenter .public-DraftStyleDefault-block {
+        text-align: center
+    }
+
+    .DraftEditor-alignCenter .public-DraftEditorPlaceholder-root {
+        margin: 0 auto;
+        text-align: center;
+        width: 100%
+    }
+
+    .DraftEditor-alignRight .public-DraftStyleDefault-block {
+        text-align: right;
+    }
+
+    .DraftEditor-alignRight .public-DraftEditorPlaceholder-root {
+        right: 0;
+        text-align: right;
+    }
+
+    .public-DraftEditorPlaceholder-root {
+        padding-bottom: 2px;
+        padding-top: 2px;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .public-DraftEditorPlaceholder-inner {
+        user-select: none;
+        -webkit-user-select: none;
+    }
+
+    .DraftEditorPlaceholder-hidden {
+        display: none;
+    }
+
+    .public-DraftStyleDefault-block {
+        overflow:hidden;
+        padding-bottom: 2px;
+        padding-top: 2px;
+        position: relative;
+        white-space: pre-wrap;
+    }
+
+    /* Only a handful of CSS rules work on br tags and user-select isn't one */
+    div:only-child > .public-DraftStyleDefault-block > span > br::selection {
+        background: transparent;
+    }
+
+    /*
+       Safari doesn't let you change ::selection on br elements,
+       but Chrome needs it here
+    */
+    div:only-child > .public-DraftStyleDefault-block > span:has(br)::selection {
+        background: transparent;
+    }
+
+    .public-DraftStyleDefault-ltr {
+        direction: ltr;
+        text-align: left;
+    }
+
+    .public-DraftStyleDefault-rtl {
+        direction: rtl;
+        text-align: right;
+    }
+
+    .DraftEditor-editorContainer a {
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        margin-bottom: inherit;
+        margin-top: inherit;
+    }
+
+    .singleline .public-DraftStyleDefault-block {
+        overflow-x: auto;
+        scrollbar-width: none;
+        white-space: nowrap;
+        -ms-overflow-style: none;
+    }
+
+    .singleline .public-DraftStyleDefault-block::-webkit-scrollbar {
+        display: none;
+    }
+  </style>
+<style id="longform-styles">
+    .longform-header-one {
+        font-size: 31px;
+        font-weight: 800;
+        line-height: 40px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-header-one-narrow {
+        font-size: calc(20px + 1px);
+        font-weight: 800;
+        line-height: 28px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-header-two {
+        font-size: 26px;
+        font-weight: 800;
+        line-height: 36px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-header-two-narrow {
+        font-size: calc(17px + 1px);
+        font-weight: 800;
+        line-height: 24px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-unstyled, .longform-blockquote {
+        font-size: 17px;
+        line-height: 28px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-unstyled-narrow, .longform-blockquote-narrow {
+        font-size: 17px;
+        line-height: 28px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-unordered-list-item, .longform-ordered-list-item {
+        display: block;
+        font-size: 17px;
+        line-height: 28px;   
+        margin-bottom: 12px;
+        margin-left: calc(28px + 2px);
+        margin-top: 0;
+    }
+
+    .longform-unordered-list-item-narrow, .longform-ordered-list-item-narrow {
+        display: block;
+        font-size: 17px;
+        line-height: 28px;   
+        margin-bottom: calc(12px / 2);
+        margin-left: 36px;
+        margin-top: 0;
+    }
+
+    .longform-blockquote, .longform-blockquote-narrow {
+        margin-bottom: calc(24px + 2px);
+        margin-left: 0;
+        margin-top: calc(-2px);
+        padding-left: calc(24px + 3px);
+        position: relative;
+    }
+
+    .longform-blockquote:before, .longform-blockquote-narrow:before {
+        background: #37434D;
+        border-radius: 9999px;
+        bottom: 0;
+        content: "";
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 3px;
+    }
+
+    .longform-header-one .public-DraftStyleDefault-block,
+    .longform-header-two .public-DraftStyleDefault-block,
+    .longform-unstyled .public-DraftStyleDefault-block,
+    .longform-unordered-list-item .public-DraftStyleDefault-block,
+    .longform-ordered-list-item .public-DraftStyleDefault-block,
+    .longform-header-one-narrow .public-DraftStyleDefault-block,
+    .longform-header-two-narrow .public-DraftStyleDefault-block,
+    .longform-unstyled-narrow .public-DraftStyleDefault-block,
+    .longform-unordered-list-item-narrow .public-DraftStyleDefault-block,
+    .longform-ordered-list-item-narrow .public-DraftStyleDefault-block {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    .public-DraftStyleDefault-ul, .public-DraftStyleDefault-ol {
+        counter-reset: item;
+        margin-bottom: 28px;
+        margin-top: 0;
+        padding-left: 0;
+    }
+
+    .longform-unordered-list-item:before, .longform-ordered-list-item:before,
+    .longform-unordered-list-item-narrow:before, .longform-ordered-list-item-narrow:before {
+        position: absolute;
+        margin-left: calc(-1 * (28px + 2px));
+    }
+
+    .longform-unordered-list-item:before {
+        content: counter(item, disc);
+        font-size: 23px
+    }
+
+    .longform-unordered-list-item-narrow:before {
+        content: counter(item, disc);
+        font-size: 20px
+    }
+
+    .longform-ordered-list-item:before, .longform-ordered-list-item-narrow:before {
+        content: counter(item) ". ";
+        counter-increment: item;
+    }
+
+    .longform-ordered-list-item::marker, .longform-ordered-list-item-narrow::marker {
+        font-variant-numeric: normal;
+    }
+</style>
+<style>input::placeholder { user-select: none; -webkit-user-select: none; } div div ::-webkit-input-placeholder { color: rgb(117, 117, 117) } iframe { color-scheme: auto; }button { text-align: inherit; font-size: inherit; font-family: inherit; color: inherit }</style>
+<style>@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-Light.a929468a.woff2) format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-Regular.58c84f6a.woff2) format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-Medium.bc7d8f1a.woff2) format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-Bold.0d6a47ca.woff2) format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-ExtraBold.b130af7a.woff2) format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}</style>
+<style>@font-face {
+  font-family: Geist;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Geist-var.2587a0ca.woff2) format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}</style>
+<style>@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Light.3a18e64a.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Light.7a5673aa.woff) format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Regular.80fda27a.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Regular.60b215ba.woff) format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Medium.f8e2739a.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Medium.20fc288a.woff) format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Bold.ebb56aba.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Bold.a573679a.woff) format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Heavy.f44ae4ea.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Heavy.d70ec7ca.woff) format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: TwitterChirpExtendedHeavy;
+  src: url(https://abs.twimg.com/fonts/v1/chirp-extended-heavy-web.woff2) format('woff2'), url(https://abs.twimg.com/fonts/v1/chirp-extended-heavy-web.woff) format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}</style>
+<style>html,body{height: 100%;}::cue{white-space:normal}</style>
+<style id="react-native-stylesheet">[stylesheet-group="0"]{}
+body{margin:0;}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+input::-webkit-search-cancel-button,input::-webkit-search-decoration,input::-webkit-search-results-button,input::-webkit-search-results-decoration{display:none;}
+[stylesheet-group="1"]{}
+.css-146c3p1{background-color:rgba(0,0,0,0.00);border:0 solid black;box-sizing:border-box;color:rgba(0,0,0,1.00);display:inline;font:14px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;list-style:none;margin:0px;padding:0px;position:relative;text-align:start;text-decoration:none;white-space:pre-wrap;word-wrap:break-word;}
+.css-1jxf684{background-color:rgba(0,0,0,0.00);border:0 solid black;box-sizing:border-box;color:inherit;display:inline;font:inherit;list-style:none;margin:0px;padding:0px;position:relative;text-align:inherit;text-decoration:none;white-space:inherit;word-wrap:break-word;}
+.css-9pa8cd{bottom:0px;height:100%;left:0px;opacity:0;position:absolute;right:0px;top:0px;width:100%;z-index:-1;}
+.css-g5y9jx{align-content:flex-start;align-items:stretch;background-color:rgba(0,0,0,0.00);border:0 solid black;box-sizing:border-box;display:flex;flex-basis:auto;flex-direction:column;flex-shrink:0;list-style:none;margin:0px;min-height:0px;min-width:0px;padding:0px;position:relative;text-decoration:none;z-index:0;}
+[stylesheet-group="2"]{}
+.r-11mg6pl{border-bottom-color:rgba(255,255,255,1.00);border-left-color:rgba(255,255,255,1.00);border-right-color:rgba(255,255,255,1.00);border-top-color:rgba(255,255,255,1.00);}
+.r-13awgt0{flex:1;}
+.r-17gur6a{border-bottom-left-radius:0px;border-bottom-right-radius:0px;border-top-left-radius:0px;border-top-right-radius:0px;}
+.r-1867qdf{border-bottom-left-radius:16px;border-bottom-right-radius:16px;border-top-left-radius:16px;border-top-right-radius:16px;}
+.r-1adg3ll{display:block;}
+.r-1dqxon3{overflow-x:auto;overflow-y:auto;}
+.r-1ets6dv{border-bottom-color:rgba(207,217,222,1.00);border-left-color:rgba(207,217,222,1.00);border-right-color:rgba(207,217,222,1.00);border-top-color:rgba(207,217,222,1.00);}
+.r-1fuqb1j{border-bottom-left-radius:24px;border-bottom-right-radius:24px;border-top-left-radius:24px;border-top-right-radius:24px;}
+.r-1pcd2l5{padding:20px;}
+.r-1phboty{border-bottom-style:solid;border-left-style:solid;border-right-style:solid;border-top-style:solid;}
+.r-1pp0k63{border-bottom-left-radius:0.01px;border-bottom-right-radius:0.01px;border-top-left-radius:0.01px;border-top-right-radius:0.01px;}
+.r-1q9bdsx{border-bottom-left-radius:12px;border-bottom-right-radius:12px;border-top-left-radius:12px;border-top-right-radius:12px;}
+.r-1qsk4np{overflow-x:clip;overflow-y:clip;}
+.r-1udh08x{overflow-x:hidden;overflow-y:hidden;}
+.r-1wl2o3p{border-bottom-color:rgba(229,234,236,1.00);border-left-color:rgba(229,234,236,1.00);border-right-color:rgba(229,234,236,1.00);border-top-color:rgba(229,234,236,1.00);}
+.r-1xfd6ze{border-bottom-left-radius:8px;border-bottom-right-radius:8px;border-top-left-radius:8px;border-top-right-radius:8px;}
+.r-1yadl64{border-bottom-width:0px;border-left-width:0px;border-right-width:0px;border-top-width:0px;}
+.r-494qqr{padding:32px;}
+.r-4iw3lz{border-bottom-width:0;border-left-width:0;border-right-width:0;border-top-width:0;}
+.r-4qtqp9{display:inline-block;}
+.r-6koalj{display:flex;}
+.r-bztko3{overflow-x:visible;overflow-y:visible;}
+.r-crgep1{margin:0px;}
+.r-edyy15{padding:8px;}
+.r-hvic4v{display:none;}
+.r-jxzhtn{border-bottom-color:rgba(239,243,244,1.00);border-left-color:rgba(239,243,244,1.00);border-right-color:rgba(239,243,244,1.00);border-top-color:rgba(239,243,244,1.00);}
+.r-krxsd3{display:-webkit-box;}
+.r-nsbfu8{padding:16px;}
+.r-rs99b7{border-bottom-width:1px;border-left-width:1px;border-right-width:1px;border-top-width:1px;}
+.r-sdzlij{border-bottom-left-radius:9999px;border-bottom-right-radius:9999px;border-top-left-radius:9999px;border-top-right-radius:9999px;}
+.r-t60dpp{padding:0px;}
+.r-wwvuq4{padding:0;}
+.r-xf4iuw{margin:-8px;}
+.r-xoduu5{display:inline-flex;}
+.r-xyw6el{padding:12px;}
+.r-ywje51{margin:auto;}
+.r-z2wwpe{border-bottom-left-radius:4px;border-bottom-right-radius:4px;border-top-left-radius:4px;border-top-right-radius:4px;}
+[stylesheet-group="2.1"]{}
+.r-12kyg2d{margin-bottom:16px;margin-top:16px;}
+.r-1559e4e{padding-bottom:2px;padding-top:2px;}
+.r-184id4b{margin-bottom:12px;margin-top:12px;}
+.r-1e084wi{padding-left:0px;padding-right:0px;}
+.r-1f0wa7y{padding-left:80px;padding-right:80px;}
+.r-1fkl15p{padding-left:32px;padding-right:32px;}
+.r-1mkv55d{padding-bottom:0px;padding-top:0px;}
+.r-1mmae3n{padding-bottom:12px;padding-top:12px;}
+.r-1xpp3t0{margin-left:16px;margin-right:16px;}
+.r-3o4zer{padding-left:12px;padding-right:12px;}
+.r-3pj75a{padding-left:16px;padding-right:16px;}
+.r-cnw61z{padding-bottom:4px;padding-top:4px;}
+.r-cxgwc0{padding-left:24px;padding-right:24px;}
+.r-dd0y9b{padding-bottom:20px;padding-top:20px;}
+.r-ddtstp{margin-bottom:0px;margin-top:0px;}
+.r-dp7rxi{padding-bottom:40px;padding-top:40px;}
+.r-f8sm7e{margin-left:auto;margin-right:auto;}
+.r-is05cd{padding-left:8px;padding-right:8px;}
+.r-n7gxbd{padding-left:4px;padding-right:4px;}
+.r-nj0m1c{padding-bottom:32px;padding-top:32px;}
+.r-s49dbf{margin-bottom:1px;margin-top:1px;}
+.r-sjygvo{padding-left:1em;padding-right:1em;}
+.r-u9wvl5{padding-left:20px;padding-right:20px;}
+.r-w7s2jr{padding-bottom:16px;padding-top:16px;}
+[stylesheet-group="2.2"]{}
+.r-10f7w94{margin-right:70px;}
+.r-1182swk{left:1px;}
+.r-15peodp{right:-9999px;}
+.r-15xeili{margin-left:-48px;}
+.r-17i1h83{margin-right:60px;}
+.r-19qo34d{left:-9999px;}
+.r-1a11zyx{margin-right:12px;}
+.r-1ca1ndr{margin-left:0.5em;}
+.r-1cwvpvk{margin-left:12px;}
+.r-1ez5h0i{margin-left:4px;}
+.r-1gs4q39{margin-right:4px;}
+.r-1iwt575{margin-right:1px;}
+.r-1kkk96v{margin-left:8px;}
+.r-1kpi4qh{margin-left:0.075em;}
+.r-1l2kgy{margin-right:0.5em;}
+.r-1l8l4mf{margin-right:10px;}
+.r-1noe1sz{padding-left:4px;}
+.r-1oukvu3{margin-left:70px;}
+.r-1q6cnnd{right:-2px;}
+.r-1rtiivn{margin-right:20px;}
+.r-1wron08{margin-right:8px;}
+.r-1x2e62v{margin-left:16px;}
+.r-2dysd3{padding-left:12px;}
+.r-2utimh{right:-4px;}
+.r-3t4u6i{margin-left:2px;}
+.r-45ll9u{left:50%;}
+.r-5f1w11{left:-2px;}
+.r-615f2u{right:1px;}
+.r-72fyl3{border-top-left-radius:32px;}
+.r-cwltf5{border-top-right-radius:32px;}
+.r-dlybji{margin-right:16px;}
+.r-faml9v{padding-right:12px;}
+.r-gd96e9{margin-right:-48px;}
+.r-hjq6k0{margin-left:1px;}
+.r-j3xhw6{border-top-left-radius:16px;}
+.r-k4bwe5{margin-right:0.075em;}
+.r-nazi8o{margin-left:20px;}
+.r-o59np7{padding-right:8px;}
+.r-ocobd0{right:50%;}
+.r-pt392{margin-left:60px;}
+.r-qjj4hq{padding-left:8px;}
+.r-st84sj{border-top-right-radius:16px;}
+.r-t1sew1{margin-left:10px;}
+.r-trst2h{padding-right:4px;}
+.r-v3tthl{left:-4px;}
+.r-x1x4zq{margin-right:2px;}
+[stylesheet-group="3"]{}
+.r-105ug2t{pointer-events:auto!important;}
+.r-109y4c4{height:1px;}
+.r-10ef88u{min-width:700px;}
+.r-10ptun7{height:16px;}
+.r-10v3vxq{transform:scaleX(-1);}
+.r-113js5t{width:1050px;}
+.r-117bsoe{margin-bottom:20px;}
+.r-11c0sde{margin-top:24px;}
+.r-11f8fnl{background-color:rgba(180,180,182,0.50);}
+.r-11j9u27{visibility:hidden;}
+.r-11yh6sk{overflow-x:hidden;}
+.r-11zy11o{background-color:rgba(201,54,204,1.00);}
+.r-1202g5r{height:90vh;}
+.r-12181gd{box-shadow:0 0 2px rgba(0,0,0,0.03) inset;}
+.r-122fvck{background-color:rgba(244,129,47,0.12);}
+.r-1279nm1{min-height:400px;}
+.r-12hfotv{width:700px;}
+.r-12rgx7y{width:7px;}
+.r-12sks89{min-height:22px;}
+.r-12vffkv>*{pointer-events:auto;}
+.r-12vffkv{pointer-events:none!important;}
+.r-12ym1je{width:18px;}
+.r-135wba7{line-height:24px;}
+.r-136ojw6{z-index:2;}
+.r-13qz1uu{width:100%;}
+.r-13w96dm{background-color:rgba(0,0,0,0.30);}
+.r-13wfysu{-webkit-text-decoration-line:none;text-decoration-line:none;}
+.r-146iojx{max-width:300px;}
+.r-1472mwg{height:24px;}
+.r-14gqq1x{margin-top:4px;}
+.r-14j79pv{color:rgba(83,100,113,1.00);}
+.r-14lw9ot{background-color:rgba(255,255,255,1.00);}
+.r-158ssxm{max-height:calc(64px * 15);}
+.r-159fyap{-moz-transition:opacity 300ms ease;-webkit-transition:opacity 300ms ease;transition:opacity 300ms ease;}
+.r-15ysp7h{min-height:32px;}
+.r-168457u{background-color:rgba(120,86,255,1.00);}
+.r-16dba41{font-weight:400;}
+.r-16eto9q{width:12px;}
+.r-16y2uox{flex-grow:1;}
+.r-176fswd{transform:translateX(-50%) translateY(-50%);}
+.r-1777fci{justify-content:center;}
+.r-178kkxs{background-color:rgba(255,237,219,1.00);}
+.r-17bb2tj{animation-duration:0.75s;}
+.r-17c3jg3{background-color:rgba(0,0,0,0.80);}
+.r-17gznlh{animation-name:r-t2lo5v;}
+.r-17leim2{background-repeat:repeat;}
+.r-17s6mgv{justify-content:flex-end;}
+.r-184en5c{z-index:1;}
+.r-18jm5s1{transition-timing-function:cubic-bezier(0,0,0,1);}
+.r-18jsvk2{color:rgba(15,20,25,1.00);}
+.r-18kxxzh{flex-grow:0;}
+.r-18tzken{width:56px;}
+.r-18u37iz{flex-direction:row;}
+.r-18yzcnr{height:22px;}
+.r-193z5jo{flex-basis:64px;}
+.r-1994a6e{min-width:400px;}
+.r-19h8fux{background-color:rgba(55,67,77,1.00);}
+.r-19qs0lw{animation-name:r-1qpf3yi;}
+.r-19wmn03{width:20px;}
+.r-19yznuf{min-height:52px;}
+.r-1abnn5w{animation-play-state:paused;}
+.r-1acpoxo{width:36px;}
+.r-1ad0z5i{word-break:break-all;}
+.r-1aockid{width:40px;}
+.r-1awozwy{align-items:center;}
+.r-1azx6h{max-height:480px;}
+.r-1b43r93{font-size:14px;}
+.r-1bimlpy{background-color:rgba(207,217,222,1.00);}
+.r-1blnp2b{width:72px;}
+.r-1blvdjr{font-size:23px;}
+.r-1cdyxaf{flex-basis:32px;}
+.r-1ceczpf{min-height:24px;}
+.r-1cf81hf{background-color:rgba(83,100,113,1.00);}
+.r-1cj0bla{font-smoothing:always;}
+.r-1cmwbt1{gap:8px;}
+.r-1cvl2hr{color:rgba(29,155,240,1.00);}
+.r-1cwl3u0{line-height:16px;}
+.r-1d2f490{left:0px;}
+.r-1ddef8g{-webkit-text-decoration-line:underline;text-decoration-line:underline;}
+.r-1dgieki{border-top-color:rgba(239,243,244,1.00);}
+.r-1dn12g7{line-height:48px;}
+.r-1dum35f{-moz-transition-property:opacity, height;-webkit-transition-property:opacity, height;transition-property:opacity, height;}
+.r-1e425wn{animation-duration:0.15s;}
+.r-1e4ma89{background-color:rgba(0,0,0,0.55);}
+.r-1e5uvyk{-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);}
+.r-1e6yznf{margin-top:-6px;}
+.r-1ebb2ja{list-style:none;}
+.r-1efd50x{border-top-style:solid;}
+.r-1f4tc2a{background-color:rgba(244,33,46,1.00);}
+.r-1ff274t{text-align:right;}
+.r-1ffj0ar{background-color:rgba(0,0,0,0.40);}
+.r-1fu8b7j{height:712px;}
+.r-1g40b8q{z-index:3;}
+.r-1g83rmp{animation-name:r-7bj9g2;}
+.r-1gkfh8e{font-size:11px;}
+.r-1gymjhz{width:68px;}
+.r-1h0z5md{justify-content:flex-start;}
+.r-1h3ijdo{height:53px;}
+.r-1h8ys4a{padding-top:4px;}
+.r-1habvwh{align-items:flex-start;}
+.r-1hjwoze{height:18px;}
+.r-1hwvwag{flex-basis:48px;}
+.r-1hycxz{width:350px;}
+.r-1iln25a{word-wrap:normal;}
+.r-1inkyih{font-size:17px;}
+.r-1ipicw7{width:300px;}
+.r-1is30e5{transform:rotate(360deg);}
+.r-1iusvr4{flex-basis:0px;}
+.r-1iww7jx{width:28px;}
+.r-1janqcz{width:16px;}
+.r-1jaylin{width:-webkit-max-content;width:-moz-max-content;width:max-content;}
+.r-1jocfgc{width:290px;}
+.r-1jte41z{min-width:350px;}
+.r-1k5gan{background-color:rgba(236,232,255,1.00);}
+.r-1k78y06{font-family:Tahoma, Arial, sans-serif;}
+.r-1kihuf0{align-self:center;}
+.r-1ld3bg{top:-4px;}
+.r-1ldzwu0{animation-timing-function:linear;}
+.r-1loqt21{cursor:pointer;}
+.r-1m3jxhj{background-color:rgba(15,20,25,1.00);}
+.r-1m4drjs{top:-6px;}
+.r-1mdbw0j{padding-bottom:0px;}
+.r-1me0s30{max-height:unset;}
+.r-1mlwlqe{flex-basis:auto;}
+.r-1mrlafo{background-position:0;}
+.r-1muvv40{animation-iteration-count:infinite;}
+.r-1mwlp6a{height:56px;}
+.r-1nao33i{color:rgba(231,233,234,1.00);}
+.r-1niwhzg{background-color:rgba(0,0,0,0.00);}
+.r-1ny4l3l{outline-style:none;}
+.r-1obr2lp{width:920px;}
+.r-1oifz5y{background-color:rgba(170,17,0,1.00);}
+.r-1oszu61{align-items:stretch;}
+.r-1otgn73{touch-action:manipulation;}
+.r-1ovo9ad{width:360px;}
+.r-1ozsyd3{height:7px;}
+.r-1p0dtai{bottom:0px;}
+.r-1peese0{margin-bottom:24px;}
+.r-1pi2tsx{height:100%;}
+.r-1pjcn9w{max-width:80vw;}
+.r-1potc6q{top:5%;}
+.r-1ps3wis{min-width:44px;}
+.r-1pz39u2{align-self:stretch;}
+.r-1q142lx{flex-shrink:0;}
+.r-1qd0xha{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+.r-1qd7xl{top:12px;}
+.r-1qi8awa{min-width:36px;}
+.r-1r5jyh0{min-height:130px;}
+.r-1r8g8re{height:36px;}
+.r-1rnoaur{overflow-y:auto;}
+.r-1rt2jqs{width:450px;}
+.r-1rttkqs{width:400px;}
+.r-1s2bzr4{margin-top:12px;}
+.r-1s2hp8q{min-height:26px;}
+.r-1sw30gj{background-color:rgba(239,243,244,1.00);}
+.r-1sxrcry{background-size:auto;}
+.r-1szxp23{min-height:53px;}
+.r-1t2qqvi{flex-basis:50%;}
+.r-1t7zxhp{width:9px;}
+.r-1tbo1j0{height:1.5rem;}
+.r-1tjplnt{box-sizing:content-box;}
+.r-1tl8opc{font-family:"Segoe UI",Meiryo,system-ui,-apple-system,BlinkMacSystemFont,sans-serif;}
+.r-1to6hqq{background-color:rgba(255,212,0,1.00);}
+.r-1tsuqlv{max-height:100vh;}
+.r-1ttztb7{text-align:inherit;}
+.r-1udbk01{text-overflow:ellipsis;}
+.r-1upvrn0{box-shadow:0 0 15px rgba(101,119,134,0.2), 0 0 3px 1px rgba(101,119,134,0.15);}
+.r-1uqa7wc{width:1197px;}
+.r-1ur9v65{padding-top:40px;}
+.r-1v2oles{top:50%;}
+.r-1vmecro{direction:rtl;}
+.r-1vqzmdl{background-color:rgba(215,246,255,1.00);}
+.r-1vr29t4{font-weight:800;}
+.r-1vsu8ta{min-height:30px;}
+.r-1vzmqqg{-webkit-font-smoothing:antialiased;}
+.r-1w2mbsr{background-color:rgba(29,155,240,0.12);}
+.r-1wb8bfx{text-decoration-thickness:2px;}
+.r-1wbh5a2{flex-shrink:1;}
+.r-1wtj0ep{justify-content:space-between;}
+.r-1wvb978{font-feature-settings:'ss01' on;}
+.r-1wyyakw{z-index:-1;}
+.r-1x61ttu{-moz-transition:transform 1s ease;-webkit-transition:transform 1s ease;transition:transform 1s ease;}
+.r-1xcajam{position:fixed;}
+.r-1xfddsp{min-height:300px;}
+.r-1xk2f4g{clip:rect(1px, 1px, 1px, 1px);}
+.r-1xnyija{background-color:rgba(250,224,250,1.00);}
+.r-1xnzce8{-moz-user-select:text;-webkit-user-select:text;user-select:text;}
+.r-1xoqx8s{flex-basis:24px;}
+.r-1xvli5t{height:1.25em;}
+.r-1y7e96w{min-width:22px;}
+.r-1ye8kvj{max-width:600px;}
+.r-1yef0xd{animation-name:r-11cv4x;}
+.r-1yjpyg1{font-size:31px;}
+.r-1ykxob0{top:60%;}
+.r-285fr0{min-width:16px;}
+.r-2o02ov{margin-top:40px;}
+.r-2r9icm{background-color:rgba(255,122,0,1.00);}
+.r-2yi16{min-height:36px;}
+.r-33ulu8{width:600px;}
+.r-36ujnk{font-style:italic;}
+.r-37tt59{line-height:32px;}
+.r-3nmjpz{animation-name:r-12fruu6;}
+.r-3s2u2q{white-space:nowrap;}
+.r-3sxh79{top:-1px;}
+.r-417010{z-index:0;}
+.r-46f5du{font-variant-numeric:tabular-nums;}
+.r-4gszlv{background-size:cover;}
+.r-4hwcpe{font-family:Vazirmatn, Tahoma, Arial, sans-serif;}
+.r-4nw3r4{background-color:rgba(249,24,128,1.00);}
+.r-4wgw6l{min-width:32px;}
+.r-54znze{color:rgba(239,243,244,1.00);}
+.r-56xrmm{line-height:12px;}
+.r-5c1b6u{color:rgba(255,122,0,1.00);}
+.r-5kkj8d{border-top-width:1px;}
+.r-5oul0u{margin-bottom:8px;}
+.r-6026j{background-color:rgba(255,255,255,0.85);}
+.r-633pao{pointer-events:none!important;}
+.r-6416eg{-moz-transition-property:background-color, box-shadow;-webkit-transition-property:background-color, box-shadow;transition-property:background-color, box-shadow;}
+.r-64el8z{min-width:52px;}
+.r-68jxh1{min-width:500px;}
+.r-6dt33c{opacity:1;}
+.r-7h7f8p{max-width:100vw;}
+.r-7mdpej{max-width:360px;}
+.r-7q8q6z{cursor:default;}
+.r-8akbws{-webkit-box-orient:vertical;}
+.r-8i4a5g{-moz-transition:flex-grow 0.5s ease-in-out;-webkit-transition:flex-grow 0.5s ease-in-out;transition:flex-grow 0.5s ease-in-out;}
+.r-8jfcpp{top:-2px;}
+.r-8kz0gk{height:2rem;}
+.r-92ng3h{width:1px;}
+.r-95jzfe{padding-top:16px;}
+.r-97prym{flex-basis:16px;}
+.r-9dcw1g{width:320px;}
+.r-9l7dzd{color:rgba(244,33,46,1.00);}
+.r-9tfo2e{background-color:rgba(255,255,255,0.30);}
+.r-a023e6{font-size:15px;}
+.r-adyw6z{font-size:20px;}
+.r-agouwx{transform:translateZ(0);}
+.r-ah5dr5>*{pointer-events:none;}
+.r-ah5dr5{pointer-events:auto!important;}
+.r-aqfbo4{backface-visibility:hidden;}
+.r-axxi2z{-moz-transition-property:transform;-webkit-transition-property:transform;transition-property:transform;}
+.r-b88u0q{font-weight:700;}
+.r-bcqeeo{min-width:0px;}
+.r-bnwqim{position:relative;}
+.r-bt1l66{min-height:20px;}
+.r-bvlit7{margin-bottom:-12px;}
+.r-ck2lme{background-color:rgba(219,248,235,1.00);}
+.r-clrlgt{animation-name:r-imtty0;}
+.r-cnnz9e{width:1.75rem;}
+.r-deolkf{box-sizing:border-box;}
+.r-dflpy8{height:1.2em;}
+.r-dkhcqf{transition-duration:350ms;}
+.r-dnmrzs{max-width:100%;}
+.r-drjvcx{height:3.5rem;}
+.r-ehq7j7{background-size:contain;}
+.r-ek4qxl{min-width:260px;}
+.r-emqnss{transform:translateZ(0px);}
+.r-eqz5dr{flex-direction:column;}
+.r-ero68b{min-height:40px;}
+.r-eu3ka{height:40px;}
+.r-f9dfq4{width:88px;}
+.r-fa1dwr{animation-timing-function:cubic-bezier(0.25, 0.1, 0.25, 1);}
+.r-fdjqy7{text-align:left;}
+.r-fm7h5w{font-family:"TwitterChirpExtendedHeavy","Verdana",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+.r-fvsqc2{top:calc(0px - 53);}
+.r-g6jmlv{width:100vw;}
+.r-gf0ln{-webkit-filter:brightness(1);filter:brightness(1);}
+.r-gkxrsp{background-color:rgba(0,67,41,1.00);}
+.r-h0d30l{height:28px;}
+.r-h3s6tt{height:48px;}
+.r-h9hxbl{width:1.2em;}
+.r-hdaws3{height:4px;}
+.r-htvplk{min-width:600px;}
+.r-i61hcz{min-width:20px;}
+.r-icoktb{opacity:0.5;}
+.r-ifefl9{min-height:0px;}
+.r-impgnl{transform:translateX(50%) translateY(-50%);}
+.r-iphfwy{padding-bottom:4px;}
+.r-ipm5af{top:0px;}
+.r-j5o65s{border-bottom-color:rgba(239,243,244,1.00);}
+.r-jmul1s{transform:scale(1.1);}
+.r-jwli3a{color:rgba(255,255,255,1.00);}
+.r-k200y{align-self:flex-start;}
+.r-k5y9r7{height:9px;}
+.r-k8qxaj{padding-bottom:20px;}
+.r-kemksi{background-color:rgba(0,0,0,1.00);}
+.r-kr0nin{width:1.5rem;}
+.r-kwpbio{height:650px;}
+.r-kzbkwu{padding-bottom:12px;}
+.r-l5o3uw{background-color:rgba(29,155,240,1.00);}
+.r-loe9s5{background-color:rgba(0,0,0,0.77);}
+.r-lp5zef{min-width:24px;}
+.r-lrsllp{width:24px;}
+.r-lrvibr{-moz-user-select:none;-webkit-user-select:none;user-select:none;}
+.r-lrx3fh{width:500px;}
+.r-lwhw9o{height:1.75rem;}
+.r-m6rgpd{vertical-align:text-bottom;}
+.r-majxgm{font-weight:500;}
+.r-mrc9z7{width:1257px;}
+.r-n1ft60{dynamic-range-limit:standard;}
+.r-n6v787{font-size:13px;}
+.r-nhe8su{animation-duration:0.5s;}
+.r-nvplwv{animation-timing-function:ease-out;}
+.r-nwxazl{line-height:40px;}
+.r-o7ynqc{transition-duration:0.2s;}
+.r-o96wvk{width:275px;}
+.r-obd0qt{align-items:flex-end;}
+.r-onrtq4{flex-basis:40px;}
+.r-orgf3d{opacity:0;}
+.r-oucylx{border-bottom-color:rgba(0,0,0,0.00);}
+.r-peo1c{min-height:44px;}
+.r-pm9dpa{max-height:100%;}
+.r-poiln3{font-family:inherit;}
+.r-pp5qcn{vertical-align:-20%;}
+.r-pwrm9v{width:390px;}
+.r-q3k7ks{background-color:rgba(0,122,255,1.00);}
+.r-q4m81j{text-align:center;}
+.r-qklmqi{border-bottom-width:1px;}
+.r-qlhcfr{font-size:0.001px;}
+.r-qvk6io{line-height:0px;}
+.r-qvutc0{word-wrap:break-word;}
+.r-r4n2gf{background-color:rgba(0,175,182,1.00);}
+.r-ripixn{max-height:16vh;}
+.r-rjixqe{line-height:20px;}
+.r-rki7wi{bottom:12px;}
+.r-rsyp9y{max-height:90vh;}
+.r-rthrr5{width:990px;}
+.r-rull8r{border-bottom-style:solid;}
+.r-rwqe4o{width:48px;}
+.r-s224ru{background-color:rgba(0,186,124,1.00);}
+.r-s67bdx{font-size:48px;}
+.r-s8bhmr{min-width:56px;}
+.r-sa2ff0{min-height:100vh;}
+.r-sb58tz{max-width:1000px;}
+.r-t3ofa{-moz-osx-font-smoothing:grayscale;}
+.r-tbmifm{height:12px;}
+.r-tjvw6i{text-decoration-thickness:1px;}
+.r-tskmnb{padding-top:8px;}
+.r-u6sd8q{background-repeat:no-repeat;}
+.r-u8s1d{position:absolute;}
+.r-ueyrd6{line-height:36px;}
+.r-uho16t{font-size:34px;}
+.r-uz7a3o{min-width:650px;}
+.r-v2d8zz{flex-basis:56px;}
+.r-vkv6oe{min-width:40px;}
+.r-vqxq0j{border:0 solid black;}
+.r-vrz42v{line-height:28px;}
+.r-vuvsbk{padding-bottom:calc(16px + 0px);}
+.r-vvn4in{background-position:center;}
+.r-vz2u4x{height:11px;}
+.r-wgabs5{border-bottom-width:2px;}
+.r-wy61xf{height:72px;}
+.r-x3cy2q{background-size:100% 100%;}
+.r-x572qd{background-color:rgba(247,249,249,1.00);}
+.r-xb2eav{font-size:40px;}
+.r-xigjrr{-webkit-filter:blur(4px);filter:blur(4px);}
+.r-xr3zp9{min-height:calc(64px * 3);}
+.r-yc9v9c{width:22px;}
+.r-yn5ncy{animation-fill-mode:both;}
+.r-yy2aun{font-size:26px;}
+.r-yyyyoo{fill:currentcolor;}
+.r-z2knda{transition-timing-function:ease;}
+.r-z7pwl0{max-width:700px;}
+.r-z80fyv{height:20px;}
+.r-zchlnj{right:0px;}
+@-webkit-keyframes r-11cv4x{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
+@-webkit-keyframes r-12fruu6{0%{opacity:0;transform:scale(0.95);}100%{opacity:1;transform:scale(1);}}
+@-webkit-keyframes r-1qpf3yi{0%{opacity:0;transform:scale3d(0.92, 0.92, 1);}100%{opacity:1;transform:scale3d(1, 1, 1);}}
+@-webkit-keyframes r-7bj9g2{0%{opacity:1;transform:scale3d(1, 1, 1);}100%{opacity:0;transform:scale3d(0.92, 0.92, 1);}}
+@-webkit-keyframes r-imtty0{0%{opacity:0;}100%{opacity:1;}}
+@-webkit-keyframes r-t2lo5v{0%{opacity:1;}100%{opacity:0;}}
+@keyframes r-11cv4x{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
+@keyframes r-12fruu6{0%{opacity:0;transform:scale(0.95);}100%{opacity:1;transform:scale(1);}}
+@keyframes r-1qpf3yi{0%{opacity:0;transform:scale3d(0.92, 0.92, 1);}100%{opacity:1;transform:scale3d(1, 1, 1);}}
+@keyframes r-7bj9g2{0%{opacity:1;transform:scale3d(1, 1, 1);}100%{opacity:0;transform:scale3d(0.92, 0.92, 1);}}
+@keyframes r-imtty0{0%{opacity:0;}100%{opacity:1;}}
+@keyframes r-t2lo5v{0%{opacity:1;}100%{opacity:0;}}
+.r-2cg7au{position:absolute;visibility:hidden;top:0;width:50px;pointer-events:none}
+.r-2cg7au.loaded{visibility:visible;top:50vh;width:50px}</style>
+<style>
+        body { 
+            font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;  
+            background-color: #ffffff; 
+            margin: 0;
+            padding: 0;
+        }
+        .container { 
+            max-width: 600px; 
+            margin: 0 auto; 
+            padding-top: 20px; 
+            padding-bottom: 40px;
+        }
+        .tweet-card { 
+            border: 1px solid rgb(239, 243, 244); 
+            border-radius: 16px; 
+            margin-bottom: 16px; 
+            padding: 16px; 
+            overflow-wrap: break-word;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-top: 10px;
+        }
+        /* Basic reset for some Twitter specific classes if needed */
+        a { text-decoration: none; color: rgb(29, 155, 240); }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+<div class="container">
+<div class="tweet-card">
+<article aria-labelledby="id__p1diht2h1or id__fqfhlh3s99w id__fa2i4l2uoa id__bd5clx1dsst id__saw2byc2fk id__325btwtg6fd id__ehl7pypr5s9 id__1n4khwho49u id__9sbm9cftjju id__v28j5quj5e id__0b1vfpcvyf1f id__yxxmekwg4ip id__7gwhkez5ofs id__qawbvard8pa id__vr8nckokrje id__60ugnogs6y4 id__d6d4lve4vcv id__3jxbehffu4 id__xl5i2z309yj id__01st3lhxphu2" class="css-g5y9jx r-18u37iz r-1udh08x r-1c4vpko r-1c7gwzm r-1ny4l3l" data-testid="tweet" role="article" tabindex="-1"><div class="css-g5y9jx r-eqz5dr r-16y2uox r-1wbh5a2"><div class="css-g5y9jx r-16y2uox r-1wbh5a2 r-1ny4l3l"><div class="css-g5y9jx"><div class="css-g5y9jx r-18u37iz r-136ojw6"><div class="css-g5y9jx r-1iusvr4 r-16y2uox r-ttdzmv"></div></div></div><div class="css-g5y9jx r-18u37iz r-136ojw6"><div class="css-g5y9jx r-18kxxzh r-1wron08 r-onrtq4 r-1awozwy"><div class="css-g5y9jx" data-testid="Tweet-User-Avatar"><div class="css-g5y9jx r-18kxxzh r-1wbh5a2 r-13qz1uu"><div class="css-g5y9jx r-1wbh5a2 r-dnmrzs"><div class="css-g5y9jx r-bztko3 r-1adg3ll" data-testid="UserAvatar-Container-brucexu_eth" style="width: 40px; height: 40px;"><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 100%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div class="css-g5y9jx r-1adg3ll r-1pi2tsx r-13qz1uu r-45ll9u r-u8s1d r-1v2oles r-176fswd r-bztko3"><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 100%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div class="css-g5y9jx r-sdzlij r-1udh08x r-5f1w11 r-u8s1d r-8jfcpp" style="width: calc(100% + 4px); height: calc(100% + 4px);"><a aria-hidden="true" class="css-g5y9jx r-1pi2tsx r-13qz1uu r-o7ynqc r-6416eg r-1ny4l3l r-1loqt21" href="/brucexu_eth" role="link" style="background-color: rgba(0, 0, 0, 0);" tabindex="-1"><div class="css-g5y9jx r-sdzlij r-1udh08x r-633pao r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-g5y9jx r-1pi2tsx r-13qz1uu" style="background-color: rgba(0, 0, 0, 0);"></div></div><div class="css-g5y9jx r-sdzlij r-1udh08x r-633pao r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-g5y9jx r-1pi2tsx r-13qz1uu r-14lw9ot"></div></div><div class="css-g5y9jx r-sdzlij r-1udh08x r-633pao r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="background-color: rgb(255, 255, 255); width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-g5y9jx r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 100%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div class="css-g5y9jx r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af"><div class="css-g5y9jx r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/profile_images/1906994546455822336/OEoYVc1W_normal.jpg");'></div><img alt="" class="css-9pa8cd" draggable="true" src="https://pbs.twimg.com/profile_images/1906994546455822336/OEoYVc1W_normal.jpg"/></div></div></div></div><div class="css-g5y9jx r-sdzlij r-1udh08x r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-g5y9jx r-12181gd r-1pi2tsx r-13qz1uu r-o7ynqc r-6416eg r-1ny4l3l"></div></div></a></div></div></div></div></div></div></div></div></div><div class="css-g5y9jx r-1iusvr4 r-16y2uox r-1777fci"><div class="css-g5y9jx r-zl2h9q"><div class="css-g5y9jx r-k4xj1c r-18u37iz r-1wtj0ep"><div class="css-g5y9jx r-1d09ksm r-18u37iz r-1wbh5a2"><div class="css-g5y9jx r-1wbh5a2 r-dnmrzs r-1ny4l3l"><div class="css-g5y9jx r-1wbh5a2 r-dnmrzs r-1ny4l3l" data-testid="User-Name" id="id__saw2byc2fk"><div class="css-g5y9jx r-1awozwy r-18u37iz r-1wbh5a2 r-dnmrzs"><div class="css-g5y9jx r-1wbh5a2 r-dnmrzs"><a class="css-g5y9jx r-1wbh5a2 r-dnmrzs r-1ny4l3l r-1loqt21" href="/brucexu_eth" role="link"><div class="css-g5y9jx r-1awozwy r-18u37iz r-1wbh5a2 r-dnmrzs"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-b88u0q r-1awozwy r-6koalj r-1udh08x r-3s2u2q" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-dnmrzs r-1udh08x r-1udbk01 r-3s2u2q r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">brucexu.eth</span></span></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-xoduu5 r-18u37iz r-1q142lx" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1awozwy r-xoduu5"><svg aria-label="认证账号" class="r-4qtqp9 r-yyyyoo r-1xvli5t r-bnwqim r-lrvibr r-m6rgpd r-1cvl2hr r-f9ja8p r-og9te1 r-3t4u6i" data-testid="icon-verified" role="img" viewbox="0 0 22 22"><g><path d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.854-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.688-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.606-.274 1.263-.144 1.896.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681s.075-1.299-.165-1.903c.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z"></path></g></svg><div class="css-g5y9jx r-xoduu5 r-1777fci r-x1x4zq r-1ez5h0i r-1ny4l3l r-1loqt21" role="link" tabindex="0"><div class="css-g5y9jx r-4qtqp9 r-p3p4p0 r-hm2b0w r-bnwqim" style="height: calc(1.0625em); width: calc(1.0625em);"><div class="css-g5y9jx r-1adg3ll r-1udh08x"><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 100%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div class="css-g5y9jx r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1ets6dv r-1jkafct r-rs99b7 r-6koalj r-1pi2tsx r-13qz1uu"><div class="css-g5y9jx r-xoduu5 r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/profile_images/2008452174083485698/WaDlss-k_bigger.jpg");'></div><img alt="" class="css-9pa8cd" draggable="false" src="https://pbs.twimg.com/profile_images/2008452174083485698/WaDlss-k_bigger.jpg"/></div></div></div></div></div></span></div></div></a></div></div><div class="css-g5y9jx r-18u37iz r-1wbh5a2"><div class="css-g5y9jx r-1d09ksm r-18u37iz r-1wbh5a2"><div class="css-g5y9jx r-1wbh5a2 r-dnmrzs"><a class="css-g5y9jx r-1wbh5a2 r-dnmrzs r-1ny4l3l r-1loqt21" href="/brucexu_eth" role="link" tabindex="-1"><div class="css-146c3p1 r-dnmrzs r-1udh08x r-1udbk01 r-3s2u2q r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-18u37iz r-1wvb978" dir="ltr" style="color: rgb(83, 100, 113);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">@brucexu_eth</span></div></a></div></div></div></div></div></div><div class="css-g5y9jx r-1kkk96v"><div class="css-g5y9jx r-1awozwy r-18u37iz r-1cmwbt1 r-1wtj0ep"><div class="css-g5y9jx r-18u37iz r-1h0z5md"><button aria-label="总结" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(15, 20, 25);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><div class="css-g5y9jx r-xoduu5 r-bnwqim"><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-1xvli5t r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd" viewbox="0 0 33 32"><g><path d="M12.745 20.54l10.97-8.19c.539-.4 1.307-.244 1.564.38 1.349 3.288.746 7.241-1.938 9.955-2.683 2.714-6.417 3.31-9.83 1.954l-3.728 1.745c5.347 3.697 11.84 2.782 15.898-1.324 3.219-3.255 4.216-7.692 3.284-11.693l.008.009c-1.351-5.878.332-8.227 3.782-13.031L33 0l-4.54 4.59v-.014L12.743 20.544m-2.263 1.987c-3.837-3.707-3.175-9.446.1-12.755 2.42-2.449 6.388-3.448 9.852-1.979l3.72-1.737c-.67-.49-1.53-1.017-2.515-1.387-4.455-1.854-9.789-.931-13.41 2.728-3.483 3.523-4.579 8.94-2.697 13.561 1.405 3.454-.899 5.898-3.22 8.364C1.49 30.2.666 31.074 0 32l10.478-9.466"></path></g></svg></div></div></div></button></div><div class="css-g5y9jx r-1awozwy r-6koalj r-18u37iz"><div class="css-g5y9jx"><div class="css-g5y9jx r-18u37iz r-1h0z5md"><button aria-expanded="false" aria-haspopup="menu" aria-label="更多" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="caret" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div></div></button></div></div></div></div></div></div><div class="css-g5y9jx r-18u37iz r-1wtj0ep r-zl2h9q"></div></div></div></div><div class="css-g5y9jx"><article class="css-g5y9jx r-1ny4l3l" data-testid="twitterArticleReadView" role="article" tabindex="-1"><div class="css-g5y9jx r-1peese0"><div class="css-g5y9jx"><div class="css-g5y9jx r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-g5y9jx"><div class="css-g5y9jx r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-g5y9jx r-1pi2tsx r-1ny4l3l r-1loqt21" href="/brucexu_eth/article/2099526143804387697/media/2099521805996396545" role="link"><div class="css-g5y9jx r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 40%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="图像" class="css-g5y9jx r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-g5y9jx r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HSL_9XSaEAE446k?format=jpg&amp;name=small");'></div><img alt="图像" class="css-9pa8cd" draggable="true" src="assets/a3271a3c2078aaab5f2d2da1e9910599.jpg"/></div></div></div></a></div></div></div></div></div><div class="css-g5y9jx r-vmopo1"><div class="css-g5y9jx r-13qz1uu"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-uho16t r-1vr29t4 r-1o37s4c r-1s2bzr4" data-testid="twitter-article-title" dir="auto" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">深度套利复盘：从 LSK 学会“捡尸体”，详细探讨四种策略分析、参考实际轧空案例、得到一些判断策略</span></div></div><div class="css-g5y9jx"><div aria-label="1 回复、10 次转帖、39 喜欢、43 书签、4977 次观看" class="css-g5y9jx r-1kbdv8c r-18u37iz r-1wtj0ep r-1ye8kvj r-j5o65s r-rull8r r-qklmqi r-h3s6tt r-14gqq1x" role="group"><div class="css-g5y9jx r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="1 回复。回复" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="reply" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01zm8.005-6c-3.317 0-6.005 2.69-6.005 6 0 3.37 2.77 6.08 6.138 6.01l.351-.01h1.761v2.3l5.087-2.81c1.951-1.08 3.163-3.13 3.163-5.36 0-3.39-2.744-6.13-6.129-6.13H9.756z"></path></g></svg></div><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">1</span></span></span></div></div></button></div><div class="css-g5y9jx r-18u37iz r-1h0z5md r-13awgt0"><button aria-expanded="false" aria-haspopup="menu" aria-label="10 次转帖。转帖" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="retweet" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"></path></g></svg></div><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">10</span></span></span></div></div></button></div><div class="css-g5y9jx r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="39 喜欢次数。喜欢" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="like" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"></path></g></svg></div><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">39</span></span></span></div></div></button></div><div class="css-g5y9jx r-18u37iz r-1h0z5md r-13awgt0"><a aria-label="4977 次查看。查看帖子分析" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1ny4l3l r-1loqt21" href="/brucexu_eth/status/2099526143804387697/analytics" role="link"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M8.75 21V3h2v18h-2zM18 21V8.5h2V21h-2zM4 21l.004-10h2L6 21H4zm9.248 0v-7h2v7h-2z"></path></g></svg></div><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">4,977</span></span></span></div></div></a></div><div class="css-g5y9jx r-18u37iz r-1h0z5md r-1wron08"><button aria-label="书签" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="bookmark" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M4 4.5C4 3.12 5.119 2 6.5 2h11C18.881 2 20 3.12 20 4.5v18.44l-8-5.71-8 5.71V4.5zM6.5 4c-.276 0-.5.22-.5.5v14.56l6-4.29 6 4.29V4.5c0-.28-.224-.5-.5-.5h-11z"></path></g></svg></div></div></button></div><div class="css-g5y9jx" style="align-content: stretch; justify-content: inherit; display: inline-grid; transform: rotate(0deg) scale(1) translate3d(0px, 0px, 0px);"><div class="css-g5y9jx r-18u37iz r-1h0z5md"><button aria-expanded="false" aria-haspopup="menu" aria-label="分享帖子" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M12 2.59l5.7 5.7-1.41 1.42L13 6.41V16h-2V6.41l-3.3 3.3-1.41-1.42L12 2.59zM21 15l-.02 3.51c0 1.38-1.12 2.49-2.5 2.49H5.5C4.11 21 3 19.88 3 18.5V15h2v3.5c0 .28.22.5.5.5h12.98c.28 0 .5-.22.5-.5L19 15h2z"></path></g></svg></div></div></button></div></div></div></div><div class="css-g5y9jx r-1knelpx" data-testid="twitterArticleRichTextView"><div class="css-g5y9jx r-18jsvk2 r-37j5jr"><div class="DraftEditor-root"><div class="DraftEditor-editorContainer"><div aria-describedby="placeholder-3v2h1" class="public-DraftEditor-content" contenteditable="false" data-testid="longformRichTextComponent" spellcheck="false" style="outline: none; user-select: text; white-space: pre-wrap; overflow-wrap: break-word;"><div data-contents="true"><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="69ea4-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="69ea4-0-0"><span data-offset-key="69ea4-0-0"><span data-text="true">2026 年 9 月 13 日，LSK 出现了一组很夸张的价格。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="94a5a-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="94a5a-0-0"><span data-offset-key="94a5a-0-0"><span data-text="true">Binance 现货最高冲到 $2.00。到了第二天，Binance、Gate、Kraken、Bithumb 仍在 $0.90 左右，OKX 和 Upbit 却只有约 $0.40。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="c80c6-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="c80c6-0-0"><span data-offset-key="c80c6-0-0"><span data-text="true">同一个币，同一个时间，价格差了 2.3 倍。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="c3018-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="c3018-0-0"><span data-offset-key="c3018-0-0"><span data-text="true">群里有人把这种机会叫“捡尸体”。大概意思是，小市值币被暴力拉盘，空头不断爆仓，各个交易所又因为充提、链或者交易限制出现不同的价格。等最混乱的时候过去，再从爆仓和错价里找机会。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="9e3ca-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9e3ca-0-0"><span data-offset-key="9e3ca-0-0"><span data-text="true">看到一边 $0.40、一边 $0.90，最直接的两个操作就是买便宜的，或者空贵的。可“等价格收敛”这几个字，省略了中间最危险的部分。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="0ebf3-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="0ebf3-0-0"><span data-offset-key="0ebf3-0-0"><span data-text="true">后来把 LSK 和之前的 TUT 一起拆开复盘，我发现“捡尸体”这个说法把几种完全不同的交易混在了一起。有人做的是跨所现货套利，有人做双腿价差，有人是在高点裸空，还有人只是在暴跌后抄底。它们看着都在赚“错价”的钱，实际承担的风险完全不同。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="2a802-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="2a802-0-0"><span data-offset-key="2a802-0-0"><span data-text="true">这次我没有下单。复盘重点也先放在判断顺序上，看看几种操作各自在赚什么钱，又会在哪一步出问题。</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="3v2h1" data-offset-key="bff99-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="bff99-0-0"><span data-offset-key="bff99-0-0"><span data-text="true">本文数据截取到 2026 年 9 月 14 日。价格、资金费、持仓量和盘口来自 Binance、Bitget、Gate、OKX、Upbit、Bithumb 等公开接口。文中模拟没有真实下单，也没有把 OHLC 当作真实可成交价格。</span></span></div></blockquote><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h1 class="longform-header-one" data-block="true" data-editor="3v2h1" data-offset-key="33f60-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="33f60-0-0"><span data-offset-key="33f60-0-0"><span data-text="true">先别急着看价差，先看币能不能动</span></span></div></h1></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="bb64d-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="bb64d-0-0"><span data-offset-key="bb64d-0-0"><span data-text="true">正常的跨所套利很好理解。</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="3v2h1" data-offset-key="0c870-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="0c870-0-0"><span data-offset-key="0c870-0-0"><span data-text="true">A 所价格便宜
+    ↓ 买入
+把币从 A 所提出来
+    ↓ 转账
+充值到价格更高的 B 所
+    ↓ 卖出
+扣掉手续费和滑点，剩下的是利润</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="20349-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="20349-0-0"><span data-offset-key="20349-0-0"><span data-text="true">这条路径能完整走通，屏幕上的价差才有用。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="21d3b-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="21d3b-0-0"><span data-offset-key="21d3b-0-0"><span data-text="true">任何一环断掉，这笔交易都要重新定性。</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="3v2h1" data-offset-key="eec5f-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="eec5f-0-0"><span data-offset-key="eec5f-0-0"><span data-text="true">能买，但提不出来
+能提，但贵侧充不进去
+两边支持的链不一样
+跨链需要很多天
+币到了，但交易所限制卖出
+永续能开仓，现货却无法交割</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="d5f33-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="d5f33-0-0"><span data-offset-key="d5f33-0-0" style="font-weight: bold;"><span data-text="true">LSK 恰好把这些问题集中到了一起。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="82ca4-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="82ca4-0-0"><span data-offset-key="82ca4-0-0"><span data-text="true">我后来打开 OKX 交易所的充提页面，看到相关通道只支持 LSK 链。这个页面只能确认网络选项，暂时还不能确认 OKX、Upbit 和贵侧交易所之间是否同时开放充提，也不能确认到账速度。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="cdc07-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="cdc07-0-0"><span data-offset-key="cdc07-0-0"><span data-text="true">这个时间点又碰上了 Lisk 自己的迁移安排。官方在 8 月 25 日公告将于 10 月 31 日关停 Lisk Chain，9 月 10 日公布的迁移说明提到跨链至少需要七天，质押解锁还要三天。Binance 此前也给 LSK 加上了 Monitoring Tag，并下架了 LSK/USDC 现货对和 LSK 杠杆对。它们没有直接证明这次价差由哪条通道引起，但会让交割和退出变得更难判断。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="05ab0-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="05ab0-0-0"><span data-offset-key="05ab0-0-0" style="font-weight: bold;"><span data-text="true">如果今天在便宜侧买入，却要等七天才能把资产变成贵侧可卖的 LSK，那么今天的价差就锁不住。七天里，贵侧可以跌，便宜侧也可以继续跌，交易所还可能临时关闭通道。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="b2925-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="b2925-0-0"><span data-offset-key="b2925-0-0" style="font-weight: bold;"><span data-text="true">同一个 ticker 放在不同场所，短期内可能对应不同的交割和退出条件。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="b44be-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="b44be-0-0"><span data-offset-key="b44be-0-0"><span data-text="true">可以自由提现、快速交割的 LSK，和暂时无法转移的 LSK，权利不同。屏幕上的差价里，可能有一部分是在给这些权利定价。</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="3v2h1" data-offset-key="b35ad-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="b35ad-0-0"><span data-offset-key="b35ad-0-0"><span data-text="true">价格差
+├── 币本身的市场判断
+├── 能否提现
+├── 能否充值交割
+├── 能否借币做空
+├── 多久可以到账
+└── 交易所会不会突然改规则</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="7cc68-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7cc68-0-0"><span data-offset-key="7cc68-0-0" style="font-weight: bold;"><span data-text="true">因此第一项检查应该是两边的资产能否互相交割，再去比较哪边便宜。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h1 class="longform-header-one" data-block="true" data-editor="3v2h1" data-offset-key="82143-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="82143-0-0"><span data-offset-key="82143-0-0"><span data-text="true">“捡尸体”至少有四种做法</span></span></div></h1></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="992f4-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="992f4-0-0"><span data-offset-key="992f4-0-0"><span data-text="true">群里讲“捡尸体”时，大家指的经常不是同一件事。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="3v2h1" data-offset-key="1b37d-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1b37d-0-0"><span data-offset-key="1b37d-0-0"><span data-text="true">1. 买便宜、转过去、卖贵的</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="decae-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="decae-0-0"><span data-offset-key="decae-0-0"><span data-text="true">这是最接近传统套利的一种。</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="3v2h1" data-offset-key="f3038-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="f3038-0-0"><span data-offset-key="f3038-0-0"><span data-text="true">便宜侧买现货
+    ↓
+提币并到账
+    ↓
+贵侧卖现货</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="07a60-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="07a60-0-0"><span data-offset-key="07a60-0-0"><span data-text="true">它赚的是资产转移带来的价差。判断重点也很直接：充提是否开放、链是否一致、到账速度、实际盘口和全部费用。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="c831f-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="c831f-0-0"><span data-offset-key="c831f-0-0"><span data-text="true">LSK 当时只能确认页面提供 LSK 链，跨所通道是否同时开放仍然未知。无法及时交割时，这个结构就不成立。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="3v2h1" data-offset-key="d796d-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="d796d-0-0"><span data-offset-key="d796d-0-0"><span data-text="true">2. 买便宜侧，同时空贵侧</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="f24fc-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="f24fc-0-0"><span data-offset-key="f24fc-0-0"><span data-text="true">这个结构不一定要立刻转币。</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="3v2h1" data-offset-key="3713d-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="3713d-0-0"><span data-offset-key="3713d-0-0"><span data-text="true">便宜侧买入现货  ← 多头
+贵侧卖出永续    ← 空头
+              ↓
+          等价差收敛</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="3aa62-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="3aa62-0-0"><span data-offset-key="3aa62-0-0"><span data-text="true">理论计算很漂亮。整体上涨时现货赚钱，整体下跌时空头赚钱，两边靠近后留下价差。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="24428-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="24428-0-0"><span data-offset-key="24428-0-0" style="font-weight: bold;"><span data-text="true">现实里，两条腿分属两个交易所，保证金不能共享。贵侧继续轧空时，空头可能先爆仓。便宜侧无法卖出时，现货也无法正常退出。资金费、ADL、部分成交和交易规则变化都会破坏原来的计算。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="e26d7-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="e26d7-0-0"><span data-offset-key="e26d7-0-0"><span data-text="true">两边还可能缺少短期同质性。用一个可自由交易的永续，去对冲一个被困在旧链或特定场所里的现货，账面数量相等，风险并不相等。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="e51b6-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="e51b6-0-0"><span data-offset-key="e51b6-0-0"><span data-text="true">这是一笔带有路径风险的价差交易。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="3v2h1" data-offset-key="07b2d-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="07b2d-0-0"><span data-offset-key="07b2d-0-0"><span data-text="true">3. 只在贵侧开空</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="6c35b-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="6c35b-0-0"><span data-offset-key="6c35b-0-0"><span data-text="true">很多人看到 LSK 的第一反应就是这个。</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="3v2h1" data-offset-key="2b16c-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="2b16c-0-0"><span data-offset-key="2b16c-0-0"><span data-text="true">其他交易所约 $0.40
+Binance 约 $0.90
+        ↓
+“贵侧明显高了”
+        ↓
+在贵侧开空，等它跌</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="9e82e-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9e82e-0-0"><span data-offset-key="9e82e-0-0" style="font-weight: bold;"><span data-text="true">这个操作不需要转币，执行最简单，但它是一笔裸空。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="1806b-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1806b-0-0"><span data-offset-key="1806b-0-0"><span data-text="true">你同时押注贵侧最终会跌，而且会在仓位被强平之前跌。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="113e3-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="113e3-0-0"><span data-offset-key="113e3-0-0"><span data-text="true">这两件事差别很大。</span></span><span data-offset-key="113e3-0-1" style="font-weight: bold;"><span data-text="true">小市值币可以在毫无基本面支持的情况下继续上涨，因为推动后半段行情的买盘，往往就是被迫平仓的空头。也就是所谓的轧空，做空的人成了实际买币的人。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="3v2h1" data-offset-key="d66f6-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="d66f6-0-0"><span data-offset-key="d66f6-0-0"><span data-text="true">4. 等强平插针，挂单承接</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="aa39c-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="aa39c-0-0"><span data-offset-key="aa39c-0-0"><span data-text="true">还有一种“捡尸体”，指的是等清算瀑布出现，在很低的位置挂单。</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="3v2h1" data-offset-key="446cb-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="446cb-0-0"><span data-offset-key="446cb-0-0"><span data-text="true">多头连续爆仓
+    ↓ 强制卖出
+盘口瞬间被砸穿
+    ↓
+预先挂好的买单成交
+    ↓
+流动性恢复后退出</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="f3ea2-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="f3ea2-0-0"><span data-offset-key="f3ea2-0-0"><span data-text="true">这赚的是瞬时流动性错价。它需要预先放在交易所里的资金、真实订单簿、很低的延迟，还要处理价格保护和二次插针。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="f5ec0-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="f5ec0-0-0"><span data-offset-key="f5ec0-0-0" style="font-weight: bold;"><span data-text="true">至于暴跌以后直接抄底，等币反弹，那就是方向交易。发生在爆仓之后，并不会自动变成套利。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="50d32-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="50d32-0-0"><span data-offset-key="50d32-0-0"><span data-text="true">把这四种结构分开以后，很多争论就消失了。大家嘴上说的是同一个“捡尸体”，实际可能一个人在做转币套利，一个人在裸空，一个人在接飞刀。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h1 class="longform-header-one" data-block="true" data-editor="3v2h1" data-offset-key="0dfee-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="0dfee-0-0"><span data-offset-key="0dfee-0-0"><span data-text="true">LSK 的价差是怎么长出来的</span></span></div></h1></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="691d7-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="691d7-0-0"><span data-offset-key="691d7-0-0"><span data-text="true">LSK 的行情不是一开始就分裂。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="0a6e0-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="0a6e0-0-0"><span data-offset-key="0a6e0-0-0"><span data-text="true">9 月 10 日到 12 日，各个交易所的价格基本同步。OKX 和 Binance 的五分钟价格差，中位数约 2.9%，95% 的时间在约 5.8%以内。对于这种小币，5% 左右的差距并不足以说明出现了机会。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="b06f0-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="b06f0-0-0"><span data-offset-key="b06f0-0-0"><span data-text="true">价格分层从 9 月 13 日上午开始。</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="3v2h1" data-offset-key="4e629-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4e629-0-0"><span data-offset-key="4e629-0-0"><span data-text="true">00:00—09:00    各所同步上涨
+09:04           Upbit 折价首次超过 20%
+10:35           OKX 折价首次超过 20%
+10:45           OKX 折价超过 30%
+11:13—11:15    OKX、Upbit 折价超过 50%
+11:29—11:41    各所先后见顶，最大折价约 73%—76%
+12:00 以后      全体下跌，价差却没有消失</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="e6212-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="e6212-0-0"><span data-offset-key="e6212-0-0"><span data-text="true">三组交易所逐渐分成了两个价格层。</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="3v2h1" data-offset-key="873b0-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="873b0-0-0"><span data-offset-key="873b0-0-0"><span data-text="true">较高价格层：Binance / Bithumb / Gate / Kraken
+
+                 巨大价差
+
+较低价格层：OKX / Upbit</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="423ef-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="423ef-0-0"><span data-offset-key="423ef-0-0"><span data-text="true">这里有个很有意思的细节。Upbit 和 Bithumb 都是韩国交易所，同一天、同一个 LSK，价格却分属两层。这基本排除了“只是韩元汇率算错”这种解释。BTC 和 XRP 在同期的跨所偏差也不到 0.5%。问题出在 LSK 自己的场所结构。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="d8871-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="d8871-0-0"><span data-offset-key="d8871-0-0"><span data-text="true">9 月 13 日 11:37 前后，Binance 现货最高到 $2.00，OKX 最高约 $1.41，Upbit 最高只有约 680 KRW，折合约 $0.50。几分钟后，OKX 相对 Binance 的折价达到约 73%，Upbit 达到约 76%。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="670ef-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="670ef-0-0"><span data-offset-key="670ef-0-0"><span data-text="true">如果便宜侧真的是一个随手可捡的套利机会，崩盘后它应该向贵侧靠近。但实际情况是，所有交易所都在下跌，便宜侧跌得更深。到 9 月 14 日下午，Binance 仍约 $0.93，OKX 约 $0.40，Upbit 约 $0.38，折价继续维持在 50%以上。</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="3v2h1" data-offset-key="859a8-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="859a8-0-0"><span data-offset-key="859a8-0-0"><span data-text="true">很多人想象的收敛：
+$0.40 ─────────→ $0.90
+便宜侧上涨
+
+LSK 当时更接近：
+$2.00 ───────→ $0.93
+$1.41 ───────→ $0.40
+两边一起跌，便宜侧跌得更深</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="5909c-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5909c-0-0"><span data-offset-key="5909c-0-0"><span data-text="true">这段走势里，价差有所收窄，便宜侧多头仍然亏钱。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h1 class="longform-header-one" data-block="true" data-editor="3v2h1" data-offset-key="12dee-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="12dee-0-0"><span data-offset-key="12dee-0-0"><span data-text="true">为什么没人真想买，空头还是会爆仓</span></span></div></h1></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="986db-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="986db-0-0"><span data-offset-key="986db-0-0"><span data-text="true">群里经常说，这种币没有多少人真的想买，价格却越拉越高，最后把做空的人全轧掉。这里的“没人买”通常指缺少持续的基本面需求。成交层面始终有人买，每一笔成交都有买方和卖方。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="9ba8c-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9ba8c-0-0"><span data-offset-key="9ba8c-0-0"><span data-text="true">小币的价格由边际订单推动。盘口很薄时，</span></span><span data-offset-key="9ba8c-0-1" style="font-weight: bold;"><span data-text="true">做市商再把卖单撤掉，少量市价买单就可以连续吃掉多个档位。最初的上涨不需要特别多的资金。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="d0fc2-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="d0fc2-0-0"><span data-offset-key="d0fc2-0-0" style="font-weight: bold;"><span data-text="true">接下来，空头会自己提供更多买盘。</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="3v2h1" data-offset-key="6fed1-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="6fed1-0-0"><span data-offset-key="6fed1-0-0"><span data-text="true">少量主动买单推高价格
+          ↓
+第一批空头止损，买入平仓
+          ↓
+价格继续上涨
+          ↓
+更多空头触发强平
+          ↓
+交易所强制买入平空
+          ↓
+新的买单继续推高价格</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="667ce-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="667ce-0-0"><span data-offset-key="667ce-0-0"><span data-text="true">开空时卖出去的合约，最后必须买回来。每增加一批空头，市场里就多了一批潜在的未来买单。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="9cfa6-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9cfa6-0-0"><span data-offset-key="9cfa6-0-0"><span data-text="true">如果做空的人很多，清算价格又集中在相近区域，拉过第一道线以后，后面的买盘就可能由强平系统接力。后半段上涨未必来自新的 LSK 信仰，主要来自空头被迫买回。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="9c665-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9c665-0-0"><span data-offset-key="9c665-0-0"><span data-text="true">LSK 当时的数据和这个机制是相符的。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="1fd1b-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1fd1b-0-0"><span data-offset-key="1fd1b-0-0" style="font-weight: bold;"><span data-text="true">Binance LSKUSDT 的名义持仓量从 9 月 10 日约 $1.97M，增加到 9 月 13 日 11:30 的约 $64.2M。永续价格一度高于指数约 22.8%。永续 24 小时成交量达到约 $2.10B，远高于现货。行情已经高度杠杆化。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="38ccb-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="38ccb-0-0"><span data-offset-key="38ccb-0-0"><span data-text="true">这些数据无法证明是谁在拉盘，也不能证明存在有组织的操纵。它们能说明另一件事：</span></span><span data-offset-key="38ccb-0-1" style="font-weight: bold;"><span data-text="true">市场里已经堆积了足够多的杠杆仓位，价格继续上涨时，强平会制造真实的被动买单。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="79de3-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="79de3-0-0"><span data-offset-key="79de3-0-0"><span data-text="true">正常情况下，套利者会限制贵侧上涨。他们从别处买入现货，转进贵侧卖掉，新的卖盘会压住价格。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="2e118-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="2e118-0-0"><span data-offset-key="2e118-0-0"><span data-text="true">一旦 LSK 无法及时转入贵侧，这个上限就会变弱。</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="3v2h1" data-offset-key="69f9b-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="69f9b-0-0"><span data-offset-key="69f9b-0-0"><span data-text="true">贵侧价格上涨
+    ↓
+套利者想转入现货卖出
+    ↓
+充值 / 提币 / 链路受限
+    ↓
+外部卖盘进不来
+    ↓
+空头继续成为清算目标</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="89c87-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="89c87-0-0"><span data-offset-key="89c87-0-0"><span data-text="true">“贵侧已经明显高估”只提供方向判断。裸空还得扛过价格回落前的下一轮上涨。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h1 class="longform-header-one" data-block="true" data-editor="3v2h1" data-offset-key="98123-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="98123-0-0"><span data-offset-key="98123-0-0"><span data-text="true">四种操作放回 LSK，会发生什么</span></span></div></h1></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="3v2h1" data-offset-key="f5d2b-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="f5d2b-0-0"><span data-offset-key="f5d2b-0-0"><span data-text="true">买入便宜侧</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="e1d94-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="e1d94-0-0"><span data-offset-key="e1d94-0-0"><span data-text="true">最直接的想法是，OKX 只有约 $0.40，买入以后等它补涨。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="54da7-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="54da7-0-0"><span data-offset-key="54da7-0-0"><span data-text="true">它的问题是，价差可能通过贵侧下跌来收敛。便宜侧自己也可能继续下跌。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="20501-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="20501-0-0"><span data-offset-key="20501-0-0"><span data-text="true">历史模拟里，如果在 9 月 13 日 11:41、折价最宽的时候买入 OKX，到 9 月 14 日 13:39，OKX 这一腿仍亏约 23.7%。同期价差确实变小了一些，但没有给便宜侧多头带来利润。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="fb8e5-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="fb8e5-0-0"><span data-offset-key="fb8e5-0-0"><span data-text="true">这笔交易赚的是“便宜侧恢复价值”的钱。</span></span><span data-offset-key="fb8e5-0-1" style="font-weight: bold;"><span data-text="true">只有通道恢复、资产重新可交割，或者买盘回到便宜侧，它才可能成立。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="3v2h1" data-offset-key="aa34b-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="aa34b-0-0"><span data-offset-key="aa34b-0-0"><span data-text="true">在贵侧裸空</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="90a2d-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="90a2d-0-0"><span data-offset-key="90a2d-0-0"><span data-text="true">裸空押注贵侧泡沫破裂。它不需要转币，也可能同时赚到 LSK 整体下跌和价差收敛。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="57e92-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="57e92-0-0"><span data-offset-key="57e92-0-0" style="font-weight: bold;"><span data-text="true">问题在于，高点只能事后确认。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="29b2a-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="29b2a-0-0"><span data-offset-key="29b2a-0-0"><span data-text="true">LSK 的永续曾经明显高于指数，持仓量又快速膨胀。</span></span><span data-offset-key="29b2a-0-1" style="font-weight: bold;"><span data-text="true">很多人看到这种结构会继续开空，结果空头越来越拥挤。价格再拉一段，方向最终看对的人也可能提前爆仓。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="dbb40-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="dbb40-0-0"><span data-offset-key="dbb40-0-0" style="font-weight: bold;"><span data-text="true">极端期资金费同样不友好。</span></span><span data-offset-key="dbb40-0-1"><span data-text="true">Binance 一度把结算周期从四小时缩短到一小时，空头持续向多头付费。价格横着不跌，持仓成本也会不断增加。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="3v2h1" data-offset-key="609e5-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="609e5-0-0"><span data-offset-key="609e5-0-0"><span data-text="true">买便宜侧，同时空贵侧</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="73fc3-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="73fc3-0-0"><span data-offset-key="73fc3-0-0"><span data-text="true">这个结构接近套利的外形，也很容易低估路径风险。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="84e12-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="84e12-0-0"><span data-offset-key="84e12-0-0" style="font-weight: bold;"><span data-text="true">如果过早进入，贵侧空头可能在轧空时先产生巨大亏损。便宜侧现货的浮盈无法自动转成贵侧保证金，两家交易所也不会帮你合并计算净敞口。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="72f6a-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="72f6a-0-0"><span data-offset-key="72f6a-0-0"><span data-text="true">已有的 close-to-close 模拟中，事件前进入等数量双腿结构，轧空瞬间的账面回撤按 OKX 名义计算一度达到约 -777%，整段路径收益约 -234.6%。这是收盘价代理计算，不是真实订单回报，但量级足以说明双腿仓位可能在价差收敛前就已经无法维持。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="3v2h1" data-offset-key="bc12f-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="bc12f-0-0"><span data-offset-key="bc12f-0-0"><span data-text="true">什么都不做</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="bdbcd-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="bdbcd-0-0"><span data-offset-key="bdbcd-0-0"><span data-text="true">当时还有一个选项：观察，不交易。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="f577b-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="f577b-0-0"><span data-offset-key="f577b-0-0"><span data-text="true">如果我无法确认哪边能充提、哪边的资产可以交割、双腿是否都能成交，也不知道裸空能承受多大的继续上涨，那么零仓位就是一个正常结果。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="424c6-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="424c6-0-0"><span data-offset-key="424c6-0-0" style="font-weight: bold;"><span data-text="true">交易框架也应该尽快排除收益看着很大、实际无法执行的机会。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h1 class="longform-header-one" data-block="true" data-editor="3v2h1" data-offset-key="7c411-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7c411-0-0"><span data-offset-key="7c411-0-0"><span data-text="true">下次遇到类似行情，我会怎么处理</span></span></div></h1></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="c6566-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="c6566-0-0"><span data-offset-key="c6566-0-0"><span data-text="true">目前可以把判断顺序暂时整理为六步，后续还要用更多事件继续检验。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="3v2h1" data-offset-key="b3d3b-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="b3d3b-0-0"><span data-offset-key="b3d3b-0-0"><span data-text="true">第一步：先查资产和通道</span></span></div></h2></div><blockquote class="longform-blockquote" data-block="true" data-editor="3v2h1" data-offset-key="0e0df-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="0e0df-0-0"><span data-offset-key="0e0df-0-0"><span data-text="true">ticker / 合约地址
+        ↓
+两边支持哪条链
+        ↓
+充值和提币是否同时开放
+        ↓
+到账时间、最小额、手续费
+        ↓
+有没有迁移、关链、下架或只可平仓</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="62307-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="62307-0-0"><span data-offset-key="62307-0-0"><span data-text="true">只要资产无法在预期时间内交割，就先从“套利”降级为事件交易。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="3v2h1" data-offset-key="e3709-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="e3709-0-0"><span data-offset-key="e3709-0-0"><span data-text="true">第二步：确认价差能成交</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="9bdb8-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9bdb8-0-0"><span data-offset-key="9bdb8-0-0"><span data-text="true">K 线高点和低点不能直接拿来算套利收益。计算要使用同一时刻的 bid、ask、时间戳和盘口深度。</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="3v2h1" data-offset-key="3c863-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="3c863-0-0"><span data-offset-key="3c863-0-0"><span data-text="true">屏幕价差
+    ↓ 换成真实买一 / 卖一
+BBO 价差
+    ↓ 加入目标仓位
+VWAP 价差
+    ↓ 扣除全部成本
+可执行净优势</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="4f9a4-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4f9a4-0-0"><span data-offset-key="4f9a4-0-0"><span data-text="true">LSK 当时 OKX 现货在价格上下 0.5% 范围内，买盘深度只有约 $2.5K。扩大到 5%，累计也只有约 $12.5K。屏幕上几十个百分点的价差，容量可能只够很小的仓位。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="3v2h1" data-offset-key="95731-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="95731-0-0"><span data-offset-key="95731-0-0"><span data-text="true">第三步：至少比较三个场所</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="d1b1d-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="d1b1d-0-0"><span data-offset-key="d1b1d-0-0"><span data-text="true">只看两个交易所，很容易误判谁出了问题。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="239c3-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="239c3-0-0"><span data-offset-key="239c3-0-0"><span data-text="true">如果五个交易所都在 $0.90，只有一个在 $0.40，便宜侧更可能在给自身限制定价。如果只有一个交易所在 $0.90，其他地方都是 $0.40，贵侧发生隔离上涨的可能性更高。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="f3f2d-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="f3f2d-0-0"><span data-offset-key="f3f2d-0-0"><span data-text="true">还要把现货、永续和指数分开看。永续显著偏离指数，说明杠杆市场可能正在主导行情。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="3v2h1" data-offset-key="00a5c-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="00a5c-0-0"><span data-offset-key="00a5c-0-0"><span data-text="true">第四步：把收敛方向拆开</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="1ebe6-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1ebe6-0-0"><span data-offset-key="1ebe6-0-0"><span data-text="true">价差会通过不同方向收敛，至少要分别模拟下面几种路径。</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="3v2h1" data-offset-key="7416a-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7416a-0-0"><span data-offset-key="7416a-0-0"><span data-text="true">A. 便宜侧上涨，贵侧不动
+B. 贵侧下跌，便宜侧不动
+C. 两边一起下跌
+D. 两边一起上涨
+E. 价差长期不收敛</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="4faf6-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4faf6-0-0"><span data-offset-key="4faf6-0-0"><span data-text="true">买便宜侧主要受益于 A。裸空贵侧主要受益于 B 和部分 C。双腿价差想覆盖更多路径，却要额外承担强平、资金费和两所保证金隔离。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="3v2h1" data-offset-key="80cc6-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="80cc6-0-0"><span data-offset-key="80cc6-0-0"><span data-text="true">第五步：计算两件事</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="af8b3-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="af8b3-0-0"><span data-offset-key="af8b3-0-0"><span data-text="true">第一件是这笔交易理论上能赚多少：</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="3v2h1" data-offset-key="65e37-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="65e37-0-0"><span data-offset-key="65e37-0-0"><span data-text="true">净优势
+= 可成交价差
+- 双边手续费
+- 滑点
+- 资金费
+- 提现与跨链成本
+- 等待时间的价格风险
+- 单腿失败缓冲</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="5fa32-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5fa32-0-0"><span data-offset-key="5fa32-0-0"><span data-text="true">第二件是这笔交易能否维持到判断兑现。</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="3v2h1" data-offset-key="eaf2c-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="eaf2c-0-0"><span data-offset-key="eaf2c-0-0"><span data-text="true">仓位生存空间
+&gt; 继续轧空的幅度
++ 保证金变化
++ 持仓期间资金费
++ 单腿无法退出的损失</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="80463-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="80463-0-0"><span data-offset-key="80463-0-0"><span data-text="true">如果第二个问题算不清楚，理论收益再高也不能放大仓位。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="3v2h1" data-offset-key="d402c-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="d402c-0-0"><span data-offset-key="d402c-0-0"><span data-text="true">第六步：把验证分层</span></span></div></h2></div><blockquote class="longform-blockquote" data-block="true" data-editor="3v2h1" data-offset-key="627b8-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="627b8-0-0"><span data-offset-key="627b8-0-0"><span data-text="true">公开数据观察
+    ↓
+paper trading
+    ↓
+账户内确认充提
+    ↓
+最小额往返验证
+    ↓
+积累多个同类事件
+    ↓
+才考虑形成正式策略</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="bc4c8-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="bc4c8-0-0"><span data-offset-key="bc4c8-0-0"><span data-text="true">LSK 这次完成了公开数据研究、模拟，以及账户页面的网络选项确认。各交易所能否同时充提、到账要多久仍未证实，也没有进入真实资金验证。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h1 class="longform-header-one" data-block="true" data-editor="3v2h1" data-offset-key="f5e1b-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="f5e1b-0-0"><span data-offset-key="f5e1b-0-0"><span data-text="true">一张可以保存的行动卡</span></span></div></h1></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="26c3e-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="26c3e-0-0"><span data-offset-key="26c3e-0-0"><span data-text="true">下次看到“某币跨所价差 30%”时，可以先过下面这张表。</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="3v2h1" data-offset-key="6378a-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="6378a-0-0"><span data-offset-key="6378a-0-0"><span data-text="true">[资产]
+□ 两边是同一合约、同一版本的资产吗？
+□ 两边支持同一条充值和提币链吗？
+□ 现在真的可以充、可以提吗？
+
+[成交]
+□ 两边实时 bid / ask 是多少？
+□ 报价有没有过期？
+□ 按我的仓位计算，VWAP 以后还剩多少价差？
+□ 两条腿能同时成交吗？
+
+[结构]
+□ 多数交易所在哪一个价格层？
+□ 是便宜侧无法转出，还是贵侧无法充值？
+□ 永续是否偏离指数？
+□ OI、资金费和清算是否已经很拥挤？
+
+[路径]
+□ 价差靠便宜侧上涨，还是贵侧下跌？
+□ 两边一起跌，我会怎样？
+□ 两边继续涨，我会不会先爆仓？
+□ 价差几天不收敛，我怎么退出？
+
+[执行]
+□ 净收益是否覆盖费用、滑点和资金费？
+□ 单腿失败时怎么处理？
+□ 最坏结果只是亏损，还是币提不出、仓位也平不了？</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="65a8e-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="65a8e-0-0"><span data-offset-key="65a8e-0-0"><span data-text="true">其中任何一个决定交割或生存的问题没有答案，我都会先停下来。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h1 class="longform-header-one" data-block="true" data-editor="3v2h1" data-offset-key="5844a-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5844a-0-0"><span data-offset-key="5844a-0-0"><span data-text="true">TUT 为什么是另一个物种</span></span></div></h1></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="320ea-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="320ea-0-0"><span data-offset-key="320ea-0-0"><span data-text="true">TUT 也出现过非常夸张的跨所价差，但结构和 LSK 不一样。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="f51db-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="f51db-0-0"><span data-offset-key="f51db-0-0"><span data-text="true">2026 年 8 月 9 日，Bitget 与 Binance 的 TUT 永续价差在几分钟内快速扩大，最大分钟级对称价差接近 120%。超过 20% 的窗口大约只有三分钟，超过 50% 只有两分钟，随后迅速收敛。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="f5622-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="f5622-0-0"><span data-offset-key="f5622-0-0"><span data-text="true">群聊里留下了很多单腿成交失败的记录：现货显示成交但余额没减少，某一边平掉了，另一边却没有卖出去，看到 40% 或 50% 的价差也吃不进去。</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="3v2h1" data-offset-key="aa8df-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="aa8df-0-0"><span data-offset-key="aa8df-0-0"><span data-text="true">LSK：价差持续几十小时
+核心问题：链路、充提和场所隔离
+
+TUT：价差只持续几分钟
+核心问题：速度、盘口和单腿成交失败</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="c87af-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="c87af-0-0"><span data-offset-key="c87af-0-0"><span data-text="true">它们都有巨大的跨所价差，机会结构却不同。以后再出现第三个案例，也得重新判断通道、盘口和收敛路径。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h1 class="longform-header-one" data-block="true" data-editor="3v2h1" data-offset-key="5ceb2-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5ceb2-0-0"><span data-offset-key="5ceb2-0-0"><span data-text="true">这次没有实盘操作</span></span></div></h1></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="12d79-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="12d79-0-0"><span data-offset-key="12d79-0-0"><span data-text="true">先做了一下复盘和研究，没有实盘。目前仍缺各交易所充提方向和实际到账时间。没有这组信息，LSK 更适合继续观察和模拟。然后最近在忙 Arc 和一些工作上的事情。暂时没时间去挨个交易所测试了。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="2a25a-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="2a25a-0-0"><span data-offset-key="2a25a-0-0"><span data-text="true">下一次再遇到类似行情，可以用这个评估框架和 Agent 来快速计算风险。感觉也可以开发个辅助工具了。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="686c4-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="686c4-0-0"><span data-offset-key="686c4-0-0"><span data-text="true">—</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h1 class="longform-header-one" data-block="true" data-editor="3v2h1" data-offset-key="c9671-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="c9671-0-0"><span data-offset-key="c9671-0-0"><span data-text="true">延伸阅读</span></span></div></h1></div><div class="longform-unstyled" data-block="true" data-editor="3v2h1" data-offset-key="6d62a-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="6d62a-0-0"><span data-offset-key="6d62a-0-0"><span data-text="true">这篇属于我持续整理的套利学习和工具实践。想继续往下看，可以从这些文章开始：</span></span></div></div><ul class="public-DraftStyleDefault-ul" data-offset-key="faafb-0-0"><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-reset public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="3v2h1" data-offset-key="faafb-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="faafb-0-0"><div class="css-g5y9jx r-1loqt21 r-1471scf r-o7ynqc r-6416eg r-1ny4l3l"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-rjixqe r-16dba41 r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="https://x.com/brucexu_eth/status/2082831191376613391" rel="noopener noreferrer nofollow" role="link" style="color: rgb(15, 20, 25);" target="_blank"><span data-offset-key="faafb-0-0"><span data-text="true">我发起了链上套利残酷共学，21 天来一起使用 LI.FI 和 Hermes 学习链上套利吧</span></span></a></div></div></li><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="3v2h1" data-offset-key="6ee1a-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="6ee1a-0-0"><div class="css-g5y9jx r-1loqt21 r-1471scf r-o7ynqc r-6416eg r-1ny4l3l"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-rjixqe r-16dba41 r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="https://x.com/brucexu_eth/status/2085022891339554855" rel="noopener noreferrer nofollow" role="link" style="color: rgb(15, 20, 25);" target="_blank"><span data-offset-key="6ee1a-0-0"><span data-text="true">套利共学｜从发现价差到执行：如何接入 LI.FI 实现跨链套利和 AI Agent 集成</span></span></a></div></div></li><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="3v2h1" data-offset-key="b7665-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="b7665-0-0"><div class="css-g5y9jx r-1loqt21 r-1471scf r-o7ynqc r-6416eg r-1ny4l3l"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-rjixqe r-16dba41 r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="https://x.com/brucexu_eth/status/2086652810905751610" rel="noopener noreferrer nofollow" role="link" style="color: rgb(15, 20, 25);" target="_blank"><span data-offset-key="b7665-0-0"><span data-text="true">套利共学｜新手必读链上套利的第一性原理：从价差到可执行净利润</span></span></a></div></div></li><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="3v2h1" data-offset-key="70980-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="70980-0-0"><div class="css-g5y9jx r-1loqt21 r-1471scf r-o7ynqc r-6416eg r-1ny4l3l"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-rjixqe r-16dba41 r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="https://x.com/brucexu_eth/status/2088162020726386703" rel="noopener noreferrer nofollow" role="link" style="color: rgb(15, 20, 25);" target="_blank"><span data-offset-key="70980-0-0"><span data-text="true">套利共学｜做链上套利需要哪些工具？API、RPC、钱包与服务器配置（附 API 支持登记）</span></span></a></div></div></li><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="3v2h1" data-offset-key="2b8a1-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="2b8a1-0-0"><div class="css-g5y9jx r-1loqt21 r-1471scf r-o7ynqc r-6416eg r-1ny4l3l"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-rjixqe r-16dba41 r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="https://x.com/brucexu_eth/status/2098287496446787607" rel="noopener noreferrer nofollow" role="link" style="color: rgb(15, 20, 25);" target="_blank"><span data-offset-key="2b8a1-0-0"><span data-text="true">新链来了，大家都是怎么赚钱的？从 Robinhood 复盘到 ARC 准备</span></span></a></div></div></li></ul></div></div></div></div></div></div></div></article><div class="css-g5y9jx r-12kyg2d"><div class="css-g5y9jx r-k4xj1c r-18u37iz r-1wtj0ep"><div class="css-g5y9jx r-1wbh5a2 r-1a11zyx"><div class="css-g5y9jx r-1d09ksm r-18u37iz r-1wbh5a2 r-1471scf"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(83, 100, 113);"><a aria-describedby="id__xts5nvp3rs" aria-label="上午12:50 · 2026年9月15日" class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-xoduu5 r-1q142lx r-1w6e6rj r-9aw3ui r-3s2u2q r-1loqt21" href="/brucexu_eth/status/2099526143804387697" role="link" style="color: rgb(83, 100, 113);"><time datetime="2026-09-14T15:50:14.000Z">上午12:50 · 2026年9月15日</time></a></div><div aria-hidden="true" class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1q142lx r-n7gxbd" dir="ltr" style="color: rgb(83, 100, 113);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">·</span></div><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1loqt21" dir="ltr" href="/brucexu_eth/status/2099526143804387697/analytics" role="link" style="color: rgb(15, 20, 25);"><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1b43r93 r-1cwl3u0 r-b88u0q" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">4,977</span></span></span></div> <span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1b43r93 r-1cwl3u0" style="color: rgb(83, 100, 113);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">查看</span></span></a></div></div><div class="css-g5y9jx r-18u37iz"></div></div></div><div class="css-g5y9jx r-j5o65s r-rull8r r-qklmqi"><div class="css-g5y9jx"><div aria-label="1 回复、10 次转帖、39 喜欢、43 书签、4977 次观看" class="css-g5y9jx r-1kbdv8c r-18u37iz r-1oszu61 r-3qxfft r-n7gxbd r-1dgieki r-1efd50x r-5kkj8d r-h3s6tt r-1wtj0ep" id="id__01st3lhxphu2" role="group"><div class="css-g5y9jx r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="1 回复。回复" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="reply" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01zm8.005-6c-3.317 0-6.005 2.69-6.005 6 0 3.37 2.77 6.08 6.138 6.01l.351-.01h1.761v2.3l5.087-2.81c1.951-1.08 3.163-3.13 3.163-5.36 0-3.39-2.744-6.13-6.129-6.13H9.756z"></path></g></svg></div><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">1</span></span></span></div></div></button></div><div class="css-g5y9jx r-18u37iz r-1h0z5md r-13awgt0"><button aria-expanded="false" aria-haspopup="menu" aria-label="10 次转帖。转帖" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="retweet" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"></path></g></svg></div><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">10</span></span></span></div></div></button></div><div class="css-g5y9jx r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="39 喜欢次数。喜欢" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="like" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"></path></g></svg></div><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">39</span></span></span></div></div></button></div><div class="css-g5y9jx r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="43 书签。加入书签" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="bookmark" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M4 4.5C4 3.12 5.119 2 6.5 2h11C18.881 2 20 3.12 20 4.5v18.44l-8-5.71-8 5.71V4.5zM6.5 4c-.276 0-.5.22-.5.5v14.56l6-4.29 6 4.29V4.5c0-.28-.224-.5-.5-.5h-11z"></path></g></svg></div><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">43</span></span></span></div></div></button></div><div class="css-g5y9jx" style="align-content: stretch; justify-content: inherit; display: inline-grid; transform: rotate(0deg) scale(1) translate3d(0px, 0px, 0px);"><div class="css-g5y9jx r-18u37iz r-1h0z5md"><button aria-expanded="false" aria-haspopup="menu" aria-label="分享帖子" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M12 2.59l5.7 5.7-1.41 1.42L13 6.41V16h-2V6.41l-3.3 3.3-1.41-1.42L12 2.59zM21 15l-.02 3.51c0 1.38-1.12 2.49-2.5 2.49H5.5C4.11 21 3 19.88 3 18.5V15h2v3.5c0 .28.22.5.5.5h12.98c.28 0 .5-.22.5-.5L19 15h2z"></path></g></svg></div></div></button></div></div></div></div></div></div></div></div></article>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>X 上的 黄小木：“Jev 模型从 0 到 1 小白教程” / X</title>
+<!-- Injected Original Styles -->
+<style id="draftjs-styles_0">
+    .draftjs-styles_0 .public-DraftEditorPlaceholder-root {
+      color: #536471;
+    }
+
+    .draftjs-styles_0 .public-DraftEditorPlaceholder-hasFocus {
+      color: #536471;
+    }
+
+    
+  </style>
+<style id="draftjs-styles">
+     .DraftEditor-editorContainer, .DraftEditor-root, .public-DraftEditor-content {
+        height: inherit;
+        max-height: inherit;
+        min-height: inherit;
+        text-align: initial;
+    }
+
+    .public-DraftEditor-content[contenteditable=true] {
+        -moz-user-modify: read-write-plaintext-only;
+        -webkit-user-modify: read-write-plaintext-only;
+    }
+
+    .format-inline .public-DraftEditor-content[contenteditable=true] {
+      -moz-user-modify: read-write;
+      -webkit-user-modify: read-write;
+    }
+
+    .DraftEditor-root {
+        width: 100%;
+        position: relative;
+        -webkit-user-select: none;
+    }
+
+    .DraftEditor-editorContainer {
+        background-color: rgba(255, 255, 255, 0);
+        border-left: .1px solid transparent;
+        position: relative;
+        z-index: 1;
+    }
+
+    .public-DraftEditor-block {
+        position: relative;
+    }
+
+    .DraftEditor-alignLeft .public-DraftStyleDefault-block {
+        text-align: left;
+    }
+
+    .DraftEditor-alignLeft .public-DraftEditorPlaceholder-root {
+        left: 0;
+        text-align: left;
+    }
+
+    .DraftEditor-alignCenter .public-DraftStyleDefault-block {
+        text-align: center
+    }
+
+    .DraftEditor-alignCenter .public-DraftEditorPlaceholder-root {
+        margin: 0 auto;
+        text-align: center;
+        width: 100%
+    }
+
+    .DraftEditor-alignRight .public-DraftStyleDefault-block {
+        text-align: right;
+    }
+
+    .DraftEditor-alignRight .public-DraftEditorPlaceholder-root {
+        right: 0;
+        text-align: right;
+    }
+
+    .public-DraftEditorPlaceholder-root {
+        padding-bottom: 2px;
+        padding-top: 2px;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .public-DraftEditorPlaceholder-inner {
+        user-select: none;
+        -webkit-user-select: none;
+    }
+
+    .DraftEditorPlaceholder-hidden {
+        display: none;
+    }
+
+    .public-DraftStyleDefault-block {
+        overflow:hidden;
+        padding-bottom: 2px;
+        padding-top: 2px;
+        position: relative;
+        white-space: pre-wrap;
+    }
+
+    /* Only a handful of CSS rules work on br tags and user-select isn't one */
+    div:only-child > .public-DraftStyleDefault-block > span > br::selection {
+        background: transparent;
+    }
+
+    /*
+       Safari doesn't let you change ::selection on br elements,
+       but Chrome needs it here
+    */
+    div:only-child > .public-DraftStyleDefault-block > span:has(br)::selection {
+        background: transparent;
+    }
+
+    .public-DraftStyleDefault-ltr {
+        direction: ltr;
+        text-align: left;
+    }
+
+    .public-DraftStyleDefault-rtl {
+        direction: rtl;
+        text-align: right;
+    }
+
+    .DraftEditor-editorContainer a {
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        margin-bottom: inherit;
+        margin-top: inherit;
+    }
+
+    .singleline .public-DraftStyleDefault-block {
+        overflow-x: auto;
+        scrollbar-width: none;
+        white-space: nowrap;
+        -ms-overflow-style: none;
+    }
+
+    .singleline .public-DraftStyleDefault-block::-webkit-scrollbar {
+        display: none;
+    }
+  </style>
+<style id="longform-styles">
+    .longform-header-one {
+        font-size: 31px;
+        font-weight: 800;
+        line-height: 40px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-header-one-narrow {
+        font-size: calc(20px + 1px);
+        font-weight: 800;
+        line-height: 28px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-header-two {
+        font-size: 26px;
+        font-weight: 800;
+        line-height: 36px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-header-two-narrow {
+        font-size: calc(17px + 1px);
+        font-weight: 800;
+        line-height: 24px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-unstyled, .longform-blockquote {
+        font-size: 17px;
+        line-height: 28px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-unstyled-narrow, .longform-blockquote-narrow {
+        font-size: 17px;
+        line-height: 28px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-unordered-list-item, .longform-ordered-list-item {
+        display: block;
+        font-size: 17px;
+        line-height: 28px;   
+        margin-bottom: 12px;
+        margin-left: calc(28px + 2px);
+        margin-top: 0;
+    }
+
+    .longform-unordered-list-item-narrow, .longform-ordered-list-item-narrow {
+        display: block;
+        font-size: 17px;
+        line-height: 28px;   
+        margin-bottom: calc(12px / 2);
+        margin-left: 36px;
+        margin-top: 0;
+    }
+
+    .longform-blockquote, .longform-blockquote-narrow {
+        margin-bottom: calc(24px + 2px);
+        margin-left: 0;
+        margin-top: calc(-2px);
+        padding-left: calc(24px + 3px);
+        position: relative;
+    }
+
+    .longform-blockquote:before, .longform-blockquote-narrow:before {
+        background: #37434D;
+        border-radius: 9999px;
+        bottom: 0;
+        content: "";
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 3px;
+    }
+
+    .longform-header-one .public-DraftStyleDefault-block,
+    .longform-header-two .public-DraftStyleDefault-block,
+    .longform-unstyled .public-DraftStyleDefault-block,
+    .longform-unordered-list-item .public-DraftStyleDefault-block,
+    .longform-ordered-list-item .public-DraftStyleDefault-block,
+    .longform-header-one-narrow .public-DraftStyleDefault-block,
+    .longform-header-two-narrow .public-DraftStyleDefault-block,
+    .longform-unstyled-narrow .public-DraftStyleDefault-block,
+    .longform-unordered-list-item-narrow .public-DraftStyleDefault-block,
+    .longform-ordered-list-item-narrow .public-DraftStyleDefault-block {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    .public-DraftStyleDefault-ul, .public-DraftStyleDefault-ol {
+        counter-reset: item;
+        margin-bottom: 28px;
+        margin-top: 0;
+        padding-left: 0;
+    }
+
+    .longform-unordered-list-item:before, .longform-ordered-list-item:before,
+    .longform-unordered-list-item-narrow:before, .longform-ordered-list-item-narrow:before {
+        position: absolute;
+        margin-left: calc(-1 * (28px + 2px));
+    }
+
+    .longform-unordered-list-item:before {
+        content: counter(item, disc);
+        font-size: 23px
+    }
+
+    .longform-unordered-list-item-narrow:before {
+        content: counter(item, disc);
+        font-size: 20px
+    }
+
+    .longform-ordered-list-item:before, .longform-ordered-list-item-narrow:before {
+        content: counter(item) ". ";
+        counter-increment: item;
+    }
+
+    .longform-ordered-list-item::marker, .longform-ordered-list-item-narrow::marker {
+        font-variant-numeric: normal;
+    }
+</style>
+<style>input::placeholder { user-select: none; -webkit-user-select: none; } div div ::-webkit-input-placeholder { color: rgb(117, 117, 117) } iframe { color-scheme: auto; }button { text-align: inherit; font-size: inherit; font-family: inherit; color: inherit }</style>
+<style>@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-Light.a929468a.woff2) format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-Regular.58c84f6a.woff2) format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-Medium.bc7d8f1a.woff2) format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-Bold.0d6a47ca.woff2) format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-ExtraBold.b130af7a.woff2) format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}</style>
+<style>@font-face {
+  font-family: Geist;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Geist-var.2587a0ca.woff2) format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}</style>
+<style>@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Light.3a18e64a.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Light.7a5673aa.woff) format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Regular.80fda27a.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Regular.60b215ba.woff) format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Medium.f8e2739a.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Medium.20fc288a.woff) format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Bold.ebb56aba.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Bold.a573679a.woff) format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Heavy.f44ae4ea.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Heavy.d70ec7ca.woff) format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: TwitterChirpExtendedHeavy;
+  src: url(https://abs.twimg.com/fonts/v1/chirp-extended-heavy-web.woff2) format('woff2'), url(https://abs.twimg.com/fonts/v1/chirp-extended-heavy-web.woff) format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}</style>
+<style>html,body{height: 100%;}::cue{white-space:pre-line}</style>
+<style id="react-native-stylesheet">[stylesheet-group="0"]{}
+body{margin:0;}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+input::-webkit-search-cancel-button,input::-webkit-search-decoration,input::-webkit-search-results-button,input::-webkit-search-results-decoration{display:none;}
+[stylesheet-group="1"]{}
+.css-146c3p1{background-color:rgba(0,0,0,0.00);border:0 solid black;box-sizing:border-box;color:rgba(0,0,0,1.00);display:inline;font:14px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;list-style:none;margin:0px;padding:0px;position:relative;text-align:start;text-decoration:none;white-space:pre-wrap;word-wrap:break-word;}
+.css-1jxf684{background-color:rgba(0,0,0,0.00);border:0 solid black;box-sizing:border-box;color:inherit;display:inline;font:inherit;list-style:none;margin:0px;padding:0px;position:relative;text-align:inherit;text-decoration:none;white-space:inherit;word-wrap:break-word;}
+.css-9pa8cd{bottom:0px;height:100%;left:0px;opacity:0;position:absolute;right:0px;top:0px;width:100%;z-index:-1;}
+.css-g5y9jx{align-content:flex-start;align-items:stretch;background-color:rgba(0,0,0,0.00);border:0 solid black;box-sizing:border-box;display:flex;flex-basis:auto;flex-direction:column;flex-shrink:0;list-style:none;margin:0px;min-height:0px;min-width:0px;padding:0px;position:relative;text-decoration:none;z-index:0;}
+[stylesheet-group="2"]{}
+.r-11mg6pl{border-bottom-color:rgba(255,255,255,1.00);border-left-color:rgba(255,255,255,1.00);border-right-color:rgba(255,255,255,1.00);border-top-color:rgba(255,255,255,1.00);}
+.r-13awgt0{flex:1;}
+.r-17gur6a{border-bottom-left-radius:0px;border-bottom-right-radius:0px;border-top-left-radius:0px;border-top-right-radius:0px;}
+.r-1867qdf{border-bottom-left-radius:16px;border-bottom-right-radius:16px;border-top-left-radius:16px;border-top-right-radius:16px;}
+.r-1adg3ll{display:block;}
+.r-1dqxon3{overflow-x:auto;overflow-y:auto;}
+.r-1ets6dv{border-bottom-color:rgba(207,217,222,1.00);border-left-color:rgba(207,217,222,1.00);border-right-color:rgba(207,217,222,1.00);border-top-color:rgba(207,217,222,1.00);}
+.r-1fuqb1j{border-bottom-left-radius:24px;border-bottom-right-radius:24px;border-top-left-radius:24px;border-top-right-radius:24px;}
+.r-1pcd2l5{padding:20px;}
+.r-1phboty{border-bottom-style:solid;border-left-style:solid;border-right-style:solid;border-top-style:solid;}
+.r-1pp0k63{border-bottom-left-radius:0.01px;border-bottom-right-radius:0.01px;border-top-left-radius:0.01px;border-top-right-radius:0.01px;}
+.r-1q9bdsx{border-bottom-left-radius:12px;border-bottom-right-radius:12px;border-top-left-radius:12px;border-top-right-radius:12px;}
+.r-1qsk4np{overflow-x:clip;overflow-y:clip;}
+.r-1udh08x{overflow-x:hidden;overflow-y:hidden;}
+.r-1wl2o3p{border-bottom-color:rgba(229,234,236,1.00);border-left-color:rgba(229,234,236,1.00);border-right-color:rgba(229,234,236,1.00);border-top-color:rgba(229,234,236,1.00);}
+.r-1xfd6ze{border-bottom-left-radius:8px;border-bottom-right-radius:8px;border-top-left-radius:8px;border-top-right-radius:8px;}
+.r-1yadl64{border-bottom-width:0px;border-left-width:0px;border-right-width:0px;border-top-width:0px;}
+.r-494qqr{padding:32px;}
+.r-4iw3lz{border-bottom-width:0;border-left-width:0;border-right-width:0;border-top-width:0;}
+.r-4qtqp9{display:inline-block;}
+.r-6koalj{display:flex;}
+.r-bztko3{overflow-x:visible;overflow-y:visible;}
+.r-crgep1{margin:0px;}
+.r-edyy15{padding:8px;}
+.r-hvic4v{display:none;}
+.r-jxzhtn{border-bottom-color:rgba(239,243,244,1.00);border-left-color:rgba(239,243,244,1.00);border-right-color:rgba(239,243,244,1.00);border-top-color:rgba(239,243,244,1.00);}
+.r-krxsd3{display:-webkit-box;}
+.r-nsbfu8{padding:16px;}
+.r-rs99b7{border-bottom-width:1px;border-left-width:1px;border-right-width:1px;border-top-width:1px;}
+.r-sdzlij{border-bottom-left-radius:9999px;border-bottom-right-radius:9999px;border-top-left-radius:9999px;border-top-right-radius:9999px;}
+.r-t60dpp{padding:0px;}
+.r-wwvuq4{padding:0;}
+.r-xf4iuw{margin:-8px;}
+.r-xoduu5{display:inline-flex;}
+.r-xyw6el{padding:12px;}
+.r-ywje51{margin:auto;}
+.r-z2wwpe{border-bottom-left-radius:4px;border-bottom-right-radius:4px;border-top-left-radius:4px;border-top-right-radius:4px;}
+[stylesheet-group="2.1"]{}
+.r-12kyg2d{margin-bottom:16px;margin-top:16px;}
+.r-1559e4e{padding-bottom:2px;padding-top:2px;}
+.r-184id4b{margin-bottom:12px;margin-top:12px;}
+.r-1e084wi{padding-left:0px;padding-right:0px;}
+.r-1f0wa7y{padding-left:80px;padding-right:80px;}
+.r-1fkl15p{padding-left:32px;padding-right:32px;}
+.r-1mkv55d{padding-bottom:0px;padding-top:0px;}
+.r-1mmae3n{padding-bottom:12px;padding-top:12px;}
+.r-1xpp3t0{margin-left:16px;margin-right:16px;}
+.r-3o4zer{padding-left:12px;padding-right:12px;}
+.r-3pj75a{padding-left:16px;padding-right:16px;}
+.r-cnw61z{padding-bottom:4px;padding-top:4px;}
+.r-cxgwc0{padding-left:24px;padding-right:24px;}
+.r-dd0y9b{padding-bottom:20px;padding-top:20px;}
+.r-ddtstp{margin-bottom:0px;margin-top:0px;}
+.r-dp7rxi{padding-bottom:40px;padding-top:40px;}
+.r-f8sm7e{margin-left:auto;margin-right:auto;}
+.r-is05cd{padding-left:8px;padding-right:8px;}
+.r-n7gxbd{padding-left:4px;padding-right:4px;}
+.r-nj0m1c{padding-bottom:32px;padding-top:32px;}
+.r-s49dbf{margin-bottom:1px;margin-top:1px;}
+.r-sjygvo{padding-left:1em;padding-right:1em;}
+.r-u9wvl5{padding-left:20px;padding-right:20px;}
+.r-w7s2jr{padding-bottom:16px;padding-top:16px;}
+[stylesheet-group="2.2"]{}
+.r-10f7w94{margin-right:70px;}
+.r-1182swk{left:1px;}
+.r-15peodp{right:-9999px;}
+.r-15xeili{margin-left:-48px;}
+.r-17i1h83{margin-right:60px;}
+.r-19qo34d{left:-9999px;}
+.r-1a11zyx{margin-right:12px;}
+.r-1ca1ndr{margin-left:0.5em;}
+.r-1cwvpvk{margin-left:12px;}
+.r-1ez5h0i{margin-left:4px;}
+.r-1gs4q39{margin-right:4px;}
+.r-1iwt575{margin-right:1px;}
+.r-1kkk96v{margin-left:8px;}
+.r-1kpi4qh{margin-left:0.075em;}
+.r-1l2kgy{margin-right:0.5em;}
+.r-1l8l4mf{margin-right:10px;}
+.r-1noe1sz{padding-left:4px;}
+.r-1oukvu3{margin-left:70px;}
+.r-1q6cnnd{right:-2px;}
+.r-1rtiivn{margin-right:20px;}
+.r-1wron08{margin-right:8px;}
+.r-1x2e62v{margin-left:16px;}
+.r-2dysd3{padding-left:12px;}
+.r-2utimh{right:-4px;}
+.r-3t4u6i{margin-left:2px;}
+.r-45ll9u{left:50%;}
+.r-5f1w11{left:-2px;}
+.r-615f2u{right:1px;}
+.r-72fyl3{border-top-left-radius:32px;}
+.r-cwltf5{border-top-right-radius:32px;}
+.r-dlybji{margin-right:16px;}
+.r-faml9v{padding-right:12px;}
+.r-gd96e9{margin-right:-48px;}
+.r-hjq6k0{margin-left:1px;}
+.r-j3xhw6{border-top-left-radius:16px;}
+.r-k4bwe5{margin-right:0.075em;}
+.r-nazi8o{margin-left:20px;}
+.r-o59np7{padding-right:8px;}
+.r-ocobd0{right:50%;}
+.r-pt392{margin-left:60px;}
+.r-qjj4hq{padding-left:8px;}
+.r-st84sj{border-top-right-radius:16px;}
+.r-t1sew1{margin-left:10px;}
+.r-trst2h{padding-right:4px;}
+.r-v3tthl{left:-4px;}
+.r-x1x4zq{margin-right:2px;}
+[stylesheet-group="3"]{}
+.r-105ug2t{pointer-events:auto!important;}
+.r-109y4c4{height:1px;}
+.r-10ef88u{min-width:700px;}
+.r-10ptun7{height:16px;}
+.r-10v3vxq{transform:scaleX(-1);}
+.r-113js5t{width:1050px;}
+.r-117bsoe{margin-bottom:20px;}
+.r-11c0sde{margin-top:24px;}
+.r-11f8fnl{background-color:rgba(180,180,182,0.50);}
+.r-11j9u27{visibility:hidden;}
+.r-11yh6sk{overflow-x:hidden;}
+.r-11zy11o{background-color:rgba(201,54,204,1.00);}
+.r-1202g5r{height:90vh;}
+.r-12181gd{box-shadow:0 0 2px rgba(0,0,0,0.03) inset;}
+.r-122fvck{background-color:rgba(244,129,47,0.12);}
+.r-1279nm1{min-height:400px;}
+.r-12hfotv{width:700px;}
+.r-12rgx7y{width:7px;}
+.r-12sks89{min-height:22px;}
+.r-12vffkv>*{pointer-events:auto;}
+.r-12vffkv{pointer-events:none!important;}
+.r-12ym1je{width:18px;}
+.r-135wba7{line-height:24px;}
+.r-136ojw6{z-index:2;}
+.r-13qz1uu{width:100%;}
+.r-13w96dm{background-color:rgba(0,0,0,0.30);}
+.r-13wfysu{-webkit-text-decoration-line:none;text-decoration-line:none;}
+.r-146iojx{max-width:300px;}
+.r-1472mwg{height:24px;}
+.r-14gqq1x{margin-top:4px;}
+.r-14j79pv{color:rgba(83,100,113,1.00);}
+.r-14lw9ot{background-color:rgba(255,255,255,1.00);}
+.r-158ssxm{max-height:calc(64px * 15);}
+.r-159fyap{-moz-transition:opacity 300ms ease;-webkit-transition:opacity 300ms ease;transition:opacity 300ms ease;}
+.r-15ysp7h{min-height:32px;}
+.r-168457u{background-color:rgba(120,86,255,1.00);}
+.r-16dba41{font-weight:400;}
+.r-16eto9q{width:12px;}
+.r-16y2uox{flex-grow:1;}
+.r-176fswd{transform:translateX(-50%) translateY(-50%);}
+.r-1777fci{justify-content:center;}
+.r-178kkxs{background-color:rgba(255,237,219,1.00);}
+.r-17bb2tj{animation-duration:0.75s;}
+.r-17c3jg3{background-color:rgba(0,0,0,0.80);}
+.r-17gznlh{animation-name:r-t2lo5v;}
+.r-17leim2{background-repeat:repeat;}
+.r-17s6mgv{justify-content:flex-end;}
+.r-184en5c{z-index:1;}
+.r-18jm5s1{transition-timing-function:cubic-bezier(0,0,0,1);}
+.r-18jsvk2{color:rgba(15,20,25,1.00);}
+.r-18kxxzh{flex-grow:0;}
+.r-18tzken{width:56px;}
+.r-18u37iz{flex-direction:row;}
+.r-18yzcnr{height:22px;}
+.r-193z5jo{flex-basis:64px;}
+.r-1994a6e{min-width:400px;}
+.r-19h8fux{background-color:rgba(55,67,77,1.00);}
+.r-19qs0lw{animation-name:r-1qpf3yi;}
+.r-19wmn03{width:20px;}
+.r-19yznuf{min-height:52px;}
+.r-1abnn5w{animation-play-state:paused;}
+.r-1acpoxo{width:36px;}
+.r-1ad0z5i{word-break:break-all;}
+.r-1aockid{width:40px;}
+.r-1awozwy{align-items:center;}
+.r-1azx6h{max-height:480px;}
+.r-1b43r93{font-size:14px;}
+.r-1bimlpy{background-color:rgba(207,217,222,1.00);}
+.r-1blnp2b{width:72px;}
+.r-1blvdjr{font-size:23px;}
+.r-1cdyxaf{flex-basis:32px;}
+.r-1ceczpf{min-height:24px;}
+.r-1cf81hf{background-color:rgba(83,100,113,1.00);}
+.r-1cj0bla{font-smoothing:always;}
+.r-1cmwbt1{gap:8px;}
+.r-1cvl2hr{color:rgba(29,155,240,1.00);}
+.r-1cwl3u0{line-height:16px;}
+.r-1d2f490{left:0px;}
+.r-1ddef8g{-webkit-text-decoration-line:underline;text-decoration-line:underline;}
+.r-1dgieki{border-top-color:rgba(239,243,244,1.00);}
+.r-1dn12g7{line-height:48px;}
+.r-1dum35f{-moz-transition-property:opacity, height;-webkit-transition-property:opacity, height;transition-property:opacity, height;}
+.r-1e425wn{animation-duration:0.15s;}
+.r-1e4ma89{background-color:rgba(0,0,0,0.55);}
+.r-1e5uvyk{-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);}
+.r-1e6yznf{margin-top:-6px;}
+.r-1ebb2ja{list-style:none;}
+.r-1efd50x{border-top-style:solid;}
+.r-1f4tc2a{background-color:rgba(244,33,46,1.00);}
+.r-1ff274t{text-align:right;}
+.r-1ffj0ar{background-color:rgba(0,0,0,0.40);}
+.r-1fu8b7j{height:712px;}
+.r-1g40b8q{z-index:3;}
+.r-1g83rmp{animation-name:r-7bj9g2;}
+.r-1gkfh8e{font-size:11px;}
+.r-1gymjhz{width:68px;}
+.r-1h0z5md{justify-content:flex-start;}
+.r-1h3ijdo{height:53px;}
+.r-1h8ys4a{padding-top:4px;}
+.r-1habvwh{align-items:flex-start;}
+.r-1hjwoze{height:18px;}
+.r-1hwvwag{flex-basis:48px;}
+.r-1hycxz{width:350px;}
+.r-1iln25a{word-wrap:normal;}
+.r-1inkyih{font-size:17px;}
+.r-1ipicw7{width:300px;}
+.r-1is30e5{transform:rotate(360deg);}
+.r-1iusvr4{flex-basis:0px;}
+.r-1iww7jx{width:28px;}
+.r-1janqcz{width:16px;}
+.r-1jaylin{width:-webkit-max-content;width:-moz-max-content;width:max-content;}
+.r-1jocfgc{width:290px;}
+.r-1jte41z{min-width:350px;}
+.r-1k5gan{background-color:rgba(236,232,255,1.00);}
+.r-1k78y06{font-family:Tahoma, Arial, sans-serif;}
+.r-1kihuf0{align-self:center;}
+.r-1ld3bg{top:-4px;}
+.r-1ldzwu0{animation-timing-function:linear;}
+.r-1loqt21{cursor:pointer;}
+.r-1m3jxhj{background-color:rgba(15,20,25,1.00);}
+.r-1m4drjs{top:-6px;}
+.r-1mdbw0j{padding-bottom:0px;}
+.r-1me0s30{max-height:unset;}
+.r-1mlwlqe{flex-basis:auto;}
+.r-1mrlafo{background-position:0;}
+.r-1muvv40{animation-iteration-count:infinite;}
+.r-1mwlp6a{height:56px;}
+.r-1nao33i{color:rgba(231,233,234,1.00);}
+.r-1niwhzg{background-color:rgba(0,0,0,0.00);}
+.r-1ny4l3l{outline-style:none;}
+.r-1obr2lp{width:920px;}
+.r-1oifz5y{background-color:rgba(170,17,0,1.00);}
+.r-1oszu61{align-items:stretch;}
+.r-1otgn73{touch-action:manipulation;}
+.r-1ovo9ad{width:360px;}
+.r-1ozsyd3{height:7px;}
+.r-1p0dtai{bottom:0px;}
+.r-1peese0{margin-bottom:24px;}
+.r-1pi2tsx{height:100%;}
+.r-1pjcn9w{max-width:80vw;}
+.r-1potc6q{top:5%;}
+.r-1ps3wis{min-width:44px;}
+.r-1pz39u2{align-self:stretch;}
+.r-1q142lx{flex-shrink:0;}
+.r-1qd0xha{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+.r-1qd7xl{top:12px;}
+.r-1qi8awa{min-width:36px;}
+.r-1r5jyh0{min-height:130px;}
+.r-1r8g8re{height:36px;}
+.r-1rnoaur{overflow-y:auto;}
+.r-1rt2jqs{width:450px;}
+.r-1rttkqs{width:400px;}
+.r-1s2bzr4{margin-top:12px;}
+.r-1s2hp8q{min-height:26px;}
+.r-1sw30gj{background-color:rgba(239,243,244,1.00);}
+.r-1sxrcry{background-size:auto;}
+.r-1szxp23{min-height:53px;}
+.r-1t2qqvi{flex-basis:50%;}
+.r-1t7zxhp{width:9px;}
+.r-1tbo1j0{height:1.5rem;}
+.r-1tjplnt{box-sizing:content-box;}
+.r-1tl8opc{font-family:"Segoe UI",Meiryo,system-ui,-apple-system,BlinkMacSystemFont,sans-serif;}
+.r-1to6hqq{background-color:rgba(255,212,0,1.00);}
+.r-1tsuqlv{max-height:100vh;}
+.r-1ttztb7{text-align:inherit;}
+.r-1udbk01{text-overflow:ellipsis;}
+.r-1upvrn0{box-shadow:0 0 15px rgba(101,119,134,0.2), 0 0 3px 1px rgba(101,119,134,0.15);}
+.r-1uqa7wc{width:1197px;}
+.r-1ur9v65{padding-top:40px;}
+.r-1v2oles{top:50%;}
+.r-1vmecro{direction:rtl;}
+.r-1vqzmdl{background-color:rgba(215,246,255,1.00);}
+.r-1vr29t4{font-weight:800;}
+.r-1vsu8ta{min-height:30px;}
+.r-1vzmqqg{-webkit-font-smoothing:antialiased;}
+.r-1w2mbsr{background-color:rgba(29,155,240,0.12);}
+.r-1wb8bfx{text-decoration-thickness:2px;}
+.r-1wbh5a2{flex-shrink:1;}
+.r-1wtj0ep{justify-content:space-between;}
+.r-1wvb978{font-feature-settings:'ss01' on;}
+.r-1wyyakw{z-index:-1;}
+.r-1x61ttu{-moz-transition:transform 1s ease;-webkit-transition:transform 1s ease;transition:transform 1s ease;}
+.r-1xcajam{position:fixed;}
+.r-1xfddsp{min-height:300px;}
+.r-1xk2f4g{clip:rect(1px, 1px, 1px, 1px);}
+.r-1xnyija{background-color:rgba(250,224,250,1.00);}
+.r-1xnzce8{-moz-user-select:text;-webkit-user-select:text;user-select:text;}
+.r-1xoqx8s{flex-basis:24px;}
+.r-1xvli5t{height:1.25em;}
+.r-1y7e96w{min-width:22px;}
+.r-1ye8kvj{max-width:600px;}
+.r-1yef0xd{animation-name:r-11cv4x;}
+.r-1yjpyg1{font-size:31px;}
+.r-1ykxob0{top:60%;}
+.r-285fr0{min-width:16px;}
+.r-2o02ov{margin-top:40px;}
+.r-2r9icm{background-color:rgba(255,122,0,1.00);}
+.r-2yi16{min-height:36px;}
+.r-33ulu8{width:600px;}
+.r-36ujnk{font-style:italic;}
+.r-37tt59{line-height:32px;}
+.r-3nmjpz{animation-name:r-12fruu6;}
+.r-3s2u2q{white-space:nowrap;}
+.r-3sxh79{top:-1px;}
+.r-417010{z-index:0;}
+.r-46f5du{font-variant-numeric:tabular-nums;}
+.r-4gszlv{background-size:cover;}
+.r-4hwcpe{font-family:Vazirmatn, Tahoma, Arial, sans-serif;}
+.r-4nw3r4{background-color:rgba(249,24,128,1.00);}
+.r-4wgw6l{min-width:32px;}
+.r-54znze{color:rgba(239,243,244,1.00);}
+.r-56xrmm{line-height:12px;}
+.r-5c1b6u{color:rgba(255,122,0,1.00);}
+.r-5kkj8d{border-top-width:1px;}
+.r-5oul0u{margin-bottom:8px;}
+.r-6026j{background-color:rgba(255,255,255,0.85);}
+.r-633pao{pointer-events:none!important;}
+.r-6416eg{-moz-transition-property:background-color, box-shadow;-webkit-transition-property:background-color, box-shadow;transition-property:background-color, box-shadow;}
+.r-64el8z{min-width:52px;}
+.r-68jxh1{min-width:500px;}
+.r-6dt33c{opacity:1;}
+.r-7h7f8p{max-width:100vw;}
+.r-7mdpej{max-width:360px;}
+.r-7q8q6z{cursor:default;}
+.r-8akbws{-webkit-box-orient:vertical;}
+.r-8i4a5g{-moz-transition:flex-grow 0.5s ease-in-out;-webkit-transition:flex-grow 0.5s ease-in-out;transition:flex-grow 0.5s ease-in-out;}
+.r-8jfcpp{top:-2px;}
+.r-8kz0gk{height:2rem;}
+.r-92ng3h{width:1px;}
+.r-95jzfe{padding-top:16px;}
+.r-97prym{flex-basis:16px;}
+.r-9dcw1g{width:320px;}
+.r-9l7dzd{color:rgba(244,33,46,1.00);}
+.r-9tfo2e{background-color:rgba(255,255,255,0.30);}
+.r-a023e6{font-size:15px;}
+.r-adyw6z{font-size:20px;}
+.r-agouwx{transform:translateZ(0);}
+.r-ah5dr5>*{pointer-events:none;}
+.r-ah5dr5{pointer-events:auto!important;}
+.r-aqfbo4{backface-visibility:hidden;}
+.r-axxi2z{-moz-transition-property:transform;-webkit-transition-property:transform;transition-property:transform;}
+.r-b88u0q{font-weight:700;}
+.r-bcqeeo{min-width:0px;}
+.r-bnwqim{position:relative;}
+.r-bt1l66{min-height:20px;}
+.r-bvlit7{margin-bottom:-12px;}
+.r-ck2lme{background-color:rgba(219,248,235,1.00);}
+.r-clrlgt{animation-name:r-imtty0;}
+.r-cnnz9e{width:1.75rem;}
+.r-deolkf{box-sizing:border-box;}
+.r-dflpy8{height:1.2em;}
+.r-dkhcqf{transition-duration:350ms;}
+.r-dnmrzs{max-width:100%;}
+.r-drjvcx{height:3.5rem;}
+.r-ehq7j7{background-size:contain;}
+.r-ek4qxl{min-width:260px;}
+.r-emqnss{transform:translateZ(0px);}
+.r-eqz5dr{flex-direction:column;}
+.r-ero68b{min-height:40px;}
+.r-eu3ka{height:40px;}
+.r-f9dfq4{width:88px;}
+.r-fa1dwr{animation-timing-function:cubic-bezier(0.25, 0.1, 0.25, 1);}
+.r-fdjqy7{text-align:left;}
+.r-fm7h5w{font-family:"TwitterChirpExtendedHeavy","Verdana",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+.r-fvsqc2{top:calc(0px - 53);}
+.r-g6jmlv{width:100vw;}
+.r-gf0ln{-webkit-filter:brightness(1);filter:brightness(1);}
+.r-gkxrsp{background-color:rgba(0,67,41,1.00);}
+.r-h0d30l{height:28px;}
+.r-h3s6tt{height:48px;}
+.r-h9hxbl{width:1.2em;}
+.r-hdaws3{height:4px;}
+.r-htvplk{min-width:600px;}
+.r-i61hcz{min-width:20px;}
+.r-icoktb{opacity:0.5;}
+.r-ifefl9{min-height:0px;}
+.r-impgnl{transform:translateX(50%) translateY(-50%);}
+.r-iphfwy{padding-bottom:4px;}
+.r-ipm5af{top:0px;}
+.r-j5o65s{border-bottom-color:rgba(239,243,244,1.00);}
+.r-jmul1s{transform:scale(1.1);}
+.r-jwli3a{color:rgba(255,255,255,1.00);}
+.r-k200y{align-self:flex-start;}
+.r-k5y9r7{height:9px;}
+.r-k8qxaj{padding-bottom:20px;}
+.r-kemksi{background-color:rgba(0,0,0,1.00);}
+.r-kr0nin{width:1.5rem;}
+.r-kwpbio{height:650px;}
+.r-kzbkwu{padding-bottom:12px;}
+.r-l5o3uw{background-color:rgba(29,155,240,1.00);}
+.r-loe9s5{background-color:rgba(0,0,0,0.77);}
+.r-lp5zef{min-width:24px;}
+.r-lrsllp{width:24px;}
+.r-lrvibr{-moz-user-select:none;-webkit-user-select:none;user-select:none;}
+.r-lrx3fh{width:500px;}
+.r-lwhw9o{height:1.75rem;}
+.r-m6rgpd{vertical-align:text-bottom;}
+.r-majxgm{font-weight:500;}
+.r-mrc9z7{width:1257px;}
+.r-n1ft60{dynamic-range-limit:standard;}
+.r-n6v787{font-size:13px;}
+.r-nhe8su{animation-duration:0.5s;}
+.r-nvplwv{animation-timing-function:ease-out;}
+.r-nwxazl{line-height:40px;}
+.r-o7ynqc{transition-duration:0.2s;}
+.r-o96wvk{width:275px;}
+.r-obd0qt{align-items:flex-end;}
+.r-onrtq4{flex-basis:40px;}
+.r-orgf3d{opacity:0;}
+.r-oucylx{border-bottom-color:rgba(0,0,0,0.00);}
+.r-peo1c{min-height:44px;}
+.r-pm9dpa{max-height:100%;}
+.r-poiln3{font-family:inherit;}
+.r-pp5qcn{vertical-align:-20%;}
+.r-pwrm9v{width:390px;}
+.r-q3k7ks{background-color:rgba(0,122,255,1.00);}
+.r-q4m81j{text-align:center;}
+.r-qklmqi{border-bottom-width:1px;}
+.r-qlhcfr{font-size:0.001px;}
+.r-qvk6io{line-height:0px;}
+.r-qvutc0{word-wrap:break-word;}
+.r-r4n2gf{background-color:rgba(0,175,182,1.00);}
+.r-ripixn{max-height:16vh;}
+.r-rjixqe{line-height:20px;}
+.r-rki7wi{bottom:12px;}
+.r-rsyp9y{max-height:90vh;}
+.r-rthrr5{width:990px;}
+.r-rull8r{border-bottom-style:solid;}
+.r-rwqe4o{width:48px;}
+.r-s224ru{background-color:rgba(0,186,124,1.00);}
+.r-s67bdx{font-size:48px;}
+.r-s8bhmr{min-width:56px;}
+.r-sa2ff0{min-height:100vh;}
+.r-sb58tz{max-width:1000px;}
+.r-t3ofa{-moz-osx-font-smoothing:grayscale;}
+.r-tbmifm{height:12px;}
+.r-tjvw6i{text-decoration-thickness:1px;}
+.r-tskmnb{padding-top:8px;}
+.r-u6sd8q{background-repeat:no-repeat;}
+.r-u8s1d{position:absolute;}
+.r-ueyrd6{line-height:36px;}
+.r-uho16t{font-size:34px;}
+.r-uz7a3o{min-width:650px;}
+.r-v2d8zz{flex-basis:56px;}
+.r-vkv6oe{min-width:40px;}
+.r-vqxq0j{border:0 solid black;}
+.r-vrz42v{line-height:28px;}
+.r-vuvsbk{padding-bottom:calc(16px + 0px);}
+.r-vvn4in{background-position:center;}
+.r-vz2u4x{height:11px;}
+.r-wgabs5{border-bottom-width:2px;}
+.r-wy61xf{height:72px;}
+.r-x3cy2q{background-size:100% 100%;}
+.r-x572qd{background-color:rgba(247,249,249,1.00);}
+.r-xb2eav{font-size:40px;}
+.r-xigjrr{-webkit-filter:blur(4px);filter:blur(4px);}
+.r-xr3zp9{min-height:calc(64px * 3);}
+.r-yc9v9c{width:22px;}
+.r-yn5ncy{animation-fill-mode:both;}
+.r-yy2aun{font-size:26px;}
+.r-yyyyoo{fill:currentcolor;}
+.r-z2knda{transition-timing-function:ease;}
+.r-z7pwl0{max-width:700px;}
+.r-z80fyv{height:20px;}
+.r-zchlnj{right:0px;}
+@-webkit-keyframes r-11cv4x{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
+@-webkit-keyframes r-12fruu6{0%{opacity:0;transform:scale(0.95);}100%{opacity:1;transform:scale(1);}}
+@-webkit-keyframes r-1qpf3yi{0%{opacity:0;transform:scale3d(0.92, 0.92, 1);}100%{opacity:1;transform:scale3d(1, 1, 1);}}
+@-webkit-keyframes r-7bj9g2{0%{opacity:1;transform:scale3d(1, 1, 1);}100%{opacity:0;transform:scale3d(0.92, 0.92, 1);}}
+@-webkit-keyframes r-imtty0{0%{opacity:0;}100%{opacity:1;}}
+@-webkit-keyframes r-t2lo5v{0%{opacity:1;}100%{opacity:0;}}
+@keyframes r-11cv4x{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
+@keyframes r-12fruu6{0%{opacity:0;transform:scale(0.95);}100%{opacity:1;transform:scale(1);}}
+@keyframes r-1qpf3yi{0%{opacity:0;transform:scale3d(0.92, 0.92, 1);}100%{opacity:1;transform:scale3d(1, 1, 1);}}
+@keyframes r-7bj9g2{0%{opacity:1;transform:scale3d(1, 1, 1);}100%{opacity:0;transform:scale3d(0.92, 0.92, 1);}}
+@keyframes r-imtty0{0%{opacity:0;}100%{opacity:1;}}
+@keyframes r-t2lo5v{0%{opacity:1;}100%{opacity:0;}}
+.r-4opocu{position:absolute;visibility:hidden;top:0;width:50px;pointer-events:none}
+.r-4opocu.loaded{visibility:visible;top:50vh;width:50px}</style>
+<style>
+        body { 
+            font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;  
+            background-color: #ffffff; 
+            margin: 0;
+            padding: 0;
+        }
+        .container { 
+            max-width: 600px; 
+            margin: 0 auto; 
+            padding-top: 20px; 
+            padding-bottom: 40px;
+        }
+        .tweet-card { 
+            border: 1px solid rgb(239, 243, 244); 
+            border-radius: 16px; 
+            margin-bottom: 16px; 
+            padding: 16px; 
+            overflow-wrap: break-word;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-top: 10px;
+        }
+        /* Basic reset for some Twitter specific classes if needed */
+        a { text-decoration: none; color: rgb(29, 155, 240); }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+<div class="container">
+<div class="tweet-card">
+<article aria-labelledby="id__9bwb74wdtcr id__bblmlqcwvpa id__5mgvlz0w24d id__lruetj6yn5a id__prcp1ons43s id__t0egjk0h0vq id__wy1wfvz40ii id__ti1ue8d3ipg id__z5jet8pm8q id__7dzlmszsftj id__lds1sld4tk id__2acoivmttt4 id__x9izyt78h5 id__97irr1as29i id__w57sfr87fn9 id__ymeekawcozk id__u7a1wmd11tl id__ohkdmurj0p id__cu9wz8ou86c id__hzu6ccb177n" class="css-g5y9jx r-18u37iz r-1udh08x r-1c4vpko r-1c7gwzm r-1ny4l3l" data-testid="tweet" role="article" tabindex="-1"><div class="css-g5y9jx r-eqz5dr r-16y2uox r-1wbh5a2"><div class="css-g5y9jx r-16y2uox r-1wbh5a2 r-1ny4l3l"><div class="css-g5y9jx"><div class="css-g5y9jx r-18u37iz r-136ojw6"><div class="css-g5y9jx r-1iusvr4 r-16y2uox r-ttdzmv"></div></div></div><div class="css-g5y9jx r-18u37iz r-136ojw6"><div class="css-g5y9jx r-18kxxzh r-1wron08 r-onrtq4 r-1awozwy"><div class="css-g5y9jx" data-testid="Tweet-User-Avatar"><div class="css-g5y9jx r-18kxxzh r-1wbh5a2 r-13qz1uu"><div class="css-g5y9jx r-1wbh5a2 r-dnmrzs"><div class="css-g5y9jx r-bztko3 r-1adg3ll" data-testid="UserAvatar-Container-ai_xiaomu" style="width: 40px; height: 40px;"><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 100%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div class="css-g5y9jx r-1adg3ll r-1pi2tsx r-13qz1uu r-45ll9u r-u8s1d r-1v2oles r-176fswd r-bztko3"><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 100%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div class="css-g5y9jx r-sdzlij r-1udh08x r-5f1w11 r-u8s1d r-8jfcpp" style="width: calc(100% + 4px); height: calc(100% + 4px);"><a aria-hidden="true" class="css-g5y9jx r-1pi2tsx r-13qz1uu r-o7ynqc r-6416eg r-1ny4l3l r-1loqt21" href="/ai_xiaomu" role="link" style="background-color: rgba(0, 0, 0, 0);" tabindex="-1"><div class="css-g5y9jx r-sdzlij r-1udh08x r-633pao r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-g5y9jx r-1pi2tsx r-13qz1uu" style="background-color: rgba(0, 0, 0, 0);"></div></div><div class="css-g5y9jx r-sdzlij r-1udh08x r-633pao r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-g5y9jx r-1pi2tsx r-13qz1uu r-14lw9ot"></div></div><div class="css-g5y9jx r-sdzlij r-1udh08x r-633pao r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="background-color: rgb(255, 255, 255); width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-g5y9jx r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 100%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div class="css-g5y9jx r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af"><div class="css-g5y9jx r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/profile_images/2076716603392323584/v9BMuoo__normal.jpg");'></div><img alt="" class="css-9pa8cd" draggable="true" src="https://pbs.twimg.com/profile_images/2076716603392323584/v9BMuoo__normal.jpg"/></div></div></div></div><div class="css-g5y9jx r-sdzlij r-1udh08x r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-g5y9jx r-12181gd r-1pi2tsx r-13qz1uu r-o7ynqc r-6416eg r-1ny4l3l"></div></div></a></div></div></div></div></div></div></div></div></div><div class="css-g5y9jx r-1iusvr4 r-16y2uox r-1777fci"><div class="css-g5y9jx r-zl2h9q"><div class="css-g5y9jx r-k4xj1c r-18u37iz r-1wtj0ep"><div class="css-g5y9jx r-1d09ksm r-18u37iz r-1wbh5a2"><div class="css-g5y9jx r-1wbh5a2 r-dnmrzs r-1ny4l3l"><div class="css-g5y9jx r-1wbh5a2 r-dnmrzs r-1ny4l3l" data-testid="User-Name" id="id__prcp1ons43s"><div class="css-g5y9jx r-1awozwy r-18u37iz r-1wbh5a2 r-dnmrzs"><div class="css-g5y9jx r-1wbh5a2 r-dnmrzs"><a class="css-g5y9jx r-1wbh5a2 r-dnmrzs r-1ny4l3l r-1loqt21" href="/ai_xiaomu" role="link"><div class="css-g5y9jx r-1awozwy r-18u37iz r-1wbh5a2 r-dnmrzs"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-b88u0q r-1awozwy r-6koalj r-1udh08x r-3s2u2q" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-dnmrzs r-1udh08x r-1udbk01 r-3s2u2q r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">黄小木</span></span></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-xoduu5 r-18u37iz r-1q142lx" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1awozwy r-xoduu5"><svg aria-label="认证账号" class="r-4qtqp9 r-yyyyoo r-1xvli5t r-bnwqim r-lrvibr r-m6rgpd r-1cvl2hr r-f9ja8p r-og9te1 r-3t4u6i" data-testid="icon-verified" role="img" viewbox="0 0 22 22"><g><path d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.854-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.688-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.606-.274 1.263-.144 1.896.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681s.075-1.299-.165-1.903c.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z"></path></g></svg></span></div></div></a></div></div><div class="css-g5y9jx r-18u37iz r-1wbh5a2"><div class="css-g5y9jx r-1d09ksm r-18u37iz r-1wbh5a2"><div class="css-g5y9jx r-1wbh5a2 r-dnmrzs"><a class="css-g5y9jx r-1wbh5a2 r-dnmrzs r-1ny4l3l r-1loqt21" href="/ai_xiaomu" role="link" tabindex="-1"><div class="css-146c3p1 r-dnmrzs r-1udh08x r-1udbk01 r-3s2u2q r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-18u37iz r-1wvb978" dir="ltr" style="color: rgb(83, 100, 113);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">@ai_xiaomu</span></div></a></div></div></div></div></div></div><div class="css-g5y9jx r-1kkk96v"><div class="css-g5y9jx r-1awozwy r-18u37iz r-1cmwbt1 r-1wtj0ep"><div class="css-g5y9jx r-18u37iz r-1h0z5md"><button aria-label="总结" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(15, 20, 25);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><div class="css-g5y9jx r-xoduu5 r-bnwqim"><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-1xvli5t r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd" viewbox="0 0 33 32"><g><path d="M12.745 20.54l10.97-8.19c.539-.4 1.307-.244 1.564.38 1.349 3.288.746 7.241-1.938 9.955-2.683 2.714-6.417 3.31-9.83 1.954l-3.728 1.745c5.347 3.697 11.84 2.782 15.898-1.324 3.219-3.255 4.216-7.692 3.284-11.693l.008.009c-1.351-5.878.332-8.227 3.782-13.031L33 0l-4.54 4.59v-.014L12.743 20.544m-2.263 1.987c-3.837-3.707-3.175-9.446.1-12.755 2.42-2.449 6.388-3.448 9.852-1.979l3.72-1.737c-.67-.49-1.53-1.017-2.515-1.387-4.455-1.854-9.789-.931-13.41 2.728-3.483 3.523-4.579 8.94-2.697 13.561 1.405 3.454-.899 5.898-3.22 8.364C1.49 30.2.666 31.074 0 32l10.478-9.466"></path></g></svg></div></div></div></button></div><div class="css-g5y9jx r-1awozwy r-6koalj r-18u37iz"><div class="css-g5y9jx"><div class="css-g5y9jx r-18u37iz r-1h0z5md"><button aria-expanded="false" aria-haspopup="menu" aria-label="更多" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="caret" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div></div></button></div></div></div></div></div></div></div></div></div><div class="css-g5y9jx"><article class="css-g5y9jx r-1ny4l3l" data-testid="twitterArticleReadView" role="article" tabindex="-1"><div class="css-g5y9jx r-1peese0"><div class="css-g5y9jx"><div class="css-g5y9jx r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-g5y9jx"><div class="css-g5y9jx r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-g5y9jx r-1pi2tsx r-1ny4l3l r-1loqt21" href="/ai_xiaomu/article/2101135680168771979/media/2101135503714381824" role="link"><div class="css-g5y9jx r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 40%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="图像" class="css-g5y9jx r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-g5y9jx r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HSi7m7vbcAAzJpb?format=jpg&amp;name=small");'></div><img alt="图像" class="css-9pa8cd" draggable="true" src="assets/5d1303be234943eeab537bc97a18c1c2.jpg"/></div></div></div></a></div></div></div></div></div><div class="css-g5y9jx r-vmopo1"><div class="css-g5y9jx r-13qz1uu"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-uho16t r-1vr29t4 r-1o37s4c r-1s2bzr4" data-testid="twitter-article-title" dir="auto" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">Jev 模型从 0 到 1 小白教程</span></div></div><div class="css-g5y9jx"><div aria-label="50 回复、118 次转帖、487 喜欢、979 书签、258797 次观看" class="css-g5y9jx r-1kbdv8c r-18u37iz r-1wtj0ep r-1ye8kvj r-j5o65s r-rull8r r-qklmqi r-h3s6tt r-14gqq1x" role="group"><div class="css-g5y9jx r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="50 回复。回复" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="reply" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01zm8.005-6c-3.317 0-6.005 2.69-6.005 6 0 3.37 2.77 6.08 6.138 6.01l.351-.01h1.761v2.3l5.087-2.81c1.951-1.08 3.163-3.13 3.163-5.36 0-3.39-2.744-6.13-6.129-6.13H9.756z"></path></g></svg></div><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">50</span></span></span></div></div></button></div><div class="css-g5y9jx r-18u37iz r-1h0z5md r-13awgt0"><button aria-expanded="false" aria-haspopup="menu" aria-label="118 次转帖。转帖" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="retweet" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"></path></g></svg></div><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">118</span></span></span></div></div></button></div><div class="css-g5y9jx r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="487 喜欢次数。喜欢" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="like" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"></path></g></svg></div><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">487</span></span></span></div></div></button></div><div class="css-g5y9jx r-18u37iz r-1h0z5md r-13awgt0"><a aria-label="258797 次查看。查看帖子分析" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1ny4l3l r-1loqt21" href="/ai_xiaomu/status/2101135680168771979/analytics" role="link"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M8.75 21V3h2v18h-2zM18 21V8.5h2V21h-2zM4 21l.004-10h2L6 21H4zm9.248 0v-7h2v7h-2z"></path></g></svg></div><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">25万</span></span></span></div></div></a></div><div class="css-g5y9jx r-18u37iz r-1h0z5md r-1wron08"><button aria-label="书签" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="bookmark" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M4 4.5C4 3.12 5.119 2 6.5 2h11C18.881 2 20 3.12 20 4.5v18.44l-8-5.71-8 5.71V4.5zM6.5 4c-.276 0-.5.22-.5.5v14.56l6-4.29 6 4.29V4.5c0-.28-.224-.5-.5-.5h-11z"></path></g></svg></div></div></button></div><div class="css-g5y9jx" style="align-content: stretch; justify-content: inherit; display: inline-grid; transform: rotate(0deg) scale(1) translate3d(0px, 0px, 0px);"><div class="css-g5y9jx r-18u37iz r-1h0z5md"><button aria-expanded="false" aria-haspopup="menu" aria-label="分享帖子" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M12 2.59l5.7 5.7-1.41 1.42L13 6.41V16h-2V6.41l-3.3 3.3-1.41-1.42L12 2.59zM21 15l-.02 3.51c0 1.38-1.12 2.49-2.5 2.49H5.5C4.11 21 3 19.88 3 18.5V15h2v3.5c0 .28.22.5.5.5h12.98c.28 0 .5-.22.5-.5L19 15h2z"></path></g></svg></div></div></button></div></div></div></div><div class="css-g5y9jx r-1knelpx" data-testid="twitterArticleRichTextView"><div class="css-g5y9jx r-18jsvk2 r-37j5jr"><div class="DraftEditor-root"><div class="DraftEditor-editorContainer"><div aria-describedby="placeholder-6mjkf" class="public-DraftEditor-content" contenteditable="false" data-testid="longformRichTextComponent" spellcheck="false" style="outline: none; user-select: text; white-space: pre-wrap; overflow-wrap: break-word;"><div data-contents="true"><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="tsbi7-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="tsbi7-0-0"><span data-offset-key="tsbi7-0-0"><span data-text="true">Jev模型你最近因该刷到了，是个啥？</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="5q3du-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5q3du-0-0"><span data-offset-key="5q3du-0-0"><span data-text="true">它根本不会说话。它不能跟你聊天，不会写文档，不会写代码。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="ny2xv-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="ny2xv-0-0"><span data-offset-key="ny2xv-0-0"><span data-text="true">但这么个怪东西，这两天在 AI 圈杀出来了，融资 4000 万美元种子轮，一堆人排队申请试用。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="wfopy-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="wfopy-0-0"><span data-offset-key="wfopy-0-0"><span data-text="true">所以Jev是什么？</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="6mjkf" data-offset-key="7ghn1-0-0"><div class="css-g5y9jx r-1nxhmzv"><div class="css-g5y9jx r-13qz1uu"><div class="css-g5y9jx r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-g5y9jx"><div class="css-g5y9jx r-1pi2tsx" data-testid="tweetPhoto"><div class="css-g5y9jx" style=""><div class="css-g5y9jx r-1adg3ll r-1udh08x"><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 56.2832%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div class="css-g5y9jx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="placementTracking"><div class="css-g5y9jx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="videoPlayer"><div class="css-g5y9jx r-1adg3ll r-1udh08x r-bnwqim r-1pi2tsx r-13qz1uu"><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 56.2832%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div data-testid="videoComponent" style="height: 100%; position: relative; transform: translateZ(0px); width: 100%;"><div style="height: 100%; position: absolute; width: 100%;"><div style="position: relative; width: 100%; height: 100%; background-color: transparent; overflow: hidden;"><video aria-label="嵌入式视频" playsinline="" poster="https://pbs.twimg.com/amplify_video_thumb/2101135119927136256/img/g5eu_09BrKbeVuKC.jpg" preload="none" src="blob:https://x.com/232b7aed-2d7e-4879-ac58-ef9cf3bde6c6" style="width: 100%; height: 100%; position: absolute; background-color: black; top: 0%; left: 0%; transform: rotate(0deg) scale(1.005);" tabindex="-1"></video></div></div><div class="css-g5y9jx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" tabindex="0"><div class="css-g5y9jx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af"><div><div class="css-g5y9jx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1loqt21"></div><div class="css-g5y9jx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1awozwy r-1777fci r-1loqt21 r-1ny4l3l" tabindex="-1"><div class="css-g5y9jx r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af"><div class="css-g5y9jx r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/amplify_video_thumb/2101135119927136256/img/g5eu_09BrKbeVuKC.jpg");'></div><img alt="" class="css-9pa8cd" draggable="false" src="assets/d2ac218331e3b22e9f70d1c345478f27.jpg"/></div><button aria-label="播放 视频. 时长为   15秒钟" class="css-g5y9jx r-1loqt21 r-1ny4l3l" role="button" type="button"><svg aria-hidden="true" class="r-uvuy5l r-cfp7ip" viewbox="0 0 60 61"><g><circle cx="30" cy="30.4219" fill="#333333" opacity="0.6" r="30"></circle><path d="M22.2275 17.1971V43.6465L43.0304 30.4218L22.2275 17.1971Z" fill="white"></path></g></svg></button></div><div><div style="transition-duration: 250ms; transition-property: opacity, height; transition-timing-function: ease; will-change: opacity; opacity: 0;"></div></div><div style="transition-duration: 250ms; transition-property: opacity, height; transition-timing-function: ease; will-change: opacity; opacity: 0;"></div><div style="transition-duration: 250ms; transition-property: opacity, height; transition-timing-function: ease; will-change: opacity; opacity: 1;"></div><div style="transition-duration: 250ms; transition-property: opacity, height; transition-timing-function: ease; will-change: opacity; opacity: 0;"></div><div style="transition-duration: 250ms; transition-property: opacity, height; transition-timing-function: ease; will-change: opacity; opacity: 0;"></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></section><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h1 class="longform-header-one" data-block="true" data-editor="6mjkf" data-offset-key="qzi1v-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="qzi1v-0-0"><span data-offset-key="qzi1v-0-0"><span data-text="true">Jev 的诞生</span></span></div></h1></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="ry03z-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="ry03z-0-0"><span data-offset-key="ry03z-0-0"><span data-text="true">Jev 出自一家叫 TypeSafe AI 的旧金山公司，2026 年 9 月 15 日刚发布。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="0zq3l-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="0zq3l-0-0"><span data-offset-key="0zq3l-0-0"><span data-text="true">它的创始人 Diogo Almeida 是前 OpenAI 研究员，也是 RLHF 这套训练方法的共同发明者之一。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="vk1hk-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="vk1hk-0-0"><span data-offset-key="vk1hk-0-0"><span data-text="true">正是这套方法，当年把冷冰冰的语言模型调教成了能说会道、善解人意的 ChatGPT。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="96rcw-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="96rcw-0-0"><span data-offset-key="96rcw-0-0"><span data-text="true">换句话说，把 AI 训练得那么会聊天的人里，就有他一个。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="1dduj-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1dduj-0-0"><span data-offset-key="1dduj-0-0"><span data-text="true">结果现在，这个把 AI 教会说话的人，亲手做了一个偏偏不说话的 AI。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="p7frv-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="p7frv-0-0"><span data-offset-key="p7frv-0-0"><span data-text="true">动机说出来也很朴素。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="dhlyh-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="dhlyh-0-0"><span data-offset-key="dhlyh-0-0"><span data-text="true">他说过去四年一直有个问题在困扰他：
+模型早就在聊天这件事上超越人类了，可为什么真正的自动化还是这么少?
+我们砸进去了几万亿美元，但普通人的日常生活其实没什么变化，绝大多数软件也没有变得真正智能。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h1 class="longform-header-one" data-block="true" data-editor="6mjkf" data-offset-key="56mlj-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="56mlj-0-0"><span data-offset-key="56mlj-0-0"><span data-text="true">Jev是个啥</span></span></div></h1></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="0faye-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="0faye-0-0"><span data-offset-key="0faye-0-0"><span data-text="true">ChatGPT 这类模型，你可以理解成一个能说会道的顾问。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="5m8qj-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5m8qj-0-0"><span data-offset-key="5m8qj-0-0"><span data-text="true">你问什么它答什么，还能引经据典跟你聊上半天，情商在线，什么话题都能接。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="4xxdo-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4xxdo-0-0"><span data-offset-key="4xxdo-0-0"><span data-text="true">Jev 是另一个物种。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="eypnw-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="eypnw-0-0"><span data-offset-key="eypnw-0-0"><span data-text="true">它像流水线旁边那个专注的质检员：你把一份材料递过去，他不解释、不寒暄、不发表感想，直接给你一个干脆的判断。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="9tso4-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9tso4-0-0"><span data-offset-key="9tso4-0-0"><span data-text="true">我们日常接触的豆包这类模型，特点是慢速的、费力的推理，比如帮你算一道复杂的数学题。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="6bnza-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="6bnza-0-0"><span data-offset-key="6bnza-0-0"><span data-text="true">而 Jev 的特点是直觉式的判断，比如你看到一张脸瞬间知道对方有没有在生气；</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="pozo4-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="pozo4-0-0"><span data-offset-key="pozo4-0-0"><span data-text="true">简单的说："扫一眼，出结果"。</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="6mjkf" data-offset-key="i8u4s-0-0"><div class="css-g5y9jx r-1nxhmzv"><div class="css-g5y9jx r-13qz1uu"><div class="css-g5y9jx r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-g5y9jx"><div class="css-g5y9jx r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-g5y9jx r-1pi2tsx r-1ny4l3l r-1loqt21" href="/ai_xiaomu/article/2101135680168771979/media/2101133261720489984" role="link"><div class="css-g5y9jx r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 55.814%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="图像" class="css-g5y9jx r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-g5y9jx r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HSi5kbqbkAAvLJZ?format=jpg&amp;name=small");'></div><img alt="图像" class="css-9pa8cd" draggable="true" src="assets/d83c6e104ae973953baad8ef2297df27.jpg"/></div></div></div></a></div></div></div></div></div></section><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h1 class="longform-header-one" data-block="true" data-editor="6mjkf" data-offset-key="jzkv6-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="jzkv6-0-0"><span data-offset-key="jzkv6-0-0"><span data-text="true">会聊天的 chatbot，为何反而是瓶颈</span></span></div></h1></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="lh6rk-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="lh6rk-0-0"><span data-offset-key="lh6rk-0-0"><span data-text="true">假如你开了家网店，每天几百条客服消息进来，你想让 AI 自动把它们分给不同团队：账务的归账务，物流的归物流，技术问题归技术。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="twfao-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="twfao-0-0"><span data-offset-key="twfao-0-0"><span data-text="true">听起来是个简单需求。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="2v06r-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="2v06r-0-0"><span data-offset-key="2v06r-0-0"><span data-text="true">如果你用普通大模型来做，实际流程是这样的：</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="cj95w-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="cj95w-0-0"><span data-offset-key="cj95w-0-0"><span data-text="true">第一步，你得写一大段提示词，苦口婆心地求它"请你判断这条消息属于哪个部门，注意，你只需要回我部门的名字，不要多说别的"。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="2oyfp-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="2oyfp-0-0"><span data-offset-key="2oyfp-0-0"><span data-text="true">第二步，它有时候乖乖回你"账务部"，你很开心。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="9ackh-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9ackh-0-0"><span data-offset-key="9ackh-0-0"><span data-text="true">可有时候它又忍不住，回你一大段"这条消息看起来主要是关于账务方面的问题，我建议您可以先核实一下扣款记录，然后……"。它太想帮忙了，管不住自己那张嘴。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="8pmyf-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8pmyf-0-0"><span data-offset-key="8pmyf-0-0"><span data-text="true">第三步，你的程序为了拿到"账务部"这三个字，还得写一堆额外的逻辑，从它那段啰嗦的回复里把关键词抠出来。这个过程又脏又容易出错。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="6bijs-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="6bijs-0-0"><span data-offset-key="6bijs-0-0"><span data-text="true">第四步，也是最要命的，它偶尔会抽风。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="9dco0-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9dco0-0-0"><span data-offset-key="9dco0-0-0"><span data-text="true">你明明只设了三个部门，它却给你回一个第四个，或者干脆自己编一个不存在的部门名出来。这就是大家常说的"幻觉"。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="qgflx-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="qgflx-0-0"><span data-offset-key="qgflx-0-0"><span data-text="true">问题的根源在哪? 在于文字这个东西太自由了。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="y59z9-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="y59z9-0-0"><span data-offset-key="y59z9-0-0"><span data-text="true">自由是聊天的优点。
+正因为能生成任何文字，大模型才能陪你聊天、写诗、编故事。
+可一旦你要拿它做自动化，这份自由立刻变成噩梦。
+你永远没法百分之百保证它下一次不会突然跑偏。
+哪怕跑偏的概率只有万分之一，你也不敢把它埋进一个没人盯着的系统里让它自己跑。</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="6mjkf" data-offset-key="csxuz-0-0"><div class="css-g5y9jx r-1nxhmzv"><div class="css-g5y9jx r-13qz1uu"><div class="css-g5y9jx r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-g5y9jx"><div class="css-g5y9jx r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-g5y9jx r-1pi2tsx r-1ny4l3l r-1loqt21" href="/ai_xiaomu/article/2101135680168771979/media/2101133261716250625" role="link"><div class="css-g5y9jx r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 55.814%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="图像" class="css-g5y9jx r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-g5y9jx r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HSi5kbpa4AEh4hc?format=jpg&amp;name=small");'></div><img alt="图像" class="css-9pa8cd" draggable="true" src="assets/2abd89a7391c9b43bc456b3314a70280.jpg"/></div></div></div></a></div></div></div></div></div></section><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="vkd1q-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="vkd1q-0-0"><span data-offset-key="vkd1q-0-0"><span data-text="true">如果 AI 不可靠、不可控、不可预测，就没法被信任，也就没法被大规模地搭建进真实的软件里。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h1 class="longform-header-one" data-block="true" data-editor="6mjkf" data-offset-key="6qsdi-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="6qsdi-0-0"><span data-offset-key="6qsdi-0-0"><span data-text="true">Jev 的破局之道：把"问答"变成"填表"</span></span></div></h1></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="r73lh-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="r73lh-0-0"><span data-offset-key="r73lh-0-0"><span data-text="true">Jev 的思路，是把整个交互方式彻底改掉。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="fzlkw-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="fzlkw-0-0"><span data-offset-key="fzlkw-0-0"><span data-text="true">你不需要在跟它对话。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="alcd8-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="alcd8-0-0"><span data-offset-key="alcd8-0-0"><span data-text="true">你给它递一张结构固定的表格,它只需要在你划好的格子里打勾。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="9wlq6-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9wlq6-0-0"><span data-offset-key="9wlq6-0-0"><span data-text="true">每次调用，你给它两样东西。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="k7695-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="k7695-0-0"><span data-offset-key="k7695-0-0"><span data-text="true">第一样叫"状态"，也就是要判断的那份材料。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="5eq70-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5eq70-0-0"><span data-offset-key="5eq70-0-0"><span data-text="true">
+它可以简单到就是一句话，比如"我的卡被扣了两次款"。也可以复杂到是一整个工单记录、一段完整的客服对话、一份带着订单信息和退款政策的结构化数据。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="nykoj-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="nykoj-0-0"><span data-offset-key="nykoj-0-0"><span data-text="true">你把该给的背景一次性摆在它面前，就像你要请一群专家做判断前，先把所有资料铺在桌上。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="97a5b-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="97a5b-0-0"><span data-offset-key="97a5b-0-0"><span data-text="true">第二样叫"问题"，也就是你想让它判断什么。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="4w9g7-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4w9g7-0-0"><span data-offset-key="4w9g7-0-0"><span data-text="true">而它返回给你的，永远是规规矩矩、格式固定的答案。
+你的程序拿过来直接就能用，不需要再解析、再清洗、再猜。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="9t8np-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9t8np-0-0"><span data-offset-key="9t8np-0-0"><span data-text="true">更关键的是官方给的一个硬保证: 它在数学上不可能填错格式，也不可能给你一个表格之外的答案。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="vahj6-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="vahj6-0-0"><span data-offset-key="vahj6-0-0"><span data-text="true">因为所有可能的答案，都是你提前锁死的。它只能在你给定的选项里选，越不出圈。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="z959w-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="z959w-0-0"><span data-offset-key="z959w-0-0"><span data-text="true">所以你要什么类型的答案，它就一定还你什么类型，也就有了稳定运行的基础。</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="6mjkf" data-offset-key="aquea-0-0"><div class="css-g5y9jx r-1nxhmzv"><div class="css-g5y9jx r-13qz1uu"><div class="css-g5y9jx r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-g5y9jx"><div class="css-g5y9jx r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-g5y9jx r-1pi2tsx r-1ny4l3l r-1loqt21" href="/ai_xiaomu/article/2101135680168771979/media/2101133261015769088" role="link"><div class="css-g5y9jx r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 55.814%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="图像" class="css-g5y9jx r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-g5y9jx r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HSi5kZCaYAACVP6?format=jpg&amp;name=small");'></div><img alt="图像" class="css-9pa8cd" draggable="true" src="assets/32353246a856388011aa3df7cf522264.jpg"/></div></div></div></a></div></div></div></div></div></section><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h1 class="longform-header-one" data-block="true" data-editor="6mjkf" data-offset-key="0lmto-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="0lmto-0-0"><span data-offset-key="0lmto-0-0"><span data-text="true">Jev 的特点</span></span></div></h1></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="6mjkf" data-offset-key="fpu53-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="fpu53-0-0"><span data-offset-key="fpu53-0-0"><span data-text="true">第一种，做单选题</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="24o7c-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="24o7c-0-0"><span data-offset-key="24o7c-0-0"><span data-text="true">一条客服消息进来："我的跑鞋尺码发错了，能换成 10 码吗?"你问它"这条该派给哪个团队?"，给出三个选项：退换货、物流、账务。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="jyqh2-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="jyqh2-0-0"><span data-offset-key="jyqh2-0-0"><span data-text="true">它会干脆地回你"退换货"。而且它不只给你一个答案，它还会告诉你每个选项各占多少把握。这条消息很清楚，所以它几乎百分之百确定是退换货，另外两个选项几乎是零。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="yrhjr-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="yrhjr-0-0"><span data-offset-key="yrhjr-0-0"><span data-text="true">如果消息变成"鞋子尺码发错了，而且我信用卡上还莫名其妙多扣了一笔钱，你们打算怎么办?"这条就没那么干净了。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="u5urw-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="u5urw-0-0"><span data-offset-key="u5urw-0-0"><span data-text="true">它可能会告诉你：六成像是退换货，四成像是账务。Jev不会硬装自己很确定，而是老老实实把这份纠结摊给你看。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="6mjkf" data-offset-key="0ewgt-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="0ewgt-0-0"><span data-offset-key="0ewgt-0-0"><span data-text="true">第二种，做评级题</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="t0nue-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="t0nue-0-0"><span data-offset-key="t0nue-0-0"><span data-text="true">一份 bug 报告进来，你给它一把三档的尺子：
+0 分是只是外观上的小瑕疵，不影响使用；
+1 分是功能坏了，但还有别的办法能绕过去；
+2 分是彻底卡死，完全没法用。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="1rjym-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1rjym-0-0"><span data-offset-key="1rjym-0-0"><span data-text="true">它可能回你"1.3 分"。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="9i94i-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9i94i-0-0"><span data-offset-key="9i94i-0-0"><span data-text="true">1.3 分的意思是，这个 bug 主要属于"功能坏了但有替代办法"这一档，但又稍微往"彻底卡死"那头偏了一点。这比逼着它在 1 和 2 之间二选一要精确得多，也更接近真实情况。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="55caa-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="55caa-0-0"><span data-offset-key="55caa-0-0"><span data-text="true">你描述每一档的时候，要描述具体的情境，而不是描述程度。
+比如你写"功能坏了但有替代办法"就很好，它能拿这句话去跟材料比对。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="pclaq-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="pclaq-0-0"><span data-offset-key="pclaq-0-0"><span data-text="true">但你要是只写"中等严重"，它就抓瞎了，因为"中等"是个空词，它没有参照物。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="vm36n-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="vm36n-0-0"><span data-offset-key="vm36n-0-0"><span data-text="true">同理，每一档前面的数字它其实看不见，你光写 0、1、2 让它自己体会哪个更严重，是没用的，得把每一档到底是什么情况用sop 详细写清楚。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="6mjkf" data-offset-key="2wny4-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="2wny4-0-0"><span data-offset-key="2wny4-0-0"><span data-text="true">第三种，做判断题</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="ri7al-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="ri7al-0-0"><span data-offset-key="ri7al-0-0"><span data-text="true">它只回答是与非，给你一个"有多大概率是'是'"的数字，从 0 到 1。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="dy3ag-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="dy3ag-0-0"><span data-offset-key="dy3ag-0-0"><span data-text="true">比如你问它"这位顾客是在要求退款吗?"
+它回 0.99，意思是几乎可以肯定，是。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="2i37y-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="2i37y-0-0"><span data-offset-key="2i37y-0-0"><span data-text="true">所以你能在同一次调用里同时问它：
+这条该派给哪个团队（单选题），顾客有多生气（评级题），是不是在要求退款（判断题），语气是不是已经很愤怒了（判断题），提到的是不是一个还没发货的订单（判断题）。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="3kuky-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="3kuky-0-0"><span data-offset-key="3kuky-0-0"><span data-text="true">这些问题是同时、并行、各自独立作答的。
+所以你多问几个问题，它的响应时间几乎不会变长。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="nefts-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="nefts-0-0"><span data-offset-key="nefts-0-0"><span data-text="true">这带来一个很反常的编程习惯：官方鼓励你尽可能多问。
+把你的程序在这条消息上可能用到的所有判断，全都一次性问完，哪怕有些答案这次用不上也没关系，反正不怎么额外花钱、也不额外费时间。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="q6c7q-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="q6c7q-0-0"><span data-offset-key="q6c7q-0-0"><span data-text="true">这跟用普通大模型时那种"能少问一句是一句、省 token"的心态，是完全相反的。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="6mjkf" data-offset-key="wlbww-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="wlbww-0-0"><span data-offset-key="wlbww-0-0"><span data-text="true">Jev会自我判断</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="lionx-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="lionx-0-0"><span data-offset-key="lionx-0-0"><span data-text="true">普通大模型有个改不掉的毛病：不管它懂不懂，都答得特别自信，比如豆包。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="k3nye-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="k3nye-0-0"><span data-offset-key="k3nye-0-0"><span data-text="true">这个毛病用在自动化上就要命了。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="anhqi-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="anhqi-0-0"><span data-offset-key="anhqi-0-0"><span data-text="true">举个例子：
+假如有个 AI 能把某件事做对 95%，听起还行对吧? 但如果你不知道错的那 5% 是因为什么，那你根本没法把这件事交给它去自动干。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="r0u8r-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="r0u8r-0-0"><span data-offset-key="r0u8r-0-0"><span data-text="true">Jev 给每个答案都自带一个"把握度"，官方叫 confidence，你可以根据这个值来判断模型到底懂还是不懂。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="9b5hp-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9b5hp-0-0"><span data-offset-key="9b5hp-0-0"><span data-text="true">有了这个把握度，你就能设计出非常像人的处理逻辑，通常分三档：</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="9hzyg-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9hzyg-0-0"><span data-offset-key="9hzyg-0-0"><span data-text="true">把握度高的，直接自动处理，不用人管，放心让它跑。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="0ne5v-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="0ne5v-0-0"><span data-offset-key="0ne5v-0-0"><span data-text="true">把握一般的，谨慎一点，可以先让人确认一下，或者再去补点信息回来重新判断。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="zrw5m-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="zrw5m-0-0"><span data-offset-key="zrw5m-0-0"><span data-text="true">把握很低的，千万别硬来，转人工，或者请一个更贵更强的推理模型来接手。它这是在明确告诉你，这题超出我能力范围了，别为难我。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="v49wn-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="v49wn-0-0"><span data-offset-key="v49wn-0-0"><span data-text="true">这套"该确定的时候才动手，拿不准就老实喊人"的机制，是能真正信任一个自动化系统的前提。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="0w3wq-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="0w3wq-0-0"><span data-offset-key="0w3wq-0-0"><span data-text="true">一个会说"我不知道"的 AI，比一个永远自信满满的 AI，靠谱得多。</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="6mjkf" data-offset-key="p17ui-0-0"><div class="css-g5y9jx r-1nxhmzv"><div class="css-g5y9jx r-13qz1uu"><div class="css-g5y9jx r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-g5y9jx"><div class="css-g5y9jx r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-g5y9jx r-1pi2tsx r-1ny4l3l r-1loqt21" href="/ai_xiaomu/article/2101135680168771979/media/2101133271224709120" role="link"><div class="css-g5y9jx r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 55.814%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="图像" class="css-g5y9jx r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-g5y9jx r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HSi5k_EacAApPNr?format=jpg&amp;name=small");'></div><img alt="图像" class="css-9pa8cd" draggable="true" src="assets/3391c4c457d12ab67d7eb5540df94725.jpg"/></div></div></div></a></div></div></div></div></div></section><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="6mjkf" data-offset-key="nus6v-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="nus6v-0-0"><span data-offset-key="nus6v-0-0"><span data-text="true">Jev 足够便宜</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="x6buy-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="x6buy-0-0"><span data-offset-key="x6buy-0-0"><span data-text="true">Jev 比同级别的大模型快大约 200 倍，便宜大约 400 倍。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="de8qg-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="de8qg-0-0"><span data-offset-key="de8qg-0-0"><span data-text="true">单次响应只要 70 到 500 毫秒，比你眨一次眼还快。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="94kik-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="94kik-0-0"><span data-offset-key="94kik-0-0"><span data-text="true">为什么能做到这么离谱?一句话解释：因为Jev 不需要讲话。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="ki7r6-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="ki7r6-0-0"><span data-offset-key="ki7r6-0-0"><span data-text="true">这个定价策略打开了一大片以前根本不敢想的用法。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="ta3i4-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="ta3i4-0-0"><span data-offset-key="ta3i4-0-0"><span data-text="true">你可以拿它把一个海量的数据库挨条筛一遍，给每一条打上标签，这在过去用大模型做，成本会高到没人敢碰。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="ca0tq-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="ca0tq-0-0"><span data-offset-key="ca0tq-0-0"><span data-text="true">你也可以让它嵌进一个界面里做实时反应，因为它够快，用户根本感觉不到延迟。</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="6mjkf" data-offset-key="o1e8s-0-0"><div class="css-g5y9jx r-1nxhmzv"><div class="css-g5y9jx r-13qz1uu"><div class="css-g5y9jx r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-g5y9jx"><div class="css-g5y9jx r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-g5y9jx r-1pi2tsx r-1ny4l3l r-1loqt21" href="/ai_xiaomu/article/2101135680168771979/media/2101133272558518272" role="link"><div class="css-g5y9jx r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 55.814%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="图像" class="css-g5y9jx r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-g5y9jx r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HSi5lECawAAXflB?format=jpg&amp;name=small");'></div><img alt="图像" class="css-9pa8cd" draggable="true" src="assets/3abeabd5c750d6992220096a7057e7d8.jpg"/></div></div></div></a></div></div></div></div></div></section><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h1 class="longform-header-one" data-block="true" data-editor="6mjkf" data-offset-key="dac9d-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="dac9d-0-0"><span data-offset-key="dac9d-0-0"><span data-text="true">你该怎么使用 Jev</span></span></div></h1></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="6mjkf" data-offset-key="k5zpw-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="k5zpw-0-0"><span data-offset-key="k5zpw-0-0"><span data-text="true">定义问题</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="bimwv-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="bimwv-0-0"><span data-offset-key="bimwv-0-0"><span data-text="true">不要问大而空的问题，要把它拆成一堆又小又具体的小问题，再用你的程序把这些小答案组合起来。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="9hti3-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9hti3-0-0"><span data-offset-key="9hti3-0-0"><span data-text="true">举个例子。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="u1oou-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="u1oou-0-0"><span data-offset-key="u1oou-0-0"><span data-text="true">你想让它判断一封邮件是不是垃圾邮件。最偷懒的做法是直接问它："这封邮件是垃圾邮件吗?"</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="d4cuf-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="d4cuf-0-0"><span data-offset-key="d4cuf-0-0"><span data-text="true">这就是一个又大又含糊的问题。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="a86sa-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="a86sa-0-0"><span data-offset-key="a86sa-0-0"><span data-text="true">它背后其实藏着好多个判断，全被你压成了一个模糊的答案，你既看不清它凭什么这么判，也没法调整。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="tsv27-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="tsv27-0-0"><span data-offset-key="tsv27-0-0"><span data-text="true">你要做的是把"是不是垃圾邮件"这个大判断，拆成好几个又小又清楚的小判断，分别问它：</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="48bt6-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="48bt6-0-0"><span data-offset-key="48bt6-0-0"><span data-text="true">这封邮件是不是在索要密码之类的登录凭证?
+是不是声称你中了个你根本没参与的大奖?
+是不是在制造"赶紧行动否则来不及"的紧迫感?
+发件人自称的机构，跟它的邮箱域名对不对得上?
+邮件里那个链接的落地网址，跟它显示的文字是不是一回事?</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="p272s-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="p272s-0-0"><span data-offset-key="p272s-0-0"><span data-text="true">每一个小问题都极其具体，具体到几乎没有含糊的空间。然后你在自己的程序里，把这几个小答案按重要性加权组合，算出一个最终的垃圾邮件风险分。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="o656c-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="o656c-0-0"><span data-offset-key="o656c-0-0"><span data-text="true">Jev 想做的，就是给你一块新的、带点常识判断能力的积木，而不是给你一个不受控的黑箱。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h1 class="longform-header-one" data-block="true" data-editor="6mjkf" data-offset-key="7b6q1-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7b6q1-0-0"><span data-offset-key="7b6q1-0-0"><span data-text="true">定义场景</span></span></div></h1></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="qc92r-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="qc92r-0-0"><span data-offset-key="qc92r-0-0"><span data-text="true">它能落地的场景其实特别接地气，很多都是过去只能靠人肉硬审的苦活累活。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="4ki6q-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4ki6q-0-0"><span data-offset-key="4ki6q-0-0"><span data-text="true">客服领域是最典型的。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="yziw5-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="yziw5-0-0"><span data-offset-key="yziw5-0-0"><span data-text="true">工单自动分流，识别顾客是不是在要退款，判断哪个顾客快气炸了需要优先安抚，从通话记录里提取出顾客的诉求和需要跟进的事项。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="gwrfg-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="gwrfg-0-0"><span data-offset-key="gwrfg-0-0"><span data-text="true">这些过去都得人一条条看。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="2hxdk-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="2hxdk-0-0"><span data-offset-key="2hxdk-0-0"><span data-text="true">内容审核是另一大块。
+自动挑出垃圾广告、辱骂、诈骗、泄露隐私的内容，还能按严重程度分级,轻的警告一下，重的直接封掉。这活儿人做起来又累又伤心态，交给它再合适不过。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="s4x0g-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="s4x0g-0-0"><span data-offset-key="s4x0g-0-0"><span data-text="true">招聘和找客户也用得上。
+按你定的硬标准给简历打分，判断一个候选人的经验跟岗位到底搭不搭，或者判断一个潜在客户值不值得销售去跟进。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="2kzwt-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="2kzwt-0-0"><span data-offset-key="2kzwt-0-0"><span data-text="true">还有一个很妙的用法，是给别的 AI 当质检员。
+你可以用 Jev 去检查另一个大模型的输出：它有没有跑偏，有没有被人用话术越狱骗出不该说的话，它引用的信息是不是编的，它调用工具的参数对不对。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="1e4wf-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1e4wf-0-0"><span data-offset-key="1e4wf-0-0"><span data-text="true">因为 Jev 又快又便宜，用它来把关，成本只是那个大模型本身的零头。相当于花小钱给贵重的 AI 加了一道质检。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="kg8vt-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="kg8vt-0-0"><span data-offset-key="kg8vt-0-0"><span data-text="true">最后是大数据清洗。
+在海量的文档、评论、聊天记录里飞快地打标签、做分类、找出你真正需要的那一小部分。这类活儿的规模，往往大到只有 Jev 这种成本才玩得起。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h1 class="longform-header-one" data-block="true" data-editor="6mjkf" data-offset-key="t5vyb-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="t5vyb-0-0"><span data-offset-key="t5vyb-0-0"><span data-text="true">写在最后</span></span></div></h1></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="dv0ae-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="dv0ae-0-0"><span data-offset-key="dv0ae-0-0"><span data-text="true">如果看完了你还是没懂，记住这句话就行了：</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="sg8jp-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="sg8jp-0-0"><span data-offset-key="sg8jp-0-0"><span data-text="true">Jev 价格便宜，速度快，不会讲化但能帮你做判断。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="imrxq-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="imrxq-0-0"><span data-offset-key="imrxq-0-0"><span data-text="true">智能的成本每往下降一个数量级，用它的场景就会成倍地暴涨出来，也是属于你的机会。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="blftc-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="blftc-0-0"><span data-offset-key="blftc-0-0"><br data-text="true"/></span></div></div><div class="longform-unstyled" data-block="true" data-editor="6mjkf" data-offset-key="8k08p-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8k08p-0-0"><span data-offset-key="8k08p-0-0" style="font-weight: bold;"><span data-text="true">黄小木｜T11级工程师｜本文为 opus5.0 创作，若有侵权请指出｜持续分享 AI 信息、副业赚钱、程序员转型OPC心得｜X：</span></span><div class="css-g5y9jx r-1loqt21 r-1471scf r-o7ynqc r-6416eg r-1ny4l3l"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-rjixqe r-16dba41 r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="https://x.com/@ai_xiaomu" rel="noopener noreferrer nofollow" role="link" style="color: rgb(15, 20, 25);" target="_blank"><span data-offset-key="8k08p-1-0"><span data-text="true">@ai_xiaomu</span></span></a></div></div></div></div></div></div></div></div></div></div></article><div class="css-g5y9jx r-12kyg2d"><div class="css-g5y9jx r-k4xj1c r-18u37iz r-1wtj0ep"><div class="css-g5y9jx r-1wbh5a2 r-1a11zyx"><div class="css-g5y9jx r-1d09ksm r-18u37iz r-1wbh5a2 r-1471scf"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(83, 100, 113);"><a aria-describedby="id__o7a49a8ugld" aria-label="上午11:25 · 2026年9月19日" class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-xoduu5 r-1q142lx r-1w6e6rj r-9aw3ui r-3s2u2q r-1loqt21" href="/ai_xiaomu/status/2101135680168771979" role="link" style="color: rgb(83, 100, 113);"><time datetime="2026-09-19T02:25:58.000Z">上午11:25 · 2026年9月19日</time></a></div><div aria-hidden="true" class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1q142lx r-n7gxbd" dir="ltr" style="color: rgb(83, 100, 113);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">·</span></div><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1loqt21" dir="ltr" href="/ai_xiaomu/status/2101135680168771979/analytics" role="link" style="color: rgb(15, 20, 25);"><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1b43r93 r-1cwl3u0 r-b88u0q" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">25.8万</span></span></span></div> <span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1b43r93 r-1cwl3u0" style="color: rgb(83, 100, 113);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">查看</span></span></a></div></div><div class="css-g5y9jx r-18u37iz"></div></div></div><div class="css-g5y9jx r-j5o65s r-rull8r r-qklmqi"><div class="css-g5y9jx"><div aria-label="50 回复、118 次转帖、487 喜欢、979 书签、258797 次观看" class="css-g5y9jx r-1kbdv8c r-18u37iz r-1oszu61 r-3qxfft r-n7gxbd r-1dgieki r-1efd50x r-5kkj8d r-h3s6tt r-1wtj0ep" id="id__hzu6ccb177n" role="group"><div class="css-g5y9jx r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="50 回复。回复" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="reply" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01zm8.005-6c-3.317 0-6.005 2.69-6.005 6 0 3.37 2.77 6.08 6.138 6.01l.351-.01h1.761v2.3l5.087-2.81c1.951-1.08 3.163-3.13 3.163-5.36 0-3.39-2.744-6.13-6.129-6.13H9.756z"></path></g></svg></div><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">50</span></span></span></div></div></button></div><div class="css-g5y9jx r-18u37iz r-1h0z5md r-13awgt0"><button aria-expanded="false" aria-haspopup="menu" aria-label="118 次转帖。转帖" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="retweet" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"></path></g></svg></div><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">118</span></span></span></div></div></button></div><div class="css-g5y9jx r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="487 喜欢次数。喜欢" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="like" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"></path></g></svg></div><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">487</span></span></span></div></div></button></div><div class="css-g5y9jx r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="979 书签。加入书签" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="bookmark" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M4 4.5C4 3.12 5.119 2 6.5 2h11C18.881 2 20 3.12 20 4.5v18.44l-8-5.71-8 5.71V4.5zM6.5 4c-.276 0-.5.22-.5.5v14.56l6-4.29 6 4.29V4.5c0-.28-.224-.5-.5-.5h-11z"></path></g></svg></div><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">979</span></span></span></div></div></button></div><div class="css-g5y9jx" style="align-content: stretch; justify-content: inherit; display: inline-grid; transform: rotate(0deg) scale(1) translate3d(0px, 0px, 0px);"><div class="css-g5y9jx r-18u37iz r-1h0z5md"><button aria-expanded="false" aria-haspopup="menu" aria-label="分享帖子" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M12 2.59l5.7 5.7-1.41 1.42L13 6.41V16h-2V6.41l-3.3 3.3-1.41-1.42L12 2.59zM21 15l-.02 3.51c0 1.38-1.12 2.49-2.5 2.49H5.5C4.11 21 3 19.88 3 18.5V15h2v3.5c0 .28.22.5.5.5h12.98c.28 0 .5-.22.5-.5L19 15h2z"></path></g></svg></div></div></button></div></div></div></div><div class="css-g5y9jx r-1awozwy r-18u37iz r-1wtj0ep r-6gpygo"><div class="css-g5y9jx r-1awozwy r-18u37iz"><div class="css-g5y9jx"><button aria-haspopup="menu" class="css-146c3p1 r-bcqeeo r-qvutc0 r-37j5jr r-1b43r93 r-1cwl3u0 r-majxgm r-fdjqy7" dir="ltr" role="button" style="color: rgb(83, 100, 113);" type="button"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">相关</span><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1pexk7n r-1mcorv5" viewbox="0 0 24 24"><g><path d="M3.543 8.96l1.414-1.42L12 14.59l7.043-7.05 1.414 1.42L12 17.41 3.543 8.96z"></path></g></svg></button></div></div><div class="css-g5y9jx r-1awozwy r-18u37iz"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1b43r93 r-1cwl3u0 r-majxgm r-1loqt21" dir="ltr" href="/ai_xiaomu/status/2101135680168771979/quotes" role="link" style="color: rgb(83, 100, 113);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">查看引用</span><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1pexk7n r-1mcorv5" viewbox="0 0 24 24"><g><path d="M14.586 12L7.543 4.96l1.414-1.42L17.414 12l-8.457 8.46-1.414-1.42L14.586 12z"></path></g></svg></a></div></div></div></div></div></div></article>
+</div>
+</div>
+</body>
+</html>

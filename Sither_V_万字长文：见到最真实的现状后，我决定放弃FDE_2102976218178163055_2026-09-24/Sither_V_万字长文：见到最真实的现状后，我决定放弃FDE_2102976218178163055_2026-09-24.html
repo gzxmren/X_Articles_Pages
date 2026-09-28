@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>X 上的 苍述：“万字长文：见到最真实的现状后，我决定放弃FDE” / X</title>
+<!-- Injected Original Styles -->
+<style id="draftjs-styles_0">
+    .draftjs-styles_0 .public-DraftEditorPlaceholder-root {
+      color: #536471;
+    }
+
+    .draftjs-styles_0 .public-DraftEditorPlaceholder-hasFocus {
+      color: #536471;
+    }
+
+    
+  </style>
+<style id="draftjs-styles">
+     .DraftEditor-editorContainer, .DraftEditor-root, .public-DraftEditor-content {
+        height: inherit;
+        max-height: inherit;
+        min-height: inherit;
+        text-align: initial;
+    }
+
+    .public-DraftEditor-content[contenteditable=true] {
+        -moz-user-modify: read-write-plaintext-only;
+        -webkit-user-modify: read-write-plaintext-only;
+    }
+
+    .format-inline .public-DraftEditor-content[contenteditable=true] {
+      -moz-user-modify: read-write;
+      -webkit-user-modify: read-write;
+    }
+
+    .DraftEditor-root {
+        width: 100%;
+        position: relative;
+        -webkit-user-select: none;
+    }
+
+    .DraftEditor-editorContainer {
+        background-color: rgba(255, 255, 255, 0);
+        border-left: .1px solid transparent;
+        position: relative;
+        z-index: 1;
+    }
+
+    .public-DraftEditor-block {
+        position: relative;
+    }
+
+    .DraftEditor-alignLeft .public-DraftStyleDefault-block {
+        text-align: left;
+    }
+
+    .DraftEditor-alignLeft .public-DraftEditorPlaceholder-root {
+        left: 0;
+        text-align: left;
+    }
+
+    .DraftEditor-alignCenter .public-DraftStyleDefault-block {
+        text-align: center
+    }
+
+    .DraftEditor-alignCenter .public-DraftEditorPlaceholder-root {
+        margin: 0 auto;
+        text-align: center;
+        width: 100%
+    }
+
+    .DraftEditor-alignRight .public-DraftStyleDefault-block {
+        text-align: right;
+    }
+
+    .DraftEditor-alignRight .public-DraftEditorPlaceholder-root {
+        right: 0;
+        text-align: right;
+    }
+
+    .public-DraftEditorPlaceholder-root {
+        padding-bottom: 2px;
+        padding-top: 2px;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .public-DraftEditorPlaceholder-inner {
+        user-select: none;
+        -webkit-user-select: none;
+    }
+
+    .DraftEditorPlaceholder-hidden {
+        display: none;
+    }
+
+    .public-DraftStyleDefault-block {
+        overflow:hidden;
+        padding-bottom: 2px;
+        padding-top: 2px;
+        position: relative;
+        white-space: pre-wrap;
+    }
+
+    /* Only a handful of CSS rules work on br tags and user-select isn't one */
+    div:only-child > .public-DraftStyleDefault-block > span > br::selection {
+        background: transparent;
+    }
+
+    /*
+       Safari doesn't let you change ::selection on br elements,
+       but Chrome needs it here
+    */
+    div:only-child > .public-DraftStyleDefault-block > span:has(br)::selection {
+        background: transparent;
+    }
+
+    .public-DraftStyleDefault-ltr {
+        direction: ltr;
+        text-align: left;
+    }
+
+    .public-DraftStyleDefault-rtl {
+        direction: rtl;
+        text-align: right;
+    }
+
+    .DraftEditor-editorContainer a {
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        margin-bottom: inherit;
+        margin-top: inherit;
+    }
+
+    .singleline .public-DraftStyleDefault-block {
+        overflow-x: auto;
+        scrollbar-width: none;
+        white-space: nowrap;
+        -ms-overflow-style: none;
+    }
+
+    .singleline .public-DraftStyleDefault-block::-webkit-scrollbar {
+        display: none;
+    }
+  </style>
+<style id="longform-styles">
+    .longform-header-one {
+        font-size: 31px;
+        font-weight: 800;
+        line-height: 40px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-header-one-narrow {
+        font-size: calc(20px + 1px);
+        font-weight: 800;
+        line-height: 28px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-header-two {
+        font-size: 26px;
+        font-weight: 800;
+        line-height: 36px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-header-two-narrow {
+        font-size: calc(17px + 1px);
+        font-weight: 800;
+        line-height: 24px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-unstyled, .longform-blockquote {
+        font-size: 17px;
+        line-height: 28px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-unstyled-narrow, .longform-blockquote-narrow {
+        font-size: 17px;
+        line-height: 28px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-unordered-list-item, .longform-ordered-list-item {
+        display: block;
+        font-size: 17px;
+        line-height: 28px;   
+        margin-bottom: 12px;
+        margin-left: calc(28px + 2px);
+        margin-top: 0;
+    }
+
+    .longform-unordered-list-item-narrow, .longform-ordered-list-item-narrow {
+        display: block;
+        font-size: 17px;
+        line-height: 28px;   
+        margin-bottom: calc(12px / 2);
+        margin-left: 36px;
+        margin-top: 0;
+    }
+
+    .longform-blockquote, .longform-blockquote-narrow {
+        margin-bottom: calc(24px + 2px);
+        margin-left: 0;
+        margin-top: calc(-2px);
+        padding-left: calc(24px + 3px);
+        position: relative;
+    }
+
+    .longform-blockquote:before, .longform-blockquote-narrow:before {
+        background: #37434D;
+        border-radius: 9999px;
+        bottom: 0;
+        content: "";
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 3px;
+    }
+
+    .longform-header-one .public-DraftStyleDefault-block,
+    .longform-header-two .public-DraftStyleDefault-block,
+    .longform-unstyled .public-DraftStyleDefault-block,
+    .longform-unordered-list-item .public-DraftStyleDefault-block,
+    .longform-ordered-list-item .public-DraftStyleDefault-block,
+    .longform-header-one-narrow .public-DraftStyleDefault-block,
+    .longform-header-two-narrow .public-DraftStyleDefault-block,
+    .longform-unstyled-narrow .public-DraftStyleDefault-block,
+    .longform-unordered-list-item-narrow .public-DraftStyleDefault-block,
+    .longform-ordered-list-item-narrow .public-DraftStyleDefault-block {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    .public-DraftStyleDefault-ul, .public-DraftStyleDefault-ol {
+        counter-reset: item;
+        margin-bottom: 28px;
+        margin-top: 0;
+        padding-left: 0;
+    }
+
+    .longform-unordered-list-item:before, .longform-ordered-list-item:before,
+    .longform-unordered-list-item-narrow:before, .longform-ordered-list-item-narrow:before {
+        position: absolute;
+        margin-left: calc(-1 * (28px + 2px));
+    }
+
+    .longform-unordered-list-item:before {
+        content: counter(item, disc);
+        font-size: 23px
+    }
+
+    .longform-unordered-list-item-narrow:before {
+        content: counter(item, disc);
+        font-size: 20px
+    }
+
+    .longform-ordered-list-item:before, .longform-ordered-list-item-narrow:before {
+        content: counter(item) ". ";
+        counter-increment: item;
+    }
+
+    .longform-ordered-list-item::marker, .longform-ordered-list-item-narrow::marker {
+        font-variant-numeric: normal;
+    }
+</style>
+<style>input::placeholder { user-select: none; -webkit-user-select: none; } div div ::-webkit-input-placeholder { color: rgb(117, 117, 117) } iframe { color-scheme: auto; }button { text-align: inherit; font-size: inherit; font-family: inherit; color: inherit }</style>
+<style>@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-Light.a929468a.woff2) format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-Regular.58c84f6a.woff2) format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-Medium.bc7d8f1a.woff2) format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-Bold.0d6a47ca.woff2) format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-ExtraBold.b130af7a.woff2) format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}</style>
+<style>@font-face {
+  font-family: Geist;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Geist-var.2587a0ca.woff2) format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}</style>
+<style>@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Light.3a18e64a.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Light.7a5673aa.woff) format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Regular.80fda27a.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Regular.60b215ba.woff) format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Medium.f8e2739a.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Medium.20fc288a.woff) format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Bold.ebb56aba.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Bold.a573679a.woff) format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Heavy.f44ae4ea.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Heavy.d70ec7ca.woff) format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: TwitterChirpExtendedHeavy;
+  src: url(https://abs.twimg.com/fonts/v1/chirp-extended-heavy-web.woff2) format('woff2'), url(https://abs.twimg.com/fonts/v1/chirp-extended-heavy-web.woff) format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}</style>
+<style>html,body{height: 100%;}::cue{white-space:pre-line}</style>
+<style id="react-native-stylesheet">[stylesheet-group="0"]{}
+body{margin:0;}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+input::-webkit-search-cancel-button,input::-webkit-search-decoration,input::-webkit-search-results-button,input::-webkit-search-results-decoration{display:none;}
+[stylesheet-group="1"]{}
+.css-146c3p1{background-color:rgba(0,0,0,0.00);border:0 solid black;box-sizing:border-box;color:rgba(0,0,0,1.00);display:inline;font:14px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;list-style:none;margin:0px;padding:0px;position:relative;text-align:start;text-decoration:none;white-space:pre-wrap;word-wrap:break-word;}
+.css-1jxf684{background-color:rgba(0,0,0,0.00);border:0 solid black;box-sizing:border-box;color:inherit;display:inline;font:inherit;list-style:none;margin:0px;padding:0px;position:relative;text-align:inherit;text-decoration:none;white-space:inherit;word-wrap:break-word;}
+.css-9pa8cd{bottom:0px;height:100%;left:0px;opacity:0;position:absolute;right:0px;top:0px;width:100%;z-index:-1;}
+.css-g5y9jx{align-content:flex-start;align-items:stretch;background-color:rgba(0,0,0,0.00);border:0 solid black;box-sizing:border-box;display:flex;flex-basis:auto;flex-direction:column;flex-shrink:0;list-style:none;margin:0px;min-height:0px;min-width:0px;padding:0px;position:relative;text-decoration:none;z-index:0;}
+[stylesheet-group="2"]{}
+.r-11mg6pl{border-bottom-color:rgba(255,255,255,1.00);border-left-color:rgba(255,255,255,1.00);border-right-color:rgba(255,255,255,1.00);border-top-color:rgba(255,255,255,1.00);}
+.r-13awgt0{flex:1;}
+.r-17gur6a{border-bottom-left-radius:0px;border-bottom-right-radius:0px;border-top-left-radius:0px;border-top-right-radius:0px;}
+.r-1867qdf{border-bottom-left-radius:16px;border-bottom-right-radius:16px;border-top-left-radius:16px;border-top-right-radius:16px;}
+.r-1adg3ll{display:block;}
+.r-1dqxon3{overflow-x:auto;overflow-y:auto;}
+.r-1ets6dv{border-bottom-color:rgba(207,217,222,1.00);border-left-color:rgba(207,217,222,1.00);border-right-color:rgba(207,217,222,1.00);border-top-color:rgba(207,217,222,1.00);}
+.r-1fuqb1j{border-bottom-left-radius:24px;border-bottom-right-radius:24px;border-top-left-radius:24px;border-top-right-radius:24px;}
+.r-1pcd2l5{padding:20px;}
+.r-1phboty{border-bottom-style:solid;border-left-style:solid;border-right-style:solid;border-top-style:solid;}
+.r-1pp0k63{border-bottom-left-radius:0.01px;border-bottom-right-radius:0.01px;border-top-left-radius:0.01px;border-top-right-radius:0.01px;}
+.r-1q9bdsx{border-bottom-left-radius:12px;border-bottom-right-radius:12px;border-top-left-radius:12px;border-top-right-radius:12px;}
+.r-1qsk4np{overflow-x:clip;overflow-y:clip;}
+.r-1udh08x{overflow-x:hidden;overflow-y:hidden;}
+.r-1wl2o3p{border-bottom-color:rgba(229,234,236,1.00);border-left-color:rgba(229,234,236,1.00);border-right-color:rgba(229,234,236,1.00);border-top-color:rgba(229,234,236,1.00);}
+.r-1xfd6ze{border-bottom-left-radius:8px;border-bottom-right-radius:8px;border-top-left-radius:8px;border-top-right-radius:8px;}
+.r-1yadl64{border-bottom-width:0px;border-left-width:0px;border-right-width:0px;border-top-width:0px;}
+.r-494qqr{padding:32px;}
+.r-4iw3lz{border-bottom-width:0;border-left-width:0;border-right-width:0;border-top-width:0;}
+.r-4qtqp9{display:inline-block;}
+.r-6koalj{display:flex;}
+.r-bztko3{overflow-x:visible;overflow-y:visible;}
+.r-crgep1{margin:0px;}
+.r-edyy15{padding:8px;}
+.r-hvic4v{display:none;}
+.r-jxzhtn{border-bottom-color:rgba(239,243,244,1.00);border-left-color:rgba(239,243,244,1.00);border-right-color:rgba(239,243,244,1.00);border-top-color:rgba(239,243,244,1.00);}
+.r-krxsd3{display:-webkit-box;}
+.r-nsbfu8{padding:16px;}
+.r-rs99b7{border-bottom-width:1px;border-left-width:1px;border-right-width:1px;border-top-width:1px;}
+.r-sdzlij{border-bottom-left-radius:9999px;border-bottom-right-radius:9999px;border-top-left-radius:9999px;border-top-right-radius:9999px;}
+.r-t60dpp{padding:0px;}
+.r-wwvuq4{padding:0;}
+.r-xf4iuw{margin:-8px;}
+.r-xoduu5{display:inline-flex;}
+.r-xyw6el{padding:12px;}
+.r-ywje51{margin:auto;}
+.r-z2wwpe{border-bottom-left-radius:4px;border-bottom-right-radius:4px;border-top-left-radius:4px;border-top-right-radius:4px;}
+[stylesheet-group="2.1"]{}
+.r-12kyg2d{margin-bottom:16px;margin-top:16px;}
+.r-1559e4e{padding-bottom:2px;padding-top:2px;}
+.r-184id4b{margin-bottom:12px;margin-top:12px;}
+.r-1e084wi{padding-left:0px;padding-right:0px;}
+.r-1f0wa7y{padding-left:80px;padding-right:80px;}
+.r-1fkl15p{padding-left:32px;padding-right:32px;}
+.r-1mkv55d{padding-bottom:0px;padding-top:0px;}
+.r-1mmae3n{padding-bottom:12px;padding-top:12px;}
+.r-1xpp3t0{margin-left:16px;margin-right:16px;}
+.r-3o4zer{padding-left:12px;padding-right:12px;}
+.r-3pj75a{padding-left:16px;padding-right:16px;}
+.r-cnw61z{padding-bottom:4px;padding-top:4px;}
+.r-cxgwc0{padding-left:24px;padding-right:24px;}
+.r-dd0y9b{padding-bottom:20px;padding-top:20px;}
+.r-ddtstp{margin-bottom:0px;margin-top:0px;}
+.r-dp7rxi{padding-bottom:40px;padding-top:40px;}
+.r-f8sm7e{margin-left:auto;margin-right:auto;}
+.r-is05cd{padding-left:8px;padding-right:8px;}
+.r-n7gxbd{padding-left:4px;padding-right:4px;}
+.r-nj0m1c{padding-bottom:32px;padding-top:32px;}
+.r-s49dbf{margin-bottom:1px;margin-top:1px;}
+.r-sjygvo{padding-left:1em;padding-right:1em;}
+.r-u9wvl5{padding-left:20px;padding-right:20px;}
+.r-w7s2jr{padding-bottom:16px;padding-top:16px;}
+[stylesheet-group="2.2"]{}
+.r-10f7w94{margin-right:70px;}
+.r-1182swk{left:1px;}
+.r-15peodp{right:-9999px;}
+.r-15xeili{margin-left:-48px;}
+.r-17i1h83{margin-right:60px;}
+.r-19qo34d{left:-9999px;}
+.r-1a11zyx{margin-right:12px;}
+.r-1ca1ndr{margin-left:0.5em;}
+.r-1cwvpvk{margin-left:12px;}
+.r-1ez5h0i{margin-left:4px;}
+.r-1gs4q39{margin-right:4px;}
+.r-1iwt575{margin-right:1px;}
+.r-1kkk96v{margin-left:8px;}
+.r-1kpi4qh{margin-left:0.075em;}
+.r-1l2kgy{margin-right:0.5em;}
+.r-1l8l4mf{margin-right:10px;}
+.r-1noe1sz{padding-left:4px;}
+.r-1oukvu3{margin-left:70px;}
+.r-1q6cnnd{right:-2px;}
+.r-1rtiivn{margin-right:20px;}
+.r-1wron08{margin-right:8px;}
+.r-1x2e62v{margin-left:16px;}
+.r-2dysd3{padding-left:12px;}
+.r-2utimh{right:-4px;}
+.r-3t4u6i{margin-left:2px;}
+.r-45ll9u{left:50%;}
+.r-5f1w11{left:-2px;}
+.r-615f2u{right:1px;}
+.r-72fyl3{border-top-left-radius:32px;}
+.r-cwltf5{border-top-right-radius:32px;}
+.r-dlybji{margin-right:16px;}
+.r-faml9v{padding-right:12px;}
+.r-gd96e9{margin-right:-48px;}
+.r-hjq6k0{margin-left:1px;}
+.r-j3xhw6{border-top-left-radius:16px;}
+.r-k4bwe5{margin-right:0.075em;}
+.r-nazi8o{margin-left:20px;}
+.r-o59np7{padding-right:8px;}
+.r-ocobd0{right:50%;}
+.r-pt392{margin-left:60px;}
+.r-qjj4hq{padding-left:8px;}
+.r-st84sj{border-top-right-radius:16px;}
+.r-t1sew1{margin-left:10px;}
+.r-trst2h{padding-right:4px;}
+.r-v3tthl{left:-4px;}
+.r-x1x4zq{margin-right:2px;}
+[stylesheet-group="3"]{}
+.r-105ug2t{pointer-events:auto!important;}
+.r-109y4c4{height:1px;}
+.r-10ef88u{min-width:700px;}
+.r-10ptun7{height:16px;}
+.r-10v3vxq{transform:scaleX(-1);}
+.r-113js5t{width:1050px;}
+.r-117bsoe{margin-bottom:20px;}
+.r-11c0sde{margin-top:24px;}
+.r-11f8fnl{background-color:rgba(180,180,182,0.50);}
+.r-11j9u27{visibility:hidden;}
+.r-11yh6sk{overflow-x:hidden;}
+.r-11zy11o{background-color:rgba(201,54,204,1.00);}
+.r-1202g5r{height:90vh;}
+.r-12181gd{box-shadow:0 0 2px rgba(0,0,0,0.03) inset;}
+.r-122fvck{background-color:rgba(244,129,47,0.12);}
+.r-1279nm1{min-height:400px;}
+.r-12hfotv{width:700px;}
+.r-12rgx7y{width:7px;}
+.r-12sks89{min-height:22px;}
+.r-12vffkv>*{pointer-events:auto;}
+.r-12vffkv{pointer-events:none!important;}
+.r-12ym1je{width:18px;}
+.r-135wba7{line-height:24px;}
+.r-136ojw6{z-index:2;}
+.r-13qz1uu{width:100%;}
+.r-13w96dm{background-color:rgba(0,0,0,0.30);}
+.r-13wfysu{-webkit-text-decoration-line:none;text-decoration-line:none;}
+.r-146iojx{max-width:300px;}
+.r-1472mwg{height:24px;}
+.r-14gqq1x{margin-top:4px;}
+.r-14j79pv{color:rgba(83,100,113,1.00);}
+.r-14lw9ot{background-color:rgba(255,255,255,1.00);}
+.r-158ssxm{max-height:calc(64px * 15);}
+.r-159fyap{-moz-transition:opacity 300ms ease;-webkit-transition:opacity 300ms ease;transition:opacity 300ms ease;}
+.r-15ysp7h{min-height:32px;}
+.r-168457u{background-color:rgba(120,86,255,1.00);}
+.r-16dba41{font-weight:400;}
+.r-16eto9q{width:12px;}
+.r-16y2uox{flex-grow:1;}
+.r-176fswd{transform:translateX(-50%) translateY(-50%);}
+.r-1777fci{justify-content:center;}
+.r-178kkxs{background-color:rgba(255,237,219,1.00);}
+.r-17bb2tj{animation-duration:0.75s;}
+.r-17c3jg3{background-color:rgba(0,0,0,0.80);}
+.r-17gznlh{animation-name:r-t2lo5v;}
+.r-17leim2{background-repeat:repeat;}
+.r-17s6mgv{justify-content:flex-end;}
+.r-184en5c{z-index:1;}
+.r-18jm5s1{transition-timing-function:cubic-bezier(0,0,0,1);}
+.r-18jsvk2{color:rgba(15,20,25,1.00);}
+.r-18kxxzh{flex-grow:0;}
+.r-18tzken{width:56px;}
+.r-18u37iz{flex-direction:row;}
+.r-18yzcnr{height:22px;}
+.r-193z5jo{flex-basis:64px;}
+.r-1994a6e{min-width:400px;}
+.r-19h8fux{background-color:rgba(55,67,77,1.00);}
+.r-19qs0lw{animation-name:r-1qpf3yi;}
+.r-19wmn03{width:20px;}
+.r-19yznuf{min-height:52px;}
+.r-1abnn5w{animation-play-state:paused;}
+.r-1acpoxo{width:36px;}
+.r-1ad0z5i{word-break:break-all;}
+.r-1aockid{width:40px;}
+.r-1awozwy{align-items:center;}
+.r-1azx6h{max-height:480px;}
+.r-1b43r93{font-size:14px;}
+.r-1bimlpy{background-color:rgba(207,217,222,1.00);}
+.r-1blnp2b{width:72px;}
+.r-1blvdjr{font-size:23px;}
+.r-1cdyxaf{flex-basis:32px;}
+.r-1ceczpf{min-height:24px;}
+.r-1cf81hf{background-color:rgba(83,100,113,1.00);}
+.r-1cj0bla{font-smoothing:always;}
+.r-1cmwbt1{gap:8px;}
+.r-1cvl2hr{color:rgba(29,155,240,1.00);}
+.r-1cwl3u0{line-height:16px;}
+.r-1d2f490{left:0px;}
+.r-1ddef8g{-webkit-text-decoration-line:underline;text-decoration-line:underline;}
+.r-1dgieki{border-top-color:rgba(239,243,244,1.00);}
+.r-1dn12g7{line-height:48px;}
+.r-1dum35f{-moz-transition-property:opacity, height;-webkit-transition-property:opacity, height;transition-property:opacity, height;}
+.r-1e425wn{animation-duration:0.15s;}
+.r-1e4ma89{background-color:rgba(0,0,0,0.55);}
+.r-1e5uvyk{-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);}
+.r-1e6yznf{margin-top:-6px;}
+.r-1ebb2ja{list-style:none;}
+.r-1efd50x{border-top-style:solid;}
+.r-1f4tc2a{background-color:rgba(244,33,46,1.00);}
+.r-1ff274t{text-align:right;}
+.r-1ffj0ar{background-color:rgba(0,0,0,0.40);}
+.r-1fu8b7j{height:712px;}
+.r-1g40b8q{z-index:3;}
+.r-1g83rmp{animation-name:r-7bj9g2;}
+.r-1gkfh8e{font-size:11px;}
+.r-1gymjhz{width:68px;}
+.r-1h0z5md{justify-content:flex-start;}
+.r-1h3ijdo{height:53px;}
+.r-1h8ys4a{padding-top:4px;}
+.r-1habvwh{align-items:flex-start;}
+.r-1hjwoze{height:18px;}
+.r-1hwvwag{flex-basis:48px;}
+.r-1hycxz{width:350px;}
+.r-1iln25a{word-wrap:normal;}
+.r-1inkyih{font-size:17px;}
+.r-1ipicw7{width:300px;}
+.r-1is30e5{transform:rotate(360deg);}
+.r-1iusvr4{flex-basis:0px;}
+.r-1iww7jx{width:28px;}
+.r-1janqcz{width:16px;}
+.r-1jaylin{width:-webkit-max-content;width:-moz-max-content;width:max-content;}
+.r-1jocfgc{width:290px;}
+.r-1jte41z{min-width:350px;}
+.r-1k5gan{background-color:rgba(236,232,255,1.00);}
+.r-1k78y06{font-family:Tahoma, Arial, sans-serif;}
+.r-1kihuf0{align-self:center;}
+.r-1ld3bg{top:-4px;}
+.r-1ldzwu0{animation-timing-function:linear;}
+.r-1loqt21{cursor:pointer;}
+.r-1m3jxhj{background-color:rgba(15,20,25,1.00);}
+.r-1m4drjs{top:-6px;}
+.r-1mdbw0j{padding-bottom:0px;}
+.r-1me0s30{max-height:unset;}
+.r-1mlwlqe{flex-basis:auto;}
+.r-1mrlafo{background-position:0;}
+.r-1muvv40{animation-iteration-count:infinite;}
+.r-1mwlp6a{height:56px;}
+.r-1nao33i{color:rgba(231,233,234,1.00);}
+.r-1niwhzg{background-color:rgba(0,0,0,0.00);}
+.r-1ny4l3l{outline-style:none;}
+.r-1obr2lp{width:920px;}
+.r-1oifz5y{background-color:rgba(170,17,0,1.00);}
+.r-1oszu61{align-items:stretch;}
+.r-1otgn73{touch-action:manipulation;}
+.r-1ovo9ad{width:360px;}
+.r-1ozsyd3{height:7px;}
+.r-1p0dtai{bottom:0px;}
+.r-1peese0{margin-bottom:24px;}
+.r-1pi2tsx{height:100%;}
+.r-1pjcn9w{max-width:80vw;}
+.r-1potc6q{top:5%;}
+.r-1ps3wis{min-width:44px;}
+.r-1pz39u2{align-self:stretch;}
+.r-1q142lx{flex-shrink:0;}
+.r-1qd0xha{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+.r-1qd7xl{top:12px;}
+.r-1qi8awa{min-width:36px;}
+.r-1r5jyh0{min-height:130px;}
+.r-1r8g8re{height:36px;}
+.r-1rnoaur{overflow-y:auto;}
+.r-1rt2jqs{width:450px;}
+.r-1rttkqs{width:400px;}
+.r-1s2bzr4{margin-top:12px;}
+.r-1s2hp8q{min-height:26px;}
+.r-1sw30gj{background-color:rgba(239,243,244,1.00);}
+.r-1sxrcry{background-size:auto;}
+.r-1szxp23{min-height:53px;}
+.r-1t2qqvi{flex-basis:50%;}
+.r-1t7zxhp{width:9px;}
+.r-1tbo1j0{height:1.5rem;}
+.r-1tjplnt{box-sizing:content-box;}
+.r-1tl8opc{font-family:"Segoe UI",Meiryo,system-ui,-apple-system,BlinkMacSystemFont,sans-serif;}
+.r-1to6hqq{background-color:rgba(255,212,0,1.00);}
+.r-1tsuqlv{max-height:100vh;}
+.r-1ttztb7{text-align:inherit;}
+.r-1udbk01{text-overflow:ellipsis;}
+.r-1upvrn0{box-shadow:0 0 15px rgba(101,119,134,0.2), 0 0 3px 1px rgba(101,119,134,0.15);}
+.r-1uqa7wc{width:1197px;}
+.r-1ur9v65{padding-top:40px;}
+.r-1v2oles{top:50%;}
+.r-1vmecro{direction:rtl;}
+.r-1vqzmdl{background-color:rgba(215,246,255,1.00);}
+.r-1vr29t4{font-weight:800;}
+.r-1vsu8ta{min-height:30px;}
+.r-1vzmqqg{-webkit-font-smoothing:antialiased;}
+.r-1w2mbsr{background-color:rgba(29,155,240,0.12);}
+.r-1wb8bfx{text-decoration-thickness:2px;}
+.r-1wbh5a2{flex-shrink:1;}
+.r-1wtj0ep{justify-content:space-between;}
+.r-1wvb978{font-feature-settings:'ss01' on;}
+.r-1wyyakw{z-index:-1;}
+.r-1x61ttu{-moz-transition:transform 1s ease;-webkit-transition:transform 1s ease;transition:transform 1s ease;}
+.r-1xcajam{position:fixed;}
+.r-1xfddsp{min-height:300px;}
+.r-1xk2f4g{clip:rect(1px, 1px, 1px, 1px);}
+.r-1xnyija{background-color:rgba(250,224,250,1.00);}
+.r-1xnzce8{-moz-user-select:text;-webkit-user-select:text;user-select:text;}
+.r-1xoqx8s{flex-basis:24px;}
+.r-1xvli5t{height:1.25em;}
+.r-1y7e96w{min-width:22px;}
+.r-1ye8kvj{max-width:600px;}
+.r-1yef0xd{animation-name:r-11cv4x;}
+.r-1yjpyg1{font-size:31px;}
+.r-1ykxob0{top:60%;}
+.r-285fr0{min-width:16px;}
+.r-2o02ov{margin-top:40px;}
+.r-2r9icm{background-color:rgba(255,122,0,1.00);}
+.r-2yi16{min-height:36px;}
+.r-33ulu8{width:600px;}
+.r-36ujnk{font-style:italic;}
+.r-37tt59{line-height:32px;}
+.r-3nmjpz{animation-name:r-12fruu6;}
+.r-3s2u2q{white-space:nowrap;}
+.r-3sxh79{top:-1px;}
+.r-417010{z-index:0;}
+.r-46f5du{font-variant-numeric:tabular-nums;}
+.r-4gszlv{background-size:cover;}
+.r-4hwcpe{font-family:Vazirmatn, Tahoma, Arial, sans-serif;}
+.r-4nw3r4{background-color:rgba(249,24,128,1.00);}
+.r-4wgw6l{min-width:32px;}
+.r-54znze{color:rgba(239,243,244,1.00);}
+.r-56xrmm{line-height:12px;}
+.r-5c1b6u{color:rgba(255,122,0,1.00);}
+.r-5kkj8d{border-top-width:1px;}
+.r-5oul0u{margin-bottom:8px;}
+.r-6026j{background-color:rgba(255,255,255,0.85);}
+.r-633pao{pointer-events:none!important;}
+.r-6416eg{-moz-transition-property:background-color, box-shadow;-webkit-transition-property:background-color, box-shadow;transition-property:background-color, box-shadow;}
+.r-64el8z{min-width:52px;}
+.r-68jxh1{min-width:500px;}
+.r-6dt33c{opacity:1;}
+.r-7h7f8p{max-width:100vw;}
+.r-7mdpej{max-width:360px;}
+.r-7q8q6z{cursor:default;}
+.r-8akbws{-webkit-box-orient:vertical;}
+.r-8i4a5g{-moz-transition:flex-grow 0.5s ease-in-out;-webkit-transition:flex-grow 0.5s ease-in-out;transition:flex-grow 0.5s ease-in-out;}
+.r-8jfcpp{top:-2px;}
+.r-8kz0gk{height:2rem;}
+.r-92ng3h{width:1px;}
+.r-95jzfe{padding-top:16px;}
+.r-97prym{flex-basis:16px;}
+.r-9dcw1g{width:320px;}
+.r-9l7dzd{color:rgba(244,33,46,1.00);}
+.r-9tfo2e{background-color:rgba(255,255,255,0.30);}
+.r-a023e6{font-size:15px;}
+.r-adyw6z{font-size:20px;}
+.r-agouwx{transform:translateZ(0);}
+.r-ah5dr5>*{pointer-events:none;}
+.r-ah5dr5{pointer-events:auto!important;}
+.r-aqfbo4{backface-visibility:hidden;}
+.r-axxi2z{-moz-transition-property:transform;-webkit-transition-property:transform;transition-property:transform;}
+.r-b88u0q{font-weight:700;}
+.r-bcqeeo{min-width:0px;}
+.r-bnwqim{position:relative;}
+.r-bt1l66{min-height:20px;}
+.r-bvlit7{margin-bottom:-12px;}
+.r-ck2lme{background-color:rgba(219,248,235,1.00);}
+.r-clrlgt{animation-name:r-imtty0;}
+.r-cnnz9e{width:1.75rem;}
+.r-deolkf{box-sizing:border-box;}
+.r-dflpy8{height:1.2em;}
+.r-dkhcqf{transition-duration:350ms;}
+.r-dnmrzs{max-width:100%;}
+.r-drjvcx{height:3.5rem;}
+.r-ehq7j7{background-size:contain;}
+.r-ek4qxl{min-width:260px;}
+.r-emqnss{transform:translateZ(0px);}
+.r-eqz5dr{flex-direction:column;}
+.r-ero68b{min-height:40px;}
+.r-eu3ka{height:40px;}
+.r-f9dfq4{width:88px;}
+.r-fa1dwr{animation-timing-function:cubic-bezier(0.25, 0.1, 0.25, 1);}
+.r-fdjqy7{text-align:left;}
+.r-fm7h5w{font-family:"TwitterChirpExtendedHeavy","Verdana",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+.r-fvsqc2{top:calc(0px - 53);}
+.r-g6jmlv{width:100vw;}
+.r-gf0ln{-webkit-filter:brightness(1);filter:brightness(1);}
+.r-gkxrsp{background-color:rgba(0,67,41,1.00);}
+.r-h0d30l{height:28px;}
+.r-h3s6tt{height:48px;}
+.r-h9hxbl{width:1.2em;}
+.r-hdaws3{height:4px;}
+.r-htvplk{min-width:600px;}
+.r-i61hcz{min-width:20px;}
+.r-icoktb{opacity:0.5;}
+.r-ifefl9{min-height:0px;}
+.r-impgnl{transform:translateX(50%) translateY(-50%);}
+.r-iphfwy{padding-bottom:4px;}
+.r-ipm5af{top:0px;}
+.r-j5o65s{border-bottom-color:rgba(239,243,244,1.00);}
+.r-jmul1s{transform:scale(1.1);}
+.r-jwli3a{color:rgba(255,255,255,1.00);}
+.r-k200y{align-self:flex-start;}
+.r-k5y9r7{height:9px;}
+.r-k8qxaj{padding-bottom:20px;}
+.r-kemksi{background-color:rgba(0,0,0,1.00);}
+.r-kr0nin{width:1.5rem;}
+.r-kwpbio{height:650px;}
+.r-kzbkwu{padding-bottom:12px;}
+.r-l5o3uw{background-color:rgba(29,155,240,1.00);}
+.r-loe9s5{background-color:rgba(0,0,0,0.77);}
+.r-lp5zef{min-width:24px;}
+.r-lrsllp{width:24px;}
+.r-lrvibr{-moz-user-select:none;-webkit-user-select:none;user-select:none;}
+.r-lrx3fh{width:500px;}
+.r-lwhw9o{height:1.75rem;}
+.r-m6rgpd{vertical-align:text-bottom;}
+.r-majxgm{font-weight:500;}
+.r-mrc9z7{width:1257px;}
+.r-n1ft60{dynamic-range-limit:standard;}
+.r-n6v787{font-size:13px;}
+.r-nhe8su{animation-duration:0.5s;}
+.r-nvplwv{animation-timing-function:ease-out;}
+.r-nwxazl{line-height:40px;}
+.r-o7ynqc{transition-duration:0.2s;}
+.r-o96wvk{width:275px;}
+.r-obd0qt{align-items:flex-end;}
+.r-onrtq4{flex-basis:40px;}
+.r-orgf3d{opacity:0;}
+.r-oucylx{border-bottom-color:rgba(0,0,0,0.00);}
+.r-peo1c{min-height:44px;}
+.r-pm9dpa{max-height:100%;}
+.r-poiln3{font-family:inherit;}
+.r-pp5qcn{vertical-align:-20%;}
+.r-pwrm9v{width:390px;}
+.r-q3k7ks{background-color:rgba(0,122,255,1.00);}
+.r-q4m81j{text-align:center;}
+.r-qklmqi{border-bottom-width:1px;}
+.r-qlhcfr{font-size:0.001px;}
+.r-qvk6io{line-height:0px;}
+.r-qvutc0{word-wrap:break-word;}
+.r-r4n2gf{background-color:rgba(0,175,182,1.00);}
+.r-ripixn{max-height:16vh;}
+.r-rjixqe{line-height:20px;}
+.r-rki7wi{bottom:12px;}
+.r-rsyp9y{max-height:90vh;}
+.r-rthrr5{width:990px;}
+.r-rull8r{border-bottom-style:solid;}
+.r-rwqe4o{width:48px;}
+.r-s224ru{background-color:rgba(0,186,124,1.00);}
+.r-s67bdx{font-size:48px;}
+.r-s8bhmr{min-width:56px;}
+.r-sa2ff0{min-height:100vh;}
+.r-sb58tz{max-width:1000px;}
+.r-t3ofa{-moz-osx-font-smoothing:grayscale;}
+.r-tbmifm{height:12px;}
+.r-tjvw6i{text-decoration-thickness:1px;}
+.r-tskmnb{padding-top:8px;}
+.r-u6sd8q{background-repeat:no-repeat;}
+.r-u8s1d{position:absolute;}
+.r-ueyrd6{line-height:36px;}
+.r-uho16t{font-size:34px;}
+.r-uz7a3o{min-width:650px;}
+.r-v2d8zz{flex-basis:56px;}
+.r-vkv6oe{min-width:40px;}
+.r-vqxq0j{border:0 solid black;}
+.r-vrz42v{line-height:28px;}
+.r-vuvsbk{padding-bottom:calc(16px + 0px);}
+.r-vvn4in{background-position:center;}
+.r-vz2u4x{height:11px;}
+.r-wgabs5{border-bottom-width:2px;}
+.r-wy61xf{height:72px;}
+.r-x3cy2q{background-size:100% 100%;}
+.r-x572qd{background-color:rgba(247,249,249,1.00);}
+.r-xb2eav{font-size:40px;}
+.r-xigjrr{-webkit-filter:blur(4px);filter:blur(4px);}
+.r-xr3zp9{min-height:calc(64px * 3);}
+.r-yc9v9c{width:22px;}
+.r-yn5ncy{animation-fill-mode:both;}
+.r-yy2aun{font-size:26px;}
+.r-yyyyoo{fill:currentcolor;}
+.r-z2knda{transition-timing-function:ease;}
+.r-z7pwl0{max-width:700px;}
+.r-z80fyv{height:20px;}
+.r-zchlnj{right:0px;}
+@-webkit-keyframes r-11cv4x{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
+@-webkit-keyframes r-12fruu6{0%{opacity:0;transform:scale(0.95);}100%{opacity:1;transform:scale(1);}}
+@-webkit-keyframes r-1qpf3yi{0%{opacity:0;transform:scale3d(0.92, 0.92, 1);}100%{opacity:1;transform:scale3d(1, 1, 1);}}
+@-webkit-keyframes r-7bj9g2{0%{opacity:1;transform:scale3d(1, 1, 1);}100%{opacity:0;transform:scale3d(0.92, 0.92, 1);}}
+@-webkit-keyframes r-imtty0{0%{opacity:0;}100%{opacity:1;}}
+@-webkit-keyframes r-t2lo5v{0%{opacity:1;}100%{opacity:0;}}
+@keyframes r-11cv4x{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
+@keyframes r-12fruu6{0%{opacity:0;transform:scale(0.95);}100%{opacity:1;transform:scale(1);}}
+@keyframes r-1qpf3yi{0%{opacity:0;transform:scale3d(0.92, 0.92, 1);}100%{opacity:1;transform:scale3d(1, 1, 1);}}
+@keyframes r-7bj9g2{0%{opacity:1;transform:scale3d(1, 1, 1);}100%{opacity:0;transform:scale3d(0.92, 0.92, 1);}}
+@keyframes r-imtty0{0%{opacity:0;}100%{opacity:1;}}
+@keyframes r-t2lo5v{0%{opacity:1;}100%{opacity:0;}}
+.r-110kfn{position:absolute;visibility:hidden;top:0;width:50px;pointer-events:none}
+.r-110kfn.loaded{visibility:visible;top:50vh;width:50px}</style>
+<style>
+        body { 
+            font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;  
+            background-color: #ffffff; 
+            margin: 0;
+            padding: 0;
+        }
+        .container { 
+            max-width: 600px; 
+            margin: 0 auto; 
+            padding-top: 20px; 
+            padding-bottom: 40px;
+        }
+        .tweet-card { 
+            border: 1px solid rgb(239, 243, 244); 
+            border-radius: 16px; 
+            margin-bottom: 16px; 
+            padding: 16px; 
+            overflow-wrap: break-word;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-top: 10px;
+        }
+        /* Basic reset for some Twitter specific classes if needed */
+        a { text-decoration: none; color: rgb(29, 155, 240); }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+<div class="container">
+<div class="tweet-card">
+<article aria-labelledby="id__5h35y7x71ze id__aytx6o0ctc6 id__0qms7p7oft8k id__2adtkofn0fu id__pxliagodsp id__inj9v7cssra id__ohvod4qnrc id__ix9oa9jka5j id__v53j1t0n12g id__0bywktsuamae id__t9fa1ablde id__btap8nhdvc5 id__tt6nts2r9gd id__zmv40hkrxkp id__ho228wi4wx id__p6jqkfx9fqo id__1eesjucoosi id__x06dxmp9pm id__8gkr7497wcv id__uts3kixkey" class="css-g5y9jx r-18u37iz r-1udh08x r-1c4vpko r-1c7gwzm r-1ny4l3l" data-testid="tweet" role="article" tabindex="-1"><div class="css-g5y9jx r-eqz5dr r-16y2uox r-1wbh5a2"><div class="css-g5y9jx r-16y2uox r-1wbh5a2 r-1ny4l3l"><div class="css-g5y9jx"><div class="css-g5y9jx r-18u37iz r-136ojw6"><div class="css-g5y9jx r-1iusvr4 r-16y2uox r-ttdzmv"></div></div></div><div class="css-g5y9jx r-18u37iz r-136ojw6"><div class="css-g5y9jx r-18kxxzh r-1wron08 r-onrtq4 r-1awozwy"><div class="css-g5y9jx" data-testid="Tweet-User-Avatar"><div class="css-g5y9jx r-18kxxzh r-1wbh5a2 r-13qz1uu"><div class="css-g5y9jx r-1wbh5a2 r-dnmrzs"><div class="css-g5y9jx r-bztko3 r-1adg3ll" data-testid="UserAvatar-Container-Sither_V" style="width: 40px; height: 40px;"><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 100%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div class="css-g5y9jx r-1adg3ll r-1pi2tsx r-13qz1uu r-45ll9u r-u8s1d r-1v2oles r-176fswd r-bztko3"><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 100%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div class="css-g5y9jx r-sdzlij r-1udh08x r-5f1w11 r-u8s1d r-8jfcpp" style="width: calc(100% + 4px); height: calc(100% + 4px);"><a aria-hidden="true" class="css-g5y9jx r-1pi2tsx r-13qz1uu r-o7ynqc r-6416eg r-1ny4l3l r-1loqt21" href="/Sither_V" role="link" style="background-color: rgba(0, 0, 0, 0);" tabindex="-1"><div class="css-g5y9jx r-sdzlij r-1udh08x r-633pao r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-g5y9jx r-1pi2tsx r-13qz1uu" style="background-color: rgba(0, 0, 0, 0);"></div></div><div class="css-g5y9jx r-sdzlij r-1udh08x r-633pao r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-g5y9jx r-1pi2tsx r-13qz1uu r-14lw9ot"></div></div><div class="css-g5y9jx r-sdzlij r-1udh08x r-633pao r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="background-color: rgb(255, 255, 255); width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-g5y9jx r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 100%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div class="css-g5y9jx r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af"><div class="css-g5y9jx r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/profile_images/2096119115954171905/DMSduMrm_normal.jpg");'></div><img alt="" class="css-9pa8cd" draggable="true" src="https://pbs.twimg.com/profile_images/2096119115954171905/DMSduMrm_normal.jpg"/></div></div></div></div><div class="css-g5y9jx r-sdzlij r-1udh08x r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-g5y9jx r-12181gd r-1pi2tsx r-13qz1uu r-o7ynqc r-6416eg r-1ny4l3l"></div></div></a></div></div></div></div></div></div></div></div></div><div class="css-g5y9jx r-1iusvr4 r-16y2uox r-1777fci"><div class="css-g5y9jx r-zl2h9q"><div class="css-g5y9jx r-k4xj1c r-18u37iz r-1wtj0ep"><div class="css-g5y9jx r-1d09ksm r-18u37iz r-1wbh5a2"><div class="css-g5y9jx r-1wbh5a2 r-dnmrzs r-1ny4l3l"><div class="css-g5y9jx r-1wbh5a2 r-dnmrzs r-1ny4l3l" data-testid="User-Name" id="id__pxliagodsp"><div class="css-g5y9jx r-1awozwy r-18u37iz r-1wbh5a2 r-dnmrzs"><div class="css-g5y9jx r-1wbh5a2 r-dnmrzs"><a class="css-g5y9jx r-1wbh5a2 r-dnmrzs r-1ny4l3l r-1loqt21" href="/Sither_V" role="link"><div class="css-g5y9jx r-1awozwy r-18u37iz r-1wbh5a2 r-dnmrzs"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-b88u0q r-1awozwy r-6koalj r-1udh08x r-3s2u2q" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-dnmrzs r-1udh08x r-1udbk01 r-3s2u2q r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">苍述</span></span></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-xoduu5 r-18u37iz r-1q142lx" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1awozwy r-xoduu5"><svg aria-label="认证账号" class="r-4qtqp9 r-yyyyoo r-1xvli5t r-bnwqim r-lrvibr r-m6rgpd r-1cvl2hr r-f9ja8p r-og9te1 r-3t4u6i" data-testid="icon-verified" role="img" viewbox="0 0 22 22"><g><path d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.854-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.688-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.606-.274 1.263-.144 1.896.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681s.075-1.299-.165-1.903c.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z"></path></g></svg></span></div></div></a></div></div><div class="css-g5y9jx r-18u37iz r-1wbh5a2"><div class="css-g5y9jx r-1d09ksm r-18u37iz r-1wbh5a2"><div class="css-g5y9jx r-1wbh5a2 r-dnmrzs"><a class="css-g5y9jx r-1wbh5a2 r-dnmrzs r-1ny4l3l r-1loqt21" href="/Sither_V" role="link" tabindex="-1"><div class="css-146c3p1 r-dnmrzs r-1udh08x r-1udbk01 r-3s2u2q r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-18u37iz r-1wvb978" dir="ltr" style="color: rgb(83, 100, 113);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">@Sither_V</span></div></a></div></div></div></div></div></div><div class="css-g5y9jx r-1kkk96v"><div class="css-g5y9jx r-1awozwy r-18u37iz r-1cmwbt1 r-1wtj0ep"><div class="css-g5y9jx r-18u37iz r-1h0z5md"><button aria-label="总结" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(15, 20, 25);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><div class="css-g5y9jx r-xoduu5 r-bnwqim"><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-1xvli5t r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd" viewbox="0 0 33 32"><g><path d="M12.745 20.54l10.97-8.19c.539-.4 1.307-.244 1.564.38 1.349 3.288.746 7.241-1.938 9.955-2.683 2.714-6.417 3.31-9.83 1.954l-3.728 1.745c5.347 3.697 11.84 2.782 15.898-1.324 3.219-3.255 4.216-7.692 3.284-11.693l.008.009c-1.351-5.878.332-8.227 3.782-13.031L33 0l-4.54 4.59v-.014L12.743 20.544m-2.263 1.987c-3.837-3.707-3.175-9.446.1-12.755 2.42-2.449 6.388-3.448 9.852-1.979l3.72-1.737c-.67-.49-1.53-1.017-2.515-1.387-4.455-1.854-9.789-.931-13.41 2.728-3.483 3.523-4.579 8.94-2.697 13.561 1.405 3.454-.899 5.898-3.22 8.364C1.49 30.2.666 31.074 0 32l10.478-9.466"></path></g></svg></div></div></div></button></div><div class="css-g5y9jx r-1awozwy r-6koalj r-18u37iz"><div class="css-g5y9jx"><div class="css-g5y9jx r-18u37iz r-1h0z5md"><button aria-expanded="false" aria-haspopup="menu" aria-label="更多" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="caret" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div></div></button></div></div></div></div></div></div></div></div></div><div class="css-g5y9jx"><article class="css-g5y9jx r-1ny4l3l" data-testid="twitterArticleReadView" role="article" tabindex="-1"><div class="css-g5y9jx r-1peese0"><div class="css-g5y9jx"><div class="css-g5y9jx r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-g5y9jx"><div class="css-g5y9jx r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-g5y9jx r-1pi2tsx r-1ny4l3l r-1loqt21" href="/Sither_V/article/2102976218178163055/media/2102966888666152960" role="link"><div class="css-g5y9jx r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 40%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="图像" class="css-g5y9jx r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-g5y9jx r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HS89PkVawAAkKZF?format=jpg&amp;name=small");'></div><img alt="图像" class="css-9pa8cd" draggable="true" src="assets/023225b5bba354c0fda57ea72e51dc99.jpg"/></div></div></div></a></div></div></div></div></div><div class="css-g5y9jx r-vmopo1"><div class="css-g5y9jx r-13qz1uu"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-uho16t r-1vr29t4 r-1o37s4c r-1s2bzr4" data-testid="twitter-article-title" dir="auto" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">万字长文：见到最真实的现状后，我决定放弃FDE</span></div></div><div class="css-g5y9jx"><div aria-label="42 回复、47 次转帖、207 喜欢、311 书签、34878 次观看" class="css-g5y9jx r-1kbdv8c r-18u37iz r-1wtj0ep r-1ye8kvj r-j5o65s r-rull8r r-qklmqi r-h3s6tt r-14gqq1x" role="group"><div class="css-g5y9jx r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="42 回复。回复" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="reply" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01zm8.005-6c-3.317 0-6.005 2.69-6.005 6 0 3.37 2.77 6.08 6.138 6.01l.351-.01h1.761v2.3l5.087-2.81c1.951-1.08 3.163-3.13 3.163-5.36 0-3.39-2.744-6.13-6.129-6.13H9.756z"></path></g></svg></div><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">42</span></span></span></div></div></button></div><div class="css-g5y9jx r-18u37iz r-1h0z5md r-13awgt0"><button aria-expanded="false" aria-haspopup="menu" aria-label="47 次转帖。转帖" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="retweet" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"></path></g></svg></div><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">47</span></span></span></div></div></button></div><div class="css-g5y9jx r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="207 喜欢次数。喜欢" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="like" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"></path></g></svg></div><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">207</span></span></span></div></div></button></div><div class="css-g5y9jx r-18u37iz r-1h0z5md r-13awgt0"><a aria-label="34878 次查看。查看帖子分析" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1ny4l3l r-1loqt21" href="/Sither_V/status/2102976218178163055/analytics" role="link"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M8.75 21V3h2v18h-2zM18 21V8.5h2V21h-2zM4 21l.004-10h2L6 21H4zm9.248 0v-7h2v7h-2z"></path></g></svg></div><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">3.4万</span></span></span></div></div></a></div><div class="css-g5y9jx r-18u37iz r-1h0z5md r-1wron08"><button aria-label="书签" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="bookmark" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M4 4.5C4 3.12 5.119 2 6.5 2h11C18.881 2 20 3.12 20 4.5v18.44l-8-5.71-8 5.71V4.5zM6.5 4c-.276 0-.5.22-.5.5v14.56l6-4.29 6 4.29V4.5c0-.28-.224-.5-.5-.5h-11z"></path></g></svg></div></div></button></div><div class="css-g5y9jx" style="align-content: stretch; justify-content: inherit; display: inline-grid; transform: rotate(0deg) scale(1) translate3d(0px, 0px, 0px);"><div class="css-g5y9jx r-18u37iz r-1h0z5md"><button aria-expanded="false" aria-haspopup="menu" aria-label="分享帖子" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M12 2.59l5.7 5.7-1.41 1.42L13 6.41V16h-2V6.41l-3.3 3.3-1.41-1.42L12 2.59zM21 15l-.02 3.51c0 1.38-1.12 2.49-2.5 2.49H5.5C4.11 21 3 19.88 3 18.5V15h2v3.5c0 .28.22.5.5.5h12.98c.28 0 .5-.22.5-.5L19 15h2z"></path></g></svg></div></div></button></div></div></div></div><div class="css-g5y9jx r-1knelpx" data-testid="twitterArticleRichTextView"><div class="css-g5y9jx r-18jsvk2 r-37j5jr"><div class="DraftEditor-root"><div class="DraftEditor-editorContainer"><div aria-describedby="placeholder-edvi3" class="public-DraftEditor-content" contenteditable="false" data-testid="longformRichTextComponent" spellcheck="false" style="outline: none; user-select: text; white-space: pre-wrap; overflow-wrap: break-word;"><div data-contents="true"><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="2am3-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="2am3-0-0"><span data-offset-key="2am3-0-0" style="font-weight: bold;"><span data-text="true">两个月靠FDE赚了20万</span></span><span data-offset-key="2am3-0-1"><span data-text="true">，</span></span><span data-offset-key="2am3-0-2" style="font-weight: bold;"><span data-text="true">自己平台储备了超500个FDE</span></span><span data-offset-key="2am3-0-3"><span data-text="true">，</span></span><span data-offset-key="2am3-0-4" style="font-weight: bold;"><span data-text="true">见了超过60个真实项目</span></span><span data-offset-key="2am3-0-5"><span data-text="true">，走访了多家真正赚钱的FDE公司，我想我应该有资格也有必要站出来说一下这行业真正的真实现状：</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="edvi3" data-offset-key="ou0j-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="ou0j-0-0"><span data-offset-key="ou0j-0-0" style="font-weight: bold;"><span data-text="true">FDE是个坑，不要飞升，不要飞升，上界以我族为食！！</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="3thfm-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="3thfm-0-0"><span data-offset-key="3thfm-0-0"><span data-text="true">同时我必须要告诉所有人，真正在FDE这个行业闷声发大财的人们的情况根本就远超你们的想象。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="asilp-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="asilp-0-0"><span data-offset-key="asilp-0-0"><span data-text="true">全文约 9000 字，主要聊这七件事：</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="asoeo-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="asoeo-0-0"><span data-offset-key="asoeo-0-0"><span data-text="true">① FDE 是什么，别被身份绑架</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="fvbc5-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="fvbc5-0-0"><span data-offset-key="fvbc5-0-0"><span data-text="true">② 接不到单是幸运，接错订单是噩梦</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="ettqg-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="ettqg-0-0"><span data-offset-key="ettqg-0-0"><span data-text="true">③ 做总包，能不能放大业务</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="7ivgk-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7ivgk-0-0"><span data-offset-key="7ivgk-0-0"><span data-text="true">④ 企业真正需要的 AI 服务</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="85f47-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="85f47-0-0"><span data-offset-key="85f47-0-0"><span data-text="true">⑤ 闷声发大财的那批人在做什么</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="11i0-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="11i0-0-0"><span data-offset-key="11i0-0-0"><span data-text="true">⑥ FDE的获客陷阱</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="89pnq-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="89pnq-0-0"><span data-offset-key="89pnq-0-0"><span data-text="true">⑦ 我们团队的战略转向</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h1 class="longform-header-one" data-block="true" data-editor="edvi3" data-offset-key="5odem-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5odem-0-0"><span data-offset-key="5odem-0-0"><span data-text="true">第一节｜FDE 是什么：一顶帽子，别把它当信仰</span></span></div></h1></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="cujsh-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="cujsh-0-0"><span data-offset-key="cujsh-0-0"><span data-text="true">很多人一聊起 FDE，张嘴闭嘴就是硅谷的 Palantir，开始引经据典讲前线部署工程师的高大上定义。扯淡，那套东西拿到中国本土的商业环境里，根本就不是那么一回事。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="mvmm-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="mvmm-0-0"><span data-offset-key="mvmm-0-0"><span data-text="true">在中国做所谓的 FDE，剥离掉所有包装出来的黑话，业务本质其实极其粗暴：</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="edvi3" data-offset-key="7lqi0-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7lqi0-0-0"><span data-offset-key="7lqi0-0-0"><span data-text="true">帮别人用上 AI、用好 AI。</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="2m1cl-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="2m1cl-0-0"><span data-offset-key="2m1cl-0-0"><span data-text="true">不管你面对的是一个个人还是一个企业，只要你干的是把现有的 AI 能力塞进具体业务里、帮人解决实际问题的事，在这个阶段，你就可以说自己在做 FDE。</span></span><span data-offset-key="2m1cl-0-1" style="font-weight: bold;"><span data-text="true">它就是时代风口砸下来的一顶帽子，一个天然带有流量属性的标签。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="39tmb-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="39tmb-0-0"><span data-offset-key="39tmb-0-0"><span data-text="true">如果你觉得戴上它对你获客有利、对你做生意有利，你就老老实实戴在头上拿去借力；要是你把它当成某种神圣的技术信仰，整天去抠定义、去论证自己到底算不算正统，那纯粹是脑子进水。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="567pi-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="567pi-0-0"><span data-offset-key="567pi-0-0"><span data-text="true">真要死抠 Palantir 的商业模式，国内现在绝大多数团队连门槛都摸不到。人家叫 Forward Deployed Engineer（前线部署工程师），前提是人家后方有一整套极其庞大、经过数十年打磨的后线工程体系和软件底座。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="aarns-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="aarns-0-0"><span data-offset-key="aarns-0-0"><span data-text="true">前线工程师扑到客户现场，把那个行业最核心的业务逻辑、数据关系高度抽象出来，沉淀成一套模型，也就是所谓的 Ontology。人家在前线干这个，是为了把提炼出来的资产带回后线，去迭代那个能卖给整个行业的通用底层平台，做行业级的规模化赋能。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="6f087-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="6f087-0-0"><span data-offset-key="6f087-0-0"><span data-text="true">反观现在国内很多自诩高端的 FDE 团队，整个班子刚拉起来两三个月，拢共就接了一两家小企业的活，自己公司连个像样的交付体系都没有，</span></span><span data-offset-key="6f087-0-1" style="font-weight: bold;"><span data-text="true">根本就没有后线支撑。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="3ks25-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="3ks25-0-0"><span data-offset-key="3ks25-0-0"><span data-text="true">全公司上上下下几个人全是前线，既没有深耕某一个垂直行业的长期积累，也没有任何承接复用的能力，一上来就跟客户大谈特谈我们要帮你沉淀 Ontology。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="edvi3" data-offset-key="7hges-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7hges-0-0"><span data-offset-key="7hges-0-0"><span data-text="true">我都不知道你沉淀那个 Ontology 是干啥的？完全是浪费时间。</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="basir-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="basir-0-0"><span data-offset-key="basir-0-0"><span data-text="true">对于那家掏钱买单的具体企业来说，一个高度抽象的行业实体关系模型对它当下的降本增效几乎毫无卵用，它要的是下周能不能把报表自动拉出来、客服工单能不能少配两个人。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="49iid-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="49iid-0-0"><span data-offset-key="49iid-0-0"><span data-text="true">而对你这个交付团队来说，你服务完这家，下家还不知道在哪个行业，你费尽心机抽离出来的所谓业务模型，换个客户就成了废纸一张，既没人维护也没处落地。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="e9aae-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="e9aae-0-0"><span data-offset-key="e9aae-0-0"><span data-text="true">脱离了体系化交付和垂直领域的复用，空谈 Ontology 只是把简单问题复杂化的自嗨。把这顶帽子摘下来看，它就是当年移动互联网刚爆发时的“运营”岗位——早期谁也说不清边界，干的都是最脏最累的下水管道活儿，随着行业成熟才会逐步分化。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="ntb2-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="ntb2-0-0"><span data-offset-key="ntb2-0-0"><span data-text="true">你先把它看成一门具体的糊口营生，算清楚自己的投入产出比，再决定要不要入局。没有虚妄的身份信仰，后面面对接不到单或者接错单的时候，你才不至于陷入莫名其妙的精神内耗。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h1 class="longform-header-one" data-block="true" data-editor="edvi3" data-offset-key="e2kit-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="e2kit-0-0"><span data-offset-key="e2kit-0-0"><span data-text="true">第二节｜接不到单是你的幸运，接错单是你的噩梦</span></span></div></h1></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="10dee-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="10dee-0-0"><span data-offset-key="10dee-0-0"><span data-text="true">大家又不是大学本科读了个“FDE 专业”，更没人规定你这辈子不干 FDE 就会饿死。接不到单，大不了拍拍屁股去干别的，顶多是没赚到这波热钱；但要是你盲目冲进去接错了一个大单，那才是你倾家荡产、心力交瘁的真正噩梦。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="anqqs-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="anqqs-0-0"><span data-offset-key="anqqs-0-0"><span data-text="true">我有一个合作团队，前阵子接了国内某顶级家电品牌的一家代工厂的所谓 AI 转型项目。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="23knl-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="23knl-0-0"><span data-offset-key="23knl-0-0"><span data-text="true">客户提的需求听起来很宏大，也很符合大家对智能制造的幻想：希望能从人事底层数据到财务流水，把全公司各个环节的数据彻底打通，上面搭一套智能体和数据看板，实现全面的 AI 化流转。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="b29i0-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="b29i0-0-0"><span data-offset-key="b29i0-0-0"><span data-text="true">整个项目的合同总金额，</span></span><span data-offset-key="b29i0-0-1" style="font-weight: bold;"><span data-text="true">大概在 40 万元左右。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="3kjdd-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="3kjdd-0-0"><span data-offset-key="3kjdd-0-0"><span data-text="true">这 40 万好拿吗？这个团队进场了五六个人，在那家工厂里死磕了</span></span><span data-offset-key="3kjdd-0-1" style="font-weight: bold;"><span data-text="true">将近45 天</span></span><span data-offset-key="3kjdd-0-2"><span data-text="true">，</span></span><span data-offset-key="3kjdd-0-3" style="font-weight: bold;"><span data-text="true">整整六周</span></span><span data-offset-key="3kjdd-0-4"><span data-text="true">过去了，连哪怕一个最简单的 AI 模型调优、一个 Agent 的具体业务工作流都还没开始做。
+
+</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="edvi3" data-offset-key="55ghn-0-0"><div class="css-g5y9jx r-1nxhmzv"><div class="css-g5y9jx r-13qz1uu"><div class="css-g5y9jx r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-g5y9jx"><div class="css-g5y9jx r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-g5y9jx r-1pi2tsx r-1ny4l3l r-1loqt21" href="/Sither_V/article/2102976218178163055/media/2102989669646700544" role="link"><div class="css-g5y9jx r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 66.6667%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="图像" class="css-g5y9jx r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-g5y9jx r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HS9R9mGbkAA4fUn?format=jpg&amp;name=small");'></div><img alt="图像" class="css-9pa8cd" draggable="true" src="assets/7236f8ab085bd165928854aa39fc43fa.jpg"/></div></div></div></a></div></div></div></div></div></section><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="edvi3" data-offset-key="bhrqt-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="bhrqt-0-0"><span data-offset-key="bhrqt-0-0"><span data-text="true">所有人每天从早到晚干的唯一一件事，就是做数据治理。</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="d40ts-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="d40ts-0-0"><span data-offset-key="d40ts-0-0"><span data-text="true">按他们现在的消耗和进度去估算，光是把这批烂账理清楚的人力物力成本，就已经有很大可能要超过这整个项目的 40 万元订单总额了。现在团队直接被架在火上烤：想中途退场认赔不干了？</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="c6bha-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="c6bha-0-0"><span data-offset-key="c6bha-0-0"><span data-text="true">前期五六个人砸进去的一个半月工资和差旅全打了水漂不说，手里还捏着白纸黑字的交付合同，合同里写着阶段节点与验收标准，单方面违约的代价根本承受不起；咬着牙继续往前推？那就是个无底洞，越干亏得越多，后面甚至不知道还要填进去多少人日。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="f6eqq-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="f6eqq-0-0"><span data-offset-key="f6eqq-0-0"><span data-text="true">为什么会搞成这副德行？因为很多搞技术、搞模型出身的人，对中国传统企业的数字化底座存在着极其严重的致命误判。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="4m8cm-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4m8cm-0-0"><span data-offset-key="4m8cm-0-0"><span data-text="true">在所有需要贯通企业业务数据的 AI 重定制项目里，</span></span><span data-offset-key="4m8cm-0-1" style="font-weight: bold;"><span data-text="true">AI 从来不是什么点石成金的魔法，它仅仅是浮在最上层的一层应用设计和调度界面。</span></span><span data-offset-key="4m8cm-0-2"><span data-text="true">你要让 AI 发挥作用，前提是这家公司必须有一个清晰、标准、接口规范的数据底座。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="dpft0-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="dpft0-0-0"><span data-offset-key="dpft0-0-0"><span data-text="true">而现实中，国内绝大多数中小企业甚至制造厂的数据底座，用四个字概括就够了：</span></span><span data-offset-key="dpft0-0-1" style="font-weight: bold;"><span data-text="true">一坨狗屎。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="5gsc6-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5gsc6-0-0"><span data-offset-key="5gsc6-0-0"><span data-text="true">我走访了那么多真实项目，看到的实际情况往往荒诞得像魔幻现实：有些所谓的经营数据，到今天依然只记在一线车间那些皱巴巴的纸质单据上；</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="fe5ca-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="fe5ca-0-0"><span data-offset-key="fe5ca-0-0"><span data-text="true">有些关乎良品率的关键工艺参数，只存在于几个老师傅的脑子里，人家凭手感调机器，根本没有数字化记录；</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="bb7i9-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="bb7i9-0-0"><span data-offset-key="bb7i9-0-0"><span data-text="true">有些企业倒是上了系统，但那是十几年前买的破烂 ERP 或 CRM，连一个最基础的 API 接口都调不出来；</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="51s5-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="51s5-0-0"><span data-offset-key="51s5-0-0"><span data-text="true">更绝的是，当年给他们开发管理软件的本地小外包公司，可能早在五年前就已经倒闭清算了，源码丢失，数据库加密，你连找人买个接口文档都找不到人。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="8o66v-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8o66v-0-0"><span data-offset-key="8o66v-0-0"><br data-text="true"/></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="6nhpd-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="6nhpd-0-0"><span data-offset-key="6nhpd-0-0"><span data-text="true">面对这种底子，你的 AI 算法再牛逼、Prompt 写得再精妙，有什么用？你连喂给模型的数据从哪儿读都不知道。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="3fqh2-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="3fqh2-0-0"><span data-offset-key="3fqh2-0-0"><span data-text="true">我们可以把这种错配放到一个更极端的说明性场景里来看：假设你今天接了一个 30 万元的 AI 定制订单，合同签得顺顺利利，等你带着人真正进场调研拆解后才傻了眼——要把这个项目承诺的功能跑通，必须先帮这家企业把底层那些支离破碎的数据洗干净、打通接口，而这项前置的数据治理工程，起码要花掉 </span></span><span data-offset-key="3fqh2-0-1" style="font-weight: bold;"><span data-text="true">100 万元的纯人力成本。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="69c6t-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="69c6t-0-0"><span data-offset-key="69c6t-0-0"><span data-text="true">这时候你怎么跟客户谈？你跑到老板办公室，跟他说：“老板，为了能把您这 30 万的 AI 项目交付了，您得先额外批 100 万预算，让我们先把您公司过去十年的陈年烂账数据梳理干净。”</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="edvi3" data-offset-key="31fi8-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="31fi8-0-0"><span data-offset-key="31fi8-0-0"><span data-text="true">这他妈根本没有老板会认。</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="8oirv-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8oirv-0-0"><span data-offset-key="8oirv-0-0"><span data-text="true">老板心里只会觉得：我找你来是买先进 AI 的，30 万买个高科技我认，你现在连个界面都没让我看到，就管我要 100 万去扫垃圾？你是不是在诈骗？预期从这一刻起彻底崩塌，客户觉得你无能敲竹杠，你觉得客户不可理喻不尊重客观规律。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="ehnes-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="ehnes-0-0"><span data-offset-key="ehnes-0-0"><span data-text="true">但合同已经签了，沉没成本已经产生，你只能自己把苦水往肚子里咽。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="c0afd-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="c0afd-0-0"><span data-offset-key="c0afd-0-0"><span data-text="true">很多人没想明白业务边界：这种涉及复杂异构系统、陈年历史包袱的深度数据治理，</span></span><span data-offset-key="c0afd-0-1" style="font-weight: bold;"><span data-text="true">根本就不是新兴的普通 FDE 团队该去碰的活儿。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="5dspm-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5dspm-0-0"><span data-offset-key="5dspm-0-0"><span data-text="true">那是用友这种在企业服务领域深耕了几十年的老牌巨头，或者原本就在这个垂直行业里做了多年专业数据集成、有极高方案复用率和工程工具链的团队，才有可能把投入产出比打正的苦活累活。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="euplq-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="euplq-0-0"><span data-offset-key="euplq-0-0"><span data-text="true">新团队、小团队没有那种几十个项目沉淀下来的现成工具和行业接口，单凭几个人肉身冲进去做深度定制，接一个就陷死一个。你以为自己接到了大单，其实是跳进了别人挖了十年的数据粪坑。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h1 class="longform-header-one" data-block="true" data-editor="edvi3" data-offset-key="938us-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="938us-0-0"><span data-offset-key="938us-0-0"><span data-text="true">第三节｜自己做太重，做总包就能放大吗？</span></span></div></h1></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="3olsv-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="3olsv-0-0"><span data-offset-key="3olsv-0-0"><span data-text="true">在意识到重交付是个泥潭之后，很多自命不凡的创业者就会开始琢磨另一条商业化路径：既然我自己下场交付太重、太容易被拖死，那我去做总包行不行？</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="8p52s-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8p52s-0-0"><span data-offset-key="8p52s-0-0"><span data-text="true">逻辑听上去似乎无懈可击：我自己负责商务谈判、方案构想和资源整合，把项目从甲方那里接过来，然后再把具体的开发、部署、清洗数据等重活分包给市面上那些饥肠辘辘的交付团队。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="2tv1q-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="2tv1q-0-0"><span data-offset-key="2tv1q-0-0"><span data-text="true">我从中间抽管理费或者吃差价，左手转右手，既能甩掉沉重的人力包袱，又能同时撬动多个项目，杠杆不就自然放大了吗？</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="bce37-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="bce37-0-0"><span data-offset-key="bce37-0-0"><span data-text="true">总包确实是一种被成熟商业社会验证过的杠杆模式，这一点我不否认。但所有想在现阶段 AI 领域玩总包的人，都漏算了一个决定生死的硬约束：</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="edvi3" data-offset-key="97vhj-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="97vhj-0-0"><span data-offset-key="97vhj-0-0"><span data-text="true">交付可以分包出去，但对甲方的最终责任和风险，永远只能由总包方自己兜底。</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="d95fd-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="d95fd-0-0"><span data-offset-key="d95fd-0-0"><span data-text="true">商业世界的基本法则是极其冷酷的。甲方签合同认的是你这家公司的章，打款也是打到你的对公账户上。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="1pnen-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1pnen-0-0"><span data-offset-key="1pnen-0-0"><span data-text="true">一旦你分包出去的小团队在现场掉链子，开发延期、技术暴雷、数据被洗烂，甲方绝对不会去找你下游的几十个临时拼凑的工程师，人家只会拿合同封你的账号、扣你的保证金、甚至直接起诉你。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="19n4h-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="19n4h-0-0"><span data-offset-key="19n4h-0-0"><span data-text="true">这就意味着，做总包的前提，是你手头必须常年储备着一支具备极高交付能力、随时能够下场接管烂摊子的救火团队。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="edvi3" data-offset-key="btdpd-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="btdpd-0-0"><span data-offset-key="btdpd-0-0"><span data-text="true">你的业务规模上限，根本不取决于你能拿到多少订单，而是取决于你在最坏的情况下，能同时给几个暴雷的项目兜底。
+
+</span></span></div></h2></div><section class="" contenteditable="false" data-block="true" data-editor="edvi3" data-offset-key="cqkno-0-0"><div class="css-g5y9jx r-1nxhmzv"><div class="css-g5y9jx r-13qz1uu"><div class="css-g5y9jx r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-g5y9jx"><div class="css-g5y9jx r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-g5y9jx r-1pi2tsx r-1ny4l3l r-1loqt21" href="/Sither_V/article/2102976218178163055/media/2102989785447227392" role="link"><div class="css-g5y9jx r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 66.6667%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="图像" class="css-g5y9jx r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-g5y9jx r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HS9SEVfbYAAzvc6?format=jpg&amp;name=small");'></div><img alt="图像" class="css-9pa8cd" draggable="true" src="assets/3b3ed20768dea8110e5f0fa3750a9226.jpg"/></div></div></div></a></div></div></div></div></div></section><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="41oa9-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="41oa9-0-0"><span data-offset-key="41oa9-0-0"><span data-text="true">而现实中最致命的问题在哪儿？在于下游交付团队的供给质量脆弱到了极点。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="e7adt-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="e7adt-0-0"><span data-offset-key="e7adt-0-0"><span data-text="true">按照我这两个月平台沉淀了 500 多个 FDE、走访了大量团队的真实经验来看：如果把目前全网自称能做 FDE、能接企业单子的 100 个团队拉出来筛一遍，</span></span><span data-offset-key="e7adt-0-1" style="font-weight: bold;"><span data-text="true">真正有能力独立交付 20 万元以上量级项目的，不会超过两个。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="edvi3" data-offset-key="c8km-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="c8km-0-0"><span data-offset-key="c8km-0-0"><span data-text="true">不超过两个，这就是残酷的行业现实。</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="4msen-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4msen-0-0"><span data-offset-key="4msen-0-0"><span data-text="true">
+剩下的绝大多数人，都是刚看完几篇推文、调了几个开源模型 API、整过几个智能体定制就出来自称专家的票友。他们连传统软件交付的敏捷管理、版本控制和接口安全规范都还没搞明白，更别提去应对企业复杂的现场突发状况了。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="7n4f0-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7n4f0-0-0"><span data-offset-key="7n4f0-0-0"><span data-text="true">又或者可能有不错的技术背景，大厂技术出身，但是思维根本没有转向成重售前、</span></span><span data-offset-key="7n4f0-0-1" style="font-weight: bold;"><span data-text="true">能以产品和PMO视角清晰拆分需求和项目规划</span></span><span data-offset-key="7n4f0-0-2"><span data-text="true">的视角，让他们去把控整个大型且边界模糊的项目根本就不可能。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="8mhh9-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8mhh9-0-0"><span data-offset-key="8mhh9-0-0"><span data-text="true">这里有个常见的坑，很多人恰恰就以为大厂出来的一定能交付好项目，导致项目扔过去之后一地鸡毛出现重大风险。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="8j2od-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8j2od-0-0"><span data-offset-key="8j2od-0-0"><span data-text="true">在这样的人才生态里做总包，本质上是在刀尖上跳舞。你自己接一个重定制错单，无非是五六个人陷进去被折磨 90 天；可如果你盲目扩张去做总包，靠着商务能力一口气拉来四五个几十万的项目，分发给下游那些看似便宜的接单团队，其结果往往是灾难性的。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="2jp1n-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="2jp1n-0-0"><span data-offset-key="2jp1n-0-0"><span data-text="true">现场一旦全面失控，三个项目同时延期，两个团队半路撂挑子跑路，所有的救火压力和合同违约责任会瞬间集中回流到你自己头上。你根本没有足够的精锐力量同时去扑灭四面八方的火，最终的结局就是口碑崩盘、资金链断裂，把过去赚到的所有利润连本带利赔个精光。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="7o1l3-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7o1l3-0-0"><span data-offset-key="7o1l3-0-0"><span data-text="true">分包交付不但没有消除重交付的天然缺陷，反而把系统性的交付风险成倍放大了。当一条路的放大效应完全依赖于你无法掌控的外部兜底能力时，这就不是做生意的杠杆，这是背着炸药包走钢丝。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h1 class="longform-header-one" data-block="true" data-editor="edvi3" data-offset-key="7gjf8-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7gjf8-0-0"><span data-offset-key="7gjf8-0-0"><span data-text="true">第四节｜企业的大多数需求，通用办公 Agent 已经能解决</span></span></div></h1></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="8s2eq-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8s2eq-0-0"><span data-offset-key="8s2eq-0-0"><span data-text="true">把重交付和总包这两条死胡同全部堵死之后，我们必须退回到商业常识的原点重新思考：今天那些掏钱的企业，到底真正需要什么？</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="fc4e0-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="fc4e0-0-0"><span data-offset-key="fc4e0-0-0"><span data-text="true">在我和大量企业主的实际接触中，一个极其荒诞但普遍存在的事实是：</span></span><span data-offset-key="fc4e0-0-1" style="font-weight: bold;"><span data-text="true">很多企业连市面上最成熟、最先进的通用办公 Agent 都还没用上，甚至根本不知道它们的存在。</span></span><span data-offset-key="fc4e0-0-2"><span data-text="true">哪怕有些老板在风口吹动下掏钱采购了相关软件，整个公司上下也基本不太会用，产品躺在后台吃灰。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="5pdnv-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5pdnv-0-0"><span data-offset-key="5pdnv-0-0"><span data-text="true">技术人往往有一种强烈的技术傲慢，总觉得客户找到自己，就必须用最前沿的模型架构、做一套从底层打通全流程的定制化系统才叫解决问题。但你真沉下去看就会发现，企业买到一把好锤子，和把这把锤子敲进自己的日常工作流里，中间隔着巨大的认知鸿沟与使用门槛。</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="edvi3" data-offset-key="cla66-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="cla66-0-0"><span data-offset-key="cla66-0-0"><span data-text="true">他们缺的不是更锋利的锤子，缺的是一个能走进车间和办公室、告诉他们这颗钉子该怎么砸的木匠。</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="39ju9-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="39ju9-0-0"><span data-offset-key="39ju9-0-0"><span data-text="true">在排除掉前文提到的、新兴团队根本不该承接的深层数据治理之后，如果只看企业内部日常的协同、报表分析、文档处理、客服应答和流程转派，绝大多数所谓的需求，</span></span><span data-offset-key="39ju9-0-1" style="font-weight: bold;"><span data-text="true">利用现成的主流通用办公 Agent，早就已经能够妥善解决了。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="efppa-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="efppa-0-0"><span data-offset-key="efppa-0-0"><span data-text="true">而在这些成熟的通用工具能力边界之外、非要耗费几个人月去攻坚搞技术定制的那部分需求，在我实际看过的项目里，</span></span><span data-offset-key="efppa-0-1" style="font-weight: bold;"><span data-text="true">很大一部分根本就是彻头彻尾的伪需求。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="edvi3" data-offset-key="ehlt5-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="ehlt5-0-0"><span data-offset-key="ehlt5-0-0"><span data-text="true">很多需求不是技术不够用，而是企业管理本身的流程没有梳理清楚。</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="b1j87-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="b1j87-0-0"><span data-offset-key="b1j87-0-0"><span data-text="true">老板总觉得加一个 AI 自动决策系统就能拯救混乱的部门协同，但如果人的职责本身就是混淆的，你用算法去适配混乱，算出来的也只会是加速的灾难。这种需求就算你投入重金死磕做出来了，上线之后也根本没人用，最后沦为验收时的摆设。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="1q274-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1q274-0-0"><span data-offset-key="1q274-0-0"><span data-text="true">当企业最迫切的痛点是“把现成能力跑起来”，而不是“重新造一个轮子”的时候，商业机会就已经非常明朗了：帮助企业梳理真实场景，消除使用门槛，把通用办公 Agent 的价值深度挖掘出来，这里的内训、陪跑和轻定制智能体，有着极其庞大且健康的真实需求空间。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="297i9-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="297i9-0-0"><span data-offset-key="297i9-0-0"><span data-text="true">这也直接催生了一个产业生态位。那些做通用办公 Agent 的上游厂商，无论是做协同平台的还是做大模型应用的大厂，现在最头疼的往往不是卖不出去账号，而是</span></span><span data-offset-key="297i9-0-1" style="font-weight: bold;"><span data-text="true">客户买回去之后根本没有使用量，Token 消耗不起来，次年续费率极其难看。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="2ihkr-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="2ihkr-0-0"><span data-offset-key="2ihkr-0-0"><span data-text="true">厂商迫切需要有人下沉到毛细血管里，帮客户把产品用熟、把消耗拉上去。谁能填补这个生态空白，谁就能拿到源源不断的需求红利，而根本用不着自己去扛重资产的研发和交付风险。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h1 class="longform-header-one" data-block="true" data-editor="edvi3" data-offset-key="8p6o6-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8p6o6-0-0"><span data-offset-key="8p6o6-0-0"><span data-text="true">第五节｜真正闷声发大财的，是另一批人</span></span></div></h1></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="98ngp-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="98ngp-0-0"><span data-offset-key="98ngp-0-0"><span data-text="true">这也正是我在开篇提到的那个悬念：那些真正在这个所谓 FDE 浪潮里闷声发大财的人，究竟长什么样？</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="bb3pr-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="bb3pr-0-0"><span data-offset-key="bb3pr-0-0"><span data-text="true">答案可能会让很多纯技术出身的人感到不适甚至愤怒——这批活得最滋润、现金流最健康的人，绝大多数根本不是搞算法的，不是什么资深架构师，</span></span><span data-offset-key="bb3pr-0-1" style="font-weight: bold;"><span data-text="true">他们过去就是做企业代运营、企业获客、出海咨询陪跑的那拨人。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="edfdj-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="edfdj-0-0"><span data-offset-key="edfdj-0-0"><span data-text="true">他们手里甚至没有一支像样的正规技术开发团队。但也正因为没有技术团队，反倒成了他们最大的战略优势：从一开始跟客户打交道，他们就天然避开了去给客户承诺任何深度的底层代码定制和全流程系统重构。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="edvi3" data-offset-key="5hqei-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5hqei-0-0"><span data-offset-key="5hqei-0-0"><span data-text="true">那他们是怎么交付的？他们极度懂具体的业务场景和运营流程。</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="etnee-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="etnee-0-0"><span data-offset-key="etnee-0-0"><span data-text="true">他们深谙一家电商公司出海怎么获客、每天怎么排班、客服怎么回复退换货、一家本地餐饮企业怎么核算每日进销存。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="1u0up-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1u0up-0-0"><span data-offset-key="1u0up-0-0"><span data-text="true">当他们识别出具体场景中的痛点后，他们借助 Codex 或各类 Agent，</span></span><span data-offset-key="1u0up-0-1" style="font-weight: bold;"><span data-text="true">通过 vibe coding 的方式</span></span><span data-offset-key="1u0up-0-2"><span data-text="true">，直接自己上手搓出切合自身业务流程的智能体工具。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="8hq17-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8hq17-0-0"><span data-offset-key="8hq17-0-0"><span data-text="true">他们虽然不懂传统的软件工程体系，但靠着对业务规则的深刻理解，直接用自然语言指挥 AI，就能把一个个高度垂直、立竿见影的智能体落地跑通。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="b5t9s-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="b5t9s-0-0"><span data-offset-key="b5t9s-0-0"><span data-text="true">他们拿去卖的，就是这些紧贴场景的轻量智能体，以及把这些智能体嵌进企业日常运营中的</span></span><span data-offset-key="b5t9s-0-1" style="font-weight: bold;"><span data-text="true">落地陪跑服务。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="bgm3d-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="bgm3d-0-0"><span data-offset-key="bgm3d-0-0"><span data-text="true">在我看来，在当前企业服务这个盘子里，</span></span><span data-offset-key="bgm3d-0-1" style="font-weight: bold;"><span data-text="true">解决 80% 甚至 90% 的业务场景痛点，核心拼的都是对业务知识的理解深度</span></span><span data-offset-key="bgm3d-0-2"><span data-text="true">，还远远没到必须拼高深技术的地步；而剩下那 10% 到 20% 需要强行做底层技术攻坚的硬骨头，不仅往往是投入产出比极低的伪需求，还极易把交付团队带入绝境。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="2t0l5-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="2t0l5-0-0"><span data-offset-key="2t0l5-0-0"><span data-text="true">代运营团队聪明地绕开了那 20% 的沼泽，把 80% 的业务场景吃得干干净净。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="54s31-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="54s31-0-0"><span data-offset-key="54s31-0-0"><span data-text="true">更重要的是，这批人原本就有深耕多年积累下来的既有客群和高度信任的商业关系。AI 和 FDE 概念的爆发，只是在他们的工具箱里塞进了一套新武器，进一步拉大了先进工具与企业实际应用之间的信息差。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="ditn9-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="ditn9-0-0"><span data-offset-key="ditn9-0-0"><span data-text="true">他们不需要向新客户证明自己是谁，只要回过头去跟老客户说：“我们现在有了一套新方法，能帮你省掉两个人、提效 30%”，单子就水到渠成地签下来了。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="9ndd1-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9ndd1-0-0"><span data-offset-key="9ndd1-0-0"><span data-text="true">不仅如此，他们还顺理成章地搭上了各大办公 Agent 平台的顺风车。有些走得快的团队，已经</span></span><span data-offset-key="9ndd1-0-1" style="font-weight: bold;"><span data-text="true">深度绑定了 WorkBuddy、阿里、360 等平台生态。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="6k3i8-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="6k3i8-0-0"><span data-offset-key="6k3i8-0-0"><span data-text="true">商业逻辑非常闭环：企业从厂商手里买了办公 Agent 软件，回去之后员工不会用、用不起来，数据消耗起不来；厂商急需生态伙伴去帮这些企业做深度培训、搭建具体技能、做落地陪跑；于是，厂商顺理成章地把这批既懂业务又懂落地陪跑的团队推荐给客户，</span></span><span data-offset-key="6k3i8-0-1" style="font-weight: bold;"><span data-text="true">源源不断地给他们导流服务订单。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="ccsod-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="ccsod-0-0"><span data-offset-key="ccsod-0-0"><span data-text="true">他们不需要自己去搞重交付，也不用去苦哈哈地垫资研发，靠着对场景的理解、轻量级智能体工具、加上生态厂商推过来的意向客户，在现场做陪跑、做内训，现金流健康得让人眼红。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="fdstj-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="fdstj-0-0"><span data-offset-key="fdstj-0-0"><br data-text="true"/></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h1 class="longform-header-one" data-block="true" data-editor="edvi3" data-offset-key="4et6f-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4et6f-0-0"><span data-offset-key="4et6f-0-0"><span data-text="true">第六节｜可以在网上做影响力，客户要往线下找</span></span></div></h1></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="e9cln-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="e9cln-0-0"><span data-offset-key="e9cln-0-0"><span data-text="true">很多读者看到这里可能会问：我既没有大厂生态的派单通道，过去也没有沉淀下深厚的存量客户群，那我到底该去哪儿找客户？</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="edvi3" data-offset-key="blogc-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="blogc-0-0"><span data-offset-key="blogc-0-0"><span data-text="true">我的回答是极其明确的八个字：网上发声，线下拿单。</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="9imu0-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9imu0-0-0"><span data-offset-key="9imu0-0-0"><span data-text="true">你可以也应该在社交网络上做自媒体、发内容、打造影响力，这是今天极其廉价且高效的杠杆。但你必须清醒地认识到：在公域网络上做内容，是为了建立你个人的专业势能，而不是为了直接指望那些从私信和评论区涌进来的询价，能成为你高利润订单的基本盘。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="edvi3" data-offset-key="7nqn7-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7nqn7-0-0"><span data-offset-key="7nqn7-0-0"><span data-text="true">为什么？因为互联网天生是一个信息极度透明、比价成本极低的修罗场。</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="cifoq-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="cifoq-0-0"><span data-offset-key="cifoq-0-0"><span data-text="true">一旦一个客户是通过网上搜索、随便刷到一个帖子就来找你询价，他心里大概率没有任何忠诚度可言。他能给你发私信，就能在同一个下午给另外二十个博主发同样的复制信息，瞬间开启互联网比价模式。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="fhefs-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="fhefs-0-0"><span data-offset-key="fhefs-0-0"><span data-text="true">我经历过最离谱的案子，一个需求我基于真实的交付周期和人力成本，报了一个相对合理的 </span></span><span data-offset-key="fhefs-0-1" style="font-weight: bold;"><span data-text="true">10 万元</span></span><span data-offset-key="fhefs-0-2"><span data-text="true">，扭头客户就拿着别人的截图回来问我：“为什么网上有人只报 </span></span><span data-offset-key="fhefs-0-3" style="font-weight: bold;"><span data-text="true">2000 块钱</span></span><span data-offset-key="fhefs-0-4"><span data-text="true">？”</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="evj0e-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="evj0e-0-0"><span data-offset-key="evj0e-0-0"><span data-text="true">这两份报价背后包含的交付范围、验收标准和质量保障可能完全是两码事，但对甲方老板来说，在屏幕那端看着都叫“AI 解决方案”。这类网上卷起来的订单，最后往往会被那些无底线兜底的小作坊用成本价甚至亏本价抢走，最终沦为廉价的体力劳动。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="80qf5-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="80qf5-0-0"><span data-offset-key="80qf5-0-0"><span data-text="true">除非你的个人 IP 势能已经强到了神级地步，客户非你不可、非你的认知不买单，否则纯粹靠公域询价进来的业务，做起来痛苦万分。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="5etkb-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5etkb-0-0"><span data-offset-key="5etkb-0-0"><span data-text="true">正是因为看透了这一层，现在从网上直接找过来的零散单子，</span></span><span data-offset-key="5etkb-0-1" style="font-weight: bold;"><span data-text="true">我几乎全都转给别人去做了。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="9165p-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9165p-0-0"><span data-offset-key="9165p-0-0"><span data-text="true">但这里有一个极其关键的例外：有些单子最初确实来自网上的模糊线索，但只要对方表达出强烈的意向，我一定会要求线下实地沟通。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="cj9go-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="cj9go-0-0"><span data-offset-key="cj9go-0-0"><span data-text="true">只有当你真正坐到那个企业主的茶桌对面，和他喝一下午茶，摸清他的实际痛点、他的组织架构和他真正愿意掏钱的顾虑之后，这种线索才可能转化成真正具有合理利润空间的订单。</span></span><span data-offset-key="cj9go-0-1" style="font-weight: bold;"><span data-text="true">网上的线索只是一个引子，最终的成交和定型，必须靠线下的物理接触来完成。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="edvi3" data-offset-key="fn6hm-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="fn6hm-0-0"><span data-offset-key="fn6hm-0-0"><span data-text="true">如果你现在没有任何存量资源，最靠谱的获客路径，就是走出门去，往远离各种高谈阔论的 AI 圈子的地方走。</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="ct23u-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="ct23u-0-0"><span data-offset-key="ct23u-0-0" style="font-weight: bold;"><span data-text="true">多去参加线下的商会、行业交流会、产业集会</span></span><span data-offset-key="ct23u-0-1"><span data-text="true">，去接触那些真正做实业、做贸易、做传统服务的老板。这些企业主每天都在为了库存、物流、客服、回款焦头烂额，他们对新技术有着本能的焦虑和渴望，但他们根本不知道该怎么用，也不会天天泡在推特上看最新论文。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="b9sjh-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="b9sjh-0-0"><span data-offset-key="b9sjh-0-0"><span data-text="true">你走到他们面前，用听得懂的人话告诉他怎么用一个现成工具解决手头的一个具体麻烦，面对面的信任一旦建立，恶性比价的概率就会被大幅度压缩。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h1 class="longform-header-one" data-block="true" data-editor="edvi3" data-offset-key="1usff-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1usff-0-0"><span data-offset-key="1usff-0-0"><span data-text="true">第七节｜我放弃重交付，转向把服务做成产品</span></span></div></h1></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="a4u0b-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="a4u0b-0-0"><span data-offset-key="a4u0b-0-0"><span data-text="true">看到这里，大家应该明白为什么我在标题里说“决定放弃 FDE”了。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="ear40-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="ear40-0-0"><span data-offset-key="ear40-0-0"><span data-text="true">你可以说这个标题带了一点标题党的色彩，但我放弃的并不是FDE本身，而是坚决放弃那种耗时费力、充满不可控风险的重定制与重交付模式。我的实际选择非常明确：</span></span><span data-offset-key="ear40-0-1" style="font-weight: bold;"><span data-text="true">只做轻量化交付的FDE，彻底转向企业内训、企业落地陪跑，以及基于业务场景的轻定制智能体。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="2dq8f-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="2dq8f-0-0"><span data-offset-key="2dq8f-0-0"><span data-text="true">对于所有正在考虑入局的人，你必须先搞清楚</span></span><span data-offset-key="2dq8f-0-1" style="font-weight: bold;"><span data-text="true">一份职业与一场创业之间的根本区别。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="59guj-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="59guj-0-0"><span data-offset-key="59guj-0-0"><span data-text="true">如果你的目标只是找一份有收入的职业，那做一个重交付的 FDE 并没有什么不好。哪怕天天在工厂里洗数据、干最脏最累的下水管道活儿，只要有人按月给你发高薪，或者你能按人天拿到可观的报酬，这依然是一份体面的技术蓝领工作。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="22kmk-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="22kmk-0-0"><span data-offset-key="22kmk-0-0"><span data-text="true">但如果你是抱着创业的心态下场，那我必须极其严肃地告诉你：在当前的商业环境下，靠纯人工、重交付的定制 FDE，绝对不是一个好的创业方向。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="68l10-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="68l10-0-0"><span data-offset-key="68l10-0-0" style="font-weight: bold;"><span data-text="true">因为纯交付型业务是没有乘数杠杆的</span></span><span data-offset-key="68l10-0-1"><span data-text="true">，你手里每进账一分钱，背后都必须死死绑定固定的人月消耗，单子接得越多，你的运营风险和人员管理成本就越高，最终不过是沦为一个高级的包工头或外包作坊。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="edvi3" data-offset-key="8u77q-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8u77q-0-0"><span data-offset-key="8u77q-0-0"><span data-text="true">创业要想放大，核心就在于如何把你的交付物标准化、可复制化。</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="2mdmr-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="2mdmr-0-0"><span data-offset-key="2mdmr-0-0"><span data-text="true">而这恰恰是很多技术背景的人最容易摔死的地方。一提到“标准化”，技术人脑子里立刻蹦出来的就是写底层软件、造通用工具平台、或者搞一套所谓通用的行业 Ontology。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="31sk3-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="31sk3-0-0"><span data-offset-key="31sk3-0-0"><span data-text="true">但打造一款能跑通商业闭环的技术产品究竟有多难？这往往需要你在这个行业里实打实交付过至少两位数甚至几十个订单，真正吃透了里面的血泪经验，才有可能提炼出哪怕一点点通用的软件资产。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="eqn66-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="eqn66-0-0"><span data-offset-key="eqn66-0-0"><span data-text="true">对于刚入局的小团队来说，没有这种量级的深厚积累，单凭一个抽象构想就想去搞标准化产品，除了烧光积蓄，很难有任何第二种结局。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="edvi3" data-offset-key="4mb9l-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4mb9l-0-0"><span data-offset-key="4mb9l-0-0"><span data-text="true">很多人根本没想明白：标准化出来的东西，为什么非得是一段代码、一个系统？</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="c5g1i-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="c5g1i-0-0"><span data-offset-key="c5g1i-0-0" style="font-weight: bold;"><span data-text="true">标准化完全可以是一套成体系的服务，可以是一场标准化的内训，可以是一套经过实战检验的陪跑流程。</span></span><span data-offset-key="c5g1i-0-1"><span data-text="true">第五节里提到的那批代运营出身的人，他们做的事情本质上就是把原本无形、凌乱的人工服务，打磨成了可以反复售卖的标准产品。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="7qjis-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7qjis-0-0"><span data-offset-key="7qjis-0-0"><span data-text="true">我亲眼见过一个极其震撼的例子：有人开办</span></span><span data-offset-key="7qjis-0-1" style="font-weight: bold;"><span data-text="true">三天两万元的AI运营工具培训，一场来100个人，而且供不应求。
+
+</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="edvi3" data-offset-key="dtr9e-0-0"><div class="css-g5y9jx r-1nxhmzv"><div class="css-g5y9jx r-13qz1uu"><div class="css-g5y9jx r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-g5y9jx"><div class="css-g5y9jx r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-g5y9jx r-1pi2tsx r-1ny4l3l r-1loqt21" href="/Sither_V/article/2102976218178163055/media/2102989868955791360" role="link"><div class="css-g5y9jx r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 66.6667%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="图像" class="css-g5y9jx r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-g5y9jx r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HS9SJMla8AAr2NH?format=jpg&amp;name=small");'></div><img alt="图像" class="css-9pa8cd" draggable="true" src="assets/f0d1296041f283a79dce64c4d029a0a0.jpg"/></div></div></div></a></div></div></div></div></div></section><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="7u7qp-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7u7qp-0-0"><span data-offset-key="7u7qp-0-0"><span data-text="true">在这个例子里，交付的不是复杂的底层代码，而是一套把现成 AI 工具深度嵌入运营业务的方法论与带教体系。它同样被做成了高度标准化的产品，不仅完全摆脱了重交付泥潭里无休止的数据治理与违约风险，其边际成本和业务放大效应也远超任何一个定制开发项目</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="8mh9o-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8mh9o-0-0"><span data-offset-key="8mh9o-0-0"><br data-text="true"/></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="30cep-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="30cep-0-0"><span data-offset-key="30cep-0-0" style="font-weight: bold;"><span data-text="true">千万不要因为你自己懂技术，就非逼着自己去挑那些技术难度极高、交付极重的事情去干。</span></span><span data-offset-key="30cep-0-1"><span data-text="true">有时候，技术能力反而会成为勒死你的绳索，让你对那些真正具有商业杠杆的轻量模式视而不见。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="edvi3" data-offset-key="1etld-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1etld-0-0"><span data-offset-key="1etld-0-0"><span data-text="true">这行水很深，也很乱，但搞清楚哪些是坑、哪些是杠杆，你才不至于沦为这个风口上的炮灰。放弃重定制和重交付，去连接真实的业务场景，把轻量的服务做成标准化的产品，这才是普通团队在这个时代能真正赚到钱并且活下去的唯一出路。</span></span></div></div></div></div></div></div></div></div></div></article><div class="css-g5y9jx r-12kyg2d"><div class="css-g5y9jx r-k4xj1c r-18u37iz r-1wtj0ep"><div class="css-g5y9jx r-1wbh5a2 r-1a11zyx"><div class="css-g5y9jx r-1d09ksm r-18u37iz r-1wbh5a2 r-1471scf"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(83, 100, 113);"><a aria-describedby="id__h3hvccqkrep" aria-label="下午1:19 · 2026年9月24日" class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-xoduu5 r-1q142lx r-1w6e6rj r-9aw3ui r-3s2u2q r-1loqt21" href="/Sither_V/status/2102976218178163055" role="link" style="color: rgb(83, 100, 113);"><time datetime="2026-09-24T04:19:36.000Z">下午1:19 · 2026年9月24日</time></a></div><div aria-hidden="true" class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1q142lx r-n7gxbd" dir="ltr" style="color: rgb(83, 100, 113);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">·</span></div><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1loqt21" dir="ltr" href="/Sither_V/status/2102976218178163055/analytics" role="link" style="color: rgb(15, 20, 25);"><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1b43r93 r-1cwl3u0 r-b88u0q" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">3.4万</span></span></span></div> <span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1b43r93 r-1cwl3u0" style="color: rgb(83, 100, 113);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">查看</span></span></a></div></div><div class="css-g5y9jx r-18u37iz"></div></div></div><div class="css-g5y9jx r-j5o65s r-rull8r r-qklmqi"><div class="css-g5y9jx"><div aria-label="42 回复、47 次转帖、207 喜欢、311 书签、34878 次观看" class="css-g5y9jx r-1kbdv8c r-18u37iz r-1oszu61 r-3qxfft r-n7gxbd r-1dgieki r-1efd50x r-5kkj8d r-h3s6tt r-1wtj0ep" id="id__uts3kixkey" role="group"><div class="css-g5y9jx r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="42 回复。回复" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="reply" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01zm8.005-6c-3.317 0-6.005 2.69-6.005 6 0 3.37 2.77 6.08 6.138 6.01l.351-.01h1.761v2.3l5.087-2.81c1.951-1.08 3.163-3.13 3.163-5.36 0-3.39-2.744-6.13-6.129-6.13H9.756z"></path></g></svg></div><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">42</span></span></span></div></div></button></div><div class="css-g5y9jx r-18u37iz r-1h0z5md r-13awgt0"><button aria-expanded="false" aria-haspopup="menu" aria-label="47 次转帖。转帖" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="retweet" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"></path></g></svg></div><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">47</span></span></span></div></div></button></div><div class="css-g5y9jx r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="207 喜欢次数。喜欢" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="like" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"></path></g></svg></div><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">207</span></span></span></div></div></button></div><div class="css-g5y9jx r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="311 书签。加入书签" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="bookmark" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M4 4.5C4 3.12 5.119 2 6.5 2h11C18.881 2 20 3.12 20 4.5v18.44l-8-5.71-8 5.71V4.5zM6.5 4c-.276 0-.5.22-.5.5v14.56l6-4.29 6 4.29V4.5c0-.28-.224-.5-.5-.5h-11z"></path></g></svg></div><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">311</span></span></span></div></div></button></div><div class="css-g5y9jx" style="align-content: stretch; justify-content: inherit; display: inline-grid; transform: rotate(0deg) scale(1) translate3d(0px, 0px, 0px);"><div class="css-g5y9jx r-18u37iz r-1h0z5md"><button aria-expanded="false" aria-haspopup="menu" aria-label="分享帖子" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M12 2.59l5.7 5.7-1.41 1.42L13 6.41V16h-2V6.41l-3.3 3.3-1.41-1.42L12 2.59zM21 15l-.02 3.51c0 1.38-1.12 2.49-2.5 2.49H5.5C4.11 21 3 19.88 3 18.5V15h2v3.5c0 .28.22.5.5.5h12.98c.28 0 .5-.22.5-.5L19 15h2z"></path></g></svg></div></div></button></div></div></div></div><div class="css-g5y9jx r-1awozwy r-18u37iz r-1wtj0ep r-6gpygo"><div class="css-g5y9jx r-1awozwy r-18u37iz"><div class="css-g5y9jx"><button aria-haspopup="menu" class="css-146c3p1 r-bcqeeo r-qvutc0 r-37j5jr r-1b43r93 r-1cwl3u0 r-majxgm r-fdjqy7" dir="ltr" role="button" style="color: rgb(83, 100, 113);" type="button"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">相关</span><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1pexk7n r-1mcorv5" viewbox="0 0 24 24"><g><path d="M3.543 8.96l1.414-1.42L12 14.59l7.043-7.05 1.414 1.42L12 17.41 3.543 8.96z"></path></g></svg></button></div></div><div class="css-g5y9jx r-1awozwy r-18u37iz"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1b43r93 r-1cwl3u0 r-majxgm r-1loqt21" dir="ltr" href="/Sither_V/status/2102976218178163055/quotes" role="link" style="color: rgb(83, 100, 113);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">查看引用</span><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1pexk7n r-1mcorv5" viewbox="0 0 24 24"><g><path d="M14.586 12L7.543 4.96l1.414-1.42L17.414 12l-8.457 8.46-1.414-1.42L14.586 12z"></path></g></svg></a></div></div></div></div></div></div></article>
+</div>
+</div>
+</body>
+</html>

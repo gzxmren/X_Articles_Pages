@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>X 上的 半格 / HalfBit：“15 分钟打通 Muse 和你的电脑：写代码、办公、写文章、记笔记全交给它｜保姆级教程” / X</title>
+<!-- Injected Original Styles -->
+<style id="draftjs-styles_0">
+    .draftjs-styles_0 .public-DraftEditorPlaceholder-root {
+      color: #536471;
+    }
+
+    .draftjs-styles_0 .public-DraftEditorPlaceholder-hasFocus {
+      color: #536471;
+    }
+
+    
+  </style>
+<style id="draftjs-styles">
+     .DraftEditor-editorContainer, .DraftEditor-root, .public-DraftEditor-content {
+        height: inherit;
+        max-height: inherit;
+        min-height: inherit;
+        text-align: initial;
+    }
+
+    .public-DraftEditor-content[contenteditable=true] {
+        -moz-user-modify: read-write-plaintext-only;
+        -webkit-user-modify: read-write-plaintext-only;
+    }
+
+    .format-inline .public-DraftEditor-content[contenteditable=true] {
+      -moz-user-modify: read-write;
+      -webkit-user-modify: read-write;
+    }
+
+    .DraftEditor-root {
+        width: 100%;
+        position: relative;
+        -webkit-user-select: none;
+    }
+
+    .DraftEditor-editorContainer {
+        background-color: rgba(255, 255, 255, 0);
+        border-left: .1px solid transparent;
+        position: relative;
+        z-index: 1;
+    }
+
+    .public-DraftEditor-block {
+        position: relative;
+    }
+
+    .DraftEditor-alignLeft .public-DraftStyleDefault-block {
+        text-align: left;
+    }
+
+    .DraftEditor-alignLeft .public-DraftEditorPlaceholder-root {
+        left: 0;
+        text-align: left;
+    }
+
+    .DraftEditor-alignCenter .public-DraftStyleDefault-block {
+        text-align: center
+    }
+
+    .DraftEditor-alignCenter .public-DraftEditorPlaceholder-root {
+        margin: 0 auto;
+        text-align: center;
+        width: 100%
+    }
+
+    .DraftEditor-alignRight .public-DraftStyleDefault-block {
+        text-align: right;
+    }
+
+    .DraftEditor-alignRight .public-DraftEditorPlaceholder-root {
+        right: 0;
+        text-align: right;
+    }
+
+    .public-DraftEditorPlaceholder-root {
+        padding-bottom: 2px;
+        padding-top: 2px;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .public-DraftEditorPlaceholder-inner {
+        user-select: none;
+        -webkit-user-select: none;
+    }
+
+    .DraftEditorPlaceholder-hidden {
+        display: none;
+    }
+
+    .public-DraftStyleDefault-block {
+        overflow:hidden;
+        padding-bottom: 2px;
+        padding-top: 2px;
+        position: relative;
+        white-space: pre-wrap;
+    }
+
+    /* Only a handful of CSS rules work on br tags and user-select isn't one */
+    div:only-child > .public-DraftStyleDefault-block > span > br::selection {
+        background: transparent;
+    }
+
+    /*
+       Safari doesn't let you change ::selection on br elements,
+       but Chrome needs it here
+    */
+    div:only-child > .public-DraftStyleDefault-block > span:has(br)::selection {
+        background: transparent;
+    }
+
+    .public-DraftStyleDefault-ltr {
+        direction: ltr;
+        text-align: left;
+    }
+
+    .public-DraftStyleDefault-rtl {
+        direction: rtl;
+        text-align: right;
+    }
+
+    .DraftEditor-editorContainer a {
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        margin-bottom: inherit;
+        margin-top: inherit;
+    }
+
+    .singleline .public-DraftStyleDefault-block {
+        overflow-x: auto;
+        scrollbar-width: none;
+        white-space: nowrap;
+        -ms-overflow-style: none;
+    }
+
+    .singleline .public-DraftStyleDefault-block::-webkit-scrollbar {
+        display: none;
+    }
+  </style>
+<style id="longform-styles">
+    .longform-header-one {
+        font-size: 31px;
+        font-weight: 800;
+        line-height: 40px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-header-one-narrow {
+        font-size: calc(20px + 1px);
+        font-weight: 800;
+        line-height: 28px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-header-two {
+        font-size: 26px;
+        font-weight: 800;
+        line-height: 36px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-header-two-narrow {
+        font-size: calc(17px + 1px);
+        font-weight: 800;
+        line-height: 24px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-unstyled, .longform-blockquote {
+        font-size: 17px;
+        line-height: 28px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-unstyled-narrow, .longform-blockquote-narrow {
+        font-size: 17px;
+        line-height: 28px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-unordered-list-item, .longform-ordered-list-item {
+        display: block;
+        font-size: 17px;
+        line-height: 28px;   
+        margin-bottom: 12px;
+        margin-left: calc(28px + 2px);
+        margin-top: 0;
+    }
+
+    .longform-unordered-list-item-narrow, .longform-ordered-list-item-narrow {
+        display: block;
+        font-size: 17px;
+        line-height: 28px;   
+        margin-bottom: calc(12px / 2);
+        margin-left: 36px;
+        margin-top: 0;
+    }
+
+    .longform-blockquote, .longform-blockquote-narrow {
+        margin-bottom: calc(24px + 2px);
+        margin-left: 0;
+        margin-top: calc(-2px);
+        padding-left: calc(24px + 3px);
+        position: relative;
+    }
+
+    .longform-blockquote:before, .longform-blockquote-narrow:before {
+        background: #37434D;
+        border-radius: 9999px;
+        bottom: 0;
+        content: "";
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 3px;
+    }
+
+    .longform-header-one .public-DraftStyleDefault-block,
+    .longform-header-two .public-DraftStyleDefault-block,
+    .longform-unstyled .public-DraftStyleDefault-block,
+    .longform-unordered-list-item .public-DraftStyleDefault-block,
+    .longform-ordered-list-item .public-DraftStyleDefault-block,
+    .longform-header-one-narrow .public-DraftStyleDefault-block,
+    .longform-header-two-narrow .public-DraftStyleDefault-block,
+    .longform-unstyled-narrow .public-DraftStyleDefault-block,
+    .longform-unordered-list-item-narrow .public-DraftStyleDefault-block,
+    .longform-ordered-list-item-narrow .public-DraftStyleDefault-block {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    .public-DraftStyleDefault-ul, .public-DraftStyleDefault-ol {
+        counter-reset: item;
+        margin-bottom: 28px;
+        margin-top: 0;
+        padding-left: 0;
+    }
+
+    .longform-unordered-list-item:before, .longform-ordered-list-item:before,
+    .longform-unordered-list-item-narrow:before, .longform-ordered-list-item-narrow:before {
+        position: absolute;
+        margin-left: calc(-1 * (28px + 2px));
+    }
+
+    .longform-unordered-list-item:before {
+        content: counter(item, disc);
+        font-size: 23px
+    }
+
+    .longform-unordered-list-item-narrow:before {
+        content: counter(item, disc);
+        font-size: 20px
+    }
+
+    .longform-ordered-list-item:before, .longform-ordered-list-item-narrow:before {
+        content: counter(item) ". ";
+        counter-increment: item;
+    }
+
+    .longform-ordered-list-item::marker, .longform-ordered-list-item-narrow::marker {
+        font-variant-numeric: normal;
+    }
+</style>
+<style>input::placeholder { user-select: none; -webkit-user-select: none; } div div ::-webkit-input-placeholder { color: rgb(117, 117, 117) } iframe { color-scheme: auto; }button { text-align: inherit; font-size: inherit; font-family: inherit; color: inherit }</style>
+<style>@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-Light.a929468a.woff2) format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-Regular.58c84f6a.woff2) format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-Medium.bc7d8f1a.woff2) format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-Bold.0d6a47ca.woff2) format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-ExtraBold.b130af7a.woff2) format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}</style>
+<style>@font-face {
+  font-family: Geist;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Geist-var.2587a0ca.woff2) format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}</style>
+<style>@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Light.3a18e64a.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Light.7a5673aa.woff) format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Regular.80fda27a.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Regular.60b215ba.woff) format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Medium.f8e2739a.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Medium.20fc288a.woff) format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Bold.ebb56aba.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Bold.a573679a.woff) format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Heavy.f44ae4ea.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Heavy.d70ec7ca.woff) format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: TwitterChirpExtendedHeavy;
+  src: url(https://abs.twimg.com/fonts/v1/chirp-extended-heavy-web.woff2) format('woff2'), url(https://abs.twimg.com/fonts/v1/chirp-extended-heavy-web.woff) format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}</style>
+<style>html,body{height: 100%;}::cue{white-space:pre-line}</style>
+<style id="react-native-stylesheet">[stylesheet-group="0"]{}
+body{margin:0;}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+input::-webkit-search-cancel-button,input::-webkit-search-decoration,input::-webkit-search-results-button,input::-webkit-search-results-decoration{display:none;}
+[stylesheet-group="1"]{}
+.css-146c3p1{background-color:rgba(0,0,0,0.00);border:0 solid black;box-sizing:border-box;color:rgba(0,0,0,1.00);display:inline;font:14px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;list-style:none;margin:0px;padding:0px;position:relative;text-align:start;text-decoration:none;white-space:pre-wrap;word-wrap:break-word;}
+.css-1jxf684{background-color:rgba(0,0,0,0.00);border:0 solid black;box-sizing:border-box;color:inherit;display:inline;font:inherit;list-style:none;margin:0px;padding:0px;position:relative;text-align:inherit;text-decoration:none;white-space:inherit;word-wrap:break-word;}
+.css-9pa8cd{bottom:0px;height:100%;left:0px;opacity:0;position:absolute;right:0px;top:0px;width:100%;z-index:-1;}
+.css-g5y9jx{align-content:flex-start;align-items:stretch;background-color:rgba(0,0,0,0.00);border:0 solid black;box-sizing:border-box;display:flex;flex-basis:auto;flex-direction:column;flex-shrink:0;list-style:none;margin:0px;min-height:0px;min-width:0px;padding:0px;position:relative;text-decoration:none;z-index:0;}
+[stylesheet-group="2"]{}
+.r-11mg6pl{border-bottom-color:rgba(255,255,255,1.00);border-left-color:rgba(255,255,255,1.00);border-right-color:rgba(255,255,255,1.00);border-top-color:rgba(255,255,255,1.00);}
+.r-13awgt0{flex:1;}
+.r-17gur6a{border-bottom-left-radius:0px;border-bottom-right-radius:0px;border-top-left-radius:0px;border-top-right-radius:0px;}
+.r-1867qdf{border-bottom-left-radius:16px;border-bottom-right-radius:16px;border-top-left-radius:16px;border-top-right-radius:16px;}
+.r-1adg3ll{display:block;}
+.r-1dqxon3{overflow-x:auto;overflow-y:auto;}
+.r-1ets6dv{border-bottom-color:rgba(207,217,222,1.00);border-left-color:rgba(207,217,222,1.00);border-right-color:rgba(207,217,222,1.00);border-top-color:rgba(207,217,222,1.00);}
+.r-1fuqb1j{border-bottom-left-radius:24px;border-bottom-right-radius:24px;border-top-left-radius:24px;border-top-right-radius:24px;}
+.r-1pcd2l5{padding:20px;}
+.r-1phboty{border-bottom-style:solid;border-left-style:solid;border-right-style:solid;border-top-style:solid;}
+.r-1pp0k63{border-bottom-left-radius:0.01px;border-bottom-right-radius:0.01px;border-top-left-radius:0.01px;border-top-right-radius:0.01px;}
+.r-1q9bdsx{border-bottom-left-radius:12px;border-bottom-right-radius:12px;border-top-left-radius:12px;border-top-right-radius:12px;}
+.r-1qsk4np{overflow-x:clip;overflow-y:clip;}
+.r-1udh08x{overflow-x:hidden;overflow-y:hidden;}
+.r-1wl2o3p{border-bottom-color:rgba(229,234,236,1.00);border-left-color:rgba(229,234,236,1.00);border-right-color:rgba(229,234,236,1.00);border-top-color:rgba(229,234,236,1.00);}
+.r-1xfd6ze{border-bottom-left-radius:8px;border-bottom-right-radius:8px;border-top-left-radius:8px;border-top-right-radius:8px;}
+.r-1yadl64{border-bottom-width:0px;border-left-width:0px;border-right-width:0px;border-top-width:0px;}
+.r-494qqr{padding:32px;}
+.r-4iw3lz{border-bottom-width:0;border-left-width:0;border-right-width:0;border-top-width:0;}
+.r-4qtqp9{display:inline-block;}
+.r-6koalj{display:flex;}
+.r-bztko3{overflow-x:visible;overflow-y:visible;}
+.r-crgep1{margin:0px;}
+.r-edyy15{padding:8px;}
+.r-hvic4v{display:none;}
+.r-jxzhtn{border-bottom-color:rgba(239,243,244,1.00);border-left-color:rgba(239,243,244,1.00);border-right-color:rgba(239,243,244,1.00);border-top-color:rgba(239,243,244,1.00);}
+.r-krxsd3{display:-webkit-box;}
+.r-nsbfu8{padding:16px;}
+.r-rs99b7{border-bottom-width:1px;border-left-width:1px;border-right-width:1px;border-top-width:1px;}
+.r-sdzlij{border-bottom-left-radius:9999px;border-bottom-right-radius:9999px;border-top-left-radius:9999px;border-top-right-radius:9999px;}
+.r-t60dpp{padding:0px;}
+.r-wwvuq4{padding:0;}
+.r-xf4iuw{margin:-8px;}
+.r-xoduu5{display:inline-flex;}
+.r-xyw6el{padding:12px;}
+.r-ywje51{margin:auto;}
+.r-z2wwpe{border-bottom-left-radius:4px;border-bottom-right-radius:4px;border-top-left-radius:4px;border-top-right-radius:4px;}
+[stylesheet-group="2.1"]{}
+.r-12kyg2d{margin-bottom:16px;margin-top:16px;}
+.r-1559e4e{padding-bottom:2px;padding-top:2px;}
+.r-184id4b{margin-bottom:12px;margin-top:12px;}
+.r-1e084wi{padding-left:0px;padding-right:0px;}
+.r-1f0wa7y{padding-left:80px;padding-right:80px;}
+.r-1fkl15p{padding-left:32px;padding-right:32px;}
+.r-1mkv55d{padding-bottom:0px;padding-top:0px;}
+.r-1mmae3n{padding-bottom:12px;padding-top:12px;}
+.r-1xpp3t0{margin-left:16px;margin-right:16px;}
+.r-3o4zer{padding-left:12px;padding-right:12px;}
+.r-3pj75a{padding-left:16px;padding-right:16px;}
+.r-cnw61z{padding-bottom:4px;padding-top:4px;}
+.r-cxgwc0{padding-left:24px;padding-right:24px;}
+.r-dd0y9b{padding-bottom:20px;padding-top:20px;}
+.r-ddtstp{margin-bottom:0px;margin-top:0px;}
+.r-dp7rxi{padding-bottom:40px;padding-top:40px;}
+.r-f8sm7e{margin-left:auto;margin-right:auto;}
+.r-is05cd{padding-left:8px;padding-right:8px;}
+.r-n7gxbd{padding-left:4px;padding-right:4px;}
+.r-nj0m1c{padding-bottom:32px;padding-top:32px;}
+.r-s49dbf{margin-bottom:1px;margin-top:1px;}
+.r-sjygvo{padding-left:1em;padding-right:1em;}
+.r-u9wvl5{padding-left:20px;padding-right:20px;}
+.r-w7s2jr{padding-bottom:16px;padding-top:16px;}
+[stylesheet-group="2.2"]{}
+.r-10f7w94{margin-right:70px;}
+.r-1182swk{left:1px;}
+.r-15peodp{right:-9999px;}
+.r-15xeili{margin-left:-48px;}
+.r-17i1h83{margin-right:60px;}
+.r-19qo34d{left:-9999px;}
+.r-1a11zyx{margin-right:12px;}
+.r-1ca1ndr{margin-left:0.5em;}
+.r-1cwvpvk{margin-left:12px;}
+.r-1ez5h0i{margin-left:4px;}
+.r-1gs4q39{margin-right:4px;}
+.r-1iwt575{margin-right:1px;}
+.r-1kkk96v{margin-left:8px;}
+.r-1kpi4qh{margin-left:0.075em;}
+.r-1l2kgy{margin-right:0.5em;}
+.r-1l8l4mf{margin-right:10px;}
+.r-1noe1sz{padding-left:4px;}
+.r-1oukvu3{margin-left:70px;}
+.r-1q6cnnd{right:-2px;}
+.r-1rtiivn{margin-right:20px;}
+.r-1wron08{margin-right:8px;}
+.r-1x2e62v{margin-left:16px;}
+.r-2dysd3{padding-left:12px;}
+.r-2utimh{right:-4px;}
+.r-3t4u6i{margin-left:2px;}
+.r-45ll9u{left:50%;}
+.r-5f1w11{left:-2px;}
+.r-615f2u{right:1px;}
+.r-72fyl3{border-top-left-radius:32px;}
+.r-cwltf5{border-top-right-radius:32px;}
+.r-dlybji{margin-right:16px;}
+.r-faml9v{padding-right:12px;}
+.r-gd96e9{margin-right:-48px;}
+.r-hjq6k0{margin-left:1px;}
+.r-j3xhw6{border-top-left-radius:16px;}
+.r-k4bwe5{margin-right:0.075em;}
+.r-nazi8o{margin-left:20px;}
+.r-o59np7{padding-right:8px;}
+.r-ocobd0{right:50%;}
+.r-pt392{margin-left:60px;}
+.r-qjj4hq{padding-left:8px;}
+.r-st84sj{border-top-right-radius:16px;}
+.r-t1sew1{margin-left:10px;}
+.r-trst2h{padding-right:4px;}
+.r-v3tthl{left:-4px;}
+.r-x1x4zq{margin-right:2px;}
+[stylesheet-group="3"]{}
+.r-105ug2t{pointer-events:auto!important;}
+.r-109y4c4{height:1px;}
+.r-10ef88u{min-width:700px;}
+.r-10ptun7{height:16px;}
+.r-10v3vxq{transform:scaleX(-1);}
+.r-113js5t{width:1050px;}
+.r-117bsoe{margin-bottom:20px;}
+.r-11c0sde{margin-top:24px;}
+.r-11f8fnl{background-color:rgba(180,180,182,0.50);}
+.r-11j9u27{visibility:hidden;}
+.r-11yh6sk{overflow-x:hidden;}
+.r-11zy11o{background-color:rgba(201,54,204,1.00);}
+.r-1202g5r{height:90vh;}
+.r-12181gd{box-shadow:0 0 2px rgba(0,0,0,0.03) inset;}
+.r-122fvck{background-color:rgba(244,129,47,0.12);}
+.r-1279nm1{min-height:400px;}
+.r-12hfotv{width:700px;}
+.r-12rgx7y{width:7px;}
+.r-12sks89{min-height:22px;}
+.r-12vffkv>*{pointer-events:auto;}
+.r-12vffkv{pointer-events:none!important;}
+.r-12ym1je{width:18px;}
+.r-135wba7{line-height:24px;}
+.r-136ojw6{z-index:2;}
+.r-13qz1uu{width:100%;}
+.r-13w96dm{background-color:rgba(0,0,0,0.30);}
+.r-13wfysu{-webkit-text-decoration-line:none;text-decoration-line:none;}
+.r-146iojx{max-width:300px;}
+.r-1472mwg{height:24px;}
+.r-14gqq1x{margin-top:4px;}
+.r-14j79pv{color:rgba(83,100,113,1.00);}
+.r-14lw9ot{background-color:rgba(255,255,255,1.00);}
+.r-158ssxm{max-height:calc(64px * 15);}
+.r-159fyap{-moz-transition:opacity 300ms ease;-webkit-transition:opacity 300ms ease;transition:opacity 300ms ease;}
+.r-15ysp7h{min-height:32px;}
+.r-168457u{background-color:rgba(120,86,255,1.00);}
+.r-16dba41{font-weight:400;}
+.r-16eto9q{width:12px;}
+.r-16y2uox{flex-grow:1;}
+.r-176fswd{transform:translateX(-50%) translateY(-50%);}
+.r-1777fci{justify-content:center;}
+.r-178kkxs{background-color:rgba(255,237,219,1.00);}
+.r-17bb2tj{animation-duration:0.75s;}
+.r-17c3jg3{background-color:rgba(0,0,0,0.80);}
+.r-17gznlh{animation-name:r-t2lo5v;}
+.r-17leim2{background-repeat:repeat;}
+.r-17s6mgv{justify-content:flex-end;}
+.r-184en5c{z-index:1;}
+.r-18jm5s1{transition-timing-function:cubic-bezier(0,0,0,1);}
+.r-18jsvk2{color:rgba(15,20,25,1.00);}
+.r-18kxxzh{flex-grow:0;}
+.r-18tzken{width:56px;}
+.r-18u37iz{flex-direction:row;}
+.r-18yzcnr{height:22px;}
+.r-193z5jo{flex-basis:64px;}
+.r-1994a6e{min-width:400px;}
+.r-19h8fux{background-color:rgba(55,67,77,1.00);}
+.r-19qs0lw{animation-name:r-1qpf3yi;}
+.r-19wmn03{width:20px;}
+.r-19yznuf{min-height:52px;}
+.r-1abnn5w{animation-play-state:paused;}
+.r-1acpoxo{width:36px;}
+.r-1ad0z5i{word-break:break-all;}
+.r-1aockid{width:40px;}
+.r-1awozwy{align-items:center;}
+.r-1azx6h{max-height:480px;}
+.r-1b43r93{font-size:14px;}
+.r-1bimlpy{background-color:rgba(207,217,222,1.00);}
+.r-1blnp2b{width:72px;}
+.r-1blvdjr{font-size:23px;}
+.r-1cdyxaf{flex-basis:32px;}
+.r-1ceczpf{min-height:24px;}
+.r-1cf81hf{background-color:rgba(83,100,113,1.00);}
+.r-1cj0bla{font-smoothing:always;}
+.r-1cmwbt1{gap:8px;}
+.r-1cvl2hr{color:rgba(29,155,240,1.00);}
+.r-1cwl3u0{line-height:16px;}
+.r-1d2f490{left:0px;}
+.r-1ddef8g{-webkit-text-decoration-line:underline;text-decoration-line:underline;}
+.r-1dgieki{border-top-color:rgba(239,243,244,1.00);}
+.r-1dn12g7{line-height:48px;}
+.r-1dum35f{-moz-transition-property:opacity, height;-webkit-transition-property:opacity, height;transition-property:opacity, height;}
+.r-1e425wn{animation-duration:0.15s;}
+.r-1e4ma89{background-color:rgba(0,0,0,0.55);}
+.r-1e5uvyk{-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);}
+.r-1e6yznf{margin-top:-6px;}
+.r-1ebb2ja{list-style:none;}
+.r-1efd50x{border-top-style:solid;}
+.r-1f4tc2a{background-color:rgba(244,33,46,1.00);}
+.r-1ff274t{text-align:right;}
+.r-1ffj0ar{background-color:rgba(0,0,0,0.40);}
+.r-1fu8b7j{height:712px;}
+.r-1g40b8q{z-index:3;}
+.r-1g83rmp{animation-name:r-7bj9g2;}
+.r-1gkfh8e{font-size:11px;}
+.r-1gymjhz{width:68px;}
+.r-1h0z5md{justify-content:flex-start;}
+.r-1h3ijdo{height:53px;}
+.r-1h8ys4a{padding-top:4px;}
+.r-1habvwh{align-items:flex-start;}
+.r-1hjwoze{height:18px;}
+.r-1hwvwag{flex-basis:48px;}
+.r-1hycxz{width:350px;}
+.r-1iln25a{word-wrap:normal;}
+.r-1inkyih{font-size:17px;}
+.r-1ipicw7{width:300px;}
+.r-1is30e5{transform:rotate(360deg);}
+.r-1iusvr4{flex-basis:0px;}
+.r-1iww7jx{width:28px;}
+.r-1janqcz{width:16px;}
+.r-1jaylin{width:-webkit-max-content;width:-moz-max-content;width:max-content;}
+.r-1jocfgc{width:290px;}
+.r-1jte41z{min-width:350px;}
+.r-1k5gan{background-color:rgba(236,232,255,1.00);}
+.r-1k78y06{font-family:Tahoma, Arial, sans-serif;}
+.r-1kihuf0{align-self:center;}
+.r-1ld3bg{top:-4px;}
+.r-1ldzwu0{animation-timing-function:linear;}
+.r-1loqt21{cursor:pointer;}
+.r-1m3jxhj{background-color:rgba(15,20,25,1.00);}
+.r-1m4drjs{top:-6px;}
+.r-1mdbw0j{padding-bottom:0px;}
+.r-1me0s30{max-height:unset;}
+.r-1mlwlqe{flex-basis:auto;}
+.r-1mrlafo{background-position:0;}
+.r-1muvv40{animation-iteration-count:infinite;}
+.r-1mwlp6a{height:56px;}
+.r-1nao33i{color:rgba(231,233,234,1.00);}
+.r-1niwhzg{background-color:rgba(0,0,0,0.00);}
+.r-1ny4l3l{outline-style:none;}
+.r-1obr2lp{width:920px;}
+.r-1oifz5y{background-color:rgba(170,17,0,1.00);}
+.r-1oszu61{align-items:stretch;}
+.r-1otgn73{touch-action:manipulation;}
+.r-1ovo9ad{width:360px;}
+.r-1ozsyd3{height:7px;}
+.r-1p0dtai{bottom:0px;}
+.r-1peese0{margin-bottom:24px;}
+.r-1pi2tsx{height:100%;}
+.r-1pjcn9w{max-width:80vw;}
+.r-1potc6q{top:5%;}
+.r-1ps3wis{min-width:44px;}
+.r-1pz39u2{align-self:stretch;}
+.r-1q142lx{flex-shrink:0;}
+.r-1qd0xha{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+.r-1qd7xl{top:12px;}
+.r-1qi8awa{min-width:36px;}
+.r-1r5jyh0{min-height:130px;}
+.r-1r8g8re{height:36px;}
+.r-1rnoaur{overflow-y:auto;}
+.r-1rt2jqs{width:450px;}
+.r-1rttkqs{width:400px;}
+.r-1s2bzr4{margin-top:12px;}
+.r-1s2hp8q{min-height:26px;}
+.r-1sw30gj{background-color:rgba(239,243,244,1.00);}
+.r-1sxrcry{background-size:auto;}
+.r-1szxp23{min-height:53px;}
+.r-1t2qqvi{flex-basis:50%;}
+.r-1t7zxhp{width:9px;}
+.r-1tbo1j0{height:1.5rem;}
+.r-1tjplnt{box-sizing:content-box;}
+.r-1tl8opc{font-family:"Segoe UI",Meiryo,system-ui,-apple-system,BlinkMacSystemFont,sans-serif;}
+.r-1to6hqq{background-color:rgba(255,212,0,1.00);}
+.r-1tsuqlv{max-height:100vh;}
+.r-1ttztb7{text-align:inherit;}
+.r-1udbk01{text-overflow:ellipsis;}
+.r-1upvrn0{box-shadow:0 0 15px rgba(101,119,134,0.2), 0 0 3px 1px rgba(101,119,134,0.15);}
+.r-1uqa7wc{width:1197px;}
+.r-1ur9v65{padding-top:40px;}
+.r-1v2oles{top:50%;}
+.r-1vmecro{direction:rtl;}
+.r-1vqzmdl{background-color:rgba(215,246,255,1.00);}
+.r-1vr29t4{font-weight:800;}
+.r-1vsu8ta{min-height:30px;}
+.r-1vzmqqg{-webkit-font-smoothing:antialiased;}
+.r-1w2mbsr{background-color:rgba(29,155,240,0.12);}
+.r-1wb8bfx{text-decoration-thickness:2px;}
+.r-1wbh5a2{flex-shrink:1;}
+.r-1wtj0ep{justify-content:space-between;}
+.r-1wvb978{font-feature-settings:'ss01' on;}
+.r-1wyyakw{z-index:-1;}
+.r-1x61ttu{-moz-transition:transform 1s ease;-webkit-transition:transform 1s ease;transition:transform 1s ease;}
+.r-1xcajam{position:fixed;}
+.r-1xfddsp{min-height:300px;}
+.r-1xk2f4g{clip:rect(1px, 1px, 1px, 1px);}
+.r-1xnyija{background-color:rgba(250,224,250,1.00);}
+.r-1xnzce8{-moz-user-select:text;-webkit-user-select:text;user-select:text;}
+.r-1xoqx8s{flex-basis:24px;}
+.r-1xvli5t{height:1.25em;}
+.r-1y7e96w{min-width:22px;}
+.r-1ye8kvj{max-width:600px;}
+.r-1yef0xd{animation-name:r-11cv4x;}
+.r-1yjpyg1{font-size:31px;}
+.r-1ykxob0{top:60%;}
+.r-285fr0{min-width:16px;}
+.r-2o02ov{margin-top:40px;}
+.r-2r9icm{background-color:rgba(255,122,0,1.00);}
+.r-2yi16{min-height:36px;}
+.r-33ulu8{width:600px;}
+.r-36ujnk{font-style:italic;}
+.r-37tt59{line-height:32px;}
+.r-3nmjpz{animation-name:r-12fruu6;}
+.r-3s2u2q{white-space:nowrap;}
+.r-3sxh79{top:-1px;}
+.r-417010{z-index:0;}
+.r-46f5du{font-variant-numeric:tabular-nums;}
+.r-4gszlv{background-size:cover;}
+.r-4hwcpe{font-family:Vazirmatn, Tahoma, Arial, sans-serif;}
+.r-4nw3r4{background-color:rgba(249,24,128,1.00);}
+.r-4wgw6l{min-width:32px;}
+.r-54znze{color:rgba(239,243,244,1.00);}
+.r-56xrmm{line-height:12px;}
+.r-5c1b6u{color:rgba(255,122,0,1.00);}
+.r-5kkj8d{border-top-width:1px;}
+.r-5oul0u{margin-bottom:8px;}
+.r-6026j{background-color:rgba(255,255,255,0.85);}
+.r-633pao{pointer-events:none!important;}
+.r-6416eg{-moz-transition-property:background-color, box-shadow;-webkit-transition-property:background-color, box-shadow;transition-property:background-color, box-shadow;}
+.r-64el8z{min-width:52px;}
+.r-68jxh1{min-width:500px;}
+.r-6dt33c{opacity:1;}
+.r-7h7f8p{max-width:100vw;}
+.r-7mdpej{max-width:360px;}
+.r-7q8q6z{cursor:default;}
+.r-8akbws{-webkit-box-orient:vertical;}
+.r-8i4a5g{-moz-transition:flex-grow 0.5s ease-in-out;-webkit-transition:flex-grow 0.5s ease-in-out;transition:flex-grow 0.5s ease-in-out;}
+.r-8jfcpp{top:-2px;}
+.r-8kz0gk{height:2rem;}
+.r-92ng3h{width:1px;}
+.r-95jzfe{padding-top:16px;}
+.r-97prym{flex-basis:16px;}
+.r-9dcw1g{width:320px;}
+.r-9l7dzd{color:rgba(244,33,46,1.00);}
+.r-9tfo2e{background-color:rgba(255,255,255,0.30);}
+.r-a023e6{font-size:15px;}
+.r-adyw6z{font-size:20px;}
+.r-agouwx{transform:translateZ(0);}
+.r-ah5dr5>*{pointer-events:none;}
+.r-ah5dr5{pointer-events:auto!important;}
+.r-aqfbo4{backface-visibility:hidden;}
+.r-axxi2z{-moz-transition-property:transform;-webkit-transition-property:transform;transition-property:transform;}
+.r-b88u0q{font-weight:700;}
+.r-bcqeeo{min-width:0px;}
+.r-bnwqim{position:relative;}
+.r-bt1l66{min-height:20px;}
+.r-bvlit7{margin-bottom:-12px;}
+.r-ck2lme{background-color:rgba(219,248,235,1.00);}
+.r-clrlgt{animation-name:r-imtty0;}
+.r-cnnz9e{width:1.75rem;}
+.r-deolkf{box-sizing:border-box;}
+.r-dflpy8{height:1.2em;}
+.r-dkhcqf{transition-duration:350ms;}
+.r-dnmrzs{max-width:100%;}
+.r-drjvcx{height:3.5rem;}
+.r-ehq7j7{background-size:contain;}
+.r-ek4qxl{min-width:260px;}
+.r-emqnss{transform:translateZ(0px);}
+.r-eqz5dr{flex-direction:column;}
+.r-ero68b{min-height:40px;}
+.r-eu3ka{height:40px;}
+.r-f9dfq4{width:88px;}
+.r-fa1dwr{animation-timing-function:cubic-bezier(0.25, 0.1, 0.25, 1);}
+.r-fdjqy7{text-align:left;}
+.r-fm7h5w{font-family:"TwitterChirpExtendedHeavy","Verdana",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+.r-fvsqc2{top:calc(0px - 53);}
+.r-g6jmlv{width:100vw;}
+.r-gf0ln{-webkit-filter:brightness(1);filter:brightness(1);}
+.r-gkxrsp{background-color:rgba(0,67,41,1.00);}
+.r-h0d30l{height:28px;}
+.r-h3s6tt{height:48px;}
+.r-h9hxbl{width:1.2em;}
+.r-hdaws3{height:4px;}
+.r-htvplk{min-width:600px;}
+.r-i61hcz{min-width:20px;}
+.r-icoktb{opacity:0.5;}
+.r-ifefl9{min-height:0px;}
+.r-impgnl{transform:translateX(50%) translateY(-50%);}
+.r-iphfwy{padding-bottom:4px;}
+.r-ipm5af{top:0px;}
+.r-j5o65s{border-bottom-color:rgba(239,243,244,1.00);}
+.r-jmul1s{transform:scale(1.1);}
+.r-jwli3a{color:rgba(255,255,255,1.00);}
+.r-k200y{align-self:flex-start;}
+.r-k5y9r7{height:9px;}
+.r-k8qxaj{padding-bottom:20px;}
+.r-kemksi{background-color:rgba(0,0,0,1.00);}
+.r-kr0nin{width:1.5rem;}
+.r-kwpbio{height:650px;}
+.r-kzbkwu{padding-bottom:12px;}
+.r-l5o3uw{background-color:rgba(29,155,240,1.00);}
+.r-loe9s5{background-color:rgba(0,0,0,0.77);}
+.r-lp5zef{min-width:24px;}
+.r-lrsllp{width:24px;}
+.r-lrvibr{-moz-user-select:none;-webkit-user-select:none;user-select:none;}
+.r-lrx3fh{width:500px;}
+.r-lwhw9o{height:1.75rem;}
+.r-m6rgpd{vertical-align:text-bottom;}
+.r-majxgm{font-weight:500;}
+.r-mrc9z7{width:1257px;}
+.r-n1ft60{dynamic-range-limit:standard;}
+.r-n6v787{font-size:13px;}
+.r-nhe8su{animation-duration:0.5s;}
+.r-nvplwv{animation-timing-function:ease-out;}
+.r-nwxazl{line-height:40px;}
+.r-o7ynqc{transition-duration:0.2s;}
+.r-o96wvk{width:275px;}
+.r-obd0qt{align-items:flex-end;}
+.r-onrtq4{flex-basis:40px;}
+.r-orgf3d{opacity:0;}
+.r-oucylx{border-bottom-color:rgba(0,0,0,0.00);}
+.r-peo1c{min-height:44px;}
+.r-pm9dpa{max-height:100%;}
+.r-poiln3{font-family:inherit;}
+.r-pp5qcn{vertical-align:-20%;}
+.r-pwrm9v{width:390px;}
+.r-q3k7ks{background-color:rgba(0,122,255,1.00);}
+.r-q4m81j{text-align:center;}
+.r-qklmqi{border-bottom-width:1px;}
+.r-qlhcfr{font-size:0.001px;}
+.r-qvk6io{line-height:0px;}
+.r-qvutc0{word-wrap:break-word;}
+.r-r4n2gf{background-color:rgba(0,175,182,1.00);}
+.r-ripixn{max-height:16vh;}
+.r-rjixqe{line-height:20px;}
+.r-rki7wi{bottom:12px;}
+.r-rsyp9y{max-height:90vh;}
+.r-rthrr5{width:990px;}
+.r-rull8r{border-bottom-style:solid;}
+.r-rwqe4o{width:48px;}
+.r-s224ru{background-color:rgba(0,186,124,1.00);}
+.r-s67bdx{font-size:48px;}
+.r-s8bhmr{min-width:56px;}
+.r-sa2ff0{min-height:100vh;}
+.r-sb58tz{max-width:1000px;}
+.r-t3ofa{-moz-osx-font-smoothing:grayscale;}
+.r-tbmifm{height:12px;}
+.r-tjvw6i{text-decoration-thickness:1px;}
+.r-tskmnb{padding-top:8px;}
+.r-u6sd8q{background-repeat:no-repeat;}
+.r-u8s1d{position:absolute;}
+.r-ueyrd6{line-height:36px;}
+.r-uho16t{font-size:34px;}
+.r-uz7a3o{min-width:650px;}
+.r-v2d8zz{flex-basis:56px;}
+.r-vkv6oe{min-width:40px;}
+.r-vqxq0j{border:0 solid black;}
+.r-vrz42v{line-height:28px;}
+.r-vuvsbk{padding-bottom:calc(16px + 0px);}
+.r-vvn4in{background-position:center;}
+.r-vz2u4x{height:11px;}
+.r-wgabs5{border-bottom-width:2px;}
+.r-wy61xf{height:72px;}
+.r-x3cy2q{background-size:100% 100%;}
+.r-x572qd{background-color:rgba(247,249,249,1.00);}
+.r-xb2eav{font-size:40px;}
+.r-xigjrr{-webkit-filter:blur(4px);filter:blur(4px);}
+.r-xr3zp9{min-height:calc(64px * 3);}
+.r-yc9v9c{width:22px;}
+.r-yn5ncy{animation-fill-mode:both;}
+.r-yy2aun{font-size:26px;}
+.r-yyyyoo{fill:currentcolor;}
+.r-z2knda{transition-timing-function:ease;}
+.r-z7pwl0{max-width:700px;}
+.r-z80fyv{height:20px;}
+.r-zchlnj{right:0px;}
+@-webkit-keyframes r-11cv4x{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
+@-webkit-keyframes r-12fruu6{0%{opacity:0;transform:scale(0.95);}100%{opacity:1;transform:scale(1);}}
+@-webkit-keyframes r-1qpf3yi{0%{opacity:0;transform:scale3d(0.92, 0.92, 1);}100%{opacity:1;transform:scale3d(1, 1, 1);}}
+@-webkit-keyframes r-7bj9g2{0%{opacity:1;transform:scale3d(1, 1, 1);}100%{opacity:0;transform:scale3d(0.92, 0.92, 1);}}
+@-webkit-keyframes r-imtty0{0%{opacity:0;}100%{opacity:1;}}
+@-webkit-keyframes r-t2lo5v{0%{opacity:1;}100%{opacity:0;}}
+@keyframes r-11cv4x{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
+@keyframes r-12fruu6{0%{opacity:0;transform:scale(0.95);}100%{opacity:1;transform:scale(1);}}
+@keyframes r-1qpf3yi{0%{opacity:0;transform:scale3d(0.92, 0.92, 1);}100%{opacity:1;transform:scale3d(1, 1, 1);}}
+@keyframes r-7bj9g2{0%{opacity:1;transform:scale3d(1, 1, 1);}100%{opacity:0;transform:scale3d(0.92, 0.92, 1);}}
+@keyframes r-imtty0{0%{opacity:0;}100%{opacity:1;}}
+@keyframes r-t2lo5v{0%{opacity:1;}100%{opacity:0;}}
+.r-4h3cy0{position:absolute;visibility:hidden;top:0;width:50px;pointer-events:none}
+.r-4h3cy0.loaded{visibility:visible;top:50vh;width:50px}</style>
+<style>
+        body { 
+            font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;  
+            background-color: #ffffff; 
+            margin: 0;
+            padding: 0;
+        }
+        .container { 
+            max-width: 600px; 
+            margin: 0 auto; 
+            padding-top: 20px; 
+            padding-bottom: 40px;
+        }
+        .tweet-card { 
+            border: 1px solid rgb(239, 243, 244); 
+            border-radius: 16px; 
+            margin-bottom: 16px; 
+            padding: 16px; 
+            overflow-wrap: break-word;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-top: 10px;
+        }
+        /* Basic reset for some Twitter specific classes if needed */
+        a { text-decoration: none; color: rgb(29, 155, 240); }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+<div class="container">
+<div class="tweet-card">
+<article aria-labelledby="id__vyqtpvhhv8o id__eyaofiqebri id__52tm7y8cxur id__y4vs754itt id__7wvnz7zr1w8 id__tse2m3wr188 id__hre771cn76j id__8gixo8sheln id__5mj6j2hbl52 id__0bpzn5hm7hj id__hji72zva8a id__h1d0iir7u id__gldu1bzhnt id__5j1ts6n0dgo id__45vc3dsmrnx id__cxx9xnwm1kq id__ja2fglgfamj id__428g5siq0fm id__oqypkye1v4m id__s5qeiui41p" class="css-g5y9jx r-18u37iz r-1udh08x r-1c4vpko r-1c7gwzm r-1ny4l3l" data-testid="tweet" role="article" tabindex="-1"><div class="css-g5y9jx r-eqz5dr r-16y2uox r-1wbh5a2"><div class="css-g5y9jx r-16y2uox r-1wbh5a2 r-1ny4l3l"><div class="css-g5y9jx"><div class="css-g5y9jx r-18u37iz r-136ojw6"><div class="css-g5y9jx r-1iusvr4 r-16y2uox r-ttdzmv"></div></div></div><div class="css-g5y9jx r-18u37iz r-136ojw6"><div class="css-g5y9jx r-18kxxzh r-1wron08 r-onrtq4 r-1awozwy"><div class="css-g5y9jx" data-testid="Tweet-User-Avatar"><div class="css-g5y9jx r-18kxxzh r-1wbh5a2 r-13qz1uu"><div class="css-g5y9jx r-1wbh5a2 r-dnmrzs"><div class="css-g5y9jx r-bztko3 r-1adg3ll" data-testid="UserAvatar-Container-justhalfbit" style="width: 40px; height: 40px;"><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 100%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div class="css-g5y9jx r-1adg3ll r-1pi2tsx r-13qz1uu r-45ll9u r-u8s1d r-1v2oles r-176fswd r-bztko3"><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 100%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div class="css-g5y9jx r-sdzlij r-1udh08x r-5f1w11 r-u8s1d r-8jfcpp" style="width: calc(100% + 4px); height: calc(100% + 4px);"><a aria-hidden="true" class="css-g5y9jx r-1pi2tsx r-13qz1uu r-o7ynqc r-6416eg r-1ny4l3l r-1loqt21" href="/justhalfbit" role="link" style="background-color: rgba(0, 0, 0, 0);" tabindex="-1"><div class="css-g5y9jx r-sdzlij r-1udh08x r-633pao r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-g5y9jx r-1pi2tsx r-13qz1uu" style="background-color: rgba(0, 0, 0, 0);"></div></div><div class="css-g5y9jx r-sdzlij r-1udh08x r-633pao r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-g5y9jx r-1pi2tsx r-13qz1uu r-14lw9ot"></div></div><div class="css-g5y9jx r-sdzlij r-1udh08x r-633pao r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="background-color: rgb(255, 255, 255); width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-g5y9jx r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 100%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div class="css-g5y9jx r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af"><div class="css-g5y9jx r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/profile_images/2052409784159125515/GUX0IQDf_normal.jpg");'></div><img alt="" class="css-9pa8cd" draggable="true" src="https://pbs.twimg.com/profile_images/2052409784159125515/GUX0IQDf_normal.jpg"/></div></div></div></div><div class="css-g5y9jx r-sdzlij r-1udh08x r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-g5y9jx r-12181gd r-1pi2tsx r-13qz1uu r-o7ynqc r-6416eg r-1ny4l3l"></div></div></a></div></div></div></div></div></div></div></div></div><div class="css-g5y9jx r-1iusvr4 r-16y2uox r-1777fci"><div class="css-g5y9jx r-zl2h9q"><div class="css-g5y9jx r-k4xj1c r-18u37iz r-1wtj0ep"><div class="css-g5y9jx r-1d09ksm r-18u37iz r-1wbh5a2"><div class="css-g5y9jx r-1wbh5a2 r-dnmrzs r-1ny4l3l"><div class="css-g5y9jx r-1wbh5a2 r-dnmrzs r-1ny4l3l" data-testid="User-Name" id="id__7wvnz7zr1w8"><div class="css-g5y9jx r-1awozwy r-18u37iz r-1wbh5a2 r-dnmrzs"><div class="css-g5y9jx r-1wbh5a2 r-dnmrzs"><a class="css-g5y9jx r-1wbh5a2 r-dnmrzs r-1ny4l3l r-1loqt21" href="/justhalfbit" role="link"><div class="css-g5y9jx r-1awozwy r-18u37iz r-1wbh5a2 r-dnmrzs"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-b88u0q r-1awozwy r-6koalj r-1udh08x r-3s2u2q" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-dnmrzs r-1udh08x r-1udbk01 r-3s2u2q r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">半格 / HalfBit</span></span></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-xoduu5 r-18u37iz r-1q142lx" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1awozwy r-xoduu5"><svg aria-label="认证账号" class="r-4qtqp9 r-yyyyoo r-1xvli5t r-bnwqim r-lrvibr r-m6rgpd r-1cvl2hr r-f9ja8p r-og9te1 r-3t4u6i" data-testid="icon-verified" role="img" viewbox="0 0 22 22"><g><path d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.854-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.688-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.606-.274 1.263-.144 1.896.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681s.075-1.299-.165-1.903c.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z"></path></g></svg></span></div></div></a></div></div><div class="css-g5y9jx r-18u37iz r-1wbh5a2"><div class="css-g5y9jx r-1d09ksm r-18u37iz r-1wbh5a2"><div class="css-g5y9jx r-1wbh5a2 r-dnmrzs"><a class="css-g5y9jx r-1wbh5a2 r-dnmrzs r-1ny4l3l r-1loqt21" href="/justhalfbit" role="link" tabindex="-1"><div class="css-146c3p1 r-dnmrzs r-1udh08x r-1udbk01 r-3s2u2q r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-18u37iz r-1wvb978" dir="ltr" style="color: rgb(83, 100, 113);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">@justhalfbit</span></div></a></div></div></div></div></div></div><div class="css-g5y9jx r-1kkk96v"><div class="css-g5y9jx r-1awozwy r-18u37iz r-1cmwbt1 r-1wtj0ep"><div class="css-g5y9jx r-18u37iz r-1h0z5md"><button aria-label="总结" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(15, 20, 25);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><div class="css-g5y9jx r-xoduu5 r-bnwqim"><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-1xvli5t r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd" viewbox="0 0 33 32"><g><path d="M12.745 20.54l10.97-8.19c.539-.4 1.307-.244 1.564.38 1.349 3.288.746 7.241-1.938 9.955-2.683 2.714-6.417 3.31-9.83 1.954l-3.728 1.745c5.347 3.697 11.84 2.782 15.898-1.324 3.219-3.255 4.216-7.692 3.284-11.693l.008.009c-1.351-5.878.332-8.227 3.782-13.031L33 0l-4.54 4.59v-.014L12.743 20.544m-2.263 1.987c-3.837-3.707-3.175-9.446.1-12.755 2.42-2.449 6.388-3.448 9.852-1.979l3.72-1.737c-.67-.49-1.53-1.017-2.515-1.387-4.455-1.854-9.789-.931-13.41 2.728-3.483 3.523-4.579 8.94-2.697 13.561 1.405 3.454-.899 5.898-3.22 8.364C1.49 30.2.666 31.074 0 32l10.478-9.466"></path></g></svg></div></div></div></button></div><div class="css-g5y9jx r-1awozwy r-6koalj r-18u37iz"><div class="css-g5y9jx"><div class="css-g5y9jx r-18u37iz r-1h0z5md"><button aria-expanded="false" aria-haspopup="menu" aria-label="更多" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="caret" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div></div></button></div></div></div></div></div></div></div></div></div><div class="css-g5y9jx"><article class="css-g5y9jx r-1ny4l3l" data-testid="twitterArticleReadView" role="article" tabindex="-1"><div class="css-g5y9jx r-1peese0"><div class="css-g5y9jx"><div class="css-g5y9jx r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-g5y9jx"><div class="css-g5y9jx r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-g5y9jx r-1pi2tsx r-1ny4l3l r-1loqt21" href="/justhalfbit/article/2104516944133333098/media/2104511244799795200" role="link"><div class="css-g5y9jx r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 40%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="图像" class="css-g5y9jx r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-g5y9jx r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HTS507QbYAAwPXz?format=jpg&amp;name=small");'></div><img alt="图像" class="css-9pa8cd" draggable="true" src="assets/b36c97d5d5c486a7c66395743136b09d.jpg"/></div></div></div></a></div></div></div></div></div><div class="css-g5y9jx r-vmopo1"><div class="css-g5y9jx r-13qz1uu"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-uho16t r-1vr29t4 r-1o37s4c r-1s2bzr4" data-testid="twitter-article-title" dir="auto" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">15 分钟打通 Muse 和你的电脑：写代码、办公、写文章、记笔记全交给它｜保姆级教程</span></div></div><div class="css-g5y9jx"><div aria-label="52 回复、75 次转帖、265 喜欢、609 书签、114330 次观看" class="css-g5y9jx r-1kbdv8c r-18u37iz r-1wtj0ep r-1ye8kvj r-j5o65s r-rull8r r-qklmqi r-h3s6tt r-14gqq1x" role="group"><div class="css-g5y9jx r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="52 回复。回复" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="reply" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01zm8.005-6c-3.317 0-6.005 2.69-6.005 6 0 3.37 2.77 6.08 6.138 6.01l.351-.01h1.761v2.3l5.087-2.81c1.951-1.08 3.163-3.13 3.163-5.36 0-3.39-2.744-6.13-6.129-6.13H9.756z"></path></g></svg></div><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">52</span></span></span></div></div></button></div><div class="css-g5y9jx r-18u37iz r-1h0z5md r-13awgt0"><button aria-expanded="false" aria-haspopup="menu" aria-label="75 次转帖。转帖" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="retweet" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"></path></g></svg></div><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">75</span></span></span></div></div></button></div><div class="css-g5y9jx r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="265 喜欢次数。喜欢" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="like" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"></path></g></svg></div><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">265</span></span></span></div></div></button></div><div class="css-g5y9jx r-18u37iz r-1h0z5md r-13awgt0"><a aria-label="114330 次查看。查看帖子分析" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1ny4l3l r-1loqt21" href="/justhalfbit/status/2104516944133333098/analytics" role="link"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M8.75 21V3h2v18h-2zM18 21V8.5h2V21h-2zM4 21l.004-10h2L6 21H4zm9.248 0v-7h2v7h-2z"></path></g></svg></div><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">11万</span></span></span></div></div></a></div><div class="css-g5y9jx r-18u37iz r-1h0z5md r-1wron08"><button aria-label="书签" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="bookmark" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M4 4.5C4 3.12 5.119 2 6.5 2h11C18.881 2 20 3.12 20 4.5v18.44l-8-5.71-8 5.71V4.5zM6.5 4c-.276 0-.5.22-.5.5v14.56l6-4.29 6 4.29V4.5c0-.28-.224-.5-.5-.5h-11z"></path></g></svg></div></div></button></div><div class="css-g5y9jx" style="align-content: stretch; justify-content: inherit; display: inline-grid; transform: rotate(0deg) scale(1) translate3d(0px, 0px, 0px);"><div class="css-g5y9jx r-18u37iz r-1h0z5md"><button aria-expanded="false" aria-haspopup="menu" aria-label="分享帖子" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M12 2.59l5.7 5.7-1.41 1.42L13 6.41V16h-2V6.41l-3.3 3.3-1.41-1.42L12 2.59zM21 15l-.02 3.51c0 1.38-1.12 2.49-2.5 2.49H5.5C4.11 21 3 19.88 3 18.5V15h2v3.5c0 .28.22.5.5.5h12.98c.28 0 .5-.22.5-.5L19 15h2z"></path></g></svg></div></div></button></div></div></div></div><div class="css-g5y9jx r-1knelpx" data-testid="twitterArticleRichTextView"><div class="css-g5y9jx r-18jsvk2 r-37j5jr"><div class="DraftEditor-root"><div class="DraftEditor-editorContainer"><div aria-describedby="placeholder-ee84h" class="public-DraftEditor-content" contenteditable="false" data-testid="longformRichTextComponent" spellcheck="false" style="outline: none; user-select: text; white-space: pre-wrap; overflow-wrap: break-word;"><div data-contents="true"><div class="longform-unstyled" data-block="true" data-editor="ee84h" data-offset-key="4k7kt-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4k7kt-0-0"><span data-offset-key="4k7kt-0-0"><span data-text="true">Muse 的生产力，终于解放出来了。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="ee84h" data-offset-key="fab7r-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="fab7r-0-0"><span data-offset-key="fab7r-0-0"><span data-text="true">我在 Muse 里说一句"cc 帮我生成一个鹈鹕骑车的 HTML 文件"，几秒后，这个文件就出现在我 Mac 的文件夹里，双击就能打开。</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="ee84h" data-offset-key="8odbn-0-0"><div class="css-g5y9jx r-1nxhmzv"><div class="css-g5y9jx r-13qz1uu"><div class="css-g5y9jx r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-g5y9jx"><div class="css-g5y9jx r-1pi2tsx" data-testid="tweetPhoto"><div class="css-g5y9jx" style=""><div class="css-g5y9jx r-1adg3ll r-1udh08x"><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 56.1062%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div class="css-g5y9jx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="placementTracking"><div class="css-g5y9jx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="videoPlayer"><div class="css-g5y9jx r-1adg3ll r-1udh08x r-bnwqim r-1pi2tsx r-13qz1uu"><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 56.1062%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div data-testid="videoComponent" style="height: 100%; position: relative; transform: translateZ(0px); width: 100%;"><div style="height: 100%; position: absolute; width: 100%;"><div style="position: relative; width: 100%; height: 100%; background-color: transparent; overflow: hidden;"><video aria-label="嵌入式视频" playsinline="" poster="https://pbs.twimg.com/amplify_video_thumb/2104511710308732928/img/Ctv8tlw5ekl7F2Gx.jpg" preload="none" src="blob:https://x.com/66cb0717-ead7-42a7-b541-c92570675e2b" style="width: 100%; height: 100%; position: absolute; background-color: black; top: 0%; left: 0%; transform: rotate(0deg) scale(1.005);" tabindex="-1"></video></div></div><div class="css-g5y9jx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" tabindex="0"><div class="css-g5y9jx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af"><div><div class="css-g5y9jx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1loqt21"></div><div class="css-g5y9jx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1awozwy r-1777fci r-1loqt21 r-1ny4l3l" tabindex="-1"><div class="css-g5y9jx r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af"><div class="css-g5y9jx r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/amplify_video_thumb/2104511710308732928/img/Ctv8tlw5ekl7F2Gx.jpg");'></div><img alt="" class="css-9pa8cd" draggable="false" src="assets/4320bfede808e327aa664165ec3f1e81.jpg"/></div><button aria-label="播放 视频. 时长为   27秒钟" class="css-g5y9jx r-1loqt21 r-1ny4l3l" role="button" type="button"><svg aria-hidden="true" class="r-uvuy5l r-cfp7ip" viewbox="0 0 60 61"><g><circle cx="30" cy="30.4219" fill="#333333" opacity="0.6" r="30"></circle><path d="M22.2275 17.1971V43.6465L43.0304 30.4218L22.2275 17.1971Z" fill="white"></path></g></svg></button></div><div><div style="transition-duration: 250ms; transition-property: opacity, height; transition-timing-function: ease; will-change: opacity; opacity: 0;"></div></div><div style="transition-duration: 250ms; transition-property: opacity, height; transition-timing-function: ease; will-change: opacity; opacity: 0;"></div><div style="transition-duration: 250ms; transition-property: opacity, height; transition-timing-function: ease; will-change: opacity; opacity: 1;"></div><div style="transition-duration: 250ms; transition-property: opacity, height; transition-timing-function: ease; will-change: opacity; opacity: 0;"></div><div style="transition-duration: 250ms; transition-property: opacity, height; transition-timing-function: ease; will-change: opacity; opacity: 0;"></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></section><div class="longform-unstyled" data-block="true" data-editor="ee84h" data-offset-key="1v5g8-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1v5g8-0-0"><span data-offset-key="1v5g8-0-0"><span data-text="true">Muse 自带一台云端 Linux 虚拟机，能跑命令、改文件，可它一直碰不到你电脑上的东西。我用 Syncthing（一个开源的点对点文件同步工具）在 Mac 和这台虚拟机之间建了一个双向同步文件夹，把本地电脑和 Muse 彻底打通了。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="ee84h" data-offset-key="2bunv-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="2bunv-0-0"><span data-offset-key="2bunv-0-0"><span data-text="true">视频里只演示了一个方向。打通之后能干的事多得多：把本地的代码仓库、工作文档、文章草稿、笔记库放进这个文件夹，写代码、办公、写文章、记笔记，都能直接交给 Muse。它在那边改，你本地的文件跟着更新，中间不用手动传任何东西。它也只能碰这一个文件夹，你电脑上别的东西看不到。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="ee84h" data-offset-key="13unm-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="13unm-0-0"><span data-offset-key="13unm-0-0"><span data-text="true">两台机器都得装 Syncthing。Mac 这边照着下面的流程走，虚拟机那边发一段 Prompt 给 Muse，让它自己装好配好。前后 15 分钟左右。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="ee84h" data-offset-key="agtlp-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="agtlp-0-0"><span data-offset-key="agtlp-0-0"><span data-text="true">如果还没注册 Muse，可以先看下面这篇文章：</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="ee84h" data-offset-key="29s9p-0-0"><div class="css-g5y9jx r-14lw9ot r-1ets6dv r-1xfd6ze r-rs99b7 r-9hvr93 r-18u37iz r-1udh08x r-13qz1uu r-1nxhmzv" data-testid="simpleTweet"><div class="css-g5y9jx r-13awgt0"><article aria-labelledby="id__ah6ivs7srj6 id__fwy6v3pv34 id__eejmjr1p8v id__z1pjn5eb0ec id__r8qex8rehh id__2evfesa1n85 id__q0trs1o4u3a id__rnu2npq0lbn id__zubhwr9d788 id__yhskiyilrg8 id__63ued0ddpq id__xj868pj5fo id__ugydblru8pj id__4jyl890768y id__20t0ogdkh2di id__ygz6qr3z76 id__ozr3pbwc1w id__l69tvi4f6a id__4g48fdqtzpx id__pnk6kp6xrj9" class="css-g5y9jx r-18u37iz r-1udh08x r-1c4vpko r-1c7gwzm r-o7ynqc r-6416eg r-1ny4l3l r-1loqt21" data-testid="tweet" role="article" tabindex="0"><div class="css-g5y9jx r-eqz5dr r-16y2uox r-1wbh5a2"><div class="css-g5y9jx r-16y2uox r-1wbh5a2 r-1ny4l3l"><div class="css-g5y9jx"><div class="css-g5y9jx r-18u37iz r-136ojw6"><div class="css-g5y9jx r-1iusvr4 r-16y2uox r-ttdzmv"></div></div></div><div class="css-g5y9jx r-18u37iz r-136ojw6"><div class="css-g5y9jx r-18kxxzh r-1wron08 r-onrtq4 r-1awozwy"><div class="css-g5y9jx" data-testid="Tweet-User-Avatar"><div class="css-g5y9jx r-18kxxzh r-1wbh5a2 r-13qz1uu"><div class="css-g5y9jx r-1wbh5a2 r-dnmrzs"><div class="css-g5y9jx r-bztko3 r-1adg3ll" data-testid="UserAvatar-Container-justhalfbit" style="width: 40px; height: 40px;"><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 100%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div class="css-g5y9jx r-1adg3ll r-1pi2tsx r-13qz1uu r-45ll9u r-u8s1d r-1v2oles r-176fswd r-bztko3"><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 100%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div class="css-g5y9jx r-sdzlij r-1udh08x r-5f1w11 r-u8s1d r-8jfcpp" style="width: calc(100% + 4px); height: calc(100% + 4px);"><a aria-hidden="true" class="css-g5y9jx r-1pi2tsx r-13qz1uu r-o7ynqc r-6416eg r-1ny4l3l r-1loqt21" href="/justhalfbit" role="link" style="background-color: rgba(0, 0, 0, 0);" tabindex="-1"><div class="css-g5y9jx r-sdzlij r-1udh08x r-633pao r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-g5y9jx r-1pi2tsx r-13qz1uu" style="background-color: rgba(0, 0, 0, 0);"></div></div><div class="css-g5y9jx r-sdzlij r-1udh08x r-633pao r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-g5y9jx r-1pi2tsx r-13qz1uu r-14lw9ot"></div></div><div class="css-g5y9jx r-sdzlij r-1udh08x r-633pao r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="background-color: rgb(255, 255, 255); width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-g5y9jx r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 100%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div class="css-g5y9jx r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af"><div class="css-g5y9jx r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/profile_images/2052409784159125515/GUX0IQDf_normal.jpg");'></div><img alt="" class="css-9pa8cd" draggable="true" src="https://pbs.twimg.com/profile_images/2052409784159125515/GUX0IQDf_normal.jpg"/></div></div></div></div><div class="css-g5y9jx r-sdzlij r-1udh08x r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-g5y9jx r-12181gd r-1pi2tsx r-13qz1uu r-o7ynqc r-6416eg r-1ny4l3l"></div></div></a></div></div></div></div></div></div></div></div></div><div class="css-g5y9jx r-1iusvr4 r-16y2uox r-1777fci r-kzbkwu"><div class="css-g5y9jx r-zl2h9q"><div class="css-g5y9jx r-k4xj1c r-18u37iz r-1wtj0ep"><div class="css-g5y9jx r-1d09ksm r-18u37iz r-1wbh5a2"><div class="css-g5y9jx r-1wbh5a2 r-dnmrzs r-1ny4l3l"><div class="css-g5y9jx r-1wbh5a2 r-dnmrzs r-1ny4l3l r-1awozwy r-18u37iz" data-testid="User-Name" id="id__r8qex8rehh"><div class="css-g5y9jx r-1awozwy r-18u37iz r-1wbh5a2 r-dnmrzs"><div class="css-g5y9jx r-1wbh5a2 r-dnmrzs"><div class="css-g5y9jx r-1wbh5a2 r-dnmrzs r-1ny4l3l"><div class="css-g5y9jx r-1awozwy r-18u37iz r-1wbh5a2 r-dnmrzs"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-b88u0q r-1awozwy r-6koalj r-1udh08x r-3s2u2q" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-dnmrzs r-1udh08x r-1udbk01 r-3s2u2q r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">半格 / HalfBit</span></span></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-xoduu5 r-18u37iz r-1q142lx" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1awozwy r-xoduu5"><svg aria-label="认证账号" class="r-4qtqp9 r-yyyyoo r-1xvli5t r-bnwqim r-lrvibr r-m6rgpd r-1cvl2hr r-f9ja8p r-og9te1 r-3t4u6i" data-testid="icon-verified" role="img" viewbox="0 0 22 22"><g><path d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.854-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.688-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.606-.274 1.263-.144 1.896.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681s.075-1.299-.165-1.903c.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z"></path></g></svg></span></div></div></div></div></div><div class="css-g5y9jx r-18u37iz r-1wbh5a2 r-1ez5h0i"><div class="css-g5y9jx r-1d09ksm r-18u37iz r-1wbh5a2"><div class="css-g5y9jx r-1wbh5a2 r-dnmrzs"><div class="css-g5y9jx r-1wbh5a2 r-dnmrzs r-1ny4l3l" tabindex="-1"><div class="css-146c3p1 r-dnmrzs r-1udh08x r-1udbk01 r-3s2u2q r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-18u37iz r-1wvb978" dir="ltr" style="color: rgb(83, 100, 113);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">@justhalfbit</span></div></div></div><div aria-hidden="true" class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1q142lx r-n7gxbd" dir="ltr" style="color: rgb(83, 100, 113);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">·</span></div><div class="css-g5y9jx r-18u37iz r-1q142lx"><a aria-label="9月26日" class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-xoduu5 r-1q142lx r-1w6e6rj r-9aw3ui r-3s2u2q r-1loqt21" dir="ltr" href="/justhalfbit/status/2103795155866390974" role="link" style="color: rgb(83, 100, 113);"><time datetime="2026-09-26T10:33:46.000Z">9月26日</time></a></div></div></div></div></div></div><div class="css-g5y9jx r-1kkk96v"><div class="css-g5y9jx r-1awozwy r-18u37iz r-1cmwbt1 r-1wtj0ep"><div class="css-g5y9jx r-18u37iz r-1h0z5md"><button aria-label="Grok 操作" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><div class="css-g5y9jx r-xoduu5 r-bnwqim"><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-1xvli5t r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd" viewbox="0 0 33 32"><g><path d="M12.745 20.54l10.97-8.19c.539-.4 1.307-.244 1.564.38 1.349 3.288.746 7.241-1.938 9.955-2.683 2.714-6.417 3.31-9.83 1.954l-3.728 1.745c5.347 3.697 11.84 2.782 15.898-1.324 3.219-3.255 4.216-7.692 3.284-11.693l.008.009c-1.351-5.878.332-8.227 3.782-13.031L33 0l-4.54 4.59v-.014L12.743 20.544m-2.263 1.987c-3.837-3.707-3.175-9.446.1-12.755 2.42-2.449 6.388-3.448 9.852-1.979l3.72-1.737c-.67-.49-1.53-1.017-2.515-1.387-4.455-1.854-9.789-.931-13.41 2.728-3.483 3.523-4.579 8.94-2.697 13.561 1.405 3.454-.899 5.898-3.22 8.364C1.49 30.2.666 31.074 0 32l10.478-9.466"></path></g></svg></div></div></div></button></div></div></div></div></div><div class="css-g5y9jx"></div><div class="css-g5y9jx r-jxzhtn r-1q9bdsx r-rs99b7 r-1s2bzr4"><div class="css-g5y9jx r-1q2fham r-1scetje r-1udh08x" data-testid="article-cover-image"><div class="css-g5y9jx r-1adg3ll r-1udh08x"><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 40%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="文章封面图片" class="css-g5y9jx r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" style="margin: 0px;"><div class="css-g5y9jx r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HTIuGMZaoAAvSde?format=jpg&amp;name=small");'></div><img alt="文章封面图片" class="css-9pa8cd" draggable="true" src="assets/b31121f7819cb181eaaec08824934ae5.jpg"/></div></div></div><div class="css-g5y9jx r-1awozwy r-k200y r-z2wwpe r-z80fyv r-1777fci r-is05cd r-1e4ma89 r-rki7wi r-1f55h46 r-u8s1d r-633pao"><div class="css-146c3p1 r-bcqeeo r-qvutc0 r-37j5jr r-q4m81j r-n6v787 r-1cwl3u0 r-b88u0q r-lrvibr" dir="ltr" style="color: rgb(255, 255, 255); text-overflow: unset;"><div aria-label="文章" class="css-g5y9jx r-xoduu5" role="img"><span aria-hidden="true" class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-6koalj r-18u37iz r-1gkfh8e r-rjixqe" dir="ltr"><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-vz2u4x r-ywje51" viewbox="0 0 24 24"><g><path d="M21.742 21.75l-7.563-11.179 7.056-8.321h-2.456l-5.691 6.714-4.54-6.714H2.359l7.29 10.776L2.25 21.75h2.456l6.035-7.118 4.818 7.118h6.191-.008zM7.739 3.818L18.81 20.182h-2.447L5.29 3.818h2.447z"></path></g></svg> 文章</span></div></div></div></div><div class="css-g5y9jx r-xyw6el"><div class="css-g5y9jx r-1habvwh r-18u37iz"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-rjixqe r-1vr29t4 r-16y2uox r-1wbh5a2 r-5oul0u" dir="auto" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">10 分钟 0 成本注册使用 Muse，最省劲：不用 Spark、不开 Gemini 会员｜保姆级教程</span></div></div><div class="css-146c3p1 r-8akbws r-krxsd3 r-dnmrzs r-1udbk01 r-1udh08x r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="auto" style="-webkit-line-clamp: 4; color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">这几天 Muse 火得不行，我刷到的注册教程基本上都是一个套路：开 Gemini 会员，用 Spark 浏览器进去注册。不想花这个钱的，就去闲鱼找便宜的代充。
+我今天下午折腾了一圈，发现根本不用这么绕：不用 Spark...</span></div></div></div><div class="css-g5y9jx"><div class="css-g5y9jx"><div aria-label="306 回复、129 次转帖、431 喜欢、1002 书签、369372 次观看" class="css-g5y9jx r-1kbdv8c r-18u37iz r-1wtj0ep r-1ye8kvj r-1s2bzr4" id="id__pnk6kp6xrj9" role="group"><div class="css-g5y9jx r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="306 回复。回复" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="reply" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01zm8.005-6c-3.317 0-6.005 2.69-6.005 6 0 3.37 2.77 6.08 6.138 6.01l.351-.01h1.761v2.3l5.087-2.81c1.951-1.08 3.163-3.13 3.163-5.36 0-3.39-2.744-6.13-6.129-6.13H9.756z"></path></g></svg></div><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">306</span></span></span></div></div></button></div><div class="css-g5y9jx r-18u37iz r-1h0z5md r-13awgt0"><button aria-expanded="false" aria-haspopup="menu" aria-label="129 次转帖。转帖" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="retweet" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"></path></g></svg></div><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">129</span></span></span></div></div></button></div><div class="css-g5y9jx r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="431 喜欢次数。喜欢" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="like" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"></path></g></svg></div><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">431</span></span></span></div></div></button></div><div class="css-g5y9jx r-18u37iz r-1h0z5md r-13awgt0"><a aria-label="369372 次查看。查看帖子分析" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1ny4l3l r-1loqt21" href="/justhalfbit/status/2103795155866390974/analytics" role="link"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M8.75 21V3h2v18h-2zM18 21V8.5h2V21h-2zM4 21l.004-10h2L6 21H4zm9.248 0v-7h2v7h-2z"></path></g></svg></div><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">36万</span></span></span></div></div></a></div><div class="css-g5y9jx r-18u37iz r-1h0z5md r-1wron08"><button aria-label="书签" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="bookmark" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M4 4.5C4 3.12 5.119 2 6.5 2h11C18.881 2 20 3.12 20 4.5v18.44l-8-5.71-8 5.71V4.5zM6.5 4c-.276 0-.5.22-.5.5v14.56l6-4.29 6 4.29V4.5c0-.28-.224-.5-.5-.5h-11z"></path></g></svg></div></div></button></div><div class="css-g5y9jx" style="align-content: stretch; justify-content: inherit; display: inline-grid; transform: rotate(0deg) scale(1) translate3d(0px, 0px, 0px);"><div class="css-g5y9jx r-18u37iz r-1h0z5md"><button aria-expanded="false" aria-haspopup="menu" aria-label="分享帖子" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M12 2.59l5.7 5.7-1.41 1.42L13 6.41V16h-2V6.41l-3.3 3.3-1.41-1.42L12 2.59zM21 15l-.02 3.51c0 1.38-1.12 2.49-2.5 2.49H5.5C4.11 21 3 19.88 3 18.5V15h2v3.5c0 .28.22.5.5.5h12.98c.28 0 .5-.22.5-.5L19 15h2z"></path></g></svg></div></div></button></div></div></div></div></div></div></div></div></div></article></div></div></section><section class="" contenteditable="false" data-block="true" data-editor="ee84h" data-offset-key="2b9mv-0-0"><div class="css-g5y9jx r-1sw30gj r-109y4c4 r-1nxhmzv r-13qz1uu" role="separator"></div></section><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="ee84h" data-offset-key="60o5u-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="60o5u-0-0"><span data-offset-key="60o5u-0-0"><span data-text="true">第一步：Mac 这边装好 Syncthing</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="ee84h" data-offset-key="9cm65-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9cm65-0-0"><span data-offset-key="9cm65-0-0"><span data-text="true">1️⃣ </span></span><span data-offset-key="9cm65-0-1" style="font-weight: bold;"><span data-text="true">建一个要同步的文件夹</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="ee84h" data-offset-key="7d8v2-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7d8v2-0-0"><span data-offset-key="7d8v2-0-0"><span data-text="true">放哪都行，我放在"下载"里，叫 syncthing-work。之后 Muse 生成的东西都会落在这里。</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="ee84h" data-offset-key="5a2k6-0-0"><div class="css-g5y9jx r-1nxhmzv"><div class="css-g5y9jx r-13qz1uu"><div class="css-g5y9jx r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-g5y9jx"><div class="css-g5y9jx r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-g5y9jx r-1pi2tsx r-1ny4l3l r-1loqt21" href="/justhalfbit/article/2104516944133333098/media/2104512463555465216" role="link"><div class="css-g5y9jx r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 58.0478%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="图像" class="css-g5y9jx r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-g5y9jx r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HTS673ebEAANYXg?format=jpg&amp;name=small");'></div><img alt="图像" class="css-9pa8cd" draggable="true" src="assets/42d103a2443594f0fc80fd304c88ecae.jpg"/></div></div></div></a></div></div></div></div></div></section><div class="longform-unstyled" data-block="true" data-editor="ee84h" data-offset-key="aubut-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="aubut-0-0"><span data-offset-key="aubut-0-0"><span data-text="true">2️⃣ </span></span><span data-offset-key="aubut-0-1" style="font-weight: bold;"><span data-text="true">安装 Syncthing</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="ee84h" data-offset-key="7i7u8-0-0"><div class="css-g5y9jx r-1nxhmzv r-13qz1uu"><div class="css-g5y9jx r-dnmrzs" data-testid="markdown-code-block"><div class="css-g5y9jx r-1awozwy r-bqz1g2 r-1fs5b29 r-1idry7j r-6413gk r-43g30s r-l4nmg1 r-o59np7 r-2dysd3 r-vmopo1 r-13qz1uu"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-rjixqe r-16dba41 r-1aiqnjv r-n6v787" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">bash</span></div><div class="css-g5y9jx r-1awozwy r-6koalj r-18u37iz r-z5qs1h r-17s6mgv"><button aria-label="复制到剪贴板" class="css-g5y9jx r-sdzlij r-1phboty r-rs99b7 r-lrvibr r-1ceczpf r-lp5zef r-1loqt21 r-o7ynqc r-6416eg r-1ny4l3l" role="button" style="background-color: rgba(0, 0, 0, 0); border-color: rgba(0, 0, 0, 0);" type="button"><div class="css-146c3p1 r-qvutc0 r-37j5jr r-q4m81j r-a023e6 r-rjixqe r-b88u0q r-1awozwy r-6koalj r-18u37iz r-16y2uox r-bcqeeo r-1777fci" dir="ltr" style="color: rgb(15, 20, 25);"><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-10ptun7 r-1janqcz" style="color: rgb(15, 20, 25);" viewbox="0 0 24 24"><g><path d="M19.5 2C20.88 2 22 3.12 22 4.5v11c0 1.21-.86 2.22-2 2.45V4.5c0-.28-.22-.5-.5-.5H6.05c.23-1.14 1.24-2 2.45-2h11zm-4 4C16.88 6 18 7.12 18 8.5v11c0 1.38-1.12 2.5-2.5 2.5h-11C3.12 22 2 20.88 2 19.5v-11C2 7.12 3.12 6 4.5 6h11zM4 19.5c0 .28.22.5.5.5h11c.28 0 .5-.22.5-.5v-11c0-.28-.22-.5-.5-.5h-11c-.28 0-.5.22-.5.5v11z"></path></g></svg><div class="css-g5y9jx r-xoduu5"><span class="css-1jxf684 r-dnmrzs r-1udh08x r-1udbk01 r-3s2u2q r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1b43r93 r-1cwl3u0" style="border-bottom: 2px solid rgb(15, 20, 25);"></span></div></div></button></div></div><pre style="background: rgb(247, 249, 249); color: rgb(56, 58, 66); font-family: monospace; direction: ltr; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; line-height: 1.3; tab-size: 2; hyphens: none; padding: 12px; margin: 0px 0px 0.5em; overflow: auto; border-radius: 0.3em 0.3em 8px 8px; font-size: 13px; display: block; width: 100%; box-sizing: border-box;"><code class="language-bash" style='background: rgb(250, 250, 250); color: rgb(56, 58, 66); font-family: "Fira Code", "Fira Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace; direction: ltr; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; line-height: 1.5; tab-size: 2; hyphens: none;'><span>brew </span><span class="token" style="color: rgb(64, 120, 242);">install</span><span> syncthing</span></code></pre></div></div></section><div class="longform-unstyled" data-block="true" data-editor="ee84h" data-offset-key="qu52-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="qu52-0-0"><span data-offset-key="qu52-0-0"><span data-text="true">我之前装过，所以提示已是最新版。用 Windows 的去 </span></span><div class="css-g5y9jx r-1loqt21 r-1471scf r-o7ynqc r-6416eg r-1ny4l3l"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-rjixqe r-16dba41 r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="//syncthing.net" rel="noopener noreferrer nofollow" role="link" style="color: rgb(15, 20, 25);" target="_blank"><span data-offset-key="qu52-1-0"><span data-text="true">syncthing.net</span></span></a></div><span data-offset-key="qu52-2-0"><span data-text="true"> 下载安装包，后面管理后台的操作都一样。</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="ee84h" data-offset-key="6gp8q-0-0"><div class="css-g5y9jx r-1nxhmzv"><div class="css-g5y9jx r-13qz1uu"><div class="css-g5y9jx r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-g5y9jx"><div class="css-g5y9jx r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-g5y9jx r-1pi2tsx r-1ny4l3l r-1loqt21" href="/justhalfbit/article/2104516944133333098/media/2104512756972158977" role="link"><div class="css-g5y9jx r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 26.4388%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="图像" class="css-g5y9jx r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-g5y9jx r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HTS7M8iagAEqyZH?format=jpg&amp;name=small");'></div><img alt="图像" class="css-9pa8cd" draggable="true" src="assets/5417058098e0e28efa42378098b98dff.jpg"/></div></div></div></a></div></div></div></div></div></section><div class="longform-unstyled" data-block="true" data-editor="ee84h" data-offset-key="cslr6-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="cslr6-0-0"><span data-offset-key="cslr6-0-0"><span data-text="true">3️⃣ </span></span><span data-offset-key="cslr6-0-1" style="font-weight: bold;"><span data-text="true">启动，顺便设成开机自启</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="ee84h" data-offset-key="dfsqq-0-0"><div class="css-g5y9jx r-1nxhmzv r-13qz1uu"><div class="css-g5y9jx r-dnmrzs" data-testid="markdown-code-block"><div class="css-g5y9jx r-1awozwy r-bqz1g2 r-1fs5b29 r-1idry7j r-6413gk r-43g30s r-l4nmg1 r-o59np7 r-2dysd3 r-vmopo1 r-13qz1uu"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-rjixqe r-16dba41 r-1aiqnjv r-n6v787" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">bash</span></div><div class="css-g5y9jx r-1awozwy r-6koalj r-18u37iz r-z5qs1h r-17s6mgv"><button aria-label="复制到剪贴板" class="css-g5y9jx r-sdzlij r-1phboty r-rs99b7 r-lrvibr r-1ceczpf r-lp5zef r-1loqt21 r-o7ynqc r-6416eg r-1ny4l3l" role="button" style="background-color: rgba(0, 0, 0, 0); border-color: rgba(0, 0, 0, 0);" type="button"><div class="css-146c3p1 r-qvutc0 r-37j5jr r-q4m81j r-a023e6 r-rjixqe r-b88u0q r-1awozwy r-6koalj r-18u37iz r-16y2uox r-bcqeeo r-1777fci" dir="ltr" style="color: rgb(15, 20, 25);"><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-10ptun7 r-1janqcz" style="color: rgb(15, 20, 25);" viewbox="0 0 24 24"><g><path d="M19.5 2C20.88 2 22 3.12 22 4.5v11c0 1.21-.86 2.22-2 2.45V4.5c0-.28-.22-.5-.5-.5H6.05c.23-1.14 1.24-2 2.45-2h11zm-4 4C16.88 6 18 7.12 18 8.5v11c0 1.38-1.12 2.5-2.5 2.5h-11C3.12 22 2 20.88 2 19.5v-11C2 7.12 3.12 6 4.5 6h11zM4 19.5c0 .28.22.5.5.5h11c.28 0 .5-.22.5-.5v-11c0-.28-.22-.5-.5-.5h-11c-.28 0-.5.22-.5.5v11z"></path></g></svg><div class="css-g5y9jx r-xoduu5"><span class="css-1jxf684 r-dnmrzs r-1udh08x r-1udbk01 r-3s2u2q r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1b43r93 r-1cwl3u0" style="border-bottom: 2px solid rgb(15, 20, 25);"></span></div></div></button></div></div><pre style="background: rgb(247, 249, 249); color: rgb(56, 58, 66); font-family: monospace; direction: ltr; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; line-height: 1.3; tab-size: 2; hyphens: none; padding: 12px; margin: 0px 0px 0.5em; overflow: auto; border-radius: 0.3em 0.3em 8px 8px; font-size: 13px; display: block; width: 100%; box-sizing: border-box;"><code class="language-bash" style='background: rgb(250, 250, 250); color: rgb(56, 58, 66); font-family: "Fira Code", "Fira Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace; direction: ltr; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; line-height: 1.5; tab-size: 2; hyphens: none;'><span>brew services start syncthing</span></code></pre></div></div></section><div class="longform-unstyled" data-block="true" data-editor="ee84h" data-offset-key="4geam-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4geam-0-0"><span data-offset-key="4geam-0-0"><span data-text="true">这条命令会把 Syncthing 注册成后台服务，电脑重启后它自己会起来，不用每次手动开。</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="ee84h" data-offset-key="el626-0-0"><div class="css-g5y9jx r-1nxhmzv"><div class="css-g5y9jx r-13qz1uu"><div class="css-g5y9jx r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-g5y9jx"><div class="css-g5y9jx r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-g5y9jx r-1pi2tsx r-1ny4l3l r-1loqt21" href="/justhalfbit/article/2104516944133333098/media/2104513006080229377" role="link"><div class="css-g5y9jx r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 21.3913%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="图像" class="css-g5y9jx r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-g5y9jx r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HTS7bciaAAE4f5t?format=jpg&amp;name=small");'></div><img alt="图像" class="css-9pa8cd" draggable="true" src="assets/51efda3e045a768e81318987e6abadb5.jpg"/></div></div></div></a></div></div></div></div></div></section><div class="longform-unstyled" data-block="true" data-editor="ee84h" data-offset-key="e9kus-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="e9kus-0-0"><span data-offset-key="e9kus-0-0"><span data-text="true">4️⃣ </span></span><span data-offset-key="e9kus-0-1" style="font-weight: bold;"><span data-text="true">打开管理后台</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="ee84h" data-offset-key="d2nqm-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="d2nqm-0-0"><span data-offset-key="d2nqm-0-0"><span data-text="true">浏览器访问 </span></span><div class="css-g5y9jx r-1loqt21 r-1471scf r-o7ynqc r-6416eg r-1ny4l3l"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-rjixqe r-16dba41 r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="http://127.0.0.1:8384/" rel="noopener noreferrer nofollow" role="link" style="color: rgb(15, 20, 25);" target="_blank"><span data-offset-key="d2nqm-1-0"><span data-text="true">http://127.0.0.1:8384</span></span></a></div><span data-offset-key="d2nqm-2-0"><span data-text="true"> 。第一次进来会问要不要发送匿名使用报告，随你，我点了否。</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="ee84h" data-offset-key="94d2-0-0"><div class="css-g5y9jx r-1nxhmzv"><div class="css-g5y9jx r-13qz1uu"><div class="css-g5y9jx r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-g5y9jx"><div class="css-g5y9jx r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-g5y9jx r-1pi2tsx r-1ny4l3l r-1loqt21" href="/justhalfbit/article/2104516944133333098/media/2104513106802339840" role="link"><div class="css-g5y9jx r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 66.3183%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="图像" class="css-g5y9jx r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-g5y9jx r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HTS7hTwbcAAss2Y?format=jpg&amp;name=small");'></div><img alt="图像" class="css-9pa8cd" draggable="true" src="assets/ce218811f9ef0bc0f0448a1a08ef254f.jpg"/></div></div></div></a></div></div></div></div></div></section><div class="longform-unstyled" data-block="true" data-editor="ee84h" data-offset-key="6cdf6-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="6cdf6-0-0"><span data-offset-key="6cdf6-0-0"><span data-text="true">5️⃣ </span></span><span data-offset-key="6cdf6-0-1" style="font-weight: bold;"><span data-text="true">复制本机的 Device ID</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="ee84h" data-offset-key="7u452-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7u452-0-0"><span data-offset-key="7u452-0-0"><span data-text="true">右上角"操作" → "显示 ID"，把那一长串复制下来，待会儿要发给 Muse。</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="ee84h" data-offset-key="3k10t-0-0"><div class="css-g5y9jx r-1nxhmzv"><div class="css-g5y9jx r-13qz1uu"><div class="css-g5y9jx r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-g5y9jx"><div class="css-g5y9jx r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-g5y9jx r-1pi2tsx r-1ny4l3l r-1loqt21" href="/justhalfbit/article/2104516944133333098/media/2104513222426673152" role="link"><div class="css-g5y9jx r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 66.2679%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="图像" class="css-g5y9jx r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-g5y9jx r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HTS7oCfawAAObkp?format=jpg&amp;name=small");'></div><img alt="图像" class="css-9pa8cd" draggable="true" src="assets/7c3e95cacbc5f164b8b653d237d9963f.jpg"/></div></div></div></a></div></div></div></div></div></section><section class="" contenteditable="false" data-block="true" data-editor="ee84h" data-offset-key="c2pe-0-0"><div class="css-g5y9jx r-1sw30gj r-109y4c4 r-1nxhmzv r-13qz1uu" role="separator"></div></section><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="ee84h" data-offset-key="4tm3s-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4tm3s-0-0"><span data-offset-key="4tm3s-0-0"><span data-text="true">第二步：一条 Prompt，让 Muse 自己配好虚拟机</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="ee84h" data-offset-key="l5oa-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="l5oa-0-0"><span data-offset-key="l5oa-0-0"><span data-text="true">虚拟机那边我一行命令都没敲，全交给 Muse。下面这段直接复制发给它：</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="ee84h" data-offset-key="64g06-0-0"><div class="css-g5y9jx r-1nxhmzv r-13qz1uu"><div class="css-g5y9jx r-dnmrzs" data-testid="markdown-code-block"><div class="css-g5y9jx r-1awozwy r-bqz1g2 r-1fs5b29 r-1idry7j r-6413gk r-43g30s r-l4nmg1 r-o59np7 r-2dysd3 r-vmopo1 r-13qz1uu"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-rjixqe r-16dba41 r-1aiqnjv r-n6v787" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">plaintext</span></div><div class="css-g5y9jx r-1awozwy r-6koalj r-18u37iz r-z5qs1h r-17s6mgv"><button aria-label="复制到剪贴板" class="css-g5y9jx r-sdzlij r-1phboty r-rs99b7 r-lrvibr r-1ceczpf r-lp5zef r-1loqt21 r-o7ynqc r-6416eg r-1ny4l3l" role="button" style="background-color: rgba(0, 0, 0, 0); border-color: rgba(0, 0, 0, 0);" type="button"><div class="css-146c3p1 r-qvutc0 r-37j5jr r-q4m81j r-a023e6 r-rjixqe r-b88u0q r-1awozwy r-6koalj r-18u37iz r-16y2uox r-bcqeeo r-1777fci" dir="ltr" style="color: rgb(15, 20, 25);"><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-10ptun7 r-1janqcz" style="color: rgb(15, 20, 25);" viewbox="0 0 24 24"><g><path d="M19.5 2C20.88 2 22 3.12 22 4.5v11c0 1.21-.86 2.22-2 2.45V4.5c0-.28-.22-.5-.5-.5H6.05c.23-1.14 1.24-2 2.45-2h11zm-4 4C16.88 6 18 7.12 18 8.5v11c0 1.38-1.12 2.5-2.5 2.5h-11C3.12 22 2 20.88 2 19.5v-11C2 7.12 3.12 6 4.5 6h11zM4 19.5c0 .28.22.5.5.5h11c.28 0 .5-.22.5-.5v-11c0-.28-.22-.5-.5-.5h-11c-.28 0-.5.22-.5.5v11z"></path></g></svg><div class="css-g5y9jx r-xoduu5"><span class="css-1jxf684 r-dnmrzs r-1udh08x r-1udbk01 r-3s2u2q r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1b43r93 r-1cwl3u0" style="border-bottom: 2px solid rgb(15, 20, 25);"></span></div></div></button></div></div><pre style="background: rgb(247, 249, 249); color: rgb(56, 58, 66); font-family: monospace; direction: ltr; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; line-height: 1.3; tab-size: 2; hyphens: none; padding: 12px; margin: 0px 0px 0.5em; overflow: auto; border-radius: 0.3em 0.3em 8px 8px; font-size: 13px; display: block; width: 100%; box-sizing: border-box;"><code class="language-plaintext" style='background: rgb(250, 250, 250); color: rgb(56, 58, 66); font-family: "Fira Code", "Fira Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace; direction: ltr; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; line-height: 1.5; tab-size: 2; hyphens: none;'><span>在出站-only 的 Linux VM 上装 Syncthing，与本地电脑双向同步。
+</span>
+前置：用户已在本地电脑装好 Syncthing、拿到本地 Device ID、建好本地同步文件夹。
+
+1. 先问用户：VM 上的共享文件夹放哪个位置（默认 ~/workspace/syncthing-work）。
+2. 再向用户索要本地电脑的 Syncthing Device ID。配对只要 Device ID，不需要任何 IP。Folder ID 不用问，直接用 syncthing-work。
+3. 跟用户确认以上信息，然后执行安装：在 VM 上安装 Syncthing（官方二进制，v2），初始化配置，建好同步目录，通过 API 配好共享文件夹（sendreceive + 文件监听）。
+4. 让 Syncthing 后台常驻（systemd 不行就 nohup），加 cron 每 3 分钟巡检，挂了自动重启。
+5. 安装完成后，把 VM 的 Device ID 发给用户；提示用户先去本地电脑的 Syncthing 管理界面把这个 Device ID 添加为设备，加完后回来告诉你。没得到确认不许往下走。
+6. 用户确认加完后，在 VM 侧添加本地设备并共享文件夹。此时用户在本地 Syncthing 界面会看到"接受共享"的提示，点击并选择本地文件夹；让用户完成后回来告诉你。没得到确认不许往下走。
+7. 双向测试连通性：VM 建文件看本地收到，用户在本地新建一个文本文件看 VM 收到；删测试文件，汇报连接类型和延迟。
+
+连不上就查连接状态和日志：unknown device 是顺序问题，两边设备都加完后 pkill + nohup 重启（别用 API restart，会直接退出不重启）；relay 拨号有节流，配好后等几分钟。
+
+每步汇报进展；合并命令，少弹审批。</code></pre></div></div></section><div class="longform-unstyled" data-block="true" data-editor="ee84h" data-offset-key="ad4oh-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="ad4oh-0-0"><span data-offset-key="ad4oh-0-0"><span data-text="true">发出去之后，Muse 会先问你两件事：虚拟机上的文件夹放哪（用默认就行），以及你 Mac 的 Device ID，把上一步复制的贴给它。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="ee84h" data-offset-key="7kd9-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7kd9-0-0"><span data-offset-key="7kd9-0-0"><span data-text="true">执行过程中会弹出"允许 Muse 与 hatch-egress-proxy 分享信息？"。这是 Muse 在申请联网，下载 Syncthing、跟你的 Mac 建立连接都要经过它。这种审批会弹好几次，每次都点"总是允许此站点"就行。</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="ee84h" data-offset-key="996o2-0-0"><div class="css-g5y9jx r-1nxhmzv"><div class="css-g5y9jx r-13qz1uu"><div class="css-g5y9jx r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-g5y9jx"><div class="css-g5y9jx r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-g5y9jx r-1pi2tsx r-1ny4l3l r-1loqt21" href="/justhalfbit/article/2104516944133333098/media/2104513609053474816" role="link"><div class="css-g5y9jx r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 38.435%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="图像" class="css-g5y9jx r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-g5y9jx r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HTS7-iybkAAQonS?format=jpg&amp;name=small");'></div><img alt="图像" class="css-9pa8cd" draggable="true" src="assets/6502a6c082cebabbc18c30cbe4aceeea.jpg"/></div></div></div></a></div></div></div></div></div></section><div class="longform-unstyled" data-block="true" data-editor="ee84h" data-offset-key="7gn70-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7gn70-0-0"><span data-offset-key="7gn70-0-0"><span data-text="true">装完之后，Muse 会在对话里把虚拟机的 Device ID 发给你，复制下来，下一步要用。</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="ee84h" data-offset-key="4nte1-0-0"><div class="css-g5y9jx r-1sw30gj r-109y4c4 r-1nxhmzv r-13qz1uu" role="separator"></div></section><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="ee84h" data-offset-key="5codb-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5codb-0-0"><span data-offset-key="5codb-0-0"><span data-text="true">第三步：两边互相添加设备</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="ee84h" data-offset-key="56cdf-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="56cdf-0-0"><span data-offset-key="56cdf-0-0"><span data-text="true">1️⃣ </span></span><span data-offset-key="56cdf-0-1" style="font-weight: bold;"><span data-text="true">Mac 添加 Muse 为远程设备</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="ee84h" data-offset-key="c5l26-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="c5l26-0-0"><span data-offset-key="c5l26-0-0"><span data-text="true">回到管理后台，右下角点"添加远程设备"。</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="ee84h" data-offset-key="8t3gq-0-0"><div class="css-g5y9jx r-1nxhmzv"><div class="css-g5y9jx r-13qz1uu"><div class="css-g5y9jx r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-g5y9jx"><div class="css-g5y9jx r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-g5y9jx r-1pi2tsx r-1ny4l3l r-1loqt21" href="/justhalfbit/article/2104516944133333098/media/2104513809364951040" role="link"><div class="css-g5y9jx r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 66.9895%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="图像" class="css-g5y9jx r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-g5y9jx r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HTS8KNAaIAAkYct?format=jpg&amp;name=small");'></div><img alt="图像" class="css-9pa8cd" draggable="true" src="assets/a544680de1a16b6e0dc521e887f5c5c6.jpg"/></div></div></div></a></div></div></div></div></div></section><div class="longform-unstyled" data-block="true" data-editor="ee84h" data-offset-key="72lv6-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="72lv6-0-0"><span data-offset-key="72lv6-0-0"><span data-text="true">设备 ID 粘贴 Muse 给的那串，设备名随便起，我写的 Muse，保存。</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="ee84h" data-offset-key="9vip9-0-0"><div class="css-g5y9jx r-1nxhmzv"><div class="css-g5y9jx r-13qz1uu"><div class="css-g5y9jx r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-g5y9jx"><div class="css-g5y9jx r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-g5y9jx r-1pi2tsx r-1ny4l3l r-1loqt21" href="/justhalfbit/article/2104516944133333098/media/2104513925467480065" role="link"><div class="css-g5y9jx r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 65.2587%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="图像" class="css-g5y9jx r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-g5y9jx r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HTS8Q9haIAEGAel?format=jpg&amp;name=small");'></div><img alt="图像" class="css-9pa8cd" draggable="true" src="assets/c77476aa63afa5a76d6973a6aed3f239.jpg"/></div></div></div></a></div></div></div></div></div></section><div class="longform-unstyled" data-block="true" data-editor="ee84h" data-offset-key="2deh7-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="2deh7-0-0"><span data-offset-key="2deh7-0-0"><span data-text="true">2️⃣ </span></span><span data-offset-key="2deh7-0-1" style="font-weight: bold;"><span data-text="true">告诉 Muse 加好了</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="ee84h" data-offset-key="43nja-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="43nja-0-0"><span data-offset-key="43nja-0-0"><span data-text="true">回 Muse 说一声。它会在虚拟机那边把你的 Mac 加进来，再把 syncthing-work 共享过来。</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="ee84h" data-offset-key="8281u-0-0"><div class="css-g5y9jx r-1nxhmzv"><div class="css-g5y9jx r-13qz1uu"><div class="css-g5y9jx r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-g5y9jx"><div class="css-g5y9jx r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-g5y9jx r-1pi2tsx r-1ny4l3l r-1loqt21" href="/justhalfbit/article/2104516944133333098/media/2104514046594826240" role="link"><div class="css-g5y9jx r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 42.8571%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="图像" class="css-g5y9jx r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-g5y9jx r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HTS8YAwawAAysZL?format=jpg&amp;name=small");'></div><img alt="图像" class="css-9pa8cd" draggable="true" src="assets/2f25fe08e54fa926d821c5fd7a21dea4.jpg"/></div></div></div></a></div></div></div></div></div></section><div class="longform-unstyled" data-block="true" data-editor="ee84h" data-offset-key="3rlcs-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="3rlcs-0-0"><span data-offset-key="3rlcs-0-0"><span data-text="true">3️⃣ </span></span><span data-offset-key="3rlcs-0-1" style="font-weight: bold;"><span data-text="true">在 Mac 上接受共享</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="ee84h" data-offset-key="at7oc-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="at7oc-0-0"><span data-offset-key="at7oc-0-0"><span data-text="true">回到管理后台，先把顶上那条绿色的"GUI 身份验证"提示点"确定"关掉。这个管理后台默认只有本机能访问，不设密码也没关系。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="ee84h" data-offset-key="bvntt-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="bvntt-0-0"><span data-offset-key="bvntt-0-0"><span data-text="true">下面会冒出一条黄色提示："Muse 想要共享文件夹 syncthing-work，添加新文件夹？"点"添加"。</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="ee84h" data-offset-key="dqtrf-0-0"><div class="css-g5y9jx r-1nxhmzv"><div class="css-g5y9jx r-13qz1uu"><div class="css-g5y9jx r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-g5y9jx"><div class="css-g5y9jx r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-g5y9jx r-1pi2tsx r-1ny4l3l r-1loqt21" href="/justhalfbit/article/2104516944133333098/media/2104514188727230464" role="link"><div class="css-g5y9jx r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 86.6025%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="图像" class="css-g5y9jx r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-g5y9jx r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HTS8gSPbIAARjGC?format=jpg&amp;name=small");'></div><img alt="图像" class="css-9pa8cd" draggable="true" src="assets/8bdeba4a05fb59e875f18d780b6b07ff.jpg"/></div></div></div></a></div></div></div></div></div></section><div class="longform-unstyled" data-block="true" data-editor="ee84h" data-offset-key="18gh9-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="18gh9-0-0"><span data-offset-key="18gh9-0-0"><span data-text="true">4️⃣ </span></span><span data-offset-key="18gh9-0-1" style="font-weight: bold;"><span data-text="true">指向本地文件夹</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="ee84h" data-offset-key="s5aj-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="s5aj-0-0"><span data-offset-key="s5aj-0-0"><span data-text="true">文件夹 ID 已经自动填好了，别动。只改"文件夹路径"，填第一步建的那个 ~/Downloads/syncthing-work，保存。</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="ee84h" data-offset-key="9oo8b-0-0"><div class="css-g5y9jx r-1nxhmzv"><div class="css-g5y9jx r-13qz1uu"><div class="css-g5y9jx r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-g5y9jx"><div class="css-g5y9jx r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-g5y9jx r-1pi2tsx r-1ny4l3l r-1loqt21" href="/justhalfbit/article/2104516944133333098/media/2104514298383142912" role="link"><div class="css-g5y9jx r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 77.0115%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="图像" class="css-g5y9jx r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-g5y9jx r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HTS8mqvbkAACeVf?format=jpg&amp;name=small");'></div><img alt="图像" class="css-9pa8cd" draggable="true" src="assets/7a75106e58e4b1718f58fcc7cc434a1a.jpg"/></div></div></div></a></div></div></div></div></div></section><div class="longform-unstyled" data-block="true" data-editor="ee84h" data-offset-key="94q3s-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="94q3s-0-0"><span data-offset-key="94q3s-0-0"><span data-text="true">⚠️ 这里不改路径的话，Syncthing 会在用户目录下另建一个同名文件夹，同步的东西就跑到那边去了，你盯着自己建的文件夹等半天也等不到。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="ee84h" data-offset-key="9aq7l-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9aq7l-0-0"><span data-offset-key="9aq7l-0-0"><span data-text="true">5️⃣ </span></span><span data-offset-key="9aq7l-0-1" style="font-weight: bold;"><span data-text="true">看状态</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="ee84h" data-offset-key="c8ksl-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="c8ksl-0-0"><span data-offset-key="c8ksl-0-0"><span data-text="true">左边的文件夹和右边的远程设备都显示绿色"最新"，文件夹类型是"发送和接收"，那就是配好了。</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="ee84h" data-offset-key="6ua6g-0-0"><div class="css-g5y9jx r-1nxhmzv"><div class="css-g5y9jx r-13qz1uu"><div class="css-g5y9jx r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-g5y9jx"><div class="css-g5y9jx r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-g5y9jx r-1pi2tsx r-1ny4l3l r-1loqt21" href="/justhalfbit/article/2104516944133333098/media/2104514431040499712" role="link"><div class="css-g5y9jx r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 53.3391%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="图像" class="css-g5y9jx r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-g5y9jx r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HTS8uY7aMAAAtMd?format=jpg&amp;name=small");'></div><img alt="图像" class="css-9pa8cd" draggable="true" src="assets/881df85f6556027d0bbe4a799b980124.jpg"/></div></div></div></a></div></div></div></div></div></section><section class="" contenteditable="false" data-block="true" data-editor="ee84h" data-offset-key="5vr00-0-0"><div class="css-g5y9jx r-1sw30gj r-109y4c4 r-1nxhmzv r-13qz1uu" role="separator"></div></section><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="ee84h" data-offset-key="9khv5-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9khv5-0-0"><span data-offset-key="9khv5-0-0"><span data-text="true">第四步：双向测一下</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="ee84h" data-offset-key="4v9du-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4v9du-0-0"><span data-offset-key="4v9du-0-0"><span data-text="true">跟 Muse 说接受完了，它会先在虚拟机里丢一个测试文件。我这边大约 4 秒，Mac 的文件夹里就有了。</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="ee84h" data-offset-key="93fcv-0-0"><div class="css-g5y9jx r-1nxhmzv"><div class="css-g5y9jx r-13qz1uu"><div class="css-g5y9jx r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-g5y9jx"><div class="css-g5y9jx r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-g5y9jx r-1pi2tsx r-1ny4l3l r-1loqt21" href="/justhalfbit/article/2104516944133333098/media/2104514602122027008" role="link"><div class="css-g5y9jx r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 58.89%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="图像" class="css-g5y9jx r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-g5y9jx r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HTS84WQbIAA-IVP?format=jpg&amp;name=small");'></div><img alt="图像" class="css-9pa8cd" draggable="true" src="assets/d512b3b1469cb8975cf8f900ca9a2ff0.jpg"/></div></div></div></a></div></div></div></div></div></section><div class="longform-unstyled" data-block="true" data-editor="ee84h" data-offset-key="6smfm-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="6smfm-0-0"><span data-offset-key="6smfm-0-0"><span data-text="true">反过来，我在 Mac 上把这个文件改了个名，让它看一眼，虚拟机那边也跟着变了。最后它把测试文件删掉，删除同样同步到了 Mac。延迟几秒。</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="ee84h" data-offset-key="d6uld-0-0"><div class="css-g5y9jx r-1nxhmzv"><div class="css-g5y9jx r-13qz1uu"><div class="css-g5y9jx r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-g5y9jx"><div class="css-g5y9jx r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-g5y9jx r-1pi2tsx r-1ny4l3l r-1loqt21" href="/justhalfbit/article/2104516944133333098/media/2104514744082427904" role="link"><div class="css-g5y9jx r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 87.2951%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="图像" class="css-g5y9jx r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-g5y9jx r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HTS9AnGa8AAFhv2?format=jpg&amp;name=small");'></div><img alt="图像" class="css-9pa8cd" draggable="true" src="assets/49636e0a31cc0a39963412228d0754be.jpg"/></div></div></div></a></div></div></div></div></div></section><section class="" contenteditable="false" data-block="true" data-editor="ee84h" data-offset-key="6hnlv-0-0"><div class="css-g5y9jx r-1sw30gj r-109y4c4 r-1nxhmzv r-13qz1uu" role="separator"></div></section><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="ee84h" data-offset-key="6osdi-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="6osdi-0-0"><span data-offset-key="6osdi-0-0"><span data-text="true">实际用起来是什么样</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="ee84h" data-offset-key="8gl29-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8gl29-0-0"><span data-offset-key="8gl29-0-0"><span data-text="true">回到开头那个视频。我在 Muse 里发了一句：cc 帮我生成一个鹈鹕骑车的 HTML 文件。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="ee84h" data-offset-key="ek247-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="ek247-0-0"><span data-offset-key="ek247-0-0"><span data-text="true">cc 是我之前在 Muse 里装好的 Claude Code。装完跟它商量好了：以后消息带 cc 前缀，就是要用 Claude Code 来跑。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="ee84h" data-offset-key="ephbe-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="ephbe-0-0"><span data-offset-key="ephbe-0-0"><span data-text="true">Muse 回了一句"Claude Code 写好后我会同步给你"。没过几秒，pelican-bike.html 就出现在 Mac 的 syncthing-work 里。</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="ee84h" data-offset-key="6943f-0-0"><div class="css-g5y9jx r-1nxhmzv"><div class="css-g5y9jx r-13qz1uu"><div class="css-g5y9jx r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-g5y9jx"><div class="css-g5y9jx r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-g5y9jx r-1pi2tsx r-1ny4l3l r-1loqt21" href="/justhalfbit/article/2104516944133333098/media/2104514888454549504" role="link"><div class="css-g5y9jx r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 57.4899%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="图像" class="css-g5y9jx r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-g5y9jx r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HTS9JA7asAA40ZF?format=jpg&amp;name=small");'></div><img alt="图像" class="css-9pa8cd" draggable="true" src="assets/ba514e1fa4f081ac6896d9e74e96d341.jpg"/></div></div></div></a></div></div></div></div></div></section><div class="longform-unstyled" data-block="true" data-editor="ee84h" data-offset-key="divum-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="divum-0-0"><span data-offset-key="divum-0-0"><span data-text="true">拖进浏览器，是一只戴着头盔骑车的鹈鹕，下面还有个速度滑块，按空格能猛蹬加速。</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="ee84h" data-offset-key="a6pio-0-0"><div class="css-g5y9jx r-1nxhmzv"><div class="css-g5y9jx r-13qz1uu"><div class="css-g5y9jx r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-g5y9jx"><div class="css-g5y9jx r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-g5y9jx r-1pi2tsx r-1ny4l3l r-1loqt21" href="/justhalfbit/article/2104516944133333098/media/2104515041785757696" role="link"><div class="css-g5y9jx r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 57.5329%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="图像" class="css-g5y9jx r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-g5y9jx r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HTS9R8IbQAAtbJ0?format=jpg&amp;name=small");'></div><img alt="图像" class="css-9pa8cd" draggable="true" src="assets/d95cd68b9d8fbdacce5948718c2b703f.jpg"/></div></div></div></a></div></div></div></div></div></section><section class="" contenteditable="false" data-block="true" data-editor="ee84h" data-offset-key="3k861-0-0"><div class="css-g5y9jx r-1sw30gj r-109y4c4 r-1nxhmzv r-13qz1uu" role="separator"></div></section><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="ee84h" data-offset-key="bc8cr-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="bc8cr-0-0"><span data-offset-key="bc8cr-0-0"><span data-text="true">总结</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="ee84h" data-offset-key="c1qgm-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="c1qgm-0-0"><span data-offset-key="c1qgm-0-0"><span data-text="true">✅ 用 Syncthing 在 Mac 和 Muse 的虚拟机之间建一个双向同步文件夹
+✅ Mac 这边 5 步装好，虚拟机那边一条 Prompt 交给 Muse
+✅ 配好后双向同步，延迟几秒，Muse 生成的文件直接落到本地
+✅ 把本地的代码仓库、工作目录放进同步文件夹，Muse 就能直接在上面改代码、写笔记、写文章
+💡 最重要的坑：两边加设备有先后，没加完就连会报 unknown device。都加完之后 pkill 再 nohup 重启，别用 API restart</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="ee84h" data-offset-key="1cvsb-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1cvsb-0-0"><span data-offset-key="1cvsb-0-0"><span data-text="true">Prompt 就在上面，直接抄。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="ee84h" data-offset-key="ddvm6-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="ddvm6-0-0"><span data-offset-key="ddvm6-0-0"><span data-text="true">📋 关注 </span></span><div class="css-g5y9jx r-1loqt21 r-1471scf r-o7ynqc r-6416eg r-1ny4l3l"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-rjixqe r-16dba41 r-1ddef8g r-tjvw6i r-1loqt21" dir="ltr" href="https://x.com/@justhalfbit" rel="noopener noreferrer nofollow" role="link" style="color: rgb(15, 20, 25);" target="_blank"><span data-offset-key="ddvm6-1-0"><span data-text="true">@justhalfbit</span></span></a></div><span data-offset-key="ddvm6-2-0"><span data-text="true">，持续更新踩坑指南
+🧩 懂半格，刚好够分享</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="ee84h" data-offset-key="dtq19-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="dtq19-0-0"><span data-offset-key="dtq19-0-0"><span data-text="true">有问题随时问，看到都回 💬
+觉得有用？转给同样需要的朋友 🔄</span></span></div></div></div></div></div></div></div></div></div></article><div class="css-g5y9jx r-12kyg2d"><div class="css-g5y9jx r-k4xj1c r-18u37iz r-1wtj0ep"><div class="css-g5y9jx r-1wbh5a2 r-1a11zyx"><div class="css-g5y9jx r-1d09ksm r-18u37iz r-1wbh5a2 r-1471scf"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(83, 100, 113);"><a aria-describedby="id__oert5qsahwb" aria-label="下午7:21 · 2026年9月28日" class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-xoduu5 r-1q142lx r-1w6e6rj r-9aw3ui r-3s2u2q r-1loqt21" href="/justhalfbit/status/2104516944133333098" role="link" style="color: rgb(83, 100, 113);"><time datetime="2026-09-28T10:21:54.000Z">下午7:21 · 2026年9月28日</time></a></div><div aria-hidden="true" class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1q142lx r-n7gxbd" dir="ltr" style="color: rgb(83, 100, 113);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">·</span></div><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1loqt21" dir="ltr" href="/justhalfbit/status/2104516944133333098/analytics" role="link" style="color: rgb(15, 20, 25);"><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1b43r93 r-1cwl3u0 r-b88u0q" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">11.4万</span></span></span></div> <span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1b43r93 r-1cwl3u0" style="color: rgb(83, 100, 113);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">查看</span></span></a></div></div><div class="css-g5y9jx r-18u37iz"></div></div></div><div class="css-g5y9jx"><div class="css-g5y9jx"><div aria-label="52 回复、75 次转帖、265 喜欢、609 书签、114330 次观看" class="css-g5y9jx r-1kbdv8c r-18u37iz r-1oszu61 r-3qxfft r-n7gxbd r-1dgieki r-1efd50x r-5kkj8d r-h3s6tt r-1wtj0ep" id="id__s5qeiui41p" role="group"><div class="css-g5y9jx r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="52 回复。回复" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="reply" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01zm8.005-6c-3.317 0-6.005 2.69-6.005 6 0 3.37 2.77 6.08 6.138 6.01l.351-.01h1.761v2.3l5.087-2.81c1.951-1.08 3.163-3.13 3.163-5.36 0-3.39-2.744-6.13-6.129-6.13H9.756z"></path></g></svg></div><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">52</span></span></span></div></div></button></div><div class="css-g5y9jx r-18u37iz r-1h0z5md r-13awgt0"><button aria-expanded="false" aria-haspopup="menu" aria-label="75 次转帖。转帖" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="retweet" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"></path></g></svg></div><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">75</span></span></span></div></div></button></div><div class="css-g5y9jx r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="265 喜欢次数。喜欢" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="like" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"></path></g></svg></div><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">265</span></span></span></div></div></button></div><div class="css-g5y9jx r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="609 书签。加入书签" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="bookmark" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M4 4.5C4 3.12 5.119 2 6.5 2h11C18.881 2 20 3.12 20 4.5v18.44l-8-5.71-8 5.71V4.5zM6.5 4c-.276 0-.5.22-.5.5v14.56l6-4.29 6 4.29V4.5c0-.28-.224-.5-.5-.5h-11z"></path></g></svg></div><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">609</span></span></span></div></div></button></div><div class="css-g5y9jx" style="align-content: stretch; justify-content: inherit; display: inline-grid; transform: rotate(0deg) scale(1) translate3d(0px, 0px, 0px);"><div class="css-g5y9jx r-18u37iz r-1h0z5md"><button aria-expanded="false" aria-haspopup="menu" aria-label="分享帖子" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M12 2.59l5.7 5.7-1.41 1.42L13 6.41V16h-2V6.41l-3.3 3.3-1.41-1.42L12 2.59zM21 15l-.02 3.51c0 1.38-1.12 2.49-2.5 2.49H5.5C4.11 21 3 19.88 3 18.5V15h2v3.5c0 .28.22.5.5.5h12.98c.28 0 .5-.22.5-.5L19 15h2z"></path></g></svg></div></div></button></div></div></div></div><div class="css-g5y9jx r-1awozwy r-18u37iz r-1wtj0ep r-6gpygo"><div class="css-g5y9jx r-1awozwy r-18u37iz"><div class="css-g5y9jx"><button aria-haspopup="menu" class="css-146c3p1 r-bcqeeo r-qvutc0 r-37j5jr r-1b43r93 r-1cwl3u0 r-majxgm r-fdjqy7" dir="ltr" role="button" style="color: rgb(83, 100, 113);" type="button"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">相关</span><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1pexk7n r-1mcorv5" viewbox="0 0 24 24"><g><path d="M3.543 8.96l1.414-1.42L12 14.59l7.043-7.05 1.414 1.42L12 17.41 3.543 8.96z"></path></g></svg></button></div></div><div class="css-g5y9jx r-1awozwy r-18u37iz"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1b43r93 r-1cwl3u0 r-majxgm r-1loqt21" dir="ltr" href="/justhalfbit/status/2104516944133333098/quotes" role="link" style="color: rgb(83, 100, 113);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">查看引用</span><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1pexk7n r-1mcorv5" viewbox="0 0 24 24"><g><path d="M14.586 12L7.543 4.96l1.414-1.42L17.414 12l-8.457 8.46-1.414-1.42L14.586 12z"></path></g></svg></a></div></div></div><div class="css-g5y9jx r-j5o65s r-rull8r r-qklmqi"></div></div></div></div></article>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>(1) X 上的 黄同学h：“入职大厂两个月，我的 AI 开发心得 ” / X</title>
+<!-- Injected Original Styles -->
+<style id="draftjs-styles_0">
+    .draftjs-styles_0 .public-DraftEditorPlaceholder-root {
+      color: #536471;
+    }
+
+    .draftjs-styles_0 .public-DraftEditorPlaceholder-hasFocus {
+      color: #536471;
+    }
+
+    
+  </style>
+<style id="draftjs-styles">
+     .DraftEditor-editorContainer, .DraftEditor-root, .public-DraftEditor-content {
+        height: inherit;
+        max-height: inherit;
+        min-height: inherit;
+        text-align: initial;
+    }
+
+    .public-DraftEditor-content[contenteditable=true] {
+        -moz-user-modify: read-write-plaintext-only;
+        -webkit-user-modify: read-write-plaintext-only;
+    }
+
+    .format-inline .public-DraftEditor-content[contenteditable=true] {
+      -moz-user-modify: read-write;
+      -webkit-user-modify: read-write;
+    }
+
+    .DraftEditor-root {
+        width: 100%;
+        position: relative;
+        -webkit-user-select: none;
+    }
+
+    .DraftEditor-editorContainer {
+        background-color: rgba(255, 255, 255, 0);
+        border-left: .1px solid transparent;
+        position: relative;
+        z-index: 1;
+    }
+
+    .public-DraftEditor-block {
+        position: relative;
+    }
+
+    .DraftEditor-alignLeft .public-DraftStyleDefault-block {
+        text-align: left;
+    }
+
+    .DraftEditor-alignLeft .public-DraftEditorPlaceholder-root {
+        left: 0;
+        text-align: left;
+    }
+
+    .DraftEditor-alignCenter .public-DraftStyleDefault-block {
+        text-align: center
+    }
+
+    .DraftEditor-alignCenter .public-DraftEditorPlaceholder-root {
+        margin: 0 auto;
+        text-align: center;
+        width: 100%
+    }
+
+    .DraftEditor-alignRight .public-DraftStyleDefault-block {
+        text-align: right;
+    }
+
+    .DraftEditor-alignRight .public-DraftEditorPlaceholder-root {
+        right: 0;
+        text-align: right;
+    }
+
+    .public-DraftEditorPlaceholder-root {
+        padding-bottom: 2px;
+        padding-top: 2px;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .public-DraftEditorPlaceholder-inner {
+        user-select: none;
+        -webkit-user-select: none;
+    }
+
+    .DraftEditorPlaceholder-hidden {
+        display: none;
+    }
+
+    .public-DraftStyleDefault-block {
+        overflow:hidden;
+        padding-bottom: 2px;
+        padding-top: 2px;
+        position: relative;
+        white-space: pre-wrap;
+    }
+
+    /* Only a handful of CSS rules work on br tags and user-select isn't one */
+    div:only-child > .public-DraftStyleDefault-block > span > br::selection {
+        background: transparent;
+    }
+
+    /*
+       Safari doesn't let you change ::selection on br elements,
+       but Chrome needs it here
+    */
+    div:only-child > .public-DraftStyleDefault-block > span:has(br)::selection {
+        background: transparent;
+    }
+
+    .public-DraftStyleDefault-ltr {
+        direction: ltr;
+        text-align: left;
+    }
+
+    .public-DraftStyleDefault-rtl {
+        direction: rtl;
+        text-align: right;
+    }
+
+    .DraftEditor-editorContainer a {
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        margin-bottom: inherit;
+        margin-top: inherit;
+    }
+
+    .singleline .public-DraftStyleDefault-block {
+        overflow-x: auto;
+        scrollbar-width: none;
+        white-space: nowrap;
+        -ms-overflow-style: none;
+    }
+
+    .singleline .public-DraftStyleDefault-block::-webkit-scrollbar {
+        display: none;
+    }
+  </style>
+<style id="longform-styles">
+    .longform-header-one {
+        font-size: 31px;
+        font-weight: 800;
+        line-height: 40px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-header-one-narrow {
+        font-size: calc(20px + 1px);
+        font-weight: 800;
+        line-height: 28px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-header-two {
+        font-size: 26px;
+        font-weight: 800;
+        line-height: 36px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-header-two-narrow {
+        font-size: calc(17px + 1px);
+        font-weight: 800;
+        line-height: 24px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-unstyled, .longform-blockquote {
+        font-size: 17px;
+        line-height: 28px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-unstyled-narrow, .longform-blockquote-narrow {
+        font-size: 17px;
+        line-height: 28px;
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+
+    .longform-unordered-list-item, .longform-ordered-list-item {
+        display: block;
+        font-size: 17px;
+        line-height: 28px;   
+        margin-bottom: 12px;
+        margin-left: calc(28px + 2px);
+        margin-top: 0;
+    }
+
+    .longform-unordered-list-item-narrow, .longform-ordered-list-item-narrow {
+        display: block;
+        font-size: 17px;
+        line-height: 28px;   
+        margin-bottom: calc(12px / 2);
+        margin-left: 36px;
+        margin-top: 0;
+    }
+
+    .longform-blockquote, .longform-blockquote-narrow {
+        margin-bottom: calc(24px + 2px);
+        margin-left: 0;
+        margin-top: calc(-2px);
+        padding-left: calc(24px + 3px);
+        position: relative;
+    }
+
+    .longform-blockquote:before, .longform-blockquote-narrow:before {
+        background: #37434D;
+        border-radius: 9999px;
+        bottom: 0;
+        content: "";
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 3px;
+    }
+
+    .longform-header-one .public-DraftStyleDefault-block,
+    .longform-header-two .public-DraftStyleDefault-block,
+    .longform-unstyled .public-DraftStyleDefault-block,
+    .longform-unordered-list-item .public-DraftStyleDefault-block,
+    .longform-ordered-list-item .public-DraftStyleDefault-block,
+    .longform-header-one-narrow .public-DraftStyleDefault-block,
+    .longform-header-two-narrow .public-DraftStyleDefault-block,
+    .longform-unstyled-narrow .public-DraftStyleDefault-block,
+    .longform-unordered-list-item-narrow .public-DraftStyleDefault-block,
+    .longform-ordered-list-item-narrow .public-DraftStyleDefault-block {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    .public-DraftStyleDefault-ul, .public-DraftStyleDefault-ol {
+        counter-reset: item;
+        margin-bottom: 28px;
+        margin-top: 0;
+        padding-left: 0;
+    }
+
+    .longform-unordered-list-item:before, .longform-ordered-list-item:before,
+    .longform-unordered-list-item-narrow:before, .longform-ordered-list-item-narrow:before {
+        position: absolute;
+        margin-left: calc(-1 * (28px + 2px));
+    }
+
+    .longform-unordered-list-item:before {
+        content: counter(item, disc);
+        font-size: 23px
+    }
+
+    .longform-unordered-list-item-narrow:before {
+        content: counter(item, disc);
+        font-size: 20px
+    }
+
+    .longform-ordered-list-item:before, .longform-ordered-list-item-narrow:before {
+        content: counter(item) ". ";
+        counter-increment: item;
+    }
+
+    .longform-ordered-list-item::marker, .longform-ordered-list-item-narrow::marker {
+        font-variant-numeric: normal;
+    }
+</style>
+<style>input::placeholder { user-select: none; -webkit-user-select: none; } div div ::-webkit-input-placeholder { color: rgb(117, 117, 117) } iframe { color-scheme: auto; }button { text-align: inherit; font-size: inherit; font-family: inherit; color: inherit }</style>
+<style>@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-Light.a929468a.woff2) format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-Regular.58c84f6a.woff2) format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-Medium.bc7d8f1a.woff2) format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-Bold.0d6a47ca.woff2) format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Vazirmatn;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Vazirmatn-ExtraBold.b130af7a.woff2) format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}</style>
+<style>@font-face {
+  font-family: Geist;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Geist-var.2587a0ca.woff2) format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}</style>
+<style>@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Light.3a18e64a.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Light.7a5673aa.woff) format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Regular.80fda27a.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Regular.60b215ba.woff) format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Medium.f8e2739a.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Medium.20fc288a.woff) format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Bold.ebb56aba.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Bold.a573679a.woff) format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: TwitterChirp;
+  src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Heavy.f44ae4ea.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Heavy.d70ec7ca.woff) format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: TwitterChirpExtendedHeavy;
+  src: url(https://abs.twimg.com/fonts/v1/chirp-extended-heavy-web.woff2) format('woff2'), url(https://abs.twimg.com/fonts/v1/chirp-extended-heavy-web.woff) format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}</style>
+<style>html,body{height: 100%;}::cue{white-space:pre-line}</style>
+<style id="react-native-stylesheet">[stylesheet-group="0"]{}
+body{margin:0;}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+input::-webkit-search-cancel-button,input::-webkit-search-decoration,input::-webkit-search-results-button,input::-webkit-search-results-decoration{display:none;}
+[stylesheet-group="1"]{}
+.css-146c3p1{background-color:rgba(0,0,0,0.00);border:0 solid black;box-sizing:border-box;color:rgba(0,0,0,1.00);display:inline;font:14px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;list-style:none;margin:0px;padding:0px;position:relative;text-align:start;text-decoration:none;white-space:pre-wrap;word-wrap:break-word;}
+.css-1jxf684{background-color:rgba(0,0,0,0.00);border:0 solid black;box-sizing:border-box;color:inherit;display:inline;font:inherit;list-style:none;margin:0px;padding:0px;position:relative;text-align:inherit;text-decoration:none;white-space:inherit;word-wrap:break-word;}
+.css-9pa8cd{bottom:0px;height:100%;left:0px;opacity:0;position:absolute;right:0px;top:0px;width:100%;z-index:-1;}
+.css-g5y9jx{align-content:flex-start;align-items:stretch;background-color:rgba(0,0,0,0.00);border:0 solid black;box-sizing:border-box;display:flex;flex-basis:auto;flex-direction:column;flex-shrink:0;list-style:none;margin:0px;min-height:0px;min-width:0px;padding:0px;position:relative;text-decoration:none;z-index:0;}
+[stylesheet-group="2"]{}
+.r-11mg6pl{border-bottom-color:rgba(255,255,255,1.00);border-left-color:rgba(255,255,255,1.00);border-right-color:rgba(255,255,255,1.00);border-top-color:rgba(255,255,255,1.00);}
+.r-13awgt0{flex:1;}
+.r-17gur6a{border-bottom-left-radius:0px;border-bottom-right-radius:0px;border-top-left-radius:0px;border-top-right-radius:0px;}
+.r-1867qdf{border-bottom-left-radius:16px;border-bottom-right-radius:16px;border-top-left-radius:16px;border-top-right-radius:16px;}
+.r-1adg3ll{display:block;}
+.r-1dqxon3{overflow-x:auto;overflow-y:auto;}
+.r-1ets6dv{border-bottom-color:rgba(207,217,222,1.00);border-left-color:rgba(207,217,222,1.00);border-right-color:rgba(207,217,222,1.00);border-top-color:rgba(207,217,222,1.00);}
+.r-1fuqb1j{border-bottom-left-radius:24px;border-bottom-right-radius:24px;border-top-left-radius:24px;border-top-right-radius:24px;}
+.r-1pcd2l5{padding:20px;}
+.r-1phboty{border-bottom-style:solid;border-left-style:solid;border-right-style:solid;border-top-style:solid;}
+.r-1pp0k63{border-bottom-left-radius:0.01px;border-bottom-right-radius:0.01px;border-top-left-radius:0.01px;border-top-right-radius:0.01px;}
+.r-1q9bdsx{border-bottom-left-radius:12px;border-bottom-right-radius:12px;border-top-left-radius:12px;border-top-right-radius:12px;}
+.r-1qsk4np{overflow-x:clip;overflow-y:clip;}
+.r-1udh08x{overflow-x:hidden;overflow-y:hidden;}
+.r-1wl2o3p{border-bottom-color:rgba(229,234,236,1.00);border-left-color:rgba(229,234,236,1.00);border-right-color:rgba(229,234,236,1.00);border-top-color:rgba(229,234,236,1.00);}
+.r-1xfd6ze{border-bottom-left-radius:8px;border-bottom-right-radius:8px;border-top-left-radius:8px;border-top-right-radius:8px;}
+.r-1yadl64{border-bottom-width:0px;border-left-width:0px;border-right-width:0px;border-top-width:0px;}
+.r-494qqr{padding:32px;}
+.r-4iw3lz{border-bottom-width:0;border-left-width:0;border-right-width:0;border-top-width:0;}
+.r-4qtqp9{display:inline-block;}
+.r-6koalj{display:flex;}
+.r-bztko3{overflow-x:visible;overflow-y:visible;}
+.r-crgep1{margin:0px;}
+.r-edyy15{padding:8px;}
+.r-hvic4v{display:none;}
+.r-jxzhtn{border-bottom-color:rgba(239,243,244,1.00);border-left-color:rgba(239,243,244,1.00);border-right-color:rgba(239,243,244,1.00);border-top-color:rgba(239,243,244,1.00);}
+.r-krxsd3{display:-webkit-box;}
+.r-nsbfu8{padding:16px;}
+.r-rs99b7{border-bottom-width:1px;border-left-width:1px;border-right-width:1px;border-top-width:1px;}
+.r-sdzlij{border-bottom-left-radius:9999px;border-bottom-right-radius:9999px;border-top-left-radius:9999px;border-top-right-radius:9999px;}
+.r-t60dpp{padding:0px;}
+.r-wwvuq4{padding:0;}
+.r-xf4iuw{margin:-8px;}
+.r-xoduu5{display:inline-flex;}
+.r-xyw6el{padding:12px;}
+.r-ywje51{margin:auto;}
+.r-z2wwpe{border-bottom-left-radius:4px;border-bottom-right-radius:4px;border-top-left-radius:4px;border-top-right-radius:4px;}
+[stylesheet-group="2.1"]{}
+.r-12kyg2d{margin-bottom:16px;margin-top:16px;}
+.r-1559e4e{padding-bottom:2px;padding-top:2px;}
+.r-184id4b{margin-bottom:12px;margin-top:12px;}
+.r-1e084wi{padding-left:0px;padding-right:0px;}
+.r-1f0wa7y{padding-left:80px;padding-right:80px;}
+.r-1fkl15p{padding-left:32px;padding-right:32px;}
+.r-1mkv55d{padding-bottom:0px;padding-top:0px;}
+.r-1mmae3n{padding-bottom:12px;padding-top:12px;}
+.r-1xpp3t0{margin-left:16px;margin-right:16px;}
+.r-3o4zer{padding-left:12px;padding-right:12px;}
+.r-3pj75a{padding-left:16px;padding-right:16px;}
+.r-cnw61z{padding-bottom:4px;padding-top:4px;}
+.r-cxgwc0{padding-left:24px;padding-right:24px;}
+.r-dd0y9b{padding-bottom:20px;padding-top:20px;}
+.r-ddtstp{margin-bottom:0px;margin-top:0px;}
+.r-dp7rxi{padding-bottom:40px;padding-top:40px;}
+.r-f8sm7e{margin-left:auto;margin-right:auto;}
+.r-is05cd{padding-left:8px;padding-right:8px;}
+.r-n7gxbd{padding-left:4px;padding-right:4px;}
+.r-nj0m1c{padding-bottom:32px;padding-top:32px;}
+.r-s49dbf{margin-bottom:1px;margin-top:1px;}
+.r-sjygvo{padding-left:1em;padding-right:1em;}
+.r-u9wvl5{padding-left:20px;padding-right:20px;}
+.r-w7s2jr{padding-bottom:16px;padding-top:16px;}
+[stylesheet-group="2.2"]{}
+.r-10f7w94{margin-right:70px;}
+.r-1182swk{left:1px;}
+.r-15peodp{right:-9999px;}
+.r-15xeili{margin-left:-48px;}
+.r-17i1h83{margin-right:60px;}
+.r-19qo34d{left:-9999px;}
+.r-1a11zyx{margin-right:12px;}
+.r-1ca1ndr{margin-left:0.5em;}
+.r-1cwvpvk{margin-left:12px;}
+.r-1ez5h0i{margin-left:4px;}
+.r-1gs4q39{margin-right:4px;}
+.r-1iwt575{margin-right:1px;}
+.r-1kkk96v{margin-left:8px;}
+.r-1kpi4qh{margin-left:0.075em;}
+.r-1l2kgy{margin-right:0.5em;}
+.r-1l8l4mf{margin-right:10px;}
+.r-1noe1sz{padding-left:4px;}
+.r-1oukvu3{margin-left:70px;}
+.r-1q6cnnd{right:-2px;}
+.r-1rtiivn{margin-right:20px;}
+.r-1wron08{margin-right:8px;}
+.r-1x2e62v{margin-left:16px;}
+.r-2dysd3{padding-left:12px;}
+.r-2utimh{right:-4px;}
+.r-3t4u6i{margin-left:2px;}
+.r-45ll9u{left:50%;}
+.r-5f1w11{left:-2px;}
+.r-615f2u{right:1px;}
+.r-72fyl3{border-top-left-radius:32px;}
+.r-cwltf5{border-top-right-radius:32px;}
+.r-dlybji{margin-right:16px;}
+.r-faml9v{padding-right:12px;}
+.r-gd96e9{margin-right:-48px;}
+.r-hjq6k0{margin-left:1px;}
+.r-j3xhw6{border-top-left-radius:16px;}
+.r-k4bwe5{margin-right:0.075em;}
+.r-nazi8o{margin-left:20px;}
+.r-o59np7{padding-right:8px;}
+.r-ocobd0{right:50%;}
+.r-pt392{margin-left:60px;}
+.r-qjj4hq{padding-left:8px;}
+.r-st84sj{border-top-right-radius:16px;}
+.r-t1sew1{margin-left:10px;}
+.r-trst2h{padding-right:4px;}
+.r-v3tthl{left:-4px;}
+.r-x1x4zq{margin-right:2px;}
+[stylesheet-group="3"]{}
+.r-105ug2t{pointer-events:auto!important;}
+.r-109y4c4{height:1px;}
+.r-10ef88u{min-width:700px;}
+.r-10ptun7{height:16px;}
+.r-10v3vxq{transform:scaleX(-1);}
+.r-113js5t{width:1050px;}
+.r-117bsoe{margin-bottom:20px;}
+.r-11c0sde{margin-top:24px;}
+.r-11f8fnl{background-color:rgba(180,180,182,0.50);}
+.r-11j9u27{visibility:hidden;}
+.r-11yh6sk{overflow-x:hidden;}
+.r-11zy11o{background-color:rgba(201,54,204,1.00);}
+.r-1202g5r{height:90vh;}
+.r-12181gd{box-shadow:0 0 2px rgba(0,0,0,0.03) inset;}
+.r-122fvck{background-color:rgba(244,129,47,0.12);}
+.r-1279nm1{min-height:400px;}
+.r-12hfotv{width:700px;}
+.r-12rgx7y{width:7px;}
+.r-12sks89{min-height:22px;}
+.r-12vffkv>*{pointer-events:auto;}
+.r-12vffkv{pointer-events:none!important;}
+.r-12ym1je{width:18px;}
+.r-135wba7{line-height:24px;}
+.r-136ojw6{z-index:2;}
+.r-13qz1uu{width:100%;}
+.r-13w96dm{background-color:rgba(0,0,0,0.30);}
+.r-13wfysu{-webkit-text-decoration-line:none;text-decoration-line:none;}
+.r-146iojx{max-width:300px;}
+.r-1472mwg{height:24px;}
+.r-14gqq1x{margin-top:4px;}
+.r-14j79pv{color:rgba(83,100,113,1.00);}
+.r-14lw9ot{background-color:rgba(255,255,255,1.00);}
+.r-158ssxm{max-height:calc(64px * 15);}
+.r-159fyap{-moz-transition:opacity 300ms ease;-webkit-transition:opacity 300ms ease;transition:opacity 300ms ease;}
+.r-15ysp7h{min-height:32px;}
+.r-168457u{background-color:rgba(120,86,255,1.00);}
+.r-16dba41{font-weight:400;}
+.r-16eto9q{width:12px;}
+.r-16y2uox{flex-grow:1;}
+.r-176fswd{transform:translateX(-50%) translateY(-50%);}
+.r-1777fci{justify-content:center;}
+.r-178kkxs{background-color:rgba(255,237,219,1.00);}
+.r-17bb2tj{animation-duration:0.75s;}
+.r-17c3jg3{background-color:rgba(0,0,0,0.80);}
+.r-17gznlh{animation-name:r-t2lo5v;}
+.r-17leim2{background-repeat:repeat;}
+.r-17s6mgv{justify-content:flex-end;}
+.r-184en5c{z-index:1;}
+.r-18jm5s1{transition-timing-function:cubic-bezier(0,0,0,1);}
+.r-18jsvk2{color:rgba(15,20,25,1.00);}
+.r-18kxxzh{flex-grow:0;}
+.r-18tzken{width:56px;}
+.r-18u37iz{flex-direction:row;}
+.r-18yzcnr{height:22px;}
+.r-193z5jo{flex-basis:64px;}
+.r-1994a6e{min-width:400px;}
+.r-19h8fux{background-color:rgba(55,67,77,1.00);}
+.r-19qs0lw{animation-name:r-1qpf3yi;}
+.r-19wmn03{width:20px;}
+.r-19yznuf{min-height:52px;}
+.r-1abnn5w{animation-play-state:paused;}
+.r-1acpoxo{width:36px;}
+.r-1ad0z5i{word-break:break-all;}
+.r-1aockid{width:40px;}
+.r-1awozwy{align-items:center;}
+.r-1azx6h{max-height:480px;}
+.r-1b43r93{font-size:14px;}
+.r-1bimlpy{background-color:rgba(207,217,222,1.00);}
+.r-1blnp2b{width:72px;}
+.r-1blvdjr{font-size:23px;}
+.r-1cdyxaf{flex-basis:32px;}
+.r-1ceczpf{min-height:24px;}
+.r-1cf81hf{background-color:rgba(83,100,113,1.00);}
+.r-1cj0bla{font-smoothing:always;}
+.r-1cmwbt1{gap:8px;}
+.r-1cvl2hr{color:rgba(29,155,240,1.00);}
+.r-1cwl3u0{line-height:16px;}
+.r-1d2f490{left:0px;}
+.r-1ddef8g{-webkit-text-decoration-line:underline;text-decoration-line:underline;}
+.r-1dgieki{border-top-color:rgba(239,243,244,1.00);}
+.r-1dn12g7{line-height:48px;}
+.r-1dum35f{-moz-transition-property:opacity, height;-webkit-transition-property:opacity, height;transition-property:opacity, height;}
+.r-1e425wn{animation-duration:0.15s;}
+.r-1e4ma89{background-color:rgba(0,0,0,0.55);}
+.r-1e5uvyk{-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);}
+.r-1e6yznf{margin-top:-6px;}
+.r-1ebb2ja{list-style:none;}
+.r-1efd50x{border-top-style:solid;}
+.r-1f4tc2a{background-color:rgba(244,33,46,1.00);}
+.r-1ff274t{text-align:right;}
+.r-1ffj0ar{background-color:rgba(0,0,0,0.40);}
+.r-1fu8b7j{height:712px;}
+.r-1g40b8q{z-index:3;}
+.r-1g83rmp{animation-name:r-7bj9g2;}
+.r-1gkfh8e{font-size:11px;}
+.r-1gymjhz{width:68px;}
+.r-1h0z5md{justify-content:flex-start;}
+.r-1h3ijdo{height:53px;}
+.r-1h8ys4a{padding-top:4px;}
+.r-1habvwh{align-items:flex-start;}
+.r-1hjwoze{height:18px;}
+.r-1hwvwag{flex-basis:48px;}
+.r-1hycxz{width:350px;}
+.r-1iln25a{word-wrap:normal;}
+.r-1inkyih{font-size:17px;}
+.r-1ipicw7{width:300px;}
+.r-1is30e5{transform:rotate(360deg);}
+.r-1iusvr4{flex-basis:0px;}
+.r-1iww7jx{width:28px;}
+.r-1janqcz{width:16px;}
+.r-1jaylin{width:-webkit-max-content;width:-moz-max-content;width:max-content;}
+.r-1jocfgc{width:290px;}
+.r-1jte41z{min-width:350px;}
+.r-1k5gan{background-color:rgba(236,232,255,1.00);}
+.r-1k78y06{font-family:Tahoma, Arial, sans-serif;}
+.r-1kihuf0{align-self:center;}
+.r-1ld3bg{top:-4px;}
+.r-1ldzwu0{animation-timing-function:linear;}
+.r-1loqt21{cursor:pointer;}
+.r-1m3jxhj{background-color:rgba(15,20,25,1.00);}
+.r-1m4drjs{top:-6px;}
+.r-1mdbw0j{padding-bottom:0px;}
+.r-1me0s30{max-height:unset;}
+.r-1mlwlqe{flex-basis:auto;}
+.r-1mrlafo{background-position:0;}
+.r-1muvv40{animation-iteration-count:infinite;}
+.r-1mwlp6a{height:56px;}
+.r-1nao33i{color:rgba(231,233,234,1.00);}
+.r-1niwhzg{background-color:rgba(0,0,0,0.00);}
+.r-1ny4l3l{outline-style:none;}
+.r-1obr2lp{width:920px;}
+.r-1oifz5y{background-color:rgba(170,17,0,1.00);}
+.r-1oszu61{align-items:stretch;}
+.r-1otgn73{touch-action:manipulation;}
+.r-1ovo9ad{width:360px;}
+.r-1ozsyd3{height:7px;}
+.r-1p0dtai{bottom:0px;}
+.r-1peese0{margin-bottom:24px;}
+.r-1pi2tsx{height:100%;}
+.r-1pjcn9w{max-width:80vw;}
+.r-1potc6q{top:5%;}
+.r-1ps3wis{min-width:44px;}
+.r-1pz39u2{align-self:stretch;}
+.r-1q142lx{flex-shrink:0;}
+.r-1qd0xha{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+.r-1qd7xl{top:12px;}
+.r-1qi8awa{min-width:36px;}
+.r-1r5jyh0{min-height:130px;}
+.r-1r8g8re{height:36px;}
+.r-1rnoaur{overflow-y:auto;}
+.r-1rt2jqs{width:450px;}
+.r-1rttkqs{width:400px;}
+.r-1s2bzr4{margin-top:12px;}
+.r-1s2hp8q{min-height:26px;}
+.r-1sw30gj{background-color:rgba(239,243,244,1.00);}
+.r-1sxrcry{background-size:auto;}
+.r-1szxp23{min-height:53px;}
+.r-1t2qqvi{flex-basis:50%;}
+.r-1t7zxhp{width:9px;}
+.r-1tbo1j0{height:1.5rem;}
+.r-1tjplnt{box-sizing:content-box;}
+.r-1tl8opc{font-family:"Segoe UI",Meiryo,system-ui,-apple-system,BlinkMacSystemFont,sans-serif;}
+.r-1to6hqq{background-color:rgba(255,212,0,1.00);}
+.r-1tsuqlv{max-height:100vh;}
+.r-1ttztb7{text-align:inherit;}
+.r-1udbk01{text-overflow:ellipsis;}
+.r-1upvrn0{box-shadow:0 0 15px rgba(101,119,134,0.2), 0 0 3px 1px rgba(101,119,134,0.15);}
+.r-1uqa7wc{width:1197px;}
+.r-1ur9v65{padding-top:40px;}
+.r-1v2oles{top:50%;}
+.r-1vmecro{direction:rtl;}
+.r-1vqzmdl{background-color:rgba(215,246,255,1.00);}
+.r-1vr29t4{font-weight:800;}
+.r-1vsu8ta{min-height:30px;}
+.r-1vzmqqg{-webkit-font-smoothing:antialiased;}
+.r-1w2mbsr{background-color:rgba(29,155,240,0.12);}
+.r-1wb8bfx{text-decoration-thickness:2px;}
+.r-1wbh5a2{flex-shrink:1;}
+.r-1wtj0ep{justify-content:space-between;}
+.r-1wvb978{font-feature-settings:'ss01' on;}
+.r-1wyyakw{z-index:-1;}
+.r-1x61ttu{-moz-transition:transform 1s ease;-webkit-transition:transform 1s ease;transition:transform 1s ease;}
+.r-1xcajam{position:fixed;}
+.r-1xfddsp{min-height:300px;}
+.r-1xk2f4g{clip:rect(1px, 1px, 1px, 1px);}
+.r-1xnyija{background-color:rgba(250,224,250,1.00);}
+.r-1xnzce8{-moz-user-select:text;-webkit-user-select:text;user-select:text;}
+.r-1xoqx8s{flex-basis:24px;}
+.r-1xvli5t{height:1.25em;}
+.r-1y7e96w{min-width:22px;}
+.r-1ye8kvj{max-width:600px;}
+.r-1yef0xd{animation-name:r-11cv4x;}
+.r-1yjpyg1{font-size:31px;}
+.r-1ykxob0{top:60%;}
+.r-285fr0{min-width:16px;}
+.r-2o02ov{margin-top:40px;}
+.r-2r9icm{background-color:rgba(255,122,0,1.00);}
+.r-2yi16{min-height:36px;}
+.r-33ulu8{width:600px;}
+.r-36ujnk{font-style:italic;}
+.r-37tt59{line-height:32px;}
+.r-3nmjpz{animation-name:r-12fruu6;}
+.r-3s2u2q{white-space:nowrap;}
+.r-3sxh79{top:-1px;}
+.r-417010{z-index:0;}
+.r-46f5du{font-variant-numeric:tabular-nums;}
+.r-4gszlv{background-size:cover;}
+.r-4hwcpe{font-family:Vazirmatn, Tahoma, Arial, sans-serif;}
+.r-4nw3r4{background-color:rgba(249,24,128,1.00);}
+.r-4wgw6l{min-width:32px;}
+.r-54znze{color:rgba(239,243,244,1.00);}
+.r-56xrmm{line-height:12px;}
+.r-5c1b6u{color:rgba(255,122,0,1.00);}
+.r-5kkj8d{border-top-width:1px;}
+.r-5oul0u{margin-bottom:8px;}
+.r-6026j{background-color:rgba(255,255,255,0.85);}
+.r-633pao{pointer-events:none!important;}
+.r-6416eg{-moz-transition-property:background-color, box-shadow;-webkit-transition-property:background-color, box-shadow;transition-property:background-color, box-shadow;}
+.r-64el8z{min-width:52px;}
+.r-68jxh1{min-width:500px;}
+.r-6dt33c{opacity:1;}
+.r-7h7f8p{max-width:100vw;}
+.r-7mdpej{max-width:360px;}
+.r-7q8q6z{cursor:default;}
+.r-8akbws{-webkit-box-orient:vertical;}
+.r-8i4a5g{-moz-transition:flex-grow 0.5s ease-in-out;-webkit-transition:flex-grow 0.5s ease-in-out;transition:flex-grow 0.5s ease-in-out;}
+.r-8jfcpp{top:-2px;}
+.r-8kz0gk{height:2rem;}
+.r-92ng3h{width:1px;}
+.r-95jzfe{padding-top:16px;}
+.r-97prym{flex-basis:16px;}
+.r-9dcw1g{width:320px;}
+.r-9l7dzd{color:rgba(244,33,46,1.00);}
+.r-9tfo2e{background-color:rgba(255,255,255,0.30);}
+.r-a023e6{font-size:15px;}
+.r-adyw6z{font-size:20px;}
+.r-agouwx{transform:translateZ(0);}
+.r-ah5dr5>*{pointer-events:none;}
+.r-ah5dr5{pointer-events:auto!important;}
+.r-aqfbo4{backface-visibility:hidden;}
+.r-axxi2z{-moz-transition-property:transform;-webkit-transition-property:transform;transition-property:transform;}
+.r-b88u0q{font-weight:700;}
+.r-bcqeeo{min-width:0px;}
+.r-bnwqim{position:relative;}
+.r-bt1l66{min-height:20px;}
+.r-bvlit7{margin-bottom:-12px;}
+.r-ck2lme{background-color:rgba(219,248,235,1.00);}
+.r-clrlgt{animation-name:r-imtty0;}
+.r-cnnz9e{width:1.75rem;}
+.r-deolkf{box-sizing:border-box;}
+.r-dflpy8{height:1.2em;}
+.r-dkhcqf{transition-duration:350ms;}
+.r-dnmrzs{max-width:100%;}
+.r-drjvcx{height:3.5rem;}
+.r-ehq7j7{background-size:contain;}
+.r-ek4qxl{min-width:260px;}
+.r-emqnss{transform:translateZ(0px);}
+.r-eqz5dr{flex-direction:column;}
+.r-ero68b{min-height:40px;}
+.r-eu3ka{height:40px;}
+.r-f9dfq4{width:88px;}
+.r-fa1dwr{animation-timing-function:cubic-bezier(0.25, 0.1, 0.25, 1);}
+.r-fdjqy7{text-align:left;}
+.r-fm7h5w{font-family:"TwitterChirpExtendedHeavy","Verdana",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+.r-fvsqc2{top:calc(0px - 53);}
+.r-g6jmlv{width:100vw;}
+.r-gf0ln{-webkit-filter:brightness(1);filter:brightness(1);}
+.r-gkxrsp{background-color:rgba(0,67,41,1.00);}
+.r-h0d30l{height:28px;}
+.r-h3s6tt{height:48px;}
+.r-h9hxbl{width:1.2em;}
+.r-hdaws3{height:4px;}
+.r-htvplk{min-width:600px;}
+.r-i61hcz{min-width:20px;}
+.r-icoktb{opacity:0.5;}
+.r-ifefl9{min-height:0px;}
+.r-impgnl{transform:translateX(50%) translateY(-50%);}
+.r-iphfwy{padding-bottom:4px;}
+.r-ipm5af{top:0px;}
+.r-j5o65s{border-bottom-color:rgba(239,243,244,1.00);}
+.r-jmul1s{transform:scale(1.1);}
+.r-jwli3a{color:rgba(255,255,255,1.00);}
+.r-k200y{align-self:flex-start;}
+.r-k5y9r7{height:9px;}
+.r-k8qxaj{padding-bottom:20px;}
+.r-kemksi{background-color:rgba(0,0,0,1.00);}
+.r-kr0nin{width:1.5rem;}
+.r-kwpbio{height:650px;}
+.r-kzbkwu{padding-bottom:12px;}
+.r-l5o3uw{background-color:rgba(29,155,240,1.00);}
+.r-loe9s5{background-color:rgba(0,0,0,0.77);}
+.r-lp5zef{min-width:24px;}
+.r-lrsllp{width:24px;}
+.r-lrvibr{-moz-user-select:none;-webkit-user-select:none;user-select:none;}
+.r-lrx3fh{width:500px;}
+.r-lwhw9o{height:1.75rem;}
+.r-m6rgpd{vertical-align:text-bottom;}
+.r-majxgm{font-weight:500;}
+.r-mrc9z7{width:1257px;}
+.r-n1ft60{dynamic-range-limit:standard;}
+.r-n6v787{font-size:13px;}
+.r-nhe8su{animation-duration:0.5s;}
+.r-nvplwv{animation-timing-function:ease-out;}
+.r-nwxazl{line-height:40px;}
+.r-o7ynqc{transition-duration:0.2s;}
+.r-o96wvk{width:275px;}
+.r-obd0qt{align-items:flex-end;}
+.r-onrtq4{flex-basis:40px;}
+.r-orgf3d{opacity:0;}
+.r-oucylx{border-bottom-color:rgba(0,0,0,0.00);}
+.r-peo1c{min-height:44px;}
+.r-pm9dpa{max-height:100%;}
+.r-poiln3{font-family:inherit;}
+.r-pp5qcn{vertical-align:-20%;}
+.r-pwrm9v{width:390px;}
+.r-q3k7ks{background-color:rgba(0,122,255,1.00);}
+.r-q4m81j{text-align:center;}
+.r-qklmqi{border-bottom-width:1px;}
+.r-qlhcfr{font-size:0.001px;}
+.r-qvk6io{line-height:0px;}
+.r-qvutc0{word-wrap:break-word;}
+.r-r4n2gf{background-color:rgba(0,175,182,1.00);}
+.r-ripixn{max-height:16vh;}
+.r-rjixqe{line-height:20px;}
+.r-rki7wi{bottom:12px;}
+.r-rsyp9y{max-height:90vh;}
+.r-rthrr5{width:990px;}
+.r-rull8r{border-bottom-style:solid;}
+.r-rwqe4o{width:48px;}
+.r-s224ru{background-color:rgba(0,186,124,1.00);}
+.r-s67bdx{font-size:48px;}
+.r-s8bhmr{min-width:56px;}
+.r-sa2ff0{min-height:100vh;}
+.r-sb58tz{max-width:1000px;}
+.r-t3ofa{-moz-osx-font-smoothing:grayscale;}
+.r-tbmifm{height:12px;}
+.r-tjvw6i{text-decoration-thickness:1px;}
+.r-tskmnb{padding-top:8px;}
+.r-u6sd8q{background-repeat:no-repeat;}
+.r-u8s1d{position:absolute;}
+.r-ueyrd6{line-height:36px;}
+.r-uho16t{font-size:34px;}
+.r-uz7a3o{min-width:650px;}
+.r-v2d8zz{flex-basis:56px;}
+.r-vkv6oe{min-width:40px;}
+.r-vqxq0j{border:0 solid black;}
+.r-vrz42v{line-height:28px;}
+.r-vuvsbk{padding-bottom:calc(16px + 0px);}
+.r-vvn4in{background-position:center;}
+.r-vz2u4x{height:11px;}
+.r-wgabs5{border-bottom-width:2px;}
+.r-wy61xf{height:72px;}
+.r-x3cy2q{background-size:100% 100%;}
+.r-x572qd{background-color:rgba(247,249,249,1.00);}
+.r-xb2eav{font-size:40px;}
+.r-xigjrr{-webkit-filter:blur(4px);filter:blur(4px);}
+.r-xr3zp9{min-height:calc(64px * 3);}
+.r-yc9v9c{width:22px;}
+.r-yn5ncy{animation-fill-mode:both;}
+.r-yy2aun{font-size:26px;}
+.r-yyyyoo{fill:currentcolor;}
+.r-z2knda{transition-timing-function:ease;}
+.r-z7pwl0{max-width:700px;}
+.r-z80fyv{height:20px;}
+.r-zchlnj{right:0px;}
+@-webkit-keyframes r-11cv4x{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
+@-webkit-keyframes r-12fruu6{0%{opacity:0;transform:scale(0.95);}100%{opacity:1;transform:scale(1);}}
+@-webkit-keyframes r-1qpf3yi{0%{opacity:0;transform:scale3d(0.92, 0.92, 1);}100%{opacity:1;transform:scale3d(1, 1, 1);}}
+@-webkit-keyframes r-7bj9g2{0%{opacity:1;transform:scale3d(1, 1, 1);}100%{opacity:0;transform:scale3d(0.92, 0.92, 1);}}
+@-webkit-keyframes r-imtty0{0%{opacity:0;}100%{opacity:1;}}
+@-webkit-keyframes r-t2lo5v{0%{opacity:1;}100%{opacity:0;}}
+@keyframes r-11cv4x{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
+@keyframes r-12fruu6{0%{opacity:0;transform:scale(0.95);}100%{opacity:1;transform:scale(1);}}
+@keyframes r-1qpf3yi{0%{opacity:0;transform:scale3d(0.92, 0.92, 1);}100%{opacity:1;transform:scale3d(1, 1, 1);}}
+@keyframes r-7bj9g2{0%{opacity:1;transform:scale3d(1, 1, 1);}100%{opacity:0;transform:scale3d(0.92, 0.92, 1);}}
+@keyframes r-imtty0{0%{opacity:0;}100%{opacity:1;}}
+@keyframes r-t2lo5v{0%{opacity:1;}100%{opacity:0;}}
+.r-7cg0{position:absolute;visibility:hidden;top:0;width:50px;pointer-events:none}
+.r-7cg0.loaded{visibility:visible;top:50vh;width:50px}</style>
+<style>
+        body { 
+            font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;  
+            background-color: #ffffff; 
+            margin: 0;
+            padding: 0;
+        }
+        .container { 
+            max-width: 600px; 
+            margin: 0 auto; 
+            padding-top: 20px; 
+            padding-bottom: 40px;
+        }
+        .tweet-card { 
+            border: 1px solid rgb(239, 243, 244); 
+            border-radius: 16px; 
+            margin-bottom: 16px; 
+            padding: 16px; 
+            overflow-wrap: break-word;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-top: 10px;
+        }
+        /* Basic reset for some Twitter specific classes if needed */
+        a { text-decoration: none; color: rgb(29, 155, 240); }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+<div class="container">
+<div class="tweet-card">
+<article aria-labelledby="id__kpmag0fyreg id__0qgmslsefq1 id__bazh7i4u19h id__yfrbyy6nmlo id__kzg243e4dct id__ihwh6rc9tb id__3gubwrv47g4 id__a04m0dmop7l id__rf6gfiwelf id__c0bwpaka44 id__p49qll2hkl id__0lf0psfaifuq id__9lvnzx2o3m4 id__60rlhnjktin id__08cupmkoem5w id__d2q2yqcrbw id__rqc1cedikzd id__btg7fbjfg4c id__c2i9jds94z8 id__hob87qvygn" class="css-g5y9jx r-18u37iz r-1udh08x r-1c4vpko r-1c7gwzm r-1ny4l3l" data-testid="tweet" role="article" tabindex="-1"><div class="css-g5y9jx r-eqz5dr r-16y2uox r-1wbh5a2"><div class="css-g5y9jx r-16y2uox r-1wbh5a2 r-1ny4l3l"><div class="css-g5y9jx"><div class="css-g5y9jx r-18u37iz r-136ojw6"><div class="css-g5y9jx r-1iusvr4 r-16y2uox r-ttdzmv"></div></div></div><div class="css-g5y9jx r-18u37iz r-136ojw6"><div class="css-g5y9jx r-18kxxzh r-1wron08 r-onrtq4 r-1awozwy"><div class="css-g5y9jx" data-testid="Tweet-User-Avatar"><div class="css-g5y9jx r-18kxxzh r-1wbh5a2 r-13qz1uu"><div class="css-g5y9jx r-1wbh5a2 r-dnmrzs"><div class="css-g5y9jx r-bztko3 r-1adg3ll" data-testid="UserAvatar-Container-huangtongxueh" style="width: 40px; height: 40px;"><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 100%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div class="css-g5y9jx r-1adg3ll r-1pi2tsx r-13qz1uu r-45ll9u r-u8s1d r-1v2oles r-176fswd r-bztko3"><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 100%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div class="css-g5y9jx r-sdzlij r-1udh08x r-5f1w11 r-u8s1d r-8jfcpp" style="width: calc(100% + 4px); height: calc(100% + 4px);"><a aria-hidden="true" class="css-g5y9jx r-1pi2tsx r-13qz1uu r-o7ynqc r-6416eg r-1ny4l3l r-1loqt21" href="/huangtongxueh" role="link" style="background-color: rgba(0, 0, 0, 0);" tabindex="-1"><div class="css-g5y9jx r-sdzlij r-1udh08x r-633pao r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-g5y9jx r-1pi2tsx r-13qz1uu" style="background-color: rgba(0, 0, 0, 0);"></div></div><div class="css-g5y9jx r-sdzlij r-1udh08x r-633pao r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-g5y9jx r-1pi2tsx r-13qz1uu r-14lw9ot"></div></div><div class="css-g5y9jx r-sdzlij r-1udh08x r-633pao r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="background-color: rgb(255, 255, 255); width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-g5y9jx r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 100%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div class="css-g5y9jx r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af"><div class="css-g5y9jx r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/profile_images/2106287299973861376/hWehSTbZ_normal.jpg");'></div><img alt="" class="css-9pa8cd" draggable="true" src="https://pbs.twimg.com/profile_images/2106287299973861376/hWehSTbZ_normal.jpg"/></div></div></div></div><div class="css-g5y9jx r-sdzlij r-1udh08x r-45ll9u r-u8s1d r-1v2oles r-176fswd" style="width: calc(100% - 4px); height: calc(100% - 4px);"><div class="css-g5y9jx r-12181gd r-1pi2tsx r-13qz1uu r-o7ynqc r-6416eg r-1ny4l3l"></div></div></a></div></div></div></div></div></div></div></div></div><div class="css-g5y9jx r-1iusvr4 r-16y2uox r-1777fci"><div class="css-g5y9jx r-zl2h9q"><div class="css-g5y9jx r-k4xj1c r-18u37iz r-1wtj0ep"><div class="css-g5y9jx r-1d09ksm r-18u37iz r-1wbh5a2"><div class="css-g5y9jx r-1wbh5a2 r-dnmrzs r-1ny4l3l"><div class="css-g5y9jx r-1wbh5a2 r-dnmrzs r-1ny4l3l" data-testid="User-Name" id="id__kzg243e4dct"><div class="css-g5y9jx r-1awozwy r-18u37iz r-1wbh5a2 r-dnmrzs"><div class="css-g5y9jx r-1wbh5a2 r-dnmrzs"><a class="css-g5y9jx r-1wbh5a2 r-dnmrzs r-1ny4l3l r-1loqt21" href="/huangtongxueh" role="link"><div class="css-g5y9jx r-1awozwy r-18u37iz r-1wbh5a2 r-dnmrzs"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-b88u0q r-1awozwy r-6koalj r-1udh08x r-3s2u2q" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-dnmrzs r-1udh08x r-1udbk01 r-3s2u2q r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">黄同学h</span></span></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-xoduu5 r-18u37iz r-1q142lx" dir="ltr" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1awozwy r-xoduu5"><svg aria-label="认证账号" class="r-4qtqp9 r-yyyyoo r-1xvli5t r-bnwqim r-lrvibr r-m6rgpd r-1cvl2hr r-f9ja8p r-og9te1 r-3t4u6i" data-testid="icon-verified" role="img" viewbox="0 0 22 22"><g><path d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.854-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.688-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.606-.274 1.263-.144 1.896.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681s.075-1.299-.165-1.903c.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z"></path></g></svg></span></div></div></a></div></div><div class="css-g5y9jx r-18u37iz r-1wbh5a2"><div class="css-g5y9jx r-1d09ksm r-18u37iz r-1wbh5a2"><div class="css-g5y9jx r-1wbh5a2 r-dnmrzs"><a class="css-g5y9jx r-1wbh5a2 r-dnmrzs r-1ny4l3l r-1loqt21" href="/huangtongxueh" role="link" tabindex="-1"><div class="css-146c3p1 r-dnmrzs r-1udh08x r-1udbk01 r-3s2u2q r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-18u37iz r-1wvb978" dir="ltr" style="color: rgb(83, 100, 113);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">@huangtongxueh</span></div></a></div></div></div></div></div></div><div class="css-g5y9jx r-1kkk96v"><div class="css-g5y9jx r-1awozwy r-18u37iz r-1cmwbt1 r-1wtj0ep"><div class="css-g5y9jx r-18u37iz r-1h0z5md"><button aria-label="总结" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(15, 20, 25);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><div class="css-g5y9jx r-xoduu5 r-bnwqim"><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-1xvli5t r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd" viewbox="0 0 33 32"><g><path d="M12.745 20.54l10.97-8.19c.539-.4 1.307-.244 1.564.38 1.349 3.288.746 7.241-1.938 9.955-2.683 2.714-6.417 3.31-9.83 1.954l-3.728 1.745c5.347 3.697 11.84 2.782 15.898-1.324 3.219-3.255 4.216-7.692 3.284-11.693l.008.009c-1.351-5.878.332-8.227 3.782-13.031L33 0l-4.54 4.59v-.014L12.743 20.544m-2.263 1.987c-3.837-3.707-3.175-9.446.1-12.755 2.42-2.449 6.388-3.448 9.852-1.979l3.72-1.737c-.67-.49-1.53-1.017-2.515-1.387-4.455-1.854-9.789-.931-13.41 2.728-3.483 3.523-4.579 8.94-2.697 13.561 1.405 3.454-.899 5.898-3.22 8.364C1.49 30.2.666 31.074 0 32l10.478-9.466"></path></g></svg></div></div></div></button></div><div class="css-g5y9jx r-1awozwy r-6koalj r-18u37iz"><div class="css-g5y9jx"><div class="css-g5y9jx r-18u37iz r-1h0z5md"><button aria-expanded="false" aria-haspopup="menu" aria-label="更多" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="caret" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div></div></button></div></div></div></div></div></div></div></div></div><div class="css-g5y9jx"><article class="css-g5y9jx r-1ny4l3l" data-testid="twitterArticleReadView" role="article" tabindex="-1"><div class="css-g5y9jx r-1peese0"><div class="css-g5y9jx"><div class="css-g5y9jx r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-g5y9jx"><div class="css-g5y9jx r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-g5y9jx r-1pi2tsx r-1ny4l3l r-1loqt21" href="/huangtongxueh/article/2108577165306687938/media/2108571217838120960" role="link"><div class="css-g5y9jx r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 40%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="图像" class="css-g5y9jx r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-g5y9jx r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HUMmWdbaoAA2Prx?format=jpg&amp;name=small");'></div><img alt="图像" class="css-9pa8cd" draggable="true" src="assets/c2671df0c5ddb01c0e8ca07a23e25d9e.jpg"/></div></div></div></a></div></div></div></div></div><div class="css-g5y9jx r-vmopo1"><div class="css-g5y9jx r-13qz1uu"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-uho16t r-1vr29t4 r-1o37s4c r-1s2bzr4" data-testid="twitter-article-title" dir="auto" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">入职大厂两个月，我的 AI 开发心得 </span></div></div><div class="css-g5y9jx"><div aria-label="122 回复、363 次转帖、2052 喜欢、3260 书签、136307 次观看" class="css-g5y9jx r-1kbdv8c r-18u37iz r-1wtj0ep r-1ye8kvj r-j5o65s r-rull8r r-qklmqi r-h3s6tt r-14gqq1x" role="group"><div class="css-g5y9jx r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="122 回复。回复" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="reply" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01zm8.005-6c-3.317 0-6.005 2.69-6.005 6 0 3.37 2.77 6.08 6.138 6.01l.351-.01h1.761v2.3l5.087-2.81c1.951-1.08 3.163-3.13 3.163-5.36 0-3.39-2.744-6.13-6.129-6.13H9.756z"></path></g></svg></div><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">122</span></span></span></div></div></button></div><div class="css-g5y9jx r-18u37iz r-1h0z5md r-13awgt0"><button aria-expanded="false" aria-haspopup="menu" aria-label="363 次转帖。转帖" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="retweet" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"></path></g></svg></div><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">363</span></span></span></div></div></button></div><div class="css-g5y9jx r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="2052 喜欢次数。喜欢" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="like" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"></path></g></svg></div><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">2,052</span></span></span></div></div></button></div><div class="css-g5y9jx r-18u37iz r-1h0z5md r-13awgt0"><a aria-label="136307 次查看。查看帖子分析" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1ny4l3l r-1loqt21" href="/huangtongxueh/status/2108577165306687938/analytics" role="link"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M8.75 21V3h2v18h-2zM18 21V8.5h2V21h-2zM4 21l.004-10h2L6 21H4zm9.248 0v-7h2v7h-2z"></path></g></svg></div><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">13万</span></span></span></div></div></a></div><div class="css-g5y9jx r-18u37iz r-1h0z5md r-1wron08"><button aria-label="书签" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="bookmark" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M4 4.5C4 3.12 5.119 2 6.5 2h11C18.881 2 20 3.12 20 4.5v18.44l-8-5.71-8 5.71V4.5zM6.5 4c-.276 0-.5.22-.5.5v14.56l6-4.29 6 4.29V4.5c0-.28-.224-.5-.5-.5h-11z"></path></g></svg></div></div></button></div><div class="css-g5y9jx" style="align-content: stretch; justify-content: inherit; display: inline-grid; transform: rotate(0deg) scale(1) translate3d(0px, 0px, 0px);"><div class="css-g5y9jx r-18u37iz r-1h0z5md"><button aria-expanded="false" aria-haspopup="menu" aria-label="分享帖子" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi" viewbox="0 0 24 24"><g><path d="M12 2.59l5.7 5.7-1.41 1.42L13 6.41V16h-2V6.41l-3.3 3.3-1.41-1.42L12 2.59zM21 15l-.02 3.51c0 1.38-1.12 2.49-2.5 2.49H5.5C4.11 21 3 19.88 3 18.5V15h2v3.5c0 .28.22.5.5.5h12.98c.28 0 .5-.22.5-.5L19 15h2z"></path></g></svg></div></div></button></div></div></div></div><div class="css-g5y9jx r-1knelpx" data-testid="twitterArticleRichTextView"><div class="css-g5y9jx r-18jsvk2 r-37j5jr"><div class="DraftEditor-root"><div class="DraftEditor-editorContainer"><div aria-describedby="placeholder-24lqn" class="public-DraftEditor-content" contenteditable="false" data-testid="longformRichTextComponent" spellcheck="false" style="outline: none; user-select: text; white-space: pre-wrap; overflow-wrap: break-word;"><div data-contents="true"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h1 class="longform-header-one" data-block="true" data-editor="24lqn" data-offset-key="4t6cp-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4t6cp-0-0"><span data-offset-key="4t6cp-0-0"><span data-text="true">背景</span></span></div></h1></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="9eav2-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9eav2-0-0"><span data-offset-key="9eav2-0-0"><span data-text="true">起因是和组里老板进行了几次 one-on-one。他对我目前使用 AI 工具、搭建个人 Harness，以及 AI Coding 的工作流很感兴趣。主要也是因为，我现在的需求做得又快又好，已经是一些项目的主 O 了。因此，我也借这个机会，整理了一下自己的日常 AI 工作流。目前，我在组里主要做 Agent 开发，同时维护已有的后端业务。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="dvlhk-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="dvlhk-0-0"><span data-offset-key="dvlhk-0-0"><span data-text="true">之前，我在小红书里分享过相关的工作流。当时的背景是，GPT-5.4 和 Opus 4.6 已经能在获得准确上下文和合理约束的情况下，很好地完成任务。Harness Engineering 的兴起，也让大家意识到：可以通过增加约束，更好地驾驭强大的模型。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="f039r-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="f039r-0-0"><span data-offset-key="f039r-0-0"><span data-text="true">比如 Superpowers 这类 Skill，就提供了一套比较重的实现，主要围绕 Spec 和 TDD，帮助大家更容易地组织和推进任务。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="b2vqt-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="b2vqt-0-0"><span data-offset-key="b2vqt-0-0"><span data-text="true">但这么做也有一些弊端。最明显的感受就是：Token 消耗得很快。像 Superpowers 这样的 Skill，包含很多用于约束模型下一步行动的 Workflow。哪怕从全局来看，某个步骤已经没有必要了，比如上下文已经足够，可以直接开始实现，模型仍然可能沿着既定流程继续执行。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="633ik-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="633ik-0-0"><span data-offset-key="633ik-0-0"><span data-text="true">随着新模型的发布，我也看到不少开发者开始分享：自己已经基本不用这些很重的 Skill 了。一个主要原因是，模型能力增强之后，一些原本被我们认为有用的约束和流程，正在变成模型的噪声。比如，OpenAI 在发布 Astra 时，还专门写了一篇博客，介绍如何清理不必要的 Skill 和系统提示词，以改善模型的使用体验。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="4ub6e-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4ub6e-0-0"><span data-offset-key="4ub6e-0-0"><span data-text="true">所以，这篇文章会结合我这几个月的实践，分享一些目前对我比较有效的做法，聊聊怎样更好地使用各类 Agent，提高日常开发效率。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="24lqn" data-offset-key="1bv0e-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1bv0e-0-0"><span data-offset-key="1bv0e-0-0"><span data-text="true">一、我常用的skill和prompt</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="a611f-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="a611f-0-0"><span data-offset-key="a611f-0-0"><span data-text="true">我目前的工具分工</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="bplj5-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="bplj5-0-0"><span data-offset-key="bplj5-0-0"><span data-text="true">目前，我主要用 Codex + GPT-5.6 Sol 做编码实现，用 Astra 做规划。在 Astra 发布之前，规划工作主要交给 GPT-5.6 Sol Max。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="821c0-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="821c0-0-0"><span data-offset-key="821c0-0-0"><span data-text="true">简单的需求，我会用 pi + DeepSeek V4 Flash 来实现；方案的对抗性审查和 Code Review，则主要交给 Claude 5 Fable。个人项目中，我还会用网页端 GPT-6 Pro 做主要的方案设计。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="24lqn" data-offset-key="eoefl-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="eoefl-0-0"><span data-offset-key="eoefl-0-0"><span data-text="true">我常用的 Skill</span></span></div></h2></div><ol class="public-DraftStyleDefault-ol" data-offset-key="30kbu-0-0"><li class="longform-ordered-list-item public-DraftStyleDefault-orderedListItem public-DraftStyleDefault-reset public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="24lqn" data-offset-key="30kbu-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="30kbu-0-0"><span data-offset-key="30kbu-0-0" style="font-weight: bold;"><span data-text="true">think</span></span><span data-offset-key="30kbu-0-1"><span data-text="true">：tw93 的 Skill，主要用来做方案对齐和头脑风暴。</span></span></div></li><li class="longform-ordered-list-item public-DraftStyleDefault-orderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="24lqn" data-offset-key="3br54-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="3br54-0-0"><span data-offset-key="3br54-0-0" style="font-weight: bold;"><span data-text="true">grill me / grill with docs</span></span><span data-offset-key="3br54-0-1"><span data-text="true">：主要用于需求澄清。通过连续追问，把目标、约束和取舍问清楚，再根据开发流程的需要，沉淀到 ADR 或 CONTEXT.md 中。它能帮助我挖出前期对齐时没有想到的问题。</span></span></div></li><li class="longform-ordered-list-item public-DraftStyleDefault-orderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="24lqn" data-offset-key="5ll8l-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5ll8l-0-0"><span data-offset-key="5ll8l-0-0" style="font-weight: bold;"><span data-text="true">implement</span></span><span data-offset-key="5ll8l-0-1"><span data-text="true">：配合 grill 使用，属于 Matt Pocock 的 Skills 全家桶，用于实现已经明确的计划或 Issue。</span></span></div></li><li class="longform-ordered-list-item public-DraftStyleDefault-orderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="24lqn" data-offset-key="8kpnj-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8kpnj-0-0"><span data-offset-key="8kpnj-0-0" style="font-weight: bold;"><span data-text="true">ponytail</span></span><span data-offset-key="8kpnj-0-1"><span data-text="true">：用于清理 AI 的过度设计，降低 Review 的难度。这个我经常用，因为 GPT-5.6 Sol 很多时候会过度设计。</span></span></div></li><li class="longform-ordered-list-item public-DraftStyleDefault-orderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="24lqn" data-offset-key="8rgrv-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8rgrv-0-0"><span data-offset-key="8rgrv-0-0" style="font-weight: bold;"><span data-text="true">handoff</span></span><span data-offset-key="8rgrv-0-1"><span data-text="true">：把当前上下文整理成文件，方便在新会话中继续任务。我一般用它从 Codex 交接给 Claude Code 或 pi agent。</span></span></div></li><li class="longform-ordered-list-item public-DraftStyleDefault-orderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="24lqn" data-offset-key="9922l-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9922l-0-0"><span data-offset-key="9922l-0-0" style="font-weight: bold;"><span data-text="true">check</span></span><span data-offset-key="9922l-0-1"><span data-text="true">：用于代码审查，一般在提 MR 的时候使用。</span></span></div></li><li class="longform-ordered-list-item public-DraftStyleDefault-orderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="24lqn" data-offset-key="2fndg-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="2fndg-0-0"><span data-offset-key="2fndg-0-0"><span data-text="true">工作和个人开发中沉淀的 Skill：主要是一些可以复用的流程 SOP，比如端到端测试。我的建议是，日常工作中，一个流程重复超过三次，就可以考虑让 Codex 帮你整理成 Skill，之后直接复用。</span></span></div></li></ol><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="24lqn" data-offset-key="4fg45-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4fg45-0-0"><span data-offset-key="4fg45-0-0"><span data-text="true">我常用的 Prompt</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="457fh-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="457fh-0-0"><span data-offset-key="457fh-0-0"><span data-text="true">我现在已经很少自己写大段 Prompt 了。有需要时，通常会让 Codex 帮我整理。比如，经过多轮讨论后，我想把当前上下文交给 GPT Pro 做方案设计，就会让 Codex 先生成一份完整的交接 Prompt。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="8d7eu-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8d7eu-0-0"><span data-offset-key="8d7eu-0-0"><span data-text="true">除此之外，我经常使用下面几类很短的 Prompt。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="bqo3u-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="bqo3u-0-0"><span data-offset-key="bqo3u-0-0"><span data-text="true">它们有时能起到“一句话顶几千句话”的效果。我把它们理解成模型的“思维快捷键”。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="d4s8m-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="d4s8m-0-0"><span data-offset-key="d4s8m-0-0"><span data-text="true">它们不是魔法咒语，而是一些已经在人类知识中高度标准化的方法论。模型在训练过程中见过大量相关论文、代码、设计文档和讨论，所以很多时候，不需要再手写几百行 Workflow，只需要告诉它采用哪套思考方式。下面这些是我自己实践出来非常好用的prompt：</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="24lqn" data-offset-key="cim07-0-0"><div class="css-g5y9jx r-1nxhmzv"><div class="css-g5y9jx r-13qz1uu"><div class="css-g5y9jx r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-g5y9jx"><div class="css-g5y9jx r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-g5y9jx r-1pi2tsx r-1ny4l3l r-1loqt21" href="/huangtongxueh/article/2108577165306687938/media/2108571388613369856" role="link"><div class="css-g5y9jx r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 100%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="图像" class="css-g5y9jx r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-g5y9jx r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HUMmgZnaIAACa6G?format=jpg&amp;name=small");'></div><img alt="图像" class="css-9pa8cd" draggable="true" src="assets/d1f2bf6a502510d8959a4605f136f58c.jpg"/></div></div></div></a></div></div></div></div></div></section><ul class="public-DraftStyleDefault-ul" data-offset-key="2g29d-0-0"><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-reset public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="24lqn" data-offset-key="2g29d-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="2g29d-0-0"><span data-offset-key="2g29d-0-0"><span data-text="true">第一性原理：不要沿着现有方案继续优化，重新问这个问题到底该怎么解。比如，一个接口很慢，你可以这样说：</span></span></div></li></ul><blockquote class="longform-blockquote" data-block="true" data-editor="24lqn" data-offset-key="avs9t-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="avs9t-0-0"><span data-offset-key="avs9t-0-0"><span data-text="true">不要基于“加 Redis 缓存”这个既定方案继续设计。从第一性原理分析这个接口为什么慢，以及最小必要的解决方案。</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="1vjui-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1vjui-0-0"><span data-offset-key="1vjui-0-0"><span data-text="true">模型的关注点，就会从“Redis 应该怎么设计”，切换成：</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="24lqn" data-offset-key="5dost-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5dost-0-0"><span data-offset-key="5dost-0-0"><span data-text="true">瓶颈到底在 SQL、网络、序列化、锁竞争，还是重复计算？如果给 SQL 加一个索引就能解决，为什么还要引入 Redis？</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="co7kf-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="co7kf-0-0"><span data-offset-key="co7kf-0-0"><span data-text="true">这类 Prompt 很适合用在你怀疑“题目本身可能就问错了”的时候。</span></span></div></div><ul class="public-DraftStyleDefault-ul" data-offset-key="6gcm1-0-0"><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-reset public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="24lqn" data-offset-key="6gcm1-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="6gcm1-0-0"><span data-offset-key="6gcm1-0-0"><span data-text="true">对抗性审查：不要帮我的方案找理由，想办法证明它是错的</span></span></div></li></ul><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="e8bft-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="e8bft-0-0"><span data-offset-key="e8bft-0-0"><span data-text="true">普通的问法是：</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="24lqn" data-offset-key="fevq-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="fevq-0-0"><span data-offset-key="fevq-0-0"><span data-text="true">帮我看看这个技术方案有没有问题。</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="861au-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="861au-0-0"><span data-offset-key="861au-0-0"><span data-text="true">可以换成：</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="24lqn" data-offset-key="6bfeh-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="6bfeh-0-0"><span data-offset-key="6bfeh-0-0"><span data-text="true">对这个方案做一次对抗性审查，优先寻找能推翻核心假设的反例。</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="f4eip-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="f4eip-0-0"><span data-offset-key="f4eip-0-0"><span data-text="true">假设你的方案是“为了解决重复请求，引入分布式锁”，模型就不再只是告诉你锁的超时时间应该怎么设置，而是开始追问：</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="24lqn" data-offset-key="dhp18-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="dhp18-0-0"><span data-offset-key="dhp18-0-0"><span data-text="true">重复请求真的需要互斥吗？接口幂等能不能解决？锁服务挂了怎么办？锁过期了，但业务还没执行完怎么办？是不是为了解决一个局部问题，又引入了新的分布式故障点？</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="49euo-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="49euo-0-0"><span data-offset-key="49euo-0-0"><span data-text="true">这类 Prompt 特别适合方案评审和 Code Review。</span></span></div></div><ul class="public-DraftStyleDefault-ul" data-offset-key="a2v3q-0-0"><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-reset public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="24lqn" data-offset-key="a2v3q-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="a2v3q-0-0"><span data-offset-key="a2v3q-0-0"><span data-text="true">消融实验：系统变好了，不代表你加的每一个东西都有用</span></span></div></li></ul><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="62aeo-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="62aeo-0-0"><span data-offset-key="62aeo-0-0"><span data-text="true">比如，你一次做了三个优化：</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="24lqn" data-offset-key="bkos7-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="bkos7-0-0"><span data-offset-key="bkos7-0-0"><span data-text="true">加索引、Redis 缓存和批量查询后，接口耗时从 800ms 降到了 100ms。</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="9nf8t-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9nf8t-0-0"><span data-offset-key="9nf8t-0-0"><span data-text="true">这时候可以直接问：</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="24lqn" data-offset-key="atr3p-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="atr3p-0-0"><span data-offset-key="atr3p-0-0"><span data-text="true">给这三个优化设计消融实验，判断真正的收益来自哪里。</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="aogle-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="aogle-0-0"><span data-offset-key="aogle-0-0"><span data-text="true">模型就会围绕不同组合设计对照，比如以 Baseline 为起点，比较只加索引、索引 + 缓存、索引 + 缓存 + 批量查询等组合。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="dmh4t-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="dmh4t-0-0"><span data-offset-key="dmh4t-0-0"><span data-text="true">最后可能发现：</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="24lqn" data-offset-key="djv9g-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="djv9g-0-0"><span data-offset-key="djv9g-0-0"><span data-text="true">只加索引，就已经把耗时从 800ms 降到了 120ms，剩下两个复杂方案只贡献了 20ms。</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="dn1bu-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="dn1bu-0-0"><span data-offset-key="dn1bu-0-0"><span data-text="true">这样，你就更清楚哪些代码值得保留，哪些复杂度可能没有必要。</span></span></div></div><ul class="public-DraftStyleDefault-ul" data-offset-key="51noq-0-0"><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-reset public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="24lqn" data-offset-key="51noq-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="51noq-0-0"><span data-offset-key="51noq-0-0"><span data-text="true">奥卡姆剃刀：效果差不多时，优先选择假设更少、复杂度更低的方案</span></span></div></li></ul><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="eqcfe-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="eqcfe-0-0"><span data-offset-key="eqcfe-0-0"><span data-text="true">比如，Agent 给你设计出这样一套方案：</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="24lqn" data-offset-key="7gssq-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7gssq-0-0"><span data-offset-key="7gssq-0-0"><span data-text="true">Kafka + Redis + 分布式锁 + 状态机 + 定时补偿。</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="5bhkr-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5bhkr-0-0"><span data-offset-key="5bhkr-0-0"><span data-text="true">你可以补一句：</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="24lqn" data-offset-key="9j5ka-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9j5ka-0-0"><span data-offset-key="9j5ka-0-0"><span data-text="true">用奥卡姆剃刀重新审查这个设计，在满足需求的前提下，删除所有非必要机制。</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="esm8e-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="esm8e-0-0"><span data-offset-key="esm8e-0-0"><span data-text="true">很多时候，它最后会发现：</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="24lqn" data-offset-key="bfod0-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="bfod0-0-0"><span data-offset-key="bfod0-0-0"><span data-text="true">当前场景只有单库写入，一个事务加唯一索引就够了。</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="2vs9i-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="2vs9i-0-0"><span data-offset-key="2vs9i-0-0"><span data-text="true">这句话对现在的 Coding Agent 尤其有用，因为模型很容易为了“完整”而过度设计。</span></span></div></div><ul class="public-DraftStyleDefault-ul" data-offset-key="9pqpe-0-0"><li class="longform-unordered-list-item public-DraftStyleDefault-unorderedListItem public-DraftStyleDefault-reset public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="24lqn" data-offset-key="9pqpe-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9pqpe-0-0"><span data-offset-key="9pqpe-0-0"><span data-text="true">高内聚、低耦合：重新检查代码的职责和边界</span></span></div></li></ul><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="8mpg2-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8mpg2-0-0"><span data-offset-key="8mpg2-0-0"><span data-text="true">比如，你发现一个 OrderService 已经有 2000 行，可以这样问：</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="24lqn" data-offset-key="4c7ep-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4c7ep-0-0"><span data-offset-key="4c7ep-0-0"><span data-text="true">按高内聚、低耦合原则审查 OrderService 的职责边界，不要为了拆而拆。</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="5f57c-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5f57c-0-0"><span data-offset-key="5f57c-0-0"><span data-text="true">模型通常会开始检查：</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="24lqn" data-offset-key="8us9p-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8us9p-0-0"><span data-offset-key="8us9p-0-0"><span data-text="true">为什么订单服务同时负责库存、优惠券、短信、支付和报表？哪些逻辑属于订单领域本身，哪些应该通过稳定接口交给其他模块？</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="1dugq-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1dugq-0-0"><span data-offset-key="1dugq-0-0"><span data-text="true">它激活的不是简单的“拆文件”，而是一整套关于模块化、信息隐藏、依赖方向和职责划分的判断。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="c8h56-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="c8h56-0-0"><span data-offset-key="c8h56-0-0"><span data-text="true">所以，我现在很少再写：</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="24lqn" data-offset-key="4tmdt-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4tmdt-0-0"><span data-offset-key="4tmdt-0-0"><span data-text="true">第一步分析需求，第二步检查假设，第三步寻找替代方案，第四步……</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="atncv-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="atncv-0-0"><span data-offset-key="atncv-0-0"><span data-text="true">很多成熟的方法论，模型本身已经学过。我更倾向于直接告诉它：</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="24lqn" data-offset-key="6kp4c-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="6kp4c-0-0"><span data-offset-key="6kp4c-0-0"><span data-text="true">从第一性原理重新分析，对当前方案做对抗性审查；核心机制必须通过消融实验验证；方案遵循奥卡姆剃刀，代码保持高内聚、低耦合。</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="a8kk0-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="a8kk0-0-0"><span data-offset-key="a8kk0-0-0"><span data-text="true">这几十个字背后，实际上指定了五种不同的认知动作：</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="24lqn" data-offset-key="4d6q2-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4d6q2-0-0"><span data-offset-key="4d6q2-0-0"><span data-text="true">重新定义问题 → 攻击假设 → 验证贡献 → 删除复杂度 → 整理系统边界。</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="abs8d-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="abs8d-0-0"><span data-offset-key="abs8d-0-0"><span data-text="true">这也是我理解的新模型时代 Prompt Engineering 的一个变化：与其给模型写死一套完整的思考流程，不如用准确的方法论告诉它“应该以什么方式思考”，再补充当前任务真正必要的约束。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="24lqn" data-offset-key="2m658-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="2m658-0-0"><span data-offset-key="2m658-0-0"><span data-text="true">二、我的日常开发工作流</span></span></div></h2></div><section class="" contenteditable="false" data-block="true" data-editor="24lqn" data-offset-key="eoi3k-0-0"><div class="css-g5y9jx r-1nxhmzv"><div class="css-g5y9jx r-13qz1uu"><div class="css-g5y9jx r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-g5y9jx"><div class="css-g5y9jx r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-g5y9jx r-1pi2tsx r-1ny4l3l r-1loqt21" href="/huangtongxueh/article/2108577165306687938/media/2108571608298430465" role="link"><div class="css-g5y9jx r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 66.6667%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="图像" class="css-g5y9jx r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-g5y9jx r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HUMmtMAaIAE2_SS?format=jpg&amp;name=small");'></div><img alt="图像" class="css-9pa8cd" draggable="true" src="assets/ebc7c5ab1d91aab52d59ea91d28e60e3.jpg"/></div></div></div></a></div></div></div></div></div></section><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="dk030-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="dk030-0-0"><span data-offset-key="dk030-0-0"><span data-text="true">拿到一个需求后，我通常会先把相关上下文交给 Agent，比如 PRD、会议纪要、聊天记录和用户反馈，再用 grill 和它做需求对齐。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="648v5-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="648v5-0-0"><span data-offset-key="648v5-0-0"><span data-text="true">这些材料往往并不是一份完整、一致的需求。PRD 可能没有更新，会议里可能补充过一些限制，聊天里又调整过优先级。我自己对需求的理解，也可能包含一些没有说出来的假设。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="4fk5p-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4fk5p-0-0"><span data-offset-key="4fk5p-0-0"><span data-text="true">我会让 Agent 结合团队 Wiki 和现有代码理解这些材料，再通过连续追问，把会影响实现的目标、边界和取舍问清楚。有些问题我可以当场回答，有些则需要回头找产品或相关同学确认。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="4t9e3-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4t9e3-0-0"><span data-offset-key="4t9e3-0-0"><span data-text="true">这里，我会控制一个尺度：当剩下的问题已经不会显著改变实现方向和验收结果时，就可以开始开发了。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="7e2j2-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7e2j2-0-0"><span data-offset-key="7e2j2-0-0"><span data-text="true">我不会要求它把所有实现细节都提前规划好，否则需求对齐本身又会变成一套很重的流程。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="8m06n-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8m06n-0-0"><span data-offset-key="8m06n-0-0"><span data-text="true">对齐后的结论，会沉淀到 Spec 或 CONTEXT.md 中，主要记录这次要解决的问题、范围、关键决策和验收标准。这也方便后续负责实现和审查的 Agent 共享同一份上下文，不需要重新读完之前的全部对话。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="cm17-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="cm17-0-0"><span data-offset-key="cm17-0-0"><span data-text="true">方案确定后，我会让主 Agent 根据任务复杂度决定如何执行。简单需求直接实现；复杂需求则拆成边界清楚、可以独立验收的 Issue。只有能够独立推进的部分，才交给 subagent 在不同的 worktree 中并行开发，最后由主 Agent 负责集成。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="fo16d-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="fo16d-0-0"><span data-offset-key="fo16d-0-0"><span data-text="true">编码 Agent 会先完成测试。等它认为已经可以交付时，我再根据任务复杂度，引入其他 Agent 做交叉对抗性审查。发现的问题统一反馈给主编码 Agent，也就是 Codex，由它修复并重新验证。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="4asvo-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4asvo-0-0"><span data-offset-key="4asvo-0-0"><span data-text="true">在我自己 Review 之前，还会进行端到端测试。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="8mrip-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8mrip-0-0"><span data-offset-key="8mrip-0-0"><span data-text="true">我现在不会逐行阅读所有生成的代码，主要看测试结果和核心业务逻辑。这里有一个很重要的前提：每次 MR 的范围都足够小，并且随着开发推进，逐步验证完整的业务路径。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="6416a-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="6416a-0-0"><span data-offset-key="6416a-0-0"><span data-text="true">小 MR 让每次需要理解和判断的改动保持在可控范围内；端到端测试则帮助我检查，这些改动放进真实业务流程之后是否成立。人工 Review 时，我再重点确认业务逻辑，以及现有测试结果是否足以支持这次交付。</span></span></div></div><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="24lqn" data-offset-key="4dlam-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4dlam-0-0"><span data-offset-key="4dlam-0-0"><span data-text="true">三、怎么构建 Agent 友好的端到端测试</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="8e75i-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="8e75i-0-0"><span data-offset-key="8e75i-0-0"><span data-text="true">AI 已经很擅长写测试用例了，动不动就给一个 Bugfix 写上几百行测试（特别是5.6 sol）。很多时候，多写测试本身没有问题，但部署上线后，我们还是会遇到预期之外的错误。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="25qds-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="25qds-0-0"><span data-offset-key="25qds-0-0"><span data-text="true">在我的实践里，一个核心问题是：没有给 Agent 提供端到端的测试环境，让它有机会在编码和自测阶段就发现这些问题。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="50keq-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="50keq-0-0"><span data-offset-key="50keq-0-0"><span data-text="true">如果能把这样的环境搭建起来，让 Agent 可以方便地从测试环境的真实入口执行任务，一直检查到用户需要的结果，我们就能比较放心地让 AI 写的代码运行在真实系统中。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="6v96a-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="6v96a-0-0"><span data-offset-key="6v96a-0-0"><span data-text="true">在实际开发中，我已经为我们的业务搭建了一套端到端开发测试环境。Agent 可以方便地查库表、查日志，也能连接机器排查问题。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="a5cf9-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="a5cf9-0-0"><span data-offset-key="a5cf9-0-0"><span data-text="true">整个搭建过程，其实就是让 Agent 提炼我日常开发自测的流程，把散落的工具和能力集成起来：能工具化的能力，就做成 MCP 或 CLI；可以复用的流程，就写成 Skill。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="7hfmk-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7hfmk-0-0"><span data-offset-key="7hfmk-0-0"><span data-text="true">这件事前期确实需要花一些功夫，但不要怕麻烦。搭建好之后，它能明显加快开发速度，减少返工和线上出问题的可能性，自己也不用整天担心 AI 写的代码会不会出事故。</span></span></div></div><section class="" contenteditable="false" data-block="true" data-editor="24lqn" data-offset-key="65mjt-0-0"><div class="css-g5y9jx r-1nxhmzv"><div class="css-g5y9jx r-13qz1uu"><div class="css-g5y9jx r-1867qdf r-1udh08x r-o7ynqc r-6416eg r-1ny4l3l"><div class="css-g5y9jx"><div class="css-g5y9jx r-16y2uox r-1pi2tsx r-13qz1uu"><a class="css-g5y9jx r-1pi2tsx r-1ny4l3l r-1loqt21" href="/huangtongxueh/article/2108577165306687938/media/2108571720353566720" role="link"><div class="css-g5y9jx r-1adg3ll r-1udh08x" style=""><div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 100%;"></div><div class="r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-ipm5af r-13qz1uu"><div aria-label="图像" class="css-g5y9jx r-1mlwlqe r-1udh08x r-417010 r-aqfbo4 r-n1ft60 r-gf0ln r-agouwx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" data-testid="tweetPhoto" style="margin: 0px;"><div class="css-g5y9jx r-1niwhzg r-vvn4in r-u6sd8q r-1p0dtai r-1pi2tsx r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-13qz1uu r-1wyyakw r-4gszlv" style='filter: brightness(1); background-image: url("https://pbs.twimg.com/media/HUMmztcb0AA3JNV?format=jpg&amp;name=small");'></div><img alt="图像" class="css-9pa8cd" draggable="true" src="assets/fa4886922c614a572125def7d0b89253.jpg"/></div></div></div></a></div></div></div></div></div></section><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="3hjjk-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="3hjjk-0-0"><span data-offset-key="3hjjk-0-0"><span data-text="true">围绕 Agent 友好的端到端测试，我主要做了四件</span></span></div></div><ol class="public-DraftStyleDefault-ol" data-offset-key="7pul4-0-0"><li class="longform-ordered-list-item public-DraftStyleDefault-orderedListItem public-DraftStyleDefault-reset public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="24lqn" data-offset-key="7pul4-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7pul4-0-0"><span data-offset-key="7pul4-0-0"><span data-text="true">让 Agent 熟悉环境：比如，支持一键启动测试环境、创建测试数据，明确当前版本、测试账号和权限，并提供清理与重置能力</span></span></div></li><li class="longform-ordered-list-item public-DraftStyleDefault-orderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="24lqn" data-offset-key="1jfcf-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="1jfcf-0-0"><span data-offset-key="1jfcf-0-0"><span data-text="true">让 Agent 能操作业务系统：通过浏览器、API 或 CLI，执行真实的业务流程。</span></span></div></li><li class="longform-ordered-list-item public-DraftStyleDefault-orderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="24lqn" data-offset-key="48l57-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="48l57-0-0"><span data-offset-key="48l57-0-0"><span data-text="true">让 Agent 方便地查库表和日志：通过只读数据库 MCP 确认落库结果，通过日志系统 Skill 和 Trace 查询链路状态、定位问题。</span></span></div></li><li class="longform-ordered-list-item public-DraftStyleDefault-orderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="24lqn" data-offset-key="4m2lr-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="4m2lr-0-0"><span data-offset-key="4m2lr-0-0"><span data-text="true">把繁琐但稳定的流程复用起来：把稳定操作写成脚本，把入口和排障方法整理成 Skill，减少重复的人工介入和对话。</span></span></div></li></ol><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="2nhju-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="2nhju-0-0"><span data-offset-key="2nhju-0-0"><span data-text="true">在这些工作的基础上，再分享几个我目前觉得比较有效的做法。</span></span></div></div><ol class="public-DraftStyleDefault-ol" data-offset-key="2r6p3-0-0"><li class="longform-ordered-list-item public-DraftStyleDefault-orderedListItem public-DraftStyleDefault-reset public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="24lqn" data-offset-key="2r6p3-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="2r6p3-0-0"><span data-offset-key="2r6p3-0-0"><span data-text="true">浏览器自动化：业务系统需要浏览器操作时，我比较推荐 ego lite 这个开源浏览器。用起来很方便，速度也快。搭配 pi agent + DeepSeek V4 Flash，可以比较快地跑完测试，减少测试耗时。</span></span></div></li><li class="longform-ordered-list-item public-DraftStyleDefault-orderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="24lqn" data-offset-key="dmvbj-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="dmvbj-0-0"><span data-offset-key="dmvbj-0-0"><span data-text="true">把操作统一封装成 CLI：把可复用的 Skill、配置好的 MCP 和写好的脚本，整合到统一的测试 CLI 中，提供环境检查、数据准备、场景执行、结果查询和清理等能力。这其实也可以成为一个内部提效工具。目前，我已经把这套东西做成了 CLI，平时遇到问题，用它排障也很方便。</span></span></div></li><li class="longform-ordered-list-item public-DraftStyleDefault-orderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="24lqn" data-offset-key="7lbav-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7lbav-0-0"><span data-offset-key="7lbav-0-0"><span data-text="true">让工具直接服务于验收：DB 查询用于确认状态，日志和 Trace 用于解释失败，但预期结果仍然必须来自业务契约，不能让 Agent 看到系统返回了什么，就认为什么是正确的。在复杂业务逻辑下，系统完全可能返回一个看似合理、实际上不符合需求的结果。工具帮助我们获取证据，而不是替我们定义正确答案。</span></span></div></li><li class="longform-ordered-list-item public-DraftStyleDefault-orderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="24lqn" data-offset-key="47mev-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="47mev-0-0"><span data-offset-key="47mev-0-0"><span data-text="true">产品本身是 Agent 时，还要检查答案质量：如果被测试的产品本身就是 Agent，除了业务流程是否跑通，还需要考虑答案质量。这也就是我们经常说的 Agent Eval，这里就不详细展开了。</span></span></div></li></ol><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="24lqn" data-offset-key="7m23v-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7m23v-0-0"><span data-offset-key="7m23v-0-0"><span data-text="true">四、怎么 Review AI 写的代码</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="bgdrg-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="bgdrg-0-0"><span data-offset-key="bgdrg-0-0"><span data-text="true">前面分享了怎么让 AI 写出高质量的代码，但最终，业务需求的第一责任人仍然是开发者。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="c5kqg-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="c5kqg-0-0"><span data-offset-key="c5kqg-0-0"><span data-text="true">如果不做 Review，在大型系统里很容易出问题。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="e1ivv-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="e1ivv-0-0"><span data-offset-key="e1ivv-0-0"><span data-text="true">你也不希望半夜被叫起来 On-call，最后发现是 AI 写的代码出了问题吧。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="fe34g-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="fe34g-0-0"><span data-offset-key="fe34g-0-0"><span data-text="true">针对 Review，我目前主要有下面几条实践。</span></span></div></div><ol class="public-DraftStyleDefault-ol" data-offset-key="289tf-0-0"><li class="longform-ordered-list-item public-DraftStyleDefault-orderedListItem public-DraftStyleDefault-reset public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="24lqn" data-offset-key="289tf-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="289tf-0-0"><span data-offset-key="289tf-0-0"><span data-text="true">先看验收标准，再看测试结果：先检查 Agent 给出的验收标准，再对照前面端到端测试的结果，确认是否符合预期、有没有遗漏。不能只看测试通过了多少，还要看这些测试是否验证了这次需求真正关心的事情。</span></span></div></li><li class="longform-ordered-list-item public-DraftStyleDefault-orderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="24lqn" data-offset-key="b2kgb-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="b2kgb-0-0"><span data-offset-key="b2kgb-0-0"><span data-text="true">沿着业务路径看实现，把精力放在高风险部分 我会重点检查权限、状态变化、并发、重试、数据一致性，以及迁移和回滚等高风险部分。对于一些模式稳定的 CRUD，可以少花一些时间——这部分甚至我现在已经不看了。</span></span></div></li><li class="longform-ordered-list-item public-DraftStyleDefault-orderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="24lqn" data-offset-key="9j7o1-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9j7o1-0-0"><span data-offset-key="9j7o1-0-0"><span data-text="true">专门检查新增的抽象和机制：对新增的抽象和机制，我会用奥卡姆剃刀这样的思路，让 AI 再帮我审查一遍：它们是否真的有必要，有没有更简单的实现，是否为了局部问题引入了过多复杂度。</span></span></div></li><li class="longform-ordered-list-item public-DraftStyleDefault-orderedListItem public-DraftStyleDefault-depth0 public-DraftStyleDefault-listLTR" data-block="true" data-editor="24lqn" data-offset-key="5n159-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5n159-0-0"><span data-offset-key="5n159-0-0"><span data-text="true">MR 较多时，考虑构建专门的 Review Bot：如果组内 MR 比较多，可以设计一个专门的 Review Bot，承担交叉审查。它和前面直接调用 pi agent / Claude Code 做对抗性审查不同，更强调把 Git 中的变更信息和预先设计好的审查流程结合起来，形成一套可以重复执行、专门服务于 MR 的审查能力。</span></span></div></li></ol><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(15, 20, 25);"><h2 class="longform-header-two" data-block="true" data-editor="24lqn" data-offset-key="9apjh-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9apjh-0-0"><span data-offset-key="9apjh-0-0"><span data-text="true">五、一些总结和思考</span></span></div></h2></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="5omh-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="5omh-0-0"><span data-offset-key="5omh-0-0"><span data-text="true">我目前开发最明显的瓶颈，是 Review 的速度。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="9mcor-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="9mcor-0-0"><span data-offset-key="9mcor-0-0"><span data-text="true">Agent 可以同时推进好几个任务，但我理解业务、判断方案和确认交付的速度，并不会跟着成倍增加。如果只是让它写得更多，最后很可能只是积压了更多等待审查的代码。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="dfvrh-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="dfvrh-0-0"><span data-offset-key="dfvrh-0-0"><span data-text="true">所以，我接下来想改进的，是让重复问题在交到我手里之前，就被发现和修复。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="ct11r-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="ct11r-0-0"><span data-offset-key="ct11r-0-0"><span data-text="true">能通过类型检查、测试和业务断言发现的问题，尽量让 Agent 在开发过程中自己处理；需要我判断的，则集中到需求有没有理解对、关键业务逻辑是否成立，以及这次改动还有哪些没有验证的风险。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="bk7m7-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="bk7m7-0-0"><span data-offset-key="bk7m7-0-0"><span data-text="true">专门的 Review Bot 可以帮助做这些事，但它的价值，要看能否减少有效问题的遗漏和人工负担，不能只看它评论了多少条。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="b3q72-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="b3q72-0-0"><span data-offset-key="b3q72-0-0"><span data-text="true">这也让我对 Harness 的理解逐渐具体起来：除了给 Agent 正确的上下文，还需要给它能执行任务的环境，以及判断结果的依据。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="85ilo-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="85ilo-0-0"><span data-offset-key="85ilo-0-0"><span data-text="true">我把日常自测里反复做的操作整理成 CLI、脚本和 Skill，让它可以自己运行系统、检查结果、找到失败证据。以后遇到同类任务，这些能力就能继续使用，也可以逐步交给其他同学复用。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="bgiqk-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="bgiqk-0-0"><span data-offset-key="bgiqk-0-0"><span data-text="true">与此同时，这套工作流也需要定期做减法。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="51g28-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="51g28-0-0"><span data-offset-key="51g28-0-0"><span data-text="true">有些步骤是在弥补某一代模型的短板。模型变了，就应该重新判断这些步骤是否还有收益。简单任务直接做，复杂任务再增加规划、拆分和交叉审查。比如 Astra 更新之后，我就删除了 AGENTS.md 中一些过于严格的约束。模型在迭代，我们的工作流也需要跟着迭代。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="7vccl-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="7vccl-0-0"><span data-offset-key="7vccl-0-0"><span data-text="true">当然，测试和 Review 能降低不确定性，但仍然需要人给出正确的验收标准。即使代码和测试互相对得上，也可能是它们一起误解了需求。端到端测试覆盖的，也只是选定环境和场景中的行为；生产环境里的流量、并发和数据分布，仍然可能带来新的问题。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="ers6s-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="ers6s-0-0"><span data-offset-key="ers6s-0-0"><span data-text="true">对我这样刚工作不久的开发者来说，我还是很希望在工作中学到更多领域内的专业知识。不过，AI 也确实减少了一部分亲自踩坑的机会。有些原本需要经历问题、排查原因才能获得的宝贵经验，现在可能变成了 AI 的一句：</span></span></div></div><blockquote class="longform-blockquote" data-block="true" data-editor="24lqn" data-offset-key="3o1j6-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="3o1j6-0-0"><span data-offset-key="3o1j6-0-0"><span data-text="true">“我错了，现在修改一下。”</span></span></div></blockquote><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="a3piv-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="a3piv-0-0"><span data-offset-key="a3piv-0-0"><span data-text="true">所以，</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="bjfgl-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="bjfgl-0-0"><span data-offset-key="bjfgl-0-0"><span data-text="true">我现在也会从每天的开发时间里留出一部分，用来学习和复盘，同时思考：在 AI 时代，研发同学真正需要的能力是什么。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="av5cj-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="av5cj-0-0"><span data-offset-key="av5cj-0-0"><span data-text="true">这篇文章记录的，是我入职这几个月，在自己的业务里逐渐摸索出来的一套做法。它的适用范围和不足，我也还在探索。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="atesl-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="atesl-0-0"><span data-offset-key="atesl-0-0"><span data-text="true">大家可以先挑一条平时最常做的自测路径，试着让 Agent 独立跑通、保留证据，再把有效步骤沉淀下来。</span></span></div></div><div class="longform-unstyled" data-block="true" data-editor="24lqn" data-offset-key="77co3-0-0"><div class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-offset-key="77co3-0-0"><span data-offset-key="77co3-0-0"><span data-text="true">出于公司保密要求，很多细节没办法在文章里展开。希望这篇文章能抛砖引玉，也很想听听大家在实际开发中的好做法～</span></span></div></div></div></div></div></div></div></div></div></article><div class="css-g5y9jx r-12kyg2d"><div class="css-g5y9jx r-k4xj1c r-18u37iz r-1wtj0ep"><div class="css-g5y9jx r-1wbh5a2 r-1a11zyx"><div class="css-g5y9jx r-1d09ksm r-18u37iz r-1wbh5a2 r-1471scf"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr" style="color: rgb(83, 100, 113);"><a aria-describedby="id__phf876dv47" aria-label="上午12:15 · 2026年10月10日" class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-xoduu5 r-1q142lx r-1w6e6rj r-9aw3ui r-3s2u2q r-1loqt21" href="/huangtongxueh/status/2108577165306687938" role="link" style="color: rgb(83, 100, 113);"><time datetime="2026-10-09T15:15:46.000Z">上午12:15 · 2026年10月10日</time></a></div><div aria-hidden="true" class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1q142lx r-n7gxbd" dir="ltr" style="color: rgb(83, 100, 113);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">·</span></div><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1loqt21" dir="ltr" href="/huangtongxueh/status/2108577165306687938/analytics" role="link" style="color: rgb(15, 20, 25);"><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1b43r93 r-1cwl3u0 r-b88u0q" style="color: rgb(15, 20, 25);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">13.6万</span></span></span></div> <span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-1b43r93 r-1cwl3u0" style="color: rgb(83, 100, 113);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">查看</span></span></a></div></div><div class="css-g5y9jx r-18u37iz"></div></div></div><div class="css-g5y9jx r-j5o65s r-rull8r r-qklmqi"><div class="css-g5y9jx"><div aria-label="122 回复、363 次转帖、2052 喜欢、3260 书签、136307 次观看" class="css-g5y9jx r-1kbdv8c r-18u37iz r-1oszu61 r-3qxfft r-n7gxbd r-1dgieki r-1efd50x r-5kkj8d r-h3s6tt r-1wtj0ep" id="id__hob87qvygn" role="group"><div class="css-g5y9jx r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="122 回复。回复" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="reply" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01zm8.005-6c-3.317 0-6.005 2.69-6.005 6 0 3.37 2.77 6.08 6.138 6.01l.351-.01h1.761v2.3l5.087-2.81c1.951-1.08 3.163-3.13 3.163-5.36 0-3.39-2.744-6.13-6.129-6.13H9.756z"></path></g></svg></div><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">122</span></span></span></div></div></button></div><div class="css-g5y9jx r-18u37iz r-1h0z5md r-13awgt0"><button aria-expanded="false" aria-haspopup="menu" aria-label="363 次转帖。转帖" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="retweet" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"></path></g></svg></div><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">363</span></span></span></div></div></button></div><div class="css-g5y9jx r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="2052 喜欢次数。喜欢" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="like" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"></path></g></svg></div><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">2,052</span></span></span></div></div></button></div><div class="css-g5y9jx r-18u37iz r-1h0z5md r-13awgt0"><button aria-label="3260 书签。加入书签" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" data-testid="bookmark" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M4 4.5C4 3.12 5.119 2 6.5 2h11C18.881 2 20 3.12 20 4.5v18.44l-8-5.71-8 5.71V4.5zM6.5 4c-.276 0-.5.22-.5.5v14.56l6-4.29 6 4.29V4.5c0-.28-.224-.5-.5-.5h-11z"></path></g></svg></div><div class="css-g5y9jx r-xoduu5 r-1udh08x"><span data-testid="app-text-transition-container" style="transition-property: transform; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);"><span class="css-1jxf684 r-1ttztb7 r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-n7gxbd"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">3,260</span></span></span></div></div></button></div><div class="css-g5y9jx" style="align-content: stretch; justify-content: inherit; display: inline-grid; transform: rotate(0deg) scale(1) translate3d(0px, 0px, 0px);"><div class="css-g5y9jx r-18u37iz r-1h0z5md"><button aria-expanded="false" aria-haspopup="menu" aria-label="分享帖子" class="css-g5y9jx r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l" role="button" type="button"><div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41 r-1awozwy r-6koalj r-1h0z5md r-o7ynqc r-clp7b1 r-3s2u2q" dir="ltr" style="color: rgb(83, 100, 113);"><div class="css-g5y9jx r-xoduu5"><div class="css-g5y9jx r-xoduu5 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1niwhzg r-sdzlij r-xf4iuw r-o7ynqc r-6416eg r-1ny4l3l"></div><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-50lct3 r-1srniue" viewbox="0 0 24 24"><g><path d="M12 2.59l5.7 5.7-1.41 1.42L13 6.41V16h-2V6.41l-3.3 3.3-1.41-1.42L12 2.59zM21 15l-.02 3.51c0 1.38-1.12 2.49-2.5 2.49H5.5C4.11 21 3 19.88 3 18.5V15h2v3.5c0 .28.22.5.5.5h12.98c.28 0 .5-.22.5-.5L19 15h2z"></path></g></svg></div></div></button></div></div></div></div><div class="css-g5y9jx r-1awozwy r-18u37iz r-1wtj0ep r-6gpygo"><div class="css-g5y9jx r-1awozwy r-18u37iz"><div class="css-g5y9jx"><button aria-haspopup="menu" class="css-146c3p1 r-bcqeeo r-qvutc0 r-37j5jr r-1b43r93 r-1cwl3u0 r-majxgm r-fdjqy7" dir="ltr" role="button" style="color: rgb(83, 100, 113);" type="button"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">相关</span><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1pexk7n r-1mcorv5" viewbox="0 0 24 24"><g><path d="M3.543 8.96l1.414-1.42L12 14.59l7.043-7.05 1.414 1.42L12 17.41 3.543 8.96z"></path></g></svg></button></div></div><div class="css-g5y9jx r-1awozwy r-18u37iz"><a class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1b43r93 r-1cwl3u0 r-majxgm r-1loqt21" dir="ltr" href="/huangtongxueh/status/2108577165306687938/quotes" role="link" style="color: rgb(83, 100, 113);"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">查看引用</span><svg aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1pexk7n r-1mcorv5" viewbox="0 0 24 24"><g><path d="M14.586 12L7.543 4.96l1.414-1.42L17.414 12l-8.457 8.46-1.414-1.42L14.586 12z"></path></g></svg></a></div></div></div></div></div></div></article>
+</div>
+</div>
+</body>
+</html>
